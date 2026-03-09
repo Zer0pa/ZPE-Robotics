@@ -1,0 +1,14 @@
+{
+  "artifacts": [
+    "max_resource_lock.json",
+    "max_resource_validation_log.md",
+    "max_claim_resource_map.json",
+    "impracticality_decisions.json",
+    "cross_embodiment_consistency_report.json",
+    "policy_impact_delta_report.json",
+    "net_new_gap_closure_matrix.json",
+    "ros2_runtime_probe.json",
+    "mujoco_runtime_probe.json",
+    "mujoco_parity_report.json"
+  ]
+}

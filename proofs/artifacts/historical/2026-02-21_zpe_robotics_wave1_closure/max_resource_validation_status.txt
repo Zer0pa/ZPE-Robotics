@@ -1,0 +1,9 @@
+NET-NEW Validation
+artifact_root=artifacts/2026-02-21_zpe_robotics_wave1_closure
+missing=[]
+bad_impracticality=[]
+requires_runpod=False
+runpod_missing=[]
+claim_map_ok=True
+bad_gaps=[]
+status=PASS

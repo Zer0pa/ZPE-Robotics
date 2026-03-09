@@ -1,0 +1,145 @@
+{
+  "all_claims_pass": true,
+  "artifact_root": "artifacts/2026-02-20_zpe_robotics_wave1",
+  "artifacts": {
+    "before_after_metrics.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/before_after_metrics.json",
+      "sha256": "2b93db580a19bc98faab62e7ba5a39a8eeb11c7a38a1cd455b0f9e50d3516fcf"
+    },
+    "blockers_before_after.json": {
+      "path": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/blockers_before_after.json",
+      "sha256": "ec5f2b5190911e630e43830aa56acf54204da5cb24bd8c240e57d9acb075925b"
+    },
+    "claim_status_delta.md": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/claim_status_delta.md",
+      "sha256": "71e576c612ab823c9692b1a01407bada5ac60daed1a4a164e04f3cbf2ccba752"
+    },
+    "command_log.txt": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/command_log.txt",
+      "sha256": "bd686c67f2b20f590f97518a2dcbb5bcf4e25c40ded71138f5df233bd1bc63a3"
+    },
+    "concept_open_questions_resolution.md": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/concept_open_questions_resolution.md",
+      "sha256": "5c72c4cc8429a55c936ae6ab5a9caa570ae74a99b56eee21813032a402744ec5"
+    },
+    "concept_resource_traceability.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/concept_resource_traceability.json",
+      "sha256": "00470032db103524b16e9fae1286b4dffbbc17e3c3ae5b748819bc39b27f0bbc"
+    },
+    "cross_embodiment_consistency_report.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/cross_embodiment_consistency_report.json",
+      "sha256": "106cb7c8302ef0b9e51074d3ecf0a52cd775fb31008477153d754afea674925a"
+    },
+    "determinism_replay_results.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/determinism_replay_results.json",
+      "sha256": "e16b5e21523383a93fac977977d2faaec96f1f0d7156e33b40f39e25038caf9d"
+    },
+    "falsification_results.md": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/falsification_results.md",
+      "sha256": "49fc9738150a4f090c5d0fa1853b5027755e5404b90f774765dc97a0ccd970b5"
+    },
+    "handoff_manifest.json": {
+      "path": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/handoff_manifest.json",
+      "sha256": "07c7449894d0cc36ebc2b311b08cc521d1645f7ce3af285912c0e97d1eb57b3f"
+    },
+    "impracticality_decisions.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/impracticality_decisions.json",
+      "sha256": "5f38282501adef48ad1dbef03094c7a7f72ba22e5933240551e98770756e737b"
+    },
+    "innovation_delta_report.md": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/innovation_delta_report.md",
+      "sha256": "1644a38faf982886c03792cfbf031d4811b322f1b622df656e88cb7b04e453fb"
+    },
+    "integration_readiness_contract.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/integration_readiness_contract.json",
+      "sha256": "46c0f204304e9f2cca8b458672b6a035f294b01dffee16126a6e88124349a897"
+    },
+    "max_claim_resource_map.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/max_claim_resource_map.json",
+      "sha256": "bc21c037a7c1d98f760258043fe947fffc3a5f707b67f135587f2f1efdc86975"
+    },
+    "max_resource_lock.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/max_resource_lock.json",
+      "sha256": "f995e4f763d4be0ec0b27edb4a919d1afa8d19b700f206bffbcf7b942ecc1ff7"
+    },
+    "max_resource_validation_log.md": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/max_resource_validation_log.md",
+      "sha256": "d0f652dc6aac09db994994fb5f7f7bfa1121e2c3927befc92e9f62652c306b7b"
+    },
+    "net_new_gap_closure_matrix.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/net_new_gap_closure_matrix.json",
+      "sha256": "bfd90e89de4f21982c283c5655d86c224eef3d56a80c9b02b3bddf0a191e250a"
+    },
+    "policy_impact_delta_report.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/policy_impact_delta_report.json",
+      "sha256": "c9bd173caf6ab57b2cd91325f7e1edaa386b2be4d2a6f5645cb61cb22bb72334"
+    },
+    "quality_gate_scorecard.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/quality_gate_scorecard.json",
+      "sha256": "2d81581ba035d93a7ba1ea6250427a70acd40f79d1c382c7ee723f20ab009e0a"
+    },
+    "regression_results.txt": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/regression_results.txt",
+      "sha256": "d88e4b1f6e14f0f17547154cefabc6875a45b92cd1c5a8c397598f497df4a46f"
+    },
+    "residual_risk_register.md": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/residual_risk_register.md",
+      "sha256": "880bfda5de991c7f4ea69c529332811778e0dad0f3bdda904b7f35cadf2ac7f3"
+    },
+    "robot_anomaly_eval.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/robot_anomaly_eval.json",
+      "sha256": "bb954f52c3c531f0313b6ed5cb63964b84c5208538583344c1248e6a97eb4dd5"
+    },
+    "robot_arm_benchmark.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/robot_arm_benchmark.json",
+      "sha256": "9f0d10e153b3f8598bcd89e5c7877e26f15d55a1e5bdc2fc3ff35b42f4bc3648"
+    },
+    "robot_ee_fidelity.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/robot_ee_fidelity.json",
+      "sha256": "727daf3b2ce17d3c99d730a7a65b64a672dd62ec0de3d83f9c8ad0be04e40926"
+    },
+    "robot_humanoid_benchmark.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/robot_humanoid_benchmark.json",
+      "sha256": "e28198bd2b25a508882cb721675df8d04134b55244ec81a724a8d6b9040331d8"
+    },
+    "robot_joint_fidelity.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/robot_joint_fidelity.json",
+      "sha256": "d92bd62f02c61d5ff6de9c4e5246132ff5d228ca88403f0948a700816fc8e441"
+    },
+    "robot_primitive_search_eval.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/robot_primitive_search_eval.json",
+      "sha256": "5a17b839e6610bf106a6452c6277d72af58060165826e6029be489701d8220a2"
+    },
+    "robot_rosbag_roundtrip.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/robot_rosbag_roundtrip.json",
+      "sha256": "d538e1203676d1db40732d77d45c71e8ee42bbab105f895abbf6e25d82d7062f"
+    },
+    "robot_vla_token_eval.json": {
+      "path": "artifacts/2026-02-20_zpe_robotics_wave1/robot_vla_token_eval.json",
+      "sha256": "45daf0c59bef02fb3b416986edbae7f274290ce5685b681dca74a4906f7809f1"
+    }
+  },
+  "determinism_runs": 5,
+  "gate_summary": {
+    "Gate A": "PASS",
+    "Gate B": "PASS",
+    "Gate C": "PASS",
+    "Gate D": "PASS",
+    "Gate E": "PASS",
+    "Gate E-G1": "PASS",
+    "Gate E-G2": "PASS",
+    "Gate E-G3": "PASS",
+    "Gate E-G4": "PASS",
+    "Gate E-G5": "PASS",
+    "Gate M1": "PASS",
+    "Gate M2": "PASS",
+    "Gate M3": "PASS",
+    "Gate M4": "PASS"
+  },
+  "generated_at": "2026-02-21T13:55:18.911451+00:00",
+  "max_wave": true,
+  "missing_artifacts": [],
+  "quality_overall_status": "GO",
+  "scope_root": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics",
+  "seed": 20260220
+}

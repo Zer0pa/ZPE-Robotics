@@ -1,0 +1,20 @@
+{
+  "records": [
+    {
+      "claim_impact_note": "Official AgiBot gated access unavailable; fallback path used.",
+      "code": "IMP-ACCESS",
+      "command": "load_dataset('agibot-world/AgiBotWorld-Beta', split='train', streaming=True)",
+      "error_signature": "DatasetNotFoundError: Dataset 'agibot-world/AgiBotWorld-Beta' is a gated dataset on the Hub. Visit the dataset page at https://huggingface.co/datasets/agibot-world/AgiBotWorld-Beta to ask for access.",
+      "fallback": "Use weijian-sun/agibotworld-lerobot deterministic subset",
+      "resource": "AgiBot World"
+    },
+    {
+      "claim_impact_note": "Primary OpenX loader path unavailable in current datasets runtime.",
+      "code": "IMP-NOCODE",
+      "command": "load_dataset('jxu124/OpenX-Embodiment', split='train', streaming=True)",
+      "error_signature": "RuntimeError: Dataset scripts are no longer supported, but found OpenX-Embodiment.py",
+      "fallback": "Use IVC-liuyuan/Swift-OpenX-Embodiment-action-chunk-jsons",
+      "resource": "Open X-Embodiment"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "bit_consistent": true,
+  "bytes_equal": true,
+  "meets_claim": true,
+  "original_sha256": "94f6ec08bf94985af9319ba96dab61f2feeaa5423ecafd1d58b1ddced1c59b26",
+  "records": 12,
+  "replay_sha256": "94f6ec08bf94985af9319ba96dab61f2feeaa5423ecafd1d58b1ddced1c59b26"
+}

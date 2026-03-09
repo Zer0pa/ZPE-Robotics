@@ -1,0 +1,38 @@
+{
+  "attempts": [
+    {
+      "command": "ros2 --version",
+      "returncode": 127,
+      "stderr": "FileNotFoundError: [Errno 2] No such file or directory: 'ros2'",
+      "stdout": ""
+    },
+    {
+      "command": "/opt/homebrew/bin/docker --version",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Docker version 29.2.1, build a5c7197d72"
+    },
+    {
+      "command": "/opt/homebrew/bin/docker run --rm docker.io/library/ros:humble-ros-base-jammy bash -lc ros2 --help >/dev/null && echo ROS2_OK",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "ROS2_OK"
+    },
+    {
+      "command": "/opt/homebrew/bin/docker run --rm docker.io/moveit/moveit2:humble-source bash -lc ros2 pkg list | grep -i '^moveit' | head -n 1",
+      "returncode": 125,
+      "stderr": "Unable to find image 'moveit/moveit2:humble-source' locally\ndocker: Error response from daemon: no matching manifest for linux/arm64/v8 in the manifest list entries: no match for platform in manifest: not found\n\nRun 'docker run --help' for more information",
+      "stdout": ""
+    },
+    {
+      "command": "/opt/homebrew/bin/docker run --rm docker.io/library/ros:humble-ros-base-jammy bash -lc set -e; apt-get update -qq >/dev/null; DEBIAN_FRONTEND=noninteractive apt-get install -y -qq ros-humble-moveit >/dev/null; ros2 pkg list | grep -i '^moveit' | head -n 1",
+      "returncode": 0,
+      "stderr": "debconf: delaying package configuration, since apt-utils is not installed",
+      "stdout": "moveit"
+    }
+  ],
+  "generated_at": "2026-02-21T13:55:01.639114+00:00",
+  "pass_criteria": "ros2 executable and MoveIt package discovery through local or container runtime path",
+  "runtime_path": "docker",
+  "status": "PASS"
+}

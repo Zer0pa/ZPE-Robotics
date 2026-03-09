@@ -1,0 +1,17 @@
+# Command Log
+timestamp_utc=2026-02-21T13:16:41.579008+00:00
+cwd=/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics
+cmd=python scripts/run_wave1.py --output-root artifacts/2026-02-21_zpe_robotics_wave1_closure --seed 20260220 --determinism-runs 5 --max-wave
+CL-01=python -m pytest -q (executed separately)
+CL-02=core A-E execution
+CL-03=determinism replay embedded in this run
+CL-04=python scripts/regression_pack.py --artifacts <output_root> (executed separately)
+CL-05=max-wave and net-new execution
+CL-05-CMD=/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv/bin/python /Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/scripts/net_new_ingest.py --output-root artifacts/2026-02-21_zpe_robotics_wave1_closure --seed 20260220 --sample-size 128
+CL-05-RC=0
+GATE_SUMMARY={'Gate A': 'PASS', 'Gate B': 'PASS', 'Gate C': 'PASS', 'Gate D': 'PASS', 'Gate E': 'PASS', 'Gate M1': 'PASS', 'Gate M2': 'PASS', 'Gate M3': 'PASS', 'Gate M4': 'PASS', 'Gate E-G1': 'PASS', 'Gate E-G2': 'PASS', 'Gate E-G3': 'PASS', 'Gate E-G4': 'PASS', 'Gate E-G5': 'PASS'}
+POST-CL-05-VALIDATE=python scripts/validate_net_new.py --artifacts artifacts/2026-02-21_zpe_robotics_wave1_closure (rc=0)
+POST-CL-04-REGRESSION=python scripts/regression_pack.py --artifacts artifacts/2026-02-21_zpe_robotics_wave1_closure (rc=0)
+POST-CL-01-PYTEST=python -m pytest -q (rc=0)
+M1-RUNTIME-RECOVERY=PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin /opt/homebrew/bin/colima start --cpu 4 --memory 8 --disk 60 (rc=0)
+E-G3-DEPENDENCY-RECOVERY=tensorflow-macos==2.15.0 force-reinstall + dlimp editable install from .dlimp_repo_tmp

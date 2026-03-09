@@ -1,0 +1,79 @@
+{
+  "deterministic_sampling_policy": "first_n_rows_streaming",
+  "e1_inputs": [
+    {
+      "path": "/Users/prinivenpillay/ZPE Multimodality/ZPE 10-Lane NET-NEW Resource Maximization Pack.md",
+      "sha256": "71af9a7dd418bf554e67c8e0c3ac6f6a76dea9ba93cecc2ccbeb9f40677d81df",
+      "size_bytes": 61148
+    },
+    {
+      "path": "/Users/prinivenpillay/ZPE Multimodality/ZPE 10-Lane NET-NEW Resource Maximization Pack.pdf",
+      "sha256": "12dc2fcb7930d0bbd3007d5fc3e8d108d9c6272ac49a72bb25bc026e46b4d840",
+      "size_bytes": 1396077
+    }
+  ],
+  "generated_at": "2026-02-21T13:50:08.176785+00:00",
+  "resources": {
+    "agibot_fallback": {
+      "gated": false,
+      "id": "weijian-sun/agibotworld-lerobot",
+      "kind": "dataset",
+      "sha": "ffce75b78d00483e05f7d2a77dc9389eee7f1112",
+      "sibling_count": 99468
+    },
+    "agibot_primary": {
+      "gated": "auto",
+      "id": "agibot-world/AgiBotWorld-Beta",
+      "kind": "dataset",
+      "sha": "2252b3fdc88dc67fa5d5e4b771e1b86f5e71c278",
+      "sibling_count": 1400
+    },
+    "lerobot": {
+      "gated": false,
+      "id": "lerobot/svla_so101_pickplace",
+      "kind": "dataset",
+      "sha": "f641879e22172be7e8161d5e6c1503c2d2feb657",
+      "sibling_count": 9
+    },
+    "libero": {
+      "gated": false,
+      "id": "whosricky/libero_spatial_v30",
+      "kind": "dataset",
+      "sha": "cc39709c9652ef6d45ee6e336eff3d042719f488",
+      "sibling_count": 9
+    },
+    "octo": {
+      "gated": false,
+      "id": "rail-berkeley/octo-base",
+      "kind": "model",
+      "sha": "39d6c88fdbbcf6f841481a7d732f68c612d04609",
+      "sibling_count": 8
+    },
+    "openx_fallback": {
+      "gated": false,
+      "id": "IVC-liuyuan/Swift-OpenX-Embodiment-action-chunk-jsons",
+      "kind": "dataset",
+      "sha": "a5fa293d10e485f8fb74e3d2dfbbb24b3ac23a29",
+      "sibling_count": 20
+    },
+    "openx_primary": {
+      "gated": false,
+      "id": "jxu124/OpenX-Embodiment",
+      "kind": "dataset",
+      "sha": "3cde9e791b4f9d3ad93efcdd1e47747f2c37edd1",
+      "sibling_count": 1529
+    },
+    "rh20t": {
+      "gated": false,
+      "id": "hainh22/rh20t",
+      "kind": "dataset",
+      "sha": "844be355c533bb869414d8738991cd6ba49d0d68",
+      "sibling_count": 203
+    }
+  },
+  "runtime": {
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+    "python": "3.14.0"
+  },
+  "seed": 20260220
+}

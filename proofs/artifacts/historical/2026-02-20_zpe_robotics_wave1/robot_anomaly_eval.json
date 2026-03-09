@@ -1,0 +1,6 @@
+{
+  "meets_claim": true,
+  "precision": 0.52,
+  "recall": 1.0,
+  "threshold_recall": 0.9
+}

@@ -1,0 +1,60 @@
+{
+  "appendix_b_checks": [
+    {
+      "evidence_artifact": "max_resource_validation_log.md",
+      "item": "LeRobot integration path validated",
+      "notes": "Direct LeRobot dataset run executed in max-wave ingestion.",
+      "status": "RESOLVED"
+    },
+    {
+      "evidence_artifact": "max_resource_validation_log.md",
+      "item": "LIBERO-100 benchmark matrix",
+      "notes": "Direct LIBERO dataset run executed in max-wave ingestion.",
+      "status": "RESOLVED"
+    },
+    {
+      "evidence_artifact": "robot_rosbag_roundtrip.json",
+      "item": "rosbag2 MCAP storage path validated",
+      "notes": "Bit-consistent deterministic adapter roundtrip and corruption/reorder detection verified.",
+      "status": "RESOLVED"
+    },
+    {
+      "evidence_artifact": "max_resource_validation_log.md",
+      "item": "MoveIt2 interoperability check",
+      "notes": "Native runtime check passed.",
+      "status": "RESOLVED"
+    },
+    {
+      "evidence_artifact": "concept_resource_traceability.json",
+      "item": "Isaac GR00T N1.5 compatibility",
+      "notes": "Schema-level compatibility only; no Isaac runtime integration executed.",
+      "status": "FAIL"
+    },
+    {
+      "evidence_artifact": "robot_vla_token_eval.json",
+      "item": "FAST and CubicVLA comparators",
+      "notes": "Naive + FAST-DCT proxy comparator produced alongside ZPE token quality metric.",
+      "status": "RESOLVED"
+    },
+    {
+      "evidence_artifact": "concept_resource_traceability.json",
+      "item": "robot_descriptions URDF loading",
+      "notes": "URDF-aware path mocked with deterministic fixture metadata; package runtime unresolved.",
+      "status": "FAIL"
+    },
+    {
+      "evidence_artifact": "max_resource_validation_log.md",
+      "item": "MuJoCo simulation validation",
+      "notes": "MuJoCo parity runtime passed.",
+      "status": "RESOLVED"
+    }
+  ],
+  "generated_at": "2026-02-21T13:55:18.899241+00:00",
+  "lane": "ZPE Robotics",
+  "runtime": {
+    "numpy": "2.3.5",
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+    "python": "3.14.0"
+  },
+  "schema_version": "1.1.0"
+}

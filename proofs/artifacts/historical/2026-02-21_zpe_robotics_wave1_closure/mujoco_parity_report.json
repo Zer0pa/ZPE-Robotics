@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-02-21T13:16:14.011033+00:00",
+  "metrics": {
+    "dof": 6,
+    "max_abs_mm": 3.3306690738754696e-13,
+    "rmse_mm": 7.60933837695919e-14,
+    "samples": 128
+  },
+  "runtime": {
+    "machine": "arm64",
+    "mujoco_version": "3.5.0",
+    "python": "3.11.14"
+  },
+  "status": "PASS",
+  "thresholds": {
+    "max_abs_mm_max": 0.25,
+    "rmse_mm_max": 0.1
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "meets_claim": true,
+  "precision_at_10": 1.0,
+  "threshold": 0.9
+}

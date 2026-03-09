@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-02-21T13:35:00Z",
+  "before": {
+    "bundle_root": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1",
+    "blocker_count": 1,
+    "gate_blockers": [
+      "Gate M1"
+    ],
+    "claim_blockers": [
+      "MAX-M1"
+    ],
+    "evidence": [
+      "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/handoff_manifest.json",
+      "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/claim_status_delta.md",
+      "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/residual_risk_register.md"
+    ]
+  },
+  "after": {
+    "bundle_root": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-21_zpe_robotics_wave1_closure",
+    "blocker_count": 0,
+    "gate_blockers": [],
+    "claim_blockers": [],
+    "evidence": [
+      "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-21_zpe_robotics_wave1_closure/handoff_manifest.json",
+      "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-21_zpe_robotics_wave1_closure/claim_status_delta.md",
+      "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-21_zpe_robotics_wave1_closure/residual_risk_register.md"
+    ]
+  },
+  "closed_blockers": [
+    {
+      "id": "BLK-M1",
+      "gate": "Gate M1",
+      "claim": "MAX-M1",
+      "status_change": "FAIL->PASS",
+      "resolution": "Recovered Docker runtime using arm64 Colima binary path and revalidated ROS2 + MoveIt package discovery in container runtime.",
+      "evidence": [
+        "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-21_zpe_robotics_wave1_closure/ros2_runtime_probe.json",
+        "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-21_zpe_robotics_wave1_closure/max_resource_validation_log.md",
+        "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-21_zpe_robotics_wave1_closure/quality_gate_scorecard.json"
+      ]
+    },
+    {
+      "id": "BLK-EG3-TRANSIENT",
+      "gate": "Gate E-G3",
+      "claim": "MAX-E3-OCTO",
+      "status_change": "FAIL->PASS",
+      "resolution": "Repaired Octo dependency chain (tensorflow + dlimp) in arm64 runtime and reran policy comparator to PASS.",
+      "evidence": [
+        "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-21_zpe_robotics_wave1_closure/policy_impact_delta_report.json",
+        "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-21_zpe_robotics_wave1_closure/max_resource_validation_log.md",
+        "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-21_zpe_robotics_wave1_closure/claim_status_delta.md"
+      ]
+    }
+  ],
+  "remaining_blockers": []
+}

@@ -1,0 +1,9 @@
+{
+  "delta_vs_naive": 0.4743589743589744,
+  "fast_dct_proxy_accuracy": 0.7051282051282052,
+  "meets_claim": true,
+  "metric": "centroid_accuracy",
+  "naive_binning_accuracy": 0.3333333333333333,
+  "pass": true,
+  "zpe_token_accuracy": 0.8076923076923077
+}

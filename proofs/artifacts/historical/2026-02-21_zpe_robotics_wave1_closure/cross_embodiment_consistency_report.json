@@ -1,0 +1,76 @@
+{
+  "consistency_score": 0.4968300007358848,
+  "corpus_metrics": {
+    "agibot_fallback": {
+      "action_dim_mean": 22.0,
+      "action_energy_mean": 4.244900373736392,
+      "compression_ratio_estimate": 1.9688865582940045,
+      "numeric_samples": 128,
+      "samples": 128,
+      "state_dim_mean": 20.0,
+      "task_diversity": 1
+    },
+    "lerobot": {
+      "action_dim_mean": 6.0,
+      "action_energy_mean": 152.38962549561782,
+      "compression_ratio_estimate": 3.8690176322418135,
+      "numeric_samples": 128,
+      "samples": 128,
+      "state_dim_mean": 6.0,
+      "task_diversity": 1
+    },
+    "libero": {
+      "action_dim_mean": 7.0,
+      "action_energy_mean": 1.0320998663199652,
+      "compression_ratio_estimate": 2.098360655737705,
+      "numeric_samples": 128,
+      "samples": 128,
+      "state_dim_mean": 8.0,
+      "task_diversity": 2
+    },
+    "rh20t": {
+      "action_dim_mean": 3.0,
+      "action_energy_mean": 0.0033934687160431572,
+      "compression_ratio_estimate": 5.710037174721189,
+      "numeric_samples": 128,
+      "samples": 128,
+      "state_dim_mean": 6.0,
+      "task_diversity": 1
+    }
+  },
+  "generated_at": "2026-02-21T13:16:40.087735+00:00",
+  "multi_embodiment_evidence": true,
+  "pairwise_similarity": [
+    {
+      "a": "agibot_fallback",
+      "b": "rh20t",
+      "cosine_similarity": 0.743959643057871
+    },
+    {
+      "a": "agibot_fallback",
+      "b": "lerobot",
+      "cosine_similarity": 0.19726947896750904
+    },
+    {
+      "a": "agibot_fallback",
+      "b": "libero",
+      "cosine_similarity": 0.9844789102133125
+    },
+    {
+      "a": "rh20t",
+      "b": "lerobot",
+      "cosine_similarity": 0.056960159619836075
+    },
+    {
+      "a": "rh20t",
+      "b": "libero",
+      "cosine_similarity": 0.8446193875697054
+    },
+    {
+      "a": "lerobot",
+      "b": "libero",
+      "cosine_similarity": 0.1536924249870747
+    }
+  ],
+  "status": "PASS"
+}

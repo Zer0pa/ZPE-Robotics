@@ -1,0 +1,32 @@
+{
+  "anomaly_recall": {
+    "after_zpe_detector": 1.0,
+    "before_naive_detector": 0.5,
+    "delta": 0.5
+  },
+  "compression_arm": {
+    "after_zpbot": 238.02421307506054,
+    "before_raw_baseline": 1.0,
+    "delta": 237.02421307506054
+  },
+  "compression_humanoid": {
+    "after_zpbot": 215.57894736842104,
+    "before_raw_baseline": 1.0,
+    "delta": 214.57894736842104
+  },
+  "policy_proxy_delta": {
+    "after_zpe": 0.0,
+    "before_naive": 0.0,
+    "delta": 0.0
+  },
+  "primitive_search_p_at_10": {
+    "after_zpe_index": 1.0,
+    "before_random_baseline": 0.16666666666666666,
+    "delta": 0.8333333333333334
+  },
+  "vla_token_accuracy": {
+    "after_zpe": 0.8076923076923077,
+    "before_naive": 0.3333333333333333,
+    "delta": 0.4743589743589744
+  }
+}

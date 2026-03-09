@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zpe-robotics"
+version = "0.1.0"
+description = "ZPE Robotics Wave-1 private staging repo for deterministic robotics codec and proof work."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Zer0pa"}]
+license = {text = "LicenseRef-Zer0pa-SAL-6.0"}
+dependencies = [
+  "numpy>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+]
+netnew = [
+  "datasets>=4.5.0",
+  "huggingface-hub>=0.20",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["zpe_robotics*"]

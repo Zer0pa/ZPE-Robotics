@@ -1,0 +1,152 @@
+{
+  "generated_at": "2026-02-21T13:56:47.039314+00:00",
+  "artifact_root": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1",
+  "before_state": {
+    "blocker_count": 2,
+    "gate_blockers": [
+      {
+        "id": "Gate M1",
+        "severity": "P0",
+        "status": "FAIL",
+        "reason_code": "IMP-NOCODE",
+        "summary": "Native ROS2+MoveIt runtime path unresolved at start of closure cycle.",
+        "evidence": "captured pre-cycle gate summary in this run (Gate M1 FAIL)."
+      },
+      {
+        "id": "Gate E-G3",
+        "severity": "P0",
+        "status": "FAIL",
+        "reason_code": "IMP-COMPUTE",
+        "summary": "Octo policy comparator unresolved at start of closure cycle.",
+        "evidence": "captured pre-cycle gate summary in this run (Gate E-G3 FAIL)."
+      }
+    ]
+  },
+  "attempt_log": {
+    "Gate M1": {
+      "step_a_local_dependency_fix": [
+        {
+          "command": "ros2 --version",
+          "result": "FAIL",
+          "failure_signature": "FileNotFoundError: [Errno 2] No such file or directory: 'ros2'"
+        },
+        {
+          "command": "./.venv/bin/python -m pip index versions ros2cli",
+          "result": "FAIL",
+          "failure_signature": "No matching distribution found for ros2cli"
+        },
+        {
+          "command": "brew search ros2",
+          "result": "FAIL",
+          "failure_signature": "No ROS2 formula available (only rospo)"
+        }
+      ],
+      "step_b_containerized_path": [
+        {
+          "command": "brew install docker colima (x86 + arm64)",
+          "result": "PARTIAL",
+          "failure_signature": "initial rosetta mismatch resolved by arm64 toolchain install"
+        },
+        {
+          "command": "colima start (multiple retries)",
+          "result": "FAIL",
+          "failure_signature": "cache validation/path length failures"
+        },
+        {
+          "command": "brew install podman && podman machine init/start",
+          "result": "FAIL",
+          "failure_signature": "machine bootstrap/connectivity instability"
+        },
+        {
+          "command": "/opt/homebrew/bin/docker run ros:humble + apt install ros-humble-moveit",
+          "result": "PASS",
+          "failure_signature": ""
+        }
+      ],
+      "step_c_commercial_safe_open_substitute": [
+        {
+          "command": "docker.io/moveit/moveit2:humble-source (arm64)",
+          "result": "FAIL",
+          "failure_signature": "no matching manifest for linux/arm64/v8"
+        },
+        {
+          "command": "docker.io/library/ros:humble-ros-base-jammy + apt-get install ros-humble-moveit",
+          "result": "PASS",
+          "failure_signature": ""
+        }
+      ],
+      "step_d_gpu_ready_path": [
+        {
+          "command": "N/A",
+          "result": "NOT_REQUIRED",
+          "failure_signature": "M1 closure path is CPU/container runtime, not GPU-constrained"
+        }
+      ]
+    },
+    "Gate E-G3": {
+      "step_a_local_dependency_fix": [
+        {
+          "command": "/opt/homebrew/bin/python3.11 -m venv .venv_octo_arm64",
+          "result": "PASS",
+          "failure_signature": ""
+        },
+        {
+          "command": ".venv_octo_arm64 install Octo stack + dependency pin alignment",
+          "result": "PASS",
+          "failure_signature": ""
+        },
+        {
+          "command": "Octo base load attempt",
+          "result": "FAIL",
+          "failure_signature": "missing deps/no-space events during iterative setup"
+        },
+        {
+          "command": "Octo small load attempt (HF_HOME=.hf_cache_octo)",
+          "result": "PASS",
+          "failure_signature": ""
+        }
+      ],
+      "step_b_containerized_path": [
+        {
+          "command": "N/A",
+          "result": "NOT_REQUIRED_AFTER_STEP_A_PASS",
+          "failure_signature": ""
+        }
+      ],
+      "step_c_commercial_safe_open_substitute": [
+        {
+          "command": "Octo model fallback from octo-base to octo-small",
+          "result": "PASS",
+          "failure_signature": ""
+        }
+      ],
+      "step_d_gpu_ready_path": [
+        {
+          "command": "runpod_readiness_manifest.json / runpod_exec_plan.md",
+          "result": "NOT_REQUIRED",
+          "failure_signature": "local Octo comparator now passes"
+        }
+      ]
+    }
+  },
+  "after_state": {
+    "blocker_count": 0,
+    "gate_blockers": []
+  },
+  "delta": {
+    "closed_count": 2,
+    "closed_blockers": [
+      "Gate M1",
+      "Gate E-G3"
+    ],
+    "remaining_count": 0,
+    "remaining_blockers": []
+  },
+  "evidence_paths": [
+    "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/handoff_manifest.json",
+    "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/ros2_runtime_probe.json",
+    "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/policy_impact_delta_report.json",
+    "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/max_resource_validation_log.md",
+    "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/net_new_gap_closure_matrix.json"
+  ]
+}

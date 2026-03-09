@@ -1,0 +1,8 @@
+Regression Pack
+artifact_root=artifacts/2026-02-20_zpe_robotics_wave1
+missing_count=0
+missing=[]
+determinism_consistent=True
+claims_pass=True
+uncaught_crashes=0
+status=PASS

@@ -1,0 +1,16 @@
+# RunPod dependency lock (generated in-lane)
+# local_pip_signature: pip 26.0.1 from /Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv/lib/python3.14/site-packages/pip (python 3.14)
+# Target runtime: Linux + Python 3.11 + NVIDIA GPU
+numpy==1.26.4
+datasets==4.5.0
+huggingface_hub==1.4.1
+pyarrow==23.0.0
+pandas==2.2.3
+h5py==3.11.0
+tensorflow==2.15.1
+tensorflow-probability==0.23.0
+jax==0.4.31
+jaxlib==0.4.31
+flax==0.10.4
+mujoco==3.5.0
+octo @ git+https://github.com/octo-models/octo.git@main

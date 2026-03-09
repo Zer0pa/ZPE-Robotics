@@ -1,0 +1,44 @@
+{
+  "attempts": [
+    {
+      "command": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv/bin/python -c import mujoco; print('MUJOCO_OK', mujoco.__version__)",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import mujoco; print('MUJOCO_OK', mujoco.__version__)\n    ^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'mujoco'",
+      "stdout": ""
+    },
+    {
+      "command": "/opt/homebrew/bin/python3.11 -c import platform,sys; print(platform.machine()); print(sys.version.split()[0])",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "arm64\n3.11.14"
+    },
+    {
+      "command": "/opt/homebrew/bin/python3.11 -m venv /Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64/bin/python -m pip install -q --upgrade pip setuptools wheel",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64/bin/python -m pip install -q mujoco==3.5.0 --only-binary=:all:",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64/bin/python /Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/scripts/mujoco_parity_probe.py --output artifacts/2026-02-20_zpe_robotics_wave1/mujoco_parity_report.json --seed 20260220 --samples 128",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"generated_at\": \"2026-02-21T13:55:04.074270+00:00\",\n  \"status\": \"PASS\",\n  \"thresholds\": {\n    \"rmse_mm_max\": 0.1,\n    \"max_abs_mm_max\": 0.25\n  },\n  \"metrics\": {\n    \"rmse_mm\": 7.60933837695919e-14,\n    \"max_abs_mm\": 3.3306690738754696e-13,\n    \"samples\": 128,\n    \"dof\": 6\n  },\n  \"runtime\": {\n    \"python\": \"3.11.14\",\n    \"machine\": \"arm64\",\n    \"mujoco_version\": \"3.5.0\"\n  }\n}"
+    }
+  ],
+  "generated_at": "2026-02-21T13:55:04.090678+00:00",
+  "parity_report_path": "mujoco_parity_report.json",
+  "selected_python": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64/bin/python",
+  "status": "PASS"
+}

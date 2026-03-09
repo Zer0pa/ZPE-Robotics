@@ -1,0 +1,50 @@
+{
+  "claim_map": {
+    "ROB-C001": [
+      "AgiBot World",
+      "Open X-Embodiment",
+      "RH20T",
+      "LIBERO"
+    ],
+    "ROB-C002": [
+      "AgiBot World",
+      "LIBERO"
+    ],
+    "ROB-C003": [
+      "Open X-Embodiment",
+      "RH20T",
+      "MuJoCo runtime"
+    ],
+    "ROB-C004": [
+      "RH20T",
+      "MuJoCo runtime"
+    ],
+    "ROB-C005": [
+      "AgiBot World",
+      "RH20T",
+      "Open X-Embodiment"
+    ],
+    "ROB-C006": [
+      "Open X-Embodiment",
+      "Octo policy comparator",
+      "ROS2+MoveIt2 runtime"
+    ],
+    "ROB-C007": [
+      "RH20T"
+    ],
+    "ROB-C008": [
+      "Octo policy comparator",
+      "Open X-Embodiment"
+    ]
+  },
+  "evidence_artifacts": {
+    "cross_embodiment": "cross_embodiment_consistency_report.json",
+    "impracticality": "impracticality_decisions.json",
+    "mujoco_parity": "mujoco_parity_report.json",
+    "mujoco_probe": "mujoco_runtime_probe.json",
+    "policy_impact": "policy_impact_delta_report.json",
+    "ros2_probe": "ros2_runtime_probe.json",
+    "validation_log": "max_resource_validation_log.md"
+  },
+  "generated_at": "2026-02-21T13:16:40.092199+00:00"
+}

@@ -1,0 +1,53 @@
+{
+  "gaps": [
+    {
+      "attempted": true,
+      "evidence": "max_resource_validation_log.md",
+      "gap_id": "D2-LE_ROBOT_LIBERO_DIRECT",
+      "status": "RESOLVED"
+    },
+    {
+      "attempted": true,
+      "evidence": "ros2_runtime_probe.json",
+      "gap_id": "D2-ROS2_MOVEIT_NATIVE",
+      "imp_code": null,
+      "status": "RESOLVED"
+    },
+    {
+      "attempted": true,
+      "evidence": "mujoco_parity_report.json",
+      "gap_id": "D2-MUJOCO_PARITY",
+      "imp_code": null,
+      "status": "RESOLVED"
+    },
+    {
+      "attempted": true,
+      "evidence": "cross_embodiment_consistency_report.json",
+      "gap_id": "E3-AGIBOT",
+      "imp_code": "IMP-ACCESS",
+      "status": "RESOLVED"
+    },
+    {
+      "attempted": true,
+      "evidence": "max_resource_validation_log.md",
+      "gap_id": "E3-OPENX",
+      "imp_code": "IMP-NOCODE",
+      "status": "RESOLVED"
+    },
+    {
+      "attempted": true,
+      "evidence": "cross_embodiment_consistency_report.json",
+      "gap_id": "E3-RH20T",
+      "imp_code": null,
+      "status": "RESOLVED"
+    },
+    {
+      "attempted": true,
+      "evidence": "policy_impact_delta_report.json",
+      "gap_id": "E3-OCTO",
+      "imp_code": null,
+      "status": "RESOLVED"
+    }
+  ],
+  "generated_at": "2026-02-21T13:55:18.271201+00:00"
+}

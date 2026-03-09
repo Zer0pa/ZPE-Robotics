@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-02-21T13:16:40.091830+00:00",
+  "octo_error_signature": "",
+  "octo_inference_status": "PASS",
+  "octo_model": "rail-berkeley/octo-base",
+  "proxy_dataset_samples": 128,
+  "proxy_delta": 0.0,
+  "proxy_naive_accuracy": 0.0,
+  "proxy_zpe_accuracy": 0.0,
+  "status": "PASS"
+}

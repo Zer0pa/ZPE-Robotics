@@ -1,0 +1,101 @@
+{
+  "generated_at": "2026-02-21T13:16:41.578244+00:00",
+  "items": [
+    {
+      "access_date": "2026-02-21",
+      "appendix_b_item": 1,
+      "comparability_impact": "direct evidence captured",
+      "evidence_artifact": "max_resource_validation_log.md",
+      "planned_usage": "dataset/task schema compatibility for codec adapter",
+      "resource_name": "LeRobot",
+      "source_reference": "https://github.com/huggingface/lerobot",
+      "status": "RESOLVED",
+      "substitution": "none",
+      "version_or_snapshot": "max-wave-direct-run"
+    },
+    {
+      "access_date": "2026-02-21",
+      "appendix_b_item": 2,
+      "comparability_impact": "direct evidence captured",
+      "evidence_artifact": "max_resource_validation_log.md",
+      "planned_usage": "benchmark matrix",
+      "resource_name": "LIBERO-100",
+      "source_reference": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+      "status": "RESOLVED",
+      "substitution": "none",
+      "version_or_snapshot": "max-wave-direct-run"
+    },
+    {
+      "access_date": "2026-02-21",
+      "appendix_b_item": 3,
+      "comparability_impact": "adapter scope validated in-lane",
+      "evidence_artifact": "robot_rosbag_roundtrip.json",
+      "planned_usage": "bit-consistent bag storage adapter validation",
+      "resource_name": "rosbag2 MCAP",
+      "source_reference": "https://github.com/ros2/rosbag2",
+      "status": "RESOLVED",
+      "substitution": "none",
+      "version_or_snapshot": "zpe_rosbag_wave1_schema_v1"
+    },
+    {
+      "access_date": "2026-02-21",
+      "appendix_b_item": 4,
+      "comparability_impact": "runtime evidence captured",
+      "evidence_artifact": "max_resource_validation_log.md",
+      "planned_usage": "planned/executed trajectory callback interop",
+      "resource_name": "MoveIt2",
+      "source_reference": "https://github.com/moveit/moveit2",
+      "status": "RESOLVED",
+      "substitution": "none",
+      "version_or_snapshot": "runtime-check"
+    },
+    {
+      "access_date": "2026-02-21",
+      "appendix_b_item": 5,
+      "comparability_impact": "runtime deployment parity unproven",
+      "evidence_artifact": "integration_readiness_contract.json",
+      "planned_usage": "trajectory schema compatibility",
+      "resource_name": "Isaac GR00T N1.5",
+      "source_reference": "https://github.com/NVIDIA/Isaac-GR00T",
+      "status": "FAIL",
+      "substitution": "GR00T-style synthetic payload fixture",
+      "version_or_snapshot": "schema-check-only"
+    },
+    {
+      "access_date": "2026-02-21",
+      "appendix_b_item": 6,
+      "comparability_impact": "CubicVLA full parity pending",
+      "evidence_artifact": "robot_vla_token_eval.json",
+      "planned_usage": "token-quality baseline comparison",
+      "resource_name": "FAST + CubicVLA comparators",
+      "source_reference": "https://arxiv.org/abs/2501.09747, https://neurips.cc/virtual/2025/133801",
+      "status": "RESOLVED",
+      "substitution": "FAST DCT proxy + naive baseline",
+      "version_or_snapshot": "fast-dct-proxy-v1"
+    },
+    {
+      "access_date": "2026-02-21",
+      "appendix_b_item": 7,
+      "comparability_impact": "external package compatibility unverified",
+      "evidence_artifact": "integration_readiness_contract.json",
+      "planned_usage": "URDF loading for joint limits",
+      "resource_name": "robot_descriptions",
+      "source_reference": "https://github.com/robot-descriptions/robot_descriptions.py",
+      "status": "FAIL",
+      "substitution": "deterministic URDF metadata fixture",
+      "version_or_snapshot": "fixture-joint-limits-v1"
+    },
+    {
+      "access_date": "2026-02-21",
+      "appendix_b_item": 8,
+      "comparability_impact": "runtime evidence captured",
+      "evidence_artifact": "max_resource_validation_log.md",
+      "planned_usage": "simulation replay fidelity validation",
+      "resource_name": "MuJoCo",
+      "source_reference": "https://github.com/google-deepmind/mujoco",
+      "status": "RESOLVED",
+      "substitution": "none",
+      "version_or_snapshot": "runtime-check"
+    }
+  ]
+}
