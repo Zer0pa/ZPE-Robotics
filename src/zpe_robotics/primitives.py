@@ -23,6 +23,15 @@ class PrimitiveSample:
     trajectory: np.ndarray  # [frames, 2]
 
 
+TEMPLATE_TO_LABEL = {
+    "REACH": "reach",
+    "GRASP": "grasp",
+    "RETRACT": "retract",
+    "PLACE": "place",
+    "PUSH": "push",
+}
+
+
 def generate_primitive_corpus(
     seed: int,
     library_per_label: int = 60,
@@ -40,6 +49,11 @@ def generate_primitive_corpus(
             queries.append(PrimitiveSample(label=label, trajectory=_noisy_pattern(label, length, rng, noise=0.02)))
 
     return library, queries
+
+
+def prototype_pattern(label: str, length: int = 96) -> np.ndarray:
+    rng = np.random.default_rng(0)
+    return _noisy_pattern(label, length, rng, noise=0.0)
 
 
 def precision_at_k(

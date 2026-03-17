@@ -1,0 +1,71 @@
+{
+  "authority_surface": "zpbot-v2",
+  "compatibility_mode": "wire-v1",
+  "generation_timestamp": "2026-03-17T21:56:31.585400+00:00",
+  "hits": 10,
+  "precision_at_10": 1.0,
+  "results": [
+    {
+      "filepath": "reach_051.zpbot",
+      "label": "reach",
+      "matched_template": "REACH",
+      "score": 0.8004430637573282
+    },
+    {
+      "filepath": "reach_048.zpbot",
+      "label": "reach",
+      "matched_template": "REACH",
+      "score": 0.7994730498771596
+    },
+    {
+      "filepath": "reach_026.zpbot",
+      "label": "reach",
+      "matched_template": "REACH",
+      "score": 0.7953257750816844
+    },
+    {
+      "filepath": "reach_035.zpbot",
+      "label": "reach",
+      "matched_template": "REACH",
+      "score": 0.7949563932528395
+    },
+    {
+      "filepath": "reach_011.zpbot",
+      "label": "reach",
+      "matched_template": "REACH",
+      "score": 0.793311118037208
+    },
+    {
+      "filepath": "reach_009.zpbot",
+      "label": "reach",
+      "matched_template": "REACH",
+      "score": 0.7927236463300076
+    },
+    {
+      "filepath": "reach_031.zpbot",
+      "label": "reach",
+      "matched_template": "REACH",
+      "score": 0.7905343420689027
+    },
+    {
+      "filepath": "reach_044.zpbot",
+      "label": "reach",
+      "matched_template": "REACH",
+      "score": 0.790532878494205
+    },
+    {
+      "filepath": "reach_008.zpbot",
+      "label": "reach",
+      "matched_template": "REACH",
+      "score": 0.790048176642837
+    },
+    {
+      "filepath": "reach_013.zpbot",
+      "label": "reach",
+      "matched_template": "REACH",
+      "score": 0.7889201853603753
+    }
+  ],
+  "status": "PASS",
+  "template": "REACH"
+}

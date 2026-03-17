@@ -1,0 +1,8 @@
+{
+  "authority_surface": "zpbot-v2",
+  "compatibility_mode": "wire-v1",
+  "compression_ratio": 37.5,
+  "generation_timestamp": "2026-03-17T21:56:31.378640+00:00",
+  "max_abs_error": 6.459702881099339e-17,
+  "status": "PASS"
+}

@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-from dataclasses import asdict
-
 from .anomaly import detect_anomalies
 from .codec import ZPBotCodec, compression_ratio
 from .fixtures import FixtureBundle, malformed_trajectory_inputs
@@ -191,4 +189,3 @@ def render_falsification_markdown(results: dict) -> str:
 
 def falsification_hash(results: dict) -> str:
     return sha256_bytes(stable_json_dumps(results).encode("utf-8"))
-

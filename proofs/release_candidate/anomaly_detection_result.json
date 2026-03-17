@@ -1,0 +1,10 @@
+{
+  "anomalous_count": 5,
+  "authority_surface": "zpbot-v2",
+  "compatibility_mode": "wire-v1",
+  "generation_timestamp": "2026-03-17T21:56:31.670913+00:00",
+  "nominal_count": 20,
+  "recall": 1.0,
+  "status": "PASS",
+  "threshold": 3.0
+}

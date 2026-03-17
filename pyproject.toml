@@ -4,19 +4,21 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "zpe-motion-kernel"
-version = "0.2.0rc1"
+version = "0.1.0"
 description = "Deterministic motion utility kernel for frozen wire-v1 robotics transport and replay."
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [{name = "Zer0pa"}]
 license = {text = "LicenseRef-Zer0pa-SAL-6.0"}
 dependencies = [
+  "mcap>=1.3",
   "numpy>=2.0",
 ]
 
 [project.optional-dependencies]
 dev = [
   "pytest>=8",
+  "ruff>=0.11",
 ]
 netnew = [
   "datasets>=4.5.0",

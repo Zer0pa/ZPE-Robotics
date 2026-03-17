@@ -1,5 +1,13 @@
 # RELEASE_CANDIDATE
 
+## v0.1.0 — 2026-03-17
+
+- Storage reduction on the frozen arm fixture: `238.02421307506054x`.
+- ARM64 portable: hosted ARM64 parity matched the frozen reference hash.
+- Bit-perfect replay: hosted parity and bridge evidence preserve `a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125`.
+- Hostile-path auditable: corrupted magic, CRC mismatch, and truncated payloads fail explicitly.
+- Clean-clone evidence hash: `9c2a23c865b575b5ee29bcfbfba982201ee7010a43eed61860549bc25cd542aa`.
+
 ## What it is
 
 `zpe-motion-kernel` is a drop-in deterministic motion kernel for frozen `zpbot-v2` / `wire-v1` transport, replay, and integrity verification. The current release candidate is a private source-installable utility artifact that compresses deterministic motion data, preserves bit-stable replay surfaces, and exposes an auditable CLI without claiming to replace an end-to-end robotics stack.
@@ -22,16 +30,16 @@
 
 Package name: `zpe-motion-kernel`
 
-Phase 5 clean-clone verification proves the source-install path:
-
-```bash
-pip install -e .
-```
-
-Package-index installation is the intended published command once that separate release step exists:
+Intended published install command:
 
 ```bash
 pip install zpe-motion-kernel
+```
+
+Clean-clone verification proves the source-install path that is already committed:
+
+```bash
+pip install -e .
 ```
 
 ## The four evidence hashes
