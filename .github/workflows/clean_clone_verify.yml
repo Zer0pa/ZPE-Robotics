@@ -36,7 +36,7 @@ jobs:
           python fresh-clone/scripts/clean_clone_verify.py \
             --repo-root fresh-clone \
             --workflow-run-id "${GITHUB_RUN_ID}" \
-            --output "fresh-clone/proofs/release_candidate/clean_clone_result.json"
+            --output "proofs/release_candidate/clean_clone_result.json"
 
       - name: Upload clean-clone evidence
         if: always()
