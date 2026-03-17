@@ -2,11 +2,11 @@
 
 ## Is this repo launch-ready?
 
-No. The current release-candidate kernel gate is `GO`, but public launch and blind-clone verification are still not complete.
+No. The current release-candidate kernel gate and clean-clone verification are `GO`, but public launch is still not complete.
 
 ## What blocks launch right now?
 
-Blind-clone verification and explicit public-release staging. The old `E-G3` blocker is closed.
+Explicit public-release staging and distribution decisions. The old `E-G3` blocker and clean-clone gate are closed.
 
 ## Why keep the February bundles if they are stale?
 
@@ -17,8 +17,9 @@ what changed, but they are not the current authority surface.
 
 For this staged repo, the current release-candidate truth is summarized in
 `proofs/FINAL_STATUS.md`, `proofs/CONSOLIDATED_PROOF_REPORT.md`, and the hosted
-artifacts under `proofs/release_candidate/`. The March 9 snapshot remains
-lineage, not the current gate result.
+artifacts under `proofs/release_candidate/`, including
+`clean_clone_result.json`. The March 9 snapshot remains lineage, not the
+current gate result.
 
 ## How is Robotics related to IMC?
 

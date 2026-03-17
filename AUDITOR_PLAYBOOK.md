@@ -3,9 +3,9 @@
 This is the shortest honest verification path for the current private staged
 Robotics repo.
 
-It is intentionally narrow. This repo has not yet completed Phase 5
-blind-clone verification, so this playbook is a repo-local verification guide,
-not a public release claim.
+It is intentionally narrow. This repo has completed the Phase 5 clean-clone
+verification gate, but it is still a private release candidate rather than a
+public release claim.
 
 ## Current Truth
 
@@ -14,8 +14,9 @@ not a public release claim.
 - hosted `E-G3` is closed by GitHub Actions run `23202700744`
 - hosted `IT-03` + `IT-05` are closed by GitHub Actions run `23202700741`
 - hosted `IT-04` is closed by GitHub Actions run `23202700798`
+- hosted clean-clone verification is closed by GitHub Actions run `23215281934`
 - historical February bundles are preserved for lineage only
-- blind-clone verification is still a follow-on task
+- public release staging is still a follow-on task
 
 ## Shortest Repo-Local Verify Path
 
@@ -41,7 +42,7 @@ python -m zpe_robotics.cli verify proofs/release_candidate/canonical_release_pac
 python -m zpe_robotics.cli info proofs/release_candidate/canonical_release_packet.zpbot
 ```
 
-4. If clean-clone or blind-clone staging is promoted, run the repo-local max-wave path:
+4. If an additional repo-local max-wave replay is needed, run:
 
 ```bash
 python scripts/run_wave1.py \

@@ -14,6 +14,7 @@ Current result:
 - hosted `E-G3` closed on 2026-03-17 via GitHub Actions run `23202700744`
 - hosted `IT-03` + `IT-05` closed on 2026-03-17 via GitHub Actions run `23202700741`
 - hosted `IT-04` parity matrix closed on 2026-03-17 via GitHub Actions run `23202700798`
+- hosted clean-clone verification closed on 2026-03-17 via GitHub Actions run `23215281934`
 - failing gates: none on the current release-candidate gate
 - RunPod state: `READY_FOR_DEFERRED_EXECUTION`
 
@@ -35,6 +36,6 @@ Do not use them for:
 
 ## What Still Needs To Happen
 
-- blind-clone verification and release staging if public or commercial distribution is promoted
+- public release staging and package-index publication if public or commercial distribution is promoted
 - Phase 4.5 performance work if pursued
 - any optional COMM-02 or COMM-03 follow-on wedge work that the current kernel gate does not require

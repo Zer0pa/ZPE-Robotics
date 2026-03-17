@@ -11,8 +11,10 @@
 | Hosted E-G3 gate | closed on 2026-03-17 via run `23202700744` |
 | Hosted IT-03 + IT-05 | closed on 2026-03-17 via run `23202700741` |
 | Hosted IT-04 parity matrix | closed on 2026-03-17 via run `23202700798` |
+| Hosted clean-clone verification | closed on 2026-03-17 via run `23215281934` |
 | Private remote staging | completed in Phase 3 and Phase 4 |
-| Cold-clone verification | deferred follow-on work |
+| Cold-clone verification | closed on the current release-candidate lane |
+| Public release decision | deferred follow-on work |
 | Performance augmentation | deferred to Phase 4.5 |
 
 ## Reading Order

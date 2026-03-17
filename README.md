@@ -4,7 +4,7 @@ ZPE-Robotics is the Robotics sector private staging repo for the Wave-1
 deterministic robotics codec, proof corpus, and repo-formation work.
 
 This repo is staged privately. It is not a public release surface and it
-has not yet passed Phase 5 blind-clone verification.
+has now passed the Phase 5 clean-clone verification gate.
 
 ## Current Status
 
@@ -18,8 +18,9 @@ has not yet passed Phase 5 blind-clone verification.
 | Hosted comparator closure | `E-G3` closed on 2026-03-17 via GitHub Actions run `23202700744` |
 | Hosted composition closure | `IT-03` + `IT-05` closed on 2026-03-17 via GitHub Actions run `23202700741` |
 | Hosted parity matrix | `IT-04` closed on 2026-03-17 via GitHub Actions run `23202700798` |
+| Hosted clean-clone verification | closed on 2026-03-17 via GitHub Actions run `23215281934` |
 | Historical bundles | included under `proofs/artifacts/historical/` |
-| Portable repo-root rerun | not yet performed |
+| Public release decision | not yet taken |
 
 ## What This Repo Contains
 
@@ -32,11 +33,8 @@ has not yet passed Phase 5 blind-clone verification.
 ## What This Repo Does Not Claim
 
 - It does not claim launch readiness.
-- It does not claim that the current private staged tree has been verified
-  from a clean clone.
 - It does not treat the February historical bundles as current authority.
-- It does not claim that blind-clone verification or public release staging
-  are complete today.
+- It does not claim public release staging or package-index publication.
 
 ## Quick Start
 
@@ -48,7 +46,7 @@ python -m pip install -e ".[dev,netnew]"
 python -m pytest tests -q
 ```
 
-Optional repo-local follow-on verify path when clean-clone staging opens:
+Optional repo-local follow-on verify path when an additional max-wave replay is needed:
 
 ```bash
 python scripts/run_wave1.py \
@@ -72,5 +70,5 @@ python scripts/run_wave1.py \
 - Historical artifacts remain historical even when they contain stronger
   older claims than the current rerun.
 - Mixed evidence is not a pass.
-- `GO` here means the release-candidate kernel gate passed, not that public
-  launch or blind-clone staging are complete.
+- `GO` here means the release-candidate kernel plus hosted clean-clone gate
+  passed, not that public launch or package-index publication are complete.

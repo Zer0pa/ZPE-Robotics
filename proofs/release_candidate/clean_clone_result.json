@@ -1,0 +1,167 @@
+{
+  "attempt_log": [
+    {
+      "command": [
+        "/opt/hostedtoolcache/Python/3.11.15/x64/bin/python",
+        "-m",
+        "venv",
+        "/tmp/zpe_clean_clone_venv_ille40ik/venv"
+      ],
+      "cwd": "/home/runner/work/ZPE-Robotics/ZPE-Robotics/fresh-clone",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "",
+      "step": "create_venv"
+    },
+    {
+      "command": [
+        "/tmp/zpe_clean_clone_venv_ille40ik/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "-e",
+        "."
+      ],
+      "cwd": "/home/runner/work/ZPE-Robotics/ZPE-Robotics/fresh-clone",
+      "returncode": 0,
+      "stderr": "\n[notice] A new release of pip is available: 24.0 -> 26.0.1\n[notice] To update, run: python -m pip install --upgrade pip\n",
+      "stdout": "Obtaining file:///home/runner/work/ZPE-Robotics/ZPE-Robotics/fresh-clone\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status 'done'\n  Getting requirements to build editable: started\n  Getting requirements to build editable: finished with status 'done'\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\nCollecting numpy>=2.0 (from zpe-motion-kernel==0.2.0rc1)\n  Downloading numpy-2.4.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)\nDownloading numpy-2.4.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 16.9/16.9 MB 118.8 MB/s eta 0:00:00\nBuilding wheels for collected packages: zpe-motion-kernel\n  Building editable for zpe-motion-kernel (pyproject.toml): started\n  Building editable for zpe-motion-kernel (pyproject.toml): finished with status 'done'\n  Created wheel for zpe-motion-kernel: filename=zpe_motion_kernel-0.2.0rc1-0.editable-py3-none-any.whl size=19244 sha256=a2b60223481051e63f42390ec363b1e9a9f57fc6ee464f4864dc3f8da6d059db\n  Stored in directory: /tmp/pip-ephem-wheel-cache-wvimlbf_/wheels/98/06/62/6aec1e119adbc8a42abde4c2aacd2509cbf9d5c994e3d3d070\nSuccessfully built zpe-motion-kernel\nInstalling collected packages: numpy, zpe-motion-kernel\nSuccessfully installed numpy-2.4.3 zpe-motion-kernel-0.2.0rc1\n",
+      "step": "pip_install_editable"
+    },
+    {
+      "command": [
+        "/tmp/zpe_clean_clone_venv_ille40ik/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "pytest"
+      ],
+      "cwd": "/home/runner/work/ZPE-Robotics/ZPE-Robotics/fresh-clone",
+      "returncode": 0,
+      "stderr": "\n[notice] A new release of pip is available: 24.0 -> 26.0.1\n[notice] To update, run: python -m pip install --upgrade pip\n",
+      "stdout": "Collecting pytest\n  Downloading pytest-9.0.2-py3-none-any.whl.metadata (7.6 kB)\nCollecting iniconfig>=1.0.1 (from pytest)\n  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)\nCollecting packaging>=22 (from pytest)\n  Using cached packaging-26.0-py3-none-any.whl.metadata (3.3 kB)\nCollecting pluggy<2,>=1.5 (from pytest)\n  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)\nCollecting pygments>=2.7.2 (from pytest)\n  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)\nDownloading pytest-9.0.2-py3-none-any.whl (374 kB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 374.8/374.8 kB 8.3 MB/s eta 0:00:00\nDownloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)\nUsing cached packaging-26.0-py3-none-any.whl (74 kB)\nDownloading pluggy-1.6.0-py3-none-any.whl (20 kB)\nDownloading pygments-2.19.2-py3-none-any.whl (1.2 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 1.2/1.2 MB 41.3 MB/s eta 0:00:00\nInstalling collected packages: pygments, pluggy, packaging, iniconfig, pytest\nSuccessfully installed iniconfig-2.3.0 packaging-26.0 pluggy-1.6.0 pygments-2.19.2 pytest-9.0.2\n",
+      "step": "pip_install_pytest"
+    },
+    {
+      "command": [
+        "/tmp/zpe_clean_clone_venv_ille40ik/venv/bin/python",
+        "-c",
+        "from pathlib import Path\nimport sys\nfrom zpe_robotics.release_candidate import build_canonical_arm_fixture, encode_single_record_bag\n\nbag_path = Path(sys.argv[1])\ntrajectory = build_canonical_arm_fixture()\nbag_path.write_bytes(encode_single_record_bag(trajectory))\nprint(str(bag_path))",
+        "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture.bag"
+      ],
+      "cwd": "/home/runner/work/ZPE-Robotics/ZPE-Robotics/fresh-clone",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture.bag\n",
+      "step": "build_fixture_bag"
+    },
+    {
+      "command": [
+        "/tmp/zpe_clean_clone_venv_ille40ik/venv/bin/zpe",
+        "encode",
+        "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture.bag",
+        "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture.zpbot"
+      ],
+      "cwd": "/home/runner/work/ZPE-Robotics/ZPE-Robotics/fresh-clone",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture.zpbot\n",
+      "step": "zpe_encode"
+    },
+    {
+      "command": [
+        "/tmp/zpe_clean_clone_venv_ille40ik/venv/bin/zpe",
+        "verify",
+        "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture.zpbot"
+      ],
+      "cwd": "/home/runner/work/ZPE-Robotics/ZPE-Robotics/fresh-clone",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"authority_surface\": \"zpbot-v2\",\n  \"compatibility_mode\": \"wire-v1\",\n  \"file\": \"/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture.zpbot\",\n  \"frames\": 4096,\n  \"header_bytes\": 18,\n  \"joints\": 6,\n  \"keep_coeffs\": 8,\n  \"payload_bytes\": 395,\n  \"payload_crc32\": 4010934840,\n  \"sha256\": \"3f47736f553113fed9fa2c016fdd370a5abe1031826c22a449a922523c63a2d7\",\n  \"status\": \"PASS\",\n  \"wire_version\": 1\n}\n",
+      "step": "zpe_verify"
+    },
+    {
+      "command": [
+        "/tmp/zpe_clean_clone_venv_ille40ik/venv/bin/zpe",
+        "decode",
+        "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture.zpbot",
+        "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture_replay.bag"
+      ],
+      "cwd": "/home/runner/work/ZPE-Robotics/ZPE-Robotics/fresh-clone",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture_replay.bag\n",
+      "step": "zpe_decode"
+    },
+    {
+      "command": [
+        "/tmp/zpe_clean_clone_venv_ille40ik/venv/bin/python",
+        "-c",
+        "from pathlib import Path\nimport json\nimport sys\nfrom zpe_robotics.release_candidate import default_codec\nfrom zpe_robotics.rosbag_adapter import decode_records\n\nreplay_path = Path(sys.argv[1])\nrecords = decode_records(replay_path.read_bytes(), default_codec(), decode_trajectory=True, strict_index=True)\npayload = {\n    \"records\": len(records),\n    \"trajectory_shape\": list(records[0][\"trajectory\"].shape) if records else [],\n}\nprint(json.dumps(payload, sort_keys=True))",
+        "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture_replay.bag"
+      ],
+      "cwd": "/home/runner/work/ZPE-Robotics/ZPE-Robotics/fresh-clone",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"records\": 1, \"trajectory_shape\": [4096, 6]}\n",
+      "step": "inspect_replay_bag"
+    },
+    {
+      "command": [
+        "/tmp/zpe_clean_clone_venv_ille40ik/venv/bin/python",
+        "-m",
+        "pytest",
+        "tests",
+        "-q"
+      ],
+      "cwd": "/home/runner/work/ZPE-Robotics/ZPE-Robotics/fresh-clone",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "...............                                                          [100%]\n15 passed in 0.25s\n",
+      "step": "pytest_tests"
+    }
+  ],
+  "authority_surface": "zpbot-v2",
+  "cli_details": {
+    "artifacts": {
+      "bag_path": "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture.bag",
+      "packet_path": "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture.zpbot",
+      "replay_path": "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture_replay.bag"
+    },
+    "replay_payload": {
+      "records": 1,
+      "trajectory_shape": [
+        4096,
+        6
+      ]
+    },
+    "verify_payload": {
+      "authority_surface": "zpbot-v2",
+      "compatibility_mode": "wire-v1",
+      "file": "/tmp/zpe_clean_clone_work_p3vn07_z/arm_fixture.zpbot",
+      "frames": 4096,
+      "header_bytes": 18,
+      "joints": 6,
+      "keep_coeffs": 8,
+      "payload_bytes": 395,
+      "payload_crc32": 4010934840,
+      "sha256": "3f47736f553113fed9fa2c016fdd370a5abe1031826c22a449a922523c63a2d7",
+      "status": "PASS",
+      "wire_version": 1
+    }
+  },
+  "cli_ok": true,
+  "compatibility_mode": "wire-v1",
+  "failure": "",
+  "generation_timestamp": "2026-03-17T20:37:07.394579+00:00",
+  "host_platform": "Linux-6.14.0-1017-azure-x86_64-with-glibc2.39",
+  "install_ok": true,
+  "platform": "Linux-6.14.0-1017-azure-x86_64-with-glibc2.39",
+  "python_bin": "/tmp/zpe_clean_clone_venv_ille40ik/venv/bin/python",
+  "repo_root": "/home/runner/work/ZPE-Robotics/ZPE-Robotics/fresh-clone",
+  "status": "PASS",
+  "tests_ok": true,
+  "timestamp": "2026-03-17T20:37:07.394579+00:00",
+  "workflow_run_id": "23215281934",
+  "zpe_bin": "/tmp/zpe_clean_clone_venv_ille40ik/venv/bin/zpe"
+}
