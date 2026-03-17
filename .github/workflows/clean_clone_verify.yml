@@ -1,0 +1,70 @@
+name: Clean Clone Verify
+
+on:
+  workflow_dispatch:
+
+jobs:
+  clean_clone_verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          clean: true
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Fresh clone repository
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf fresh-clone
+          git clone --depth 1 "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" fresh-clone
+
+      - name: Run clean-clone verification
+        id: clean_clone_verify
+        continue-on-error: true
+        run: |
+          python fresh-clone/scripts/clean_clone_verify.py \
+            --repo-root fresh-clone \
+            --workflow-run-id "${GITHUB_RUN_ID}" \
+            --output "fresh-clone/proofs/release_candidate/clean_clone_result.json"
+
+      - name: Upload clean-clone evidence
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: clean-clone-evidence
+          path: fresh-clone/proofs/release_candidate/clean_clone_result.json
+          if-no-files-found: error
+
+      - name: Enforce decisive clean-clone result
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("fresh-clone/proofs/release_candidate/clean_clone_result.json")
+          if not path.exists():
+              raise SystemExit("clean clone artifact missing")
+
+          payload = json.loads(path.read_text(encoding="utf-8"))
+          if payload.get("status") != "PASS":
+              raise SystemExit(
+                  "clean clone verification failed: "
+                  f"status={payload.get('status')} "
+                  f"install_ok={payload.get('install_ok')} "
+                  f"cli_ok={payload.get('cli_ok')} "
+                  f"tests_ok={payload.get('tests_ok')} "
+                  f"failure={payload.get('failure')}"
+              )
+          PY
