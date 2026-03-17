@@ -1,0 +1,132 @@
+name: ARM64 Parity Probe
+
+on:
+  workflow_dispatch:
+
+jobs:
+  arm64_parity_probe:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Run ARM64 parity probe
+        id: run_arm64_parity
+        continue-on-error: true
+        run: |
+          mkdir -p "proofs/reruns/arm64_parity_probe_${GITHUB_RUN_ID}"
+          docker run --rm \
+            --platform linux/arm64 \
+            -e GITHUB_RUN_ID="${GITHUB_RUN_ID}" \
+            -v "${PWD}:/workspace" \
+            -w /workspace \
+            python:3.11-slim \
+            sh -lc '
+              python - <<'"'"'PY'"'"'
+              import datetime as dt
+              import json
+              import os
+              import platform
+              import subprocess
+              import sys
+              from pathlib import Path
+
+              root = Path("/workspace")
+              output = root / "proofs" / "reruns" / f"arm64_parity_probe_{os.environ['GITHUB_RUN_ID']}" / "arm64_parity_result.json"
+              output.parent.mkdir(parents=True, exist_ok=True)
+              reference_hash = "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125"
+              attempts = []
+
+              def run(command: list[str]) -> subprocess.CompletedProcess[str]:
+                  proc = subprocess.run(command, capture_output=True, text=True)
+                  attempts.append(
+                      {
+                          "command": " ".join(command),
+                          "returncode": proc.returncode,
+                          "stdout": (proc.stdout or "").strip(),
+                          "stderr": (proc.stderr or "").strip(),
+                      }
+                  )
+                  return proc
+
+              status = "FAIL"
+              roundtrip_sha256 = ""
+
+              if run([sys.executable, "-m", "pip", "install", "--upgrade", "pip", "uv"]).returncode == 0:
+                  if run(["uv", "sync", "--dev"]).returncode == 0:
+                      if run(["uv", "run", "pytest", "tests/test_codec.py", "tests/test_mcap_bridge.py", "-q"]).returncode == 0:
+                          code = "\n".join(
+                              [
+                                  "from zpe_robotics.codec import ZPBotCodec",
+                                  "from zpe_robotics.fixtures import generate_joint_trajectory, make_rosbag_fixture",
+                                  "from zpe_robotics.mcap_bridge import evaluate_bridge_roundtrip",
+                                  "trajectory = generate_joint_trajectory(num_frames=4096, num_joints=6, seed=20260317)",
+                                  "records = make_rosbag_fixture(trajectory, seed=20260318)",
+                                  "result = evaluate_bridge_roundtrip(records, ZPBotCodec(keep_coeffs=8))",
+                                  "print(result.original_sha256)",
+                              ]
+                          )
+                          proc = run([str(root / ".venv" / "bin" / "python"), "-c", code])
+                          if proc.returncode == 0:
+                              roundtrip_sha256 = (proc.stdout or "").strip().splitlines()[-1]
+                              status = "PASS" if roundtrip_sha256 == reference_hash else "FAIL"
+
+              payload = {
+                  "authority_surface": "zpbot-v2",
+                  "compatibility_mode": "wire-v1",
+                  "generation_timestamp": dt.datetime.now(dt.UTC).isoformat(),
+                  "host_platform": platform.platform(),
+                  "platform": platform.platform(),
+                  "workflow_run_id": os.environ["GITHUB_RUN_ID"],
+                  "status": status,
+                  "roundtrip_sha256": roundtrip_sha256,
+                  "x86_reference_sha256": reference_hash,
+                  "hashes_match": bool(roundtrip_sha256 and roundtrip_sha256 == reference_hash),
+                  "attempt_log": attempts,
+              }
+              output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+              raise SystemExit(0 if status == "PASS" else 1)
+              PY
+            '
+
+      - name: Upload ARM64 parity evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: arm64-parity-evidence
+          path: proofs/reruns/arm64_parity_probe_${{ github.run_id }}/arm64_parity_result.json
+          if-no-files-found: error
+
+      - name: Enforce decisive ARM64 parity result
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          path = Path("proofs/reruns") / f"arm64_parity_probe_{os.environ['GITHUB_RUN_ID']}" / "arm64_parity_result.json"
+          if not path.exists():
+              raise SystemExit("arm64 parity artifact missing")
+
+          payload = json.loads(path.read_text(encoding="utf-8"))
+          if not payload.get("hashes_match"):
+              raise SystemExit(
+                  "ARM64 parity failed: "
+                  f"status={payload.get('status')} hash={payload.get('roundtrip_sha256')}"
+              )
+          PY

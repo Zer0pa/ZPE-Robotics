@@ -1,0 +1,116 @@
+{
+  "attempt_log": [
+    {
+      "command": "adb devices -l",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "List of devices attached\nFY25013101C8           device usb:0-1 product:NX789J-EEA model:NX789J device:NX789J transport_id:3"
+    },
+    {
+      "command": "adb shell getprop ro.product.model",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "NX789J"
+    },
+    {
+      "command": "adb shell getprop ro.product.cpu.abi",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "arm64-v8a"
+    },
+    {
+      "command": "adb shell pm list packages",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "package:com.qti.phone\npackage:com.google.android.overlay.modules.permissioncontroller.forframework\npackage:cn.nubia.gamehelperline\npackage:com.admyt.app.sa\npackage:com.qualcomm.qti.cne\npackage:com.android.systemui.accessibility.accessibilitymenu\npackage:com.android.dreams.phototable\npackage:com.android.providers.contacts\npackage:com.zte.fingerprints\npackage:com.zte.mifavor.launcher\npackage:com.qualcomm.uimremoteserver\npackage:com.android.companiondevicemanager\npackage:com.android.cts.priv.ctsshim\npackage:com.termux\npackage:com.android.providers.downloads\npackage:com.android.bluetoothmidiservice\npackage:com.twitter.android\npackage:com.android.credentialmanager\npackage:com.android.radarpermission\npackage:com.google.android.printservice.recommendation\npackage:com.google.android.captiveportallogin\npackage:com.google.android.networkstack\npackage:com.zte.heartrate\npackage:com.android.keychain\npackage:com.google.android.accessibility.switchaccess\npackage:com.google.android.overlay.gmsconfig.asi\npackage:com.google.android.tag\npackage:com.microsoft.office.outlook\npackage:com.qti.service.colorservice\npackage:com.qualcomm.qti.confdialer\npackage:com.android.shell\npackage:com.zte.thermalbridge\npackage:com.google.android.wifi.dialog\npackage:cn.nubia.gamelauncher\npackage:com.zte.powersavemode\npackage:com.android.hellovk\npackage:zte.com.cn.alarmclock\npackage:com.google.android.ondevicepersonalization.services\npackage:com.google.android.overlay.modules.healthfitness.forframework\npackage:com.zte.thermald\npackage:com.android.bookmarkprovider\npackage:com.google.android.gmsintegration\npackage:com.zte.privacyzone\npackage:com.life360.android.safetymapd\npackage:com.android.DeviceAsWebcam\npackage:cn.nubia.gamepi\npackage:com.google.android.wifi.resources.overlay.target\npackage:com.android.sharedstoragebackup\npackage:com.android.imsserviceentitlement\npackage:com.qualcomm.qti.uimGbaApp\npackage:com.android.providers.media\npackage:cn.zte.gameaiasst\npackage:com.android.providers.calendar\npackage:com.android.providers.blockednumber\npackage:com.google.android.documentsui\npackage:com.zte.mifavor.splitscreengroup\npackage:com.zte.aigc.overlay\npackage:com.google.android.safetycore\npackage:com.android.proxyhandler\npackage:com.google.android.overlay.modules.permissioncontroller\npackage:com.fingerprint.sensorservice\npackage:com.android.emergency\npackage:com.google.android.gms.location.history\npackage:com.zte.mifavor.globalzboard.overlay.redmagic\npackage:cn.nubia.gamehighlights\npackage:com.qualcomm.location\npackage:com.google.android.gm\npackage:com.android.carrierdefaultapp\npackage:com.android.backupconfirm\npackage:com.google.android.apps.tachyon\npackage:com.google.android.hotspot2.osulogin\npackage:com.android.mtp\npackage:com.zte.cn.compass\npackage:com.android.phone.auto_generated_characteristics_rro\npackage:com.android.theme.font.notoserifsource\npackage:com.qualcomm.qti.remoteSimlockAuth\npackage:com.microsoft.teams\npackage:cn.nubia.inspiredwallpaper\npackage:com.qualcomm.qtil.aptxui\npackage:com.zte.cn.doubleapp\npackage:com.spotify.music\npackage:cn.nubia.keymapcenter\npackage:com.qti.ltebc\npackage:com.qualcomm.qti.xrcb\npackage:com.parket.parketapp\npackage:com.microsoft.office.officehubrow\npackage:com.zte.recommend\npackage:com.sbg.mobile.phone\npackage:com.android.wallpapercropper\npackage:com.google.android.wifi.resources.overlay.common\npackage:cn.nubia.colorfullight\npackage:com.google.android.overlay.gmsconfig.geotz\npackage:com.android.internal.systemui.navbar.gestural\npackage:com.google.android.calculator\npackage:com.android.settings.intelligence\npackage:com.qualcomm.timeservice\npackage:com.android.devicediagnostics\npackage:cn.nubia.gamelab\npackage:com.zte.zdmdaemon.install\npackage:za.co.myvirginactive\npackage:com.connecto.yepMarketplace\npackage:com.google.android.overlay.gmsconfig.personalsafety\npackage:com.qualcomm.wfd.service\npackage:com.google.android.federatedcompute\npackage:vendor.qti.imsrcs\npackage:com.google.android.webview\npackage:com.zte.nubrowser\npackage:com.google.android.sdksandbox\npackage:cn.nubia.identity\npackage:cn.nubia.gameassist\npackage:com.google.android.cellbroadcastservice\npackage:com.android.internal.systemui.navbar.threebutton\npackage:framework.res.commonoverlay\npackage:com.android.egg\npackage:com.zte.game.plugintrigger\npackage:com.qualcomm.qtil.aptxals\npackage:com.google.android.overlay.modules.modulemetadata.forframework\npackage:com.android.phone.overlay.common.vendor\npackage:com.google.android.packageinstaller\npackage:com.android.se\npackage:com.android.subsys\npackage:com.google.android.apps.youtube.music\npackage:com.ubercab\npackage:com.android.stk\npackage:com.zte.nebulatranslation\npackage:com.android.mipop\npackage:com.android.bips\npackage:com.qualcomm.qti.telephonyservice\npackage:com.google.android.partnersetup\npackage:com.android.vendorlogpermission\npackage:com.google.android.projection.gearhead\npackage:com.qualcomm.qti.xrwifi\npackage:com.zte.zdm\npackage:com.zte.intellitext.overlay.redmagic\npackage:com.qualcomm.qti.simcontacts\npackage:com.google.android.feedback\npackage:org.codeaurora.ims\npackage:cn.nubia.gamehelpmodule\npackage:com.android.devicelockcontroller\npackage:com.zte.zdm.omacp\npackage:zte.framework.res.commonoverlay\npackage:android.auto_generated_characteristics_rro\npackage:com.controlla.rokuremoteapp\npackage:com.google.android.inputmethod.latin\npackage:ai.x.grok\npackage:com.awfs.coordination\npackage:com.android.smspush\npackage:cn.zte.recorder\npackage:com.zte.faceverify\npackage:com.android.providers.downloads.ui\npackage:za.co.shoprite.sixty60\npackage:com.android.ons\npackage:com.google.android.networkstack.tethering.overlay\npackage:com.google.android.healthconnect.controller\npackage:com.google.android.contactkeys\npackage:com.anthropic.claude\npackage:com.google.android.setupwizard\npackage:androidzte\npackage:com.android.simappdialog\npackage:com.android.wallpaper.livepicker\npackage:com.android.systemui.overlay.common\npackage:com.qualcomm.qti.callfeaturessetting\npackage:org.telegram.messenger\npackage:cn.nubia.photoeditor\npackage:com.zte.setupwizard.overlay.redmagic\npackage:com.qualcomm.qti.poweroffalarm\npackage:com.google.android.connectivity.resources.overlay\npackage:com.google.android.overlay.modules.ext.services\npackage:com.android.uwb.resources.overlay.common\npackage:com.google.android.gapid.arm64v8a\npackage:com.android.traceur\npackage:com.google.android.apps.messaging\npackage:com.qualcomm.qti.services.systemhelper\npackage:com.azure.authenticator\npackage:com.qualcomm.qti.gpudrivers.sun.api35\npackage:com.zte.onekeycp\npackage:com.android.location.fused\npackage:com.ztefingerprint.service\npackage:com.android.cellbroadcastreceiver\npackage:com.google.android.googlequicksearchbox\npackage:com.google.android.modulemetadata\npackage:com.android.settings.overlay.common\npackage:com.twentytwoseven.android\npackage:com.google.android.ext.services\npackage:com.zte.mifavor.launcher.adapter\npackage:com.google.android.configupdater\npackage:com.android.internal.systemui.navbar.gestural_indicator\npackage:com.qti.qcc\npackage:com.zte.beautifyadapter\npackage:cn.nubia.gpu.drivers\npackage:com.google.android.gms.supervision\npackage:com.realtimeboard\npackage:com.google.android.server.deviceconfig.resources\npackage:com.google.android.apps.photos\npackage:com.zhiliaoapp.musically.go\npackage:com.qualcomm.qti.workloadclassifier\npackage:com.google.android.gms\npackage:cn.nubia.gamepad\npackage:com.zte.xr.gamelauncher\npackage:cn.nubia.virtualgamehandle\npackage:com.android.printspooler\npackage:vendor.qti.bluetooth.xpan.overlay.target\npackage:com.android.se.overlay.target\npackage:com.google.android.apps.setupwizard.searchselector\npackage:com.qualcomm.qti.uim\npackage:com.facebook.system\npackage:com.android.soundpicker\npackage:com.google.mainline.telemetry\npackage:com.microsoft.scmx\npackage:com.okta.android.auth\npackage:com.android.microdroid.empty_payload\npackage:com.tencent.soter.soterserver\npackage:vendor.qti.data.txpwradmin\npackage:com.android.providers.telephony.auto_generated_characteristics_rro\npackage:com.android.externalstorage\npackage:android.autoinstalls.config.nubia.NX789J_EEA_NUBIA\npackage:vendor.qti.imsdatachannel\npackage:com.android.server.telecom\npackage:com.qualcomm.qtil.aptxacu\npackage:com.android.camera\npackage:com.android.companiondevicemanager.auto_generated_characteristics_rro\npackage:com.google.android.wifi.resources.overlay\npackage:com.zoem.rt\npackage:com.ubercab.eats\npackage:com.google.android.providers.media.module\npackage:com.qualcomm.qti.server.wigig.tethering.rro\npackage:com.zte.setupwizard\npackage:com.westalgo.aftersalecamera\npackage:com.android.calllogbackup\npackage:com.qualcomm.qti.lpa\npackage:com.qualcomm.atfwd\npackage:com.github.android\npackage:com.zte.emode\npackage:com.linkedin.android\npackage:com.google.android.overlay.gmsconfig.comms\npackage:com.fireid.snapscan\npackage:com.microsoft.copilot\npackage:com.zte.mifavor.launcher.resource\npackage:com.android.dreams.basic\npackage:com.google.android.calendar\npackage:com.google.android.contacts\npackage:com.android.mms.service\npackage:com.google.android.cellbroadcastreceiver\npackage:com.google.android.photopicker\npackage:com.zte.beautify\npackage:com.dts.dtsxultra\npackage:com.zte.mifavor.globalzboard\npackage:com.google.android.apps.wellbeing\npackage:com.zte.zgesture\npackage:com.qualcomm.qti.devicestatisticsservice\npackage:com.android.virtualmachine.res\npackage:com.google.android.adservices.api\npackage:ai.mistral.chat\npackage:com.android.inputdevices\npackage:com.google.android.appsearch.apk\npackage:com.qti.qualcomm.datastatusnotification\npackage:com.qti.dpmserviceapp\npackage:com.google.android.onetimeinitializer\npackage:com.google.android.permissioncontroller\npackage:zpub.res\npackage:com.zte.zdmdaemon\npackage:com.instagram.lite\npackage:com.qualcomm.qti.ridemodeaudio\npackage:vendor.qti.qesdk.sysservice\npackage:com.zte.burntest.camera\npackage:com.qualcomm.qti.ims\npackage:com.google.android.overlay.modules.documentsui\npackage:com.google.android.keep\npackage:com.deepseek.chat\npackage:com.android.cellbroadcastreceiver.overlay.common\npackage:com.android.managedprovisioning\npackage:com.zte.mifavor.theme.resource\npackage:ai.perplexity.comet\npackage:ai.mainfunc.genspark\npackage:com.zte.weather\npackage:com.android.nfc\npackage:com.android.carrierconfig.overlay.common\npackage:com.google.android.gsf\npackage:com.zte.gallerylockscreen\npackage:com.zte.zsound\npackage:com.google.android.health.connect.backuprestore\npackage:com.customer.uberzol\npackage:cn.nubia.touping\npackage:com.android.aftersaleservice\npackage:com.zte.heartyservice.strategy\npackage:com.android.server.telecom.overlay.common\npackage:cn.zte.gamefloat\npackage:com.qualcomm.qti.xrvd.service\npackage:android.overlay.oem\npackage:com.android.systemui\npackage:com.zte.floatassist\npackage:com.microsoft.skydrive\npackage:com.google.android.dialer\npackage:com.mrd.food\npackage:com.zte.fingerflashpay\npackage:com.qualcomm.qti.uceShimService\npackage:com.android.role.notes.enabled\npackage:com.qti.xdivert\npackage:com.android.internal.display.cutout.emulation.notchcustomnull\npackage:com.qti.dcf\npackage:com.google.mainline.adservices\npackage:com.zte.mifavor.suggest.overlay.redmagic\npackage:com.zte.weather.overlay\npackage:com.android.wallpaperbackup\npackage:com.google.android.networkstack.overlay\npackage:com.android.localtransport\npackage:cn.nubia.gamenotes\npackage:android\npackage:com.zte.voicemodel\npackage:com.android.rkpdapp\npackage:com.zte.googlequicksearchbox.overlay\npackage:com.qualcomm.qti.dynamicddsservice\npackage:com.zte.aiengine\npackage:com.zte.distservice.servicemanager\npackage:com.google.android.apps.walletnfcrel\npackage:com.android.pacprocessor\npackage:com.google.android.safetycenter.resources\npackage:com.google.android.overlay.gmsconfig.searchselector\npackage:ai.perplexity.app.android\npackage:com.android.settings\npackage:com.google.android.networkstack.tethering\npackage:com.appcollection.isyncpremium\npackage:com.android.cameraextensions\npackage:com.android.carrierconfig\npackage:cn.nubia.redmagickyi\npackage:com.openai.chatgpt\npackage:com.google.android.videos\npackage:com.google.android.ext.shared\npackage:com.google.android.apps.bard\npackage:com.android.chrome\npackage:com.qualcomm.qcrilmsgtunnel\npackage:com.facebook.services\npackage:com.google.android.apps.maps\npackage:com.google.android.apps.labs.language.tailwind\npackage:com.android.compos.payload\npackage:com.google.android.as\npackage:com.android.musicfx\npackage:com.android.internal.systemui.navbar.transparent\npackage:com.google.android.marvin.talkback\npackage:vendor.qti.hardware.cacert.server\npackage:com.whatsapp\npackage:com.google.android.wifi.resources\npackage:vendor.qti.data.ntnsatapp\npackage:com.android.intentresolver\npackage:com.google.android.apps.docs\npackage:com.android.certinstaller\npackage:com.google.android.apps.safetyhub\npackage:com.qualcomm.uimremoteclient\npackage:com.zte.wlansniffertool\npackage:com.google.android.apps.restore\npackage:com.qti.snapdragon.qdcm_ff\npackage:com.qualcomm.atfwd2\npackage:au.com.shiftyjelly.pocketcasts\npackage:com.android.providers.telephony\npackage:com.melodis.midomiMusicIdentifier.freemium\npackage:com.quicinc.voice.activation\npackage:com.android.providers.settings\npackage:vendor.qti.iwlan\npackage:com.qualcomm.qtil.aptxalsOverlay\npackage:com.android.phone\npackage:com.zte.gamecardassist\npackage:com.google.android.as.oss\npackage:com.android.vpndialogs\npackage:com.android.uwb.resources\npackage:zte.com.cn.filer\npackage:com.google.android.overlay.gmsconfig.photos\npackage:com.google.android.apps.docs.editors.docs\npackage:com.google.android.tts\npackage:cn.zte.chargeseparation\npackage:com.android.wifi.resources.overlay.common\npackage:ai.qwenlm.chat.android\npackage:com.android.phone.overlay.common\npackage:com.android.htmlviewer\npackage:com.android.vending\npackage:com.android.ztescreenshot\npackage:com.google.android.overlay.modules.captiveportallogin.forframework\npackage:com.zte.zbackup.platservice\npackage:android.overlay.target\npackage:tech.butterfly.app\npackage:cn.nubia.gamewidget\npackage:com.google.android.apps.turbo\npackage:com.google.android.overlay.gmsconfig.gsa\npackage:com.android.providers.userdictionary\npackage:com.android.providers.contactkeys\npackage:com.zte.linkspeedup\npackage:com.google.android.overlay.gmsconfig.common\npackage:com.android.cts.ctsshim\npackage:com.android.bluetooth\npackage:com.android.internal.display.cutout.emulation.notchcustom\npackage:com.zte.vendor.ifaa\npackage:com.android.storagemanager\npackage:com.zte.flagreset\npackage:cn.nubia.fan\npackage:com.zte.onemorething\npackage:com.investec.app\npackage:com.android.wifi.resources.overlay.target\npackage:com.android.providers.partnerbookmarks\npackage:com.android.dynsystem\npackage:com.zte.livewallpaper\npackage:com.audible.application\npackage:com.google.android.connectivity.resources\npackage:com.google.android.youtube"
+    },
+    {
+      "command": "adb shell am start -n com.termux/.app.TermuxActivity",
+      "returncode": 0,
+      "stderr": "Warning: Activity not started, its current task has been brought to the front",
+      "stdout": "Starting: Intent { cmp=com.termux/.app.TermuxActivity }"
+    },
+    {
+      "command": "adb shell /data/data/com.termux/files/usr/bin/python3 -V",
+      "returncode": 127,
+      "stderr": "/system/bin/sh: /data/data/com.termux/files/usr/bin/python3: inaccessible or not found",
+      "stdout": ""
+    },
+    {
+      "command": "adb shell /data/data/com.termux/files/usr/bin/pkg --version",
+      "returncode": 127,
+      "stderr": "/system/bin/sh: /data/data/com.termux/files/usr/bin/pkg: inaccessible or not found",
+      "stdout": ""
+    },
+    {
+      "command": "adb shell input text pwd",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "adb shell input keyevent KEYCODE_ENTER",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "adb exec-out screencap -p > proofs/reruns/robotics_phase3_local_2026-03-17/redmagic_termux_pwd_execution.png",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "captured screenshot evidence for foreground Termux command output"
+    },
+    {
+      "command": "adb shell input text pkg",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "adb shell input keyevent KEYCODE_ENTER",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "adb exec-out screencap -p > proofs/reruns/robotics_phase3_local_2026-03-17/redmagic_termux_pkg_usage.png",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "captured screenshot evidence for foreground Termux pkg output"
+    }
+  ],
+  "authority_surface": "zpbot-v2",
+  "compatibility_mode": "wire-v1",
+  "device_abi": "arm64-v8a",
+  "device_model": "NX789J",
+  "direct_private_path": {
+    "pkg_accessible": false,
+    "python_accessible": false,
+    "summary": "Direct /data/data/com.termux/files/usr/bin invocations remain inaccessible from adb shell."
+  },
+  "foreground_termux_ui": {
+    "execution_accessible": true,
+    "summary": "ADB can drive the foreground Termux session and recover screenshot-backed command results on the physical Red Magic device.",
+    "verified_commands": [
+      {
+        "command": "pwd",
+        "evidence_path": "zpe-robotics/proofs/reruns/robotics_phase3_local_2026-03-17/redmagic_termux_pwd_execution.png",
+        "observed_output": "/data/data/com.termux/files/home"
+      },
+      {
+        "command": "pkg",
+        "evidence_path": "zpe-robotics/proofs/reruns/robotics_phase3_local_2026-03-17/redmagic_termux_pkg_usage.png",
+        "observed_output": "Usage: pkg command [arguments]"
+      }
+    ]
+  },
+  "generation_timestamp": "2026-03-17T13:41:21.481733+00:00",
+  "host_platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "status": "PASS",
+  "status_reason": "Device execution surface proven through foreground Termux command execution; direct private-path execution remains unavailable.",
+  "termux_installed": true,
+  "termux_pkg_accessible": true,
+  "termux_python_accessible": false,
+  "workflow_run_id": "local-redmagic-adb"
+}

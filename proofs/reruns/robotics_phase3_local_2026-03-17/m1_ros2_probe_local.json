@@ -1,0 +1,40 @@
+{
+  "attempt_log": [
+    {
+      "command": "ros2 --version",
+      "returncode": 127,
+      "stderr": "FileNotFoundError: [Errno 2] No such file or directory: 'ros2'",
+      "stdout": ""
+    },
+    {
+      "command": "from moveit.planning import MoveItPy",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from moveit.planning import MoveItPy; print('moveit.planning:MoveItPy')\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'moveit'",
+      "stdout": ""
+    },
+    {
+      "command": "import moveit_py",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import moveit_py; print('moveit_py')\n    ^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'moveit_py'",
+      "stdout": ""
+    },
+    {
+      "command": "import moveit",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import moveit; print('moveit')\n    ^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'moveit'",
+      "stdout": ""
+    }
+  ],
+  "authority_surface": "zpbot-v2",
+  "compatibility_mode": "wire-v1",
+  "generation_timestamp": "2026-03-17T13:29:19.404633+00:00",
+  "host_platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "moveit_error": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from moveit.planning import MoveItPy; print('moveit.planning:MoveItPy')\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'moveit'",
+  "moveit_import_target": "",
+  "moveit_importable": false,
+  "pass_criteria": "real ros2 version string plus successful MoveIt Python import with exact failure preservation",
+  "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "ros2_version": "",
+  "status": "FAIL",
+  "workflow_run_id": "local-dry-run"
+}
