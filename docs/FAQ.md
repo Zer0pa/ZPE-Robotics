@@ -2,11 +2,11 @@
 
 ## Is this repo launch-ready?
 
-No. The current pre-repo authority snapshot is `NO-GO`.
+No. The current release-candidate kernel gate is `GO`, but public launch and blind-clone verification are still not complete.
 
 ## What blocks launch right now?
 
-`E-G3`, plus Phase 5 clean-clone verification.
+Blind-clone verification and explicit public-release staging. The old `E-G3` blocker is closed.
 
 ## Why keep the February bundles if they are stale?
 
@@ -15,9 +15,10 @@ what changed, but they are not the current authority surface.
 
 ## Where is the current authority?
 
-For this staged repo, the current truth is summarized in
-`proofs/logs/PRE_REPO_AUTHORITY_SNAPSHOT_2026-03-09.md`. A repo-root rerun is
-still required.
+For this staged repo, the current release-candidate truth is summarized in
+`proofs/FINAL_STATUS.md`, `proofs/CONSOLIDATED_PROOF_REPORT.md`, and the hosted
+artifacts under `proofs/release_candidate/`. The March 9 snapshot remains
+lineage, not the current gate result.
 
 ## How is Robotics related to IMC?
 

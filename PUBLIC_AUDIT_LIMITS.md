@@ -6,8 +6,10 @@ This repo is a private staging repo, not a public release surface.
 
 - the staged repo boundary and package surface
 - the preserved historical February proof lineage
-- the current pre-repo March 9 verdict summary: `NO-GO`
-- the remaining active blocker name: `E-G3`
+- the current release-candidate kernel verdict summary: `GO`
+- the hosted `E-G3` comparator closure
+- the hosted `IT-03` plus `IT-05` composition closure
+- the hosted `IT-04` parity matrix closure
 - the hosted `M1` closure evidence under `proofs/reruns/github_actions_2026-03-17/`
 - the future repo-local verification commands and proof paths
 
@@ -17,15 +19,15 @@ This repo is a private staging repo, not a public release surface.
 - launch readiness
 - a public release verdict
 - that the historical February bundles are still current authority
-- that Octo comparator closure is complete
+- that blind-clone or public-release staging is complete
 
 ## Limits You Must Respect
 
 | Limit | Current state | Why it matters |
 |---|---|---|
 | Historical bundle path residue | preserved under `proofs/artifacts/historical/` | those files contain real lineage but non-portable machine paths |
-| Current authority location | summarized from a pre-repo snapshot | the current authority was produced before repo formation and still needs a repo-root rerun |
-| Runtime blocker state | `E-G3` unresolved | hosted `M1` is closed, but Octo comparator truth is still open |
+| Current authority location | summarized from hosted release-candidate artifacts and preserved pre-repo lineage | the current gate is closed, but blind-clone and public-release work still remain |
+| Runtime blocker state | no live blocker on the current kernel gate | hosted `M1`, `E-G3`, `IT-03`/`IT-05`, and `IT-04` are all closed |
 | Release status | private only | no public release action or visibility change happened here |
 
 ## Use These Files Together

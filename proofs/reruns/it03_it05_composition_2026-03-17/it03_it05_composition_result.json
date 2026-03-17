@@ -37,8 +37,8 @@
   ],
   "authority_surface": "zpbot-v2",
   "compatibility_mode": "wire-v1",
-  "generation_timestamp": "2026-03-17T15:36:45.422558+00:00",
-  "host_platform": "macOS-15.5-x86_64-i386-64bit-Mach-O",
+  "generation_timestamp": "2026-03-17T15:40:53.357600+00:00",
+  "host_platform": "Linux-6.14.0-1017-azure-x86_64-with-glibc2.39",
   "hostile_paths": [
     {
       "actual_error": "invalid packet magic",
@@ -62,12 +62,12 @@
       "status": "PASS"
     }
   ],
-  "platform": "macOS-15.5-x86_64-i386-64bit-Mach-O",
+  "platform": "Linux-6.14.0-1017-azure-x86_64-with-glibc2.39",
   "status": "PASS",
   "steps": {
     "decode_packet": {
       "status": "PASS",
-      "trajectory_rmse_deg": 8.909080307642679e-07,
+      "trajectory_rmse_deg": 8.909080307785734e-07,
       "trajectory_shape": [
         4096,
         6
@@ -83,10 +83,10 @@
         "joints": 6,
         "keep_coeffs": 8,
         "payload_bytes": 395,
-        "payload_crc32": 1856721606,
+        "payload_crc32": 914763828,
         "wire_version": 1
       },
-      "packet_sha256": "d428f395c3979cac8a967e8a014649c0220c37ba850a8da0aee2756d0b9393c7",
+      "packet_sha256": "ee471770da7aaae27df1e25ed8b417d76fedf4b025f750836c5b4061fd171a83",
       "status": "PASS"
     },
     "reference_hash_check": {
@@ -99,11 +99,11 @@
     },
     "wrap_zpbag1": {
       "bag_bytes": 859,
-      "bag_sha256": "42446a813fc2269438320bd4402d5b4002ba0e200ade80045514afe53f45fe5c",
+      "bag_sha256": "911d0d04eb90de13fb2dbf3a4df6013caa3ed97bc8d527979a9d94a035680ca3",
       "records": 1,
       "status": "PASS"
     }
   },
-  "timestamp": "2026-03-17T15:36:45.422558+00:00",
-  "workflow_run_id": "local-dry-run"
+  "timestamp": "2026-03-17T15:40:53.357600+00:00",
+  "workflow_run_id": "23202700741"
 }

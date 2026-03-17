@@ -5,11 +5,14 @@
 | Surface | Status |
 |---|---|
 | Repo formation | complete for private staging |
-| Technical verdict | `NO-GO` |
-| Current blocker set | `E-G3` |
+| Technical verdict | `GO` for the release-candidate kernel gate |
+| Current blocker set | none on the current gate |
 | Hosted M1 gate | closed on 2026-03-17 via run `23200176105` |
+| Hosted E-G3 gate | closed on 2026-03-17 via run `23202700744` |
+| Hosted IT-03 + IT-05 | closed on 2026-03-17 via run `23202700741` |
+| Hosted IT-04 parity matrix | closed on 2026-03-17 via run `23202700798` |
 | Private remote staging | completed in Phase 3 and Phase 4 |
-| Cold-clone verification | deferred to Phase 5 |
+| Cold-clone verification | deferred follow-on work |
 | Performance augmentation | deferred to Phase 4.5 |
 
 ## Reading Order

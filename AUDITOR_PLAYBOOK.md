@@ -7,13 +7,15 @@ It is intentionally narrow. This repo has not yet completed Phase 5
 blind-clone verification, so this playbook is a repo-local verification guide,
 not a public release claim.
 
-## Current Truth Before Phase 5
+## Current Truth
 
-- the March 9 pre-repo max-wave snapshot is `NO-GO`
+- the current release-candidate kernel gate is `GO`
 - hosted `M1` is closed by GitHub Actions run `23200176105`
-- active blocker is `E-G3`
+- hosted `E-G3` is closed by GitHub Actions run `23202700744`
+- hosted `IT-03` + `IT-05` are closed by GitHub Actions run `23202700741`
+- hosted `IT-04` is closed by GitHub Actions run `23202700798`
 - historical February bundles are preserved for lineage only
-- a repo-root rerun is still required
+- blind-clone verification is still a follow-on task
 
 ## Shortest Repo-Local Verify Path
 
@@ -32,7 +34,14 @@ python -m pip install -e ".[dev,netnew]"
 python -m pytest tests -q
 ```
 
-3. When Phase 5 opens, run the repo-local max-wave path:
+3. Verify the release-candidate CLI surface:
+
+```bash
+python -m zpe_robotics.cli verify proofs/release_candidate/canonical_release_packet.zpbot
+python -m zpe_robotics.cli info proofs/release_candidate/canonical_release_packet.zpbot
+```
+
+4. If clean-clone or blind-clone staging is promoted, run the repo-local max-wave path:
 
 ```bash
 python scripts/run_wave1.py \
@@ -42,7 +51,7 @@ python scripts/run_wave1.py \
   --max-wave
 ```
 
-4. Validate the rerun bundle:
+5. Validate the rerun bundle:
 
 ```bash
 python scripts/validate_net_new.py --artifacts proofs/reruns/robotics_wave1_local

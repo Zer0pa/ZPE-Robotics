@@ -8,10 +8,13 @@ max-wave snapshot. That snapshot is summarized in
 
 Current result:
 
-- `quality_overall_status=NO-GO`
-- `non_negotiable_pass=false`
+- `quality_overall_status=GO`
+- `non_negotiable_pass=true`
 - hosted `M1` closed on 2026-03-17 via GitHub Actions run `23200176105`
-- failing gates: `E-G3`
+- hosted `E-G3` closed on 2026-03-17 via GitHub Actions run `23202700744`
+- hosted `IT-03` + `IT-05` closed on 2026-03-17 via GitHub Actions run `23202700741`
+- hosted `IT-04` parity matrix closed on 2026-03-17 via GitHub Actions run `23202700798`
+- failing gates: none on the current release-candidate gate
 - RunPod state: `READY_FOR_DEFERRED_EXECUTION`
 
 ## Historical Proof Lineage
@@ -32,6 +35,6 @@ Do not use them for:
 
 ## What Still Needs To Happen
 
+- blind-clone verification and release staging if public or commercial distribution is promoted
 - Phase 4.5 performance work if pursued
-- Phase 5 repo-root verification and blind-clone testing
-- a current rerun written under `proofs/reruns/`
+- any optional COMM-02 or COMM-03 follow-on wedge work that the current kernel gate does not require

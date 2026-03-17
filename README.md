@@ -12,9 +12,12 @@ has not yet passed Phase 5 blind-clone verification.
 |---|---|
 | Visibility | private staging only |
 | Repo state | inner repo normalized on 2026-03-09 |
-| Current technical verdict | `NO-GO` from the March 9 pre-repo max-wave snapshot |
-| Active blockers | `E-G3` |
+| Current technical verdict | `GO` for the 2026-03-17 release-candidate kernel gate |
+| Active blockers | none on the current release-candidate gate |
 | Hosted runtime closure | `M1` closed on 2026-03-17 via GitHub Actions run `23200176105` |
+| Hosted comparator closure | `E-G3` closed on 2026-03-17 via GitHub Actions run `23202700744` |
+| Hosted composition closure | `IT-03` + `IT-05` closed on 2026-03-17 via GitHub Actions run `23202700741` |
+| Hosted parity matrix | `IT-04` closed on 2026-03-17 via GitHub Actions run `23202700798` |
 | Historical bundles | included under `proofs/artifacts/historical/` |
 | Portable repo-root rerun | not yet performed |
 
@@ -32,7 +35,7 @@ has not yet passed Phase 5 blind-clone verification.
 - It does not claim that the current private staged tree has been verified
   from a clean clone.
 - It does not treat the February historical bundles as current authority.
-- It does not claim that Octo comparator closure or clean-clone verification
+- It does not claim that blind-clone verification or public release staging
   are complete today.
 
 ## Quick Start
@@ -45,7 +48,7 @@ python -m pip install -e ".[dev,netnew]"
 python -m pytest tests -q
 ```
 
-Future repo-local max-wave verify path when Phase 5 opens:
+Optional repo-local follow-on verify path when clean-clone staging opens:
 
 ```bash
 python scripts/run_wave1.py \
@@ -69,3 +72,5 @@ python scripts/run_wave1.py \
 - Historical artifacts remain historical even when they contain stronger
   older claims than the current rerun.
 - Mixed evidence is not a pass.
+- `GO` here means the release-candidate kernel gate passed, not that public
+  launch or blind-clone staging are complete.

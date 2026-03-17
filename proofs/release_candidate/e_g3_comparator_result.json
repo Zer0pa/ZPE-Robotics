@@ -8,12 +8,12 @@
   "dataset": "arm_fixture_seed_20260220",
   "evidence_class": "infrastructure_storage_only",
   "fixture_sha256": "e13ef6704e62d55b40194f8f86074d03254692a92ed2bcfd6f6be0f383191d35",
-  "generation_timestamp": "2026-03-17T15:35:42.382164+00:00",
-  "host_platform": "macOS-15.5-x86_64-i386-64bit-Mach-O",
-  "packet_sha256": "d428f395c3979cac8a967e8a014649c0220c37ba850a8da0aee2756d0b9393c7",
-  "platform": "macOS-15.5-x86_64-i386-64bit-Mach-O",
+  "generation_timestamp": "2026-03-17T15:40:56.513484+00:00",
+  "host_platform": "Linux-6.14.0-1017-azure-x86_64-with-glibc2.39",
+  "packet_sha256": "ee471770da7aaae27df1e25ed8b417d76fedf4b025f750836c5b4061fd171a83",
+  "platform": "Linux-6.14.0-1017-azure-x86_64-with-glibc2.39",
   "status": "PASS",
-  "timestamp": "2026-03-17T15:35:42.382164+00:00",
-  "workflow_run_id": "local-dry-run",
+  "timestamp": "2026-03-17T15:40:56.513484+00:00",
+  "workflow_run_id": "23202700744",
   "zpbot_storage_bytes": 413
 }
