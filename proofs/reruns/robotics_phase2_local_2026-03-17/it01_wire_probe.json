@@ -1,0 +1,12 @@
+{
+  "artifact": "it01_wire_probe",
+  "authority_surface": "zpbot-v2",
+  "compatibility_mode": "wire-v1",
+  "frames": 2048,
+  "header_bytes": 18,
+  "joints": 6,
+  "keep_coeffs": 8,
+  "payload_bytes": 395,
+  "payload_crc32": 2222280486,
+  "wire_version": 1
+}

@@ -1,0 +1,8 @@
+{
+  "artifact": "mcap_bridge_roundtrip",
+  "bit_consistent": true,
+  "bytes_equal": true,
+  "original_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125",
+  "records": 12,
+  "replay_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125"
+}

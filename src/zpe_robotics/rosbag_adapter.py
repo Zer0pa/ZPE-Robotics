@@ -12,11 +12,17 @@ from typing import Any
 import numpy as np
 
 from .codec import ZPBotCodec
+from .constants import (
+    ZPBAG_HEADER_FORMAT,
+    ZPBAG_MAGIC,
+    ZPBAG_SCHEMA_NAME,
+    ZPBAG_SCHEMA_VERSION,
+    ZPBOT_MESSAGE_ENCODING,
+)
 from .utils import sha256_bytes, stable_json_dumps
 
 
-_BAG_MAGIC = b"ZPBAG1"
-_HEADER = struct.Struct("<6sII")
+_HEADER = struct.Struct(ZPBAG_HEADER_FORMAT)
 
 
 class BagFormatError(ValueError):
@@ -32,37 +38,54 @@ class RoundtripResult:
     records: int
 
 
+def normalize_record(record: dict[str, Any], idx: int, codec: ZPBotCodec) -> dict[str, Any]:
+    """Normalize a raw record into the deterministic transport shape."""
+
+    item: dict[str, Any] = {
+        "index": int(record.get("index", idx)),
+        "topic": str(record["topic"]),
+        "timestamp_ns": int(record["timestamp_ns"]),
+        "robot": str(record.get("robot", "unknown_robot")),
+        "joint_names": [str(name) for name in record.get("joint_names", [])],
+        "quality": float(record.get("quality", 1.0)),
+        "encoding": str(record.get("encoding", ZPBOT_MESSAGE_ENCODING)),
+    }
+    if item["encoding"] != ZPBOT_MESSAGE_ENCODING:
+        raise BagFormatError(f"unsupported record encoding {item['encoding']}")
+
+    if "trajectory_blob_b64" in record:
+        item["trajectory_blob_b64"] = str(record["trajectory_blob_b64"])
+        return item
+
+    if "trajectory" not in record:
+        raise BagFormatError("record missing trajectory")
+
+    trajectory = np.asarray(record["trajectory"], dtype=np.float64)
+    blob = codec.encode(trajectory)
+    item["trajectory_blob_b64"] = base64.b64encode(blob).decode("ascii")
+    return item
+
+
+def normalize_records(records: list[dict[str, Any]], codec: ZPBotCodec) -> list[dict[str, Any]]:
+    return [normalize_record(record, idx, codec) for idx, record in enumerate(records)]
+
+
+def decode_trajectory_blob(blob_b64: str, codec: ZPBotCodec) -> np.ndarray:
+    blob = base64.b64decode(blob_b64.encode("ascii"))
+    return codec.decode(blob)
+
+
 def encode_records(records: list[dict[str, Any]], codec: ZPBotCodec) -> bytes:
-    encoded_records: list[dict[str, Any]] = []
-    for idx, record in enumerate(records):
-        item: dict[str, Any] = {
-            "index": int(record.get("index", idx)),
-            "topic": str(record["topic"]),
-            "timestamp_ns": int(record["timestamp_ns"]),
-            "robot": str(record.get("robot", "unknown_robot")),
-            "joint_names": [str(name) for name in record.get("joint_names", [])],
-            "quality": float(record.get("quality", 1.0)),
-            "encoding": "zpbot",
-        }
-
-        if "trajectory_blob_b64" in record:
-            item["trajectory_blob_b64"] = str(record["trajectory_blob_b64"])
-        else:
-            trajectory = np.asarray(record["trajectory"], dtype=np.float64)
-            blob = codec.encode(trajectory)
-            item["trajectory_blob_b64"] = base64.b64encode(blob).decode("ascii")
-
-        encoded_records.append(item)
-
+    encoded_records = normalize_records(records, codec)
     envelope = {
-        "schema": "zpe_rosbag_wave1",
-        "schema_version": 1,
+        "schema": ZPBAG_SCHEMA_NAME,
+        "schema_version": ZPBAG_SCHEMA_VERSION,
         "records": encoded_records,
     }
 
     payload = stable_json_dumps(envelope).encode("utf-8")
     crc = zlib.crc32(payload) & 0xFFFFFFFF
-    header = _HEADER.pack(_BAG_MAGIC, len(payload), crc)
+    header = _HEADER.pack(ZPBAG_MAGIC, len(payload), crc)
     return header + payload
 
 
@@ -76,7 +99,7 @@ def decode_records(
         raise BagFormatError("bag blob too small")
 
     magic, payload_len, expected_crc = _HEADER.unpack(bag_blob[: _HEADER.size])
-    if magic != _BAG_MAGIC:
+    if magic != ZPBAG_MAGIC:
         raise BagFormatError("invalid bag magic")
 
     payload = bag_blob[_HEADER.size :]
@@ -88,6 +111,11 @@ def decode_records(
         raise BagFormatError("bag CRC mismatch")
 
     envelope = json.loads(payload.decode("utf-8"))
+    if envelope.get("schema") != ZPBAG_SCHEMA_NAME:
+        raise BagFormatError("unexpected bag schema")
+    if int(envelope.get("schema_version", -1)) != ZPBAG_SCHEMA_VERSION:
+        raise BagFormatError("unexpected bag schema version")
+
     records = envelope.get("records", [])
     out: list[dict[str, Any]] = []
 
@@ -103,12 +131,14 @@ def decode_records(
             "robot": rec["robot"],
             "joint_names": list(rec.get("joint_names", [])),
             "quality": float(rec.get("quality", 1.0)),
+            "encoding": str(rec.get("encoding", ZPBOT_MESSAGE_ENCODING)),
             "trajectory_blob_b64": rec["trajectory_blob_b64"],
         }
+        if decoded["encoding"] != ZPBOT_MESSAGE_ENCODING:
+            raise BagFormatError(f"unsupported record encoding {decoded['encoding']}")
 
         if decode_trajectory:
-            blob = base64.b64decode(rec["trajectory_blob_b64"].encode("ascii"))
-            decoded["trajectory"] = codec.decode(blob)
+            decoded["trajectory"] = decode_trajectory_blob(decoded["trajectory_blob_b64"], codec)
 
         out.append(decoded)
 
@@ -147,4 +177,3 @@ def reorder_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
     swapped = list(records)
     swapped[0], swapped[1] = swapped[1], swapped[0]
     return swapped
-

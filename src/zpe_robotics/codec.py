@@ -2,16 +2,12 @@
 
 from __future__ import annotations
 
-import struct
 import zlib
 from dataclasses import dataclass
 
 import numpy as np
 
-from .constants import CODEC_VERSION, MAGIC_ZPBOT
-
-
-_HEADER = struct.Struct("<5sB I H H I")
+from .wire import WireFormatError, decode_packet, pack_packet_header
 
 
 class CodecError(ValueError):
@@ -40,42 +36,14 @@ class ZPBotCodec:
         compressed_payload = zlib.compress(payload.tobytes(order="C"), level=self.compression_level)
         crc = zlib.crc32(compressed_payload) & 0xFFFFFFFF
 
-        header = _HEADER.pack(MAGIC_ZPBOT, CODEC_VERSION, frames, joints, keep, crc)
+        header = pack_packet_header(frames, joints, keep, crc)
         return header + compressed_payload
 
     def decode(self, blob: bytes) -> np.ndarray:
-        if len(blob) < _HEADER.size:
-            raise CodecError("blob too small for header")
-
-        magic, version, frames, joints, keep, expected_crc = _HEADER.unpack(blob[: _HEADER.size])
-        if magic != MAGIC_ZPBOT:
-            raise CodecError("invalid magic")
-        if version != CODEC_VERSION:
-            raise CodecError(f"unsupported codec version {version}")
-
-        compressed_payload = blob[_HEADER.size :]
-        observed_crc = zlib.crc32(compressed_payload) & 0xFFFFFFFF
-        if observed_crc != expected_crc:
-            raise CodecError("payload CRC mismatch")
-
         try:
-            payload = zlib.decompress(compressed_payload)
-        except zlib.error as exc:
-            raise CodecError(f"decompression failed: {exc}") from exc
-
-        expected_len = keep * joints * 2
-        values = np.frombuffer(payload, dtype=np.float32)
-        if values.size != expected_len:
-            raise CodecError("payload size mismatch")
-
-        coeff = values.reshape((keep, joints, 2))
-        kept = coeff[..., 0].astype(np.float64) + 1j * coeff[..., 1].astype(np.float64)
-
-        full = np.zeros(((frames // 2) + 1, joints), dtype=np.complex128)
-        full[:keep, :] = kept
-
-        decoded = np.fft.irfft(full, n=frames, axis=0)
-        return decoded.astype(np.float64)
+            return decode_packet(blob)
+        except WireFormatError as exc:
+            raise CodecError(str(exc)) from exc
 
 
 def compression_ratio(trajectory: np.ndarray, encoded_blob: bytes, raw_dtype: np.dtype = np.float32) -> float:
@@ -106,4 +74,3 @@ def _validate_trajectory(trajectory: np.ndarray) -> np.ndarray:
     if not np.isfinite(arr).all():
         raise ValueError("trajectory contains non-finite values")
     return arr
-

@@ -26,6 +26,7 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from zpe_robotics.constants import ALLOWED_IMP_CODES, RUNPOD_DEFERMENT_ARTIFACTS
+from zpe_robotics.runtime_probe import probe_ros2_moveit as runtime_probe_ros2_moveit
 from zpe_robotics.utils import ensure_dir, write_json, write_text
 
 os.environ.setdefault("HF_HUB_ENABLE_HF_TRANSFER", "0")
@@ -927,7 +928,7 @@ def main() -> None:
 
     # M1 ROS2 + MoveIt runtime
     validation_lines.extend(["", "## ROS2 / MoveIt2 Runtime"])
-    ros_probe = _probe_ros2_moveit()
+    ros_probe = runtime_probe_ros2_moveit()
     ros_attempts = [CmdResult(**x) for x in ros_probe["attempts"]]
     _append_attempts_log(validation_lines, ros_attempts)
     validation_lines.append(f"- runtime_path: {ros_probe['runtime_path']}")
