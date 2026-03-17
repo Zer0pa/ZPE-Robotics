@@ -151,7 +151,7 @@ Promotion constraints:
 6. `python -m pytest -q`
 
 Additional runtime-closure probes:
-1. ROS2 path: `ros2 --version`, then container/runtime alternatives (if available), else explicit `FAIL`.
+1. ROS2 path: `ros2 pkg list`, record version provenance separately, then container/runtime alternatives (if available), else explicit `FAIL`.
 2. MuJoCo path: arm64 Python 3.11 runtime probe with deterministic parity script before claim update.
 3. Octo GPU-dependent path: local dry-run + RunPod handoff artifacts with pinned dependencies and exact command chain.
 4. ROS2 docker daemon recovery: `PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin /opt/homebrew/bin/colima start --cpu 4 --memory 8 --disk 60`.

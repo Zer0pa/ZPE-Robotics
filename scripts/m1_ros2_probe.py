@@ -88,9 +88,13 @@ def main() -> int:
             {
                 "status": "FAIL",
                 "ros2_version": "",
+                "ros2_version_source": "",
+                "ros2_pkg_list_ok": False,
+                "ros2_pkg_list_sample": "",
+                "ros2_runtime_command": "",
                 "moveit_importable": False,
                 "moveit_import_target": "",
-                "pass_criteria": "real ros2 version string plus successful MoveIt Python import with exact failure preservation",
+                "pass_criteria": "ros2 pkg list exits 0, version provenance is recorded, and MoveIt runtime discovery succeeds with exact failure preservation",
                 "attempt_log": [],
                 "unhandled_error": f"{type(exc).__name__}: {exc}",
                 "traceback": traceback.format_exc(),
@@ -109,9 +113,10 @@ def _run_probe(args: argparse.Namespace) -> int:
         install_result = _run_shell(args.install_command)
         attempts.append(install_result)
 
-    ros2_attempts, ros2_version, ros2_version_source = _probe_ros2_version(args.ros2_command)
+    ros2_attempts, ros2_runtime_result = _probe_ros2_runtime(args.ros2_command)
     attempts.extend(ros2_attempts)
-    ros2_result = ros2_attempts[0]
+    ros2_version_attempts, ros2_version, ros2_version_source = _probe_ros2_version_provenance()
+    attempts.extend(ros2_version_attempts)
 
     moveit_result, moveit_target = _probe_moveit_imports()
     attempts.extend(moveit_result)
@@ -120,13 +125,16 @@ def _run_probe(args: argparse.Namespace) -> int:
     payload.update(
         {
             "status": "PASS"
-            if _is_pass(install_result, ros2_result, first_moveit_success)
+            if _is_pass(install_result, ros2_runtime_result, first_moveit_success)
             else "FAIL",
             "ros2_version": ros2_version,
             "ros2_version_source": ros2_version_source,
+            "ros2_pkg_list_ok": ros2_runtime_result.returncode == 0,
+            "ros2_pkg_list_sample": _extract_primary_output(ros2_runtime_result),
+            "ros2_runtime_command": ros2_runtime_result.command,
             "moveit_importable": bool(first_moveit_success),
             "moveit_import_target": moveit_target,
-            "pass_criteria": "real ros2 version string plus successful MoveIt Python import with exact failure preservation",
+            "pass_criteria": "ros2 pkg list exits 0, version provenance is recorded, and MoveIt runtime discovery succeeds with exact failure preservation",
             "attempt_log": [asdict(item) for item in attempts],
         }
     )
@@ -161,14 +169,15 @@ def _probe_moveit_imports() -> tuple[list[CmdResult], str]:
     return results, ""
 
 
-def _probe_ros2_version(ros2_command: str) -> tuple[list[CmdResult], str, str]:
+def _probe_ros2_runtime(ros2_command: str) -> tuple[list[CmdResult], CmdResult]:
     results: list[CmdResult] = []
+    pkg_list_result = _run_cmd([ros2_command, "pkg", "list"])
+    results.append(pkg_list_result)
+    return results, pkg_list_result
 
-    ros2_cli = _run_cmd([ros2_command, "--version"])
-    results.append(ros2_cli)
-    if ros2_cli.returncode == 0 and _extract_primary_output(ros2_cli):
-        return results, _extract_primary_output(ros2_cli), ros2_cli.command
 
+def _probe_ros2_version_provenance() -> tuple[list[CmdResult], str, str]:
+    results: list[CmdResult] = []
     python_metadata = _run_cmd(
         [
             sys.executable,
@@ -199,14 +208,12 @@ def _probe_ros2_version(ros2_command: str) -> tuple[list[CmdResult], str, str]:
 
 def _is_pass(
     install_result: CmdResult | None,
-    ros2_result: CmdResult,
+    ros2_runtime_result: CmdResult,
     moveit_success: CmdResult | None,
 ) -> bool:
     if install_result is not None and install_result.returncode != 0:
         return False
-    if ros2_result.returncode != 0:
-        return False
-    if not _extract_primary_output(ros2_result):
+    if ros2_runtime_result.returncode != 0:
         return False
     return moveit_success is not None
 

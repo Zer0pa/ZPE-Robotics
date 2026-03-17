@@ -24,7 +24,8 @@ Execute the first hosted Ubuntu `M1` probe surface and preserve a decisive JSON 
 `M1` can be treated as closed only when the hosted artifact reports all of:
 
 - `status = PASS`
-- a real non-empty `ros2_version`
+- `ros2_pkg_list_ok = true`
+- a recorded non-empty `ros2_version` provenance field
 - `moveit_importable = true`
 - required provenance fields:
   - `authority_surface = zpbot-v2`
@@ -37,6 +38,7 @@ Execute the first hosted Ubuntu `M1` probe surface and preserve a decisive JSON 
 
 - artifact missing
 - `status = FAIL`
+- `ros2 pkg list` exits non-zero
 - empty or missing `ros2_version`
 - `moveit_importable = false`
 - missing provenance fields
