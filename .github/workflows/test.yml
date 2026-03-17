@@ -49,7 +49,7 @@ jobs:
 
       - name: Install MCAP CLI
         run: |
-          go install github.com/foxglove/mcap/go/cli/mcap@v1.7.4
+          go install github.com/foxglove/mcap/go/cli/mcap@latest
           echo "${HOME}/go/bin" >> "${GITHUB_PATH}"
 
       - name: Install package with dev dependencies
@@ -81,7 +81,7 @@ jobs:
 
       - name: Install MCAP CLI
         run: |
-          go install github.com/foxglove/mcap/go/cli/mcap@v1.7.4
+          go install github.com/foxglove/mcap/go/cli/mcap@latest
           echo "${HOME}/go/bin" >> "${GITHUB_PATH}"
 
       - name: Install package with dev dependencies
@@ -118,7 +118,7 @@ jobs:
               apt-get update -qq
               DEBIAN_FRONTEND=noninteractive apt-get install -y -qq git golang-go
               export PATH="${PATH}:/root/go/bin"
-              go install github.com/foxglove/mcap/go/cli/mcap@v1.7.4
+              go install github.com/foxglove/mcap/go/cli/mcap@latest
               python -m pip install --upgrade pip
               python -m pip install -e ".[dev]"
               python -m pytest tests/ -q

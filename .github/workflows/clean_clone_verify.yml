@@ -32,7 +32,7 @@ jobs:
 
       - name: Install MCAP CLI
         run: |
-          go install github.com/foxglove/mcap/go/cli/mcap@v1.7.4
+          go install github.com/foxglove/mcap/go/cli/mcap@latest
           echo "${HOME}/go/bin" >> "${GITHUB_PATH}"
 
       - name: Fresh clone repository
