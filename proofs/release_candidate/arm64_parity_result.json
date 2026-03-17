@@ -1,0 +1,40 @@
+{
+  "attempt_log": [
+    {
+      "command": "/usr/local/bin/python -m pip install --upgrade pip uv",
+      "returncode": 0,
+      "stderr": "WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv",
+      "stdout": "Requirement already satisfied: pip in /usr/local/lib/python3.11/site-packages (24.0)\nCollecting pip\n  Downloading pip-26.0.1-py3-none-any.whl.metadata (4.7 kB)\nCollecting uv\n  Downloading uv-0.10.11-py3-none-manylinux_2_28_aarch64.whl.metadata (11 kB)\nDownloading pip-26.0.1-py3-none-any.whl (1.8 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 1.8/1.8 MB 9.5 MB/s eta 0:00:00\nDownloading uv-0.10.11-py3-none-manylinux_2_28_aarch64.whl (22.4 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 22.4/22.4 MB 14.9 MB/s eta 0:00:00\nInstalling collected packages: uv, pip\n  Attempting uninstall: pip\n    Found existing installation: pip 24.0\n    Uninstalling pip-24.0:\n      Successfully uninstalled pip-24.0\nSuccessfully installed pip-26.0.1 uv-0.10.11"
+    },
+    {
+      "command": "uv sync --dev --extra dev",
+      "returncode": 0,
+      "stderr": "Using CPython 3.11.15 interpreter at: /usr/local/bin/python3\nCreating virtual environment at: .venv\nResolved 48 packages in 2.17s\n   Building zpe-robotics @ file:///workspace\nDownloading pygments (1.2MiB)\nDownloading numpy (15.2MiB)\n Downloaded pygments\n Downloaded numpy\n      Built zpe-robotics @ file:///workspace\nPrepared 7 packages in 11.22s\nwarning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\nInstalled 7 packages in 517ms\n + iniconfig==2.3.0\n + numpy==2.4.3\n + packaging==26.0\n + pluggy==1.6.0\n + pygments==2.19.2\n + pytest==9.0.2\n + zpe-robotics==0.1.0 (from file:///workspace)",
+      "stdout": ""
+    },
+    {
+      "command": "uv run pytest tests/test_codec.py tests/test_mcap_bridge.py -q",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "....                                                                     [100%]\n4 passed in 4.25s"
+    },
+    {
+      "command": "uv run python -c import json\nfrom zpe_robotics.codec import ZPBotCodec\nfrom zpe_robotics.fixtures import generate_joint_trajectory, make_rosbag_fixture\nfrom zpe_robotics.mcap_bridge import evaluate_bridge_roundtrip\ntrajectory = generate_joint_trajectory(num_frames=4096, num_joints=6, seed=20260317)\nrecords = make_rosbag_fixture(trajectory, seed=20260318)\nresult = evaluate_bridge_roundtrip(records, ZPBotCodec(keep_coeffs=8))\nprint(json.dumps({\n    'original_sha256': result.original_sha256,\n    'replay_sha256': result.replay_sha256,\n    'bit_consistent': result.bit_consistent,\n}))",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"original_sha256\": \"a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125\", \"replay_sha256\": \"a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125\", \"bit_consistent\": true}"
+    }
+  ],
+  "authority_surface": "zpbot-v2",
+  "bit_consistent": true,
+  "compatibility_mode": "wire-v1",
+  "generation_timestamp": "2026-03-17T14:38:41.315158+00:00",
+  "hashes_match": true,
+  "host_platform": "Linux-6.14.0-1017-azure-aarch64-with-glibc2.41",
+  "platform": "Linux-6.14.0-1017-azure-aarch64-with-glibc2.41",
+  "replay_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125",
+  "roundtrip_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125",
+  "status": "PASS",
+  "workflow_run_id": "23199745189",
+  "x86_reference_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125"
+}

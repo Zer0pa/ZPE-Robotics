@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "zpe-robotics"
-version = "0.1.0"
-description = "ZPE Robotics Wave-1 private staging repo for deterministic robotics codec and proof work."
+name = "zpe-motion-kernel"
+version = "0.2.0rc1"
+description = "Deterministic motion utility kernel for frozen wire-v1 robotics transport and replay."
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [{name = "Zer0pa"}]
@@ -26,6 +26,9 @@ netnew = [
 [tool.setuptools]
 package-dir = {"" = "src"}
 include-package-data = false
+
+[project.scripts]
+zpe = "zpe_robotics.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

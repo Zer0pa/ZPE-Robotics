@@ -1,0 +1,167 @@
+name: IT04 Parity Matrix
+
+on:
+  workflow_dispatch:
+
+jobs:
+  parity_native:
+    strategy:
+      matrix:
+        include:
+          - lane: ubuntu-x86
+            runs_on: ubuntu-latest
+          - lane: macos
+            runs_on: macos-latest
+    runs-on: ${{ matrix.runs_on }}
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install uv
+        run: python -m pip install --upgrade pip uv
+
+      - name: Sync development environment
+        run: uv sync --dev
+
+      - name: Run parity lane
+        run: |
+          mkdir -p "proofs/reruns/it04_parity_matrix_${GITHUB_RUN_ID}"
+          uv run python scripts/it04_parity_probe.py \
+            --workflow-run-id "${GITHUB_RUN_ID}" \
+            --platform-label "${{ matrix.lane }}" \
+            --output "proofs/reruns/it04_parity_matrix_${GITHUB_RUN_ID}/${{ matrix.lane }}.json"
+
+      - name: Upload lane artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: it04-${{ matrix.lane }}
+          path: proofs/reruns/it04_parity_matrix_${{ github.run_id }}/${{ matrix.lane }}.json
+          if-no-files-found: error
+
+  parity_arm64:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Run ARM64 parity lane
+        run: |
+          mkdir -p "proofs/reruns/it04_parity_matrix_${GITHUB_RUN_ID}"
+          docker run --rm \
+            --platform linux/arm64 \
+            -e GITHUB_RUN_ID="${GITHUB_RUN_ID}" \
+            -v "${PWD}:/workspace" \
+            -w /workspace \
+            python:3.11-slim \
+            sh -lc '
+              python -m pip install --upgrade pip uv
+              uv sync --dev
+              uv run python scripts/it04_parity_probe.py \
+                --workflow-run-id "${GITHUB_RUN_ID}" \
+                --platform-label "arm64-qemu" \
+                --output "proofs/reruns/it04_parity_matrix_${GITHUB_RUN_ID}/arm64-qemu.json"
+            '
+
+      - name: Upload ARM64 lane artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: it04-arm64-qemu
+          path: proofs/reruns/it04_parity_matrix_${{ github.run_id }}/arm64-qemu.json
+          if-no-files-found: error
+
+  aggregate:
+    needs: [parity_native, parity_arm64]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download lane artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: downloaded-artifacts
+
+      - name: Aggregate matrix result
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import json
+          import os
+          import platform
+          from pathlib import Path
+
+          reference_sha256 = "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125"
+          artifact_root = Path("downloaded-artifacts")
+          lane_payloads = []
+          for path in sorted(artifact_root.rglob("*.json")):
+              lane_payloads.append(json.loads(path.read_text(encoding="utf-8")))
+
+          if len(lane_payloads) != 3:
+              raise SystemExit(f"expected 3 lane artifacts, found {len(lane_payloads)}")
+
+          lane_hashes = [payload.get("roundtrip_sha256", "") for payload in lane_payloads]
+          all_pass = all(payload.get("status") == "PASS" and payload.get("hashes_match") for payload in lane_payloads)
+          hashes_match = all_pass and len(set(lane_hashes)) == 1 and lane_hashes[0] == reference_sha256
+          timestamp = dt.datetime.now(dt.timezone.utc).isoformat()
+          host_platform = platform.platform()
+          aggregate = {
+              "authority_surface": "zpbot-v2",
+              "compatibility_mode": "wire-v1",
+              "generation_timestamp": timestamp,
+              "timestamp": timestamp,
+              "host_platform": host_platform,
+              "platform": host_platform,
+              "workflow_run_id": os.environ["GITHUB_RUN_ID"],
+              "status": "PASS" if hashes_match else "FAIL",
+              "roundtrip_sha256": lane_hashes[0] if hashes_match else "",
+              "x86_reference_sha256": reference_sha256,
+              "hashes_match": hashes_match,
+              "lanes": lane_payloads,
+          }
+          out = Path("proofs/reruns") / f"it04_parity_matrix_{os.environ['GITHUB_RUN_ID']}" / "it04_parity_matrix_result.json"
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text(json.dumps(aggregate, indent=2, sort_keys=True, ensure_ascii=True) + "\n", encoding="utf-8")
+          print(json.dumps(aggregate, indent=2, sort_keys=True, ensure_ascii=True))
+          PY
+
+      - name: Upload aggregated matrix evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: it04-parity-matrix-evidence
+          path: proofs/reruns/it04_parity_matrix_${{ github.run_id }}/it04_parity_matrix_result.json
+          if-no-files-found: error
+
+      - name: Enforce decisive matrix result
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          path = Path("proofs/reruns") / f"it04_parity_matrix_{os.environ['GITHUB_RUN_ID']}" / "it04_parity_matrix_result.json"
+          if not path.exists():
+              raise SystemExit("IT04 parity matrix artifact missing")
+          payload = json.loads(path.read_text(encoding="utf-8"))
+          if payload.get("status") != "PASS":
+              raise SystemExit(f"IT04 parity matrix failed: status={payload.get('status')}")
+          PY

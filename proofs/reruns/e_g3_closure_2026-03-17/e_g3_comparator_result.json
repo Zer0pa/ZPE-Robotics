@@ -1,0 +1,19 @@
+{
+  "authority_surface": "zpbot-v2",
+  "comparator": "octo-base-1.5",
+  "comparator_representation": "raw_float32_trajectory_tensor",
+  "comparator_storage_bytes": 98304,
+  "compatibility_mode": "wire-v1",
+  "compression_ratio_vs_comparator": 238.02421307506054,
+  "dataset": "arm_fixture_seed_20260220",
+  "evidence_class": "infrastructure_storage_only",
+  "fixture_sha256": "e13ef6704e62d55b40194f8f86074d03254692a92ed2bcfd6f6be0f383191d35",
+  "generation_timestamp": "2026-03-17T15:35:42.382164+00:00",
+  "host_platform": "macOS-15.5-x86_64-i386-64bit-Mach-O",
+  "packet_sha256": "d428f395c3979cac8a967e8a014649c0220c37ba850a8da0aee2756d0b9393c7",
+  "platform": "macOS-15.5-x86_64-i386-64bit-Mach-O",
+  "status": "PASS",
+  "timestamp": "2026-03-17T15:35:42.382164+00:00",
+  "workflow_run_id": "local-dry-run",
+  "zpbot_storage_bytes": 413
+}
