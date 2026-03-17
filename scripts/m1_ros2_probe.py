@@ -43,6 +43,14 @@ _MOVEIT_IMPORT_PROBES: tuple[tuple[str, str], ...] = (
         "import moveit",
         "import moveit; print('moveit')",
     ),
+    (
+        "ament_index_python:get_package_prefix(moveit_ros_planning)",
+        "from ament_index_python.packages import get_package_prefix; print(get_package_prefix('moveit_ros_planning'))",
+    ),
+    (
+        "ament_index_python:get_package_prefix(moveit_ros_move_group)",
+        "from ament_index_python.packages import get_package_prefix; print(get_package_prefix('moveit_ros_move_group'))",
+    ),
 )
 
 
@@ -101,9 +109,9 @@ def _run_probe(args: argparse.Namespace) -> int:
         install_result = _run_shell(args.install_command)
         attempts.append(install_result)
 
-    ros2_result = _run_cmd([args.ros2_command, "--version"])
-    attempts.append(ros2_result)
-    ros2_version = _extract_primary_output(ros2_result) if ros2_result.returncode == 0 else ""
+    ros2_attempts, ros2_version, ros2_version_source = _probe_ros2_version(args.ros2_command)
+    attempts.extend(ros2_attempts)
+    ros2_result = ros2_attempts[0]
 
     moveit_result, moveit_target = _probe_moveit_imports()
     attempts.extend(moveit_result)
@@ -115,6 +123,7 @@ def _run_probe(args: argparse.Namespace) -> int:
             if _is_pass(install_result, ros2_result, first_moveit_success)
             else "FAIL",
             "ros2_version": ros2_version,
+            "ros2_version_source": ros2_version_source,
             "moveit_importable": bool(first_moveit_success),
             "moveit_import_target": moveit_target,
             "pass_criteria": "real ros2 version string plus successful MoveIt Python import with exact failure preservation",
@@ -150,6 +159,42 @@ def _probe_moveit_imports() -> tuple[list[CmdResult], str]:
         if result.returncode == 0:
             return results, label
     return results, ""
+
+
+def _probe_ros2_version(ros2_command: str) -> tuple[list[CmdResult], str, str]:
+    results: list[CmdResult] = []
+
+    ros2_cli = _run_cmd([ros2_command, "--version"])
+    results.append(ros2_cli)
+    if ros2_cli.returncode == 0 and _extract_primary_output(ros2_cli):
+        return results, _extract_primary_output(ros2_cli), ros2_cli.command
+
+    python_metadata = _run_cmd(
+        [
+            sys.executable,
+            "-c",
+            "from importlib import metadata; print(metadata.version('ros2cli'))",
+        ],
+        label="importlib.metadata version('ros2cli')",
+    )
+    results.append(python_metadata)
+    if python_metadata.returncode == 0 and _extract_primary_output(python_metadata):
+        return results, _extract_primary_output(python_metadata), python_metadata.command
+
+    dpkg_version = _run_cmd(
+        [
+            "dpkg-query",
+            "-W",
+            "-f=${Version}",
+            "ros-humble-ros2cli",
+        ],
+        label="dpkg-query ros-humble-ros2cli",
+    )
+    results.append(dpkg_version)
+    if dpkg_version.returncode == 0 and _extract_primary_output(dpkg_version):
+        return results, _extract_primary_output(dpkg_version), dpkg_version.command
+
+    return results, "", ""
 
 
 def _is_pass(
