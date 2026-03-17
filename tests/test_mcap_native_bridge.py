@@ -2,9 +2,11 @@ from __future__ import annotations
 
 import shutil
 import subprocess
+from io import BytesIO
 from pathlib import Path
 
 import pytest
+from mcap.reader import make_reader
 
 from zpe_robotics.codec import ZPBotCodec
 from zpe_robotics.fixtures import generate_joint_trajectory, make_rosbag_fixture
@@ -50,4 +52,9 @@ def test_mcap_native_bridge_cli_info_reports_schema_when_available(tmp_path: Pat
     stdout = completed.stdout.strip()
     assert stdout
     assert "zpbag2" in stdout
-    assert "compass8" in stdout
+    assert "/joint_states" in stdout
+
+    schema, channel, _ = next(make_reader(BytesIO(path.read_bytes()), validate_crcs=True).iter_messages())
+    assert schema is not None
+    assert schema.encoding == "zpbag2"
+    assert channel.message_encoding == "compass8"
