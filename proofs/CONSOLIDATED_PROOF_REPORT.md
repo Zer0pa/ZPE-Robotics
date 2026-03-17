@@ -10,7 +10,8 @@ Current result:
 
 - `quality_overall_status=NO-GO`
 - `non_negotiable_pass=false`
-- failing gates: `M1`, `E-G3`
+- hosted `M1` closed on 2026-03-17 via GitHub Actions run `23200176105`
+- failing gates: `E-G3`
 - RunPod state: `READY_FOR_DEFERRED_EXECUTION`
 
 ## Historical Proof Lineage

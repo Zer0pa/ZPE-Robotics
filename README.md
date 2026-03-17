@@ -13,7 +13,8 @@ has not yet passed Phase 5 blind-clone verification.
 | Visibility | private staging only |
 | Repo state | inner repo normalized on 2026-03-09 |
 | Current technical verdict | `NO-GO` from the March 9 pre-repo max-wave snapshot |
-| Active blockers | `M1` and `E-G3` |
+| Active blockers | `E-G3` |
+| Hosted runtime closure | `M1` closed on 2026-03-17 via GitHub Actions run `23200176105` |
 | Historical bundles | included under `proofs/artifacts/historical/` |
 | Portable repo-root rerun | not yet performed |
 
@@ -31,8 +32,8 @@ has not yet passed Phase 5 blind-clone verification.
 - It does not claim that the current private staged tree has been verified
   from a clean clone.
 - It does not treat the February historical bundles as current authority.
-- It does not claim that ROS2 runtime closure or Octo comparator closure are
-  complete today.
+- It does not claim that Octo comparator closure or clean-clone verification
+  are complete today.
 
 ## Quick Start
 

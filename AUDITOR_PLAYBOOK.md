@@ -10,7 +10,8 @@ not a public release claim.
 ## Current Truth Before Phase 5
 
 - the March 9 pre-repo max-wave snapshot is `NO-GO`
-- active blockers are `M1` and `E-G3`
+- hosted `M1` is closed by GitHub Actions run `23200176105`
+- active blocker is `E-G3`
 - historical February bundles are preserved for lineage only
 - a repo-root rerun is still required
 

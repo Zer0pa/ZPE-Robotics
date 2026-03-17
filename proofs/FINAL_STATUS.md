@@ -6,7 +6,8 @@
 |---|---|
 | Repo formation | complete for private staging |
 | Technical verdict | `NO-GO` |
-| Current blocker set | `M1`, `E-G3` |
+| Current blocker set | `E-G3` |
+| Hosted M1 gate | closed on 2026-03-17 via run `23200176105` |
 | Private remote staging | completed in Phase 3 and Phase 4 |
 | Cold-clone verification | deferred to Phase 5 |
 | Performance augmentation | deferred to Phase 4.5 |

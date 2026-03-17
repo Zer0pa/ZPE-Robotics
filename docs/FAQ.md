@@ -6,7 +6,7 @@ No. The current pre-repo authority snapshot is `NO-GO`.
 
 ## What blocks launch right now?
 
-`M1` and `E-G3`.
+`E-G3`, plus Phase 5 clean-clone verification.
 
 ## Why keep the February bundles if they are stale?
 
