@@ -25,15 +25,10 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Set up Go
-        uses: actions/setup-go@v5
-        with:
-          go-version: "1.22"
-
       - name: Install MCAP CLI
         run: |
-          go install github.com/foxglove/mcap/go/cli/mcap@latest
-          echo "${HOME}/go/bin" >> "${GITHUB_PATH}"
+          curl -L https://github.com/foxglove/mcap/releases/download/releases/mcap-cli/v0.0.62/mcap-linux-amd64 -o /usr/local/bin/mcap
+          chmod +x /usr/local/bin/mcap
 
       - name: Fresh clone repository
         env:
