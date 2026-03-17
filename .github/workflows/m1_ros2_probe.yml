@@ -41,7 +41,7 @@ jobs:
               python3 scripts/m1_ros2_probe.py \
                 --workflow-run-id "${GITHUB_RUN_ID}" \
                 --output "proofs/reruns/m1_ros2_probe_${GITHUB_RUN_ID}/m1_ros2_probe_result.json" \
-                --install-command "apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq python3-colcon-common-extensions ros-humble-moveit"
+                --install-command "apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq python3-colcon-common-extensions && (DEBIAN_FRONTEND=noninteractive apt-get install -y -qq ros-humble-moveit || DEBIAN_FRONTEND=noninteractive apt-get install -y -qq ros-humble-moveit-ros-planning)"
             '
 
       - name: Upload M1 probe evidence

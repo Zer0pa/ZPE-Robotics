@@ -7,23 +7,19 @@ import argparse
 import datetime as dt
 import os
 import platform
+import json
 import subprocess
 import sys
+import traceback
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / "src"
-if str(SRC) not in sys.path:
-    sys.path.insert(0, str(SRC))
 
-from zpe_robotics.constants import (  # noqa: E402
-    AUTHORITY_SURFACE,
-    AUTHORITY_WIRE_COMPATIBILITY,
-)
-from zpe_robotics.utils import write_json  # noqa: E402
+AUTHORITY_SURFACE = "zpbot-v2"
+AUTHORITY_WIRE_COMPATIBILITY = "wire-v1"
 
 
 @dataclass(frozen=True)
@@ -76,6 +72,28 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
+    try:
+        return _run_probe(args)
+    except Exception as exc:  # pragma: no cover - defensive artifact guarantee
+        payload = _base_payload(args)
+        payload.update(
+            {
+                "status": "FAIL",
+                "ros2_version": "",
+                "moveit_importable": False,
+                "moveit_import_target": "",
+                "pass_criteria": "real ros2 version string plus successful MoveIt Python import with exact failure preservation",
+                "attempt_log": [],
+                "unhandled_error": f"{type(exc).__name__}: {exc}",
+                "traceback": traceback.format_exc(),
+            }
+        )
+        _write_json(args.output, payload)
+        return 1
+
+
+def _run_probe(args: argparse.Namespace) -> int:
+    payload = _base_payload(args)
 
     attempts: list[CmdResult] = []
     install_result: CmdResult | None = None
@@ -91,30 +109,37 @@ def main() -> int:
     attempts.extend(moveit_result)
     first_moveit_success = next((item for item in moveit_result if item.returncode == 0), None)
 
-    payload = {
-        "authority_surface": AUTHORITY_SURFACE,
-        "compatibility_mode": AUTHORITY_WIRE_COMPATIBILITY,
-        "generation_timestamp": dt.datetime.now(dt.UTC).isoformat(),
-        "host_platform": platform.platform(),
-        "platform": platform.platform(),
-        "workflow_run_id": str(args.workflow_run_id),
-        "status": "PASS"
-        if _is_pass(install_result, ros2_result, first_moveit_success)
-        else "FAIL",
-        "ros2_version": ros2_version,
-        "moveit_importable": bool(first_moveit_success),
-        "moveit_import_target": moveit_target,
-        "pass_criteria": "real ros2 version string plus successful MoveIt Python import with exact failure preservation",
-        "attempt_log": [asdict(item) for item in attempts],
-    }
+    payload.update(
+        {
+            "status": "PASS"
+            if _is_pass(install_result, ros2_result, first_moveit_success)
+            else "FAIL",
+            "ros2_version": ros2_version,
+            "moveit_importable": bool(first_moveit_success),
+            "moveit_import_target": moveit_target,
+            "pass_criteria": "real ros2 version string plus successful MoveIt Python import with exact failure preservation",
+            "attempt_log": [asdict(item) for item in attempts],
+        }
+    )
 
     if not first_moveit_success:
         payload["moveit_error"] = _first_nonempty_error(moveit_result)
     if install_result is not None:
         payload["install_command_ran"] = True
 
-    write_json(args.output, payload)
+    _write_json(args.output, payload)
     return 0 if payload["status"] == "PASS" else 1
+
+
+def _base_payload(args: argparse.Namespace) -> dict[str, Any]:
+    return {
+        "authority_surface": AUTHORITY_SURFACE,
+        "compatibility_mode": AUTHORITY_WIRE_COMPATIBILITY,
+        "generation_timestamp": _utc_now().isoformat(),
+        "host_platform": platform.platform(),
+        "platform": platform.platform(),
+        "workflow_run_id": str(args.workflow_run_id),
+    }
 
 
 def _probe_moveit_imports() -> tuple[list[CmdResult], str]:
@@ -180,6 +205,15 @@ def _first_nonempty_error(results: list[CmdResult]) -> str:
         if result.stdout:
             return result.stdout
     return ""
+
+
+def _utc_now() -> dt.datetime:
+    return dt.datetime.now(dt.timezone.utc)
+
+
+def _write_json(path: Path, payload: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, indent=2, sort_keys=True, ensure_ascii=True) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
