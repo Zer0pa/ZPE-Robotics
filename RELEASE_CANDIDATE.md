@@ -1,6 +1,6 @@
 # RELEASE_CANDIDATE
 
-## v0.1.0 — 2026-03-17
+## v0.1.0 — 2026-03-18
 
 - Storage reduction on the frozen arm fixture: `238.02421307506054x`.
 - ARM64 portable: hosted ARM64 parity matched the frozen reference hash.
@@ -10,7 +10,7 @@
 
 ## What it is
 
-`zpe-motion-kernel` is a drop-in deterministic motion kernel for frozen `zpbot-v2` / `wire-v1` transport, replay, and integrity verification. The current release candidate is a private source-installable utility artifact that compresses deterministic motion data, preserves bit-stable replay surfaces, and exposes an auditable CLI without claiming to replace an end-to-end robotics stack.
+`zpe-motion-kernel` is a drop-in deterministic motion kernel for frozen `zpbot-v2` / `wire-v1` transport, replay, and integrity verification. The published `v0.1.0` utility artifact is available at `pypi.org/project/zpe-motion-kernel` and compresses deterministic motion data, preserves bit-stable replay surfaces, and exposes an auditable CLI without claiming to replace an end-to-end robotics stack.
 
 ## Proven claims
 
@@ -24,19 +24,18 @@
 - Policy superiority over learned-policy systems.
 - Full-stack robotics replacement.
 - Jetson-native proof.
-- Public package-index availability for `pip install zpe-motion-kernel`.
 
 ## How to install
 
 Package name: `zpe-motion-kernel`
 
-Intended published install command:
+Published install command:
 
 ```bash
 pip install zpe-motion-kernel
 ```
 
-Clean-clone verification proves the source-install path that is already committed:
+Hosted clean-clone verification preserved the source-install path that remains committed:
 
 ```bash
 pip install -e .
