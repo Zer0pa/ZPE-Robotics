@@ -6,7 +6,7 @@
 - ARM64 portable: hosted ARM64 parity matched the frozen reference hash.
 - Bit-perfect replay: hosted parity and bridge evidence preserve `a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125`.
 - Hostile-path auditable: corrupted magic, CRC mismatch, and truncated payloads fail explicitly.
-- Clean-clone evidence hash: `9c2a23c865b575b5ee29bcfbfba982201ee7010a43eed61860549bc25cd542aa`.
+- Clean-clone evidence hash: `3b2b1d091e374f8ef79b42492879df16ca71436ff8535e9b725d44d857a08ea3`.
 
 ## What it is
 
