@@ -4,17 +4,27 @@ on:
   push:
     tags:
       - "v*.*.*"
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Existing release tag to publish"
+        required: true
+        type: string
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      id-token: write
     env:
       GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: ${{ github.event.inputs.release_tag || github.ref_name }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          ref: ${{ env.RELEASE_TAG }}
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -28,12 +38,12 @@ jobs:
         run: uv build
 
       - name: Publish to PyPI
-        run: uv publish --token "${{ secrets.PYPI_API_TOKEN }}"
+        uses: pypa/gh-action-pypi-publish@release/v1
 
       - name: Create or update GitHub Release
         run: |
-          if gh release view "${GITHUB_REF_NAME}" >/dev/null 2>&1; then
-            gh release edit "${GITHUB_REF_NAME}" --title "${GITHUB_REF_NAME}" --notes-file RELEASE_CANDIDATE.md
+          if gh release view "${RELEASE_TAG}" >/dev/null 2>&1; then
+            gh release edit "${RELEASE_TAG}" --title "${RELEASE_TAG}" --notes-file RELEASE_CANDIDATE.md
           else
-            gh release create "${GITHUB_REF_NAME}" --title "${GITHUB_REF_NAME}" --notes-file RELEASE_CANDIDATE.md
+            gh release create "${RELEASE_TAG}" --title "${RELEASE_TAG}" --notes-file RELEASE_CANDIDATE.md
           fi
