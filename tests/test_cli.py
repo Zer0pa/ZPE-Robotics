@@ -86,3 +86,16 @@ def test_cli_supports_search_anomaly_lerobot_and_export_tokens(tmp_path: Path, c
     token_output = json.loads(capsys.readouterr().out)
     assert token_output["format"] == "fast"
     assert token_output["authority_surface"] == "zpbot-v2"
+
+
+def test_cli_generates_comm03_audit_bundle(tmp_path: Path, capsys) -> None:
+    composition = build_single_packet_composition()
+    packet_path = tmp_path / "canonical.zpbot"
+    packet_path.write_bytes(composition.packet)
+    output_dir = tmp_path / "comm03"
+
+    assert main(["audit-bundle", str(packet_path), str(output_dir)]) == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["status"] == "PASS"
+    assert (output_dir / "comm03_provenance_manifest.json").exists()
+    assert (output_dir / "comm03_corruption_matrix.json").exists()

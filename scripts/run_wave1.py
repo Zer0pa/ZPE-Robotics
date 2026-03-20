@@ -738,7 +738,7 @@ def main() -> None:
     max_ctx = _max_wave_context(out) if args.max_wave else None
 
     gate_summary: dict[str, str] = {
-        "Gate A": "PASS" if (ROOT / "runbooks" / "RUNBOOK_ZPE_ROBOTICS_MASTER.md").exists() else "FAIL",
+        "Gate A": "PASS" if (ROOT / "proofs" / "runbooks" / "RUNBOOK_ZPE_ROBOTICS_MASTER.md").exists() else "FAIL",
         "Gate B": "PASS"
         if all(
             (

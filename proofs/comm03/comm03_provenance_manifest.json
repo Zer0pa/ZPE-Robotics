@@ -1,0 +1,32 @@
+{
+  "authority_surface": "zpbot-v2",
+  "compatibility_mode": "wire-v1",
+  "decoded_shape": [
+    4096,
+    6
+  ],
+  "generation_timestamp": "2026-03-20T20:25:36.785518+00:00",
+  "host_platform": "macOS-15.5-x86_64-i386-64bit-Mach-O",
+  "packet_info": {
+    "authority_surface": "zpbot-v2",
+    "compatibility_mode": "wire-v1",
+    "frames": 4096,
+    "header_bytes": 18,
+    "joints": 6,
+    "keep_coeffs": 8,
+    "payload_bytes": 395,
+    "payload_crc32": 1856721606,
+    "wire_version": 1
+  },
+  "packet_path": "proofs/release_candidate/canonical_release_packet.zpbot",
+  "packet_sha256": "d428f395c3979cac8a967e8a014649c0220c37ba850a8da0aee2756d0b9393c7",
+  "reference_roundtrip_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125",
+  "replay_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125",
+  "source_paths": [
+    "proofs/release_candidate/canonical_release_packet.zpbot",
+    "zpe-robotics/docs/ZPBOT_V2_AUTHORITY_SURFACE.md",
+    "zpe-robotics/RELEASE_CANDIDATE.md",
+    "zpe-robotics/proofs/reruns/robotics_wave1_local_2026-03-16/determinism_replay_results.json"
+  ],
+  "status": "PASS"
+}

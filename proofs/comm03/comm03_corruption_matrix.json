@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "actual_failure": "invalid packet magic",
+      "case_id": "invalid_magic",
+      "expected_failure": "invalid packet magic",
+      "mutation": "replace packet magic with BAD!!",
+      "status": "PASS"
+    },
+    {
+      "actual_failure": "payload CRC mismatch",
+      "case_id": "crc_mismatch",
+      "expected_failure": "payload CRC mismatch",
+      "mutation": "flip the last payload byte",
+      "status": "PASS"
+    },
+    {
+      "actual_failure": "blob too small for packet header",
+      "case_id": "truncated_header",
+      "expected_failure": "blob too small for packet header",
+      "mutation": "truncate below header size",
+      "status": "PASS"
+    },
+    {
+      "actual_failure": "unsupported codec version 99",
+      "case_id": "unsupported_version",
+      "expected_failure": "unsupported codec version 99",
+      "mutation": "set wire version byte to 99",
+      "status": "PASS"
+    }
+  ],
+  "generation_timestamp": "2026-03-20T20:25:37.232378+00:00",
+  "packet_path": "proofs/release_candidate/canonical_release_packet.zpbot",
+  "packet_sha256": "d428f395c3979cac8a967e8a014649c0220c37ba850a8da0aee2756d0b9393c7",
+  "status": "PASS"
+}

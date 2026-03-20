@@ -21,8 +21,8 @@ Finalize execution contract before coding.
 5. `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local --seed 20260220 --determinism-runs 5 --max-wave --dry-lock-only`
 
 ## Expected Outputs
-- `runbooks/RUNBOOK_ZPE_ROBOTICS_MASTER.md`
-- `runbooks/RUNBOOK_GATE_A_RESOURCE_LOCK.md`
+- `proofs/runbooks/RUNBOOK_ZPE_ROBOTICS_MASTER.md`
+- `proofs/runbooks/RUNBOOK_GATE_A_RESOURCE_LOCK.md`
 - Gate runbooks B-E drafted
 - Max-wave and NET-NEW runbook coverage drafted
 - `max_resource_lock.json` seed/resource lock initialized

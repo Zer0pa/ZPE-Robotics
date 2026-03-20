@@ -10,6 +10,7 @@ from pathlib import Path
 
 import numpy as np
 
+from .audit_bundle import generate_audit_bundle
 from .anomaly import AnomalyDetector
 from .constants import AUTHORITY_SURFACE, AUTHORITY_WIRE_COMPATIBILITY
 from .lerobot_codec import ZPELeRobotCodec
@@ -55,6 +56,10 @@ def build_parser() -> argparse.ArgumentParser:
     export_tokens_parser.add_argument("input_zpbot", type=Path)
     export_tokens_parser.add_argument("--format", choices=("fast", "cubicvla"), required=True)
 
+    audit_bundle_parser = subparsers.add_parser("audit-bundle", help="generate the COMM-03 audit bundle for a .zpbot packet")
+    audit_bundle_parser.add_argument("input_zpbot", type=Path)
+    audit_bundle_parser.add_argument("output_dir", type=Path)
+
     return parser
 
 
@@ -79,6 +84,8 @@ def main(argv: list[str] | None = None) -> int:
             return _handle_lerobot_compress(args.lerobot_dataset_dir, args.output_dir)
         if args.command == "export-tokens":
             return _handle_export_tokens(args.input_zpbot, args.format)
+        if args.command == "audit-bundle":
+            return _handle_audit_bundle(args.input_zpbot, args.output_dir)
     except Exception as exc:
         print(str(exc), file=sys.stderr)
         return 1
@@ -205,6 +212,12 @@ def _handle_export_tokens(input_zpbot: Path, fmt: str) -> int:
     else:
         payload = export_cubicvla_tokens(input_zpbot)
         payload["format"] = "cubicvla"
+    print(json.dumps(payload, indent=2, sort_keys=True, ensure_ascii=True))
+    return 0
+
+
+def _handle_audit_bundle(input_zpbot: Path, output_dir: Path) -> int:
+    payload = generate_audit_bundle(input_zpbot, output_dir)
     print(json.dumps(payload, indent=2, sort_keys=True, ensure_ascii=True))
     return 0
 

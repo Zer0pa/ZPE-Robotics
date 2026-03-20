@@ -1,0 +1,54 @@
+{
+  "authority_surface": "zpbot-v2",
+  "compatibility_mode": "wire-v1",
+  "generation_timestamp": "2026-03-20T17:41:44Z",
+  "host_platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "status": "PASS",
+  "status_reason": "ADB reached the RedMagic 10 Pro+, Termux remained reachable in the foreground, and the device-side packet hash visible in the preserved screenshot matches the canonical Mac-side packet hash.",
+  "device_id": "FY25013101C8",
+  "device_model": "NX789J",
+  "device_abi": "arm64-v8a",
+  "termux_installed": true,
+  "packet_visibility": {
+    "device_packet_path": "/storage/emulated/0/Download/canonical_release_packet.zpbot",
+    "manifest_path_on_device": "/sdcard/Download/comm03_provenance_manifest.json",
+    "adb_injected_text": "sha256sum /storage/emulated/0/Download/canonical_release_packet.zpbot",
+    "observed_foreground_command": "sha256sum /storage/emulated/0/Download/canonical_release_packet.zpbot 2>/dev/null || echo 'File not found.'",
+    "observed_output": "d428f395c3979cac8a967e8a014649c0220c37ba850a8da0aee2756d0b9393c7  /storage/emulated/0/Download/canonical_release_packet.zpbot",
+    "packet_sha256_matches_manifest": true,
+    "evidence_path": "proofs/comm03/comm03_redmagic_termux_audit.png",
+    "evidence_sha256": "6e3e37ac83f589585490ce2be18c0f00dbf840c752bf3b2294f048d7ce8b0185"
+  },
+  "commands": [
+    {
+      "command": "adb devices -l",
+      "summary": "device attached over USB as NX789J"
+    },
+    {
+      "command": "adb push proofs/release_candidate/canonical_release_packet.zpbot /sdcard/Download/canonical_release_packet.zpbot",
+      "summary": "canonical packet copied to the device download area"
+    },
+    {
+      "command": "adb push proofs/comm03/comm03_provenance_manifest.json /sdcard/Download/comm03_provenance_manifest.json",
+      "summary": "Mac-generated manifest copied to the device download area"
+    },
+    {
+      "command": "adb shell am start -n com.termux/.app.TermuxActivity",
+      "summary": "foreground Termux session brought to the front"
+    },
+    {
+      "command": "adb shell input text 'sha256sum%s/storage/emulated/0/Download/canonical_release_packet.zpbot'",
+      "summary": "bounded packet-hash command injected into the foreground session"
+    },
+    {
+      "command": "adb exec-out screencap -p > proofs/comm03/comm03_redmagic_termux_audit.png",
+      "summary": "screenshot evidence captured after command completion"
+    }
+  ],
+  "notes_on_unproven_surfaces": [
+    "No headless on-device Python or Termux private-path execution was re-proven in this COMM-03 pass.",
+    "No device-native replay regeneration or bundle re-creation was proven.",
+    "No ROS2 parity, certification, or broader compliance claim is supported by this device surface.",
+    "RunPod was not used."
+  ]
+}

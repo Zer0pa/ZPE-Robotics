@@ -1,0 +1,32 @@
+{
+  "authority_surface": "zpbot-v2",
+  "compatibility_mode": "wire-v1",
+  "generation_timestamp": "2026-03-20T17:41:44Z",
+  "host_platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "inner_repo_commit": "f0f7a6e",
+  "status": "PASS",
+  "status_reason": "The Mac audit bundle preserves the frozen packet contract, records the canonical packet and replay hashes, and validates the four explicit corruption cases.",
+  "packet_path": "proofs/release_candidate/canonical_release_packet.zpbot",
+  "packet_sha256": "d428f395c3979cac8a967e8a014649c0220c37ba850a8da0aee2756d0b9393c7",
+  "replay_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125",
+  "reference_roundtrip_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125",
+  "manifest_path": "proofs/comm03/comm03_provenance_manifest.json",
+  "manifest_generation_timestamp": "2026-03-20T17:36:17.815304+00:00",
+  "corruption_matrix_path": "proofs/comm03/comm03_corruption_matrix.json",
+  "corruption_matrix_generation_timestamp": "2026-03-20T17:36:17.834675+00:00",
+  "test_command": "pytest tests/test_wire.py tests/test_audit_bundle.py tests/test_cli.py",
+  "test_summary": "11 passed in 0.46s",
+  "bundle_generation_command": "PYTHONPATH=src python -m zpe_robotics.cli audit-bundle proofs/release_candidate/canonical_release_packet.zpbot proofs/comm03",
+  "hash_alignment": {
+    "packet_sha256_matches_manifest": true,
+    "replay_sha256_matches_manifest": true,
+    "replay_sha256_matches_release_candidate": true,
+    "corruption_cases_all_pass": true
+  },
+  "corruption_cases": [
+    "invalid_magic",
+    "crc_mismatch",
+    "truncated_header",
+    "unsupported_version"
+  ]
+}
