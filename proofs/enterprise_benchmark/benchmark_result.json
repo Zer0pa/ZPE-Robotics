@@ -1,0 +1,193 @@
+{
+  "dataset_meta": {
+    "dataset_root": "/workspace/data_phase9/columbia_cairlab_pusht_real",
+    "declared_total_episodes": 136,
+    "declared_total_frames": 27808,
+    "episode_count_total": 136,
+    "fps": 10.0,
+    "frame_count_total": 27808,
+    "is_real_dataset": true,
+    "joint_count": 8,
+    "qualified_reason": "QUALIFIED",
+    "repo_id": "columbia_cairlab_pusht_real",
+    "sample_shape": [
+      1000,
+      8
+    ],
+    "selected_field": "observation.state",
+    "source": "dataset"
+  },
+  "dataset_name": "columbia_cairlab_pusht_real",
+  "dataset_root": "/workspace/data_phase9/columbia_cairlab_pusht_real",
+  "environment": {
+    "machine": "x86_64",
+    "platform": "Linux-6.8.0-84-generic-x86_64-with-glibc2.35",
+    "python": "3.11.10",
+    "system": "Linux"
+  },
+  "results": {
+    "gzip_l9": {
+      "anomaly_detectable": false,
+      "bit_exact_replay": true,
+      "compressed_size_bytes": 8061,
+      "compression_ratio": 3.9697308026299467,
+      "cross_platform_deterministic": "unknown",
+      "decode_time_ms_p50": 0.059659500000000004,
+      "decode_time_ms_p95": 0.06621345,
+      "encode_time_ms_p50": 4.416136,
+      "encode_time_ms_p95": 4.4665479999999995,
+      "raw_size_bytes": 32000,
+      "searchable_without_decode": false,
+      "tool_id": "gzip_l9"
+    },
+    "h5py_gzip9": {
+      "anomaly_detectable": false,
+      "bit_exact_replay": true,
+      "compressed_size_bytes": 11876,
+      "compression_ratio": 2.6945099360053892,
+      "cross_platform_deterministic": "unknown",
+      "decode_time_ms_p50": 0.36433800000000005,
+      "decode_time_ms_p95": 0.390657,
+      "encode_time_ms_p50": 2.568371,
+      "encode_time_ms_p95": 6.442625,
+      "raw_size_bytes": 32000,
+      "searchable_without_decode": false,
+      "tool_id": "h5py_gzip9"
+    },
+    "h5py_lzf": {
+      "anomaly_detectable": false,
+      "bit_exact_replay": true,
+      "compressed_size_bytes": 14871,
+      "compression_ratio": 2.1518391500235357,
+      "cross_platform_deterministic": "unknown",
+      "decode_time_ms_p50": 0.328198,
+      "decode_time_ms_p95": 0.36411199999999994,
+      "encode_time_ms_p50": 0.4096575,
+      "encode_time_ms_p95": 0.44506249999999997,
+      "raw_size_bytes": 32000,
+      "searchable_without_decode": false,
+      "tool_id": "h5py_lzf"
+    },
+    "lz4_default": {
+      "anomaly_detectable": false,
+      "bit_exact_replay": true,
+      "compressed_size_bytes": 10655,
+      "compression_ratio": 3.003284842796809,
+      "cross_platform_deterministic": "unknown",
+      "decode_time_ms_p50": 0.008215,
+      "decode_time_ms_p95": 0.009949,
+      "encode_time_ms_p50": 0.0172545,
+      "encode_time_ms_p95": 0.024814,
+      "raw_size_bytes": 32000,
+      "searchable_without_decode": false,
+      "tool_id": "lz4_default"
+    },
+    "mcap_lz4": {
+      "anomaly_detectable": false,
+      "bit_exact_replay": true,
+      "compressed_size_bytes": 11468,
+      "compression_ratio": 2.790373212417161,
+      "cross_platform_deterministic": "unknown",
+      "decode_time_ms_p50": 0.11453949999999999,
+      "decode_time_ms_p95": 0.1850795,
+      "encode_time_ms_p50": 0.2190485,
+      "encode_time_ms_p95": 0.28583499999999995,
+      "raw_size_bytes": 32000,
+      "searchable_without_decode": false,
+      "tool_id": "mcap_lz4"
+    },
+    "mcap_zstd": {
+      "anomaly_detectable": false,
+      "bit_exact_replay": true,
+      "compressed_size_bytes": 8027,
+      "compression_ratio": 3.986545409243802,
+      "cross_platform_deterministic": "unknown",
+      "decode_time_ms_p50": 0.133699,
+      "decode_time_ms_p95": 0.149534,
+      "encode_time_ms_p50": 0.2503085,
+      "encode_time_ms_p95": 0.268375,
+      "raw_size_bytes": 32000,
+      "searchable_without_decode": false,
+      "tool_id": "mcap_zstd"
+    },
+    "raw_float32": {
+      "anomaly_detectable": false,
+      "bit_exact_replay": true,
+      "compressed_size_bytes": 32128,
+      "compression_ratio": 0.9960159362549801,
+      "cross_platform_deterministic": "unknown",
+      "decode_time_ms_p50": 0.05122500000000001,
+      "decode_time_ms_p95": 0.09190099999999998,
+      "encode_time_ms_p50": 0.017595,
+      "encode_time_ms_p95": 0.039245549999999976,
+      "raw_size_bytes": 32000,
+      "searchable_without_decode": false,
+      "tool_id": "raw_float32"
+    },
+    "zpe_p8": {
+      "anomaly_detectable": true,
+      "bit_exact_replay": false,
+      "compressed_size_bytes": 171,
+      "compression_ratio": 187.1345029239766,
+      "cross_platform_deterministic": true,
+      "decode_time_ms_p50": 0.08884,
+      "decode_time_ms_p95": 0.10924704999999998,
+      "encode_time_ms_p50": 0.11055899999999999,
+      "encode_time_ms_p95": 0.14416149999999997,
+      "raw_size_bytes": 32000,
+      "searchable_without_decode": true,
+      "tool_id": "zpe_p8"
+    },
+    "zstd_l19": {
+      "anomaly_detectable": false,
+      "bit_exact_replay": true,
+      "compressed_size_bytes": 6967,
+      "compression_ratio": 4.593081670733458,
+      "cross_platform_deterministic": "unknown",
+      "decode_time_ms_p50": 0.01691,
+      "decode_time_ms_p95": 0.0194265,
+      "encode_time_ms_p50": 8.665132,
+      "encode_time_ms_p95": 9.505863149999996,
+      "raw_size_bytes": 32000,
+      "searchable_without_decode": false,
+      "tool_id": "zstd_l19"
+    },
+    "zstd_l3": {
+      "anomaly_detectable": false,
+      "bit_exact_replay": true,
+      "compressed_size_bytes": 7206,
+      "compression_ratio": 4.440743824590619,
+      "cross_platform_deterministic": "unknown",
+      "decode_time_ms_p50": 0.039613999999999996,
+      "decode_time_ms_p95": 0.045998999999999984,
+      "encode_time_ms_p50": 0.131329,
+      "encode_time_ms_p95": 0.14291399999999999,
+      "raw_size_bytes": 32000,
+      "searchable_without_decode": false,
+      "tool_id": "zstd_l3"
+    }
+  },
+  "sample_shape": [
+    1000,
+    8
+  ],
+  "timestamp_utc": "2026-03-21T16:18:53Z",
+  "tracking": {
+    "classic_experiment_key": "",
+    "classic_experiment_url": "",
+    "classic_project": "zpe-robotics",
+    "classic_project_url": "",
+    "classic_status": "HOLD",
+    "notes": [
+      "classic Comet adapter disabled by flag",
+      "Opik adapter disabled by flag"
+    ],
+    "opik_host": "https://www.comet.com/opik/api",
+    "opik_project": "zpe-robotics",
+    "opik_project_url": "",
+    "opik_status": "HOLD",
+    "opik_trace_id": "",
+    "opik_trace_url": "",
+    "workspace": "zer0pa"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "attempts": [
+    {
+      "repo_id": "lerobot/pusht",
+      "status": "INSUFFICIENT_JOINT_DIM_LT_6",
+      "path": "/workspace/data_phase9/pusht",
+      "parquet_count": 1,
+      "selected_field": "observation.state",
+      "joint_count": 2,
+      "fps": 10.0,
+      "is_real_dataset": false,
+      "total_episodes": 206,
+      "total_frames": 25650
+    },
+    {
+      "repo_id": "lerobot/aloha_sim_insertion_scripted",
+      "status": "NOT_REAL_DATASET",
+      "path": "/workspace/data_phase9/aloha_sim_insertion_scripted",
+      "parquet_count": 3,
+      "selected_field": "observation.state",
+      "joint_count": 14,
+      "fps": 50.0,
+      "is_real_dataset": false,
+      "total_episodes": 50,
+      "total_frames": 20000
+    },
+    {
+      "repo_id": "lerobot/aloha_sim_transfer_cube_scripted",
+      "status": "NOT_REAL_DATASET",
+      "path": "/workspace/data_phase9/aloha_sim_transfer_cube_scripted",
+      "parquet_count": 3,
+      "selected_field": "observation.state",
+      "joint_count": 14,
+      "fps": 50.0,
+      "is_real_dataset": false,
+      "total_episodes": 50,
+      "total_frames": 20000
+    },
+    {
+      "repo_id": "lerobot/xarm_lift_medium",
+      "status": "INSUFFICIENT_JOINT_DIM_LT_6",
+      "path": "/workspace/data_phase9/xarm_lift_medium",
+      "parquet_count": 1,
+      "selected_field": "observation.state",
+      "joint_count": 4,
+      "fps": 15.0,
+      "is_real_dataset": false,
+      "total_episodes": 800,
+      "total_frames": 20000
+    },
+    {
+      "repo_id": "lerobot/columbia_cairlab_pusht_real",
+      "status": "SUCCESS",
+      "path": "/workspace/data_phase9/columbia_cairlab_pusht_real",
+      "parquet_count": 1,
+      "selected_field": "observation.state",
+      "joint_count": 8,
+      "fps": 10.0,
+      "is_real_dataset": true,
+      "total_episodes": 136,
+      "total_frames": 27808
+    }
+  ],
+  "selected": {
+    "repo_id": "lerobot/columbia_cairlab_pusht_real",
+    "path": "/workspace/data_phase9/columbia_cairlab_pusht_real",
+    "parquet_count": 1,
+    "selected_field": "observation.state",
+    "joint_count": 8,
+    "fps": 10.0,
+    "is_real_dataset": true,
+    "total_episodes": 136,
+    "total_frames": 27808
+  },
+  "timestamp": 1774109906.1423914
+}
