@@ -1,0 +1,60 @@
+$ /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/.venv/bin/uv python install 3.12
+Python 3.12 is already installed
+
+
+$ /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/.venv/bin/uv venv --python 3.12 /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/.venv312_phase9_redteam
+Using CPython 3.12.13
+Creating virtual environment at: .venv312_phase9_redteam
+Activate with: source .venv312_phase9_redteam/bin/activate
+
+
+$ /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/.venv/bin/uv pip install --python /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/.venv312_phase9_redteam/bin/python -e /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics[dev]
+Using Python 3.12.13 environment at: .venv312_phase9_redteam
+Resolved 11 packages in 812ms
+   Building zpe-motion-kernel @ file:///Users/Zer0pa/ZPE/ZPE%20Robotics/zpe-robotics
+Downloading ruff (10.4MiB)
+Downloading pygments (1.2MiB)
+      Built zpe-motion-kernel @ file:///Users/Zer0pa/ZPE/ZPE%20Robotics/zpe-robotics
+ Downloaded pygments
+ Downloaded ruff
+Prepared 6 packages in 34.32s
+Installed 11 packages in 34ms
+ + iniconfig==2.3.0
+ + lz4==4.4.5
+ + mcap==1.3.1
+ + numpy==2.4.3
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pytest==9.0.2
+ + ruff==0.15.7
+ + zpe-motion-kernel==0.1.0 (from file:///Users/Zer0pa/ZPE/ZPE%20Robotics/zpe-robotics)
+ + zstandard==0.25.0
+
+
+$ /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/.venv312_phase9_redteam/bin/python -c import json; from zpe_robotics.release_candidate import compute_reference_bridge_roundtrip, REFERENCE_ROUNDTRIP_SHA256; report = compute_reference_bridge_roundtrip(); payload = {'reference_sha256': REFERENCE_ROUNDTRIP_SHA256, 'replay_sha256': report['replay_sha256'], 'matches_reference': report['replay_sha256'] == REFERENCE_ROUNDTRIP_SHA256}; print(json.dumps(payload, sort_keys=True))
+{"matches_reference": true, "reference_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125", "replay_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125"}
+
+
+$ /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/.venv312_phase9_redteam/bin/python -m pytest /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/tests -x
+============================= test session starts ==============================
+platform darwin -- Python 3.12.13, pytest-9.0.2, pluggy-1.6.0
+rootdir: /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics
+configfile: pyproject.toml
+collected 26 items
+
+tests/test_anomaly.py .                                                  [  3%]
+tests/test_audit_bundle.py ...                                           [ 15%]
+tests/test_cli.py ....                                                   [ 30%]
+tests/test_codec.py .                                                    [ 34%]
+tests/test_lerobot_codec.py .                                            [ 38%]
+tests/test_mcap_bridge.py ...                                            [ 50%]
+tests/test_mcap_native_bridge.py .s                                      [ 57%]
+tests/test_primitive_index.py .                                          [ 61%]
+tests/test_release_candidate.py ..                                       [ 69%]
+tests/test_rosbag_adapter.py ..                                          [ 76%]
+tests/test_vla_bridge.py .                                               [ 80%]
+tests/test_vla_eval.py .                                                 [ 84%]
+tests/test_wire.py ....                                                  [100%]
+
+======================== 25 passed, 1 skipped in 2.39s =========================

@@ -1,6 +1,7 @@
+---
 name: Publish
 
-on:
+"on":
   push:
     tags:
       - "v*.*.*"
@@ -14,6 +15,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/zpe-motion-kernel
     permissions:
       contents: write
       id-token: write
@@ -39,11 +43,17 @@ jobs:
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          skip-existing: true
 
       - name: Create or update GitHub Release
         run: |
           if gh release view "${RELEASE_TAG}" >/dev/null 2>&1; then
-            gh release edit "${RELEASE_TAG}" --title "${RELEASE_TAG}" --notes-file RELEASE_CANDIDATE.md
+            gh release edit "${RELEASE_TAG}" \
+              --title "${RELEASE_TAG}" \
+              --notes-file RELEASE_CANDIDATE.md
           else
-            gh release create "${RELEASE_TAG}" --title "${RELEASE_TAG}" --notes-file RELEASE_CANDIDATE.md
+            gh release create "${RELEASE_TAG}" \
+              --title "${RELEASE_TAG}" \
+              --notes-file RELEASE_CANDIDATE.md
           fi

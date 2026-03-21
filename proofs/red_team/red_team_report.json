@@ -1,0 +1,94 @@
+{
+  "attacks": [
+    {
+      "argument": "No enterprise user stores raw float32; zstd-l3 is the minimum baseline.",
+      "attack_id": "attack_1_strawman_baseline",
+      "relative_ratio": 42.14035087719298,
+      "verdict": "WITHSTANDS",
+      "zpe_compression_ratio": 187.1345029239766,
+      "zstd_l3_compression_ratio": 4.440743824590619
+    },
+    {
+      "argument": "The headline compression ratio may rely on low-entropy synthetic data.",
+      "attack_id": "attack_2_synthetic_entropy",
+      "real_dataset_ratio": 187.1345029239766,
+      "synthetic_fixture_ratio": 238.02421307506054,
+      "verdict": "WITHSTANDS"
+    },
+    {
+      "argument": "Strict bit-exact replay is required to support a lossless claim.",
+      "attack_id": "attack_3_lossless_qualification",
+      "core_max_abs_error": 7.450580596923828e-09,
+      "core_zpbot_array_equal": false,
+      "lerobot_array_equal": false,
+      "lerobot_max_abs_error": 6.459702881099339e-17,
+      "verdict": "FAILS"
+    },
+    {
+      "argument": "Synthetic P@10 may be meaningless without a real corpus and known sample count.",
+      "attack_id": "attack_4_real_corpus_size",
+      "episodes_tested": 136,
+      "fps": 10.0,
+      "joint_count": 8,
+      "note": "real corpus evaluated, but the available dataset undershoots the 200-episode/50 Hz target",
+      "precision_at_10": 1.0,
+      "verdict": "PARTIALLY WITHSTANDS"
+    },
+    {
+      "argument": "Recall without false-positive rate over nominal trajectories is incomplete.",
+      "attack_id": "attack_5_false_positive_rate",
+      "false_positive_rate": 0.2,
+      "false_positives": 4,
+      "nominal_trajectories_tested": 20,
+      "verdict": "FAILS"
+    },
+    {
+      "argument": "Python 3.12 parity was not previously proven.",
+      "attack_id": "attack_6_python312_parity",
+      "matches_reference": true,
+      "python312_log": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/proofs/red_team/python312_parity.log",
+      "reference_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125",
+      "replay_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125",
+      "verdict": "WITHSTANDS"
+    },
+    {
+      "argument": "Evidence remains first-party until an external party reproduces it.",
+      "attack_id": "attack_7_single_operator_provenance",
+      "required_external_reproduction": [
+        "pip install zpe-motion-kernel",
+        "pytest tests/ -x",
+        "Compare against proofs/enterprise_benchmark/benchmark_result.json and proofs/red_team/red_team_report.json"
+      ],
+      "verdict": "OPEN"
+    }
+  ],
+  "benchmark_result_path": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/proofs/enterprise_benchmark/benchmark_result.json",
+  "dataset_name": "lerobot/columbia_cairlab_pusht_real",
+  "dataset_root": "/tmp/zpe_phase9_dataset_local/columbia_cairlab_pusht_real",
+  "summary": {
+    "attacks_total": 7,
+    "fails": 2,
+    "open": 1,
+    "partially_withstands": 1,
+    "withstands": 3
+  },
+  "timestamp_utc": "2026-03-21T16:36:24Z",
+  "tracking": {
+    "classic_experiment_key": "",
+    "classic_experiment_url": "",
+    "classic_project": "zpe-robotics",
+    "classic_project_url": "",
+    "classic_status": "HOLD",
+    "notes": [
+      "classic Comet adapter disabled by flag",
+      "Opik adapter disabled by flag"
+    ],
+    "opik_host": "https://www.comet.com/opik/api",
+    "opik_project": "zpe-robotics",
+    "opik_project_url": "",
+    "opik_status": "HOLD",
+    "opik_trace_id": "",
+    "opik_trace_url": "",
+    "workspace": "zer0pa"
+  }
+}
