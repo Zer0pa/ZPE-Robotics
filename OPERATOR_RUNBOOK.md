@@ -1,5 +1,9 @@
 # OPERATOR_RUNBOOK
 
+This file lists available CLI commands. Command availability does not imply
+that engineering blockers are closed. Use `proofs/ENGINEERING_BLOCKERS.md` for
+the current authority surface.
+
 1. Install: `pip install zpe-motion-kernel`
 2. Record a ROS2 bag with ZPE: `ros2 bag record -s zpe --all`
 3. Compress an existing bag: `zpe encode input.bag output.zpbot`

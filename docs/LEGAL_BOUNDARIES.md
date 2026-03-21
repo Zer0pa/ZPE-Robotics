@@ -1,23 +1,24 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
+</p>
+
 # Legal Boundaries
 
-## License
+<p>
+  <img src="../.github/assets/readme/section-bars/scope.svg" alt="SCOPE" width="100%">
+</p>
 
-This repo is shipped under the Zer0pa Source-Available License v6.0. `LICENSE`
-is the legal source of truth.
+| Boundary | Current truth |
+|---|---|
+| license | Zer0pa Source-Available License v6.0; `../LICENSE` is the legal source of truth |
+| source visibility | private GitHub repo |
+| public acquisition | package acquisition exists via `pip install zpe-motion-kernel` |
+| claim boundary | engineering is not complete; `B3` fails and red-team attacks `3` and `5` fail |
+| runtime boundary | no IMC runtime import or robotics `.zpbot` Rust ABI is present today |
+| proof boundary | historical bundles remain lineage only |
 
-## Private Staging Boundary
-
-This repo was staged to a private GitHub destination only. No public release,
-publication, or visibility change is part of this phase.
-
-## Claim Boundary
-
-- current technical truth is `NO-GO`
-- historical February proof bundles remain historical
-- repo formation does not convert mixed evidence into a pass
-
-## Proof Boundary
-
-Historical artifacts are preserved under `proofs/artifacts/historical/`.
-They may contain machine-absolute paths or superseded claim language. That
-residue is documented, not hidden.
+- Mixed evidence does not become a pass.
+- Package availability does not equal public-release authorization.
+- Use `../proofs/ENGINEERING_BLOCKERS.md`,
+  `../proofs/enterprise_benchmark/GATE_VERDICTS.json`, and
+  `../proofs/red_team/red_team_report.json` as the current authority surface.

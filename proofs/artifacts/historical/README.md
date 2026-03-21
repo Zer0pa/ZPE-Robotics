@@ -17,5 +17,6 @@ outer workspace before the canonical inner repo was formed.
 ## Important Caveat
 
 The `2026-02-21_zpe_robotics_wave1_closure` bundle says `MAX-M1 PASS` and
-`MAX-E3-OCTO PASS`. That is historical only. The March 9 pre-repo authority
-snapshot superseded those max claims and currently governs.
+`MAX-E3-OCTO PASS`. That is historical only. The March 21 blocker-state
+authority in `proofs/ENGINEERING_BLOCKERS.md` governs current engineering
+status.

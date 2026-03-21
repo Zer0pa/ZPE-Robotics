@@ -1,39 +1,60 @@
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
+</p>
+
 # Public Audit Limits
 
-This repo is a private staging repo, not a public release surface.
+<p>
+  <img src=".github/assets/readme/section-bars/scope.svg" alt="SCOPE" width="100%">
+</p>
 
-## What This Repo Can Honestly Establish Today
+This repo is a private staging repo with a public package acquisition surface.
+It is not a public release-ready robotics platform.
 
-- the staged repo boundary and package surface
-- the preserved historical February proof lineage
-- the current release-candidate kernel verdict summary: `GO`
-- the hosted `E-G3` comparator closure
-- the hosted `IT-03` plus `IT-05` composition closure
-- the hosted `IT-04` parity matrix closure
-- the hosted `M1` closure evidence under `proofs/reruns/github_actions_2026-03-17/`
-- the hosted clean-clone verification result under `proofs/release_candidate/clean_clone_result.json`
-- the future repo-local verification commands and proof paths
+What this repo can honestly establish today:
 
-## What This Repo Cannot Honestly Establish Today
+- the current standalone package identity and install surface
+- the March 21 blocker-state authority files
+- the real-data benchmark result where `B1`, `B2`, `B4`, and `B5` pass
+- the current release workflow boundary and operator-only PyPI UI step
+- preserved historical proof lineage under `proofs/artifacts/historical/`
 
-- launch readiness
-- a public release verdict
-- that the historical February bundles are still current authority
-- that package-index publication or public-release staging is complete
-
-## Limits You Must Respect
+<p>
+  <img src=".github/assets/readme/section-bars/evidence-and-claims.svg" alt="EVIDENCE AND CLAIMS" width="100%">
+</p>
 
 | Limit | Current state | Why it matters |
 |---|---|---|
-| Historical bundle path residue | preserved under `proofs/artifacts/historical/` | those files contain real lineage but non-portable machine paths |
-| Current authority location | summarized from hosted release-candidate artifacts and preserved pre-repo lineage | the current kernel and clean-clone gates are closed, but public-release work still remains |
-| Runtime blocker state | no live blocker on the current kernel gate | hosted `M1`, `E-G3`, `IT-03`/`IT-05`, and `IT-04` are all closed |
-| Release status | private only | no public release action or visibility change happened here |
+| Engineering completion | not complete | `B3` fails and red-team attacks `3` and `5` fail |
+| Replay claim | not bit-exact | strict `np.array_equal` is false on the current `.zpbot` round-trip |
+| Real-corpus strength | bounded | the real dataset run used `136` episodes at `10 Hz`, below the `200` episode / `50 Hz` target |
+| Rust integration | not present | `current_python_calls_rust=false` in the IMC architecture audit |
+| External reproduction | open | current evidence remains first-party |
+| Historical proof bundles | lineage only | preserved for provenance, not current authority |
+| Public release | not authorized | the repo remains private staging only |
 
-## Use These Files Together
+<p>
+  <img src=".github/assets/readme/section-bars/out-of-scope.svg" alt="OUT OF SCOPE" width="100%">
+</p>
+
+This repo cannot honestly establish today:
+
+- full engineering completion
+- a public-release verdict
+- strict bit-exact replay on the governing benchmark surface
+- anomaly false-positive rate at or below `0.05`
+- current Rust routing through ZPE-IMC for the robotics `.zpbot` path
+- independent third-party reproduction
+
+<p>
+  <img src=".github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
+</p>
+
+Use these files together:
 
 - `README.md`
 - `AUDITOR_PLAYBOOK.md`
-- `proofs/FINAL_STATUS.md`
-- `proofs/logs/PRE_REPO_AUTHORITY_SNAPSHOT_2026-03-09.md`
+- `proofs/ENGINEERING_BLOCKERS.md`
+- `proofs/enterprise_benchmark/GATE_VERDICTS.json`
+- `proofs/red_team/red_team_report.json`
 - `proofs/artifacts/historical/README.md`

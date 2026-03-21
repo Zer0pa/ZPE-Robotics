@@ -1,32 +1,78 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
+</p>
+
 # FAQ
 
-## Is this repo launch-ready?
+<p>
+  <img src="../.github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
+</p>
 
-No. The current release-candidate kernel gate and clean-clone verification are `GO`, but public launch is still not complete.
+Short answers about the current ZPE-Robotics package, blocker state, and
+release boundary.
 
-## What blocks launch right now?
+<p>
+  <img src="../.github/assets/readme/section-bars/questions.svg" alt="QUESTIONS" width="100%">
+</p>
 
-Explicit public-release staging and distribution decisions. The old `E-G3` blocker and clean-clone gate are closed.
+## Is this repo public-release ready?
 
-## Why keep the February bundles if they are stale?
+No. Engineering is not complete. Benchmark gate `B3` fails, red-team attacks
+`3` and `5` fail, attack `4` only partially withstands, and the robotics
+`.zpbot` path is not routed through a current ZPE-IMC Rust ABI.
 
-They are proof lineage. They show how the sector reached its current state and
-what changed, but they are not the current authority surface.
+## What is actually green right now?
 
-## Where is the current authority?
+The technical release surface is aligned for the standalone package wedge, and
+benchmark gates `B1`, `B2`, `B4`, and `B5` pass. Red-team attacks `1`, `2`,
+and `6` also withstand.
 
-For this staged repo, the current release-candidate truth is summarized in
-`proofs/FINAL_STATUS.md`, `proofs/CONSOLIDATED_PROOF_REPORT.md`, and the hosted
-artifacts under `proofs/release_candidate/`, including
-`clean_clone_result.json`. The March 9 snapshot remains lineage, not the
-current gate result.
+## What is still blocked?
 
-## How is Robotics related to IMC?
+The governing blockers are:
 
-IMC is the repo-structure model and release-linkage reference, not a shared
-runtime dependency that this repo currently imports.
+- `B3` because searchability is present but strict bit-exact replay is not
+- red-team attack `3` because strict `np.array_equal` fails on the current
+  round-trip path
+- red-team attack `5` because the nominal false-positive rate is `0.2`
+- current Python encode/decode still does not route through a robotics Rust ABI
+- external third-party reproduction remains open
 
-## Why is this repo private?
+## Is the package available today?
 
-Phase 3 and Phase 4 are private staging only. No public release action is
-allowed until a later explicit gate.
+Yes. The current package acquisition surface is `pip install zpe-motion-kernel`.
+That does not change the engineering blocker-state.
+
+## Why does the PyPI page still look greener than these docs?
+
+The `0.1.0` package description on PyPI reflects the March 18 release metadata.
+The repo docs were updated on March 21 to reflect the later blocker-state
+evidence. Until a new package release is intentionally cut, the repo docs are
+the current authority for engineering status.
+
+## Is this repo using ZPE-IMC at runtime?
+
+No. IMC is the documentation and release-hygiene reference model for this repo.
+It is not a current runtime dependency, and no robotics `.zpbot` Rust ABI is
+wired into this package today.
+
+## Are the historical proof bundles still current?
+
+No. They are lineage only. Keep them for provenance, not for current status.
+
+## What real data supports the benchmark story?
+
+The current real-dataset benchmark used `lerobot/columbia_cairlab_pusht_real`
+and reported `187.1345x` compression. That result is real, but it is still
+bounded because the corpus run used `136` episodes at `10 Hz`, below the
+`200` episode / `50 Hz` target.
+
+<p>
+  <img src="../.github/assets/readme/section-bars/faq-and-support.svg" alt="FAQ AND SUPPORT" width="100%">
+</p>
+
+If your question is not answered here:
+
+- support routing: `SUPPORT.md`
+- audit route: `../AUDITOR_PLAYBOOK.md`
+- release boundary: `../RELEASING.md`

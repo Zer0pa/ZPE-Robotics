@@ -1,26 +1,49 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
+</p>
+
 # Docs Index
 
-This is the documentation front door for the staged Robotics repo.
+<p>
+  <img src="../.github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
+</p>
 
-## Start Here
+This directory routes readers through the ZPE-Robotics documentation surface.
+Start with the smallest doc that answers the question you actually have.
+
+<p>
+  <img src="../.github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
+</p>
+
+| Audience | Read first | Why |
+|---|---|---|
+| any reader | `../README.md` | root identity, current truth, and install surface |
+| auditor | `../AUDITOR_PLAYBOOK.md` | shortest honest verification path |
+| release owner | `../RELEASING.md` | release gate and publishing boundary |
+| contributor | `../CONTRIBUTING.md` | setup, checks, and scope discipline |
+| operator | `../OPERATOR_RUNBOOK.md` | CLI command surface |
+| support / triage | `SUPPORT.md` | support routing and escalation |
+
+Supporting docs in this directory:
 
 | Document | Purpose |
 |---|---|
-| `docs/FAQ.md` | short answers about status, proofs, and verification |
-| `AUDITOR_PLAYBOOK.md` | shortest honest verification path |
-| `PUBLIC_AUDIT_LIMITS.md` | what this staged repo can and cannot establish |
-| `docs/ARCHITECTURE.md` | package and proof-surface map |
-| `docs/LEGAL_BOUNDARIES.md` | staging, license, and claim-boundary notes |
-| `docs/family/ROBOTICS_RELEASE_LINKAGE.md` | current relation to the IMC repo model |
-| `SUPPORT.md` | routing for issues, security, and licensing |
+| `ARCHITECTURE.md` | runtime, proof, and contract map for the standalone package |
+| `FAQ.md` | short answers about blockers, release state, and acquisition |
+| `LEGAL_BOUNDARIES.md` | license, visibility, and claim-boundary notes |
+| `DOC_REGISTRY.md` | canonical registry for the repo documentation surface |
+| `family/ROBOTICS_RELEASE_LINKAGE.md` | what this repo inherits from IMC docs discipline and what it does not |
+| `ZPBOT_V2_AUTHORITY_SURFACE.md` | packet-contract reference surface |
 
-## Proof Surface
+<p>
+  <img src="../.github/assets/readme/section-bars/where-to-go.svg" alt="WHERE TO GO" width="100%">
+</p>
 
-The proof corpus lives under `proofs/`.
+Use these routes for the current authority surface:
 
-Key entry points:
-
-- `proofs/FINAL_STATUS.md`
-- `proofs/CONSOLIDATED_PROOF_REPORT.md`
-- `proofs/logs/PRE_REPO_AUTHORITY_SNAPSHOT_2026-03-09.md`
-- `proofs/artifacts/historical/README.md`
+- blocker truth: `../proofs/ENGINEERING_BLOCKERS.md`
+- benchmark verdicts: `../proofs/enterprise_benchmark/GATE_VERDICTS.json`
+- red-team findings: `../proofs/red_team/red_team_report.json`
+- package/runtime boundary: `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`
+- trusted publishing operator step: `../proofs/runbooks/TRUSTED_PUBLISHING_OPERATOR_STEPS.md`
+- historical lineage: `../proofs/artifacts/historical/README.md`

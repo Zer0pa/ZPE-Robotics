@@ -1,52 +1,66 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
+</p>
+
 # Architecture
 
-## Repo Layout
+<p>
+  <img src="../.github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
+</p>
+
+This doc maps the runtime and proof surface for the current standalone
+`zpe-motion-kernel` package wedge.
+
+<p>
+  <img src="../.github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
+</p>
 
 | Path | Purpose |
 |---|---|
-| `src/zpe_robotics/` | package implementation |
-| `tests/` | repo test surface |
-| `scripts/` | execution, validation, and regression entrypoints |
-| `docs/` | front-door, status, legal, and linkage docs |
-| `proofs/` | proof indexes, logs, historical artifacts, and runbooks |
+| `src/zpe_robotics/` | installable package, CLI, packet, and evaluation logic |
+| `tests/` | release-surface, CLI, codec, and regression checks |
+| `scripts/` | replay, benchmark, clean-clone, and falsification helpers |
+| `docs/` | front-door, support, legal, and linkage docs |
+| `proofs/` | blockers, benchmark artifacts, red-team outputs, runbooks, and history |
 
-## Package Modules
+<p>
+  <img src="../.github/assets/readme/section-bars/architecture-and-theory.svg" alt="ARCHITECTURE AND THEORY" width="100%">
+</p>
 
-| Module | Responsibility |
+| Surface | Files | Responsibility |
+|---|---|---|
+| core packet path | `codec.py`, `wire.py`, `release_candidate.py` | `.zpbot` encode/decode, packet parsing, and release defaults |
+| CLI and audit | `cli.py`, `audit_bundle.py` | installable command surface and audit artifact generation |
+| bag and dataset adapters | `rosbag_adapter.py`, `lerobot_codec.py`, `mcap_bridge.py`, `enterprise_dataset.py` | bag IO, LeRobot compression, and benchmark dataset access |
+| search and anomaly | `primitive_index.py`, `primitives.py`, `anomaly.py` | primitive search and anomaly scoring |
+| evaluation and falsification | `kinematics.py`, `vla_bridge.py`, `vla_eval.py`, `falsification.py`, `determinism.py` | fidelity, token export, falsification, and replay checks |
+| support utilities | `constants.py`, `runtime_probe.py`, `telemetry.py`, `utils.py` | thresholds, probes, telemetry hooks, and helpers |
+
+<p>
+  <img src="../.github/assets/readme/section-bars/interface-contracts.svg" alt="INTERFACE CONTRACTS" width="100%">
+</p>
+
+| Contract | Current truth | Authority |
+|---|---|---|
+| distribution surface | `zpe-motion-kernel` / `zpe_robotics` / `zpe` | `../pyproject.toml` |
+| packet-contract reference | frozen `zpbot-v2` / `wire-v1` surface | `ZPBOT_V2_AUTHORITY_SURFACE.md` |
+| runtime dependency boundary | runtime deps are `numpy` and `mcap`; extras remain optional | `../pyproject.toml`, `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
+| IMC boundary | No IMC runtime import is introduced by this repo | `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`, `../proofs/imc_audit/imc_architecture_audit.json` |
+
+<p>
+  <img src="../.github/assets/readme/section-bars/verification.svg" alt="VERIFICATION" width="100%">
+</p>
+
+| Evidence surface | What it currently proves |
 |---|---|
-| `codec.py` | trajectory codec and compression metrics |
-| `rosbag_adapter.py` | bag serialization, corruption, and roundtrip evaluation |
-| `fixtures.py` | deterministic fixture generation |
-| `kinematics.py` | RMSE and end-effector fidelity helpers |
-| `primitives.py` | primitive corpus generation and retrieval metrics |
-| `anomaly.py` | anomaly injection and detection metrics |
-| `vla_eval.py` | token quality evaluation |
-| `falsification.py` | adversarial and malformed-data campaigns |
-| `determinism.py` | replay hashing |
-| `constants.py` | claim thresholds and artifact contracts |
+| `../proofs/ENGINEERING_BLOCKERS.md` | governing blocker-state and completion boundary |
+| `../proofs/enterprise_benchmark/GATE_VERDICTS.json` | benchmark gate results |
+| `../proofs/red_team/red_team_report.json` | adversarial findings and open provenance boundary |
+| `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` | package/runtime/release classification |
+| `../proofs/artifacts/historical/README.md` | historical lineage and preservation rules |
 
-## Proof Model
+Common execution path:
 
-There are three proof classes in this repo:
-
-1. Current status docs:
-   - `proofs/FINAL_STATUS.md`
-   - `proofs/CONSOLIDATED_PROOF_REPORT.md`
-2. Current pre-repo authority summary:
-   - `proofs/logs/PRE_REPO_AUTHORITY_SNAPSHOT_2026-03-09.md`
-3. Historical bundles:
-   - `proofs/artifacts/historical/2026-02-20_zpe_robotics_wave1/`
-   - `proofs/artifacts/historical/2026-02-21_zpe_robotics_wave1_closure/`
-
-Historical bundles are preserved exactly enough for lineage, including old path
-residue. They are not the current portability standard.
-
-## Execution Path
-
-- lightweight checks: `pytest tests -q`
-- full rerun path when Phase 5 opens:
-  - `scripts/run_wave1.py`
-  - `scripts/validate_net_new.py`
-  - `scripts/regression_pack.py`
-
-Default rerun output root is now `proofs/reruns/robotics_wave1_local`.
+- `python -m pytest tests -q`
+- `python -m build`
+- `zpe verify proofs/release_candidate/canonical_release_packet.zpbot`

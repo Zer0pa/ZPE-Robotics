@@ -1,57 +1,56 @@
-# RELEASE_CANDIDATE
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
+</p>
 
-## v0.1.0 — 2026-03-18
+# Release Candidate
 
-- Storage reduction on the frozen arm fixture: `238.02421307506054x`.
-- ARM64 portable: hosted ARM64 parity matched the frozen reference hash.
-- Bit-perfect replay: hosted parity and bridge evidence preserve `a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125`.
-- Hostile-path auditable: corrupted magic, CRC mismatch, and truncated payloads fail explicitly.
-- Clean-clone evidence hash: `3b2b1d091e374f8ef79b42492879df16ca71436ff8535e9b725d44d857a08ea3`.
+<p>
+  <img src=".github/assets/readme/section-bars/release-notes.svg" alt="RELEASE NOTES" width="100%">
+</p>
 
-## What it is
+This document records the March 18, 2026 release-candidate surface for
+`zpe-motion-kernel 0.1.0`. It is not the governing March 21 engineering
+authority. Use `proofs/ENGINEERING_BLOCKERS.md` for the current completion
+boundary.
 
-`zpe-motion-kernel` is a drop-in deterministic motion kernel for frozen `zpbot-v2` / `wire-v1` transport, replay, and integrity verification. The published `v0.1.0` utility artifact is available at `pypi.org/project/zpe-motion-kernel` and compresses deterministic motion data, preserves bit-stable replay surfaces, and exposes an auditable CLI without claiming to replace an end-to-end robotics stack.
+<p>
+  <img src=".github/assets/readme/section-bars/scope.svg" alt="SCOPE" width="100%">
+</p>
 
-## Proven claims
+| Surface | Release-candidate fact | Current caveat |
+|---|---|---|
+| Package | `zpe-motion-kernel 0.1.0` package artifact exists | current repo authority remains blocker-state, not release-candidate prose |
+| Synthetic fixture compression | `238.02421307506054x` | the real-data benchmark later recorded `187.1345x` |
+| CLI surface | `zpe` ships encode, decode, verify, info, search, anomaly, LeRobot, token export, and audit-bundle commands | availability does not imply all claims are fully closed |
+| Searchability | primitive search works without decode on the benchmark surface | `B3` still fails because strict bit-exact replay is not proven |
+| Publishing | package upload path exists | Trusted Publishing UI registration is still operator-only |
 
-- Storage reduction on the frozen arm fixture: `238.02421307506054x` versus the comparator-side raw float32 storage surface.
-- ARM64 portable: hosted ARM64 parity matched the frozen reference hash.
-- Bit-perfect replay: hosted parity and bridge evidence preserve the frozen `a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125` hash.
-- Hostile-path auditable: corrupted magic, CRC mismatch, and truncated payload all fail explicitly with preserved error reporting.
+<p>
+  <img src=".github/assets/readme/section-bars/verification.svg" alt="VERIFICATION" width="100%">
+</p>
 
-## What it does NOT claim yet
+| Claim surface | Evidence | Caveat |
+|---|---|---|
+| canonical reference packet SHA | `proofs/red_team/red_team_report.json` attack `6` | Python 3.12 parity held for the reference packet, but strict raw-array equality still fails on the current round-trip path |
+| real-data compression | `proofs/enterprise_benchmark/benchmark_result.json`, `proofs/enterprise_benchmark/GATE_VERDICTS.json` | benchmark gates `B1`, `B2`, `B4`, and `B5` pass; `B3` fails |
+| hostile-path auditability | packet verification and audit-bundle surfaces in `src/zpe_robotics/` and `tests/` | auditability does not imply public-release readiness |
+| build/install truth | `proofs/artifacts/operations/20260321T203557Z_technical_alignment_verification.md` | technical release-surface alignment is green, but engineering completion is not |
 
-- Policy superiority over learned-policy systems.
-- Full-stack robotics replacement.
-- Jetson-native proof.
+<p>
+  <img src=".github/assets/readme/section-bars/downstream-action-items.svg" alt="DOWNSTREAM ACTION ITEMS" width="100%">
+</p>
 
-## How to install
+This release-candidate note does not claim:
 
-Package name: `zpe-motion-kernel`
+- strict bit-exact replay on the governing benchmark surface
+- anomaly false-positive rate at or below `0.05`
+- current Rust routing through ZPE-IMC for robotics `.zpbot`
+- full robotics-platform release readiness
+- public-release authorization
 
-Published install command:
+Use these files when you need the current state instead of the March 18 note:
 
-```bash
-pip install zpe-motion-kernel
-```
-
-Hosted clean-clone verification preserved the source-install path that remains committed:
-
-```bash
-pip install -e .
-```
-
-## The four evidence hashes
-
-- `M1` artifact: `proofs/release_candidate/m1_ros2_probe_result.json`
-  SHA-256: `640a203ac1701dde6e9aa507a2b3c49c1a7a844e03a87070453e50b1326f8d0d`
-- `ARM64` artifact: `proofs/release_candidate/arm64_parity_result.json`
-  SHA-256: `3c90616efbfcb9d8f24f0d55dac213272289922e5df4821bd5b658a5ec9f643f`
-- `IT-03/05` artifact: `proofs/release_candidate/it03_it05_composition_result.json`
-  SHA-256: `58e27c6f51f70562f14f83baabd917f4f972f6702046d8c049b8e4f058347dcb`
-- `E-G3` artifact: `proofs/release_candidate/e_g3_comparator_result.json`
-  SHA-256: `7ee62646487b4b5f76c6690838a268bd77b08499e05d15f1ab3f9edc943a1b99`
-
-## License
-
-Zer0pa SAL v6.0 — free under `$100M` revenue, commercial license required above.
+- `proofs/ENGINEERING_BLOCKERS.md`
+- `proofs/enterprise_benchmark/GATE_VERDICTS.json`
+- `proofs/red_team/red_team_report.json`
+- `RELEASING.md`

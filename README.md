@@ -1,74 +1,139 @@
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
+</p>
+
 # ZPE-Robotics
 
-ZPE-Robotics is the Robotics sector private staging repo for the Wave-1
-deterministic robotics codec, proof corpus, and repo-formation work.
+[![PyPI](https://img.shields.io/pypi/v/zpe-motion-kernel)](https://pypi.org/project/zpe-motion-kernel/)
+[![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
+[![License](https://img.shields.io/badge/license-SAL%20v6.0-orange)](./LICENSE)
 
-This repo is staged privately. It is not a public release surface and it
-has now passed the Phase 5 clean-clone verification gate.
+<p>
+  <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
+</p>
 
-## Current Status
+ZPE-Robotics is the private workstream repo for the `zpe-motion-kernel`
+package. The current public wedge is a standalone Python package for frozen
+`wire-v1` motion transport, replay, search, and audit workflows. It is not a
+full robotics-platform release surface.
+
+<p>
+  <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">
+</p>
 
 | Surface | Current truth |
 |---|---|
-| Visibility | private staging only |
-| Repo state | inner repo normalized on 2026-03-09 |
-| Current technical verdict | `GO` for the 2026-03-17 release-candidate kernel gate |
-| Active blockers | none on the current release-candidate gate |
-| Hosted runtime closure | `M1` closed on 2026-03-17 via GitHub Actions run `23200176105` |
-| Hosted comparator closure | `E-G3` closed on 2026-03-17 via GitHub Actions run `23202700744` |
-| Hosted composition closure | `IT-03` + `IT-05` closed on 2026-03-17 via GitHub Actions run `23202700741` |
-| Hosted parity matrix | `IT-04` closed on 2026-03-17 via GitHub Actions run `23202700798` |
-| Hosted clean-clone verification | closed on 2026-03-17 via GitHub Actions run `23215281934` |
-| Historical bundles | included under `proofs/artifacts/historical/` |
-| Public release decision | not yet taken |
+| Repository | `https://github.com/Zer0pa/ZPE-Robotics.git` |
+| Package / import / CLI | `zpe-motion-kernel` / `zpe_robotics` / `zpe` |
+| Acquisition surface | `pip install zpe-motion-kernel` |
+| License | `LicenseRef-Zer0pa-SAL-6.0` |
+| Contact | `architects@zer0pa.ai` |
+| Release state | private staging only |
+| Engineering | not complete |
+| Current authority | `proofs/ENGINEERING_BLOCKERS.md` |
 
-## What This Repo Contains
+Canonical authority stack:
 
-- `src/zpe_robotics/`: Wave-1 package code
-- `tests/`: sector tests
-- `scripts/`: execution and validation scripts
-- `docs/`: front-door, architecture, legal-boundary, and linkage docs
-- `proofs/`: historical bundles, current status docs, logs, and runbooks
+- `proofs/ENGINEERING_BLOCKERS.md`
+- `proofs/enterprise_benchmark/GATE_VERDICTS.json`
+- `proofs/red_team/red_team_report.json`
+- `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`
+- `proofs/imc_audit/imc_architecture_audit.json`
 
-## What This Repo Does Not Claim
+<p>
+  <img src=".github/assets/readme/section-bars/lane-status-snapshot.svg" alt="LANE STATUS SNAPSHOT" width="100%">
+</p>
 
-- It does not claim launch readiness.
-- It does not treat the February historical bundles as current authority.
-- It does not claim public release staging or package-index publication.
+| Surface | Current truth |
+|---|---|
+| Benchmark gates | `B1`, `B2`, `B4`, and `B5` pass; `B3` fails |
+| Real-data benchmark | `187.1345x` on `lerobot/columbia_cairlab_pusht_real` |
+| Red-team | attacks `1`, `2`, and `6` withstand; `4` partially withstands; `3` and `5` fail; `7` remains open |
+| Replay claim boundary | strict bit-exact replay is not proven on the current `.zpbot` round-trip |
+| Searchability | supported without decode on the benchmark surface |
+| Rust integration | no robotics `.zpbot` Rust ABI is wired into this repo |
+| Release workflow | GitHub OIDC workflow is aligned; PyPI UI registration is still operator-only |
+| Public release | not authorized |
 
-## Quick Start
+<p>
+  <img src=".github/assets/readme/zpe-masthead-option-3-2.gif" alt="ZPE-Robotics Masthead Detail 3.2" width="100%">
+</p>
+
+<p>
+  <img src=".github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
+</p>
+
+| Area | Purpose |
+|---|---|
+| `src/zpe_robotics/` | package implementation, CLI, packet handling, search, anomaly, and audit logic |
+| `tests/` | release-surface, CLI, codec, and regression checks |
+| `scripts/` | replay, benchmark, falsification, and clean-clone helpers |
+| `docs/` | front-door, architecture, support, legal, and family-linkage docs |
+| `proofs/` | blockers, benchmark artifacts, red-team outputs, release runbooks, and historical bundles |
+| `.github/workflows/` | CI, clean-clone, parity, comparator, and publish workflows |
+
+<p>
+  <img src=".github/assets/readme/section-bars/evidence-and-claims.svg" alt="EVIDENCE AND CLAIMS" width="100%">
+</p>
+
+- Runtime and proof artifacts outrank prose.
+- `GO` and `NO-GO` language is reserved for named gates only.
+- Historical proof bundles remain lineage only. They do not override the March
+  21 blocker-state evidence.
+- No IMC runtime import is introduced by this repo.
+- The current public PyPI package is `zpe-motion-kernel 0.1.0`, but the repo's
+  March 21 blocker-state docs are the current authority surface for engineering
+  status.
+
+Use these files together:
+
+| Need | Read first |
+|---|---|
+| Current blocker truth | `proofs/ENGINEERING_BLOCKERS.md` |
+| Benchmark verdicts | `proofs/enterprise_benchmark/GATE_VERDICTS.json` |
+| Adversarial findings | `proofs/red_team/red_team_report.json` |
+| Package/runtime boundary | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
+| Release-candidate note | `RELEASE_CANDIDATE.md` |
+| Historical lineage | `proofs/artifacts/historical/README.md` |
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-Robotics Masthead Detail 3.3" width="100%">
+</p>
+
+<p>
+  <img src=".github/assets/readme/section-bars/setup-and-verification.svg" alt="SETUP AND VERIFICATION" width="100%">
+</p>
+
+Public package install:
+
+```bash
+pip install zpe-motion-kernel
+zpe --version
+```
+
+Repo-local engineering surface:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip setuptools wheel
-python -m pip install -e ".[dev,netnew]"
+python -m pip install -e ".[dev,benchmark,telemetry,netnew]"
 python -m pytest tests -q
+python -m build
 ```
 
-Optional repo-local follow-on verify path when an additional max-wave replay is needed:
+If you need the shortest honest verification route, use `AUDITOR_PLAYBOOK.md`.
+If you need the release workflow boundary, use `RELEASING.md`.
 
-```bash
-python scripts/run_wave1.py \
-  --output-root proofs/reruns/robotics_wave1_local \
-  --seed 20260220 \
-  --determinism-runs 5 \
-  --max-wave
-```
+<p>
+  <img src=".github/assets/readme/section-bars/contributing-security-support.svg" alt="CONTRIBUTING, SECURITY, SUPPORT" width="100%">
+</p>
 
-## Where To Read First
-
-- `proofs/FINAL_STATUS.md`
-- `proofs/logs/PRE_REPO_AUTHORITY_SNAPSHOT_2026-03-09.md`
-- `AUDITOR_PLAYBOOK.md`
-- `PUBLIC_AUDIT_LIMITS.md`
-- `docs/README.md`
-
-## Honesty Rules
-
-- Runtime and artifact truth outrank prose.
-- Historical artifacts remain historical even when they contain stronger
-  older claims than the current rerun.
-- Mixed evidence is not a pass.
-- `GO` here means the release-candidate kernel plus hosted clean-clone gate
-  passed, not that public launch or package-index publication are complete.
+| Need | Route |
+|---|---|
+| Contributor workflow | `CONTRIBUTING.md` |
+| Security reporting | `SECURITY.md` |
+| Governance and claim policy | `GOVERNANCE.md` |
+| Support routing | `docs/SUPPORT.md` |
+| Docs index | `docs/README.md` |
+| Operator commands | `OPERATOR_RUNBOOK.md` |
