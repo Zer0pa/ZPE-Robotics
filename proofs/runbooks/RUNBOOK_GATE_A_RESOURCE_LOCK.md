@@ -18,7 +18,8 @@ Finalize execution contract before coding.
 2. `sed -n '1,260p' STARTUP_PROMPT_ZPE_ROBOTICS_SECTOR_AGENT_2026-02-20.md`
 3. `sed -n '1,260p' PRD_ZPE_ROBOTICS_SECTOR_EXPANSION_WAVE1_2026-02-20.md`
 4. `set -a; [ -f .env ] && source .env; set +a`
-5. `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local --seed 20260220 --determinism-runs 5 --max-wave --dry-lock-only`
+5. `RUN_ROOT="proofs/reruns/robotics_wave1_$(date -u +%Y%m%dT%H%M%SZ)"`
+6. `python scripts/run_wave1.py --output-root "$RUN_ROOT" --seed 20260220 --determinism-runs 5 --max-wave --dry-lock-only`
 
 ## Expected Outputs
 - `proofs/runbooks/RUNBOOK_ZPE_ROBOTICS_MASTER.md`

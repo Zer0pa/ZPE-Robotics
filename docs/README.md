@@ -8,8 +8,8 @@
   <img src="../.github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-This directory routes readers through the ZPE-Robotics documentation surface.
-Start with the smallest doc that answers the question you actually have.
+This directory helps readers find the right doc. Start with the smallest doc
+that answers your question.
 
 <p>
   <img src="../.github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
@@ -41,9 +41,11 @@ Supporting docs in this directory:
 
 Use these routes for the current authority surface:
 
-- blocker truth: `../proofs/ENGINEERING_BLOCKERS.md`
-- benchmark verdicts: `../proofs/enterprise_benchmark/GATE_VERDICTS.json`
-- red-team findings: `../proofs/red_team/red_team_report.json`
-- package/runtime boundary: `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`
-- trusted publishing operator step: `../proofs/runbooks/TRUSTED_PUBLISHING_OPERATOR_STEPS.md`
-- historical lineage: `../proofs/artifacts/historical/README.md`
+| Need | Route |
+|---|---|
+| blocker truth | `../proofs/ENGINEERING_BLOCKERS.md` |
+| benchmark verdicts | `../proofs/enterprise_benchmark/GATE_VERDICTS.json` |
+| red-team findings | `../proofs/red_team/red_team_report.json` |
+| package/runtime boundary | `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
+| trusted publishing operator step | `../proofs/runbooks/TRUSTED_PUBLISHING_OPERATOR_STEPS.md` |
+| historical lineage | `../proofs/artifacts/historical/README.md` |

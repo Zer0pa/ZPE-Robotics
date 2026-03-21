@@ -113,7 +113,7 @@ def _default_source_paths(packet_path: Path) -> list[str]:
         str(packet_path),
         "zpe-robotics/docs/ZPBOT_V2_AUTHORITY_SURFACE.md",
         "zpe-robotics/RELEASE_CANDIDATE.md",
-        "zpe-robotics/proofs/reruns/robotics_wave1_local_2026-03-16/determinism_replay_results.json",
+        "zpe-robotics/proofs/red_team/red_team_report.json",
     ]
 
 

@@ -8,9 +8,9 @@
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-This is the shortest honest verification path for the current ZPE-Robotics
-workstream repo. Overall engineering state is not complete. Gate-local green
-slices remain subordinate to the March 21 blocker-state evidence.
+This is the shortest verification path anchored to current authority.
+Engineering is not complete. Local green slices do not override the March 21
+blocker-state evidence.
 
 <p>
   <img src=".github/assets/readme/section-bars/quick-start.svg" alt="QUICK START" width="100%">

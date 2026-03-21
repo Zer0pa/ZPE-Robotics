@@ -14,8 +14,10 @@ Execute malformed/adversarial campaigns with zero uncaught crashes and confirm 5
 - DT-ROB-MAX-3 high-frequency control trace fidelity kill test
 
 ## Commands
-1. `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local --seed 20260220 --determinism-runs 5`
-2. `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local_replay --seed 20260220 --determinism-runs 5`
+1. `RUN_ROOT="proofs/reruns/robotics_wave1_$(date -u +%Y%m%dT%H%M%SZ)"`
+2. `REPLAY_ROOT="${RUN_ROOT}_replay"`
+3. `python scripts/run_wave1.py --output-root "$RUN_ROOT" --seed 20260220 --determinism-runs 5`
+4. `python scripts/run_wave1.py --output-root "$REPLAY_ROOT" --seed 20260220 --determinism-runs 5`
 
 ## Expected Outputs
 - `falsification_results.md`

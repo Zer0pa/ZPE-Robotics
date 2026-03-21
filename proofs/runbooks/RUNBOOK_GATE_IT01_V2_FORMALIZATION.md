@@ -15,12 +15,12 @@ Revalidate the Phase-2 packet authority surface after any change to the codec, w
    `from zpe_robotics.wire import describe_packet`
    `trajectory = generate_joint_trajectory(num_frames=2048, num_joints=6, seed=20260317)`
    `blob = ZPBotCodec(keep_coeffs=8).encode(trajectory)`
-   `write_json(Path("proofs/reruns/robotics_phase2_local_2026-03-17/it01_wire_probe.json"), describe_packet(blob))`
+   `write_json(Path("proofs/reruns/it01_wire_probe_current/it01_wire_probe.json"), describe_packet(blob))`
    `PY`
 
 ## Expected Outputs
 
-- `proofs/reruns/robotics_phase2_local_2026-03-17/it01_wire_probe.json`
+- `proofs/reruns/it01_wire_probe_current/it01_wire_probe.json`
 - passing `tests/test_codec.py`
 - passing `tests/test_wire.py`
 

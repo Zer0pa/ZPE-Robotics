@@ -28,14 +28,14 @@ jobs:
         run: |
           uv run python scripts/e_g3_comparator.py \
             --workflow-run-id "${GITHUB_RUN_ID}" \
-            --output "proofs/reruns/e_g3_closure_2026-03-17/e_g3_comparator_result.json"
+            --output "proofs/reruns/e_g3_comparator_current/e_g3_comparator_result.json"
 
       - name: Upload E-G3 comparator evidence
         if: always()
         uses: actions/upload-artifact@v6
         with:
           name: e_g3-comparator-evidence
-          path: proofs/reruns/e_g3_closure_2026-03-17/e_g3_comparator_result.json
+          path: proofs/reruns/e_g3_comparator_current/e_g3_comparator_result.json
           if-no-files-found: error
 
       - name: Enforce decisive E-G3 result
@@ -45,7 +45,7 @@ jobs:
           import json
           from pathlib import Path
 
-          path = Path("proofs/reruns/e_g3_closure_2026-03-17/e_g3_comparator_result.json")
+          path = Path("proofs/reruns/e_g3_comparator_current/e_g3_comparator_result.json")
           if not path.exists():
               raise SystemExit("E-G3 comparator artifact missing")
           payload = json.loads(path.read_text(encoding="utf-8"))

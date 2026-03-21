@@ -21,7 +21,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output",
         type=Path,
-        default=ROOT / "proofs" / "reruns" / "robotics_phase2_local_2026-03-17" / "ros2_bridge_probe.json",
+        default=ROOT / "proofs" / "reruns" / "it02_native_bridge_current" / "ros2_bridge_probe.json",
     )
     parser.add_argument("--strict", action="store_true", help="exit non-zero if the probe status is FAIL")
     return parser.parse_args()

@@ -24,7 +24,7 @@
 
 - Reproducible reports with exact commands and exact evidence paths get the
   fastest response.
-- Target acknowledgement is within 48 hours and initial triage within 7 days.
+- Target acknowledgement: 48 hours; initial triage: 7 days.
 - Security issues follow `../SECURITY.md`.
 - Owner-gated items may remain paused until the required outside action happens.
 

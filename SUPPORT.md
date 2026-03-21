@@ -1,4 +1,12 @@
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
+</p>
+
 # Support
+
+<p>
+  <img src=".github/assets/readme/section-bars/reporting.svg" alt="REPORTING" width="100%">
+</p>
 
 ## Routing
 

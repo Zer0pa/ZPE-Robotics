@@ -21,8 +21,8 @@ Canonical anchors:
   <img src=".github/assets/readme/section-bars/scope.svg" alt="SCOPE" width="100%">
 </p>
 
-Release statements in this repo are bounded to evidence-backed technical
-claims. Package availability does not override the March 21 blocker-state.
+Release statements in this repo must be evidence-backed. Package availability
+does not override the March 21 blocker-state.
 
 <p>
   <img src=".github/assets/readme/section-bars/verification.svg" alt="VERIFICATION" width="100%">
@@ -41,8 +41,8 @@ claims. Package availability does not override the March 21 blocker-state.
   <img src=".github/assets/readme/section-bars/downstream-action-items.svg" alt="DOWNSTREAM ACTION ITEMS" width="100%">
 </p>
 
-Do not cut a new release narrative from the current state unless one of the
-following happens first:
+Do not describe the current state as release-ready unless one of the following
+happens first:
 
 1. the blocker lane closes honestly, including `B3`, red-team attack `3`, and
    red-team attack `5`

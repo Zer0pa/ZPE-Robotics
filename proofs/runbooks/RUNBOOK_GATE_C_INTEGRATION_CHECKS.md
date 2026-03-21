@@ -5,7 +5,8 @@ Validate rosbag adapter roundtrip and primitive index/search integration under d
 Validate maximalization M1 runtime-style callback path checks.
 
 ## Commands
-1. `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local --seed 20260220 --determinism-runs 5`
+1. `RUN_ROOT="proofs/reruns/robotics_wave1_$(date -u +%Y%m%dT%H%M%SZ)"`
+2. `python scripts/run_wave1.py --output-root "$RUN_ROOT" --seed 20260220 --determinism-runs 5`
 
 ## Expected Outputs
 - `robot_rosbag_roundtrip.json`

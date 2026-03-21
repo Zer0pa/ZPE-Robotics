@@ -1,4 +1,12 @@
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
+</p>
+
 # Code Of Conduct
+
+<p>
+  <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
+</p>
 
 This repo expects direct, respectful, evidence-based collaboration.
 

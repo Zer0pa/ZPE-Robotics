@@ -4,9 +4,10 @@
 Finalize artifact contract, quality scorecard, innovation delta, and GO/NO-GO decision.
 
 ## Commands
-1. `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local --seed 20260220 --determinism-runs 5`
-2. `python scripts/regression_pack.py --artifacts proofs/reruns/robotics_wave1_local`
-3. `python scripts/validate_net_new.py --artifacts proofs/reruns/robotics_wave1_local`
+1. `RUN_ROOT="proofs/reruns/robotics_wave1_$(date -u +%Y%m%dT%H%M%SZ)"`
+2. `python scripts/run_wave1.py --output-root "$RUN_ROOT" --seed 20260220 --determinism-runs 5`
+3. `python scripts/regression_pack.py --artifacts "$RUN_ROOT"`
+4. `python scripts/validate_net_new.py --artifacts "$RUN_ROOT"`
 
 ## Required Outputs
 - Core PRD artifacts (15 files)

@@ -23,7 +23,7 @@ This runbook does not authorize policy-superiority claims. It only compares:
 
 ```bash
 uv run python scripts/e_g3_comparator.py \
-  --output proofs/reruns/e_g3_closure_2026-03-17/e_g3_comparator_result.json
+  --output proofs/reruns/e_g3_comparator_current/e_g3_comparator_result.json
 ```
 
 ## Hosted Command

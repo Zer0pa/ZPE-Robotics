@@ -6,8 +6,9 @@ Execute the first hosted Ubuntu `M1` probe surface and preserve a decisive JSON 
 
 ## Local Dry Run
 
-1. `python -m py_compile scripts/m1_ros2_probe.py`
-2. `python scripts/m1_ros2_probe.py --workflow-run-id local-dry-run --output proofs/reruns/robotics_phase3_local_2026-03-17/m1_ros2_probe_local.json`
+1. `M1_LOCAL_ROOT="proofs/reruns/m1_ros2_probe_local"`
+2. `python -m py_compile scripts/m1_ros2_probe.py`
+3. `python scripts/m1_ros2_probe.py --workflow-run-id local-dry-run --output "$M1_LOCAL_ROOT/m1_ros2_probe_local.json"`
 
 ## Hosted Run
 

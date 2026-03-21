@@ -7,7 +7,7 @@ Pressure deterministic bridge stability through a hosted ARM64 parity precheck a
 ## Frozen Reference
 
 - `x86_reference_sha256 = a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125`
-- source artifact: `proofs/reruns/robotics_phase2_local_2026-03-17/mcap_bridge_roundtrip.json`
+- source artifact: `proofs/reruns/it02_native_bridge_current/mcap_bridge_roundtrip.json`
 - fixture path:
   - `generate_joint_trajectory(num_frames=4096, num_joints=6, seed=20260317)`
   - `make_rosbag_fixture(..., seed=20260318)`

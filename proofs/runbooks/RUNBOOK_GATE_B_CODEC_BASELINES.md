@@ -13,9 +13,10 @@ Implement `.zpbot` codec, benchmark harness, fidelity metrics, and baseline comp
 - `src/zpe_robotics/vla_eval.py`
 
 ## Commands
-1. `python -m pytest -q`
-2. `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local --seed 20260220 --determinism-runs 5`
-3. `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local --seed 20260220 --determinism-runs 5 --max-wave --skip-net-new`
+1. `RUN_ROOT="proofs/reruns/robotics_wave1_$(date -u +%Y%m%dT%H%M%SZ)"`
+2. `python -m pytest -q`
+3. `python scripts/run_wave1.py --output-root "$RUN_ROOT" --seed 20260220 --determinism-runs 5`
+4. `python scripts/run_wave1.py --output-root "$RUN_ROOT" --seed 20260220 --determinism-runs 5 --max-wave --skip-net-new`
 
 ## Expected Outputs
 - Core benchmark/fidelity artifact JSONs generated with threshold checks.

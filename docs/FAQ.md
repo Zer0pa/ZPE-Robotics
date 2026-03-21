@@ -17,7 +17,7 @@ release boundary.
 
 ## Is this repo public-release ready?
 
-No. Engineering is not complete. Benchmark gate `B3` fails, red-team attacks
+No. Engineering remains incomplete. Benchmark gate `B3` fails, red-team attacks
 `3` and `5` fail, attack `4` only partially withstands, and the robotics
 `.zpbot` path is not routed through a current ZPE-IMC Rust ABI.
 
@@ -41,9 +41,9 @@ The governing blockers are:
 ## Is the package available today?
 
 Yes. The current package acquisition surface is `pip install zpe-motion-kernel`.
-That does not change the engineering blocker-state.
+That does not change blocker status.
 
-## Why does the PyPI page still look greener than these docs?
+## Why can package metadata look greener than these docs?
 
 The `0.1.0` package description on PyPI reflects the March 18 release metadata.
 The repo docs were updated on March 21 to reflect the later blocker-state

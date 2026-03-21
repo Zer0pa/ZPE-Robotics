@@ -33,18 +33,23 @@
   - determinism replay perturbation-free checks: `20260225`
 - Prohibition: no implicit RNG via global `np.random` state.
 
-## 3) Command Ledger (Predeclared)
+## 3) Fresh Output Roots
+- `RUN_ROOT="proofs/reruns/robotics_wave1_$(date -u +%Y%m%dT%H%M%SZ)"`
+- `REPLAY_ROOT="${RUN_ROOT}_replay"`
+- Use a fresh timestamped rerun root for each execution. Do not reuse historical directories as live output targets.
+
+## 4) Command Ledger (Predeclared)
 | ID | Command | Expected output | Fail signatures | Rollback |
 |---|---|---|---|---|
 | CL-01 | `python -m pytest -q` | all tests pass | non-zero exit, assertion failure, uncaught exception | patch failing module, rerun CL-01 + downstream |
-| CL-02 | `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local --seed 20260220 --determinism-runs 5` | all gates PASS, artifacts emitted | missing artifact, threshold breach, crash | revert to last green module snapshot, rerun from failed gate |
-| CL-03 | `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local_replay --seed 20260220 --determinism-runs 5` | same determinism hashes as CL-02 | hash drift, metric drift | inspect nondeterministic path, enforce seeded order, rerun CL-02 onward |
-| CL-04 | `python scripts/regression_pack.py --artifacts proofs/reruns/robotics_wave1_local` | regression PASS, zero uncaught crashes | timeout, crash, mismatch | patch isolated regression defect, rerun CL-04 + Gate E |
-| CL-05 | `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local --seed 20260220 --determinism-runs 5 --max-wave` | A-E + M/E gates evaluated and max-wave artifacts emitted | missing max artifacts, unattempted resources, invalid IMP code | patch resource-ingestion path, rerun from failed M/E gate |
-| CL-06 | `python scripts/validate_net_new.py --artifacts proofs/reruns/robotics_wave1_local` | net-new artifact integrity PASS | missing evidence links, malformed impracticality records | patch validation fields + rerun CL-06 |
+| CL-02 | `python scripts/run_wave1.py --output-root "$RUN_ROOT" --seed 20260220 --determinism-runs 5` | all gates PASS, artifacts emitted | missing artifact, threshold breach, crash | revert to last green module snapshot, rerun from failed gate |
+| CL-03 | `python scripts/run_wave1.py --output-root "$REPLAY_ROOT" --seed 20260220 --determinism-runs 5` | same determinism hashes as CL-02 | hash drift, metric drift | inspect nondeterministic path, enforce seeded order, rerun CL-02 onward |
+| CL-04 | `python scripts/regression_pack.py --artifacts "$RUN_ROOT"` | regression PASS, zero uncaught crashes | timeout, crash, mismatch | patch isolated regression defect, rerun CL-04 + Gate E |
+| CL-05 | `python scripts/run_wave1.py --output-root "$RUN_ROOT" --seed 20260220 --determinism-runs 5 --max-wave` | A-E + M/E gates evaluated and max-wave artifacts emitted | missing max artifacts, unattempted resources, invalid IMP code | patch resource-ingestion path, rerun from failed M/E gate |
+| CL-06 | `python scripts/validate_net_new.py --artifacts "$RUN_ROOT"` | net-new artifact integrity PASS | missing evidence links, malformed impracticality records | patch validation fields + rerun CL-06 |
 | CL-07 | `PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin /opt/homebrew/bin/colima start --cpu 4 --memory 8 --disk 60` | arm64 Colima runtime ready and Docker daemon reachable | `limactl is running under rosetta`, `Cannot connect to the Docker daemon` | enforce arm64 PATH/bin, rerun CL-07 + failed gate |
 
-## 4) Falsification-First Claim Matrix
+## 5) Falsification-First Claim Matrix
 | Claim | Null hypothesis (to falsify) | Attack/test command | Promotion evidence |
 |---|---|---|---|
 | ROB-C001 | arm CR < 15x | CL-02 + DT-ROB-2 | `robot_arm_benchmark.json` |
@@ -56,23 +61,23 @@
 | ROB-C007 | anomaly recall < 0.90 | CL-02 + DT-ROB-2 | `robot_anomaly_eval.json` |
 | ROB-C008 | VLA token quality <= naive baseline | CL-02 + DT-ROB-5 | `robot_vla_token_eval.json` |
 
-## 5) Expected Artifact Root
-- `proofs/reruns/robotics_wave1_local/`
+## 6) Expected Artifact Root
+- `$RUN_ROOT/`
 
-## 6) Failure Signatures (Global)
+## 7) Failure Signatures (Global)
 1. Determinism drift: mismatched SHA-256 across replay runs.
 2. Crash signature: uncaught exception stack trace in malformed/adversarial suites.
 3. Fidelity breach: `ee_rmse_mm > 0.1` or `joint_rmse_deg > 0.05`.
 4. Compression breach: `compression_ratio` below claim threshold.
 5. Primitive quality breach: `precision_at_10 < 0.90`.
 
-## 7) Rollback Policy
+## 8) Rollback Policy
 1. Keep gate checkpoints as immutable JSON snapshots under artifact root.
 2. On gate failure, patch minimal defect only in affected module.
 3. Rerun failed gate + all downstream gates in strict order.
 4. Do not relax thresholds for pass.
 
-## 8) Resource Lock + Fallback Plan
+## 9) Resource Lock + Fallback Plan
 | Resource/checklist item | Preferred resource | Fallback if blocked | Comparability impact policy |
 |---|---|---|---|
 | LeRobot integration path | local adapter contract + schema fixture | synthetic LeRobot-like schema fixture | mark integration readiness as partial if no native runtime |
@@ -84,7 +89,7 @@
 | robot_descriptions URDF path | URDF fixture parser compatibility tests | minimal URDF parser with generated model | mark external package dependency unmet as INCONCLUSIVE |
 | MuJoCo simulation validation | MuJoCo-compatible kinematic replay adapter | analytic FK replay simulator | mark physics-engine parity INCONCLUSIVE |
 
-## 9) Dataset/Resource Provenance Lock
+## 10) Dataset/Resource Provenance Lock
 - Synthetic corpora generator: `src/zpe_robotics/fixtures.py` (seed-bound; hash captured in manifest)
 - Baseline comparators: in-lane deterministic implementations (naive binning, DCT proxy)
 - Snapshot metadata fields captured in `concept_resource_traceability.json`:
@@ -94,13 +99,13 @@
   - `version_or_snapshot`
   - `evidence_artifact`
 
-## 10) Concept Open Questions Resolution Plan
+## 11) Concept Open Questions Resolution Plan
 Open questions from concept doc Section 11 are resolved with statuses:
 - `RESOLVED`: direct in-lane executable evidence.
 - `INCONCLUSIVE`: substitution used; equivalence not proven.
 - `OUT-OF-SCOPE`: outside Wave-1 runtime boundary, documented with rationale.
 
-## 11) Maximalization + NET-NEW Resource Lock
+## 12) Maximalization + NET-NEW Resource Lock
 Mandatory external resources to attempt (E3):
 1. AgiBot World
 2. Open X-Embodiment
@@ -131,7 +136,7 @@ Each impracticality record must include:
 3. fallback path
 4. claim-impact note
 
-## 12) Final-Phase Closure Adjudication (2026-02-21)
+## 13) Final-Phase Closure Adjudication (2026-02-21)
 Status vocabulary for unresolved runtime gates:
 1. `PASS`: full native/runtime evidence present in artifacts.
 2. `FAIL`: falsification succeeded or required runtime path unavailable after declared attempts.
@@ -142,13 +147,14 @@ Promotion constraints:
 2. Any `FAIL`/`PAUSED_EXTERNAL` must include concrete artifact evidence paths.
 3. `PAUSED_EXTERNAL` requires license/access evidence plus explicit open-alternative search evidence.
 
-## 13) Closure Command Chain (Mac -> GPU-ready)
+## 14) Closure Command Chain (Mac -> GPU-ready)
 1. `set -a; [ -f .env ] && source .env; set +a`
-2. `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local --seed 20260220 --determinism-runs 5 --max-wave --dry-lock-only`
-3. `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local --seed 20260220 --determinism-runs 5 --max-wave`
-4. `python scripts/validate_net_new.py --artifacts proofs/reruns/robotics_wave1_local`
-5. `python scripts/regression_pack.py --artifacts proofs/reruns/robotics_wave1_local`
-6. `python -m pytest -q`
+2. `RUN_ROOT="proofs/reruns/robotics_wave1_$(date -u +%Y%m%dT%H%M%SZ)"`
+3. `python scripts/run_wave1.py --output-root "$RUN_ROOT" --seed 20260220 --determinism-runs 5 --max-wave --dry-lock-only`
+4. `python scripts/run_wave1.py --output-root "$RUN_ROOT" --seed 20260220 --determinism-runs 5 --max-wave`
+5. `python scripts/validate_net_new.py --artifacts "$RUN_ROOT"`
+6. `python scripts/regression_pack.py --artifacts "$RUN_ROOT"`
+7. `python -m pytest -q`
 
 Additional runtime-closure probes:
 1. ROS2 path: `ros2 pkg list`, record version provenance separately, then container/runtime alternatives (if available), else explicit `FAIL`.

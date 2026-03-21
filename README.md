@@ -12,10 +12,10 @@
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-ZPE-Robotics is the private workstream repo for the `zpe-motion-kernel`
-package. The current public wedge is a standalone Python package for frozen
+ZPE-Robotics is the private repository for the `zpe-motion-kernel` package.
+The current release surface is a standalone Python package for frozen
 `wire-v1` motion transport, replay, search, and audit workflows. It is not a
-full robotics-platform release surface.
+full robotics-platform release.
 
 <p>
   <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">
@@ -32,13 +32,13 @@ full robotics-platform release surface.
 | Engineering | not complete |
 | Current authority | `proofs/ENGINEERING_BLOCKERS.md` |
 
-Canonical authority stack:
-
-- `proofs/ENGINEERING_BLOCKERS.md`
-- `proofs/enterprise_benchmark/GATE_VERDICTS.json`
-- `proofs/red_team/red_team_report.json`
-- `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`
-- `proofs/imc_audit/imc_architecture_audit.json`
+| Authority layer | File |
+|---|---|
+| governing blocker state | `proofs/ENGINEERING_BLOCKERS.md` |
+| benchmark gate verdicts | `proofs/enterprise_benchmark/GATE_VERDICTS.json` |
+| adversarial verdicts | `proofs/red_team/red_team_report.json` |
+| package/runtime boundary | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
+| IMC integration boundary | `proofs/imc_audit/imc_architecture_audit.json` |
 
 <p>
   <img src=".github/assets/readme/section-bars/lane-status-snapshot.svg" alt="LANE STATUS SNAPSHOT" width="100%">
@@ -81,9 +81,9 @@ Canonical authority stack:
 - Historical proof bundles remain lineage only. They do not override the March
   21 blocker-state evidence.
 - No IMC runtime import is introduced by this repo.
-- The current public PyPI package is `zpe-motion-kernel 0.1.0`, but the repo's
-  March 21 blocker-state docs are the current authority surface for engineering
-  status.
+- The current installable package artifact is `zpe-motion-kernel 0.1.0`, but
+  the repo's March 21 blocker-state docs remain the authority surface for
+  engineering status.
 
 Use these files together:
 

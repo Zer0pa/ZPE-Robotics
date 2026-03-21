@@ -1,7 +1,7 @@
 # Technical Release Surface
 
 Date: 2026-03-21
-Repo: /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics
+Repo: `ZPE-Robotics` current checkout
 
 ## Classification
 
@@ -41,8 +41,7 @@ Combined repo-local engineering surface when needed:
 
 ## Workflow Truth
 
-- Trusted publishing remains OIDC-based in
-  `/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/.github/workflows/publish.yml`
+- Trusted publishing remains OIDC-based in `.github/workflows/publish.yml`
 - Workflow surfaces that use `uv` now sync against the declared `dev` extra
   with lock enforcement:
   - `uv sync --frozen --extra dev`
@@ -51,6 +50,6 @@ Combined repo-local engineering surface when needed:
 ## Verification Anchors
 
 - Clean-clone source install:
-  `/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/proofs/artifacts/operations/20260321T203557Z_tech_alignment_clean_clone_result.json`
+  `proofs/artifacts/operations/20260321T203557Z_tech_alignment_clean_clone_result.json`
 - Verification summary:
-  `/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/proofs/artifacts/operations/20260321T203557Z_technical_alignment_verification.md`
+  `proofs/artifacts/operations/20260321T203557Z_technical_alignment_verification.md`

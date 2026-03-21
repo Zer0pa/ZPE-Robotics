@@ -11,11 +11,11 @@
 This document defines the claim, evidence, and release-language boundary for
 the ZPE-Robotics workstream repo.
 
-Canonical anchors:
-
-- Repository: `https://github.com/Zer0pa/ZPE-Robotics.git`
-- Package: `zpe-motion-kernel`
-- Contact: `architects@zer0pa.ai`
+| Canonical anchor | Value |
+|---|---|
+| Repository | `https://github.com/Zer0pa/ZPE-Robotics.git` |
+| Package | `zpe-motion-kernel` |
+| Contact | `architects@zer0pa.ai` |
 
 <p>
   <img src=".github/assets/readme/section-bars/evidence-and-claims.svg" alt="EVIDENCE AND CLAIMS" width="100%">
@@ -47,12 +47,10 @@ Canonical anchors:
   <img src=".github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
 </p>
 
-| Token | Meaning in this repo |
-|---|---|
-| `current truth` | backed by the current authority files |
-| `supporting` | useful context that does not override the authority files |
-| `historical` | preserved lineage only |
-| `operator-only` | requires credentials, payment, UI access, or other outside control |
+- `current truth`: backed by the current authority files
+- `supporting`: useful context that does not override the authority files
+- `historical`: preserved lineage only
+- `operator-only`: requires credentials, payment, UI access, or other outside control
 
 <p>
   <img src=".github/assets/readme/section-bars/escalation-path.svg" alt="ESCALATION PATH" width="100%">

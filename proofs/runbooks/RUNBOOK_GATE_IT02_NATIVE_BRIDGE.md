@@ -16,14 +16,14 @@ Exercise the first MCAP-aligned bridge surface and produce explicit runtime evid
    `trajectory = generate_joint_trajectory(num_frames=4096, num_joints=6, seed=20260317)`
    `records = make_rosbag_fixture(trajectory, seed=20260318)`
    `result = evaluate_bridge_roundtrip(records, ZPBotCodec(keep_coeffs=8))`
-   `write_json(Path("proofs/reruns/robotics_phase2_local_2026-03-17/mcap_bridge_roundtrip.json"), result.__dict__)`
+   `write_json(Path("proofs/reruns/it02_native_bridge_current/mcap_bridge_roundtrip.json"), result.__dict__)`
    `PY`
-3. `python scripts/ros2_bridge_probe.py --output proofs/reruns/robotics_phase2_local_2026-03-17/ros2_bridge_probe.json`
+3. `python scripts/ros2_bridge_probe.py --output proofs/reruns/it02_native_bridge_current/ros2_bridge_probe.json`
 
 ## Expected Outputs
 
-- `proofs/reruns/robotics_phase2_local_2026-03-17/mcap_bridge_roundtrip.json`
-- `proofs/reruns/robotics_phase2_local_2026-03-17/ros2_bridge_probe.json`
+- `proofs/reruns/it02_native_bridge_current/mcap_bridge_roundtrip.json`
+- `proofs/reruns/it02_native_bridge_current/ros2_bridge_probe.json`
 - passing `tests/test_rosbag_adapter.py`
 - passing `tests/test_mcap_bridge.py`
 

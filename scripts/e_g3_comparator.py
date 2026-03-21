@@ -27,7 +27,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output",
         type=Path,
-        default=ROOT / "proofs" / "reruns" / "e_g3_closure_2026-03-17" / "e_g3_comparator_result.json",
+        default=ROOT / "proofs" / "reruns" / "e_g3_comparator_current" / "e_g3_comparator_result.json",
     )
     parser.add_argument(
         "--workflow-run-id",

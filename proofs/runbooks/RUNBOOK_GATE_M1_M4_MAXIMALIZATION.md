@@ -10,11 +10,12 @@ Execute Appendix D maximalization gates with Popper-first falsification and no p
 4. M4: VLA token quality validation on real-task corpora attempts
 
 ## Commands
-1. `python scripts/run_wave1.py --output-root proofs/reruns/robotics_wave1_local --seed 20260220 --determinism-runs 5 --max-wave`
-2. `python scripts/validate_net_new.py --artifacts proofs/reruns/robotics_wave1_local`
-3. `python scripts/net_new_ingest.py --output-root proofs/reruns/robotics_wave1_local --seed 20260220 --sample-size 128`
-4. `/opt/homebrew/bin/python3.11 -m venv .venv_mujoco_arm64 && ./.venv_mujoco_arm64/bin/python -m pip install mujoco==3.5.0 --only-binary=:all:`
-5. `PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin /opt/homebrew/bin/colima start --cpu 4 --memory 8 --disk 60`
+1. `RUN_ROOT="proofs/reruns/robotics_wave1_$(date -u +%Y%m%dT%H%M%SZ)"`
+2. `python scripts/run_wave1.py --output-root "$RUN_ROOT" --seed 20260220 --determinism-runs 5 --max-wave`
+3. `python scripts/validate_net_new.py --artifacts "$RUN_ROOT"`
+4. `python scripts/net_new_ingest.py --output-root "$RUN_ROOT" --seed 20260220 --sample-size 128`
+5. `/opt/homebrew/bin/python3.11 -m venv .venv_mujoco_arm64 && ./.venv_mujoco_arm64/bin/python -m pip install mujoco==3.5.0 --only-binary=:all:`
+6. `PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin /opt/homebrew/bin/colima start --cpu 4 --memory 8 --disk 60`
 
 ## Expected Outputs
 - `max_resource_validation_log.md`
