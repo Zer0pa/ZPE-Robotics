@@ -29,7 +29,7 @@ jobs:
         uses: astral-sh/setup-uv@v7
 
       - name: Sync development environment
-        run: uv sync --dev
+        run: uv sync --frozen --extra dev
 
       - name: Run parity lane
         run: |
@@ -72,7 +72,7 @@ jobs:
             python:3.11-slim \
             sh -lc '
               python -m pip install --upgrade pip uv
-              uv sync --dev
+              uv sync --frozen --extra dev
               uv run python scripts/it04_parity_probe.py \
                 --workflow-run-id "${GITHUB_RUN_ID}" \
                 --platform-label "arm64-qemu" \

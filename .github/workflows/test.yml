@@ -29,8 +29,11 @@ jobs:
         run: python -m ruff check src tests
 
   pytest_x86:
-    name: pytest x86
+    name: pytest x86 (py${{ matrix.python-version }})
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
     permissions:
       contents: read
     steps:
@@ -40,7 +43,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.11"
+          python-version: ${{ matrix.python-version }}
 
       - name: Install MCAP CLI
         run: |

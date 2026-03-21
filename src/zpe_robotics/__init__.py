@@ -1,6 +1,31 @@
-"""ZPE Robotics Wave-1 package."""
+"""zpe-motion-kernel package surface."""
+
+from importlib.metadata import PackageNotFoundError, version as distribution_version
+from pathlib import Path
+import tomllib
 
 from .codec import ZPBotCodec
 from .release_candidate import REFERENCE_ROUNDTRIP_SHA256
 
-__all__ = ["REFERENCE_ROUNDTRIP_SHA256", "ZPBotCodec"]
+
+def _pyproject_version() -> str:
+    pyproject_path = Path(__file__).resolve().parents[2] / "pyproject.toml"
+    if not pyproject_path.exists():
+        return "0.0.0+unknown"
+    with pyproject_path.open("rb") as handle:
+        payload = tomllib.load(handle)
+    project = payload.get("project", {})
+    version = project.get("version")
+    return str(version) if version else "0.0.0+unknown"
+
+
+def _resolve_version() -> str:
+    try:
+        return distribution_version("zpe-motion-kernel")
+    except PackageNotFoundError:
+        return _pyproject_version()
+
+
+__version__ = _resolve_version()
+
+__all__ = ["REFERENCE_ROUNDTRIP_SHA256", "ZPBotCodec", "__version__"]

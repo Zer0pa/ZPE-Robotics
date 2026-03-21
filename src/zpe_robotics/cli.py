@@ -10,6 +10,7 @@ from pathlib import Path
 
 import numpy as np
 
+from . import __version__
 from .audit_bundle import generate_audit_bundle
 from .anomaly import AnomalyDetector
 from .constants import AUTHORITY_SURFACE, AUTHORITY_WIRE_COMPATIBILITY
@@ -23,7 +24,8 @@ from .wire import describe_packet, parse_packet_header
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="zpe", description="ZPE motion-kernel release-candidate CLI")
+    parser = argparse.ArgumentParser(prog="zpe", description="zpe-motion-kernel CLI")
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     encode_parser = subparsers.add_parser("encode", help="encode a single-record deterministic bag into a .zpbot packet")

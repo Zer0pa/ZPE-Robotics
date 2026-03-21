@@ -126,6 +126,13 @@ def main() -> int:
             failure = summarize_failure("pip_install_pytest", result)
             raise RuntimeError(failure)
 
+        result = run_command([str(zpe_bin), "--version"], cwd=repo_root)
+        attempt_log.append({"step": "zpe_version", **result})
+        if result["returncode"] != 0:
+            failure = summarize_failure("zpe_version", result)
+            raise RuntimeError(failure)
+        cli_details["version"] = str(result["stdout"]).strip()
+
         bag_path = work_dir / "arm_fixture.bag"
         packet_path = work_dir / "arm_fixture.zpbot"
         replay_path = work_dir / "arm_fixture_replay.bag"

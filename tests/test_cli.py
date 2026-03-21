@@ -3,6 +3,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import pytest
+
 from zpe_robotics.anomaly import inject_faults
 from zpe_robotics.cli import main
 from zpe_robotics.fixtures import generate_joint_trajectory
@@ -10,6 +12,7 @@ from zpe_robotics.lerobot_codec import build_synthetic_episode, dump_episode_jso
 from zpe_robotics.primitives import generate_primitive_corpus
 from zpe_robotics.release_candidate import build_single_packet_composition, default_codec
 from zpe_robotics.rosbag_adapter import decode_records, encode_records
+from zpe_robotics import __version__
 
 
 def test_cli_encode_verify_decode_and_info(tmp_path: Path) -> None:
@@ -99,3 +102,11 @@ def test_cli_generates_comm03_audit_bundle(tmp_path: Path, capsys) -> None:
     assert payload["status"] == "PASS"
     assert (output_dir / "comm03_provenance_manifest.json").exists()
     assert (output_dir / "comm03_corruption_matrix.json").exists()
+
+
+def test_cli_reports_package_version(capsys) -> None:
+    with pytest.raises(SystemExit) as excinfo:
+        main(["--version"])
+
+    assert excinfo.value.code == 0
+    assert capsys.readouterr().out.strip() == f"zpe {__version__}"

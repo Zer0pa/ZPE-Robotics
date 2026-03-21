@@ -53,7 +53,7 @@ def main() -> int:
             attempts,
             timeout=1800,
         )
-        _run_checked(["uv", "sync", "--dev", "--extra", "dev"], attempts, timeout=1800)
+        _run_checked(["uv", "sync", "--frozen", "--extra", "dev"], attempts, timeout=1800)
         _run_checked(["uv", "run", "pytest", "tests/test_codec.py", "tests/test_mcap_bridge.py", "-q"], attempts, timeout=1800)
 
         roundtrip_sha256, replay_sha256, bit_consistent = _compute_roundtrip(attempts)
