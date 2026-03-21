@@ -51,9 +51,9 @@ jobs:
           if gh release view "${RELEASE_TAG}" >/dev/null 2>&1; then
             gh release edit "${RELEASE_TAG}" \
               --title "${RELEASE_TAG}" \
-              --notes-file RELEASE_CANDIDATE.md
+              --notes-file docs/RELEASE_CANDIDATE.md
           else
             gh release create "${RELEASE_TAG}" \
               --title "${RELEASE_TAG}" \
-              --notes-file RELEASE_CANDIDATE.md
+              --notes-file docs/RELEASE_CANDIDATE.md
           fi

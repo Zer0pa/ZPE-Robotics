@@ -1,19 +1,19 @@
 <p>
-  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
 </p>
 
 # OPERATOR_RUNBOOK
 
 <p>
-  <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
+  <img src="../.github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
 This file lists available CLI commands. Command availability does not imply
-that engineering blockers are closed. Use `proofs/ENGINEERING_BLOCKERS.md` for
+that engineering blockers are closed. Use `../proofs/ENGINEERING_BLOCKERS.md` for
 the current authority surface.
 
 <p>
-  <img src=".github/assets/readme/section-bars/quick-start.svg" alt="QUICK START" width="100%">
+  <img src="../.github/assets/readme/section-bars/quick-start.svg" alt="QUICK START" width="100%">
 </p>
 
 | Need | Command |

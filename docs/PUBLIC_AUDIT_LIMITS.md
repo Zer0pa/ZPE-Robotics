@@ -1,11 +1,11 @@
 <p>
-  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
 </p>
 
 # Public Audit Limits
 
 <p>
-  <img src=".github/assets/readme/section-bars/scope.svg" alt="SCOPE" width="100%">
+  <img src="../.github/assets/readme/section-bars/scope.svg" alt="SCOPE" width="100%">
 </p>
 
 This repo is a private staging repo with a public package acquisition surface.
@@ -20,7 +20,7 @@ What this repo can honestly establish today:
 - preserved historical proof lineage under `proofs/artifacts/historical/`
 
 <p>
-  <img src=".github/assets/readme/section-bars/evidence-and-claims.svg" alt="EVIDENCE AND CLAIMS" width="100%">
+  <img src="../.github/assets/readme/section-bars/evidence-and-claims.svg" alt="EVIDENCE AND CLAIMS" width="100%">
 </p>
 
 | Limit | Current state | Why it matters |
@@ -34,7 +34,7 @@ What this repo can honestly establish today:
 | Public release | not authorized | the repo remains private staging only |
 
 <p>
-  <img src=".github/assets/readme/section-bars/out-of-scope.svg" alt="OUT OF SCOPE" width="100%">
+  <img src="../.github/assets/readme/section-bars/out-of-scope.svg" alt="OUT OF SCOPE" width="100%">
 </p>
 
 This repo cannot honestly establish today:
@@ -47,14 +47,14 @@ This repo cannot honestly establish today:
 - independent third-party reproduction
 
 <p>
-  <img src=".github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
+  <img src="../.github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
 </p>
 
 Use these files together:
 
-- `README.md`
+- `../README.md`
 - `AUDITOR_PLAYBOOK.md`
-- `proofs/ENGINEERING_BLOCKERS.md`
-- `proofs/enterprise_benchmark/GATE_VERDICTS.json`
-- `proofs/red_team/red_team_report.json`
-- `proofs/artifacts/historical/README.md`
+- `../proofs/ENGINEERING_BLOCKERS.md`
+- `../proofs/enterprise_benchmark/GATE_VERDICTS.json`
+- `../proofs/red_team/red_team_report.json`
+- `../proofs/artifacts/historical/README.md`

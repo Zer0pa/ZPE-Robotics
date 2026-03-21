@@ -5,7 +5,7 @@
     4096,
     6
   ],
-  "generation_timestamp": "2026-03-21T22:52:22.786952+00:00",
+  "generation_timestamp": "2026-03-21T23:27:00.246700+00:00",
   "host_platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
   "packet_info": {
     "authority_surface": "zpbot-v2",
@@ -25,7 +25,7 @@
   "source_paths": [
     "proofs/release_candidate/canonical_release_packet.zpbot",
     "zpe-robotics/docs/ZPBOT_V2_AUTHORITY_SURFACE.md",
-    "zpe-robotics/RELEASE_CANDIDATE.md",
+    "zpe-robotics/docs/RELEASE_CANDIDATE.md",
     "zpe-robotics/proofs/red_team/red_team_report.json"
   ],
   "status": "PASS"

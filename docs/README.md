@@ -18,10 +18,10 @@ that answers your question.
 | Audience | Read first | Why |
 |---|---|---|
 | any reader | `../README.md` | root identity, current truth, and install surface |
-| auditor | `../AUDITOR_PLAYBOOK.md` | shortest honest verification path |
+| auditor | `AUDITOR_PLAYBOOK.md` | shortest honest verification path |
 | release owner | `../RELEASING.md` | release gate and publishing boundary |
 | contributor | `../CONTRIBUTING.md` | setup, checks, and scope discipline |
-| operator | `../OPERATOR_RUNBOOK.md` | CLI command surface |
+| operator | `OPERATOR_RUNBOOK.md` | CLI command surface |
 | support / triage | `SUPPORT.md` | support routing and escalation |
 
 Supporting docs in this directory:
@@ -29,9 +29,13 @@ Supporting docs in this directory:
 | Document | Purpose |
 |---|---|
 | `ARCHITECTURE.md` | runtime, proof, and contract map for the standalone package |
+| `AUDITOR_PLAYBOOK.md` | shortest honest verification route anchored to the current proof surface |
 | `FAQ.md` | short answers about blockers, release state, and acquisition |
 | `LEGAL_BOUNDARIES.md` | license, visibility, and claim-boundary notes |
 | `DOC_REGISTRY.md` | canonical registry for the repo documentation surface |
+| `OPERATOR_RUNBOOK.md` | CLI command surface and operator lookup |
+| `PUBLIC_AUDIT_LIMITS.md` | honesty boundary for what the repo can and cannot establish |
+| `RELEASE_CANDIDATE.md` | March 18 release-candidate note carried as non-governing release context |
 | `family/ROBOTICS_RELEASE_LINKAGE.md` | what this repo inherits from IMC docs discipline and what it does not |
 | `ZPBOT_V2_AUTHORITY_SURFACE.md` | packet-contract reference surface |
 

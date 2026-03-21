@@ -74,5 +74,5 @@ bounded because the corpus run used `136` episodes at `10 Hz`, below the
 If your question is not answered here:
 
 - support routing: `SUPPORT.md`
-- audit route: `../AUDITOR_PLAYBOOK.md`
+- audit route: `AUDITOR_PLAYBOOK.md`
 - release boundary: `../RELEASING.md`

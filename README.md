@@ -93,7 +93,7 @@ Use these files together:
 | Benchmark verdicts | `proofs/enterprise_benchmark/GATE_VERDICTS.json` |
 | Adversarial findings | `proofs/red_team/red_team_report.json` |
 | Package/runtime boundary | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
-| Release-candidate note | `RELEASE_CANDIDATE.md` |
+| Release-candidate note | `docs/RELEASE_CANDIDATE.md` |
 | Historical lineage | `proofs/artifacts/historical/README.md` |
 
 <p>
@@ -122,7 +122,8 @@ python -m pytest tests -q
 python -m build
 ```
 
-If you need the shortest honest verification route, use `AUDITOR_PLAYBOOK.md`.
+If you need the shortest honest verification route, use
+`docs/AUDITOR_PLAYBOOK.md`.
 If you need the release workflow boundary, use `RELEASING.md`.
 
 <p>
@@ -136,4 +137,4 @@ If you need the release workflow boundary, use `RELEASING.md`.
 | Governance and claim policy | `GOVERNANCE.md` |
 | Support routing | `docs/SUPPORT.md` |
 | Docs index | `docs/README.md` |
-| Operator commands | `OPERATOR_RUNBOOK.md` |
+| Operator commands | `docs/OPERATOR_RUNBOOK.md` |
