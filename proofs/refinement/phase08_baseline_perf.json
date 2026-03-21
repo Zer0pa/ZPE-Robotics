@@ -1,0 +1,95 @@
+{
+  "benchmarks": {
+    "build_provenance_manifest": {
+      "iterations": 20,
+      "max_ms": 84.73969,
+      "mean_ms": 12.781123,
+      "median_ms": 7.520907,
+      "min_ms": 5.644891,
+      "p95_ms": 18.763735
+    },
+    "decode_packet": {
+      "iterations": 200,
+      "max_ms": 0.2428,
+      "mean_ms": 0.087767,
+      "median_ms": 0.08609,
+      "min_ms": 0.084208,
+      "p95_ms": 0.09295
+    },
+    "describe_packet": {
+      "iterations": 200,
+      "max_ms": 0.026129,
+      "mean_ms": 0.002495,
+      "median_ms": 0.002259,
+      "min_ms": 0.00214,
+      "p95_ms": 0.002789
+    },
+    "encode_packet": {
+      "iterations": 200,
+      "max_ms": 0.204778,
+      "mean_ms": 0.08708,
+      "median_ms": 0.08544,
+      "min_ms": 0.084369,
+      "p95_ms": 0.093739
+    },
+    "generate_audit_bundle": {
+      "iterations": 20,
+      "max_ms": 20.283327,
+      "mean_ms": 12.869568,
+      "median_ms": 10.83048,
+      "min_ms": 9.563321,
+      "p95_ms": 19.519891
+    }
+  },
+  "decoded_shape": [
+    4096,
+    6
+  ],
+  "environment": {
+    "machine": "x86_64",
+    "platform": "Linux-6.8.0-84-generic-x86_64-with-glibc2.35",
+    "python": "3.11.10 (main, Sep  7 2024, 18:35:41) [GCC 11.4.0]"
+  },
+  "packet_bytes": 413,
+  "packet_info": {
+    "authority_surface": "zpbot-v2",
+    "compatibility_mode": "wire-v1",
+    "frames": 4096,
+    "header_bytes": 18,
+    "joints": 6,
+    "keep_coeffs": 8,
+    "payload_bytes": 395,
+    "payload_crc32": 1856721606,
+    "wire_version": 1
+  },
+  "packet_path": "/workspace/zpe-robotics-phase8/proofs/release_candidate/canonical_release_packet.zpbot",
+  "phase": "08",
+  "ranked_by_median_ms": [
+    {
+      "median_ms": 10.83048,
+      "name": "generate_audit_bundle",
+      "p95_ms": 19.519891
+    },
+    {
+      "median_ms": 7.520907,
+      "name": "build_provenance_manifest",
+      "p95_ms": 18.763735
+    },
+    {
+      "median_ms": 0.08609,
+      "name": "decode_packet",
+      "p95_ms": 0.09295
+    },
+    {
+      "median_ms": 0.08544,
+      "name": "encode_packet",
+      "p95_ms": 0.093739
+    },
+    {
+      "median_ms": 0.002259,
+      "name": "describe_packet",
+      "p95_ms": 0.002789
+    }
+  ],
+  "status": "PASS"
+}

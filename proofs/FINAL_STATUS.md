@@ -15,7 +15,7 @@
 | Private remote staging | completed in Phase 3 and Phase 4 |
 | Cold-clone verification | closed on the current release-candidate lane |
 | Public release decision | deferred follow-on work |
-| Performance augmentation | deferred to Phase 4.5 |
+| Performance augmentation | Phase 8 baseline complete; no immediate Rust move justified for the current wedge |
 
 ## Reading Order
 
