@@ -15,7 +15,13 @@ release boundary.
   <img src="../.github/assets/readme/section-bars/questions.svg" alt="QUESTIONS" width="100%">
 </p>
 
-## Is this repo public-release ready?
+## Is this repo public?
+
+Yes. The GitHub repo is public, and the package acquisition surface is public
+via `pip install zpe-motion-kernel`. That does not mean engineering is
+complete or release-ready.
+
+## Is this repo release-ready?
 
 No. Engineering remains incomplete. Benchmark gate `B3` fails, red-team attacks
 `3` and `5` fail, attack `4` only partially withstands, and the robotics
@@ -43,6 +49,24 @@ The governing blockers are:
 Yes. The current package acquisition surface is `pip install zpe-motion-kernel`.
 That does not change blocker status.
 
+<p>
+  <img src="../.github/assets/readme/section-bars/setup-and-verification.svg" alt="SETUP AND VERIFICATION" width="100%">
+</p>
+
+## How do I verify the current truth quickly?
+
+Use `AUDITOR_PLAYBOOK.md` for the shortest honest replay path. The current
+proof anchors are:
+
+- `../proofs/ENGINEERING_BLOCKERS.md`
+- `../proofs/enterprise_benchmark/GATE_VERDICTS.json`
+- `../proofs/red_team/red_team_report.json`
+- `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`
+
+<p>
+  <img src="../.github/assets/readme/section-bars/evidence-and-claims.svg" alt="EVIDENCE AND CLAIMS" width="100%">
+</p>
+
 ## Why can package metadata look greener than these docs?
 
 The `0.1.0` package description on PyPI reflects the March 18 release metadata.
@@ -66,6 +90,15 @@ The current real-dataset benchmark used `lerobot/columbia_cairlab_pusht_real`
 and reported `187.1345x` compression. That result is real, but it is still
 bounded because the corpus run used `136` episodes at `10 Hz`, below the
 `200` episode / `50 Hz` target.
+
+<p>
+  <img src="../.github/assets/readme/section-bars/license-and-ip.svg" alt="LICENSE AND IP" width="100%">
+</p>
+
+## Which legal text is authoritative?
+
+`../LICENSE` is the legal source of truth. `LEGAL_BOUNDARIES.md` and the
+support docs are routing summaries only.
 
 <p>
   <img src="../.github/assets/readme/section-bars/faq-and-support.svg" alt="FAQ AND SUPPORT" width="100%">

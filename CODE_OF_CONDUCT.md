@@ -15,7 +15,7 @@ This repo expects direct, respectful, evidence-based collaboration.
 - discuss code, proofs, and evidence without personal attacks
 - report failures honestly
 - keep claims proportional to evidence
-- respect private staging boundaries
+- respect visibility, disclosure, and evidence boundaries
 
 ## Unacceptable Behavior
 

@@ -11,6 +11,8 @@
 This is the shortest verification path anchored to current authority.
 Engineering is not complete. Local green slices do not override the March 21
 blocker-state evidence.
+The repo is public and the package is published, but those facts are
+non-sovereign versus the blocker files below.
 
 <p>
   <img src="../.github/assets/readme/section-bars/quick-start.svg" alt="QUICK START" width="100%">
@@ -19,11 +21,12 @@ blocker-state evidence.
 | Surface | Current truth |
 |---|---|
 | Repo scope | standalone Python package wedge |
+| Repo visibility | public GitHub repo and public package surface |
 | Current authority | `../proofs/ENGINEERING_BLOCKERS.md` |
 | Benchmark gates | `B1`, `B2`, `B4`, `B5` pass; `B3` fails |
 | Red-team | attacks `3` and `5` fail; attack `4` partially withstands |
 | Runtime boundary | no robotics `.zpbot` Rust ABI is wired into this repo |
-| Public release | not authorized |
+| Release-ready verdict | not authorized |
 
 <p>
   <img src="../.github/assets/readme/section-bars/verification.svg" alt="VERIFICATION" width="100%">

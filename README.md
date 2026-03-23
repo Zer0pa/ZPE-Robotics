@@ -12,10 +12,11 @@
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-ZPE-Robotics is the private repository for the `zpe-motion-kernel` package.
-The current release surface is a standalone Python package for frozen
-`wire-v1` motion transport, replay, search, and audit workflows. It is not a
-full robotics-platform release.
+ZPE-Robotics is the public repository for the `zpe-motion-kernel` package.
+The current public artifact is a standalone Python package for frozen
+`wire-v1` motion transport, replay, search, and audit workflows. The repo and
+package are public, but the governing engineering surface remains blocker-state
+and is not a full robotics-platform release.
 
 <p>
   <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">
@@ -28,7 +29,7 @@ full robotics-platform release.
 | Acquisition surface | `pip install zpe-motion-kernel` |
 | License | `LicenseRef-Zer0pa-SAL-6.0` |
 | Contact | `architects@zer0pa.ai` |
-| Release state | private staging only |
+| Release state | public repo and published package; engineering surface remains blocker-governed |
 | Engineering | not complete |
 | Current authority | `proofs/ENGINEERING_BLOCKERS.md` |
 
@@ -53,7 +54,7 @@ full robotics-platform release.
 | Searchability | supported without decode on the benchmark surface |
 | Rust integration | no robotics `.zpbot` Rust ABI is wired into this repo |
 | Release workflow | GitHub OIDC workflow is aligned; PyPI UI registration is still operator-only |
-| Public release | not authorized |
+| Release-ready verdict | not authorized; public visibility does not erase blockers |
 
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3-2.gif" alt="ZPE-Robotics Masthead Detail 3.2" width="100%">
@@ -94,6 +95,8 @@ Use these files together:
 | Adversarial findings | `proofs/red_team/red_team_report.json` |
 | Package/runtime boundary | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
 | Release-candidate note | `docs/RELEASE_CANDIDATE.md` |
+| Citation record | `CITATION.cff` |
+| Docs registry | `docs/DOC_REGISTRY.md` |
 | Historical lineage | `proofs/artifacts/historical/README.md` |
 
 <p>

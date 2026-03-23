@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import re
 import tomllib
 
 
@@ -10,6 +11,10 @@ ROOT = Path(__file__).resolve().parents[1]
 def _load_pyproject() -> dict[str, object]:
     with (ROOT / "pyproject.toml").open("rb") as handle:
         return tomllib.load(handle)
+
+
+def _read_text(relative_path: str) -> str:
+    return (ROOT / relative_path).read_text(encoding="utf-8")
 
 
 def test_sidecar_dependencies_are_optional() -> None:
@@ -64,3 +69,74 @@ def test_test_workflow_covers_python312() -> None:
 def test_clean_clone_verify_checks_cli_version() -> None:
     text = (ROOT / "scripts/clean_clone_verify.py").read_text(encoding="utf-8")
     assert '[str(zpe_bin), "--version"]' in text
+
+
+def test_license_uses_five_year_change_date() -> None:
+    text = _read_text("LICENSE")
+    assert "five (5) years after the date of first public release" in text
+
+
+def test_root_readme_keeps_expected_gif_surface() -> None:
+    text = _read_text("README.md")
+    gif_refs = re.findall(r'\.github/assets/readme/[^"]+\.gif', text)
+    assert gif_refs == [
+        ".github/assets/readme/zpe-masthead.gif",
+        ".github/assets/readme/zpe-masthead-option-3-2.gif",
+        ".github/assets/readme/zpe-masthead-option-3-3.gif",
+    ]
+
+
+def test_docs_surface_uses_shared_masthead_only() -> None:
+    doc_paths = [
+        "CHANGELOG.md",
+        "CODE_OF_CONDUCT.md",
+        "CONTRIBUTING.md",
+        "GOVERNANCE.md",
+        "RELEASING.md",
+        "SECURITY.md",
+        "docs/README.md",
+        "docs/ARCHITECTURE.md",
+        "docs/AUDITOR_PLAYBOOK.md",
+        "docs/DOC_REGISTRY.md",
+        "docs/FAQ.md",
+        "docs/LEGAL_BOUNDARIES.md",
+        "docs/OPERATOR_RUNBOOK.md",
+        "docs/PUBLIC_AUDIT_LIMITS.md",
+        "docs/RELEASE_CANDIDATE.md",
+        "docs/SUPPORT.md",
+        "docs/ZPBOT_V2_AUTHORITY_SURFACE.md",
+        "docs/family/ROBOTICS_RELEASE_LINKAGE.md",
+    ]
+
+    for relative_path in doc_paths:
+        text = _read_text(relative_path)
+        if relative_path.startswith("docs/family/"):
+            expected = "../../.github/assets/readme/zpe-masthead.gif"
+        elif relative_path.startswith("docs/"):
+            expected = "../.github/assets/readme/zpe-masthead.gif"
+        else:
+            expected = ".github/assets/readme/zpe-masthead.gif"
+
+        gif_lines = [line.strip() for line in text.splitlines() if ".gif" in line]
+        assert len(gif_lines) == 1, relative_path
+        assert expected in gif_lines[0], relative_path
+        assert expected in "\n".join(text.splitlines()[:5]), relative_path
+
+
+def test_frontdoor_docs_do_not_describe_repo_as_private_staging() -> None:
+    doc_paths = [
+        "README.md",
+        "docs/AUDITOR_PLAYBOOK.md",
+        "docs/LEGAL_BOUNDARIES.md",
+        "docs/PUBLIC_AUDIT_LIMITS.md",
+    ]
+    banned_phrases = [
+        "private repository",
+        "private staging only",
+        "private github repo",
+    ]
+
+    for relative_path in doc_paths:
+        text = _read_text(relative_path).lower()
+        for phrase in banned_phrases:
+            assert phrase not in text, f"{relative_path} contains {phrase!r}"
