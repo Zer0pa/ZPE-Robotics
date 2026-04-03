@@ -8,17 +8,19 @@
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
 [![License](https://img.shields.io/badge/license-SAL%20v6.0-orange)](./LICENSE)
 
+SAL v6.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
+
 ---
 
 ## What This Is
 
-ZPE-Robotics is a motion transport and replay kernel for robotics telemetry — deterministic logging, compressed search, and audit-grade replay. Public package: `pip install zpe-motion-kernel`.
+ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compressed replay, and search-without-decode for robot joint streams. If you need audit-grade motion records that compress, replay identically, and remain searchable in the compressed form: this is that kernel.
 
-The strongest current evidence: **187× compression** on real robot data (lerobot/columbia_cairlab_pusht_real), search-without-decode on compressed motion streams, and adversarial red-team testing with attacks 1, 2, 6 fully withstood. The codec uses a frozen `wire-v1` transport format with searchability built into the compressed representation.
+**187× compression** on real robot data (`lerobot/columbia_cairlab_pusht_real`). Frozen `wire-v1` transport format. Search-without-decode on compressed motion streams. Adversarial red-team testing: attacks 1, 2, 6 fully withstood. Public package: `pip install zpe-motion-kernel`.
 
-The package is public and installable today. The engineering surface is not complete. B3 benchmark gate fails. Red-team attacks 3 and 5 fail. Bit-exact `.zpbot` round-trip replay is unproven. This is a real public package with active engineering blockers — not a finished robotics-platform release.
+The package is public and installable today. It is **not a finished robotics platform**. B3 benchmark gate fails. Red-team attacks 3 and 5 fail. Bit-exact `.zpbot` round-trip replay is unproven. Active engineering blockers remain.
 
-**Not claimed:** full release readiness, bit-exact replay on `.zpbot` round-trip, B3 gate pass, red-team resilience on attacks 3/5, or Rust ABI.
+**Not claimed:** full release readiness, bit-exact `.zpbot` round-trip replay, B3 gate pass, red-team resilience on attacks 3/5, or Rust ABI.
 
 | Anchor | Artifact |
 |---|---|
