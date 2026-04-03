@@ -8,6 +8,28 @@
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
 [![License](https://img.shields.io/badge/license-SAL%20v6.0-orange)](./LICENSE)
 
+SAL v6.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
+
+---
+
+## What This Is
+
+ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compressed replay, and search-without-decode for robot joint streams. If you need audit-grade motion records that compress, replay identically, and remain searchable in the compressed form: this is that kernel.
+
+**187× compression** on real robot data (`lerobot/columbia_cairlab_pusht_real`). Frozen `wire-v1` transport format. Search-without-decode on compressed motion streams. Adversarial red-team testing: attacks 1, 2, 6 fully withstood. Public package: `pip install zpe-motion-kernel`.
+
+The package is public and installable today. It is **not a finished robotics platform**. B3 benchmark gate fails. Red-team attacks 3 and 5 fail. Bit-exact `.zpbot` round-trip replay is unproven. Active engineering blockers remain.
+
+**Not claimed:** full release readiness, bit-exact `.zpbot` round-trip replay, B3 gate pass, red-team resilience on attacks 3/5, or Rust ABI.
+
+| Anchor | Artifact |
+|---|---|
+| Benchmark gate verdicts | [`GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) |
+| Red-team report | [`red_team_report.json`](proofs/red_team/red_team_report.json) |
+| Engineering blockers | [`ENGINEERING_BLOCKERS.md`](proofs/ENGINEERING_BLOCKERS.md) |
+
+---
+
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
