@@ -8,6 +8,62 @@
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
 [![License](https://img.shields.io/badge/license-SAL%20v6.0-orange)](./LICENSE)
 
+---
+
+## What This Is
+
+ZPE-Robotics is a deterministic motion transport and replay kernel for robotics telemetry, search, and audit workflows, available as `pip install zpe-motion-kernel`.
+
+## Commercial Wedge
+
+This is for **robotics infrastructure teams, simulation/replay teams, and OEM robotics telemetry teams** who need deterministic motion logging with searchable archives and auditable replay. The business value is 187× compression on real robot data, search-without-decode on compressed motion streams, and a red-team-tested adversarial surface — delivered as a public PyPI package today.
+
+## Technical Wedge
+
+The technical edge is a frozen `wire-v1` motion transport codec with searchability built into the compressed format. Current evidence: **187.1345× compression** on `lerobot/columbia_cairlab_pusht_real`, benchmark gates B1/B2/B4/B5 pass, search-without-decode verified on the benchmark surface. Red-team attacks 1, 2, 6 withstood; attack 4 partially withstood. Strict bit-exact replay on `.zpbot` round-trip is not yet proven.
+
+## Current Readiness
+
+**`PUBLIC_PACKAGE_BUT_NOT_RELEASE_READY`** — The package is installable from PyPI (`pip install zpe-motion-kernel`). The engineering surface remains blocker-governed: B3 gate fails, red-team attacks 3 and 5 fail, and bit-exact replay is unproven.
+
+## What Is Proved
+
+- 187.1345× compression ratio on real robot data (lerobot benchmark)
+- Benchmark gates B1, B2, B4, B5 pass
+- Search-without-decode works on the benchmark surface
+- Red-team attacks 1, 2, 6 fully withstood; attack 4 partially withstood
+- Public PyPI package installs and runs cleanly
+
+## What Is Not Being Claimed
+
+- Full release readiness — engineering blockers remain active
+- Bit-exact replay on `.zpbot` round-trip — not yet proven
+- B3 benchmark gate — currently fails
+- Red-team resilience on attacks 3, 5 — currently fail
+- Rust ABI for robotics — no `.zpbot` Rust ABI is wired into this repo
+
+## Ideal First Buyer
+
+Robotics infrastructure team or simulation/replay platform seeking deterministic motion transport, compressed search, and audit-grade telemetry.
+
+## Deployment Model
+
+Public Python package — `pip install zpe-motion-kernel`. CLI via `zpe --version`. Source-available under SAL v6.0.
+
+## Authority / Proof Anchors
+
+| Anchor | Artifact |
+|---|---|
+| Benchmark gate verdicts | [`proofs/enterprise_benchmark/GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) |
+| Red-team report | [`proofs/red_team/red_team_report.json`](proofs/red_team/red_team_report.json) |
+| Engineering blockers | [`proofs/ENGINEERING_BLOCKERS.md`](proofs/ENGINEERING_BLOCKERS.md) |
+
+## Role In The Zer0pa Family
+
+ZPE-Robotics is a product-candidate member of the Zer0pa deterministic encoding family. [ZPE-IMC](https://github.com/Zer0pa/ZPE-IMC) is the umbrella integration and dispatch layer; this repo is the domain-specific robotics motion-transport wedge. IMC integration boundary is documented, not runtime-coupled.
+
+---
+
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
