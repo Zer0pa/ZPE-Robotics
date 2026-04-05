@@ -2,7 +2,7 @@
 
 The GitHub workflow side is aligned for OIDC publishing. The remaining steps are on the PyPI web UI:
 
-1. Go to https://pypi.org/manage/project/zpe-motion-kernel/settings/publishing/
+1. Go to https://pypi.org/manage/project/zpe-robotics/settings/publishing/
 2. Click "Add a new publisher"
 3. Select "GitHub Actions"
 4. Fill in:

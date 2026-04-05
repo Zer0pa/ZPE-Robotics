@@ -9,7 +9,7 @@
 </p>
 
 This doc maps the runtime and proof surface for the current standalone
-`zpe-motion-kernel` package wedge.
+`zpe-robotics` package wedge.
 
 <p>
   <img src="../.github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
@@ -42,7 +42,7 @@ This doc maps the runtime and proof surface for the current standalone
 
 | Contract | Current truth | Authority |
 |---|---|---|
-| distribution surface | `zpe-motion-kernel` / `zpe_robotics` / `zpe` | `../pyproject.toml` |
+| distribution surface | `zpe-robotics` / `zpe_robotics` / `zpe-robotics` | `../pyproject.toml` |
 | packet-contract reference | frozen `zpbot-v2` / `wire-v1` surface | `ZPBOT_V2_AUTHORITY_SURFACE.md` |
 | runtime dependency boundary | runtime deps are `numpy` and `mcap`; extras remain optional | `../pyproject.toml`, `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
 | IMC boundary | No IMC runtime import is introduced by this repo | `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`, `../proofs/imc_audit/imc_architecture_audit.json` |

@@ -54,7 +54,7 @@ python -m pip install -e ".[dev,benchmark,telemetry,netnew]"
 ```bash
 python -m pytest tests -q
 python -m build
-zpe --version
+zpe-robotics --version
 ```
 
 4. Verify the packet and CLI surface:

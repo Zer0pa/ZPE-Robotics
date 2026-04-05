@@ -12,7 +12,7 @@ this repo has not proven.
 
 ## Working Truth
 
-- Public wedge: standalone Python package `zpe-motion-kernel`
+- Public wedge: standalone Python package `zpe-robotics`
 - Import package: `zpe_robotics`
 - CLI: `zpe`
 - Technical release surface: aligned for build/install/release verification

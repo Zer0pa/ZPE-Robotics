@@ -15,7 +15,7 @@ the legal source of truth for Zer0pa Source-Available License v6.0.
 |---|---|---|
 | license | Zer0pa Source-Available License v6.0; `../LICENSE` is the legal source of truth | support docs and README tables are summaries, not legal overrides |
 | source visibility | public GitHub repo | public visibility is not engineering completion or release readiness |
-| public acquisition | package acquisition exists via `pip install zpe-motion-kernel` | package availability does not erase blocker-state failures |
+| public acquisition | package acquisition exists via `pip install zpe-robotics` | package availability does not erase blocker-state failures |
 | claim boundary | engineering is not complete; `B3` fails and red-team attacks `3` and `5` fail | no `GO` verdict exists for a release-ready robotics surface |
 | runtime boundary | no IMC runtime import or robotics `.zpbot` Rust ABI is present today | current docs linkage to IMC is not runtime coupling |
 | proof boundary | historical bundles remain lineage only | historical bundles do not outrank current blocker files |

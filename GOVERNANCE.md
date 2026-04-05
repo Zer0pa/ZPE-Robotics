@@ -14,7 +14,7 @@ the ZPE-Robotics workstream repo.
 | Canonical anchor | Value |
 |---|---|
 | Repository | `https://github.com/Zer0pa/ZPE-Robotics.git` |
-| Package | `zpe-motion-kernel` |
+| Package | `zpe-robotics` |
 | Contact | `architects@zer0pa.ai` |
 
 <p>
@@ -38,7 +38,7 @@ the ZPE-Robotics workstream repo.
 |---|---|
 | Repo role | private workstream repo |
 | Public wedge | standalone Python package |
-| Distribution / import / CLI | `zpe-motion-kernel` / `zpe_robotics` / `zpe` |
+| Distribution / import / CLI | `zpe-robotics` / `zpe_robotics` / `zpe-robotics` |
 | Runtime coupling to `ZPE-IMC` | none |
 | Packet-contract reference | `docs/ZPBOT_V2_AUTHORITY_SURFACE.md` |
 | License identity | `LicenseRef-Zer0pa-SAL-6.0` |

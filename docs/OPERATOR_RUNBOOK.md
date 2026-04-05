@@ -18,7 +18,7 @@ the current authority surface.
 
 | Need | Command |
 |---|---|
-| install | `pip install zpe-motion-kernel` |
+| install | `pip install zpe-robotics` |
 | record a ROS2 bag with ZPE | `ros2 bag record -s zpe --all` |
 | compress an existing bag | `zpe encode input.bag output.zpbot` |
 | replay | `zpe decode output.zpbot replayed.bag` |

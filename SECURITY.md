@@ -8,7 +8,7 @@
   <img src=".github/assets/readme/section-bars/scope.svg" alt="SCOPE" width="100%">
 </p>
 
-This document covers security reporting for the `zpe-motion-kernel` package,
+This document covers security reporting for the `zpe-robotics` package,
 its declared dependencies, its workflows, and the committed proof corpus.
 
 What counts as a security issue here:

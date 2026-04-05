@@ -4,7 +4,7 @@
 
 # ZPE-Robotics
 
-[![PyPI](https://img.shields.io/pypi/v/zpe-motion-kernel)](https://pypi.org/project/zpe-motion-kernel/)
+[![PyPI](https://img.shields.io/pypi/v/zpe-robotics)](https://pypi.org/project/zpe-robotics/)
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
 [![License](https://img.shields.io/badge/license-SAL%20v6.0-orange)](./LICENSE)
 
@@ -16,7 +16,7 @@ SAL v6.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compressed replay, and search-without-decode for robot joint streams. If you need audit-grade motion records that compress, replay identically, and remain searchable in the compressed form: this is that kernel.
 
-**187× compression** on real robot data (`lerobot/columbia_cairlab_pusht_real`). Frozen `wire-v1` transport format. Search-without-decode on compressed motion streams. Adversarial red-team testing: attacks 1, 2, 6 fully withstood. Public package: `pip install zpe-motion-kernel`.
+**187× compression** on real robot data (`lerobot/columbia_cairlab_pusht_real`). Frozen `wire-v1` transport format. Search-without-decode on compressed motion streams. Adversarial red-team testing: attacks 1, 2, 6 fully withstood. Public package: `pip install zpe-robotics`.
 
 The package is public and installable today. It is **not a finished robotics platform**. B3 benchmark gate fails. Red-team attacks 3 and 5 fail. Bit-exact `.zpbot` round-trip replay is unproven. Active engineering blockers remain.
 
@@ -34,7 +34,7 @@ The package is public and installable today. It is **not a finished robotics pla
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-ZPE-Robotics is the public repository for the `zpe-motion-kernel` package.
+ZPE-Robotics is the public repository for the `zpe-robotics` package.
 The current public artifact is a standalone Python package for frozen
 `wire-v1` motion transport, replay, search, and audit workflows. The repo and
 package are public, but the governing engineering surface remains blocker-state
@@ -47,8 +47,8 @@ and is not a full robotics-platform release.
 | Surface | Current truth |
 |---|---|
 | Repository | `https://github.com/Zer0pa/ZPE-Robotics.git` |
-| Package / import / CLI | `zpe-motion-kernel` / `zpe_robotics` / `zpe` |
-| Acquisition surface | `pip install zpe-motion-kernel` |
+| Package / import / CLI | `zpe-robotics` / `zpe_robotics` / `zpe-robotics` |
+| Acquisition surface | `pip install zpe-robotics` |
 | License | `LicenseRef-Zer0pa-SAL-6.0` |
 | Contact | `architects@zer0pa.ai` |
 | Release state | public repo and published package; engineering surface remains blocker-governed |
@@ -104,7 +104,7 @@ and is not a full robotics-platform release.
 - Historical proof bundles remain lineage only. They do not override the March
   21 blocker-state evidence.
 - No IMC runtime import is introduced by this repo.
-- The current installable package artifact is `zpe-motion-kernel 0.1.0`, but
+- The current installable package artifact is `zpe-robotics 0.1.0`, but
   the repo's March 21 blocker-state docs remain the authority surface for
   engineering status.
 
@@ -132,8 +132,8 @@ Use these files together:
 Public package install:
 
 ```bash
-pip install zpe-motion-kernel
-zpe --version
+pip install zpe-robotics
+zpe-robotics --version
 ```
 
 Repo-local engineering surface:

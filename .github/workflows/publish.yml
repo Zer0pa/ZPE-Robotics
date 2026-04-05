@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/zpe-motion-kernel
+      url: https://pypi.org/p/zpe-robotics
     permissions:
       contents: write
       id-token: write

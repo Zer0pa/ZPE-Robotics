@@ -18,7 +18,7 @@ release boundary.
 ## Is this repo public?
 
 Yes. The GitHub repo is public, and the package acquisition surface is public
-via `pip install zpe-motion-kernel`. That does not mean engineering is
+via `pip install zpe-robotics`. That does not mean engineering is
 complete or release-ready.
 
 ## Is this repo release-ready?
@@ -46,7 +46,7 @@ The governing blockers are:
 
 ## Is the package available today?
 
-Yes. The current package acquisition surface is `pip install zpe-motion-kernel`.
+Yes. The current package acquisition surface is `pip install zpe-robotics`.
 That does not change blocker status.
 
 <p>

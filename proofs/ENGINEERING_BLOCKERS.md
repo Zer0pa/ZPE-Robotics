@@ -11,7 +11,7 @@ The decisive evidence is:
 
 - benchmark gates: `B1=PASS`, `B2=PASS`, `B3=FAIL`, `B4=PASS`, `B5=PASS`
 - red-team: attacks `1`, `2`, and `6` withstand; attack `4` partially withstands; attacks `3` and `5` fail; attack `7` remains open
-- IMC integration: `zpe-motion-kernel` still does not route `.zpbot` encode or decode through the current ZPE-IMC Rust surface
+- IMC integration: `zpe-robotics` still does not route `.zpbot` encode or decode through the current ZPE-IMC Rust surface
 
 ## Blocking Items
 
@@ -29,7 +29,7 @@ Current truth:
 What is needed to close it:
 
 - add or expose a real robotics encode/decode ABI in ZPE-IMC
-- route `zpe-motion-kernel` through that Rust path
+- route `zpe-robotics` through that Rust path
 - prove the routed path in tests and cross-platform CI
 
 ### 2. Benchmark Gate B3 Failed

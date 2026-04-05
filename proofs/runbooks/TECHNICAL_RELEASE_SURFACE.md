@@ -8,7 +8,7 @@ Repo: `ZPE-Robotics` current checkout
 This repo's truthful current public wedge is a standalone Python package:
 
 - Repo: `ZPE-Robotics`
-- Distribution: `zpe-motion-kernel`
+- Distribution: `zpe-robotics`
 - Import package: `zpe_robotics`
 - CLI: `zpe`
 
@@ -18,7 +18,7 @@ runtime dependency on `ZPE-IMC`.
 ## Supported Install Surfaces
 
 - Base user install:
-  - `pip install zpe-motion-kernel`
+  - `pip install zpe-robotics`
 - Repo-local development:
   - `pip install -e ".[dev]"`
 - Benchmark and dataset tooling:

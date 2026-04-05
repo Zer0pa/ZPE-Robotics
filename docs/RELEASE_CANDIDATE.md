@@ -9,7 +9,7 @@
 </p>
 
 This document records the March 18, 2026 release-candidate surface for
-`zpe-motion-kernel 0.1.0`. It is not the governing March 21 engineering
+`zpe-robotics 0.1.0`. It is not the governing March 21 engineering
 authority. Use `../proofs/ENGINEERING_BLOCKERS.md` for the current completion
 boundary.
 
@@ -19,7 +19,7 @@ boundary.
 
 | Surface | Release-candidate fact | Current caveat |
 |---|---|---|
-| Package | `zpe-motion-kernel 0.1.0` package artifact exists | current repo authority remains blocker-state, not release-candidate prose |
+| Package | `zpe-robotics 0.1.0` package artifact exists | current repo authority remains blocker-state, not release-candidate prose |
 | Synthetic fixture compression | `238.02421307506054x` | the real-data benchmark later recorded `187.1345x` |
 | CLI surface | `zpe` ships encode, decode, verify, info, search, anomaly, LeRobot, token export, and audit-bundle commands | availability does not imply all claims are fully closed |
 | Searchability | primitive search works without decode on the benchmark surface | `B3` still fails because strict bit-exact replay is not proven |

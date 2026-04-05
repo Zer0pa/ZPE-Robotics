@@ -27,7 +27,7 @@ Version references use the package version where applicable.
 
 ## 0.1.0 - 2026-03-18
 
-- published the first `zpe-motion-kernel` package artifact
+- published the first `zpe-robotics` package artifact
 - shipped the installable `zpe` CLI and frozen `wire-v1` motion-kernel wedge
 - committed the release-candidate benchmark, audit, and proof surface for the
   package release

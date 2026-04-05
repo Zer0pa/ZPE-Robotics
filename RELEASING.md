@@ -9,12 +9,12 @@
 </p>
 
 This document defines the release decision boundary for the
-`zpe-motion-kernel` workstream.
+`zpe-robotics` workstream.
 
 Canonical anchors:
 
 - Repository: `https://github.com/Zer0pa/ZPE-Robotics.git`
-- Package: `zpe-motion-kernel`
+- Package: `zpe-robotics`
 - Contact: `architects@zer0pa.ai`
 
 <p>

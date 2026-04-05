@@ -62,7 +62,7 @@ If you are in `ZPE-Robotics`:
 - do not accept a weaker Python-only shortcut unless it is actually the better
   engineering choice
 - treat the current release-candidate wedge as a repo-root Python package
-  (`zpe-motion-kernel`) with external ROS2/MoveIt2 and `mcap` probe paths, not
+  (`zpe-robotics`) with external ROS2/MoveIt2 and `mcap` probe paths, not
   a shipped native-helper repo
 - keep latent PyPI trusted-publishing surfaces from implying public release;
   publication is still a separate gate decision

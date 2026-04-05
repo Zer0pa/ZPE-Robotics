@@ -7,7 +7,7 @@ Scope: technical release-architecture alignment pass for the current public wedg
 ## Objective
 
 Align the repo's technical release surface with its truthful current architecture:
-the installable Python package `zpe-motion-kernel`, its CLI, its optional probe
+the installable Python package `zpe-robotics`, its CLI, its optional probe
 and telemetry extras, and its static release workflows.
 
 ## Plan
