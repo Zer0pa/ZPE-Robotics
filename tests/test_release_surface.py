@@ -68,6 +68,7 @@ def test_test_workflow_covers_python312() -> None:
 
 def test_clean_clone_verify_checks_cli_version() -> None:
     text = (ROOT / "scripts/clean_clone_verify.py").read_text(encoding="utf-8")
+    assert 'venv_dir / "bin" / "zpe-robotics"' in text
     assert '[str(zpe_bin), "--version"]' in text
 
 

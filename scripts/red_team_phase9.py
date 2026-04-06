@@ -295,7 +295,7 @@ def attack_7() -> dict[str, Any]:
         "argument": "Evidence remains first-party until an external party reproduces it.",
         "verdict": "OPEN",
         "required_external_reproduction": [
-            "pip install zpe-motion-kernel",
+            "pip install zpe-robotics",
             "pytest tests/ -x",
             "Compare against proofs/enterprise_benchmark/benchmark_result.json and proofs/red_team/red_team_report.json",
         ],
