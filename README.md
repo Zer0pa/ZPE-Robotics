@@ -183,3 +183,15 @@ for the rollup verdict and
 `proofs/artifacts/lerobot_expanded_benchmarks/dataset_manifest.json` for the
 full attempt ledger, including qualification misses that were preserved rather
 than averaged away.
+
+## Ecosystem Cross-Links
+
+ZPE-Robotics follows the portfolio release-hygiene pattern used by
+[ZPE-IMC](https://github.com/Zer0pa/ZPE-IMC), but it does not inherit IMC
+runtime claims, benchmark verdicts, or release readiness by association.
+
+| Need | Route |
+|---|---|
+| Robotics-to-IMC boundary | `docs/family/ROBOTICS_RELEASE_LINKAGE.md` |
+| Frozen proof lineage note | `proofs/README_LINEAGE_PATHS.md` |
+| Reference core repo | `https://github.com/Zer0pa/ZPE-IMC` |
