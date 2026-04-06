@@ -60,8 +60,8 @@ zpe-robotics --version
 4. Verify the packet and CLI surface:
 
 ```bash
-zpe verify ../proofs/release_candidate/canonical_release_packet.zpbot
-zpe info ../proofs/release_candidate/canonical_release_packet.zpbot
+zpe-robotics verify ../proofs/release_candidate/canonical_release_packet.zpbot
+zpe-robotics info ../proofs/release_candidate/canonical_release_packet.zpbot
 ```
 
 5. If you need a release-workflow check, compare:

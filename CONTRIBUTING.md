@@ -50,7 +50,7 @@ Add the narrower checks that match your change surface:
 
 - CLI / packaging: `python -m pytest tests/test_release_surface.py tests/test_cli.py -q`
 - workflow edits: `yamllint .github/workflows/*.yml`
-- packet verification: `zpe verify proofs/release_candidate/canonical_release_packet.zpbot`
+- packet verification: `zpe-robotics verify proofs/release_candidate/canonical_release_packet.zpbot`
 
 <p>
   <img src=".github/assets/readme/section-bars/what-we-accept.svg" alt="WHAT WE ACCEPT" width="100%">

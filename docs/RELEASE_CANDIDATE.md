@@ -21,7 +21,7 @@ boundary.
 |---|---|---|
 | Package | `zpe-robotics 0.1.0` package artifact exists | current repo authority remains blocker-state, not release-candidate prose |
 | Synthetic fixture compression | `238.02421307506054x` | the real-data benchmark later recorded `187.1345x` |
-| CLI surface | `zpe` ships encode, decode, verify, info, search, anomaly, LeRobot, token export, and audit-bundle commands | availability does not imply all claims are fully closed |
+| CLI surface | `zpe-robotics` ships encode, decode, verify, info, search, anomaly, LeRobot, token export, and audit-bundle commands | availability does not imply all claims are fully closed |
 | Searchability | primitive search works without decode on the benchmark surface | `B3` still fails because strict bit-exact replay is not proven |
 | Publishing | package upload path exists | Trusted Publishing UI registration is still operator-only |
 
