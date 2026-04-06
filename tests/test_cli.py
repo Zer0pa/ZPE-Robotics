@@ -109,4 +109,4 @@ def test_cli_reports_package_version(capsys) -> None:
         main(["--version"])
 
     assert excinfo.value.code == 0
-    assert capsys.readouterr().out.strip() == f"zpe {__version__}"
+    assert capsys.readouterr().out.strip() == f"zpe-robotics {__version__}"

@@ -1,4 +1,4 @@
-"""Installable CLI for the deterministic motion-kernel release candidate."""
+"""Installable CLI for ZPE-Robotics."""
 
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ from .wire import describe_packet, parse_packet_header
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="zpe", description="zpe-motion-kernel CLI")
+    parser = argparse.ArgumentParser(prog="zpe-robotics", description="zpe-robotics CLI")
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     subparsers = parser.add_subparsers(dest="command", required=True)
 

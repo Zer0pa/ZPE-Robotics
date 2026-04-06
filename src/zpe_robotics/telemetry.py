@@ -17,7 +17,7 @@ DEFAULT_WORKSPACE = "zer0pa"
 DEFAULT_CLASSIC_PROJECT = "zpe-robotics"
 DEFAULT_OPIK_PROJECT = "zpe-robotics"
 DEFAULT_OPIK_URL = "https://www.comet.com/opik/api"
-DEFAULT_THREAD_ID = "zpe-motion-kernel-phase9"
+DEFAULT_THREAD_ID = "zpe-robotics-phase9"
 
 
 @dataclass(frozen=True)
