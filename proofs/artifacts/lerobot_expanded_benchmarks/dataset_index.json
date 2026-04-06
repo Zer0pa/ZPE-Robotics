@@ -1,0 +1,13 @@
+{
+  "priority_datasets": [
+    "lerobot/columbia_cairlab_pusht_real",
+    "lerobot/aloha_mobile_shrimp",
+    "lerobot/umi_cup_in_the_wild",
+    "lerobot/pusht_image"
+  ],
+  "selection_floor": {
+    "min_materially_distinct_families": 2,
+    "min_qualified_datasets": 3
+  },
+  "substitution_policy": "Attempt the full priority set. Preserve every acquisition or qualification miss in dataset_manifest.json. Do not substitute synthetic or sim-only datasets into the governing expanded-benchmark claim."
+}

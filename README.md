@@ -163,3 +163,35 @@ If you need the release workflow boundary, use `RELEASING.md`.
 | Support routing | `docs/SUPPORT.md` |
 | Docs index | `docs/README.md` |
 | Operator commands | `docs/OPERATOR_RUNBOOK.md` |
+
+## Expanded LeRobot Benchmark Coverage
+
+The expanded benchmark sweep is recorded in
+`proofs/artifacts/lerobot_expanded_benchmarks/`. The current qualified surface
+covers `3` real datasets across `3` materially distinct families, with
+compression ratios spanning `58.70x` to `186.05x`.
+
+| Dataset | Family | Compression ratio | Status |
+|---|---|---:|---|
+| `lerobot/columbia_cairlab_pusht_real` | `pusht` | `186.05x` | qualified |
+| `lerobot/aloha_mobile_shrimp` | `aloha` | `61.27x` | qualified |
+| `lerobot/umi_cup_in_the_wild` | `umi` | `58.70x` | qualified |
+| `lerobot/pusht_image` | `pusht` | n/a | skipped: insufficient joint dimension |
+
+Read `proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json`
+for the rollup verdict and
+`proofs/artifacts/lerobot_expanded_benchmarks/dataset_manifest.json` for the
+full attempt ledger, including qualification misses that were preserved rather
+than averaged away.
+
+## Ecosystem Cross-Links
+
+ZPE-Robotics follows the portfolio release-hygiene pattern used by
+[ZPE-IMC](https://github.com/Zer0pa/ZPE-IMC), but it does not inherit IMC
+runtime claims, benchmark verdicts, or release readiness by association.
+
+| Need | Route |
+|---|---|
+| Robotics-to-IMC boundary | `docs/family/ROBOTICS_RELEASE_LINKAGE.md` |
+| Frozen proof lineage note | `proofs/README_LINEAGE_PATHS.md` |
+| Reference core repo | `https://github.com/Zer0pa/ZPE-IMC` |

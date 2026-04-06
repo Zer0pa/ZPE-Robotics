@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zpe-motion-kernel"
+version = "0.1.1"
+description = "DEPRECATED — use `pip install zpe-robotics` instead."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Zer0pa"}]
+license = "LicenseRef-Zer0pa-SAL-6.0"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["zpe_motion_kernel*"]

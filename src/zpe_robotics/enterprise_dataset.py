@@ -11,6 +11,21 @@ import numpy as np
 
 
 DEFAULT_FIELD_PREFERENCE = ("observation.state", "action")
+REAL_DATASET_HINTS = (
+    "real",
+    "droid",
+    "language_table",
+    "bridge_orig",
+    "fractal20220817",
+    "aloha_mobile",
+    "pusht_image",
+    "umi_cup_in_the_wild",
+)
+SIM_DATASET_HINTS = (
+    "_sim_",
+    "_sim",
+    "scripted",
+)
 
 
 @dataclass(frozen=True)
@@ -86,7 +101,9 @@ def select_joint_field(
 
 def _is_real_dataset(repo_id: str) -> bool:
     lower = repo_id.lower()
-    return "real" in lower and "_sim_" not in lower
+    if any(token in lower for token in SIM_DATASET_HINTS):
+        return False
+    return any(token in lower for token in REAL_DATASET_HINTS)
 
 
 def qualify_dataset(

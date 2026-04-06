@@ -1,4 +1,4 @@
-"""Phase 9 enterprise benchmark for zpe-motion-kernel."""
+"""Benchmark the zpe-robotics codec surface against baseline comparators."""
 
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ from typing import Any, Callable
 import numpy as np
 
 from zpe_robotics.codec import ZPBotCodec
-from zpe_robotics.enterprise_dataset import load_joint_dataset_sample
+from zpe_robotics.enterprise_dataset import build_sample_matrix, load_episode_matrices, load_joint_dataset_sample
 from zpe_robotics.telemetry import create_tracking_bundle
 
 
@@ -26,13 +26,19 @@ SYNTHETIC_SEED = 20260321
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run the Phase 9 enterprise benchmark.")
+    parser = argparse.ArgumentParser(description="Run the enterprise benchmark.")
     parser.add_argument("--dataset-root", type=str, required=True, help="Dataset directory or SYNTHETIC")
     parser.add_argument("--dataset-name", type=str, required=True)
     parser.add_argument("--dataset-provenance", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--runs", type=int, default=RUNS)
     parser.add_argument("--target-frames", type=int, default=TARGET_FRAMES)
+    parser.add_argument(
+        "--sample-mode",
+        choices=("concat_rows", "episode_window"),
+        default="concat_rows",
+        help="Sampling strategy for dataset-backed benchmarks.",
+    )
     return parser.parse_args()
 
 
@@ -44,11 +50,34 @@ def percentile(values: list[float], q: float) -> float:
     return float(np.percentile(np.asarray(values, dtype=np.float64), q))
 
 
-def sample_dataset(dataset_root: str, *, target_frames: int) -> tuple[np.ndarray, dict[str, Any]]:
+def sample_dataset(
+    dataset_root: str,
+    *,
+    dataset_name: str,
+    target_frames: int,
+    sample_mode: str,
+) -> tuple[np.ndarray, dict[str, Any]]:
     if dataset_root == "SYNTHETIC":
         return synthetic_sample(target_frames=target_frames)
-    repo_id = args_namespace.dataset_name
-    return load_joint_dataset_sample(Path(dataset_root), repo_id=repo_id, target_frames=target_frames, min_joints=6)
+    dataset_path = Path(dataset_root)
+    if sample_mode == "episode_window":
+        episodes, meta = load_episode_matrices(dataset_path, repo_id=dataset_name, min_joints=6)
+        if not episodes:
+            raise ValueError(f"dataset {dataset_name} has no usable episodes")
+        episode_index = max(range(len(episodes)), key=lambda idx: episodes[idx].shape[0])
+        episode = episodes[episode_index]
+        sample = build_sample_matrix(episode, target_frames=target_frames)
+        sample_meta = {
+            **meta,
+            "source": "dataset_episode_window",
+            "episode_count_used": 1,
+            "episode_index_used": int(episode_index),
+            "episode_frame_count": int(episode.shape[0]),
+            "sample_mode": "episode_window",
+            "sample_shape": list(sample.shape),
+        }
+        return sample, sample_meta
+    return load_joint_dataset_sample(dataset_path, repo_id=dataset_name, target_frames=target_frames, min_joints=6)
 
 
 def synthetic_sample(*, target_frames: int, note: str | None = None) -> tuple[np.ndarray, dict[str, Any]]:
@@ -129,7 +158,7 @@ def mcap_codec(sample: np.ndarray, *, compression: str) -> tuple[bytes, Callable
         buffer,
         compression=CompressionType.LZ4 if compression == "lz4" else CompressionType.ZSTD,
     )
-    writer.start(profile="zpe-motion-kernel-bench", library="phase9-enterprise-benchmark")
+    writer.start(profile="zpe-robotics-bench", library="phase9-enterprise-benchmark")
     schema_id = writer.register_schema("joint_matrix", "application/octet-stream", b"float32 matrix")
     channel_id = writer.register_channel(
         topic="/joint_matrix",
@@ -174,6 +203,8 @@ def benchmark_tool(
     raw_size = int(sample.astype(np.float32, copy=False).nbytes)
     payload, decode = builder(sample)
     decoded = decode(payload)
+    decoded_array = np.asarray(decoded, dtype=sample.dtype)
+    max_abs_error = float(np.max(np.abs(sample.astype(np.float64) - decoded_array.astype(np.float64))))
 
     encode_times: list[float] = []
     decode_times: list[float] = []
@@ -212,7 +243,8 @@ def benchmark_tool(
         "encode_time_ms_p95": metrics["encode_time_ms_p95"],
         "decode_time_ms_p50": metrics["decode_time_ms_p50"],
         "decode_time_ms_p95": metrics["decode_time_ms_p95"],
-        "bit_exact_replay": bool(np.array_equal(sample, np.asarray(decoded, dtype=sample.dtype))),
+        "bit_exact_replay": bool(np.array_equal(sample, decoded_array)),
+        "max_abs_error": max_abs_error,
         "searchable_without_decode": searchable_without_decode,
         "anomaly_detectable": anomaly_detectable,
         "cross_platform_deterministic": cross_platform_deterministic,
@@ -242,6 +274,7 @@ def compute_gate_verdicts(results: dict[str, dict[str, Any]]) -> dict[str, Any]:
             "actual": {
                 "zpe_bit_exact_replay": zpe["bit_exact_replay"],
                 "zpe_searchable_without_decode": zpe["searchable_without_decode"],
+                "zpe_max_abs_error": zpe["max_abs_error"],
             },
             "condition": "zpe is the only tool with bit_exact_replay=true and searchable_without_decode=true",
         },
@@ -275,7 +308,12 @@ def main() -> int:
     args_namespace = parse_args()
     args_namespace.output_dir.mkdir(parents=True, exist_ok=True)
 
-    dataset_sample, dataset_meta = sample_dataset(args_namespace.dataset_root, target_frames=args_namespace.target_frames)
+    dataset_sample, dataset_meta = sample_dataset(
+        args_namespace.dataset_root,
+        dataset_name=args_namespace.dataset_name,
+        target_frames=args_namespace.target_frames,
+        sample_mode=args_namespace.sample_mode,
+    )
     if dataset_sample.shape[0] < 8:
         raise ValueError("benchmark sample must contain at least 8 frames")
 
@@ -402,6 +440,9 @@ def main() -> int:
         "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "dataset_name": args_namespace.dataset_name,
         "dataset_root": args_namespace.dataset_root,
+        "runs": int(args_namespace.runs),
+        "target_frames": int(args_namespace.target_frames),
+        "sample_mode": args_namespace.sample_mode,
         "dataset_meta": dataset_meta,
         "sample_shape": list(dataset_sample.shape),
         "environment": {
@@ -419,7 +460,21 @@ def main() -> int:
     write_json(gate_path, gate_verdicts)
 
     provenance_copy = args_namespace.output_dir / "dataset_provenance.json"
-    provenance_copy.write_text(args_namespace.dataset_provenance.read_text(encoding="utf-8"), encoding="utf-8")
+    if args_namespace.dataset_provenance.exists():
+        provenance_text = args_namespace.dataset_provenance.read_text(encoding="utf-8")
+    elif provenance_copy.exists():
+        provenance_text = provenance_copy.read_text(encoding="utf-8")
+    else:
+        provenance_text = json.dumps(
+            {
+                "repo_id": args_namespace.dataset_name,
+                "status": "MISSING_PROVENANCE_SOURCE",
+                "path": args_namespace.dataset_root,
+            },
+            indent=2,
+            sort_keys=True,
+        )
+    provenance_copy.write_text(provenance_text, encoding="utf-8")
 
     manifest_payload = {
         "artifacts": {

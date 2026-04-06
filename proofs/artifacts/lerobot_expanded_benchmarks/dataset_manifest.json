@@ -1,0 +1,274 @@
+{
+  "attempt_count": 4,
+  "attempts": [
+    {
+      "benchmark": {
+        "output_dir": "/workspace/zpe-phase10/zpe-robotics/proofs/artifacts/lerobot_expanded_benchmarks_codex_lerobot/lerobot__columbia_cairlab_pusht_real",
+        "returncode": 0,
+        "status": "SUCCESS",
+        "stderr_tail": "",
+        "stdout_tail": ""
+      },
+      "dataset_slug": "lerobot__columbia_cairlab_pusht_real",
+      "download": {
+        "download_plan": {
+          "max_parquet_files": 4,
+          "max_total_bytes": 800000000,
+          "planned_file_count": 2,
+          "planned_files": [
+            {
+              "path": "meta/info.json",
+              "size": 2773
+            },
+            {
+              "path": "data/chunk-000/file-000.parquet",
+              "size": 992234
+            }
+          ],
+          "planned_parquet_count": 1,
+          "planned_total_bytes": 995007
+        },
+        "downloaded_files": [
+          {
+            "path": "meta/info.json",
+            "size": 2773
+          },
+          {
+            "path": "data/chunk-000/file-000.parquet",
+            "size": 992234
+          }
+        ],
+        "local_dir": "/workspace/data_phase10_codex_lerobot/lerobot__columbia_cairlab_pusht_real",
+        "pruned_extraneous_parquets": [],
+        "revision": "66482aa15878b5362c98620f7f60ee23ef1d5a2c",
+        "status": "SUCCESS"
+      },
+      "duration_seconds": 6.4108664989471436,
+      "qualification": {
+        "fps": 10.0,
+        "is_real_dataset": true,
+        "joint_count": 8,
+        "parquet_count": 1,
+        "qualifies": true,
+        "reason": "QUALIFIED",
+        "selected_field": "observation.state",
+        "total_episodes": 136,
+        "total_frames": 27808
+      },
+      "repo_id": "lerobot/columbia_cairlab_pusht_real",
+      "started_utc": "2026-04-05T13:31:05Z"
+    },
+    {
+      "benchmark": {
+        "output_dir": "/workspace/zpe-phase10/zpe-robotics/proofs/artifacts/lerobot_expanded_benchmarks_codex_lerobot/lerobot__aloha_mobile_shrimp",
+        "returncode": 0,
+        "status": "SUCCESS",
+        "stderr_tail": "",
+        "stdout_tail": ""
+      },
+      "dataset_slug": "lerobot__aloha_mobile_shrimp",
+      "download": {
+        "download_plan": {
+          "max_parquet_files": 4,
+          "max_total_bytes": 800000000,
+          "planned_file_count": 2,
+          "planned_files": [
+            {
+              "path": "meta/info.json",
+              "size": 5418
+            },
+            {
+              "path": "data/chunk-000/file-000.parquet",
+              "size": 4349211
+            }
+          ],
+          "planned_parquet_count": 1,
+          "planned_total_bytes": 4354629
+        },
+        "downloaded_files": [
+          {
+            "path": "meta/info.json",
+            "size": 5418
+          },
+          {
+            "path": "data/chunk-000/file-000.parquet",
+            "size": 4349211
+          }
+        ],
+        "local_dir": "/workspace/data_phase10_codex_lerobot/lerobot__aloha_mobile_shrimp",
+        "pruned_extraneous_parquets": [],
+        "revision": "6e828202059d2cc204b61ff968c232d202127a34",
+        "status": "SUCCESS"
+      },
+      "duration_seconds": 5.014355182647705,
+      "qualification": {
+        "fps": 50.0,
+        "is_real_dataset": true,
+        "joint_count": 14,
+        "parquet_count": 1,
+        "qualifies": true,
+        "reason": "QUALIFIED",
+        "selected_field": "observation.state",
+        "total_episodes": 18,
+        "total_frames": 67500
+      },
+      "repo_id": "lerobot/aloha_mobile_shrimp",
+      "started_utc": "2026-04-05T13:31:11Z"
+    },
+    {
+      "benchmark": {
+        "output_dir": "/workspace/zpe-phase10/zpe-robotics/proofs/artifacts/lerobot_expanded_benchmarks_codex_lerobot/lerobot__umi_cup_in_the_wild",
+        "returncode": 0,
+        "status": "SUCCESS",
+        "stderr_tail": "",
+        "stdout_tail": ""
+      },
+      "dataset_slug": "lerobot__umi_cup_in_the_wild",
+      "download": {
+        "download_plan": {
+          "max_parquet_files": 4,
+          "max_total_bytes": 800000000,
+          "planned_file_count": 2,
+          "planned_files": [
+            {
+              "path": "meta/info.json",
+              "size": 3769
+            },
+            {
+              "path": "data/chunk-000/file-000.parquet",
+              "size": 28426632
+            }
+          ],
+          "planned_parquet_count": 1,
+          "planned_total_bytes": 28430401
+        },
+        "downloaded_files": [
+          {
+            "path": "meta/info.json",
+            "size": 3769
+          },
+          {
+            "path": "data/chunk-000/file-000.parquet",
+            "size": 28426632
+          }
+        ],
+        "local_dir": "/workspace/data_phase10_codex_lerobot/lerobot__umi_cup_in_the_wild",
+        "pruned_extraneous_parquets": [],
+        "revision": "c16ab60ce0862c60a6c83c200d050b4013af3333",
+        "status": "SUCCESS"
+      },
+      "duration_seconds": 11.320959091186523,
+      "qualification": {
+        "fps": 10.0,
+        "is_real_dataset": true,
+        "joint_count": 7,
+        "parquet_count": 1,
+        "qualifies": true,
+        "reason": "QUALIFIED",
+        "selected_field": "observation.state",
+        "total_episodes": 1447,
+        "total_frames": 699432
+      },
+      "repo_id": "lerobot/umi_cup_in_the_wild",
+      "started_utc": "2026-04-05T13:31:16Z"
+    },
+    {
+      "benchmark": {
+        "reason": "NOT_QUALIFIED",
+        "status": "SKIPPED"
+      },
+      "dataset_slug": "lerobot__pusht_image",
+      "download": {
+        "download_plan": {
+          "max_parquet_files": 4,
+          "max_total_bytes": 800000000,
+          "planned_file_count": 5,
+          "planned_files": [
+            {
+              "path": "meta/info.json",
+              "size": 2092
+            },
+            {
+              "path": "data/chunk-000/file-008.parquet",
+              "size": 2094510
+            },
+            {
+              "path": "data/chunk-000/file-007.parquet",
+              "size": 2957399
+            },
+            {
+              "path": "data/chunk-000/file-004.parquet",
+              "size": 3303234
+            },
+            {
+              "path": "data/chunk-000/file-006.parquet",
+              "size": 3389595
+            }
+          ],
+          "planned_parquet_count": 4,
+          "planned_total_bytes": 11746830
+        },
+        "downloaded_files": [
+          {
+            "path": "meta/info.json",
+            "size": 2092
+          },
+          {
+            "path": "data/chunk-000/file-008.parquet",
+            "size": 2094510
+          },
+          {
+            "path": "data/chunk-000/file-007.parquet",
+            "size": 2957399
+          },
+          {
+            "path": "data/chunk-000/file-004.parquet",
+            "size": 3303234
+          },
+          {
+            "path": "data/chunk-000/file-006.parquet",
+            "size": 3389595
+          }
+        ],
+        "local_dir": "/workspace/data_phase10_codex_lerobot/lerobot__pusht_image",
+        "pruned_extraneous_parquets": [],
+        "revision": "e0135d53babbe2b725b272d8026b78c885801bc1",
+        "status": "SUCCESS"
+      },
+      "duration_seconds": 5.15058708190918,
+      "qualification": {
+        "fps": 10.0,
+        "is_real_dataset": true,
+        "joint_count": 2,
+        "parquet_count": 4,
+        "qualifies": false,
+        "reason": "INSUFFICIENT_JOINT_DIM_LT_6",
+        "selected_field": "observation.state",
+        "total_episodes": 206,
+        "total_frames": 25650
+      },
+      "repo_id": "lerobot/pusht_image",
+      "started_utc": "2026-04-05T13:31:28Z"
+    }
+  ],
+  "benchmarked_count": 3,
+  "config": {
+    "datasets": [
+      "lerobot/columbia_cairlab_pusht_real",
+      "lerobot/aloha_mobile_shrimp",
+      "lerobot/umi_cup_in_the_wild",
+      "lerobot/pusht_image"
+    ],
+    "max_parquet_files": 4,
+    "max_total_bytes": 800000000,
+    "min_families": 2,
+    "min_joints": 6,
+    "min_qualified": 3,
+    "prune_unplanned_parquets": true,
+    "require_real": true,
+    "revision": "",
+    "runs": 20,
+    "target_frames": 1000
+  },
+  "timestamp_utc": "2026-04-05T13:31:33Z"
+}

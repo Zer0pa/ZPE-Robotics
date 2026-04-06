@@ -1,0 +1,218 @@
+{
+  "benchmarked_dataset_count": 3,
+  "materially_distinct_families": [
+    "aloha",
+    "pusht",
+    "umi"
+  ],
+  "phase9_anchor": {
+    "benchmark_result_path": "/workspace/zpe-phase10/zpe-robotics/proofs/enterprise_benchmark/benchmark_result.json",
+    "bit_exact_replay": false,
+    "compression_ratio": 187.1345029239766,
+    "dataset_meta": {
+      "dataset_root": "/workspace/data_phase9/columbia_cairlab_pusht_real",
+      "declared_total_episodes": 136,
+      "declared_total_frames": 27808,
+      "episode_count_total": 136,
+      "fps": 10.0,
+      "frame_count_total": 27808,
+      "is_real_dataset": true,
+      "joint_count": 8,
+      "qualified_reason": "QUALIFIED",
+      "repo_id": "columbia_cairlab_pusht_real",
+      "selected_field": "observation.state"
+    },
+    "decode_time_ms_p50": 0.08884,
+    "encode_time_ms_p50": 0.11055899999999999,
+    "max_abs_error": NaN,
+    "sample_shape": [
+      1000,
+      8
+    ]
+  },
+  "regressions_vs_phase9_anchor": [
+    {
+      "anchor": 187.1345029239766,
+      "delta": -1.0879912960696458,
+      "metric": "compression_ratio",
+      "repo_id": "lerobot/columbia_cairlab_pusht_real",
+      "value": 186.04651162790697
+    },
+    {
+      "anchor": 187.1345029239766,
+      "delta": -125.86535631566151,
+      "metric": "compression_ratio",
+      "repo_id": "lerobot/aloha_mobile_shrimp",
+      "value": 61.2691466083151
+    },
+    {
+      "anchor": 0.11055899999999999,
+      "delta": 0.004709500000000005,
+      "metric": "encode_time_ms_p50",
+      "repo_id": "lerobot/aloha_mobile_shrimp",
+      "value": 0.1152685
+    },
+    {
+      "anchor": 187.1345029239766,
+      "delta": -128.43429328037075,
+      "metric": "compression_ratio",
+      "repo_id": "lerobot/umi_cup_in_the_wild",
+      "value": 58.700209643605874
+    }
+  ],
+  "requirements": {
+    "min_materially_distinct_families": 2,
+    "min_qualified_datasets": 3
+  },
+  "results": [
+    {
+      "benchmark_result_path": "/workspace/zpe-phase10/zpe-robotics/proofs/artifacts/lerobot_expanded_benchmarks_codex_lerobot/lerobot__columbia_cairlab_pusht_real/benchmark_result.json",
+      "bit_exact_replay": false,
+      "compression_ratio": 186.04651162790697,
+      "dataset_meta": {
+        "dataset_root": "/workspace/data_phase10_codex_lerobot/lerobot__columbia_cairlab_pusht_real",
+        "declared_total_episodes": 136,
+        "declared_total_frames": 27808,
+        "episode_count_total": 136,
+        "fps": 10.0,
+        "frame_count_total": 27808,
+        "is_real_dataset": true,
+        "joint_count": 8,
+        "qualified_reason": "QUALIFIED",
+        "repo_id": "lerobot/columbia_cairlab_pusht_real",
+        "selected_field": "observation.state"
+      },
+      "decode_time_ms_p50": 0.056403999999999996,
+      "encode_time_ms_p50": 0.074684,
+      "max_abs_error": 0.25352711975574493,
+      "repo_id": "lerobot/columbia_cairlab_pusht_real",
+      "revision": "66482aa15878b5362c98620f7f60ee23ef1d5a2c",
+      "sample_shape": [
+        1000,
+        8
+      ]
+    },
+    {
+      "benchmark_result_path": "/workspace/zpe-phase10/zpe-robotics/proofs/artifacts/lerobot_expanded_benchmarks_codex_lerobot/lerobot__aloha_mobile_shrimp/benchmark_result.json",
+      "bit_exact_replay": false,
+      "compression_ratio": 61.2691466083151,
+      "dataset_meta": {
+        "dataset_root": "/workspace/data_phase10_codex_lerobot/lerobot__aloha_mobile_shrimp",
+        "declared_total_episodes": 18,
+        "declared_total_frames": 67500,
+        "episode_count_total": 18,
+        "fps": 50.0,
+        "frame_count_total": 67500,
+        "is_real_dataset": true,
+        "joint_count": 14,
+        "qualified_reason": "QUALIFIED",
+        "repo_id": "lerobot/aloha_mobile_shrimp",
+        "selected_field": "observation.state"
+      },
+      "decode_time_ms_p50": 0.087769,
+      "encode_time_ms_p50": 0.1152685,
+      "max_abs_error": 0.7266664505004883,
+      "repo_id": "lerobot/aloha_mobile_shrimp",
+      "revision": "6e828202059d2cc204b61ff968c232d202127a34",
+      "sample_shape": [
+        1000,
+        14
+      ]
+    },
+    {
+      "benchmark_result_path": "/workspace/zpe-phase10/zpe-robotics/proofs/artifacts/lerobot_expanded_benchmarks_codex_lerobot/lerobot__umi_cup_in_the_wild/benchmark_result.json",
+      "bit_exact_replay": false,
+      "compression_ratio": 58.700209643605874,
+      "dataset_meta": {
+        "dataset_root": "/workspace/data_phase10_codex_lerobot/lerobot__umi_cup_in_the_wild",
+        "declared_total_episodes": 1447,
+        "declared_total_frames": 699432,
+        "episode_count_total": 1447,
+        "fps": 10.0,
+        "frame_count_total": 699432,
+        "is_real_dataset": true,
+        "joint_count": 7,
+        "qualified_reason": "QUALIFIED",
+        "repo_id": "lerobot/umi_cup_in_the_wild",
+        "selected_field": "observation.state"
+      },
+      "decode_time_ms_p50": 0.054043999999999995,
+      "encode_time_ms_p50": 0.072549,
+      "max_abs_error": 0.2653927244246006,
+      "repo_id": "lerobot/umi_cup_in_the_wild",
+      "revision": "c16ab60ce0862c60a6c83c200d050b4013af3333",
+      "sample_shape": [
+        1000,
+        7
+      ]
+    }
+  ],
+  "spread": {
+    "zpe_p8": {
+      "compression_ratio": {
+        "max": 186.04651162790697,
+        "median": 61.2691466083151,
+        "min": 58.700209643605874
+      },
+      "decode_time_ms_p50": {
+        "max": 0.087769,
+        "median": 0.056403999999999996,
+        "min": 0.054043999999999995
+      },
+      "encode_time_ms_p50": {
+        "max": 0.1152685,
+        "median": 0.074684,
+        "min": 0.072549
+      },
+      "max_abs_error": {
+        "max": 0.7266664505004883,
+        "median": 0.2653927244246006,
+        "min": 0.25352711975574493
+      }
+    }
+  },
+  "standing_blockers": {
+    "phase9_gate_verdicts": {
+      "B1": {
+        "actual": 187.1345029239766,
+        "condition": "zpe compression ratio >= 20x vs raw float32",
+        "pass": true
+      },
+      "B2": {
+        "actual": 40.74269005847953,
+        "condition": "zpe compression ratio >= 3x zstd level 19",
+        "pass": true
+      },
+      "B3": {
+        "actual": {
+          "zpe_bit_exact_replay": false,
+          "zpe_searchable_without_decode": true
+        },
+        "condition": "zpe is the only tool with bit_exact_replay=true and searchable_without_decode=true",
+        "pass": false
+      },
+      "B4": {
+        "actual": 0.11055899999999999,
+        "condition": "zpe encode p50 < 100 ms per 1000 frames",
+        "pass": true
+      },
+      "B5": {
+        "actual": 0.08884,
+        "condition": "zpe decode p50 < 100 ms per 1000 frames",
+        "pass": true
+      }
+    },
+    "phase9_red_team_verdicts": {
+      "attack_1_strawman_baseline": "WITHSTANDS",
+      "attack_2_synthetic_entropy": "WITHSTANDS",
+      "attack_3_lossless_qualification": "FAILS",
+      "attack_4_real_corpus_size": "PARTIALLY WITHSTANDS",
+      "attack_5_false_positive_rate": "FAILS",
+      "attack_6_python312_parity": "WITHSTANDS",
+      "attack_7_single_operator_provenance": "OPEN"
+    }
+  },
+  "standing_blockers_note": "Benchmark breadth is not blocker closure. B3 (bit-exact replay), red-team attack_3, and attack_5 remain unresolved unless separately proven by governing proof artifacts.",
+  "status": "PASS",
+  "timestamp_utc": "2026-04-05T13:31:33Z"
+}
