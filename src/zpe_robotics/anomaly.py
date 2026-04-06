@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
+from datetime import datetime, timezone
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
 
 import numpy as np
 
@@ -11,6 +13,18 @@ from .codec import ZPBotCodec
 from .fixtures import generate_joint_trajectory, inject_discontinuities
 from .vla_bridge import trajectory_to_fast_tokens
 from .wire import decode_packet
+
+ANOMALY_BASELINE_Z_THRESHOLD = 3.0
+DEFAULT_ANOMALY_Z_THRESHOLD = 3.22
+ANOMALY_FALSE_POSITIVE_RATE_CEILING = 0.05
+ANOMALY_RECALL_FLOOR = 0.9
+ANOMALY_TRAINING_NOMINAL_COUNT = 60
+ANOMALY_EVALUATION_NOMINAL_COUNT = 100
+ANOMALY_EVALUATION_ANOMALOUS_COUNT = 10
+ANOMALY_NUM_FRAMES = 4096
+ANOMALY_NUM_JOINTS = 6
+ANOMALY_CORPUS_IDENTITY = "phase10-file-level-histogram-holdout-v1"
+ANOMALY_SWEEP_THRESHOLDS = tuple(round(ANOMALY_BASELINE_Z_THRESHOLD + 0.01 * idx, 2) for idx in range(101))
 
 
 @dataclass(frozen=True)
@@ -21,10 +35,18 @@ class AnomalyReport:
     threshold: float
 
 
+@dataclass(frozen=True)
+class AnomalyEvaluationCorpus:
+    training_nominal_paths: list[Path]
+    nominal_paths: list[Path]
+    anomalous_paths: list[Path]
+    corpus_identity: str
+
+
 class AnomalyDetector:
     """Fleet-level anomaly detector over per-joint FAST-token histograms."""
 
-    def __init__(self, *, z_threshold: float = 3.0) -> None:
+    def __init__(self, *, z_threshold: float = DEFAULT_ANOMALY_Z_THRESHOLD) -> None:
         self.z_threshold = float(z_threshold)
         self._mean: np.ndarray | None = None
         self._std: np.ndarray | None = None
@@ -140,39 +162,197 @@ def precision_recall(truth: np.ndarray, pred: np.ndarray) -> tuple[float, float]
     return precision, recall
 
 
-def evaluate_anomaly_detector(output_dir: str | Path, *, seed: int = 20260243) -> dict[str, float | int | str]:
+def build_anomaly_evaluation_corpus(output_dir: str | Path, *, seed: int = 20260243) -> AnomalyEvaluationCorpus:
     root = Path(output_dir)
     root.mkdir(parents=True, exist_ok=True)
     codec = ZPBotCodec(keep_coeffs=8)
 
+    training_nominal_paths: list[Path] = []
     nominal_paths: list[Path] = []
     anomalous_paths: list[Path] = []
 
-    for idx in range(20):
-        trajectory = generate_joint_trajectory(num_frames=4096, num_joints=6, seed=seed + idx)
-        path = root / f"nominal_{idx:02d}.zpbot"
+    train_root = root / "train_nominal"
+    eval_root = root / "eval_nominal"
+    anomaly_root = root / "eval_anomalous"
+    train_root.mkdir(parents=True, exist_ok=True)
+    eval_root.mkdir(parents=True, exist_ok=True)
+    anomaly_root.mkdir(parents=True, exist_ok=True)
+
+    for idx in range(ANOMALY_TRAINING_NOMINAL_COUNT):
+        trajectory = generate_joint_trajectory(num_frames=ANOMALY_NUM_FRAMES, num_joints=ANOMALY_NUM_JOINTS, seed=seed + idx)
+        path = train_root / f"nominal_{idx:03d}.zpbot"
+        path.write_bytes(codec.encode(trajectory))
+        training_nominal_paths.append(path)
+
+    for idx in range(ANOMALY_EVALUATION_NOMINAL_COUNT):
+        trajectory = generate_joint_trajectory(
+            num_frames=ANOMALY_NUM_FRAMES,
+            num_joints=ANOMALY_NUM_JOINTS,
+            seed=seed + 1000 + idx,
+        )
+        path = eval_root / f"nominal_{idx:03d}.zpbot"
         path.write_bytes(codec.encode(trajectory))
         nominal_paths.append(path)
 
-    for idx in range(5):
-        base = generate_joint_trajectory(num_frames=4096, num_joints=6, seed=seed + 100 + idx)
-        anomaly = inject_discontinuities(base, seed=seed + 200 + idx, spike_count=18, magnitude=1.4)
+    for idx in range(ANOMALY_EVALUATION_ANOMALOUS_COUNT):
+        base = generate_joint_trajectory(
+            num_frames=ANOMALY_NUM_FRAMES,
+            num_joints=ANOMALY_NUM_JOINTS,
+            seed=seed + 2000 + idx,
+        )
+        anomaly = inject_discontinuities(base, seed=seed + 3000 + idx, spike_count=18, magnitude=1.4)
         anomaly[1024:3072, 0] += 1.6
         anomaly[:, 1] *= -1.0
         anomaly[:, 2] += np.linspace(0.0, 2.0, anomaly.shape[0])
-        path = root / f"anomalous_{idx:02d}.zpbot"
+        path = anomaly_root / f"anomalous_{idx:03d}.zpbot"
         path.write_bytes(codec.encode(anomaly))
         anomalous_paths.append(path)
 
-    detector = AnomalyDetector(z_threshold=3.0).fit(nominal_paths)
-    flagged = [detector.classify(path).flagged for path in anomalous_paths]
-    recall = float(sum(flagged) / max(1, len(flagged)))
+    return AnomalyEvaluationCorpus(
+        training_nominal_paths=training_nominal_paths,
+        nominal_paths=nominal_paths,
+        anomalous_paths=anomalous_paths,
+        corpus_identity=ANOMALY_CORPUS_IDENTITY,
+    )
+
+
+def choose_anomaly_threshold(
+    results: list[dict[str, float | int]],
+    *,
+    false_positive_rate_ceiling: float = ANOMALY_FALSE_POSITIVE_RATE_CEILING,
+    recall_floor: float = ANOMALY_RECALL_FLOOR,
+) -> dict[str, float | int] | None:
+    return next(
+        (
+            result
+            for result in results
+            if float(result["false_positive_rate"]) <= false_positive_rate_ceiling
+            and float(result["recall"]) >= recall_floor
+        ),
+        None,
+    )
+
+
+def best_available_anomaly_threshold(
+    results: list[dict[str, float | int]],
+    *,
+    false_positive_rate_ceiling: float = ANOMALY_FALSE_POSITIVE_RATE_CEILING,
+    recall_floor: float = ANOMALY_RECALL_FLOOR,
+) -> dict[str, float | int]:
+    recall_preserving = [result for result in results if float(result["recall"]) >= recall_floor]
+    if recall_preserving:
+        return min(
+            recall_preserving,
+            key=lambda result: (
+                float(result["false_positive_rate"]) - false_positive_rate_ceiling,
+                float(result["threshold"]),
+            ),
+        )
+    return max(results, key=lambda result: (float(result["recall"]), -float(result["false_positive_rate"])))
+
+
+def _evaluate_scores(
+    nominal_scores: list[float],
+    anomalous_scores: list[float],
+    *,
+    threshold: float,
+) -> dict[str, float | int]:
+    false_positive_count = int(sum(score > threshold for score in nominal_scores))
+    true_positive_count = int(sum(score > threshold for score in anomalous_scores))
+    false_negative_count = int(len(anomalous_scores) - true_positive_count)
+    true_negative_count = int(len(nominal_scores) - false_positive_count)
     return {
-        "status": "PASS" if recall >= 0.9 else "FAIL",
-        "recall": recall,
+        "threshold": float(threshold),
+        "false_positive_rate": float(false_positive_count / max(1, len(nominal_scores))),
+        "false_positive_count": false_positive_count,
+        "recall": float(true_positive_count / max(1, len(anomalous_scores))),
+        "true_positive_count": true_positive_count,
+        "false_negative_count": false_negative_count,
+        "true_negative_count": true_negative_count,
+    }
+
+
+def evaluate_anomaly_detector(
+    output_dir: str | Path,
+    *,
+    seed: int = 20260243,
+    threshold: float = DEFAULT_ANOMALY_Z_THRESHOLD,
+) -> dict[str, float | int | str]:
+    corpus = build_anomaly_evaluation_corpus(output_dir, seed=seed)
+    detector = AnomalyDetector(z_threshold=threshold).fit(corpus.training_nominal_paths)
+    nominal_scores = [float(detector.score(path)) for path in corpus.nominal_paths]
+    anomalous_scores = [float(detector.score(path)) for path in corpus.anomalous_paths]
+    evaluation = _evaluate_scores(nominal_scores, anomalous_scores, threshold=detector.z_threshold)
+
+    return {
+        "status": (
+            "PASS"
+            if float(evaluation["false_positive_rate"]) <= ANOMALY_FALSE_POSITIVE_RATE_CEILING
+            and float(evaluation["recall"]) >= ANOMALY_RECALL_FLOOR
+            else "FAIL"
+        ),
+        "corpus_identity": corpus.corpus_identity,
+        "authority_surface": "zpbot-v2",
+        "compatibility_mode": "wire-v1",
+        "generation_timestamp": datetime.now(timezone.utc).isoformat(),
+        "false_positive_rate": float(evaluation["false_positive_rate"]),
+        "false_positive_count": int(evaluation["false_positive_count"]),
+        "recall": float(evaluation["recall"]),
+        "true_positive_count": int(evaluation["true_positive_count"]),
+        "false_negative_count": int(evaluation["false_negative_count"]),
+        "true_negative_count": int(evaluation["true_negative_count"]),
         "threshold": detector.z_threshold,
-        "nominal_count": len(nominal_paths),
-        "anomalous_count": len(anomalous_paths),
+        "training_nominal_count": len(corpus.training_nominal_paths),
+        "nominal_count": len(corpus.nominal_paths),
+        "anomalous_count": len(corpus.anomalous_paths),
+        "target_false_positive_rate": ANOMALY_FALSE_POSITIVE_RATE_CEILING,
+        "target_recall": ANOMALY_RECALL_FLOOR,
+    }
+
+
+def sweep_anomaly_thresholds(
+    output_dir: str | Path,
+    *,
+    seed: int = 20260243,
+    thresholds: tuple[float, ...] = ANOMALY_SWEEP_THRESHOLDS,
+) -> dict[str, Any]:
+    corpus = build_anomaly_evaluation_corpus(output_dir, seed=seed)
+    detector = AnomalyDetector(z_threshold=ANOMALY_BASELINE_Z_THRESHOLD).fit(corpus.training_nominal_paths)
+    nominal_scores = [float(detector.score(path)) for path in corpus.nominal_paths]
+    anomalous_scores = [float(detector.score(path)) for path in corpus.anomalous_paths]
+
+    results: list[dict[str, float | int]] = []
+    for threshold in thresholds:
+        results.append(_evaluate_scores(nominal_scores, anomalous_scores, threshold=threshold))
+
+    selected = choose_anomaly_threshold(results)
+    best_available = best_available_anomaly_threshold(results)
+    baseline = next(result for result in results if float(result["threshold"]) == ANOMALY_BASELINE_Z_THRESHOLD)
+
+    return {
+        "status": "PASS" if selected is not None else "FAIL",
+        "corpus_identity": corpus.corpus_identity,
+        "authority_surface": "zpbot-v2",
+        "compatibility_mode": "wire-v1",
+        "generation_timestamp": datetime.now(timezone.utc).isoformat(),
+        "baseline_threshold": ANOMALY_BASELINE_Z_THRESHOLD,
+        "baseline_result": baseline,
+        "selected_threshold": selected["threshold"] if selected is not None else best_available["threshold"],
+        "selected_threshold_meets_gate": selected is not None,
+        "selected_result": selected,
+        "best_available_result": best_available,
+        "training_nominal_count": len(corpus.training_nominal_paths),
+        "nominal_count": len(corpus.nominal_paths),
+        "anomalous_count": len(corpus.anomalous_paths),
+        "threshold_grid": results,
+        "nominal_score_range": {
+            "min": float(min(nominal_scores)),
+            "max": float(max(nominal_scores)),
+        },
+        "anomalous_score_range": {
+            "min": float(min(anomalous_scores)),
+            "max": float(max(anomalous_scores)),
+        },
     }
 
 

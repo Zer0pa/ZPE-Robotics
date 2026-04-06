@@ -1,10 +1,19 @@
 {
-  "anomalous_count": 5,
+  "anomalous_count": 10,
   "authority_surface": "zpbot-v2",
   "compatibility_mode": "wire-v1",
-  "generation_timestamp": "2026-03-17T21:56:31.670913+00:00",
-  "nominal_count": 20,
-  "recall": 1.0,
+  "corpus_identity": "phase10-file-level-histogram-holdout-v1",
+  "false_negative_count": 1,
+  "false_positive_count": 5,
+  "false_positive_rate": 0.05,
+  "generation_timestamp": "2026-04-05T13:26:00.471189+00:00",
+  "nominal_count": 100,
+  "recall": 0.9,
   "status": "PASS",
-  "threshold": 3.0
+  "target_false_positive_rate": 0.05,
+  "target_recall": 0.9,
+  "threshold": 3.22,
+  "training_nominal_count": 60,
+  "true_negative_count": 95,
+  "true_positive_count": 9
 }
