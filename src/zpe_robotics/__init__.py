@@ -20,12 +20,10 @@ def _pyproject_version() -> str:
 
 
 def _resolve_version() -> str:
-    for distribution_name in ("zpe-robotics", "zpe-motion-kernel"):
-        try:
-            return distribution_version(distribution_name)
-        except PackageNotFoundError:
-            continue
-    return _pyproject_version()
+    try:
+        return distribution_version("zpe-robotics")
+    except PackageNotFoundError:
+        return _pyproject_version()
 
 
 __version__ = _resolve_version()
