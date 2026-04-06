@@ -6,7 +6,7 @@
   "commercial_wedge": "187× compression on real robot data with search-without-decode and red-team-tested adversarial surface. Public PyPI package today.",
   "technical_wedge": "Frozen wire-v1 motion transport codec. 187.1345× compression on lerobot real data. B1/B2/B4/B5 gates pass. Search-without-decode verified.",
   "ideal_first_buyer": "Robotics infrastructure team or simulation/replay platform",
-  "deployment_model": "Public Python package — pip install zpe-motion-kernel",
+  "deployment_model": "Public Python package — pip install zpe-robotics",
   "proof_anchors": [
     "proofs/enterprise_benchmark/GATE_VERDICTS.json",
     "proofs/red_team/red_team_report.json",
