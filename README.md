@@ -27,6 +27,7 @@ Active B3 engineering. Active red-team closure work. `.zpbot` replay proof still
 | Benchmark gate verdicts | [`GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) |
 | Red-team report | [`red_team_report.json`](proofs/red_team/red_team_report.json) |
 | Engineering blockers | [`ENGINEERING_BLOCKERS.md`](proofs/ENGINEERING_BLOCKERS.md) |
+| Package lineage | `zpe-robotics` current. `zpe-motion-kernel` legacy. |
 
 ---
 
