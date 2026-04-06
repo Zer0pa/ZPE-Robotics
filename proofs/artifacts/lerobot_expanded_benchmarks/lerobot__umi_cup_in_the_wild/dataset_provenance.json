@@ -1,0 +1,57 @@
+{
+  "benchmark": {
+    "output_dir": "/workspace/zpe-phase10/zpe-robotics/proofs/artifacts/lerobot_expanded_benchmarks_codex_lerobot/lerobot__umi_cup_in_the_wild",
+    "returncode": 0,
+    "status": "SUCCESS",
+    "stderr_tail": "",
+    "stdout_tail": ""
+  },
+  "dataset_slug": "lerobot__umi_cup_in_the_wild",
+  "download": {
+    "download_plan": {
+      "max_parquet_files": 4,
+      "max_total_bytes": 800000000,
+      "planned_file_count": 2,
+      "planned_files": [
+        {
+          "path": "meta/info.json",
+          "size": 3769
+        },
+        {
+          "path": "data/chunk-000/file-000.parquet",
+          "size": 28426632
+        }
+      ],
+      "planned_parquet_count": 1,
+      "planned_total_bytes": 28430401
+    },
+    "downloaded_files": [
+      {
+        "path": "meta/info.json",
+        "size": 3769
+      },
+      {
+        "path": "data/chunk-000/file-000.parquet",
+        "size": 28426632
+      }
+    ],
+    "local_dir": "/workspace/data_phase10_codex_lerobot/lerobot__umi_cup_in_the_wild",
+    "pruned_extraneous_parquets": [],
+    "revision": "c16ab60ce0862c60a6c83c200d050b4013af3333",
+    "status": "SUCCESS"
+  },
+  "duration_seconds": 11.320959091186523,
+  "qualification": {
+    "fps": 10.0,
+    "is_real_dataset": true,
+    "joint_count": 7,
+    "parquet_count": 1,
+    "qualifies": true,
+    "reason": "QUALIFIED",
+    "selected_field": "observation.state",
+    "total_episodes": 1447,
+    "total_frames": 699432
+  },
+  "repo_id": "lerobot/umi_cup_in_the_wild",
+  "started_utc": "2026-04-05T13:31:16Z"
+}

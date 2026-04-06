@@ -1,0 +1,57 @@
+{
+  "benchmark": {
+    "output_dir": "/workspace/zpe-phase10/zpe-robotics/proofs/artifacts/lerobot_expanded_benchmarks_codex_lerobot/lerobot__aloha_mobile_shrimp",
+    "returncode": 0,
+    "status": "SUCCESS",
+    "stderr_tail": "",
+    "stdout_tail": ""
+  },
+  "dataset_slug": "lerobot__aloha_mobile_shrimp",
+  "download": {
+    "download_plan": {
+      "max_parquet_files": 4,
+      "max_total_bytes": 800000000,
+      "planned_file_count": 2,
+      "planned_files": [
+        {
+          "path": "meta/info.json",
+          "size": 5418
+        },
+        {
+          "path": "data/chunk-000/file-000.parquet",
+          "size": 4349211
+        }
+      ],
+      "planned_parquet_count": 1,
+      "planned_total_bytes": 4354629
+    },
+    "downloaded_files": [
+      {
+        "path": "meta/info.json",
+        "size": 5418
+      },
+      {
+        "path": "data/chunk-000/file-000.parquet",
+        "size": 4349211
+      }
+    ],
+    "local_dir": "/workspace/data_phase10_codex_lerobot/lerobot__aloha_mobile_shrimp",
+    "pruned_extraneous_parquets": [],
+    "revision": "6e828202059d2cc204b61ff968c232d202127a34",
+    "status": "SUCCESS"
+  },
+  "duration_seconds": 5.014355182647705,
+  "qualification": {
+    "fps": 50.0,
+    "is_real_dataset": true,
+    "joint_count": 14,
+    "parquet_count": 1,
+    "qualifies": true,
+    "reason": "QUALIFIED",
+    "selected_field": "observation.state",
+    "total_episodes": 18,
+    "total_frames": 67500
+  },
+  "repo_id": "lerobot/aloha_mobile_shrimp",
+  "started_utc": "2026-04-05T13:31:11Z"
+}

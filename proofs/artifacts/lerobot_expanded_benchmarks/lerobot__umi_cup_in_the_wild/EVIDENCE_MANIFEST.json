@@ -1,0 +1,7 @@
+{
+  "artifacts": {
+    "GATE_VERDICTS.json": "53f13bd2842145fe8b27b837721f7e64b24703d5187ceeb08731d6f71f01b653",
+    "benchmark_result.json": "d9d380239408c85d20107080f679decf105454911a33932fd0b1d32ecb438029",
+    "dataset_provenance.json": "e10734346683c50f4beac0c43638bdb8ae96c2a00e049d437f570627ba443317"
+  }
+}

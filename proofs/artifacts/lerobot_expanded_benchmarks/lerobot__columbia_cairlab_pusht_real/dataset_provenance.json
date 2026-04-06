@@ -1,0 +1,57 @@
+{
+  "benchmark": {
+    "output_dir": "/workspace/zpe-phase10/zpe-robotics/proofs/artifacts/lerobot_expanded_benchmarks_codex_lerobot/lerobot__columbia_cairlab_pusht_real",
+    "returncode": 0,
+    "status": "SUCCESS",
+    "stderr_tail": "",
+    "stdout_tail": ""
+  },
+  "dataset_slug": "lerobot__columbia_cairlab_pusht_real",
+  "download": {
+    "download_plan": {
+      "max_parquet_files": 4,
+      "max_total_bytes": 800000000,
+      "planned_file_count": 2,
+      "planned_files": [
+        {
+          "path": "meta/info.json",
+          "size": 2773
+        },
+        {
+          "path": "data/chunk-000/file-000.parquet",
+          "size": 992234
+        }
+      ],
+      "planned_parquet_count": 1,
+      "planned_total_bytes": 995007
+    },
+    "downloaded_files": [
+      {
+        "path": "meta/info.json",
+        "size": 2773
+      },
+      {
+        "path": "data/chunk-000/file-000.parquet",
+        "size": 992234
+      }
+    ],
+    "local_dir": "/workspace/data_phase10_codex_lerobot/lerobot__columbia_cairlab_pusht_real",
+    "pruned_extraneous_parquets": [],
+    "revision": "66482aa15878b5362c98620f7f60ee23ef1d5a2c",
+    "status": "SUCCESS"
+  },
+  "duration_seconds": 6.4108664989471436,
+  "qualification": {
+    "fps": 10.0,
+    "is_real_dataset": true,
+    "joint_count": 8,
+    "parquet_count": 1,
+    "qualifies": true,
+    "reason": "QUALIFIED",
+    "selected_field": "observation.state",
+    "total_episodes": 136,
+    "total_frames": 27808
+  },
+  "repo_id": "lerobot/columbia_cairlab_pusht_real",
+  "started_utc": "2026-04-05T13:31:05Z"
+}

@@ -1,0 +1,31 @@
+{
+  "B1": {
+    "actual": 58.700209643605874,
+    "condition": "zpe compression ratio >= 20x vs raw float32",
+    "pass": true
+  },
+  "B2": {
+    "actual": 54.11949685534591,
+    "condition": "zpe compression ratio >= 3x zstd level 19",
+    "pass": true
+  },
+  "B3": {
+    "actual": {
+      "zpe_bit_exact_replay": false,
+      "zpe_max_abs_error": 0.2653927244246006,
+      "zpe_searchable_without_decode": true
+    },
+    "condition": "zpe is the only tool with bit_exact_replay=true and searchable_without_decode=true",
+    "pass": false
+  },
+  "B4": {
+    "actual": 0.072549,
+    "condition": "zpe encode p50 < 100 ms per 1000 frames",
+    "pass": true
+  },
+  "B5": {
+    "actual": 0.054043999999999995,
+    "condition": "zpe decode p50 < 100 ms per 1000 frames",
+    "pass": true
+  }
+}
