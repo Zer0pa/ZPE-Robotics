@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 import re
 import tomllib
@@ -140,3 +141,52 @@ def test_frontdoor_docs_do_not_describe_repo_as_private_staging() -> None:
         text = _read_text(relative_path).lower()
         for phrase in banned_phrases:
             assert phrase not in text, f"{relative_path} contains {phrase!r}"
+
+
+def test_pyproject_exposes_augmented_project_metadata() -> None:
+    payload = _load_pyproject()
+    project = payload["project"]
+
+    assert project["authors"] == [{"name": "Zer0pa"}]
+    assert project["urls"] == {
+        "Homepage": "https://github.com/Zer0pa/ZPE-Robotics",
+        "Documentation": "https://github.com/Zer0pa/ZPE-Robotics/tree/main/docs",
+        "Repository": "https://github.com/Zer0pa/ZPE-Robotics",
+        "Changelog": "https://github.com/Zer0pa/ZPE-Robotics/blob/main/CHANGELOG.md",
+    }
+
+    classifiers = set(project["classifiers"])
+    assert "Framework :: Robot Framework" in classifiers
+    assert "Topic :: Scientific/Engineering" in classifiers
+    assert "Programming Language :: Python :: 3.11" in classifiers
+    assert "Programming Language :: Python :: 3.12" in classifiers
+
+
+def test_root_readme_has_phase1_augmentation_surface() -> None:
+    text = _read_text("README.md")
+
+    assert "Works with: `ROS2 Humble` | `MCAP` | `LeRobot` | `HuggingFace`" in text
+    assert "Personas: imitation learning researcher. Fleet telemetry engineer." in text
+    assert "| `zpe-robotics` | `186.05x` |" in text
+    assert "| `gzip -9` | `10.97x` |" in text
+    assert "| `lz4` | `8.31x` |" in text
+    assert "Use ZPE-Robotics when motion traces must stay compact, deterministic, and searchable after capture." in text
+    assert "[Foxglove Studio docs](https://docs.foxglove.dev/)" in text
+    assert 'python -m pip install -e ".[dev]"' in text
+    assert "zpe-robotics --version" in text
+
+
+def test_root_readme_baseline_snapshot_matches_benchmark_artifact() -> None:
+    text = _read_text("README.md")
+    payload = json.loads(
+        _read_text("proofs/artifacts/lerobot_expanded_benchmarks/lerobot__columbia_cairlab_pusht_real/benchmark_result.json")
+    )
+    results = payload["results"]
+
+    expected = {
+        "zpe-robotics": round(results["zpe_p8"]["compression_ratio"], 2),
+        "gzip -9": round(results["gzip_l9"]["compression_ratio"], 2),
+        "lz4": round(results["lz4_default"]["compression_ratio"], 2),
+    }
+    for label, ratio in expected.items():
+        assert f"| `{label}` | `{ratio:.2f}x` |" in text

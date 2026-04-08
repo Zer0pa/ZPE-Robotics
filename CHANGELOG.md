@@ -20,6 +20,9 @@ Version references use the package version where applicable.
 - added governance, releasing, support, and citation docs
 - removed stale `GO`, clean-clone-forward, and bit-perfect wording from the
   front-door docs
+- added a robotics-facing quick-start, works-with row, persona cues, and
+  baseline snapshot to the README
+- added project URLs and Robotics-facing classifiers to `pyproject.toml`
 
 <p>
   <img src=".github/assets/readme/section-bars/release-notes.svg" alt="RELEASE NOTES" width="100%">

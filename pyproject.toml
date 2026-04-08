@@ -10,10 +10,23 @@ readme = "README.md"
 requires-python = ">=3.11"
 authors = [{name = "Zer0pa"}]
 license = "LicenseRef-Zer0pa-SAL-6.0"
+classifiers = [
+  "Framework :: Robot Framework",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+]
 dependencies = [
   "mcap>=1.3",
   "numpy>=2.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/Zer0pa/ZPE-Robotics"
+Documentation = "https://github.com/Zer0pa/ZPE-Robotics/tree/main/docs"
+Repository = "https://github.com/Zer0pa/ZPE-Robotics"
+Changelog = "https://github.com/Zer0pa/ZPE-Robotics/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = [

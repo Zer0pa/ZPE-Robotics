@@ -10,6 +10,8 @@
 
 SAL v6.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
+Works with: `ROS2 Humble` | `MCAP` | `LeRobot` | `HuggingFace`
+
 ---
 
 ## What This Is
@@ -17,6 +19,8 @@ SAL v6.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compressed replay, and search-without-decode for robot joint streams. If you need audit-grade motion records that compress, replay identically, and remain searchable in the compressed form: this is that kernel.
 
 **187× compression** on real robot data (`lerobot/columbia_cairlab_pusht_real`). Frozen `wire-v1` transport format. Search-without-decode on compressed motion streams. Adversarial red-team testing: attacks 1, 2, 6 fully withstood. Public package: `pip install zpe-robotics`.
+
+Personas: imitation learning researcher. Fleet telemetry engineer.
 
 The package is public and installable today. It is **not a finished robotics platform**. B3 benchmark gate fails. Red-team attacks 3 and 5 fail. Bit-exact `.zpbot` round-trip replay is unproven. Active engineering blockers remain.
 
@@ -27,6 +31,12 @@ The package is public and installable today. It is **not a finished robotics pla
 | Benchmark gate verdicts | [`GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) |
 | Red-team report | [`red_team_report.json`](proofs/red_team/red_team_report.json) |
 | Engineering blockers | [`ENGINEERING_BLOCKERS.md`](proofs/ENGINEERING_BLOCKERS.md) |
+
+| Baseline snapshot (`lerobot/columbia_cairlab_pusht_real`) | Compression ratio |
+|---|---:|
+| `zpe-robotics` | `186.05x` |
+| `gzip -9` | `10.97x` |
+| `lz4` | `8.31x` |
 
 ---
 
@@ -39,6 +49,8 @@ The current public artifact is a standalone Python package for frozen
 `wire-v1` motion transport, replay, search, and audit workflows. The repo and
 package are public, but the governing engineering surface remains blocker-state
 and is not a full robotics-platform release.
+
+Use ZPE-Robotics when motion traces must stay compact, deterministic, and searchable after capture. Stay with ecosystem-native viewers alone when inspection is the only goal; reach for ZPE-Robotics when replay auditability and search-without-decode must live on the same artifact.
 
 <p>
   <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">
@@ -129,6 +141,15 @@ Use these files together:
   <img src=".github/assets/readme/section-bars/setup-and-verification.svg" alt="SETUP AND VERIFICATION" width="100%">
 </p>
 
+Quick Start:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e ".[dev]"
+zpe-robotics --version
+```
+
 Public package install:
 
 ```bash
@@ -195,3 +216,4 @@ runtime claims, benchmark verdicts, or release readiness by association.
 | Robotics-to-IMC boundary | `docs/family/ROBOTICS_RELEASE_LINKAGE.md` |
 | Frozen proof lineage note | `proofs/README_LINEAGE_PATHS.md` |
 | Reference core repo | `https://github.com/Zer0pa/ZPE-IMC` |
+| Ecosystem neighbor | [Foxglove Studio docs](https://docs.foxglove.dev/) |
