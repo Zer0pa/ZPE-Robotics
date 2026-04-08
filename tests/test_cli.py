@@ -11,7 +11,7 @@ from zpe_robotics.fixtures import generate_joint_trajectory
 from zpe_robotics.lerobot_codec import build_synthetic_episode, dump_episode_json
 from zpe_robotics.primitives import generate_primitive_corpus
 from zpe_robotics.release_candidate import build_single_packet_composition, default_codec
-from zpe_robotics.rosbag_adapter import decode_records, encode_records
+from zpe_robotics.rosbag_adapter import ZPBAG_NATIVE_VERSION, decode_records, detect_bag_version, encode_records
 from zpe_robotics import __version__
 
 
@@ -91,6 +91,21 @@ def test_cli_supports_search_anomaly_lerobot_and_export_tokens(tmp_path: Path, c
     assert token_output["authority_surface"] == "zpbot-v2"
 
 
+def test_cli_supports_native_mcap_bridge_roundtrip(tmp_path: Path) -> None:
+    composition = build_single_packet_composition()
+    input_path = tmp_path / "input.mcap"
+    packet_path = tmp_path / "output.zpbot"
+    replay_path = tmp_path / "replay.mcap"
+
+    codec = default_codec()
+    records = decode_records(composition.bag_blob, codec, decode_trajectory=True, strict_index=True)
+    input_path.write_bytes(encode_records(records, codec, version=ZPBAG_NATIVE_VERSION))
+
+    assert main(["encode", str(input_path), str(packet_path)]) == 0
+    assert main(["decode", str(packet_path), str(replay_path)]) == 0
+    assert detect_bag_version(replay_path.read_bytes()) == ZPBAG_NATIVE_VERSION
+
+
 def test_cli_generates_comm03_audit_bundle(tmp_path: Path, capsys) -> None:
     composition = build_single_packet_composition()
     packet_path = tmp_path / "canonical.zpbot"
@@ -109,4 +124,4 @@ def test_cli_reports_package_version(capsys) -> None:
         main(["--version"])
 
     assert excinfo.value.code == 0
-    assert capsys.readouterr().out.strip() == f"zpe {__version__}"
+    assert capsys.readouterr().out.strip() == f"zpe-robotics {__version__}"

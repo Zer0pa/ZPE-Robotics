@@ -16,6 +16,12 @@ from pathlib import Path
 
 AUTHORITY_SURFACE = "zpbot-v2"
 COMPATIBILITY_MODE = "wire-v1"
+SMOKE_TESTS = [
+    "tests/test_codec.py",
+    "tests/test_cli.py",
+    "tests/test_release_surface.py",
+    "tests/test_wire.py",
+]
 
 
 def parse_args() -> argparse.Namespace:
@@ -103,8 +109,8 @@ def main() -> int:
     venv_dir = venv_parent / "venv"
     python_bin = venv_dir / "bin" / "python"
     pip_cmd = [str(python_bin), "-m", "pip"]
-    pytest_cmd = [str(python_bin), "-m", "pytest", "tests", "-q"]
-    zpe_bin = venv_dir / "bin" / "zpe"
+    pytest_cmd = [str(python_bin), "-m", "pytest", *SMOKE_TESTS, "-q"]
+    zpe_bin = venv_dir / "bin" / "zpe-robotics"
 
     try:
         result = run_command([sys.executable, "-m", "venv", str(venv_dir)], cwd=repo_root)

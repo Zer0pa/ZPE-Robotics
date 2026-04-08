@@ -11,20 +11,21 @@ from pathlib import Path
 import numpy as np
 
 from . import __version__
+from .anomaly import DEFAULT_ANOMALY_Z_THRESHOLD
 from .audit_bundle import generate_audit_bundle
 from .anomaly import AnomalyDetector
 from .constants import AUTHORITY_SURFACE, AUTHORITY_WIRE_COMPATIBILITY
 from .lerobot_codec import ZPELeRobotCodec
 from .primitive_index import PrimitiveIndex
 from .release_candidate import build_default_bag_record, default_codec
-from .rosbag_adapter import decode_records, encode_records
+from .rosbag_adapter import ZPBAG_NATIVE_VERSION, decode_records, encode_records
 from .utils import sha256_bytes
 from .vla_bridge import export_cubicvla_tokens, export_fast_tokens
 from .wire import describe_packet, parse_packet_header
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="zpe", description="zpe-motion-kernel CLI")
+    parser = argparse.ArgumentParser(prog="zpe-robotics", description="zpe-robotics CLI")
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
@@ -118,7 +119,9 @@ def _handle_decode(input_zpbot: Path, output_bag: Path) -> int:
     if output_bag.suffix.lower() == ".csv":
         _write_csv_trajectory(output_bag, trajectory)
     else:
-        bag_blob = encode_records([build_default_bag_record(trajectory)], codec)
+        version = ZPBAG_NATIVE_VERSION if output_bag.suffix.lower() == ".mcap" else None
+        kwargs = {"version": version} if version is not None else {}
+        bag_blob = encode_records([build_default_bag_record(trajectory)], codec, **kwargs)
         output_bag.write_bytes(bag_blob)
     print(str(output_bag))
     return 0
@@ -189,7 +192,7 @@ def _handle_anomaly(fleet_dir: Path, query_zpbot: Path) -> int:
     if not train_paths:
         raise ValueError("anomaly expects at least one fleet file excluding the query packet")
 
-    detector = AnomalyDetector(z_threshold=3.0).fit(train_paths)
+    detector = AnomalyDetector(z_threshold=DEFAULT_ANOMALY_Z_THRESHOLD).fit(train_paths)
     report = detector.classify(query_zpbot)
     status = "ANOMALY" if report.flagged else "NORMAL"
     print(f"{status} z_score={report.score:.6f}")

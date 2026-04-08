@@ -33,6 +33,9 @@ dev = [
   "pytest>=8",
   "ruff>=0.11",
 ]
+test = [
+  "pytest>=8",
+]
 benchmark = [
   "datasets>=4.5.0",
   "h5py>=3",
@@ -48,6 +51,9 @@ netnew = [
 telemetry = [
   "comet-ml>=3",
   "opik>=1",
+]
+docs = [
+  "grip>=4",
 ]
 
 [tool.setuptools]

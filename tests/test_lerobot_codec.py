@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+
 import numpy as np
 
 from zpe_robotics.lerobot_codec import ZPELeRobotCodec, build_synthetic_episode
@@ -23,3 +25,33 @@ def test_lerobot_codec_roundtrip_and_compression_gate(tmp_path) -> None:
     assert decoded["provenance"]["compatibility_mode"] == "wire-v1"
     assert decoded["provenance"]["codec_version"] == 1
     assert decoded["provenance"]["generation_timestamp"]
+
+
+def test_lerobot_codec_compresses_npz_directory_roundtrip(tmp_path) -> None:
+    codec = ZPELeRobotCodec()
+    episode = build_synthetic_episode(frames=128, joints=8, hz=10.0)
+    dataset_dir = tmp_path / "dataset"
+    output_dir = tmp_path / "compressed"
+    dataset_dir.mkdir()
+
+    np.savez(
+        dataset_dir / "episode.npz",
+        joint_positions=np.asarray(episode["joint_positions"], dtype=np.float32),
+        timestamps=np.asarray(episode["timestamps"], dtype=np.float64),
+        episode_metadata_json=json.dumps(episode["episode_metadata"], sort_keys=True),
+    )
+
+    report = codec.compress_directory(dataset_dir, output_dir)
+    packet_path = next(output_dir.rglob("*.zpbot"))
+    decoded = codec.decode_episode(packet_path)
+    max_abs_error = float(
+        np.max(
+            np.abs(
+                np.asarray(decoded["joint_positions"], dtype=np.float32)
+                - np.asarray(episode["joint_positions"], dtype=np.float32)
+            )
+        )
+    )
+
+    assert report["files_processed"] == 1
+    assert max_abs_error < 0.25

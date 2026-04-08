@@ -25,7 +25,9 @@ def test_sidecar_dependencies_are_optional() -> None:
     extras = project["optional-dependencies"]
 
     assert "benchmark" in extras
+    assert "test" in extras
     assert "telemetry" in extras
+    assert "docs" in extras
 
     for prefix in ("comet-ml", "opik", "pyarrow", "h5py", "lz4", "zstandard"):
         assert not any(item.startswith(prefix) for item in dependencies)
@@ -70,6 +72,8 @@ def test_test_workflow_covers_python312() -> None:
 def test_clean_clone_verify_checks_cli_version() -> None:
     text = (ROOT / "scripts/clean_clone_verify.py").read_text(encoding="utf-8")
     assert '[str(zpe_bin), "--version"]' in text
+    assert 'zpe_bin = venv_dir / "bin" / "zpe-robotics"' in text
+    assert 'pytest_cmd = [str(python_bin), "-m", "pytest", *SMOKE_TESTS, "-q"]' in text
 
 
 def test_license_uses_five_year_change_date() -> None:
@@ -190,3 +194,11 @@ def test_root_readme_baseline_snapshot_matches_benchmark_artifact() -> None:
     }
     for label, ratio in expected.items():
         assert f"| `{label}` | `{ratio:.2f}x` |" in text
+
+
+def test_cli_and_red_team_share_anomaly_threshold_source() -> None:
+    cli_text = _read_text("src/zpe_robotics/cli.py")
+    red_team_text = _read_text("scripts/red_team_phase9.py")
+
+    assert "DEFAULT_ANOMALY_Z_THRESHOLD" in cli_text
+    assert "DEFAULT_ANOMALY_Z_THRESHOLD" in red_team_text

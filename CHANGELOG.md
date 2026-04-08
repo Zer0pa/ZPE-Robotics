@@ -23,6 +23,8 @@ Version references use the package version where applicable.
 - added a robotics-facing quick-start, works-with row, persona cues, and
   baseline snapshot to the README
 - added project URLs and Robotics-facing classifiers to `pyproject.toml`
+- added runnable `examples/` scripts, clean-install verification, benchmark
+  methodology, and anomaly-threshold drift guards for the engineering surface
 
 <p>
   <img src=".github/assets/readme/section-bars/release-notes.svg" alt="RELEASE NOTES" width="100%">
