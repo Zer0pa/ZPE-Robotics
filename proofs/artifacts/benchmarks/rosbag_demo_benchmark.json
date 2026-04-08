@@ -1,0 +1,28 @@
+{
+  "comparators": {
+    "legacy_bag": {
+      "bytes": 9579,
+      "compression_ratio": 7.696836830566865
+    },
+    "lz4_default": {
+      "bytes": 73755,
+      "compression_ratio": 0.999633923123856
+    },
+    "native_mcap": {
+      "bytes": 8583,
+      "compression_ratio": 8.59000349528137
+    },
+    "zpbot_packet_library": {
+      "bytes": 4956,
+      "compression_ratio": 14.876513317191284
+    },
+    "zstd_l19": {
+      "bytes": 67928,
+      "compression_ratio": 1.085384524790955
+    }
+  },
+  "dataset": "deterministic_rosbag2_demo_fixture",
+  "note": "This is a deterministic rosbag2-style demo fixture, not a hosted ROS2 runtime capture.",
+  "raw_float32_bytes": 73728,
+  "record_count": 12
+}

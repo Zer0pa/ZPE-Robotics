@@ -25,6 +25,8 @@ Version references use the package version where applicable.
 - added project URLs and Robotics-facing classifiers to `pyproject.toml`
 - added runnable `examples/` scripts, clean-install verification, benchmark
   methodology, and anomaly-threshold drift guards for the engineering surface
+- published phase 3 benchmark tables across the checked-in LeRobot proof set
+  and added a deterministic rosbag2-style demo benchmark artifact
 
 <p>
   <img src=".github/assets/readme/section-bars/release-notes.svg" alt="RELEASE NOTES" width="100%">
