@@ -59,7 +59,7 @@ platform**. B3 benchmark gate fails. Red-team attacks 3 and 5 fail. Bit-exact
 - Red-team resilience on attacks `3` and `5`
 - Robotics Rust ABI
 
-## Current Authority
+## Commercial Readiness
 
 <p>
   <img src=".github/assets/readme/section-bars/lane-status-snapshot.svg" alt="LANE STATUS SNAPSHOT" width="100%">
@@ -77,7 +77,7 @@ Confidence derives from the committed phase-9 benchmark and red-team surfaces:
 `proofs/enterprise_benchmark/GATE_VERDICTS.json` and
 `proofs/red_team/red_team_report.json`.
 
-## Verification Status
+## Tests and Verification
 
 | Code | Check | Verdict |
 |------|-------|---------|
