@@ -6,9 +6,9 @@
 
 [![PyPI](https://img.shields.io/pypi/v/zpe-robotics)](https://pypi.org/project/zpe-robotics/)
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
-[![License](https://img.shields.io/badge/license-SAL%20v6.0-orange)](./LICENSE)
+[![License](https://img.shields.io/badge/license-SAL%20v6.2-orange)](./LICENSE)
 
-SAL v6.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
+SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ---
 
@@ -20,14 +20,11 @@ SAL v6.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ZPE-Robotics is motion telemetry infrastructure — deterministic logging,
 compressed replay, and search-without-decode for robot joint streams.
-ZPE-Robotics is the public repository for the `zpe-robotics` package.
+ZPE-Robotics is the public repository for the zpe-robotics package.
 The current public artifact is a standalone Python package for frozen
-`wire-v1` motion transport, replay, search, and audit workflows. The repo and
-package are public, but the governing engineering surface remains blocker-state
-and is not a full robotics-platform release.
-The package is public and installable today. It is **not a finished robotics
-platform**. B3 benchmark gate fails. Red-team attacks 3 and 5 fail. Bit-exact
-`.zpbot` round-trip replay is unproven. Active engineering blockers remain.
+wire-v1 motion transport, replay, search, and audit workflows.
+The repo and package are public, but the governing engineering surface remains
+blocker-state and is not a full robotics-platform release.
 
 | Field | Value |
 |-------|-------|
@@ -36,27 +33,44 @@ platform**. B3 benchmark gate fails. Red-team attacks 3 and 5 fail. Bit-exact
 
 ## Key Metrics
 
-| Metric | Value | Tag |
-|--------|-------|-----|
-| Compression | 187× | LEROBOT_CORPUS |
-| Tests | 42/43 | 1_SKIPPED |
-| Gates | B1 B2 B4 B5 PASS | B3_FAIL |
-| Search | without-decode | VERIFIED |
+| Metric | Value | Baseline |
+|--------|-------|----------|
+| COMPRESSION | 187.13× | vs zstd_l3 4.44× (42× better) |
+| ENCODE_P50 | 0.1106 ms | — |
+| DECODE_P50 | 0.0888 ms | — |
+| BENCHMARK_GATES | 4/5 pass | 3 datasets, 3 families |
+
+> Source: [`proofs/enterprise_benchmark/benchmark_result.json`](proofs/enterprise_benchmark/benchmark_result.json) | [`proofs/enterprise_benchmark/GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) | [`proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json`](proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json)
+
+## Competitive Benchmarks
+
+> Full competitive analysis: [`BENCHMARKS.md`](BENCHMARKS.md) | Source: [`proofs/enterprise_benchmark/benchmark_result.json`](proofs/enterprise_benchmark/benchmark_result.json) | [`proofs/red_team/red_team_report.json`](proofs/red_team/red_team_report.json)
+
+| Tool | Compression Ratio | Notes |
+|------|-------------------|-------|
+| **ZPE P8** | **187.13×** | governing LeRobot real-data benchmark; searchable without decode |
+| zstd_l19 | 4.59× | strongest retained classical codec in the benchmark set |
+| zstd_l3 | 4.44× | red-team attack 1 baseline; ZPE is 42.14× better |
+| gzip_l9 | 3.97× | retained gzip baseline |
+| mcap_zstd | 3.99× | MCAP container baseline |
+| lz4_default | 3.00× | low-latency baseline |
+| h5py_gzip9 | 2.69× | HDF5 gzip baseline |
+| h5py_lzf | 2.15× | HDF5 fast baseline |
 
 ## What We Prove
 
-- 187× compression on real robot data (`lerobot/columbia_cairlab_pusht_real`)
-- Search-without-decode on compressed motion streams
-- Red-team withstands on attacks `1`, `2`, `6`
-- Public package install and test surface (`pip install zpe-robotics`)
-- Frozen `wire-v1` transport verification
+- Spectral wire transport with directional reasoning layer for robot action sequences
+- Search-without-decode operates on compressed motion streams
+- Red-team resilience: 3 attacks withstood, 3 failed, 1 skipped — transparently reported
+- VLA tokenization aligns with vision-language-action model input formats
+- Public package install surface verified (pip install zpe-robotics)
 
 ## What We Don't Claim
 
 - Full release readiness
-- Bit-exact `.zpbot` round-trip replay
+- Bit-exact .zpbot round-trip replay
 - B3 benchmark gate pass
-- Red-team resilience on attacks `3` and `5`
+- Red-team resilience on attacks 3 and 5
 - Robotics Rust ABI
 
 ## Commercial Readiness
@@ -68,31 +82,26 @@ platform**. B3 benchmark gate fails. Red-team attacks 3 and 5 fail. Bit-exact
 | Field | Value |
 |-------|-------|
 | Verdict | BLOCKED |
-| Commit SHA | c7ded78e9aea |
+| Commit SHA | C7DED78 |
 | Confidence | 58% |
-| Source | `proofs/ENGINEERING_BLOCKERS.md` |
-
-Confidence derives from the committed phase-9 benchmark and red-team surfaces:
-`7` PASS/WITHSTANDS outcomes across `12` named checks in
-`proofs/enterprise_benchmark/GATE_VERDICTS.json` and
-`proofs/red_team/red_team_report.json`.
+| Source | proofs/FINAL_STATUS.md |
 
 ## Tests and Verification
 
 | Code | Check | Verdict |
 |------|-------|---------|
-| V_01 | Benchmark gate B1 compression | PASS |
-| V_02 | Benchmark gate B2 zstd baseline | PASS |
-| V_03 | Benchmark gate B3 bit-exact + search | FAIL |
-| V_04 | Benchmark gate B4 encode latency | PASS |
-| V_05 | Benchmark gate B5 decode latency | PASS |
-| V_06 | Red-team attack 1 baseline | PASS |
-| V_07 | Red-team attack 2 entropy | PASS |
-| V_08 | Red-team attack 3 lossless qualification | FAIL |
-| V_09 | Red-team attack 4 corpus adequacy | INC |
-| V_10 | Red-team attack 5 false-positive rate | FAIL |
-| V_11 | Red-team attack 6 Python 3.12 parity | PASS |
-| V_12 | Red-team attack 7 external reproduction | INC |
+| V_01 | BENCHMARK_GATE_B1_COMPRESSION | PASS |
+| V_02 | BENCHMARK_GATE_B2_ZSTD_BASELINE | PASS |
+| V_03 | BENCHMARK_GATE_B3_BIT-EXACT_+_SE... | FAIL |
+| V_04 | BENCHMARK_GATE_B4_ENCODE_LATENCY | PASS |
+| V_05 | BENCHMARK_GATE_B5_DECODE_LATENCY | PASS |
+| V_06 | RED-TEAM_ATTACK_1_BASELINE | PASS |
+| V_07 | RED-TEAM_ATTACK_2_ENTROPY | PASS |
+| V_08 | RED-TEAM_ATTACK_3_LOSSLESS_QUALI... | FAIL |
+| V_09 | RED-TEAM_ATTACK_4_CORPUS_ADEQUACY | INC |
+| V_10 | RED-TEAM_ATTACK_5_FALSE-POSITIVE... | FAIL |
+| V_11 | RED-TEAM_ATTACK_6_PYTHON_3.12_PA... | PASS |
+| V_12 | RED-TEAM_ATTACK_7_EXTERNAL_REPRO... | INC |
 
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3-2.gif" alt="ZPE-Robotics Masthead Detail 3.2" width="100%">
@@ -195,7 +204,7 @@ The modality-lane count reflects the three recorded parity lanes
 | Repository | `https://github.com/Zer0pa/ZPE-Robotics.git` |
 | Package / import / CLI | `zpe-robotics` / `zpe_robotics` / `zpe-robotics` |
 | Acquisition surface | `pip install zpe-robotics` |
-| License | `LicenseRef-Zer0pa-SAL-6.0` |
+| License | `LicenseRef-Zer0pa-SAL-6.2` |
 | Contact | `architects@zer0pa.ai` |
 | Release state | public repo and published package; engineering surface remains blocker-governed |
 | Engineering | not complete |

@@ -1,6 +1,6 @@
-Zer0pa Source-Available License v6.0
+Zer0pa Source-Available License v6.2
 Licensor: Zer0pa (Pty) Ltd, Republic of South Africa
-SPDX Identifier: LicenseRef-Zer0pa-SAL-6.0
+SPDX Identifier: LicenseRef-Zer0pa-SAL-6.2
 Canonical URL: https://github.com/Zer0pa/ZPE-License-Commercial
 License Date: 04 March 2026
 Effective Date: the date of first public release of the Software under this License, as recorded
@@ -20,19 +20,19 @@ and small organisations while requiring commercial entities above the Revenue Th
 obtain a separate Commercial License. This License is not an open-source license as defined
 by the Open Source Initiative (OSI). This License is a source-available license with delayed
 open-source conversion. This License is intended to interoperate with the Originating
-Publication; definitions, claim scope, and evidence
-references are aligned across the License and the Originating Publication.
+Publication (the defensive disclosure); definitions, claim scope, and evidence
+references are aligned across both documents.
 1. Definitions
 “Licensor” means Zer0pa (Pty) Ltd, Republic of South Africa, including any successor
 entity or assignee of the intellectual property covered by this License.
 “Software” means the source code, object code, binaries, documentation, test suites,
 validation artifacts, configuration files, and all associated materials made available by the
 Licensor under this License, in each case including any portion thereof.
-“Originating Publication” means the body of source code, documentation, technical
-dossiers, evidence materials, and scientific disclosures first published by the Licensor in the
-Licensor’s public repositories (including, as of the License Date, github.com/Zer0pa/ZPE-IMC
-and github.com/Zer0pa/ZPE-License-Commercial), together with all supplementary
-materials, appendices, and errata published by the Licensor in connection with that work, and
+“Originating Publication” means the scientific paper titled “Zero Point Encoding (ZPE):
+An N-Primitive Directional Encoding Family for Multimodal Information Transport —
+Defensive Disclosure and Prior-Art Record” (or any substantially similar title under which
+the same work is posted) by the Licensor (preprint or peer-reviewed publication, as identified by its digital object identifier, persistent identifier, or first-publication date assigned by the hosting platform for that work), together with all supplementary
+materials, appendices, and errata published by the Licensor in connection with that paper, and
 any subsequent peer-reviewed publication or revision of the same work.
 “Protected Architecture” means the information encoding architecture first disclosed in the
 Originating Publication, including any Substantially Similar Implementation thereof, whether
@@ -186,7 +186,7 @@ part of the Software, including lane baseline results, external comparator resul
 campaign outputs, regression test results, gate scorecards, handoff manifests, compatibility
 vectors, and any integrity hashes or manifests published by the Licensor in connection with
 the foregoing. Evidence Bundles are part of the Software for all purposes under this License.
-“Change Date” means the date five (5) years after the date of first public release of each
+“Change Date” means the date three (3) years after the date of first public release of each
 specific version of the Software, as recorded in the version’s release metadata or version
 control tag.
 2. Acceptance
@@ -207,8 +207,8 @@ license agreement.
 2.2 If You do not agree to all the terms and conditions of this License, You must not
 download, copy, use, or distribute the Software. If You have already downloaded a copy,
 You must destroy it.
-2.3 For avoidance of doubt, the mere act of reading or browsing the Originating Publication does not by itself constitute acceptance of this License. However, any subsequent download, use,
-or incorporation of the Software or Protected Architecture following such reading
+2.3 For avoidance of doubt, the mere act of reading the Originating Publication (the defensive disclosure preprint) does not by itself constitute acceptance of this License. However, any subsequent use,
+download, or incorporation of the Software or Protected Architecture following such reading
 is subject to this License.
 3. Grant of Rights
 Subject to the limitations and conditions of this License, the Licensor grants You a non-
@@ -650,5 +650,5 @@ supersede or modify any separately executed Commercial License agreement between
 (or Your Company) and the Licensor; in the event of any conflict between this License and a
 Commercial License, the Commercial License shall prevail to the extent of the conflict.
 Copyright © 2026 Zer0pa (Pty) Ltd. All rights reserved. Licensed under the Zer0pa Source-
-Available License v6.0. License Date: 04 March 2026 Canonical URL:
+Available License v6.2. License Date: 04 March 2026 Canonical URL:
 https://github.com/Zer0pa/ZPE-License-Commercial
