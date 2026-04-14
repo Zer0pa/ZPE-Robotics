@@ -13,7 +13,7 @@ from typing import Any
 
 import numpy as np
 
-from zpe_robotics.anomaly import AnomalyDetector
+from zpe_robotics.anomaly import AnomalyDetector, DEFAULT_ANOMALY_Z_THRESHOLD
 from zpe_robotics.codec import ZPBotCodec
 from zpe_robotics.enterprise_dataset import load_episode_matrices
 from zpe_robotics.fixtures import generate_joint_trajectory
@@ -158,7 +158,7 @@ def attack_5(repo_root: Path) -> dict[str, Any]:
             path.write_bytes(codec.encode(trajectory))
             nominal_paths.append(path)
 
-        detector = AnomalyDetector(z_threshold=3.0).fit(nominal_paths)
+        detector = AnomalyDetector(z_threshold=DEFAULT_ANOMALY_Z_THRESHOLD).fit(nominal_paths)
         reports = [detector.classify(path) for path in nominal_paths]
 
     false_positives = sum(1 for report in reports if report.flagged)

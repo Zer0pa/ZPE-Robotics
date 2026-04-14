@@ -16,13 +16,13 @@
       "verdict": "WITHSTANDS"
     },
     {
-      "argument": "Strict bit-exact replay is required to support a lossless claim.",
       "attack_id": "attack_3_lossless_qualification",
-      "core_max_abs_error": 7.450580596923828e-09,
-      "core_zpbot_array_equal": false,
+      "argument": "Strict bit-exact replay is required to support a lossless claim.",
+      "verdict": "FAILS",
       "lerobot_array_equal": false,
+      "core_zpbot_array_equal": false,
       "lerobot_max_abs_error": 6.459702881099339e-17,
-      "verdict": "FAILS"
+      "core_max_abs_error": 7.450580596923828e-09
     },
     {
       "argument": "Synthetic P@10 may be meaningless without a real corpus and known sample count.",
@@ -35,12 +35,13 @@
       "verdict": "PARTIALLY WITHSTANDS"
     },
     {
-      "argument": "Recall without false-positive rate over nominal trajectories is incomplete.",
       "attack_id": "attack_5_false_positive_rate",
-      "false_positive_rate": 0.2,
-      "false_positives": 4,
+      "argument": "Recall without false-positive rate over nominal trajectories is incomplete.",
+      "verdict": "WITHSTANDS",
+      "false_positives": 0,
       "nominal_trajectories_tested": 20,
-      "verdict": "FAILS"
+      "false_positive_rate": 0.0,
+      "z_threshold_used": 3.22
     },
     {
       "argument": "Python 3.12 parity was not previously proven.",
@@ -67,12 +68,12 @@
   "dataset_root": "/tmp/zpe_phase9_dataset_local/columbia_cairlab_pusht_real",
   "summary": {
     "attacks_total": 7,
-    "fails": 2,
-    "open": 1,
+    "withstands": 4,
     "partially_withstands": 1,
-    "withstands": 3
+    "fails": 1,
+    "open": 1
   },
-  "timestamp_utc": "2026-03-21T16:36:24Z",
+  "timestamp_utc": "2026-04-14T20:26:50Z",
   "tracking": {
     "classic_experiment_key": "",
     "classic_experiment_url": "",

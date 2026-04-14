@@ -207,12 +207,12 @@
       "attack_2_synthetic_entropy": "WITHSTANDS",
       "attack_3_lossless_qualification": "FAILS",
       "attack_4_real_corpus_size": "PARTIALLY WITHSTANDS",
-      "attack_5_false_positive_rate": "FAILS",
+      "attack_5_false_positive_rate": "WITHSTANDS",
       "attack_6_python312_parity": "WITHSTANDS",
       "attack_7_single_operator_provenance": "OPEN"
     }
   },
-  "standing_blockers_note": "Benchmark breadth is not blocker closure. B3 (bit-exact replay), red-team attack_3, and attack_5 remain unresolved unless separately proven by governing proof artifacts.",
+  "standing_blockers_note": "Benchmark breadth is not blocker closure. B3 (bit-exact replay) and red-team attack_3 remain unresolved unless separately proven by governing proof artifacts. attack_5 (FPR) resolved at threshold 3.22.",
   "status": "PASS",
   "timestamp_utc": "2026-04-05T13:31:33Z"
 }

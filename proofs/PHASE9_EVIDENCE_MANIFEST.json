@@ -6,7 +6,7 @@
     "proofs/enterprise_benchmark/benchmark_result.json": "e99d124be5b475a168b1f9a67906bf3e125a7f9e64cb44d0897f410ce334b13a",
     "proofs/enterprise_benchmark/dataset_provenance.json": "201bd8c9b253b7089da04527ecbf87b6e5e6788a0634223b143ad2bc69f4795d",
     "proofs/enterprise_benchmark/GATE_VERDICTS.json": "0963647fa0941c5cf867fffdf047f345a6f517430f61ff08450bf8b9187482d7",
-    "proofs/red_team/red_team_report.json": "09250b314f3ddd2b3238477079a95f41b35ea122f6ba89abbfae9a2081156e6c",
+    "proofs/red_team/red_team_report.json": "194fbe55f7b8701009322eb5724eb5a2ea4cad0c20bfa054557d139bba463420",
     "proofs/runbooks/TRUSTED_PUBLISHING_OPERATOR_STEPS.md": "68e9a4cf5e3cc46bdfcb92cacf3443ddf0dec87c6bc02a7f82c9155563a42933"
   },
   "comet_experiment_ids": {
@@ -22,9 +22,9 @@
   },
   "red_team_summary": {
     "attacks_total": 7,
-    "withstands": 3,
+    "withstands": 4,
     "partially_withstands": 1,
-    "fails": 2,
+    "fails": 1,
     "open": 1
   }
 }
