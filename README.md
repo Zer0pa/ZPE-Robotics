@@ -269,6 +269,8 @@ runtime claims, benchmark verdicts, or release readiness by association.
 | Frozen proof lineage note | `proofs/README_LINEAGE_PATHS.md` |
 | Reference core repo | `https://github.com/Zer0pa/ZPE-IMC` |
 
+**Observability:** [Comet dashboard](https://www.comet.com/zer0pa/zpe-robotics/view/new/panels) (public)
+
 ## Who This Is For
 
 | | |
