@@ -429,7 +429,7 @@ def main() -> int:
         "zpe_p8",
         dataset_sample,
         builder=zpe_codec,
-        searchable_without_decode=True,
+        searchable_without_decode=False,
         anomaly_detectable=True,
         cross_platform_deterministic=True,
         tracking=tracking,

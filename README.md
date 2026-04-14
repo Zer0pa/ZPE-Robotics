@@ -19,7 +19,7 @@ SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
 </p>
 
 ZPE-Robotics is motion telemetry infrastructure — deterministic logging,
-compressed replay, and search-without-decode for robot joint streams.
+compressed replay, and decoded search via PrimitiveIndex for robot joint streams.
 ZPE-Robotics is the public repository for the zpe-robotics package.
 The current public artifact is a standalone Python package for frozen
 wire-v1 motion transport, replay, search, and audit workflows.
@@ -48,7 +48,7 @@ blocker-state and is not a full robotics-platform release.
 
 | Tool | Compression Ratio | Notes |
 |------|-------------------|-------|
-| **ZPE P8** | **187.13×** | governing LeRobot real-data benchmark; searchable without decode |
+| **ZPE P8** | **187.13×** | governing LeRobot real-data benchmark; PrimitiveIndex search requires decode |
 | zstd_l19 | 4.59× | strongest retained classical codec in the benchmark set |
 | zstd_l3 | 4.44× | red-team attack 1 baseline; ZPE is 42.14× better |
 | gzip_l9 | 3.97× | retained gzip baseline |
@@ -60,7 +60,7 @@ blocker-state and is not a full robotics-platform release.
 ## What We Prove
 
 - Spectral wire transport with directional reasoning layer for robot action sequences
-- Search-without-decode operates on compressed motion streams
+- Search operates on decoded motion streams via PrimitiveIndex
 - Red-team resilience: 3 attacks withstood, 3 failed, 1 skipped — transparently reported
 - VLA tokenization aligns with vision-language-action model input formats
 - Public package install surface verified (pip install zpe-robotics)
