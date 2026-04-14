@@ -1,8 +1,8 @@
 # Docs Alignment Execution Plan
 
 Date: 2026-03-21
-Repo: /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics
-Authority playbook: /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/proofs/runbooks/ZER0PA_REPO_DOCS_PLAYBOOK_CANONICAL_2026-03-21.md
+Repo: ./zpe-robotics
+Authority playbook: ./proofs/runbooks/ZER0PA_REPO_DOCS_PLAYBOOK_CANONICAL_2026-03-21.md
 
 ## Governing Objective
 

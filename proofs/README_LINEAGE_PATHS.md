@@ -2,7 +2,7 @@
 
 Some frozen proof artifacts in this repo still contain:
 
-- absolute development paths such as `/Users/Zer0pa/...`
+- absolute development paths such as `...`
 - the older package name `zpe-motion-kernel`
 - the older CLI name `zpe`
 

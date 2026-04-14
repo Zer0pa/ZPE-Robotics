@@ -18,7 +18,7 @@ SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-187× compression on real robot data. Search without decode. Red-team tested. `pip install -e .` from clone (PyPI publication pending).
+187× compression on real robot data. Red-team tested. `pip install -e .` from clone (PyPI publication pending).
 
 ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compressed replay, and PrimitiveIndex search over joint streams. Built for robotics infrastructure teams and simulation/replay platforms where motion logs are expensive to store, slow to search, and impossible to replay deterministically. The package is public. The governing engineering surface remains blocker-state.
 
@@ -33,7 +33,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 |--------|-------|----------|
 | COMPRESSION | 187×† | vs zstd_l3 4.44× (42× better) |
 
-† Bounded-lossy (angular fidelity ≤ 0.5°); baselines are lossless.
+† Bounded-lossy (angular fidelity ≤ 0.5° on smooth trajectories; step/discontinuous inputs cause Gibbs ringing — 68° RMSE measured on unit-amplitude step signal); baselines are lossless.
 | ENCODE_P50 | 0.11 | ms |
 | DECODE_P50 | 0.09 | ms |
 | BENCHMARK_GATES | 4/5 | 3 datasets, 3 families |
@@ -55,7 +55,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 | h5py_gzip9 | 2.69× | HDF5 gzip baseline |
 | h5py_lzf | 2.15× | HDF5 fast baseline |
 
-† Bounded-lossy (angular fidelity ≤ 0.5°); all other baselines are lossless.
+† Bounded-lossy (angular fidelity ≤ 0.5° on smooth trajectories; step/discontinuous inputs cause Gibbs ringing — 68° RMSE measured on unit-amplitude step signal); all other baselines are lossless.
 
 ## What We Prove
 
@@ -74,6 +74,8 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 - B3 benchmark gate pass
 - Red-team resilience on attacks 3 and 5
 - Robotics Rust ABI
+- Universal angular fidelity — the ≤ 0.5° bound holds on smooth trajectories only; FFT-based encoding causes Gibbs ringing on step/discontinuous inputs (68° RMSE measured on unit-amplitude step signal)
+- Search-without-decode — PrimitiveIndex requires full packet decode before indexing
 
 ## Commercial Readiness
 

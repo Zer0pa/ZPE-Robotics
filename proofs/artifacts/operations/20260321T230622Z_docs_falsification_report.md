@@ -1,7 +1,7 @@
 # Docs Falsification Report
 
 Timestamp: 2026-03-21T23:06:22Z
-Repo: /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics
+Repo: ./zpe-robotics
 
 ## Unsupported Claims Removed Or Downgraded
 - README wording was tightened from a broader "public wedge" framing to a narrower "current release surface" framing.

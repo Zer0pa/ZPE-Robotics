@@ -6,7 +6,7 @@ Generate the compact COMM-03 audit bundle for the canonical published packet wit
 
 ## Preconditions
 
-- Repo root is `/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics`
+- Repo root is `./zpe-robotics`
 - `proofs/release_candidate/canonical_release_packet.zpbot` exists
 - The working environment can run the local test subset and the `zpe` CLI
 

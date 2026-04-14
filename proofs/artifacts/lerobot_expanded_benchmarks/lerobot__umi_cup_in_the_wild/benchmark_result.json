@@ -147,7 +147,7 @@
       "encode_time_ms_p95": 0.10494600000000005,
       "max_abs_error": 0.2653927244246006,
       "raw_size_bytes": 28000,
-      "searchable_without_decode": true,
+      "searchable_without_decode": false,
       "tool_id": "zpe_p8"
     },
     "zstd_l19": {

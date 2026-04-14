@@ -7,7 +7,7 @@
         "venv",
         "/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_venv_nig1sd32/venv"
       ],
-      "cwd": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics",
+      "cwd": "./zpe-robotics",
       "returncode": 0,
       "stderr": "",
       "stdout": "",
@@ -22,10 +22,10 @@
         "-e",
         "."
       ],
-      "cwd": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics",
+      "cwd": "./zpe-robotics",
       "returncode": 0,
       "stderr": "\n[notice] A new release of pip is available: 25.3 -> 26.0.1\n[notice] To update, run: /private/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_venv_nig1sd32/venv/bin/python -m pip install --upgrade pip\n",
-      "stdout": "Obtaining file:///Users/Zer0pa/ZPE/ZPE%20Robotics/zpe-robotics\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status 'done'\n  Getting requirements to build editable: started\n  Getting requirements to build editable: finished with status 'done'\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\nCollecting mcap>=1.3 (from zpe-motion-kernel==0.1.0)\n  Using cached mcap-1.3.1-py3-none-any.whl.metadata (381 bytes)\nCollecting numpy>=2.0 (from zpe-motion-kernel==0.1.0)\n  Using cached numpy-2.4.3-cp311-cp311-macosx_14_0_x86_64.whl.metadata (6.6 kB)\nCollecting lz4 (from mcap>=1.3->zpe-motion-kernel==0.1.0)\n  Using cached lz4-4.4.5-cp311-cp311-macosx_10_9_x86_64.whl.metadata (3.8 kB)\nCollecting zstandard (from mcap>=1.3->zpe-motion-kernel==0.1.0)\n  Using cached zstandard-0.25.0-cp311-cp311-macosx_10_9_x86_64.whl.metadata (3.3 kB)\nUsing cached mcap-1.3.1-py3-none-any.whl (20 kB)\nUsing cached numpy-2.4.3-cp311-cp311-macosx_14_0_x86_64.whl (6.8 MB)\nUsing cached lz4-4.4.5-cp311-cp311-macosx_10_9_x86_64.whl (207 kB)\nUsing cached zstandard-0.25.0-cp311-cp311-macosx_10_9_x86_64.whl (795 kB)\nBuilding wheels for collected packages: zpe-motion-kernel\n  Building editable for zpe-motion-kernel (pyproject.toml): started\n  Building editable for zpe-motion-kernel (pyproject.toml): finished with status 'done'\n  Created wheel for zpe-motion-kernel: filename=zpe_motion_kernel-0.1.0-0.editable-py3-none-any.whl size=19294 sha256=e585f7094870ca4fa57d2ea52f4e59d11c73600aa2793bd3f310cba14b6a198f\n  Stored in directory: /private/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/pip-ephem-wheel-cache-9hc9f1mj/wheels/e4/f4/c4/ba0ddfdcce708975180e21b8da5ca864720f799db23eaaa19b\nSuccessfully built zpe-motion-kernel\nInstalling collected packages: zstandard, numpy, lz4, mcap, zpe-motion-kernel\n\nSuccessfully installed lz4-4.4.5 mcap-1.3.1 numpy-2.4.3 zpe-motion-kernel-0.1.0 zstandard-0.25.0\n",
+      "stdout": "Obtaining file://ZPE/ZPE%20Robotics/zpe-robotics\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status 'done'\n  Getting requirements to build editable: started\n  Getting requirements to build editable: finished with status 'done'\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\nCollecting mcap>=1.3 (from zpe-motion-kernel==0.1.0)\n  Using cached mcap-1.3.1-py3-none-any.whl.metadata (381 bytes)\nCollecting numpy>=2.0 (from zpe-motion-kernel==0.1.0)\n  Using cached numpy-2.4.3-cp311-cp311-macosx_14_0_x86_64.whl.metadata (6.6 kB)\nCollecting lz4 (from mcap>=1.3->zpe-motion-kernel==0.1.0)\n  Using cached lz4-4.4.5-cp311-cp311-macosx_10_9_x86_64.whl.metadata (3.8 kB)\nCollecting zstandard (from mcap>=1.3->zpe-motion-kernel==0.1.0)\n  Using cached zstandard-0.25.0-cp311-cp311-macosx_10_9_x86_64.whl.metadata (3.3 kB)\nUsing cached mcap-1.3.1-py3-none-any.whl (20 kB)\nUsing cached numpy-2.4.3-cp311-cp311-macosx_14_0_x86_64.whl (6.8 MB)\nUsing cached lz4-4.4.5-cp311-cp311-macosx_10_9_x86_64.whl (207 kB)\nUsing cached zstandard-0.25.0-cp311-cp311-macosx_10_9_x86_64.whl (795 kB)\nBuilding wheels for collected packages: zpe-motion-kernel\n  Building editable for zpe-motion-kernel (pyproject.toml): started\n  Building editable for zpe-motion-kernel (pyproject.toml): finished with status 'done'\n  Created wheel for zpe-motion-kernel: filename=zpe_motion_kernel-0.1.0-0.editable-py3-none-any.whl size=19294 sha256=e585f7094870ca4fa57d2ea52f4e59d11c73600aa2793bd3f310cba14b6a198f\n  Stored in directory: /private/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/pip-ephem-wheel-cache-9hc9f1mj/wheels/e4/f4/c4/ba0ddfdcce708975180e21b8da5ca864720f799db23eaaa19b\nSuccessfully built zpe-motion-kernel\nInstalling collected packages: zstandard, numpy, lz4, mcap, zpe-motion-kernel\n\nSuccessfully installed lz4-4.4.5 mcap-1.3.1 numpy-2.4.3 zpe-motion-kernel-0.1.0 zstandard-0.25.0\n",
       "step": "pip_install_editable"
     },
     {
@@ -36,7 +36,7 @@
         "install",
         "pytest"
       ],
-      "cwd": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics",
+      "cwd": "./zpe-robotics",
       "returncode": 0,
       "stderr": "\n[notice] A new release of pip is available: 25.3 -> 26.0.1\n[notice] To update, run: /private/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_venv_nig1sd32/venv/bin/python -m pip install --upgrade pip\n",
       "stdout": "Collecting pytest\n  Using cached pytest-9.0.2-py3-none-any.whl.metadata (7.6 kB)\nCollecting iniconfig>=1.0.1 (from pytest)\n  Using cached iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)\nCollecting packaging>=22 (from pytest)\n  Using cached packaging-26.0-py3-none-any.whl.metadata (3.3 kB)\nCollecting pluggy<2,>=1.5 (from pytest)\n  Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)\nCollecting pygments>=2.7.2 (from pytest)\n  Using cached pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)\nUsing cached pytest-9.0.2-py3-none-any.whl (374 kB)\nUsing cached pluggy-1.6.0-py3-none-any.whl (20 kB)\nUsing cached iniconfig-2.3.0-py3-none-any.whl (7.5 kB)\nUsing cached packaging-26.0-py3-none-any.whl (74 kB)\nUsing cached pygments-2.19.2-py3-none-any.whl (1.2 MB)\nInstalling collected packages: pygments, pluggy, packaging, iniconfig, pytest\n\nSuccessfully installed iniconfig-2.3.0 packaging-26.0 pluggy-1.6.0 pygments-2.19.2 pytest-9.0.2\n",
@@ -47,7 +47,7 @@
         "/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_venv_nig1sd32/venv/bin/zpe",
         "--version"
       ],
-      "cwd": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics",
+      "cwd": "./zpe-robotics",
       "returncode": 0,
       "stderr": "",
       "stdout": "zpe 0.1.0\n",
@@ -60,7 +60,7 @@
         "from pathlib import Path\nimport sys\nfrom zpe_robotics.release_candidate import build_canonical_arm_fixture, encode_single_record_bag\n\nbag_path = Path(sys.argv[1])\ntrajectory = build_canonical_arm_fixture()\nbag_path.write_bytes(encode_single_record_bag(trajectory))\nprint(str(bag_path))",
         "/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_work_dfj348nb/arm_fixture.bag"
       ],
-      "cwd": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics",
+      "cwd": "./zpe-robotics",
       "returncode": 0,
       "stderr": "",
       "stdout": "/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_work_dfj348nb/arm_fixture.bag\n",
@@ -73,7 +73,7 @@
         "/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_work_dfj348nb/arm_fixture.bag",
         "/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_work_dfj348nb/arm_fixture.zpbot"
       ],
-      "cwd": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics",
+      "cwd": "./zpe-robotics",
       "returncode": 0,
       "stderr": "",
       "stdout": "/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_work_dfj348nb/arm_fixture.zpbot\n",
@@ -85,7 +85,7 @@
         "verify",
         "/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_work_dfj348nb/arm_fixture.zpbot"
       ],
-      "cwd": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics",
+      "cwd": "./zpe-robotics",
       "returncode": 0,
       "stderr": "",
       "stdout": "{\n  \"authority_surface\": \"zpbot-v2\",\n  \"compatibility_mode\": \"wire-v1\",\n  \"file\": \"/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_work_dfj348nb/arm_fixture.zpbot\",\n  \"frames\": 4096,\n  \"header_bytes\": 18,\n  \"joints\": 6,\n  \"keep_coeffs\": 8,\n  \"payload_bytes\": 395,\n  \"payload_crc32\": 3849527369,\n  \"sha256\": \"6397ae579567f3e7c95ab2015649a7eb0f1dfb103bff1d09eb96fee0a3d41efb\",\n  \"status\": \"PASS\",\n  \"wire_version\": 1\n}\n",
@@ -98,7 +98,7 @@
         "/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_work_dfj348nb/arm_fixture.zpbot",
         "/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_work_dfj348nb/arm_fixture_replay.bag"
       ],
-      "cwd": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics",
+      "cwd": "./zpe-robotics",
       "returncode": 0,
       "stderr": "",
       "stdout": "/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_work_dfj348nb/arm_fixture_replay.bag\n",
@@ -111,7 +111,7 @@
         "from pathlib import Path\nimport json\nimport sys\nfrom zpe_robotics.release_candidate import default_codec\nfrom zpe_robotics.rosbag_adapter import decode_records\n\nreplay_path = Path(sys.argv[1])\nrecords = decode_records(replay_path.read_bytes(), default_codec(), decode_trajectory=True, strict_index=True)\npayload = {\n    \"records\": len(records),\n    \"trajectory_shape\": list(records[0][\"trajectory\"].shape) if records else [],\n}\nprint(json.dumps(payload, sort_keys=True))",
         "/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_work_dfj348nb/arm_fixture_replay.bag"
       ],
-      "cwd": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics",
+      "cwd": "./zpe-robotics",
       "returncode": 0,
       "stderr": "",
       "stdout": "{\"records\": 1, \"trajectory_shape\": [4096, 6]}\n",
@@ -125,7 +125,7 @@
         "tests",
         "-q"
       ],
-      "cwd": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics",
+      "cwd": "./zpe-robotics",
       "returncode": 0,
       "stderr": "",
       "stdout": "...............s................                                         [100%]\n31 passed, 1 skipped in 1.71s\n",
@@ -170,7 +170,7 @@
   "install_ok": true,
   "platform": "macOS-15.5-x86_64-i386-64bit",
   "python_bin": "/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/zpe_clean_clone_venv_nig1sd32/venv/bin/python",
-  "repo_root": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics",
+  "repo_root": "./zpe-robotics",
   "status": "PASS",
   "tests_ok": true,
   "timestamp": "2026-03-21T20:32:14.902451+00:00",

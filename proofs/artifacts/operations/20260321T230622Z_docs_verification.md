@@ -1,7 +1,7 @@
 # Docs Verification
 
 Timestamp: 2026-03-21T23:06:22Z
-Repo: /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics
+Repo: ./zpe-robotics
 Branch: main
 
 ## Scope
@@ -33,8 +33,8 @@ Branch: main
   - `proofs/reruns/robotics_wave1_local_2026-03-16_r1`
 
 ## Evidence Files
-- `/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/proofs/artifacts/operations/20260321T230550Z_e_g3_comparator_doccheck.json`
-- `/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/proofs/artifacts/operations/20260321T230550Z_ros2_bridge_probe_doccheck.json`
+- `./proofs/artifacts/operations/20260321T230550Z_e_g3_comparator_doccheck.json`
+- `./proofs/artifacts/operations/20260321T230550Z_ros2_bridge_probe_doccheck.json`
 
 ## Verdict
 - PASS for the docs-owner alignment gate

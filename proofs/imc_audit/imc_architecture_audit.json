@@ -8,9 +8,9 @@
   "integration_gap": "The current zpe-motion-kernel package implements the .zpbot encode/decode path in pure Python via src/zpe_robotics/codec.py and src/zpe_robotics/wire.py, and its pyproject.toml exposes no Rust build or binding dependency. ZPE-IMC does contain a real PyO3 extension, but that extension serves the multimodal zpe_imc_kernel stream contract through code/zpe_multimodal/core/imc_native.py and code/rust/imc_kernel/src/lib.rs rather than a robotics .zpbot packet ABI. There is no existing encode_packet/decode_packet binding for the robotics packet surface to wire into today.",
   "recommended_integration_path": "Do not claim current Rust integration. If Phase 9 later proves a real need for a robotics-native path, add a dedicated PyO3 robotics packet ABI that exposes encode_packet and decode_packet for the frozen .zpbot contract and consume it from zpe-motion-kernel behind the existing Python API with a single-command pip install path. Until that ABI exists, treat robotics Rust routing as a separate engineering task rather than a broken configuration toggle.",
   "evidence": {
-    "robotics_pyproject": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/pyproject.toml",
-    "robotics_encode_path": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/src/zpe_robotics/codec.py",
-    "robotics_decode_path": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/src/zpe_robotics/wire.py",
+    "robotics_pyproject": "./pyproject.toml",
+    "robotics_encode_path": "./src/zpe_robotics/codec.py",
+    "robotics_decode_path": "./src/zpe_robotics/wire.py",
     "imc_python_package": "/tmp/ZPE-IMC/code/pyproject.toml",
     "imc_python_binding_surface": "/tmp/ZPE-IMC/code/zpe_multimodal/core/imc_native.py",
     "imc_contract": "/tmp/ZPE-IMC/docs/family/IMC_INTERFACE_CONTRACT.md",

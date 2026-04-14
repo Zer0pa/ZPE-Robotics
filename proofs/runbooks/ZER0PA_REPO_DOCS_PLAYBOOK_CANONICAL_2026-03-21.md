@@ -13,7 +13,7 @@ The objective is simple:
 
 ## Current Authority Baseline
 For current repo-shape truth, treat this repo as the authority example:
-- canonical working repo: `/Users/Zer0pa/ZPE-IMC-REPO`
+- canonical working repo: `ZPE-IMC-REPO`
 - current live public repo: `https://github.com/Zer0pa/ZPE-IMC` on `main`
 
 Use both layers deliberately:
@@ -22,10 +22,10 @@ Use both layers deliberately:
 - if they diverge, do not hand a derivative repo a guessed standard; reconcile first
 
 For historical operations memory and prior wave evidence, use:
-- legacy ops/evidence root: `/Users/Zer0pa/ZPE/ZPE-IMC/agent_ops`
+- legacy ops/evidence root: `ZPE/ZPE-IMC/agent_ops`
 
 Current counted canonical registry basis:
-- `/Users/Zer0pa/ZPE-IMC-REPO/agent_ops/repo_augmentation_wave_20/artifacts/WP_B/CANONICAL_DOC_SET_POST.tsv`
+- `./ZPE-IMC-REPO/agent_ops/repo_augmentation_wave_20/artifacts/WP_B/CANONICAL_DOC_SET_POST.tsv`
 
 Current registry count:
 - `27` counted canonical docs
@@ -52,16 +52,16 @@ Important distinction:
 Until a derivative repo is ready for its own custom media pass, copy the ZPE-IMC visual system exactly.
 
 Shared masthead asset used across docs:
-- `/Users/Zer0pa/ZPE-IMC-REPO/.github/assets/readme/zpe-masthead.gif`
+- `./ZPE-IMC-REPO/.github/assets/readme/zpe-masthead.gif`
 
 Root README-only additional GIFs:
-- `/Users/Zer0pa/ZPE-IMC-REPO/.github/assets/readme/zpe-masthead-option-3-2.gif`
-- `/Users/Zer0pa/ZPE-IMC-REPO/.github/assets/readme/zpe-masthead-option-3-3.gif`
+- `./ZPE-IMC-REPO/.github/assets/readme/zpe-masthead-option-3-2.gif`
+- `./ZPE-IMC-REPO/.github/assets/readme/zpe-masthead-option-3-3.gif`
 
 Other current README assets worth retaining during bootstrap:
-- nav buttons: `/Users/Zer0pa/ZPE-IMC-REPO/.github/assets/readme/nav/`
-- section bars: `/Users/Zer0pa/ZPE-IMC-REPO/.github/assets/readme/section-bars/`
-- license callout: `/Users/Zer0pa/ZPE-IMC-REPO/.github/assets/readme/callouts/license-free-tier-reverse.svg`
+- nav buttons: `./ZPE-IMC-REPO/.github/assets/readme/nav/`
+- section bars: `./ZPE-IMC-REPO/.github/assets/readme/section-bars/`
+- license callout: `./ZPE-IMC-REPO/.github/assets/readme/callouts/license-free-tier-reverse.svg`
 
 Render rules:
 - Root README keeps three animated GIF placements.
@@ -106,47 +106,47 @@ These are the files currently counted in the post-Wave-20 canonical registry.
 
 | Path | Role | How it differs | Interrelates with |
 |---|---|---|---|
-| `/Users/Zer0pa/ZPE-IMC-REPO/README.md` | Front door. Product story, current authority, modality snapshot, throughput, proof routing, next steps. | Only file that carries the full narrative stack and all three GIFs. | `AUDITOR_PLAYBOOK.md`, `PUBLIC_AUDIT_LIMITS.md`, `docs/ARCHITECTURE.md`, `CHANGELOG.md`, proof anchors. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/CHANGELOG.md` | Public release-surface delta log. | Change history, not architecture or audit instruction. | `README.md`, `RELEASING.md`, `LICENSE`, `docs/LEGAL_BOUNDARIES.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/CITATION.cff` | Citation metadata for the repo/software record. | Machine-readable citation surface, not narrative prose. | `README.md`, `LICENSE`, external repo metadata. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/CODE_OF_CONDUCT.md` | Community behavior standard. | Social conduct contract, not technical contribution policy. | `CONTRIBUTING.md`, GitHub templates. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/CONTRIBUTING.md` | Contribution entry rules and evidence discipline. | Tells contributors how to work; does not define project architecture. | `CODE_OF_CONDUCT.md`, PR template, issue templates, `README.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/GOVERNANCE.md` | Public governance boundary for evidence, claims, status semantics, compatibility posture. | Policy/decision surface, not release log or implementation guide. | `README.md`, `ROADMAP.md`, `RELEASING.md`, `PUBLIC_AUDIT_LIMITS.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/LICENSE` | Legal source of truth. | Only authoritative legal text. Everything else must defer to it. | `CITATION.cff`, `docs/LEGAL_BOUNDARIES.md`, package metadata. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/ROADMAP.md` | Status-first planning and downstream posture. | Future-facing posture document, not a guarantee ledger. | `GOVERNANCE.md`, `RELEASING.md`, `README.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/SECURITY.md` | Vulnerability reporting and support boundary for security issues. | Security operations surface, not general support or bug triage. | GitHub issue templates, `README.md`, `CONTRIBUTING.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/ARCHITECTURE.md` | Canonical architecture index and runtime authority map. | Explains where truth lives and how runtime/build/proof layers fit together. | `README.md`, `docs/family/IMC_INTERFACE_CONTRACT.md`, proof logs. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/FAQ.md` | Public Q&A for outsiders. | Reader-assistance surface, not the governing truth by itself. | `README.md`, `AUDITOR_PLAYBOOK.md`, `PUBLIC_AUDIT_LIMITS.md`, `SECURITY.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/README.md` | Documentation index and routing layer. | Directory map, not front-door persuasion. | `docs/FAQ.md`, `docs/SUPPORT.md`, family docs, proof corpus. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/SUPPORT.md` | Support routing and response expectations. | Operational contact/routing surface, not contribution policy. | `README.md`, `docs/FAQ.md`, `SECURITY.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/.github/PULL_REQUEST_TEMPLATE.md` | PR intake discipline. | GitHub workflow artifact, not public explanatory prose. | `CONTRIBUTING.md`, `GOVERNANCE.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/.github/ISSUE_TEMPLATE/bug_report.md` | Bug intake structure. | Focused on reproducible defects. | `SECURITY.md`, `CONTRIBUTING.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/.github/ISSUE_TEMPLATE/evidence_dispute.md` | Claims/evidence dispute intake. | Handles disagreement over proof/claims rather than code defects. | `GOVERNANCE.md`, `PUBLIC_AUDIT_LIMITS.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/.github/ISSUE_TEMPLATE/feature_request.md` | Feature intake structure. | Product/request routing, not claims verification. | `ROADMAP.md`, `CONTRIBUTING.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/.github/ISSUE_TEMPLATE/question.md` | Question intake structure. | General Q&A intake. | `docs/FAQ.md`, `docs/SUPPORT.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/SAL Governance Docs/Zer0pa SAL 6.2/Zer0pa_SAL_v6_2_FINAL_deterministic.docx` | Canonical retained SAL source artifact. | Source-pack artifact, not a rendered repo-policy doc. | `LICENSE`, SAL governance markdown set. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/SAL Governance Docs/Zer0pa SAL 6.2/Zer0pa_SAL_v6_2_FINAL_deterministic.txt` | Canonical retained SAL text artifact. | Plain-text legal source artifact, not repo-facing summary prose. | `LICENSE`, SAL governance markdown set. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/SAL Governance Docs/EQUIVALENCE_DISPUTE_WORKFLOW.md` | Governance procedure for equivalence disputes. | Specialized legal/governance workflow, not core repo onboarding. | `GOVERNANCE.md`, `LICENSE`, `LEGAL_MESSAGE_CONTROL_PACK.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/SAL Governance Docs/FUNCTIONAL_EQUIVALENCE_TEST_STANDARD.md` | Standard for assessing functional equivalence. | Evaluation standard, not repo build/runtime guidance. | `EQUIVALENCE_DISPUTE_WORKFLOW.md`, `INDEPENDENT_DEVELOPMENT_STANDARD.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/SAL Governance Docs/INDEPENDENT_DEVELOPMENT_STANDARD.md` | Standard for independent-development posture. | Governance/legal standard, not engineering contribution rules. | `FUNCTIONAL_EQUIVALENCE_TEST_STANDARD.md`, `PRIOR_ART_POSITIONING_GUARDRAILS.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/SAL Governance Docs/LEGAL_MESSAGE_CONTROL_PACK.md` | Controlled public/legal messaging guardrails. | Messaging discipline, not technical architecture. | `GOVERNANCE.md`, `PRIOR_ART_POSITIONING_GUARDRAILS.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/SAL Governance Docs/PRIOR_ART_POSITIONING_GUARDRAILS.md` | Prior-art/public-positioning constraints. | Positioning/legal boundary surface, not product FAQ. | `CITATION.cff`, `LEGAL_MESSAGE_CONTROL_PACK.md`, `GOVERNANCE.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/SAL Governance Docs/REVENUE_THRESHOLD_TRANSITION_POLICY.md` | Revenue-threshold transition policy. | Commercial/governance threshold rule, not license body. | `LICENSE`, `README.md`, `docs/LEGAL_BOUNDARIES.md`. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/SAL Governance Docs/TERMINATION_ENFORCEMENT_PROTOCOL.md` | Enforcement/termination procedure. | Governance protocol, not contributor workflow. | `LICENSE`, `GOVERNANCE.md`, `LEGAL_MESSAGE_CONTROL_PACK.md`. |
+| `./ZPE-IMC-REPO/README.md` | Front door. Product story, current authority, modality snapshot, throughput, proof routing, next steps. | Only file that carries the full narrative stack and all three GIFs. | `AUDITOR_PLAYBOOK.md`, `PUBLIC_AUDIT_LIMITS.md`, `docs/ARCHITECTURE.md`, `CHANGELOG.md`, proof anchors. |
+| `./ZPE-IMC-REPO/CHANGELOG.md` | Public release-surface delta log. | Change history, not architecture or audit instruction. | `README.md`, `RELEASING.md`, `LICENSE`, `docs/LEGAL_BOUNDARIES.md`. |
+| `./ZPE-IMC-REPO/CITATION.cff` | Citation metadata for the repo/software record. | Machine-readable citation surface, not narrative prose. | `README.md`, `LICENSE`, external repo metadata. |
+| `./ZPE-IMC-REPO/CODE_OF_CONDUCT.md` | Community behavior standard. | Social conduct contract, not technical contribution policy. | `CONTRIBUTING.md`, GitHub templates. |
+| `./ZPE-IMC-REPO/CONTRIBUTING.md` | Contribution entry rules and evidence discipline. | Tells contributors how to work; does not define project architecture. | `CODE_OF_CONDUCT.md`, PR template, issue templates, `README.md`. |
+| `./ZPE-IMC-REPO/GOVERNANCE.md` | Public governance boundary for evidence, claims, status semantics, compatibility posture. | Policy/decision surface, not release log or implementation guide. | `README.md`, `ROADMAP.md`, `RELEASING.md`, `PUBLIC_AUDIT_LIMITS.md`. |
+| `./ZPE-IMC-REPO/LICENSE` | Legal source of truth. | Only authoritative legal text. Everything else must defer to it. | `CITATION.cff`, `docs/LEGAL_BOUNDARIES.md`, package metadata. |
+| `./ZPE-IMC-REPO/ROADMAP.md` | Status-first planning and downstream posture. | Future-facing posture document, not a guarantee ledger. | `GOVERNANCE.md`, `RELEASING.md`, `README.md`. |
+| `./ZPE-IMC-REPO/SECURITY.md` | Vulnerability reporting and support boundary for security issues. | Security operations surface, not general support or bug triage. | GitHub issue templates, `README.md`, `CONTRIBUTING.md`. |
+| `./ZPE-IMC-REPO/docs/ARCHITECTURE.md` | Canonical architecture index and runtime authority map. | Explains where truth lives and how runtime/build/proof layers fit together. | `README.md`, `docs/family/IMC_INTERFACE_CONTRACT.md`, proof logs. |
+| `./ZPE-IMC-REPO/docs/FAQ.md` | Public Q&A for outsiders. | Reader-assistance surface, not the governing truth by itself. | `README.md`, `AUDITOR_PLAYBOOK.md`, `PUBLIC_AUDIT_LIMITS.md`, `SECURITY.md`. |
+| `./ZPE-IMC-REPO/docs/README.md` | Documentation index and routing layer. | Directory map, not front-door persuasion. | `docs/FAQ.md`, `docs/SUPPORT.md`, family docs, proof corpus. |
+| `./ZPE-IMC-REPO/docs/SUPPORT.md` | Support routing and response expectations. | Operational contact/routing surface, not contribution policy. | `README.md`, `docs/FAQ.md`, `SECURITY.md`. |
+| `./ZPE-IMC-REPO/.github/PULL_REQUEST_TEMPLATE.md` | PR intake discipline. | GitHub workflow artifact, not public explanatory prose. | `CONTRIBUTING.md`, `GOVERNANCE.md`. |
+| `./ZPE-IMC-REPO/.github/ISSUE_TEMPLATE/bug_report.md` | Bug intake structure. | Focused on reproducible defects. | `SECURITY.md`, `CONTRIBUTING.md`. |
+| `./ZPE-IMC-REPO/.github/ISSUE_TEMPLATE/evidence_dispute.md` | Claims/evidence dispute intake. | Handles disagreement over proof/claims rather than code defects. | `GOVERNANCE.md`, `PUBLIC_AUDIT_LIMITS.md`. |
+| `./ZPE-IMC-REPO/.github/ISSUE_TEMPLATE/feature_request.md` | Feature intake structure. | Product/request routing, not claims verification. | `ROADMAP.md`, `CONTRIBUTING.md`. |
+| `./ZPE-IMC-REPO/.github/ISSUE_TEMPLATE/question.md` | Question intake structure. | General Q&A intake. | `docs/FAQ.md`, `docs/SUPPORT.md`. |
+| `./ZPE-IMC-REPO/docs/SAL Governance Docs/Zer0pa SAL 6.2/Zer0pa_SAL_v6_2_FINAL_deterministic.docx` | Canonical retained SAL source artifact. | Source-pack artifact, not a rendered repo-policy doc. | `LICENSE`, SAL governance markdown set. |
+| `./ZPE-IMC-REPO/docs/SAL Governance Docs/Zer0pa SAL 6.2/Zer0pa_SAL_v6_2_FINAL_deterministic.txt` | Canonical retained SAL text artifact. | Plain-text legal source artifact, not repo-facing summary prose. | `LICENSE`, SAL governance markdown set. |
+| `./ZPE-IMC-REPO/docs/SAL Governance Docs/EQUIVALENCE_DISPUTE_WORKFLOW.md` | Governance procedure for equivalence disputes. | Specialized legal/governance workflow, not core repo onboarding. | `GOVERNANCE.md`, `LICENSE`, `LEGAL_MESSAGE_CONTROL_PACK.md`. |
+| `./ZPE-IMC-REPO/docs/SAL Governance Docs/FUNCTIONAL_EQUIVALENCE_TEST_STANDARD.md` | Standard for assessing functional equivalence. | Evaluation standard, not repo build/runtime guidance. | `EQUIVALENCE_DISPUTE_WORKFLOW.md`, `INDEPENDENT_DEVELOPMENT_STANDARD.md`. |
+| `./ZPE-IMC-REPO/docs/SAL Governance Docs/INDEPENDENT_DEVELOPMENT_STANDARD.md` | Standard for independent-development posture. | Governance/legal standard, not engineering contribution rules. | `FUNCTIONAL_EQUIVALENCE_TEST_STANDARD.md`, `PRIOR_ART_POSITIONING_GUARDRAILS.md`. |
+| `./ZPE-IMC-REPO/docs/SAL Governance Docs/LEGAL_MESSAGE_CONTROL_PACK.md` | Controlled public/legal messaging guardrails. | Messaging discipline, not technical architecture. | `GOVERNANCE.md`, `PRIOR_ART_POSITIONING_GUARDRAILS.md`. |
+| `./ZPE-IMC-REPO/docs/SAL Governance Docs/PRIOR_ART_POSITIONING_GUARDRAILS.md` | Prior-art/public-positioning constraints. | Positioning/legal boundary surface, not product FAQ. | `CITATION.cff`, `LEGAL_MESSAGE_CONTROL_PACK.md`, `GOVERNANCE.md`. |
+| `./ZPE-IMC-REPO/docs/SAL Governance Docs/REVENUE_THRESHOLD_TRANSITION_POLICY.md` | Revenue-threshold transition policy. | Commercial/governance threshold rule, not license body. | `LICENSE`, `README.md`, `docs/LEGAL_BOUNDARIES.md`. |
+| `./ZPE-IMC-REPO/docs/SAL Governance Docs/TERMINATION_ENFORCEMENT_PROTOCOL.md` | Enforcement/termination procedure. | Governance protocol, not contributor workflow. | `LICENSE`, `GOVERNANCE.md`, `LEGAL_MESSAGE_CONTROL_PACK.md`. |
 
 ### B. Supporting authority docs that are not optional in practice
 These files were not part of the counted `27`, but they are operationally important and should be treated as active supporting authority.
 
 | Path | Role | Why it matters |
 |---|---|---|
-| `/Users/Zer0pa/ZPE-IMC-REPO/AUDITOR_PLAYBOOK.md` | Shortest honest outsider audit path. | This is the fastest way for an external reviewer to verify the repo without reading everything. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/PUBLIC_AUDIT_LIMITS.md` | Honesty boundary for what public audit can and cannot prove. | Prevents overstating what a public snapshot establishes. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/code/README.md` | Package-facing install/runtime/API surface. | Needed because repo-root README should not carry all package details. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/LEGAL_BOUNDARIES.md` | Compact release-surface legal boundary note. | Keeps smell/taste/package/legal caveats close to the public docs without overloading the license body. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/RELEASING.md` | Public release gate and decision boundary. | Critical for release semantics even though it fell outside the counted `27` registry. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/family/IMC_INTERFACE_CONTRACT.md` | Frozen downstream contract. | This is the machine/human contract for downstream integrations. It is canonical even if it sat outside a prior registry count. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/family/IMC_RELEASE_NOTE_FOR_BIO_IOT.md` | Family-facing downstream handoff note. | Needed for downstream consumers and release coordination. |
-| `/Users/Zer0pa/ZPE-IMC-REPO/docs/family/IMC_COMPATIBILITY_VECTOR.json` | Machine-readable compatibility anchor. | Not Markdown, but still canonical. Downstream alignment depends on it. |
+| `./ZPE-IMC-REPO/AUDITOR_PLAYBOOK.md` | Shortest honest outsider audit path. | This is the fastest way for an external reviewer to verify the repo without reading everything. |
+| `./ZPE-IMC-REPO/PUBLIC_AUDIT_LIMITS.md` | Honesty boundary for what public audit can and cannot prove. | Prevents overstating what a public snapshot establishes. |
+| `./ZPE-IMC-REPO/code/README.md` | Package-facing install/runtime/API surface. | Needed because repo-root README should not carry all package details. |
+| `./ZPE-IMC-REPO/docs/LEGAL_BOUNDARIES.md` | Compact release-surface legal boundary note. | Keeps smell/taste/package/legal caveats close to the public docs without overloading the license body. |
+| `./ZPE-IMC-REPO/RELEASING.md` | Public release gate and decision boundary. | Critical for release semantics even though it fell outside the counted `27` registry. |
+| `./ZPE-IMC-REPO/docs/family/IMC_INTERFACE_CONTRACT.md` | Frozen downstream contract. | This is the machine/human contract for downstream integrations. It is canonical even if it sat outside a prior registry count. |
+| `./ZPE-IMC-REPO/docs/family/IMC_RELEASE_NOTE_FOR_BIO_IOT.md` | Family-facing downstream handoff note. | Needed for downstream consumers and release coordination. |
+| `./ZPE-IMC-REPO/docs/family/IMC_COMPATIBILITY_VECTOR.json` | Machine-readable compatibility anchor. | Not Markdown, but still canonical. Downstream alignment depends on it. |
 
 ## How These Documents Interrelate
 Think of the ZPE-IMC docs as six layers.
@@ -491,7 +491,7 @@ You are the docs owner for this repo.
 Use ZPE-IMC as the documentation structure and quality reference, not as the content source.
 
 Read first:
-1. /Users/Zer0pa/ZPE/ZPE-IMC/agent_ops/ZER0PA_REPO_DOCS_PLAYBOOK_CANONICAL_2026-03-21.md
+1. ZPE/ZPE-IMC/agent_ops/ZER0PA_REPO_DOCS_PLAYBOOK_CANONICAL_2026-03-21.md
 2. The target repo's current README, CHANGELOG, CONTRIBUTING, SECURITY, LICENSE, CITATION, docs/README, docs/FAQ, docs/SUPPORT, and docs/ARCHITECTURE if present.
 3. The target repo's current proof/runtime/contract artifacts.
 4. The target repo's AGENTS.md.
@@ -514,18 +514,18 @@ Required outputs:
 ```
 
 ## Evidence Used For This Playbook
-- `/Users/Zer0pa/ZPE-IMC-REPO/agent_ops/repo_augmentation_wave_20/artifacts/WP_B/CANONICAL_DOC_SET_POST.tsv`
-- `/Users/Zer0pa/ZPE-IMC-REPO/agent_ops/HANDOVER_REPO_AUGMENTATION_ORCHESTRATOR_2026-03-05.md`
-- `/Users/Zer0pa/ZPE/ZPE-IMC/agent_ops/ZER0PA_REPO_DOCS_PLAYBOOK.md`
-- `/Users/Zer0pa/ZPE/ZPE-IMC/agent_ops/HANDOVER_REPO_DOCS_STATE_AND_REPO_INSPECTOR_PROMPT_2026-03-02.md`
-- `/Users/Zer0pa/ZPE/ZPE-IMC/agent_ops/readme_layout_wave_8/GITHUB_DOCS_DESIGN_PLAYBOOK_GOLD_STANDARD.md`
-- `/Users/Zer0pa/ZPE-IMC-REPO/README.md`
-- `/Users/Zer0pa/ZPE-IMC-REPO/AUDITOR_PLAYBOOK.md`
-- `/Users/Zer0pa/ZPE-IMC-REPO/PUBLIC_AUDIT_LIMITS.md`
-- `/Users/Zer0pa/ZPE-IMC-REPO/docs/ARCHITECTURE.md`
-- `/Users/Zer0pa/ZPE-IMC-REPO/docs/README.md`
-- `/Users/Zer0pa/ZPE-IMC-REPO/docs/family/IMC_INTERFACE_CONTRACT.md`
-- `/Users/Zer0pa/ZPE-IMC-REPO/docs/family/IMC_RELEASE_NOTE_FOR_BIO_IOT.md`
+- `./ZPE-IMC-REPO/agent_ops/repo_augmentation_wave_20/artifacts/WP_B/CANONICAL_DOC_SET_POST.tsv`
+- `./ZPE-IMC-REPO/agent_ops/HANDOVER_REPO_AUGMENTATION_ORCHESTRATOR_2026-03-05.md`
+- `ZPE/ZPE-IMC/agent_ops/ZER0PA_REPO_DOCS_PLAYBOOK.md`
+- `ZPE/ZPE-IMC/agent_ops/HANDOVER_REPO_DOCS_STATE_AND_REPO_INSPECTOR_PROMPT_2026-03-02.md`
+- `ZPE/ZPE-IMC/agent_ops/readme_layout_wave_8/GITHUB_DOCS_DESIGN_PLAYBOOK_GOLD_STANDARD.md`
+- `./ZPE-IMC-REPO/README.md`
+- `./ZPE-IMC-REPO/AUDITOR_PLAYBOOK.md`
+- `./ZPE-IMC-REPO/PUBLIC_AUDIT_LIMITS.md`
+- `./ZPE-IMC-REPO/docs/ARCHITECTURE.md`
+- `./ZPE-IMC-REPO/docs/README.md`
+- `./ZPE-IMC-REPO/docs/family/IMC_INTERFACE_CONTRACT.md`
+- `./ZPE-IMC-REPO/docs/family/IMC_RELEASE_NOTE_FOR_BIO_IOT.md`
 - OpenAI official source: `https://cdn.openai.com/pdf/6a2631dc-783e-479b-b1a4-af0cfbd38630/how-openai-uses-codex.pdf`
 - OpenAI Agents SDK: `https://openai.github.io/openai-agents-python/`
 - OpenAI Agents SDK, Agent orchestration: `https://openai.github.io/openai-agents-python/multi_agent/`

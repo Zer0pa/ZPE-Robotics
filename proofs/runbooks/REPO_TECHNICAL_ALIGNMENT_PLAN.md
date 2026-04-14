@@ -1,7 +1,7 @@
 # Repo Technical Alignment Plan
 
 Date: 2026-03-21
-Repo: /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics
+Repo: ./zpe-robotics
 Scope: technical release-architecture alignment pass for the current public wedge
 
 ## Objective

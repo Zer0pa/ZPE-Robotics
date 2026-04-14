@@ -6,7 +6,7 @@ Preserve the bounded COMM-03 Mac-plus-RedMagic execution path by proving that th
 
 ## Preconditions
 
-- Repo root is `/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics`
+- Repo root is `./zpe-robotics`
 - `proofs/release_candidate/canonical_release_packet.zpbot` exists on the Mac
 - `proofs/comm03/comm03_provenance_manifest.json` already exists from the Mac audit bundle step
 - ADB reaches the attached RedMagic device

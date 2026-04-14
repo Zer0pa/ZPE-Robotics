@@ -186,7 +186,7 @@
       "B3": {
         "actual": {
           "zpe_bit_exact_replay": false,
-          "zpe_searchable_without_decode": true
+          "zpe_searchable_without_decode": false
         },
         "condition": "zpe is the only tool with bit_exact_replay=true and searchable_without_decode=true",
         "pass": false

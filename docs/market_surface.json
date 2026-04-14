@@ -3,8 +3,8 @@
   "repo_role": "product_candidate",
   "status": "PUBLIC_PACKAGE_BUT_NOT_RELEASE_READY",
   "plain_english_summary": "Deterministic motion transport and replay kernel for robotics telemetry, search, and audit workflows.",
-  "commercial_wedge": "187× compression on real robot data with search-without-decode and red-team-tested adversarial surface. Public PyPI package today.",
-  "technical_wedge": "Frozen wire-v1 motion transport codec. 187.1345× compression on lerobot real data. B1/B2/B4/B5 gates pass. Search-without-decode verified.",
+  "commercial_wedge": "187× compression on real robot data (angular fidelity ≤ 0.5° on smooth trajectories) with PrimitiveIndex search and red-team-tested adversarial surface. Public PyPI package today.",
+  "technical_wedge": "Frozen wire-v1 motion transport codec. 187.1345× compression on lerobot real data (angular fidelity ≤ 0.5° on smooth trajectories; Gibbs ringing on step inputs). B1/B2/B4/B5 gates pass. Search operates on decoded streams via PrimitiveIndex.",
   "ideal_first_buyer": "Robotics infrastructure team or simulation/replay platform",
   "deployment_model": "Public Python package — pip install zpe-motion-kernel",
   "proof_anchors": [

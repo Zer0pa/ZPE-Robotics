@@ -46,7 +46,7 @@
       "argument": "Python 3.12 parity was not previously proven.",
       "attack_id": "attack_6_python312_parity",
       "matches_reference": true,
-      "python312_log": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/proofs/red_team/python312_parity.log",
+      "python312_log": "./proofs/red_team/python312_parity.log",
       "reference_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125",
       "replay_sha256": "a0941be23dc19bf96d7ec2e25f7ede9c051c3b28f51f141b89fdfc2691c3e125",
       "verdict": "WITHSTANDS"
@@ -62,7 +62,7 @@
       "verdict": "OPEN"
     }
   ],
-  "benchmark_result_path": "/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics/proofs/enterprise_benchmark/benchmark_result.json",
+  "benchmark_result_path": "./proofs/enterprise_benchmark/benchmark_result.json",
   "dataset_name": "lerobot/columbia_cairlab_pusht_real",
   "dataset_root": "/tmp/zpe_phase9_dataset_local/columbia_cairlab_pusht_real",
   "summary": {

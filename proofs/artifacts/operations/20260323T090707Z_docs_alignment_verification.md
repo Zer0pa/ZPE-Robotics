@@ -1,7 +1,7 @@
 # Docs Alignment Verification
 
 Timestamp: 2026-03-23T09:07:07Z
-Repo: /Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics
+Repo: ./zpe-robotics
 Branch: main
 
 ## Scope

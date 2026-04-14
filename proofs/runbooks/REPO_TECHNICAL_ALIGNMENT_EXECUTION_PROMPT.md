@@ -8,8 +8,8 @@ You are doing technical release-architecture execution for one repo in the ZPE f
 
 Read these first and follow them:
 
-1. `/Users/Zer0pa/ZPE/Git Orchestreator/AGENT_RULES.md`
-2. `/Users/Zer0pa/ZPE/Git Orchestreator/WORK_RECEIPT_TEMPLATE.md`
+1. `ZPE/Git Orchestreator/AGENT_RULES.md`
+2. `ZPE/Git Orchestreator/WORK_RECEIPT_TEMPLATE.md`
 
 Core instruction:
 
@@ -129,7 +129,7 @@ If not, say exactly what technical gap remains and why it is still open.
 
 Before finishing, write one repo-local receipt using:
 
-`/Users/Zer0pa/ZPE/Git Orchestreator/WORK_RECEIPT_TEMPLATE.md`
+`ZPE/Git Orchestreator/WORK_RECEIPT_TEMPLATE.md`
 
 Do the full job.
 Do not stop halfway.

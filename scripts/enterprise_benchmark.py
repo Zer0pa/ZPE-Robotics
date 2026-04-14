@@ -425,6 +425,7 @@ def main() -> int:
         cross_platform_deterministic="unknown",
         tracking=tracking,
     )
+    # search requires decode — PrimitiveIndex.add() calls decode_packet()
     results["zpe_p8"] = benchmark_tool(
         "zpe_p8",
         dataset_sample,
