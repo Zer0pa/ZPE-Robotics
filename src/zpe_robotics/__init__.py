@@ -1,4 +1,4 @@
-"""zpe-motion-kernel package surface."""
+"""zpe-robotics package surface."""
 
 from importlib.metadata import PackageNotFoundError, version as distribution_version
 from pathlib import Path
@@ -21,7 +21,7 @@ def _pyproject_version() -> str:
 
 def _resolve_version() -> str:
     try:
-        return distribution_version("zpe-motion-kernel")
+        return distribution_version("zpe-robotics")
     except PackageNotFoundError:
         return _pyproject_version()
 
