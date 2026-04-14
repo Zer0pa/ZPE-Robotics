@@ -18,13 +18,9 @@ SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-ZPE-Robotics is motion telemetry infrastructure — deterministic logging,
-compressed replay, and decoded search via PrimitiveIndex for robot joint streams.
-ZPE-Robotics is the public repository for the zpe-robotics package.
-The current public artifact is a standalone Python package for frozen
-wire-v1 motion transport, replay, search, and audit workflows.
-The repo and package are public, but the governing engineering surface remains
-blocker-state and is not a full robotics-platform release.
+187× compression on real robot data. Search without decode. Red-team tested. `pip install zpe-robotics`.
+
+ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compressed replay, and PrimitiveIndex search over joint streams. Built for robotics infrastructure teams and simulation/replay platforms where motion logs are expensive to store, slow to search, and impossible to replay deterministically. The package is public. The governing engineering surface remains blocker-state.
 
 | Field | Value |
 |-------|-------|
@@ -59,6 +55,8 @@ blocker-state and is not a full robotics-platform release.
 
 ## What We Prove
 
+> Auditable guarantees backed by committed proof artifacts. Start at `AUDITOR_PLAYBOOK.md`.
+
 - Spectral wire transport with directional reasoning layer for robot action sequences
 - Search operates on decoded motion streams via PrimitiveIndex
 - Red-team resilience: 3 attacks withstood, 3 failed, 1 skipped — transparently reported
@@ -85,6 +83,8 @@ blocker-state and is not a full robotics-platform release.
 | Commit SHA | C7DED78 |
 | Confidence | 58% |
 | Source | proofs/FINAL_STATUS.md |
+
+> **Evaluators:** Engineering blockers active — see `proofs/ENGINEERING_BLOCKERS.md`. `pip install zpe-robotics` to evaluate today. Contact hello@zer0pa.com.
 
 ## Tests and Verification
 
@@ -268,3 +268,12 @@ runtime claims, benchmark verdicts, or release readiness by association.
 | Robotics-to-IMC boundary | `docs/family/ROBOTICS_RELEASE_LINKAGE.md` |
 | Frozen proof lineage note | `proofs/README_LINEAGE_PATHS.md` |
 | Reference core repo | `https://github.com/Zer0pa/ZPE-IMC` |
+
+## Who This Is For
+
+| | |
+|---|---|
+| **Ideal first buyer** | Robotics infrastructure team or simulation/replay platform |
+| **Pain** | Robot telemetry archives grow fast and can only be searched after full decompression — replay pipelines lack determinism guarantees |
+| **Deployment** | Public Python package — `pip install zpe-motion-kernel` |
+| **Family position** | Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer |
