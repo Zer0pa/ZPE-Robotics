@@ -18,7 +18,7 @@ SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-187× compression on real robot data. Red-team tested. `pip install -e .` from clone (PyPI publication pending).
+187× compression on real robot data. Red-team tested. `pip install zpe-robotics` (available on PyPI).
 
 ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compressed replay, and PrimitiveIndex search over joint streams. Built for robotics infrastructure teams and simulation/replay platforms where motion logs are expensive to store, slow to search, and impossible to replay deterministically. The package is public. The governing engineering surface remains blocker-state.
 
@@ -65,7 +65,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 - Search operates on decoded motion streams via PrimitiveIndex
 - Red-team resilience: 3 attacks withstood, 3 failed, 1 skipped — transparently reported
 - VLA tokenization aligns with vision-language-action model input formats
-- Public package install surface verified (`pip install -e .` from clone; PyPI publication pending)
+- Public package install surface verified (available on PyPI: `pip install zpe-robotics`)
 
 ## What We Don't Claim
 
@@ -90,7 +90,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 | Confidence | 58% |
 | Source | proofs/FINAL_STATUS.md |
 
-> **Evaluators:** Engineering blockers active — see `proofs/ENGINEERING_BLOCKERS.md`. `pip install -e .` from clone to evaluate today (PyPI publication pending). Contact hello@zer0pa.com.
+> **Evaluators:** Engineering blockers active — see `proofs/ENGINEERING_BLOCKERS.md`. `pip install zpe-robotics` to evaluate (available on PyPI). Contact hello@zer0pa.com.
 
 ## Tests and Verification
 
@@ -209,7 +209,7 @@ The modality-lane count reflects the three recorded parity lanes
 |---|---|
 | Repository | `https://github.com/Zer0pa/ZPE-Robotics.git` |
 | Package / import / CLI | `zpe-robotics` / `zpe_robotics` / `zpe-robotics` |
-| Acquisition surface | `pip install -e .` from clone (PyPI publication pending) |
+| Acquisition surface | `pip install zpe-robotics` (available on PyPI) |
 | License | `LicenseRef-Zer0pa-SAL-6.2` |
 | Contact | `architects@zer0pa.ai` |
 | Release state | public repo and published package; engineering surface remains blocker-governed |
@@ -228,7 +228,14 @@ The modality-lane count reflects the three recorded parity lanes
   <img src=".github/assets/readme/section-bars/setup-and-verification.svg" alt="SETUP AND VERIFICATION" width="100%">
 </p>
 
-Install from clone (PyPI publication pending):
+Install from PyPI:
+
+```bash
+pip install zpe-robotics
+zpe-robotics --version
+```
+
+Or install from source (development):
 
 ```bash
 pip install -e .
