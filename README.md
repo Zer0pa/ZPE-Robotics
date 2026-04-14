@@ -31,10 +31,10 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 
 | Metric | Value | Baseline |
 |--------|-------|----------|
-| COMPRESSION | 187.13× | vs zstd_l3 4.44× (42× better) |
-| ENCODE_P50 | 0.1106 ms | — |
-| DECODE_P50 | 0.0888 ms | — |
-| BENCHMARK_GATES | 4/5 pass | 3 datasets, 3 families |
+| COMPRESSION | 187× | vs zstd_l3 4.44× (42× better) |
+| ENCODE_P50 | 0.11 | ms |
+| DECODE_P50 | 0.09 | ms |
+| BENCHMARK_GATES | 4/5 | 3 datasets, 3 families |
 
 > Source: [`proofs/enterprise_benchmark/benchmark_result.json`](proofs/enterprise_benchmark/benchmark_result.json) | [`proofs/enterprise_benchmark/GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) | [`proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json`](proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json)
 
