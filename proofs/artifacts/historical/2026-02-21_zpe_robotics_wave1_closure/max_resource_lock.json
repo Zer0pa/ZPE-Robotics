@@ -2,12 +2,12 @@
   "deterministic_sampling_policy": "first_n_rows_streaming",
   "e1_inputs": [
     {
-      "path": "/Users/prinivenpillay/ZPE Multimodality/ZPE 10-Lane NET-NEW Resource Maximization Pack.md",
+      "path": "/Users/zer0pa-build/ZPE Multimodality/ZPE 10-Lane NET-NEW Resource Maximization Pack.md",
       "sha256": "71af9a7dd418bf554e67c8e0c3ac6f6a76dea9ba93cecc2ccbeb9f40677d81df",
       "size_bytes": 61148
     },
     {
-      "path": "/Users/prinivenpillay/ZPE Multimodality/ZPE 10-Lane NET-NEW Resource Maximization Pack.pdf",
+      "path": "/Users/zer0pa-build/ZPE Multimodality/ZPE 10-Lane NET-NEW Resource Maximization Pack.pdf",
       "sha256": "12dc2fcb7930d0bbd3007d5fc3e8d108d9c6272ac49a72bb25bc026e46b4d840",
       "size_bytes": 1396077
     }

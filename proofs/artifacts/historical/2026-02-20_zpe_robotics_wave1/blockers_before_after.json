@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-02-21T13:56:47.039314+00:00",
-  "artifact_root": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1",
+  "artifact_root": "/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1",
   "before_state": {
     "blocker_count": 2,
     "gate_blockers": [
@@ -143,10 +143,10 @@
     "remaining_blockers": []
   },
   "evidence_paths": [
-    "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/handoff_manifest.json",
-    "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/ros2_runtime_probe.json",
-    "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/policy_impact_delta_report.json",
-    "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/max_resource_validation_log.md",
-    "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/net_new_gap_closure_matrix.json"
+    "/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/handoff_manifest.json",
+    "/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/ros2_runtime_probe.json",
+    "/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/policy_impact_delta_report.json",
+    "/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/max_resource_validation_log.md",
+    "/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/net_new_gap_closure_matrix.json"
   ]
 }

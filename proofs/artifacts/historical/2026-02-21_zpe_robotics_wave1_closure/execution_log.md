@@ -2,9 +2,9 @@
 
 ## Context
 - lane: ZPE Robotics
-- workspace: /Users/prinivenpillay/ZPE Multimodality/ZPE Robotics
-- prior adjudicated bundle: /Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1
-- new closure bundle: /Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-21_zpe_robotics_wave1_closure
+- workspace: /Users/zer0pa-build/ZPE Multimodality/ZPE Robotics
+- prior adjudicated bundle: /Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1
+- new closure bundle: /Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-21_zpe_robotics_wave1_closure
 
 ## Command Timeline
 1. `python scripts/run_wave1.py --output-root artifacts/2026-02-21_zpe_robotics_wave1_closure --seed 20260220 --determinism-runs 5 --max-wave`
@@ -15,7 +15,7 @@
 - rc: 0
 - outcome: Docker daemon recovered on arm64 runtime path
 
-3. `"/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv_octo_arm64/bin/python" -m pip install --force-reinstall --no-cache-dir tensorflow-macos==2.15.0`
+3. `"/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/.venv_octo_arm64/bin/python" -m pip install --force-reinstall --no-cache-dir tensorflow-macos==2.15.0`
 - rc: 0
 - outcome: restored TensorFlow runtime files for Octo environment
 

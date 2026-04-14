@@ -15,7 +15,7 @@
     {
       "command": "/opt/homebrew/bin/docker run --rm docker.io/library/ros:humble-ros-base-jammy bash -lc ros2 --help >/dev/null && echo ROS2_OK",
       "returncode": 1,
-      "stderr": "Cannot connect to the Docker daemon at unix:///Users/prinivenpillay/.colima/default/docker.sock. Is the docker daemon running?",
+      "stderr": "Cannot connect to the Docker daemon at unix:///Users/zer0pa-build/.colima/default/docker.sock. Is the docker daemon running?",
       "stdout": ""
     },
     {
@@ -28,12 +28,12 @@
       "command": "/opt/homebrew/bin/colima start --cpu 4 --memory 8 --disk 60",
       "returncode": 1,
       "stderr": "time=\"2026-03-22T01:05:52+02:00\" level=info msg=\"starting colima\"\ntime=\"2026-03-22T01:05:52+02:00\" level=info msg=\"runtime: docker\"\ntime=\"2026-03-22T01:05:53+02:00\" level=info msg=\"resizing disk to 60GiB...\" context=vm\ntime=\"2026-03-22T01:05:54+02:00\" level=info msg=\"starting ...\" context=vm\ntime=\"2026-03-22T01:05:55+02:00\" level=fatal msg=\"error starting vm: error at 'starting': exit status 1\"",
-      "stdout": "time=\"2026-03-22T01:05:54+02:00\" level=info msg=\"Using the existing instance \\\"colima\\\"\"\ntime=\"2026-03-22T01:05:54+02:00\" level=info msg=\"Starting the instance \\\"colima\\\" with internal VM driver \\\"vz\\\"\"\ntime=\"2026-03-22T01:05:55+02:00\" level=info msg=\"[hostagent] hostagent socket created at /Users/prinivenpillay/.colima/_lima/colima/ha.sock\"\ntime=\"2026-03-22T01:05:55+02:00\" level=info msg=\"[hostagent] Starting VZ (hint: to watch the boot progress, see \\\"/Users/prinivenpillay/.colima/_lima/colima/serial*.log\\\")\"\ntime=\"2026-03-22T01:05:55+02:00\" level=fatal msg=\"exiting, status={Running:false Degraded:false Exiting:true Errors:[] SSHLocalPort:0 CloudInitProgress:<nil>} (hint: see \\\"/Users/prinivenpillay/.colima/_lima/colima/ha.stderr.log\\\")\""
+      "stdout": "time=\"2026-03-22T01:05:54+02:00\" level=info msg=\"Using the existing instance \\\"colima\\\"\"\ntime=\"2026-03-22T01:05:54+02:00\" level=info msg=\"Starting the instance \\\"colima\\\" with internal VM driver \\\"vz\\\"\"\ntime=\"2026-03-22T01:05:55+02:00\" level=info msg=\"[hostagent] hostagent socket created at /Users/zer0pa-build/.colima/_lima/colima/ha.sock\"\ntime=\"2026-03-22T01:05:55+02:00\" level=info msg=\"[hostagent] Starting VZ (hint: to watch the boot progress, see \\\"/Users/zer0pa-build/.colima/_lima/colima/serial*.log\\\")\"\ntime=\"2026-03-22T01:05:55+02:00\" level=fatal msg=\"exiting, status={Running:false Degraded:false Exiting:true Errors:[] SSHLocalPort:0 CloudInitProgress:<nil>} (hint: see \\\"/Users/zer0pa-build/.colima/_lima/colima/ha.stderr.log\\\")\""
     },
     {
       "command": "/opt/homebrew/bin/docker run --rm docker.io/library/ros:humble-ros-base-jammy bash -lc ros2 --help >/dev/null && echo ROS2_OK",
       "returncode": 1,
-      "stderr": "Cannot connect to the Docker daemon at unix:///Users/prinivenpillay/.colima/default/docker.sock. Is the docker daemon running?",
+      "stderr": "Cannot connect to the Docker daemon at unix:///Users/zer0pa-build/.colima/default/docker.sock. Is the docker daemon running?",
       "stdout": ""
     },
     {

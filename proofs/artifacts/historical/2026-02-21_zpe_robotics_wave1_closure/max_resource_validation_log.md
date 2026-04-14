@@ -44,7 +44,7 @@ Run 'docker run --help' for
 - result: PASS
 
 ## MuJoCo Runtime
-- attempt_1_command: `/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv/bin/python -c import mujoco; print('MUJOCO_OK', mujoco.__version__)`
+- attempt_1_command: `/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/.venv/bin/python -c import mujoco; print('MUJOCO_OK', mujoco.__version__)`
 - attempt_1_returncode: 1
 - attempt_1_error: Traceback (most recent call last):
   File "<string>", line 1, in <module>
@@ -53,25 +53,25 @@ Run 'docker run --help' for
 ModuleNotFoundError: No module named 'mujoco'
 - attempt_2_command: `/opt/homebrew/bin/python3.11 -c import platform,sys; print(platform.machine()); print(sys.version.split()[0])`
 - attempt_2_returncode: 0
-- attempt_3_command: `/opt/homebrew/bin/python3.11 -m venv /Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64`
+- attempt_3_command: `/opt/homebrew/bin/python3.11 -m venv /Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64`
 - attempt_3_returncode: 0
-- attempt_4_command: `/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64/bin/python -m pip install -q --upgrade pip setuptools wheel`
+- attempt_4_command: `/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64/bin/python -m pip install -q --upgrade pip setuptools wheel`
 - attempt_4_returncode: 0
-- attempt_5_command: `/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64/bin/python -m pip install -q mujoco==3.5.0 --only-binary=:all:`
+- attempt_5_command: `/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64/bin/python -m pip install -q mujoco==3.5.0 --only-binary=:all:`
 - attempt_5_returncode: 0
-- attempt_6_command: `/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64/bin/python /Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/scripts/mujoco_parity_probe.py --output artifacts/2026-02-21_zpe_robotics_wave1_closure/mujoco_parity_report.json --seed 20260220 --samples 128`
+- attempt_6_command: `/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64/bin/python /Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/scripts/mujoco_parity_probe.py --output artifacts/2026-02-21_zpe_robotics_wave1_closure/mujoco_parity_report.json --seed 20260220 --samples 128`
 - attempt_6_returncode: 0
-- selected_python: /Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64/bin/python
+- selected_python: /Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/.venv_mujoco_arm64/bin/python
 - result: PASS
 
 ## Octo Policy Comparator
-- attempt_1_command: `HF_HOME=/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.hf_cache /Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv/bin/python -c from octo.model.octo_model import OctoModel; OctoModel.load_pretrained('hf://rail-berkeley/octo-base'); print('OCTO_OK')`
+- attempt_1_command: `HF_HOME=/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/.hf_cache /Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/.venv/bin/python -c from octo.model.octo_model import OctoModel; OctoModel.load_pretrained('hf://rail-berkeley/octo-base'); print('OCTO_OK')`
 - attempt_1_returncode: 1
 - attempt_1_error: Traceback (most recent call last):
   File "<string>", line 1, in <module>
     from octo.model.octo_model import OctoModel; OctoModel.load_pretrained('hf://rail-berkeley/octo-base'); print('OCTO_OK')
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-- attempt_2_command: `HF_HOME=/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.hf_cache /Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv_octo_arm64/bin/python -c from octo.model.octo_model import OctoModel; OctoModel.load_pretrained('hf://rail-berkeley/octo-base'); print('OCTO_OK')`
+- attempt_2_command: `HF_HOME=/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/.hf_cache /Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/.venv_octo_arm64/bin/python -c from octo.model.octo_model import OctoModel; OctoModel.load_pretrained('hf://rail-berkeley/octo-base'); print('OCTO_OK')`
 - attempt_2_returncode: 0
-- selected_python: /Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/.venv_octo_arm64/bin/python
+- selected_python: /Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/.venv_octo_arm64/bin/python
 - result: PASS

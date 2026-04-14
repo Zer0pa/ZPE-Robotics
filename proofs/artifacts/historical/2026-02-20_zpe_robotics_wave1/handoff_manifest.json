@@ -7,7 +7,7 @@
       "sha256": "2b93db580a19bc98faab62e7ba5a39a8eeb11c7a38a1cd455b0f9e50d3516fcf"
     },
     "blockers_before_after.json": {
-      "path": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/blockers_before_after.json",
+      "path": "/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/blockers_before_after.json",
       "sha256": "ec5f2b5190911e630e43830aa56acf54204da5cb24bd8c240e57d9acb075925b"
     },
     "claim_status_delta.md": {
@@ -39,7 +39,7 @@
       "sha256": "49fc9738150a4f090c5d0fa1853b5027755e5404b90f774765dc97a0ccd970b5"
     },
     "handoff_manifest.json": {
-      "path": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/handoff_manifest.json",
+      "path": "/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics/artifacts/2026-02-20_zpe_robotics_wave1/handoff_manifest.json",
       "sha256": "07c7449894d0cc36ebc2b311b08cc521d1645f7ce3af285912c0e97d1eb57b3f"
     },
     "impracticality_decisions.json": {
@@ -140,6 +140,6 @@
   "max_wave": true,
   "missing_artifacts": [],
   "quality_overall_status": "GO",
-  "scope_root": "/Users/prinivenpillay/ZPE Multimodality/ZPE Robotics",
+  "scope_root": "/Users/zer0pa-build/ZPE Multimodality/ZPE Robotics",
   "seed": 20260220
 }
