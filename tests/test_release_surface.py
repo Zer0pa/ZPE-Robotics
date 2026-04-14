@@ -71,9 +71,9 @@ def test_clean_clone_verify_checks_cli_version() -> None:
     assert '[str(zpe_bin), "--version"]' in text
 
 
-def test_license_uses_five_year_change_date() -> None:
+def test_license_uses_three_year_change_date() -> None:
     text = _read_text("LICENSE")
-    assert "five (5) years after the date of first public release" in text
+    assert "three (3) years after the date of first public release" in text
 
 
 def test_root_readme_keeps_expected_gif_surface() -> None:
