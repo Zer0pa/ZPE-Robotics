@@ -86,6 +86,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 | Field | Value |
 |-------|-------|
 | Verdict | BLOCKED |
+| Release posture | Live work in progress; not a final official release |
 | Commit SHA | C7DED78 |
 | Confidence | 58% |
 | Source | proofs/FINAL_STATUS.md |
