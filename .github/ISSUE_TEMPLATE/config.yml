@@ -1,8 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: Security report
-    url: mailto:architects@zer0pa.ai
-    about: Report security issues privately.
-  - name: Licensing question
-    url: mailto:architects@zer0pa.ai
-    about: Use email for licensing and commercial-use questions.

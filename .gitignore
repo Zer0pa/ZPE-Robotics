@@ -22,6 +22,9 @@ dist/
 .idea/
 .vscode/
 
+# Legacy
+legacy_packages/
+
 # Misc
 node_modules/
 target/
