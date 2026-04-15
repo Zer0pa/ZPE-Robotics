@@ -18,7 +18,7 @@ SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-187× compression on real robot data. Red-team tested. `pip install zpe-robotics` (available on PyPI).
+Searchable motion archives with VLA token export. 187× compression on real robot data. Red-team tested. `pip install zpe-robotics` (available on PyPI).
 
 ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compressed replay, and PrimitiveIndex search over joint streams. Built for robotics infrastructure teams and simulation/replay platforms where motion logs are expensive to store, slow to search, and impossible to replay deterministically. The package is public. The governing engineering surface remains blocker-state.
 
@@ -35,7 +35,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 
 † Bounded-lossy (angular fidelity ≤ 0.5° on smooth trajectories; step/discontinuous inputs cause Gibbs ringing — 68° RMSE measured on unit-amplitude step signal); baselines are lossless.
 | ENCODE_P50 | 0.11 | ms |
-| DECODE_P50 | 0.09 | ms |
+| VLA_TOKEN_EXPORT | 24-token FAST surface | [`vla_bridge.py`](src/zpe_robotics/vla_bridge.py) |
 | BENCHMARK_GATES | 4/5 | 3 datasets, 3 families |
 
 > Source: [`proofs/enterprise_benchmark/benchmark_result.json`](proofs/enterprise_benchmark/benchmark_result.json) | [`proofs/enterprise_benchmark/GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) | [`proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json`](proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json)
