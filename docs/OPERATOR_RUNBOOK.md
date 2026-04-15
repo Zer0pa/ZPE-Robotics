@@ -20,10 +20,10 @@ the current authority surface.
 |---|---|
 | install | `pip install zpe-robotics` |
 | record a ROS2 bag with ZPE | `ros2 bag record -s zpe --all` |
-| compress an existing bag | `zpe encode input.bag output.zpbot` |
-| replay | `zpe decode output.zpbot replayed.bag` |
-| verify integrity | `zpe verify output.zpbot` |
-| search a trajectory library | `zpe search ./demos REACH` |
-| detect fleet anomalies | `zpe anomaly ./fleet_bags query.zpbot` |
-| compress a LeRobot dataset | `zpe lerobot-compress ./lerobot_data ./compressed` |
-| export VLA tokens | `zpe export-tokens trajectory.zpbot --format fast` |
+| compress an existing bag | `zpe-robotics encode input.bag output.zpbot` |
+| replay | `zpe-robotics decode output.zpbot replayed.bag` |
+| verify integrity | `zpe-robotics verify output.zpbot` |
+| search a trajectory library | `zpe-robotics search ./demos REACH` |
+| detect fleet anomalies | `zpe-robotics anomaly ./fleet_bags query.zpbot` |
+| compress a LeRobot dataset | `zpe-robotics lerobot-compress ./lerobot_data ./compressed` |
+| export VLA tokens | `zpe-robotics export-tokens trajectory.zpbot --format fast` |

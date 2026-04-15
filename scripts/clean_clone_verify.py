@@ -104,7 +104,7 @@ def main() -> int:
     python_bin = venv_dir / "bin" / "python"
     pip_cmd = [str(python_bin), "-m", "pip"]
     pytest_cmd = [str(python_bin), "-m", "pytest", "tests", "-q"]
-    zpe_bin = venv_dir / "bin" / "zpe"
+    zpe_bin = venv_dir / "bin" / "zpe-robotics"
 
     try:
         result = run_command([sys.executable, "-m", "venv", str(venv_dir)], cwd=repo_root)

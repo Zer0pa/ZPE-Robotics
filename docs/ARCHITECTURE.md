@@ -63,4 +63,4 @@ Common execution path:
 
 - `python -m pytest tests -q`
 - `python -m build`
-- `zpe verify proofs/release_candidate/canonical_release_packet.zpbot`
+- `zpe-robotics verify proofs/release_candidate/canonical_release_packet.zpbot`

@@ -6,6 +6,20 @@ import tomllib
 
 
 ROOT = Path(__file__).resolve().parents[1]
+CURRENT_DOC_SURFACE = [
+    "CHANGELOG.md",
+    "docs/ARCHITECTURE.md",
+    "docs/LEGAL_BOUNDARIES.md",
+    "docs/OPERATOR_RUNBOOK.md",
+    "docs/family/ROBOTICS_RELEASE_LINKAGE.md",
+]
+CURRENT_FRONTDOOR_DOCS = [
+    "README.md",
+    "docs/ARCHITECTURE.md",
+    "docs/LEGAL_BOUNDARIES.md",
+    "docs/OPERATOR_RUNBOOK.md",
+    "docs/family/ROBOTICS_RELEASE_LINKAGE.md",
+]
 
 
 def _load_pyproject() -> dict[str, object]:
@@ -87,28 +101,8 @@ def test_root_readme_keeps_expected_gif_surface() -> None:
 
 
 def test_docs_surface_uses_shared_masthead_only() -> None:
-    doc_paths = [
-        "CHANGELOG.md",
-        "CODE_OF_CONDUCT.md",
-        "CONTRIBUTING.md",
-        "GOVERNANCE.md",
-        "RELEASING.md",
-        "SECURITY.md",
-        "docs/README.md",
-        "docs/ARCHITECTURE.md",
-        "docs/AUDITOR_PLAYBOOK.md",
-        "docs/DOC_REGISTRY.md",
-        "docs/FAQ.md",
-        "docs/LEGAL_BOUNDARIES.md",
-        "docs/OPERATOR_RUNBOOK.md",
-        "docs/PUBLIC_AUDIT_LIMITS.md",
-        "docs/RELEASE_CANDIDATE.md",
-        "docs/SUPPORT.md",
-        "docs/ZPBOT_V2_AUTHORITY_SURFACE.md",
-        "docs/family/ROBOTICS_RELEASE_LINKAGE.md",
-    ]
-
-    for relative_path in doc_paths:
+    for relative_path in CURRENT_DOC_SURFACE:
+        assert (ROOT / relative_path).exists(), relative_path
         text = _read_text(relative_path)
         if relative_path.startswith("docs/family/"):
             expected = "../../.github/assets/readme/zpe-masthead.gif"
@@ -124,19 +118,14 @@ def test_docs_surface_uses_shared_masthead_only() -> None:
 
 
 def test_frontdoor_docs_do_not_describe_repo_as_private_staging() -> None:
-    doc_paths = [
-        "README.md",
-        "docs/AUDITOR_PLAYBOOK.md",
-        "docs/LEGAL_BOUNDARIES.md",
-        "docs/PUBLIC_AUDIT_LIMITS.md",
-    ]
     banned_phrases = [
         "private repository",
         "private staging only",
         "private github repo",
     ]
 
-    for relative_path in doc_paths:
+    for relative_path in CURRENT_FRONTDOOR_DOCS:
+        assert (ROOT / relative_path).exists(), relative_path
         text = _read_text(relative_path).lower()
         for phrase in banned_phrases:
             assert phrase not in text, f"{relative_path} contains {phrase!r}"

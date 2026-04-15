@@ -3,10 +3,10 @@
   "repo_role": "product_candidate",
   "status": "PUBLIC_PACKAGE_BUT_NOT_RELEASE_READY",
   "plain_english_summary": "Deterministic motion transport and replay kernel for robotics telemetry, search, and audit workflows.",
-  "commercial_wedge": "Searchable motion archives with VLA token export and 187× compression on real robot data (angular fidelity ≤ 0.5° on smooth trajectories). PrimitiveIndex search and red-team-tested adversarial surface. Public PyPI package today.",
-  "technical_wedge": "Frozen wire-v1 motion transport codec. 187.1345× compression on lerobot real data (angular fidelity ≤ 0.5° on smooth trajectories; Gibbs ringing on step inputs). B1/B2/B4/B5 gates pass. Search operates on decoded streams via PrimitiveIndex.",
+  "commercial_wedge": "Searchable motion archives with VLA token export, PrimitiveIndex search, and 187× compression on real robot data. The ≤ 0.5° angular figure applies only to smooth-trajectory slices; discontinuities are not bounded and step inputs show Gibbs ringing. Red-team-tested adversarial surface. Public PyPI package today.",
+  "technical_wedge": "Frozen wire-v1 motion transport codec. 187.1345× compression on lerobot real data. PrimitiveIndex search operates on decoded streams and FAST VLA export is committed. The ≤ 0.5° angular figure is limited to smooth-trajectory slices; step inputs are not bounded and show Gibbs ringing. B1/B2/B4/B5 gates pass.",
   "ideal_first_buyer": "Robotics infrastructure team or simulation/replay platform",
-  "deployment_model": "Public Python package — pip install zpe-motion-kernel",
+  "deployment_model": "Public Python package — pip install zpe-robotics",
   "proof_anchors": [
     "proofs/enterprise_benchmark/GATE_VERDICTS.json",
     "proofs/red_team/red_team_report.json",
@@ -17,7 +17,8 @@
     "Bit-exact replay on .zpbot round-trip",
     "B3 benchmark gate (currently fails)",
     "Red-team resilience on attacks 3 and 5",
-    "Rust ABI for robotics"
+    "Rust ABI for robotics",
+    "Generally valid ≤ 0.5° angular-fidelity bound outside smooth-trajectory slices"
   ],
   "family_position": "Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer.",
   "license": "LicenseRef-Zer0pa-SAL-6.2",

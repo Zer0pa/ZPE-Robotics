@@ -32,17 +32,17 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 | Metric | Value | Baseline |
 |--------|-------|----------|
 | COMPRESSION | 187×† | vs zstd_l3 4.44× (42× better) |
-
-† Bounded-lossy (angular fidelity ≤ 0.5° on smooth trajectories; step/discontinuous inputs cause Gibbs ringing — 68° RMSE measured on unit-amplitude step signal); baselines are lossless.
 | ENCODE_P50 | 0.11 | ms |
 | VLA_TOKEN_EXPORT | 24-token FAST surface | [`vla_bridge.py`](src/zpe_robotics/vla_bridge.py) |
 | BENCHMARK_GATES | 4/5 | 3 datasets, 3 families |
+
+† Bounded-lossy. The ≤ 0.5° angular figure is limited to smooth-trajectory slices; it is not a general motion bound. Step/discontinuous inputs cause Gibbs ringing, with 68° RMSE measured on a unit-amplitude step signal. Baselines are lossless.
 
 > Source: [`proofs/enterprise_benchmark/benchmark_result.json`](proofs/enterprise_benchmark/benchmark_result.json) | [`proofs/enterprise_benchmark/GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) | [`proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json`](proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json)
 
 ## Competitive Benchmarks
 
-> Full competitive analysis: [`BENCHMARKS.md`](BENCHMARKS.md) | Source: [`proofs/enterprise_benchmark/benchmark_result.json`](proofs/enterprise_benchmark/benchmark_result.json) | [`proofs/red_team/red_team_report.json`](proofs/red_team/red_team_report.json)
+> Competitive benchmark evidence: [`proofs/enterprise_benchmark/benchmark_result.json`](proofs/enterprise_benchmark/benchmark_result.json) | [`proofs/red_team/red_team_report.json`](proofs/red_team/red_team_report.json) | [`proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json`](proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json)
 
 | Tool | Compression Ratio | Notes |
 |------|-------------------|-------|
@@ -55,11 +55,11 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 | h5py_gzip9 | 2.69× | HDF5 gzip baseline |
 | h5py_lzf | 2.15× | HDF5 fast baseline |
 
-† Bounded-lossy (angular fidelity ≤ 0.5° on smooth trajectories; step/discontinuous inputs cause Gibbs ringing — 68° RMSE measured on unit-amplitude step signal); all other baselines are lossless.
+† Bounded-lossy. The ≤ 0.5° angular figure is limited to smooth-trajectory slices; it is not a general motion bound. Step/discontinuous inputs cause Gibbs ringing, with 68° RMSE measured on a unit-amplitude step signal. All other baselines are lossless.
 
 ## What We Prove
 
-> Auditable guarantees backed by committed proof artifacts. Start at `AUDITOR_PLAYBOOK.md`.
+> Auditable guarantees backed by committed proof artifacts. Start at `docs/AUDITOR_PLAYBOOK.md`.
 
 - Spectral wire transport with directional reasoning layer for robot action sequences
 - Search operates on decoded motion streams via PrimitiveIndex
@@ -74,7 +74,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 - B3 benchmark gate pass
 - Red-team resilience on attacks 3 and 5
 - Robotics Rust ABI
-- Universal angular fidelity — the ≤ 0.5° bound holds on smooth trajectories only; FFT-based encoding causes Gibbs ringing on step/discontinuous inputs (68° RMSE measured on unit-amplitude step signal)
+- Generally valid ≤ 0.5° angular fidelity — the figure comes from smooth-trajectory slices only; FFT-based encoding causes Gibbs ringing on step/discontinuous inputs (68° RMSE measured on a unit-amplitude step signal)
 - Search-without-decode — PrimitiveIndex requires full packet decode before indexing
 
 ## Commercial Readiness
@@ -290,5 +290,5 @@ runtime claims, benchmark verdicts, or release readiness by association.
 |---|---|
 | **Ideal first buyer** | Robotics infrastructure team or simulation/replay platform |
 | **Pain** | Robot telemetry archives grow fast and can only be searched after full decompression — replay pipelines lack determinism guarantees |
-| **Deployment** | Public Python package — `pip install zpe-motion-kernel` |
+| **Deployment** | Public Python package — `pip install zpe-robotics` |
 | **Family position** | Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer |
