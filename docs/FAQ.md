@@ -8,8 +8,8 @@
   <img src="../.github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-Short answers about the current ZPE-Robotics package, blocker state, and
-release boundary.
+Short answers about the current ZPE-Robotics package, public-beta posture,
+blocker state, and release boundary.
 
 <p>
   <img src="../.github/assets/readme/section-bars/questions.svg" alt="QUESTIONS" width="100%">
@@ -18,14 +18,16 @@ release boundary.
 ## Is this repo public?
 
 Yes. The GitHub repo is public, and the package acquisition surface is public
-via `pip install zpe-robotics`. That does not mean engineering is
-complete or release-ready.
+via `pip install zpe-robotics`. The package is useful now, but the engineering
+surface remains blocker-governed.
 
-## Is this repo release-ready?
+## What is the current engineering posture?
 
-No. Engineering remains incomplete. Benchmark gate `B3` fails, red-team attacks
-`3` and `5` fail, attack `4` only partially withstands, and the robotics
-`.zpbot` path is not routed through a current ZPE-IMC Rust ABI.
+Public beta. Deterministic logging, compressed replay, PrimitiveIndex search on
+decoded packets, and VLA token export are live today. The engineering blockers
+are still open: benchmark gate `B3` fails, red-team attacks `3` and `5` fail,
+attack `4` only partially withstands, and the robotics `.zpbot` path is not
+routed through a current ZPE-IMC Rust ABI.
 
 ## What is actually green right now?
 
@@ -37,7 +39,8 @@ and `6` also withstand.
 
 The governing blockers are:
 
-- `B3` because searchability is present but strict bit-exact replay is not
+- `B3` because search on decoded packets is present but strict bit-exact replay
+  is not
 - red-team attack `3` because strict `np.array_equal` fails on the current
   round-trip path
 - red-team attack `5` because the nominal false-positive rate is `0.2`
@@ -108,4 +111,4 @@ If your question is not answered here:
 
 - support routing: `SUPPORT.md`
 - audit route: `AUDITOR_PLAYBOOK.md`
-- release boundary: `../RELEASING.md`
+- package/runtime boundary: `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`

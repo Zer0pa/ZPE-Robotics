@@ -19,7 +19,7 @@
 | code of conduct report | `architects@zer0pa.ai` |
 | commercial licensing | `architects@zer0pa.ai` |
 | legal or licensing interpretation | `architects@zer0pa.ai`; include the relevant `../LICENSE` section reference |
-| release automation or PyPI publisher setup | follow `../proofs/runbooks/TRUSTED_PUBLISHING_OPERATOR_STEPS.md`; this remains operator-only |
+| release automation or PyPI publisher setup | inspect `../.github/workflows/publish.yml`; any external PyPI UI step remains owner-run |
 | docs correction | open a PR with the exact file path and the evidence that justifies the change |
 
 `../LICENSE` is the legal source of truth for license terms. This support guide
@@ -39,7 +39,7 @@ is a routing summary only and is not legal advice.
 
 - acknowledge target: 48 hours
 - initial triage target: 7 days
-- security issues follow `../SECURITY.md` and are prioritized
+- security issues sent to `architects@zer0pa.ai` are prioritized
 - owner-gated items may remain paused until the required outside action happens
 
 <p>

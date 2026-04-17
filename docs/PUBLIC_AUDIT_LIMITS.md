@@ -9,8 +9,8 @@
 </p>
 
 This repo is public and the package acquisition surface is public.
-Those visibility facts do not amount to engineering completion or a
-release-ready robotics verdict.
+Those visibility facts establish a live public-beta surface. They do not close
+the engineering blockers or upgrade the repo into a cleared verdict.
 
 What this repo can honestly establish today:
 
@@ -29,13 +29,13 @@ What this repo can honestly establish today:
 |---|---|---|
 | Repo visibility | public GitHub repo | visibility is not an engineering pass |
 | Package availability | public on PyPI | installation does not imply release readiness |
-| Engineering completion | not complete | `B3` fails and red-team attacks `3` and `5` fail |
+| Engineering completion | blockers still open | `B3` fails and red-team attacks `3` and `5` fail |
 | Replay claim | not bit-exact | strict `np.array_equal` is false on the current `.zpbot` round-trip |
 | Real-corpus strength | bounded | the real dataset run used `136` episodes at `10 Hz`, below the `200` episode / `50 Hz` target |
 | Rust integration | not present | `current_python_calls_rust=false` in the IMC architecture audit |
 | External reproduction | open | current evidence remains first-party |
 | Historical proof bundles | lineage only | preserved for provenance, not current authority |
-| Release-ready verdict | not authorized | public visibility does not erase blocker-state failures |
+| Closed engineering verdict | not yet earned | public visibility does not erase blocker-state failures |
 
 <p>
   <img src="../.github/assets/readme/section-bars/out-of-scope.svg" alt="OUT OF SCOPE" width="100%">
@@ -44,7 +44,7 @@ What this repo can honestly establish today:
 This repo cannot honestly establish today:
 
 - full engineering completion
-- a release-ready robotics verdict
+- a closed engineering verdict for the robotics surface
 - strict bit-exact replay on the governing benchmark surface
 - anomaly false-positive rate at or below `0.05`
 - current Rust routing through ZPE-IMC for the robotics `.zpbot` path

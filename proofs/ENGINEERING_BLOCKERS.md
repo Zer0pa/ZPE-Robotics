@@ -5,7 +5,7 @@ Phase: 9 -- Enterprise Benchmark, IMC Integration, Technical Closure
 
 ## Governing Verdict
 
-Engineering is not complete.
+Engineering blockers remain open.
 
 The decisive evidence is:
 
@@ -41,7 +41,7 @@ Evidence:
 
 Current truth:
 
-- `zpe_p8` is searchable without decode
+- PrimitiveIndex search works on decoded trajectories
 - `zpe_p8` is not bit-exact on raw float32 replay
 - the fixed gate requires both
 
@@ -85,6 +85,6 @@ What is needed to close it:
 
 ## Non-Blocking But Still Open
 
-- Trusted Publishing workflow alignment is fixed in `.github/workflows/publish.yml`, but the PyPI UI registration step in `proofs/runbooks/TRUSTED_PUBLISHING_OPERATOR_STEPS.md` is still operator-only.
+- Trusted Publishing workflow alignment is fixed in `.github/workflows/publish.yml`, but the external PyPI UI registration step is still operator-only.
 - External third-party reproduction remains open by design and is recorded as such in `proofs/red_team/red_team_report.json`.
 - The available real dataset for attack 4 is better than the synthetic corpus but still undershoots the 200-episode and 50 Hz target, so corpus-strength claims remain bounded.

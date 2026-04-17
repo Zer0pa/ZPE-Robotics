@@ -5,15 +5,15 @@ Repo: `ZPE-Robotics` current checkout
 
 ## Classification
 
-This repo's truthful current public wedge is a standalone Python package:
+This repo's truthful current public beta wedge is a standalone Python package:
 
 - Repo: `ZPE-Robotics`
 - Distribution: `zpe-robotics`
 - Import package: `zpe_robotics`
 - CLI: `zpe-robotics`
 
-It is not a full robotics-platform release surface, and it does not introduce a
-runtime dependency on `ZPE-IMC`.
+It does not claim a broader robotics stack release surface, and it does not
+introduce a runtime dependency on `ZPE-IMC`.
 
 ## Supported Install Surfaces
 

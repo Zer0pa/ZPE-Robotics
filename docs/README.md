@@ -5,7 +5,7 @@
 # Docs Index
 
 This directory routes readers to the smallest truthful doc for the current
-ZPE-Robotics surface.
+standalone ZPE-Robotics surface.
 
 <p>
   <img src="../.github/assets/readme/section-bars/faq-and-support.svg" alt="FAQ AND SUPPORT" width="100%">
@@ -38,7 +38,7 @@ reading supporting prose.
 | Document | What it is |
 |---|---|
 | `../README.md` | front door for current public truth and route-out links |
-| `../RELEASING.md` | release gate, operator boundary, and publish workflow routing |
+| `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` | package/runtime boundary and current install classification |
 | `RELEASE_CANDIDATE.md` | March 18 release-candidate note preserved as non-governing context |
 | `../CHANGELOG.md` | release-surface deltas and docs-surface additions |
 
@@ -48,7 +48,7 @@ reading supporting prose.
 
 | Workstream | Relation | Anchor |
 |---|---|---|
-| `ZPE-IMC` | docs-layout and release-hygiene reference model | `family/ROBOTICS_RELEASE_LINKAGE.md` |
+| `ZPE-IMC` | sibling docs-layout and release-hygiene reference product | `family/ROBOTICS_RELEASE_LINKAGE.md` |
 | `ZPE-Robotics` | current standalone package workstream | `../README.md`, `ARCHITECTURE.md` |
 
 <p>
@@ -69,7 +69,7 @@ reading supporting prose.
 Use these stable references when you need the current engineering boundary:
 
 - `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`
-- `../proofs/runbooks/TRUSTED_PUBLISHING_OPERATOR_STEPS.md`
+- `../.github/workflows/publish.yml`
 - `OPERATOR_RUNBOOK.md`
 - `DOC_REGISTRY.md`
 - `LEGAL_BOUNDARIES.md`

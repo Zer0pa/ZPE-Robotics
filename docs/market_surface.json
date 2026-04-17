@@ -20,7 +20,7 @@
     "Rust ABI for robotics",
     "Generally valid ≤ 0.5° angular-fidelity bound outside smooth-trajectory slices"
   ],
-  "family_position": "Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer.",
+  "family_position": "Standalone Robotics product in the ZPE encoding portfolio. ZPE-IMC is a sibling reference surface, not an umbrella runtime layer.",
   "license": "LicenseRef-Zer0pa-SAL-6.2",
   "license_surface": "Free below $100M annual revenue",
   "contact": "hello@zer0pa.com"

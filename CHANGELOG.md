@@ -16,8 +16,9 @@ Version references use the package version where applicable.
 ## Unreleased
 
 - aligned the documentation surface to the March 21 blocker-state authority
+- reoriented the repo docs to the portfolio-not-platform ethos and added the 2026-04-17 novelty artifacts
 - imported the shared GitHub render assets and added a canonical doc registry
-- added governance, releasing, support, and citation docs
+- added support, legal-boundary, audit, and registry docs for the public package surface
 - removed stale `GO`, clean-clone-forward, and bit-perfect wording from the
   front-door docs
 
@@ -36,6 +37,6 @@ Version references use the package version where applicable.
 
 - formed the canonical `zpe-robotics` inner repo boundary
 - copied repo-grade code, tests, scripts, runbooks, and historical proofs
-- added the first private-staging front-door, proof index, and audit-path docs
+- added the first pre-public front-door, proof index, and audit-path docs
 - normalized current runbooks to repo-local proof paths
 - preserved the March 9 pre-repo authority snapshot as lineage

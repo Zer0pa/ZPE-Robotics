@@ -12,5 +12,5 @@
 | release hygiene | governance and releasing patterns are aligned | Robotics is not a coupled multi-repo release system |
 | future Rust lane | a later Rust-routing lane is possible | it is not current-state truth |
 
-Current decision: treat Robotics as docs-linked and release-hygiene-linked to
-IMC, not as a runtime-coupled system.
+Current decision: treat Robotics and IMC as sibling products with shared
+release-hygiene patterns, not as a runtime-coupled system.

@@ -9,8 +9,10 @@
 </p>
 
 This is the shortest verification path anchored to current authority.
-Engineering is not complete. Local green slices do not override the March 21
-blocker-state evidence.
+ZPE-Robotics is useful now as a public beta package for deterministic logging,
+compressed replay, PrimitiveIndex search, and VLA token export. The
+engineering surface is still blocker-governed, so local green slices do not
+override the March 21 blocker-state evidence.
 The repo is public and the package is published, but those facts are
 non-sovereign versus the blocker files below.
 
@@ -26,7 +28,7 @@ non-sovereign versus the blocker files below.
 | Benchmark gates | `B1`, `B2`, `B4`, `B5` pass; `B3` fails |
 | Red-team | attacks `3` and `5` fail; attack `4` partially withstands |
 | Runtime boundary | no robotics `.zpbot` Rust ABI is wired into this repo |
-| Release-ready verdict | not authorized |
+| Current public posture | useful now, improving continuously; blockers still open |
 
 <p>
   <img src="../.github/assets/readme/section-bars/verification.svg" alt="VERIFICATION" width="100%">
@@ -64,10 +66,10 @@ zpe-robotics verify ../proofs/release_candidate/canonical_release_packet.zpbot
 zpe-robotics info ../proofs/release_candidate/canonical_release_packet.zpbot
 ```
 
-5. If you need a release-workflow check, compare:
+5. If you need a release-workflow check, inspect:
 
-- `.github/workflows/publish.yml`
-- `../proofs/runbooks/TRUSTED_PUBLISHING_OPERATOR_STEPS.md`
+- `../.github/workflows/publish.yml`
+- `../proofs/ENGINEERING_BLOCKERS.md`
 
 <p>
   <img src="../.github/assets/readme/section-bars/evidence.svg" alt="EVIDENCE" width="100%">

@@ -20,7 +20,7 @@ SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 Searchable motion archives with VLA token export. 187× compression on real robot data. Red-team tested. `pip install zpe-robotics` (available on PyPI).
 
-ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compressed replay, and PrimitiveIndex search over joint streams. Built for robotics infrastructure teams and simulation/replay platforms where motion logs are expensive to store, slow to search, and impossible to replay deterministically. The package is public. The governing engineering surface remains blocker-state.
+ZPE-Robotics is a standalone robotics encoding product: deterministic logging, compressed replay, PrimitiveIndex search over decoded joint streams, and VLA token export. Built for robotics infrastructure teams and simulation/replay systems where motion logs are expensive to store, slow to search, and hard to replay deterministically. The package is public and useful now. The governing engineering surface remains blocker-governed while replay exactness, anomaly false positives, and Rust routing stay open.
 
 | Field | Value |
 |-------|-------|
@@ -61,7 +61,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 
 > Auditable guarantees backed by committed proof artifacts. Start at `docs/AUDITOR_PLAYBOOK.md`.
 
-- Spectral wire transport with directional reasoning layer for robot action sequences
+- Spectral wire transport with an 8-direction x 3-magnitude token layer for search and VLA export
 - Search operates on decoded motion streams via PrimitiveIndex
 - Red-team resilience: 3 attacks withstood, 3 failed, 1 skipped — transparently reported
 - VLA tokenization aligns with vision-language-action model input formats
@@ -69,7 +69,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 
 ## What We Don't Claim
 
-- Full release readiness
+- Closed engineering blocker surface
 - Bit-exact .zpbot round-trip replay
 - B3 benchmark gate pass
 - Red-team resilience on attacks 3 and 5
@@ -86,7 +86,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 | Field | Value |
 |-------|-------|
 | Verdict | BLOCKED |
-| Release posture | Live work in progress; not a final official release |
+| Release posture | Useful now, improving continuously; engineering blockers still govern |
 | Commit SHA | C7DED78 |
 | Confidence | 58% |
 | Source | proofs/FINAL_STATUS.md |
@@ -147,7 +147,7 @@ Use these files together:
 | Adversarial findings | `proofs/red_team/red_team_report.json` |
 | Package/runtime boundary | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
 | Release-candidate note | `docs/RELEASE_CANDIDATE.md` |
-| Citation record | `CITATION.cff` |
+| Legal boundary | `docs/LEGAL_BOUNDARIES.md` |
 | Docs registry | `docs/DOC_REGISTRY.md` |
 | Historical lineage | `proofs/artifacts/historical/README.md` |
 
@@ -214,7 +214,7 @@ The modality-lane count reflects the three recorded parity lanes
 | License | `LicenseRef-Zer0pa-SAL-6.2` |
 | Contact | `architects@zer0pa.ai` |
 | Release state | public repo and published package; engineering surface remains blocker-governed |
-| Engineering | not complete |
+| Engineering | blockers still open |
 | Current authority | `proofs/ENGINEERING_BLOCKERS.md` |
 
 | Authority layer | File |
@@ -256,7 +256,8 @@ python -m build
 
 If you need the shortest honest verification route, use
 `docs/AUDITOR_PLAYBOOK.md`.
-If you need the release workflow boundary, use `RELEASING.md`.
+If you need the package/runtime boundary, use
+`proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`.
 
 <p>
   <img src=".github/assets/readme/section-bars/contributing-security-support.svg" alt="CONTRIBUTING, SECURITY, SUPPORT" width="100%">
@@ -264,23 +265,25 @@ If you need the release workflow boundary, use `RELEASING.md`.
 
 | Need | Route |
 |---|---|
-| Contributor workflow | `CONTRIBUTING.md` |
-| Security reporting | `SECURITY.md` |
-| Governance and claim policy | `GOVERNANCE.md` |
-| Support routing | `docs/SUPPORT.md` |
+| Audit and verification route | `docs/AUDITOR_PLAYBOOK.md` |
+| Support and security routing | `docs/SUPPORT.md` |
+| Legal and claim boundary | `docs/LEGAL_BOUNDARIES.md` |
+| Package/runtime boundary | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
 | Docs index | `docs/README.md` |
 | Operator commands | `docs/OPERATOR_RUNBOOK.md` |
+| Documentation registry | `docs/DOC_REGISTRY.md` |
 
 ## Ecosystem
 
-ZPE-Robotics follows the portfolio release-hygiene pattern used by
+ZPE-Robotics is one standalone product in the ZPE portfolio. It reuses some
+documentation and release-hygiene patterns from
 [ZPE-IMC](https://github.com/Zer0pa/ZPE-IMC), but it does not inherit IMC
-runtime claims, benchmark verdicts, or release readiness by association.
+runtime claims, benchmark verdicts, or status by association.
 
 | Need | Route |
 |---|---|
 | Robotics-to-IMC boundary | `docs/family/ROBOTICS_RELEASE_LINKAGE.md` |
-| Frozen proof lineage note | `proofs/README_LINEAGE_PATHS.md` |
+| Frozen proof lineage note | `proofs/artifacts/historical/README.md` |
 | Reference core repo | `https://github.com/Zer0pa/ZPE-IMC` |
 
 **Observability:** [Comet dashboard](https://www.comet.com/zer0pa/zpe-robotics/view/new/panels) (public)
@@ -292,4 +295,4 @@ runtime claims, benchmark verdicts, or release readiness by association.
 | **Ideal first buyer** | Robotics infrastructure team or simulation/replay platform |
 | **Pain** | Robot telemetry archives grow fast and can only be searched after full decompression — replay pipelines lack determinism guarantees |
 | **Deployment** | Public Python package — `pip install zpe-robotics` |
-| **Family position** | Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer |
+| **Family position** | Standalone Robotics product in the ZPE encoding portfolio; ZPE-IMC is a sibling reference surface, not an umbrella runtime layer |
