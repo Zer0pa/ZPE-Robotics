@@ -31,14 +31,14 @@ ZPE-Robotics is a standalone robotics encoding product: deterministic logging, c
 
 | Metric | Value | Baseline |
 |--------|-------|----------|
-| COMPRESSION | 187×† | vs zstd_l3 4.44× (42× better) |
-| ENCODE_P50 | 0.11 | ms |
 | VLA_TOKEN_EXPORT | 24-token FAST surface | [`vla_bridge.py`](src/zpe_robotics/vla_bridge.py) |
+| PRIMITIVE_SEARCH | 10/10 | Precision@10 |
 | BENCHMARK_GATES | 4/5 | 3 datasets, 3 families |
+| COMPRESSION | 187×† | vs zstd_l3 4.44× (42× better) |
 
 † Bounded-lossy. The ≤ 0.5° angular figure is limited to smooth-trajectory slices; it is not a general motion bound. Step/discontinuous inputs cause Gibbs ringing, with 68° RMSE measured on a unit-amplitude step signal. Baselines are lossless.
 
-> Source: [`proofs/enterprise_benchmark/benchmark_result.json`](proofs/enterprise_benchmark/benchmark_result.json) | [`proofs/enterprise_benchmark/GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) | [`proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json`](proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json)
+> Source: [`proofs/release_candidate/primitive_search_result.json`](proofs/release_candidate/primitive_search_result.json) | [`proofs/enterprise_benchmark/benchmark_result.json`](proofs/enterprise_benchmark/benchmark_result.json) | [`proofs/enterprise_benchmark/GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) | [`proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json`](proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json)
 
 ## Competitive Benchmarks
 
@@ -87,9 +87,9 @@ ZPE-Robotics is a standalone robotics encoding product: deterministic logging, c
 |-------|-------|
 | Verdict | BLOCKED |
 | Release posture | Useful now, improving continuously; engineering blockers still govern |
-| Commit SHA | C7DED78 |
+| Commit SHA | e81a633ce7b0 |
 | Confidence | 58% |
-| Source | proofs/FINAL_STATUS.md |
+| Source | proofs/ENGINEERING_BLOCKERS.md |
 
 > **Evaluators:** Engineering blockers active — see `proofs/ENGINEERING_BLOCKERS.md`. `pip install zpe-robotics` to evaluate (available on PyPI). Contact hello@zer0pa.com.
 

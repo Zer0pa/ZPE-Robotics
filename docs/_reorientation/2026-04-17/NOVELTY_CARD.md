@@ -22,7 +22,7 @@
 
 ## Compass-8 / 8-primitive architecture
 
-YES, but only inside the search and token-export layer. ZPE-Robotics quantizes motion into 8 directional bins with 3 magnitude bins in `src/zpe_robotics/primitives.py:110-129` and `src/zpe_robotics/vla_bridge.py:25-36`. The wire codec itself is spectral FFT + `zlib`, not a portfolio-wide Compass-8 substrate.
+NO — wire codec uses FFT + `zlib`; directional 8-dir × 3-mag tokens exist only in the search/token-export layer (see `src/zpe_robotics/primitives.py:110-129` and `src/zpe_robotics/vla_bridge.py:25-36`) but do not constitute the encoding substrate.
 
 ## Open novelty questions for the license agent
 
