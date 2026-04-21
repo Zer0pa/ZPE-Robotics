@@ -6,7 +6,7 @@
 
 [![Install](https://img.shields.io/badge/install-pip%20install%20--e%20.-blue)](./pyproject.toml)
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
-[![License](https://img.shields.io/badge/license-SAL%20v6.2-orange)](./LICENSE)
+[![License](https://img.shields.io/badge/license-SAL%20v7.0-orange)](./LICENSE)
 
 SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
@@ -79,19 +79,12 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 
 ## Commercial Readiness
 
-<p>
-  <img src=".github/assets/readme/section-bars/lane-status-snapshot.svg" alt="LANE STATUS SNAPSHOT" width="100%">
-</p>
-
 | Field | Value |
 |-------|-------|
 | Verdict | BLOCKED |
-| Release posture | Live work in progress; not a final official release |
-| Commit SHA | C7DED78 |
+| Commit SHA | c7ded78e9aea |
 | Confidence | 58% |
 | Source | proofs/FINAL_STATUS.md |
-
-> **Evaluators:** Engineering blockers active — see `proofs/ENGINEERING_BLOCKERS.md`. `pip install zpe-robotics` to evaluate (available on PyPI). Contact hello@zer0pa.com.
 
 ## Tests and Verification
 
