@@ -8,7 +8,7 @@
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
 [![License](https://img.shields.io/badge/license-SAL%20v7.0-orange)](./LICENSE)
 
-SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
+SAL v7.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ---
 
