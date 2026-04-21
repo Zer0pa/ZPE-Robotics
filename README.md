@@ -8,7 +8,7 @@
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
 [![License](https://img.shields.io/badge/license-SAL%20v6.2-orange)](./LICENSE)
 
-SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
+SAL v7.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ---
 
@@ -211,7 +211,7 @@ The modality-lane count reflects the three recorded parity lanes
 | Repository | `https://github.com/Zer0pa/ZPE-Robotics.git` |
 | Package / import / CLI | `zpe-robotics` / `zpe_robotics` / `zpe-robotics` |
 | Acquisition surface | `pip install zpe-robotics` (available on PyPI) |
-| License | `LicenseRef-Zer0pa-SAL-6.2` |
+| License | `LicenseRef-Zer0pa-SAL-7.0` |
 | Contact | `architects@zer0pa.ai` |
 | Release state | public repo and published package; engineering surface remains blocker-governed |
 | Engineering | not complete |

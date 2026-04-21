@@ -21,7 +21,7 @@
     "Generally valid ≤ 0.5° angular-fidelity bound outside smooth-trajectory slices"
   ],
   "family_position": "Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer.",
-  "license": "LicenseRef-Zer0pa-SAL-6.2",
+  "license": "LicenseRef-Zer0pa-SAL-7.0",
   "license_surface": "Free below $100M annual revenue",
   "contact": "hello@zer0pa.com"
 }
