@@ -204,7 +204,7 @@ The modality-lane count reflects the three recorded parity lanes
 | Repository | `https://github.com/Zer0pa/ZPE-Robotics.git` |
 | Package / import / CLI | `zpe-robotics` / `zpe_robotics` / `zpe-robotics` |
 | Acquisition surface | `pip install zpe-robotics` (available on PyPI) |
-| License | `LicenseRef-Zer0pa-SAL-6.2` |
+| License | `LicenseRef-Zer0pa-SAL-7.0` |
 | Contact | `architects@zer0pa.ai` |
 | Release state | public repo and published package; engineering surface remains blocker-governed |
 | Engineering | not complete |
