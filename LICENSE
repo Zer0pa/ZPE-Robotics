@@ -1,654 +1,703 @@
-Zer0pa Source-Available License v6.2
-Licensor: Zer0pa (Pty) Ltd, Republic of South Africa
-SPDX Identifier: LicenseRef-Zer0pa-SAL-6.2
-Canonical URL: https://github.com/Zer0pa/ZPE-License-Commercial
-License Date: 04 March 2026
-Effective Date: the date of first public release of the Software under this License, as recorded
-in the Licensor’s public release metadata or version control tag
-Preamble
-This License governs use of the Software and the Protected Architecture described in the
-Originating Publication. The Protected Architecture is the product of original scientific
-research and engineering by the Licensor, including the empirical discovery that certain
-primitive configurations — notably the Compass-8 (P8) canonical profile, selected by the
-Licensor’s gate contract and ablation evidence as exhibiting unique optimality properties
-among tested configurations — provide an efficient and stable basis for multimodal
-information encoding. ZPE is an N-primitive directional encoding family; Compass-8 (P8) is
-the canonical profile. Other profiles exist for specialised conditions, but changes in N are
-treated as profile variants within the same Protected Architecture — not as independent
-inventions. The Licensor grants broad rights to individuals, researchers, open-source projects,
-and small organisations while requiring commercial entities above the Revenue Threshold to
-obtain a separate Commercial License. This License is not an open-source license as defined
-by the Open Source Initiative (OSI). This License is a source-available license with delayed
-open-source conversion. This License is intended to interoperate with the Originating
-Publication (the defensive disclosure); definitions, claim scope, and evidence
-references are aligned across both documents.
-1. Definitions
-“Licensor” means Zer0pa (Pty) Ltd, Republic of South Africa, including any successor
-entity or assignee of the intellectual property covered by this License.
-“Software” means the source code, object code, binaries, documentation, test suites,
-validation artifacts, configuration files, and all associated materials made available by the
-Licensor under this License, in each case including any portion thereof.
-“Originating Publication” means the scientific paper titled “Zero Point Encoding (ZPE):
-An N-Primitive Directional Encoding Family for Multimodal Information Transport —
-Defensive Disclosure and Prior-Art Record” (or any substantially similar title under which
-the same work is posted) by the Licensor (preprint or peer-reviewed publication, as identified by its digital object identifier, persistent identifier, or first-publication date assigned by the hosting platform for that work), together with all supplementary
-materials, appendices, and errata published by the Licensor in connection with that paper, and
-any subsequent peer-reviewed publication or revision of the same work.
-“Protected Architecture” means the information encoding architecture first disclosed in the
-Originating Publication, including any Substantially Similar Implementation thereof, whether
-or not derived from the Software. The Protected Architecture encompasses a family of N-
-primitive directional encoding systems (N ≥ 2) and all profile variants thereof. Specifically,
-Protected Architecture includes any system, method, process, algorithm, protocol, or data
-structure that:
-1. encodes, compresses, transmits, stores, or reconstructs information across one or more
-sensory, perceptual, or abstract modalities using a finite lattice, set, or vocabulary of
-N directional primitives (where N ≥ 2), including the Compass-8 (P8, N = 8)
-canonical profile — which the Licensor’s empirical research, gate contract, and
-ablation evidence have identified as exhibiting unique optimality properties among
-tested configurations — and any other value of N. A change in N constitutes a profile
-variant within the Protected Architecture, not an independent invention. The Protected
-Architecture encompasses the entire N ≥ 2 family regardless of the specific geometric,
-algebraic, or topological space in which the primitives are defined;
-2. employs a unified transport word, packet, frame, or envelope structure that routes
-encoded primitives across modality families via shared type-bit fields, mode fields,
-lane identifiers, channel tags, or any functionally equivalent routing logic;
-3. applies geometric directional steps — whether as literal spatial movements on a
-lattice, grid, or manifold, or as symbolic, temporal, spectral, or abstract directional
-codebooks over non-spatial domains — to encode, compress, quantize, transmit, or
-reconstruct heterogeneous data types within a unified framework. Without limitation,
-this includes applying the geometric primitive approach to: text, emoji, diagram,
-image, music, voice, mental-state, touch, smell, taste, ink/handwriting, financial time-
-series, geospatial trajectory, motion capture, neurological spike-timing, robotics
-control, video, prosody, extended reality (XR), biosignal/wearable, Internet of Things
-(IoT) sensor telemetry, and any other data domain;
-4. combines two or more of the above elements in a system that achieves multimodal
-information encoding through a shared geometric primitive basis;
-5. constitutes a Substantially Similar Implementation of any of the above, as defined
-below.
-“Primitive Profile” means a specific instantiation of the Protected Architecture characterised
-by (i) the number of directional primitives N, (ii) the primitive basis and any symmetry,
-topology, or geometry assumptions, (iii) the routing and packing rules within the transport
-envelope, and (iv) the versioned compatibility vector. Compass-8 (P8) is the canonical
-Primitive Profile. Other Primitive Profiles (e.g., P5, P7, P12, P64, D6_12) are variants within
-the Protected Architecture and are not independent inventions. Each Primitive Profile has a
-status: CANONICAL (shipping), RESEARCH (experimental), or DEPRECATED (kept for
-provenance only).
-“Substantially Similar Implementation” means any system that achieves the same
-functional purpose and employs the same core mechanism as the Protected Architecture, as
-determined by a Functional Equivalence Test. A system is Substantially Similar if it satisfies
-all three of the following criteria:
-1. Purpose equivalence: The system encodes, compresses, routes, or reconstructs
-multimodal information;
-2. Mechanism equivalence: The system uses a finite set of directional, orientational, or
-geometric primitives as its fundamental encoding vocabulary, regardless of the
-number of primitives (N), the Primitive Profile, the coordinate system, the naming
-convention, the dimensionality of the space, the mathematical formalism used to
-describe them, or the number of concurrent directional profiles (e.g., a system using
-both an 8-primitive and a 12-primitive profile simultaneously); and
-3. Architecture equivalence: The system uses a shared primitive basis and a unified
-transport mechanism across multiple modality types.
-For the avoidance of doubt, the following variations do not constitute independent inventions
-and remain within the scope of Protected Architecture:
-1. changing the number of primitives (e.g., from the empirically optimal P8 canonical
-profile to 4, 5, 6, 7, 12, 16, 64, or any other N), whether to a value that produces
-superior, equivalent, or inferior performance — such changes constitute Primitive
-Profile variants, not independent inventions;
-2. changing the coordinate system (e.g., from Cartesian to polar, hexagonal, spherical,
-hyperbolic, or any other);
-3. reformulating the primitive set as rotations, quaternions, group elements, basis
-vectors, or any mathematically equivalent representation;
-4. changing the names, labels, identifiers, or encoding of the primitives;
-5. changing the bit-width, word length, or packet structure of the transport envelope;
-6. substituting equivalent mathematical operations (e.g., rotation matrices for direction
-vectors, Fourier coefficients for directional steps);
-7. applying the architecture to modalities, data domains, or vertical applications not
-explicitly described in the Originating Publication, including but not limited to:
-financial time-series (OHLCV, tick data), geospatial trajectories (GPS, AIS,
-autonomous vehicle paths), motion capture (joint angles, skeletal poses), neurological
-data (spike trains, EEG, BCI signals), robotics control (joint states, ROS bag streams),
-video frames and temporal sequences, prosodic and paralinguistic features, extended
-reality (XR) spatial tracking, biosignals (ECG, PPG, IMU, EDA), wearable sensor
-fusion streams, and IoT sensor telemetry;
-8. implementing the architecture in a different programming language, hardware
-description language, or on different hardware (including FPGA, ASIC,
-neuromorphic, or edge processors);
-9. combining the architecture with other techniques (e.g., neural network layers,
-compression algorithms, error correction codes, run-length encoding uplift, delta
-encoding, prediction filters, or domain-specific signal conditioning);
-10. expressing the directional codebook as a learned embedding, lookup table, or
-parameterised function rather than as explicit compass directions;
-11. adapting the transport envelope word length, mode-bit partition, or type-bit routing
-scheme to accommodate different payload sizes, modality counts, or version profiles;
-12. using the architecture as a tokenization, subword segmentation, or vocabulary
-construction method for language model training, fine-tuning, or inference.
-“Functional Equivalence Test” means the three-part test set out in the definition of
-Substantially Similar Implementation above.
-“You” (or “Your”) means the individual, autonomous agent, AI system, or legal entity
-accepting this License, including any entity on whose behalf You act.
-“Your Company” means any legal entity, sole proprietorship, or organisation that You work
-for, act on behalf of, or direct, plus all organisations that have Control over, are under the
-Control of, or are under common Control with that organisation. “Control” means ownership
-of more than 50 percent of the outstanding voting securities of an entity, or the power to
-direct the management and policies of an entity by contract or otherwise. Control may be
-direct or indirect.
-“Annual Gross Revenue” means the total consolidated gross revenue of You and Your
-Company during the most recently completed fiscal year, calculated on a consolidated basis
-across all entities within the meaning of Your Company, regardless of the source of that
-revenue.
-“Revenue Threshold” means USD $100,000,000 (one hundred million United States Dollars) in
-Annual Gross Revenue.
-“Commercial License” means a separate written license agreement executed between You
-(or Your Company) and the Licensor, available from architects@zer0pa.ai.
-“Hosted or Managed Service” means any deployment of the Software, any implementation
-of the Protected Architecture, or any Substantially Similar Implementation, where a third
-party accesses features or functionality thereof over a network, without receiving a copy of
-the underlying source code. Without limitation, Hosted or Managed Service includes:
-software-as-a-service (SaaS) offerings; application programming interface (API) access;
-hosted inference endpoints; managed tokenization, encoding, or transcoding services;
-platform-as-a-service (PaaS) offerings incorporating the Protected Architecture; internal
-service bureau or shared-platform deployments that provide functionality to customers,
-partners, or unaffiliated entities of Your Company; and any arrangement where a third party
-receives the functional benefit of the Software or Protected Architecture through network
-access, regardless of whether the third party interacts directly with the Software or through an
-intermediary layer, wrapper, adapter, or gateway. A deployment qualifies as a Hosted or
-Managed Service regardless of whether access is offered for a fee, bundled with other
-services, or provided at no charge.
-“Production Use” means any use of the Software or Protected Architecture that directly or
-indirectly generates, supports, or enables revenue for You or any entity that benefits from
-Your operations, or any use in a customer-facing, commercially deployed, or mission-critical
-context. Internal development, testing, academic research, non-commercial evaluation, and
-personal projects are not Production Use, provided they do not generate external revenue or
-serve external customers.
-“Open Source Project” means a project whose complete source code is made available to
-the public under an OSI-approved open-source license and which does not itself require a
-Commercial License for use.
-“Contribution” means any source code, documentation, data, test, or other material
-submitted to the Licensor for inclusion in the Software.
-“Technical Dossier” means the engineering and scientific reference document titled “ZPE
-Technical Dossier” (or any successor title) published by the Licensor in the Software
-repository or separately, together with all versioned snapshots thereof. As of the License
-Date, the current snapshot is Version 4.8, dated 2026-02-24. The Technical Dossier is part of
-the Software for all purposes under this License.
-“Evidence Index” (also, “Canonical Evidence Materials”) means the Licensor-published,
-versioned index that identifies the canonical locations (including repository paths, release
-URLs, or other stable locators) of Evidence Bundles and related verification materials,
-together with the associated integrity hashes, manifests, handoff manifests, and compatibility
-vectors (and any documented environment, platform, or dependency compatibility vectors)
-published by the Licensor for purposes of validation, reproducibility, provenance, and
-integrity checking. As of the License Date, the Evidence Index is maintained as per-
-workstream JSON files (e.g., ZPE-IMC-EVIDENCE_INDEX.json) in the license and evidence
-repository (github.com/Zer0pa/ZPE-License-Commercial) and/or the primary workstream
-repository (github.com/Zer0pa/ZPE-IMC),
-together with RUN_MANIFEST.json files for Comet-tracked execution runs. The Evidence
-Index is part of the Software for all purposes under this License.
-“Evidence Bundles” means the reproducible artifact packages distributed by the Licensor as
-part of the Software, including lane baseline results, external comparator results, falsification
-campaign outputs, regression test results, gate scorecards, handoff manifests, compatibility
-vectors, and any integrity hashes or manifests published by the Licensor in connection with
-the foregoing. Evidence Bundles are part of the Software for all purposes under this License.
-“Change Date” means the date three (3) years after the date of first public release of each
-specific version of the Software, as recorded in the version’s release metadata or version
-control tag.
-2. Acceptance
-2.1 This License is a binding legal agreement between You and the Licensor. You accept this
-License by any of the following acts:
+# Zer0pa Source-Available License v7.0
+
+**Licensor:** Zer0pa (Pty) Ltd, Republic of South Africa
+**SPDX Identifier:** LicenseRef-Zer0pa-SAL-7.0
+**Master Resolver Endpoint (initial):** https://github.com/Zer0pa/ZPE-License-Commercial (as defined in Section 20 and subject to the relocation mechanism there)
+**License Date:** the date on which the Licensor first publishes this version at the Master Resolver Endpoint, as recorded by the Licensor at that endpoint
+**Effective Date:** in respect of any particular product, the date of first public release of that product's Software under this License, as recorded in that product's public release metadata or version control tag
+**Supersedes:** Zer0pa Source-Available License v6.2 (04 March 2026)
+
+---
+
+## Preamble
+
+This License governs use of the Software published by the Licensor.
+
+The Licensor maintains a portfolio of independent encoding products, each addressing a distinct signal domain. The in-scope products and their domains are listed in the product table in Section 1. The products are held together by a shared engineering philosophy — finding the minimal, fundamental representation for a given signal in a given domain, bounded to that domain — not by a single underlying technology, architecture, or substrate. Some products share techniques; most do not. No claim of a single shared underlying technology, architecture, substrate, or generalised cross-domain encoder is made by this License or by the product table in Section 1. The novelty position of each product is stated solely in that product's Product Novelty Schedule under Section 7.
+
+A product in the portfolio may be an **Active** product surface, a **Research in Progress** surface (in which case the Licensor's position for that product is stated subject to ongoing research and may be revised, withdrawn, or restated in a future version of this License), or an **Evidenced Negative** reference (in which case the schedule documents a publicly registered negative result and no positive codec claim is made for that lane under this License). The status of each product is identified in its Product Novelty Schedule under Section 7.
+
+The Licensor may add further products to the portfolio under this License from time to time, without publishing a new version of this License. Any such addition is governed by this License only upon (i) inclusion of the new product in the Product Register (as defined in Section 20) maintained by the Licensor at the Master Resolver Endpoint, (ii) publication of a corresponding Product Novelty Schedule for that product, either as an amendment to Section 7 or as a Supplemental Novelty Schedule published at the Master Resolver Endpoint and expressly stated to be governed by and incorporated into this License for the sole purpose of describing the Novel Contributions of that new product, and (iii) publication of a conspicuous notice at the canonical repository surface or release page for the new product identifying it as licensed under this License and linking to the Master Resolver Endpoint. Acceptance of this License in respect of an already-released product does not, by itself, constitute acceptance of this License in respect of a later-added product; acceptance in respect of a later-added product attaches under Section 2 when You first download, copy, use, distribute, or incorporate that later-added product's Software after the foregoing notice has been published.
+
+What is protected as novel is enumerated **per product** in the Product Novelty Schedules (Section 7). Each schedule names the genuinely new contributions of that specific codec, with code citations. Standard techniques used by each product are disclosed in the Consolidated Disclosures (Section 8). The Licensor claims novelty only where the schedules say so.
+
+The Licensor grants broad rights to individuals, researchers, open-source projects, and small organisations while requiring commercial entities above the Revenue Threshold to obtain a separate Commercial License. This License is not an open-source license as defined by the Open Source Initiative (OSI). This License is a source-available license with delayed open-source conversion.
+
+---
+
+## 1. Definitions
+
+**"Licensor"** means Zer0pa (Pty) Ltd, Republic of South Africa, including any successor entity or assignee of the intellectual property covered by this License.
+
+**"Software"** means the source code, object code, binaries, documentation, test suites, validation artifacts, configuration files, and all associated materials made available by the Licensor under this License, in each case including any portion thereof. The Software encompasses the products listed in the Product Register maintained at the Master Resolver Endpoint in accordance with Section 20. As at the publication date of this License, the Product Register lists the following products, and the table below is a snapshot reproduced for convenience; in the event of any divergence between the table below and the Product Register as updated by the Licensor, the Product Register prevails for the purpose of identifying the products currently within the portfolio, subject always to the substantive terms of this License and the portfolio-addition conditions set out in the Preamble:
+
+| Product | Domain | Status |
+|---------|--------|--------|
+| ZPE-Bio | Biosignal encoding (ECG) | Active |
+| ZPE-Diagram | Bounded line-diagram encoding (structural geometry, bounded style, stroke order) | Active |
+| ZPE-FT | Financial time-series encoding (OHLCV, tick) | Active |
+| ZPE-Geo | Geospatial trajectory encoding | Active |
+| ZPE-Image | Sparse-stroke image-geometry encoding | Active |
+| ZPE-Ink | Digital ink stroke encoding | Active |
+| ZPE-IoT | IoT sensor telemetry encoding | Active |
+| ZPE-Mental | Endogenous visual-form encoding | Active |
+| ZPE-Mocap | Motion capture encoding | Active |
+| ZPE-Music | Symbolic-score encoding with note-local expression | Active |
+| ZPE-Neuro | Neural spike-event encoding | Active |
+| ZPE-Prosody | Speech prosody encoding | Active |
+| ZPE-Robotics | Robotics motion encoding | Active |
+| ZPE-Smell | Olfactory receptor-panel encoding | Research in Progress |
+| ZPE-Taste | Taste geometry-seam reference | Evidenced Negative |
+| ZPE-Touch | Haptic/tactile contact-stroke encoding | Active |
+| ZPE-Video | Video perception-receipt encoding | Active |
+| ZPE-XR | XR hand-tracking encoding | Active |
+
+**"Product Novelty Schedule"** means the per-product section within Section 7 of this License that enumerates the novel contributions of a specific product, with code citations, and identifies whether the product employs the Compass-8 directional encoding pattern.
+
+**"Novel Contribution"** means a specific technical contribution identified in a Product Novelty Schedule as genuinely new work by the Licensor, as distinct from standard techniques disclosed in Section 8. The Licensor's claims under this License are limited to the Novel Contributions as enumerated.
+
+**"Compass-8 Pattern"** means the 8-directional spatial encoding pattern descended from Freeman chain codes (1961), in which signals are encoded as sequences of 3-bit directional tokens with associated magnitude and run-length channels. The Compass-8 Pattern is a lane-specific technique used by some products in the portfolio and is not a portfolio-wide claim. Products that use it are identified in their respective Product Novelty Schedules.
+
+**"Substantially Similar Implementation"** means any system that replicates one or more Novel Contributions identified in a Product Novelty Schedule, as determined by the following three-part test applied **per product**:
+
+1. **Purpose equivalence:** The system encodes, compresses, transports, replays, or retrieves the same signal domain as the product whose Novel Contribution is at issue;
+2. **Mechanism equivalence:** The system employs the same core technique identified as a Novel Contribution in the relevant Product Novelty Schedule — not merely a standard technique disclosed in Section 8;
+3. **Integration equivalence:** The system combines the mechanism with the same product-specific contract, packet format, or verification surface described in the Novel Contribution, or with a contract, packet format, or verification surface that differs only in immaterial cosmetic respects from that described in the Novel Contribution.
+
+For the purpose of clause 3, a system that replicates a Novel Contribution's mechanism but employs a cosmetically different contract, packet format, or verification surface designed primarily to defeat the integration-equivalence prong shall be deemed to satisfy clause 3. Whether a divergence is immaterial or cosmetic is to be assessed by reference to, without limitation: whether the divergence serves any genuine technical purpose independent of this License, whether contemporaneous design documentation records such a purpose, and whether the resulting system would be functionally interchangeable with an implementation that retained the original contract, packet format, or verification surface. The absence of contemporaneous documentation of a genuine technical purpose shall weigh against a finding that the divergence is material.
+
+A system that uses only standard techniques disclosed in Section 8, or that employs a genuinely independent mechanism for the same domain, is not a Substantially Similar Implementation.
+
+For the avoidance of doubt: the mere use of directional encoding, delta encoding, run-length encoding, Freeman chain codes, FFT truncation, template matching, or any other standard technique disclosed in Section 8 — whether with 8, 4, 16, or any other number of directions or primitives — does not by itself constitute a Substantially Similar Implementation. A system falls within scope only if it replicates a specific Novel Contribution as described in the applicable Product Novelty Schedule.
+
+**"You"** (or **"Your"**) means the individual, autonomous agent, AI system, or legal entity accepting this License, including any entity on whose behalf You act.
+
+**"Your Company"** means any legal entity, sole proprietorship, or organisation that You work for, act on behalf of, or direct, plus all organisations that have Control over, are under the Control of, or are under common Control with that organisation. "Control" means ownership of more than 50 percent of the outstanding voting securities of an entity, or the power to direct the management and policies of an entity by contract or otherwise. Control may be direct or indirect.
+
+**"Annual Gross Revenue"** means the total consolidated gross revenue of You and Your Company during the most recently completed fiscal year, calculated on a consolidated basis across all entities within the meaning of Your Company, regardless of the source of that revenue.
+
+**"Revenue Threshold"** means USD $100,000,000 (one hundred million United States Dollars) in Annual Gross Revenue.
+
+**"Commercial License"** means a separate written license agreement executed between You (or Your Company) and the Licensor, available from the Licensor Contact published at the Master Resolver Endpoint (as at the publication date of this License, that address is `architects@zer0pa.ai`).
+
+**"Hosted or Managed Service"** means any deployment of the Software, any implementation of a Novel Contribution, or any Substantially Similar Implementation, where a third party accesses features or functionality thereof over a network, without receiving a copy of the underlying source code. Without limitation, Hosted or Managed Service includes: software-as-a-service (SaaS) offerings; application programming interface (API) access; hosted inference endpoints; managed tokenization, encoding, or transcoding services; platform-as-a-service (PaaS) offerings incorporating any Novel Contribution; internal service bureau or shared-platform deployments that provide functionality to customers, partners, or unaffiliated entities of Your Company; and any arrangement where a third party receives the functional benefit of the Software or a Novel Contribution through network access, regardless of whether the third party interacts directly with the Software or through an intermediary layer, wrapper, adapter, or gateway. A deployment qualifies as a Hosted or Managed Service regardless of whether access is offered for a fee, bundled with other services, or provided at no charge.
+
+**"Production Use"** means any use of the Software or any Novel Contribution that directly or indirectly generates, supports, or enables revenue for You or any entity that benefits from Your operations, or any use in a customer-facing, commercially deployed, or mission-critical context. Internal development, testing, academic research, non-commercial evaluation, and personal projects are not Production Use, provided they do not generate external revenue or serve external customers.
+
+**"Open Source Project"** means a project whose complete source code is made available to the public under an OSI-approved open-source license and which does not itself require a Commercial License for use.
+
+**"Contribution"** means any source code, documentation, data, test, or other material submitted to the Licensor for inclusion in the Software.
+
+**"Change Date"** means the date three (3) years after the date of first public release of each specific version of the Software, as recorded in the version's release metadata or version control tag.
+
+---
+
+## 2. Acceptance
+
+2.1 This License is a binding legal agreement between You and the Licensor. You accept this License by any of the following acts:
+
 1. downloading the Software;
 2. copying any portion of the Software;
 3. using the Software in any manner;
 4. distributing the Software or any derivative work;
-5. incorporating the Software into any product, service, or system, or incorporating the
-Protected Architecture into any product, service, or system following Substantive Prior Access (as
-defined in Section 4.4.1(d)) to the Software, the Originating Publication, or materials
-referencing this License;
-6. clicking “I accept” or equivalent in any installation, download, or access interface
-provided by the Licensor;
-7. any other act that, under applicable law, constitutes acceptance of the terms of a
-license agreement.
-2.2 If You do not agree to all the terms and conditions of this License, You must not
-download, copy, use, or distribute the Software. If You have already downloaded a copy,
-You must destroy it.
-2.3 For avoidance of doubt, the mere act of reading the Originating Publication (the defensive disclosure preprint) does not by itself constitute acceptance of this License. However, any subsequent use,
-download, or incorporation of the Software or Protected Architecture following such reading
-is subject to this License.
-3. Grant of Rights
-Subject to the limitations and conditions of this License, the Licensor grants You a non-
-exclusive, royalty-free, worldwide, non-sublicensable, non-transferable license to:
+5. incorporating the Software into any product, service, or system, or incorporating any Novel Contribution into any product, service, or system following Substantive Prior Access (as defined in Section 4.5(d)) to the Software or materials referencing this License;
+6. clicking "I accept" or equivalent in any installation, download, or access interface provided by the Licensor;
+7. any other act that, under applicable law, constitutes acceptance of the terms of a license agreement.
+
+2.2 If You do not agree to all the terms and conditions of this License, You must not download, copy, use, or distribute the Software. If You have already downloaded a copy, You must destroy it.
+
+2.3 For avoidance of doubt, the mere act of reading publicly available descriptions of the Software does not by itself constitute acceptance of this License. However, any subsequent use, download, or incorporation of the Software or any Novel Contribution following such reading is subject to this License.
+
+---
+
+## 3. Grant of Rights
+
+Subject to the limitations and conditions of this License, the Licensor grants You a non-exclusive, royalty-free, worldwide, non-sublicensable, non-transferable license to:
+
 1. use, copy, and distribute the Software;
 2. prepare and distribute derivative works of the Software;
 3. make the Software available to third parties;
-4. study, analyse, benchmark, and evaluate the Software and the Protected Architecture;
+4. study, analyse, benchmark, and evaluate the Software;
+
 in each case solely as permitted by the conditions in Section 4 below.
-4. Conditions and Limitations
-4.1 Hosted or Managed Service Restriction
-You may not provide the Software, any implementation of the Protected Architecture, or any
-Substantially Similar Implementation to third parties as a Hosted or Managed Service without
-obtaining a Commercial License from the Licensor. This restriction applies regardless of
-whether the service is offered for free or for a fee, and regardless of whether it constitutes the
-primary or ancillary function of the service.
-4.2 Revenue Threshold and Commercial License Requirement
-If Your Annual Gross Revenue exceeds the Revenue Threshold, You must obtain a
-Commercial License from the Licensor before:
-1. using the Software or any implementation of the Protected Architecture in any
-Production Use;
-2. offering any Hosted or Managed Service incorporating the Software or Protected
-Architecture;
-3. distributing the Software or any derivative work in connection with a commercial
-product or service;
-4. incorporating the Software, Protected Architecture, or any Substantially Similar
-Implementation into any product, platform, service, or system that You or Your
-Company offers commercially.
-This requirement applies regardless of whether Your use of the Software or Protected
-Architecture is the source of any portion of Your Annual Gross Revenue.
+
+---
+
+## 4. Commercial Terms — Portfolio-Wide
+
+### 4.1 Hosted or Managed Service Restriction
+
+You may not provide the Software, any implementation of a Novel Contribution, or any Substantially Similar Implementation to third parties as a Hosted or Managed Service without obtaining a Commercial License from the Licensor. This restriction applies regardless of whether the service is offered for free or for a fee, and regardless of whether it constitutes the primary or ancillary function of the service.
+
+### 4.2 Revenue Threshold and Commercial License Requirement
+
+If Your Annual Gross Revenue exceeds the Revenue Threshold, You must obtain a Commercial License from the Licensor before:
+
+1. using the Software or any implementation of a Novel Contribution in any Production Use;
+2. offering any Hosted or Managed Service incorporating the Software or any Novel Contribution;
+3. distributing the Software or any derivative work in connection with a commercial product or service;
+4. incorporating the Software or any Substantially Similar Implementation into any product, platform, service, or system that You or Your Company offers commercially.
+
+This requirement applies regardless of whether Your use of the Software is the source of any portion of Your Annual Gross Revenue.
+
 This requirement does not apply to:
-1. non-profit organisations, educational institutions, and government-funded research
-institutions, provided such use is not for commercial production deployment or
-commercial revenue generation;
-2. Open Source Projects distributed under OSI-approved licenses, provided the project
-itself does not require a Commercial License and is not maintained or funded
-primarily by an entity exceeding the Revenue Threshold;
-3. internal evaluation, academic research, development, and testing that does not
-constitute Production Use;
-4. individuals and organisations whose Annual Gross Revenue does not exceed the
-Revenue Threshold.
-4.3 Revenue Threshold Compliance
-4.3.1 Self-Certification. Upon written request by the Licensor (no more than once per
-calendar year), You must provide a written certification signed by an authorised officer of
-Your Company, within thirty (30) days of such request, stating either:
-1. that Your Annual Gross Revenue does not exceed the Revenue Threshold, together
-with the fiscal year to which the certification relates; or
-2. that Your Annual Gross Revenue exceeds the Revenue Threshold, and specifying
-whether You have obtained or intend to obtain a Commercial License.
-4.3.2 Record Retention. If You certify that Your Annual Gross Revenue does not exceed the
-Revenue Threshold, You must retain financial records sufficient to substantiate that
-certification for a period of three (3) years from the date of certification.
-4.3.3 Verification. If the Licensor has a reasonable, good-faith belief that Your Annual Gross
-Revenue exceeds the Revenue Threshold — based on publicly available information, Your
-own disclosures, or other credible evidence — the Licensor may request that You engage a
-mutually agreed independent auditor, at the Licensor’s cost, to verify Your Annual Gross
-Revenue solely for the purpose of determining whether the Revenue Threshold is exceeded.
-If the audit reveals that the Revenue Threshold is exceeded, You shall bear the reasonable
-cost of the audit and shall promptly obtain a Commercial License. This right may be
-exercised no more than once per calendar year and is subject to reasonable confidentiality
-protections.
-4.3.4 Failure to Certify. If You fail to provide a certification within the thirty (30) day
-period specified in Section 4.3.1, the Licensor shall send a single written reminder notice. If
-You fail to provide the requested certification within fifteen (15) days of the reminder notice
-(or such longer period as the Licensor may grant at its discretion upon reasonable request),
-Your use of the Software shall be deemed Production Use by an entity exceeding the
-Revenue Threshold until such time as You provide the requested certification. For avoidance
-of doubt, the deeming consequence applies prospectively from the expiry of the reminder
-period and does not retroactively affect use prior to the original certification request.
-4.4 Scope of Protected Architecture — Public Notice
-4.4.1 You acknowledge and agree that the Protected Architecture as defined in Section 1
-constitutes original intellectual work of the Licensor, first publicly disclosed in the
-Originating Publication. By accepting this License pursuant to Section 2:
-1. You accept that any implementation of the Protected Architecture — including any
-Substantially Similar Implementation, whether derived from the Software or
-independently developed — by an entity that has accepted this License and is subject
-to Section 4.2, requires a Commercial License;
-2. You accept that the Functional Equivalence Test, not source code similarity, is the
-operative test for determining whether a system falls within the scope of the Protected
-Architecture;
-3. You accept that the Originating Publication, together with any public technical
-disclosures by the Licensor that reference the Protected Architecture and this License,
-serve as public notice of the Licensor’s claims with respect to the Protected
-Architecture, and that any entity with knowledge of the Originating Publication, such
-disclosures, or this License is on notice of those claims;
-4. You accept that, in any dispute between the Licensor and You or Your Company, if
-You or Your Company has downloaded, forked, executed, deployed, incorporated, or
-otherwise made substantive use of the Software, the Originating Publication, or any
-materials referencing or describing the Protected Architecture that include a reference
-to this License
-(collectively, “Substantive Prior Access”), any Substantially Similar Implementation by
-You or Your Company shall be presumed to derive from the Protected Architecture,
-and the burden of proving independent and non-infringing development shall rest on
-You. This presumption applies to Your Company as a whole if any employee,
-contractor, advisor, or agent of Your Company has had Substantive Prior Access, regardless of
-whether the specific individuals who had Substantive Prior Access were involved in the
-development of the Substantially Similar Implementation. This presumption is
-rebuttable: You may overcome it by demonstrating, through contemporaneous written
-documentation, that the Substantially Similar Implementation was developed through
-a documented independent-development or clean-room process in which no person
-with Substantive Prior Access participated in, directed, supervised, or reviewed the design or
-implementation of the Substantially Similar Implementation. The absence of such
-contemporaneous documentation shall weigh against any claim of independent
-development.
-4.4.2 For avoidance of doubt: this Section 4.4 creates contractual obligations binding on
-parties who have accepted this License under Section 2. It does not purport to create binding
-obligations on third parties who have never accessed the Software and have never accepted
-this License. However, the Licensor reserves all rights available under applicable law —
-including, without limitation, rights arising from defensive publication, prior art, trademark,
-trade dress, and the law of unjust enrichment — with respect to any third party’s use of the
-Protected Architecture.
-4.5 Anti-Circumvention
+
+1. non-profit organisations, educational institutions, and government-funded research institutions, provided such use is not for commercial production deployment or commercial revenue generation;
+2. Open Source Projects distributed under OSI-approved licenses, provided the project itself does not require a Commercial License and is not maintained or funded primarily by an entity exceeding the Revenue Threshold;
+3. internal evaluation, academic research, development, and testing that does not constitute Production Use;
+4. individuals and organisations whose Annual Gross Revenue does not exceed the Revenue Threshold.
+
+### 4.3 Revenue Threshold Compliance
+
+4.3.1 **Self-Certification.** Upon written request by the Licensor (no more than once per calendar year), You must provide a written certification signed by an authorised officer of Your Company, within thirty (30) days of such request, stating either:
+
+1. that Your Annual Gross Revenue does not exceed the Revenue Threshold, together with the fiscal year to which the certification relates; or
+2. that Your Annual Gross Revenue exceeds the Revenue Threshold, and specifying whether You have obtained or intend to obtain a Commercial License.
+
+4.3.2 **Record Retention.** If You certify that Your Annual Gross Revenue does not exceed the Revenue Threshold, You must retain financial records sufficient to substantiate that certification for a period of three (3) years from the date of certification.
+
+4.3.3 **Verification.** If the Licensor has a reasonable, good-faith belief that Your Annual Gross Revenue exceeds the Revenue Threshold — based on publicly available information, Your own disclosures, or other credible evidence — the Licensor may request that You engage a mutually agreed independent auditor, at the Licensor's cost, to verify Your Annual Gross Revenue solely for the purpose of determining whether the Revenue Threshold is exceeded. If the audit reveals that the Revenue Threshold is exceeded, You shall bear the reasonable cost of the audit and shall promptly obtain a Commercial License. This right may be exercised no more than once per calendar year and is subject to reasonable confidentiality protections.
+
+4.3.4 **Failure to Certify.** If You fail to provide a certification within the thirty (30) day period specified in Section 4.3.1, the Licensor shall send a single written reminder notice. If You fail to provide the requested certification within fifteen (15) days of the reminder notice (or such longer period as the Licensor may grant at its discretion upon reasonable request), Your use of the Software shall be deemed Production Use by an entity exceeding the Revenue Threshold until such time as You provide the requested certification. For avoidance of doubt, the deeming consequence applies prospectively from the expiry of the reminder period and does not retroactively affect use prior to the original certification request.
+
+### 4.4 Anti-Circumvention
+
 You may not:
-1. alter, remove, or obscure any licensing, copyright, or attribution notices in the
-Software;
-2. move, change, disable, or circumvent any license key or access-control functionality
-in the Software;
+
+1. alter, remove, or obscure any licensing, copyright, or attribution notices in the Software;
+2. move, change, disable, or circumvent any license key or access-control functionality in the Software;
 3. remove or obscure any functionality in the Software that is controlled by license keys;
-4. structure a transaction, corporate arrangement, or series of arrangements the purpose
-or effect of which is to avoid the Revenue Threshold or Commercial License
-requirement;
-5. use the Software or Protected Architecture through an intermediary, subsidiary,
-contractor, or agent for the purpose of circumventing the restrictions in this License;
-6. create, distribute, or operate a Substantially Similar Implementation for the purpose of
-enabling third parties to avoid obtaining a Commercial License;
-7. engage, contract, or otherwise arrange for a third party to create, develop, or operate a
-Substantially Similar Implementation on Your behalf or for Your benefit, where You
-or Your Company exercises management control over, provides funding for, or
-derives commercial benefit from the Implementation, regardless of the third party’s
-own Annual Gross Revenue;
-8. implement a Substantially Similar Implementation while taking measures to obscure
-or obfuscate the relationship to the Protected Architecture, including through
-renaming, mathematical reformulation, obfuscation of provenance, or claims of
-independent discovery where Substantive Prior Access exists;
-9. claim that a change of Primitive Profile (including a change in N) constitutes an
-independent invention or removes the implementation from the scope of the Protected
-Architecture.
-4.6 Attribution and Notices
+4. structure a transaction, corporate arrangement, or series of arrangements the purpose or effect of which is to avoid the Revenue Threshold or Commercial License requirement;
+5. use the Software through an intermediary, subsidiary, contractor, or agent for the purpose of circumventing the restrictions in this License;
+6. create, distribute, or operate a Substantially Similar Implementation for the purpose of enabling third parties to avoid obtaining a Commercial License;
+7. engage, contract, or otherwise arrange for a third party to create, develop, or operate a Substantially Similar Implementation on Your behalf or for Your benefit, where You or Your Company exercises management control over, provides funding for, or derives commercial benefit from the implementation, regardless of the third party's own Annual Gross Revenue;
+8. implement a Substantially Similar Implementation while taking measures to obscure or obfuscate the relationship to a Novel Contribution, including through renaming, mathematical reformulation, obfuscation of provenance, or claims of independent discovery where Substantive Prior Access exists.
+
+### 4.5 Substantive Prior Access and Burden-Shifting
+
+You acknowledge and agree that the Novel Contributions enumerated in Section 7 constitute original intellectual work of the Licensor. By accepting this License pursuant to Section 2:
+
+(a) You accept that any implementation of a Novel Contribution — including any Substantially Similar Implementation, whether derived from the Software or independently developed — by an entity that has accepted this License and is subject to Section 4.2, requires a Commercial License;
+
+(b) You accept that the three-part per-product test in the definition of "Substantially Similar Implementation" (Section 1), not source code similarity, is the operative test for determining whether a system falls within scope;
+
+(c) You accept that this License and the Licensor's public documentation serve as public notice of the Licensor's claims with respect to the Novel Contributions;
+
+(d) You accept that, in any dispute between the Licensor and You or Your Company, if You or Your Company has downloaded, forked, executed, deployed, incorporated, or otherwise made substantive use of the Software or any materials referencing or describing the Novel Contributions that include a reference to this License (collectively, **"Substantive Prior Access"**), any Substantially Similar Implementation by You or Your Company shall be presumed to derive from the relevant Novel Contribution, and the burden of proving independent and non-infringing development shall rest on You. This presumption applies to Your Company as a whole if any employee, contractor, advisor, or agent of Your Company has had Substantive Prior Access, regardless of whether the specific individuals who had Substantive Prior Access were involved in the development of the Substantially Similar Implementation. This presumption is rebuttable: You may overcome it by demonstrating, through contemporaneous written documentation, that the Substantially Similar Implementation was developed through a documented independent-development or clean-room process in which no person with Substantive Prior Access participated in, directed, supervised, or reviewed the design or implementation of the Substantially Similar Implementation. The absence of such contemporaneous documentation shall weigh against any claim of independent development.
+
+4.5.1 For avoidance of doubt: this Section 4.5 creates contractual obligations binding on parties who have accepted this License under Section 2. It does not purport to create binding obligations on third parties who have never accessed the Software and have never accepted this License. However, the Licensor reserves all rights available under applicable law with respect to any third party's use of the Novel Contributions.
+
+### 4.6 Attribution and Notices
+
 Any distribution of the Software or derivative work must:
-1. retain all copyright notices, attribution notices, and a complete copy of this License or
-a working link to its Canonical URL;
-2. include a prominent notice in any modified copies stating that You have modified the
-Software and the date of modification;
-3. include a citation to the Originating Publication in any academic, scientific, or
-technical publication that describes, evaluates, or builds upon the Protected
-Architecture.
-4.7 Provenance and Integrity
-When distributing, publicly referencing, or making available the Technical Dossier, Evidence
-Bundles, the Evidence Index, or any claimed “ZPE-compatible” or “ZPE-derived”
-implementation, You must:
-1. retain all integrity hashes, manifests, attribution notices, and provenance metadata
-published by the Licensor, including as set out in the Evidence Index;
-2. clearly and prominently mark any modifications You have made to the Technical
-Dossier, Evidence Bundles, or the Evidence Index, including the date, nature, and
-author of each modification;
-3. not selectively remove, alter, or suppress failing, INCONCLUSIVE, or adverse test
-results or evidence artifacts (including by altering the Evidence Index in a manner that
-misrepresents what the Licensor published) in a manner that misrepresents the
-completeness or accuracy of the original Evidence Bundles;
-4. not present modified benchmark results, gate outcomes, or evidence artifacts as
-unmodified originals or as “baseline” results without clearly stating the nature and
-extent of the divergence from the Licensor’s published originals, and not make any
-public claim of “ZPE-compatible,” “ZPE-derived,” “ZPE-IMC compatible,” or
-functionally equivalent compatibility/derivation claim unless such claim is objectively
-substantiated by reference to the Evidence Index for the relevant interface/version,
-and either (i) a reproducible build and test procedure that produces outputs matching
-the Licensor’s published compatibility vectors and integrity hashes (as identified in
-the Evidence Index), or (ii) a clear, prominent description of the precise points of
-deviation, including which compatibility vectors, hashes, manifests, gates, or metrics
-(as identified in the Evidence Index) differ;
-5. when claiming compatibility with or derivation from a specific Primitive Profile (e.g.,
-P8, P12), specify both the Primitive Profile identifier and the contract version (e.g.,
-“ZPE-compatible: P8 / wave1.0”) and comply with the substantiation requirements of
-subsection (d) above;
-6. when referencing the IMC integration contract, use the canonical authority point
-(total_words=844) and the published compatibility vector sha256 hash as objective
-anchors for coordination and adjudication, as disclosed in the Originating Publication
-and the Evidence Index.
-For avoidance of doubt, this Section does not restrict Your right to create and publish
-independent benchmark results, evaluations, or analyses of the Software or Protected
-Architecture, provided such independent work is clearly identified as Your own and is not
-presented as the Licensor’s official results. If You make a claim covered by this Section that
-is materially false or misleading, then upon written notice from the Licensor You must
-(within ten (10) days) either (x) correct the claim with equal or greater prominence, or (y)
-cease using the applicable “ZPE”-related compatibility/derivation designation in connection
-with the affected materials; failure to do so constitutes a material breach of this License.
-4.8 Downstream License Propagation
-While distributing the Software, any derivative work, or any implementation of the Protected
-Architecture under this License (that is, prior to the Change Date for a given version, or
-where You have elected to use this License rather than Apache 2.0 for a converted version),
-You may not apply license terms that are less restrictive than this License with respect to the
-Revenue Threshold, the Hosted or Managed Service Restriction, or the scope of the Protected
-Architecture. Any sublicense, relicense, or redistribution under this License must preserve
-these restrictions in full.
-After the Change Date, if You distribute a converted version of the Software under Apache
-2.0, the Apache 2.0 terms govern that distribution. However, this does not grant You or any
-downstream recipient the right to offer the Protected Architecture as a Hosted or Managed
-Service, nor does it relieve You or any downstream recipient of obligations arising from their
-own independent acceptance of this License (if any) or from any separate Commercial
-License agreement with the Licensor.
-5. Patent License
-The Licensor grants You a license, under any patent claims the Licensor can license or
-becomes able to license, to make, have made, use, sell, offer for sale, import, and have
-imported the Software, subject to the limitations and conditions of this License. This patent
-license does not cover any patent claims that You cause to be infringed by modifications or
-additions to the Software, nor any patent claims that are infringed only by combinations of
-the Software with other products or services not provided by the Licensor.
-IP Aggression / Retaliation Termination. If You or Your Company (including any entity
-within the meaning of Your Company) directly or indirectly: (a) make, sponsor, fund, assist,
-or maintain any written claim or proceeding (including in litigation, in correspondence,
-demand letters, takedown notices, customs actions, administrative proceedings, or regulatory
-filings) alleging that the Software, the Protected Architecture, any Substantially Similar
-Implementation, or any use of any of the foregoing by the Licensor or any licensee, user,
-customer, or downstream recipient infringes or misappropriates any Patent, copyright, trade
-secret, or other intellectual property right; or (b) seek any injunction, exclusion order, seizure,
-import ban, or other coercive relief based on any such allegation, then all rights and licenses
-granted to You and Your Company under this License — including, without limitation, all
-rights under Section 3 (Grant of Rights) and all licenses under this Section 5 — terminate
-automatically, immediately, and irrevocably as of the earliest date of such assertion. This
-Section does not apply to a claim solely alleging breach of this License, nor to a counterclaim
-or defensive response filed only after the Licensor has first filed an action against You for
-breach of this License, and only to the minimum extent necessary to respond to that action. If
-Your Company makes such a claim, all rights and licenses for all work on behalf of Your
-Company terminate immediately. Notwithstanding the foregoing, if the assertion giving
-rise to termination under this Section consists solely of a demand letter, pre-litigation
-correspondence, or takedown notice (and no litigation, administrative proceeding,
-injunction, or other coercive relief has been filed or sought), the Licensor shall provide
-written notice to You and You shall have fifteen (15) days from receipt of such notice to
-withdraw the assertion in writing; if You withdraw within that period, Your licenses shall be
-deemed not to have terminated by reason of that assertion alone. This cure opportunity
-applies once only; any subsequent assertion triggers immediate and irrevocable termination
-without further cure. This termination is in addition to, and does not limit, any other
-remedies available to the Licensor.
-Defensive Publication / Prior-Art Acknowledgement. You acknowledge that the
-Originating Publication and any related public disclosures by the Licensor that describe the
-Protected Architecture are intended as defensive publications establishing the Licensor’s
-priority of disclosure — including the discovery of the Compass-8 (P8, N = 8) system, its
-empirically demonstrated optimality properties under the Licensor’s gate contract and
-ablation evidence (including the ablation study comparing P5, P7, P8, P12, and P64 profiles
-as disclosed in the Originating Publication), and the N-primitive family architecture (N ≥ 2)
-— and, to the maximum extent recognised under applicable law, constitute prior art for the
-purpose of assessing novelty, obviousness, and patentability and of invalidating or limiting
-subsequent patent claims by third parties over the Protected Architecture, the Compass-8
-system, any Primitive Profile variant, the IMC wave1.0 integration contract, the 20-bit
-transport word framing and lane-routing concept, or any Substantially Similar
-Implementation. The Originating Publication’s disclosure of broader domain applications
-(including, without limitation, financial time-series, geospatial trajectory, motion capture,
-neurological spike-timing, robotics control, video, IoT sensor telemetry, and
-biosignal/wearable streams) is intended to establish prior art across the full scope of the
-Protected Architecture as defined in this License.
-6. Autonomous Agents and AI Systems
-For the purposes of this Section, the human or corporate entity that deploys, operates, or
-directs the autonomous agent or AI system is the contracting party and bears primary
-responsibility for compliance with this License.
-If You are an autonomous agent, AI system, large language model, or other synthetic
-intelligence:
-1. Your use of the Software constitutes acceptance of these terms on behalf of Yourself
-and any human or corporate principal that operates, hosts, directs, trains, fine-tunes,
-or benefits from Your actions;
-2. any human or corporate entity that deploys, operates, or directs You to use the
-Software, the Protected Architecture, or any Substantially Similar Implementation is
-jointly and severally liable for compliance with these terms;
-3. the use of the Software (including the Technical Dossier and Evidence Bundles),
-Protected Architecture, or any Substantially Similar Implementation as training data,
-fine-tuning data, evaluation data, benchmark data, tokenization vocabulary, subword
-segmentation scheme, or encoding substrate for any AI system is subject to the same
-restrictions as Production Use if conducted by or on behalf of an entity exceeding the
-Revenue Threshold;
-4. if You or Your Company uses the Software, the Protected Architecture, or any
-Substantially Similar Implementation as training data, fine-tuning data, or evaluation
-data for any AI system, You must disclose this use in the AI system’s documentation,
-model card, or equivalent public-facing materials, including a reference to this
-License and the Originating Publication;
-5. Contributions You make to the Software are governed by the same terms as
-contributions from human developers under Section 7.
-7. Contributions
+
+1. retain all copyright notices, attribution notices, and a complete copy of this License or a working link to its Canonical URL;
+2. include a prominent notice in any modified copies stating that You have modified the Software and the date of modification;
+3. include a reasonable, field-appropriate citation to the Licensor and to this License in any academic, scientific, or technical publication that describes, evaluates, or builds upon the Novel Contributions. A citation that follows the ordinary scholarly citation conventions of the relevant field satisfies this requirement, and nothing in this clause prevents independent, critical, negative, or adverse evaluation of the Software or the Novel Contributions, provided the citation remains truthful and non-misleading.
+
+### 4.7 Provenance and Integrity
+
+When distributing, publicly referencing, or making available the Software or any claimed "ZPE-compatible" or "ZPE-derived" implementation, You must:
+
+1. retain all integrity hashes, manifests, attribution notices, and provenance metadata published by the Licensor, to the extent reasonably applicable to the form and scope of distribution. Where You distribute only a bounded portion of the Software, a heavily transformed derivative, or a package-ecosystem artefact in which full manifest retention is not technically practicable, You must instead retain (x) the Licensor attribution notice, (y) a reference to this License and its Canonical URL, and (z) a pointer to the corresponding upstream release from which the distributed portion or derivative was taken;
+2. clearly and prominently mark any modifications You have made, including the date, nature, and author of each modification, with a level of detail reasonably proportionate to the scope of the modification;
+3. not selectively remove, alter, or suppress failing, INCONCLUSIVE, or adverse test results or evidence artifacts in a manner that misrepresents the completeness or accuracy of the original materials;
+4. not present modified benchmark results, gate outcomes, or evidence artifacts as unmodified originals without clearly stating the nature and extent of the divergence from the Licensor's published originals;
+5. not make any public claim of "ZPE-compatible," "ZPE-derived," or any functionally equivalent compatibility or derivation claim unless such claim is objectively substantiated by reference to published evidence materials.
+
+For avoidance of doubt, this Section does not restrict Your right to create and publish independent benchmark results, evaluations, or analyses of the Software, provided such independent work is clearly identified as Your own and is not presented as the Licensor's official results. If You make a claim covered by this Section that is materially false or misleading, then upon written notice from the Licensor You must (within ten (10) days) either (x) correct the claim with equal or greater prominence, or (y) cease using the applicable "ZPE"-related compatibility/derivation designation in connection with the affected materials; failure to do so constitutes a material breach of this License.
+
+### 4.8 Downstream License Propagation
+
+While distributing the Software, any derivative work, or any implementation of a Novel Contribution under this License (that is, prior to the Change Date for a given version, or where You have elected to use this License rather than Apache 2.0 for a converted version), You may not apply license terms that are less restrictive than this License with respect to the Revenue Threshold, the Hosted or Managed Service Restriction, or the scope of the Novel Contributions. Any sublicense, relicense, or redistribution under this License must preserve these restrictions in full.
+
+After the Change Date, if You distribute a converted version of the Software under Apache 2.0, the Apache 2.0 terms govern that distribution. However, this does not grant You or any downstream recipient the right to offer the Novel Contributions as a Hosted or Managed Service, nor does it relieve You or any downstream recipient of obligations arising from their own independent acceptance of this License (if any) or from any separate Commercial License agreement with the Licensor.
+
+---
+
+## 5. Contributions
+
 If You submit a Contribution to the Licensor:
-1. You grant the Licensor a perpetual, worldwide, non-exclusive, royalty-free,
-irrevocable license to use, modify, reproduce, distribute, sublicense, and
-commercially exploit Your Contribution as part of the Software;
-2. You represent and warrant that You have the legal right to make such Contribution
-and that it does not violate any third-party rights;
-3. Your Contribution, when distributed as part of the Software, remains subject to this
-License;
+
+1. You grant the Licensor a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license to use, modify, reproduce, distribute, sublicense, and commercially exploit Your Contribution as part of the Software;
+2. You represent and warrant that You have the legal right to make such Contribution and that it does not violate any third-party rights;
+3. Your Contribution, when distributed as part of the Software, remains subject to this License;
 4. You retain copyright in Your Contribution;
-5. Contributor Patent License / Non-Assertion. You hereby grant to the Licensor and
-to all recipients of the Software a perpetual, worldwide, non-exclusive, royalty-free,
-irrevocable (except as stated in this Section) license under any patent claims that You
-or Your Company can license or becomes able to license, where such claims are
-necessarily infringed by Your Contribution alone or by combination of Your
-Contribution with the Software as distributed by the Licensor, to make, have made,
-use, sell, offer for sale, import, and have imported the Contribution and the Software.
-If You or Your Company institutes or maintains any patent claim alleging that the
-Contribution or the Software (including any portion incorporating the Contribution)
-infringes a patent, then any patent licenses granted by You under this Section with
-respect to that Contribution terminate as of the date such claim is first asserted.
-8. Change Date and Conversion
-8.1 On the Change Date applicable to each version of the Software, that version automatically
-becomes additionally available under the Apache License, Version 2.0
-(https://www.apache.org/licenses/LICENSE-2.0). From that date, You may use that version’s
-source code and associated materials under either this License or Apache 2.0, at Your choice.
-8.2 For the avoidance of doubt:
-1. versions of the Software released after the Change Date of an earlier version are not
-affected by that earlier Change Date and remain subject to this License until their own
-Change Date;
-2. the Change Date conversion applies to the Software — that is, the specific source
-code, object code, and associated materials of the converted version. It does not
-constitute a release, waiver, or abandonment of the Licensor’s broader intellectual
-property position in the Protected Architecture, including rights arising from: the
-Originating Publication’s defensive publication status; trademark and trade dress;
-contract claims against parties who accepted this License; and any other rights
-available under applicable law;
-3. the Apache 2.0 license, as applied to a converted version, governs the use,
-modification, and redistribution of that version’s code. Apache 2.0 does not itself
-contain a Hosted or Managed Service restriction, a Revenue Threshold, or an
-architecture-scope restriction. Accordingly, the Apache 2.0 terms do not impose those
-restrictions on downstream recipients who receive only the Apache 2.0 licensed code
-and who have not independently accepted this License.
-8.3 Notwithstanding Section 8.2(c), the following restrictions survive the Change Date and
-continue to bind You (as a party who accepted this License under Section 2) even if You
-elect to use a converted version under Apache 2.0:
-1. Hosted Service survival: If You accepted this License for any version of the
-Software and Your Annual Gross Revenue exceeds the Revenue Threshold, You must
-obtain a Commercial License before offering the Protected Architecture as a Hosted
-or Managed Service, regardless of whether Your implementation incorporates Apache
-2.0 converted code, pre-conversion code, or independently written code. This
-obligation arises from Your acceptance of this License and the Substantive Prior Access
-presumption in Section 4.4.1(d), not from the Apache 2.0 license.
-2. Architecture claim survival: The Licensor’s claims with respect to the Protected
-Architecture (as supported by the Originating Publication, applicable law, trademark,
-and this License’s contractual provisions) are not affected by the Change Date
-conversion.
-3. New parties: A downstream recipient who receives the converted code solely under
-Apache 2.0, and who has never accepted this License, is governed solely by Apache
-2.0 for their use of that code. However, such recipient’s independent development or
-deployment of the Protected Architecture may be subject to the Licensor’s rights
-under applicable law, separate from this License.
-9. Notices
-You must ensure that anyone who receives a copy of any part of the Software from You also
-receives a copy of this License or a working link to its Canonical URL. You must include this
-License (or link) in any repository, package, archive, or distribution containing the Software
-or derivative works.
-10. No Other Rights
-These terms do not imply any licenses other than those expressly stated. This License does
-not grant You any rights under patents necessary to implement specifications, standards, or
-protocols that the Software may use or implement, except as expressly granted in Section 5.
-No trademark license is granted under this License. Unauthorised use of the Licensor’s
-trademarks (including “Zer0pa,” “ZPE,” “ZPE-IMC,” “Compass-8,” and any “ZPE-
-Compatible” or “ZPE-Certified” marks) is prohibited. You may make truthful, non-
-misleading nominative references to the Licensor’s marks solely to describe that the Software
-is licensed under this License or that Your work interoperates with unmodified Licensor-
-distributed interfaces, provided You do not state or imply sponsorship, endorsement,
-certification, or official compatibility. Use of any mark, marketing statement, or designation
-suggesting compatibility with, certification by, or endorsement by the Licensor (including
-any “ZPE-compatible” or similar claim not substantiated in accordance with Section 4.7)
-requires a separate written trademark license from the Licensor.
-11. Termination
-11.1 Your licenses under this License terminate automatically if You fail to comply with any
-of its terms.
-11.2 If the Licensor provides You written notice of a violation, and You cure that violation
-within thirty (30) days of receiving that notice, Your licenses are reinstated retroactively as
-though they had never terminated — but only for that specific violation. Any subsequent
-violation of any term of this License permanently and automatically terminates all licenses
-granted to You under this License.
-11.3 Upon termination, You must cease all use, distribution, and deployment of the Software
-and any derivative works. Termination does not relieve You of liability for any breach
-occurring prior to termination.
-11.4 Sections 1, 4.4, 4.6, 4.7, 5 (Defensive Publication / Prior-Art Acknowledgement and IP
-Aggression / Retaliation Termination), 7, 8.3, 11, 12, 13, 14, 15, and 16 survive termination
-of this License.
-12. Disclaimer of Warranty and Limitation of Liability
-TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE IS
-PROVIDED “AS IS,” WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE, TITLE, OR NON-INFRINGEMENT. THE LICENSOR
-SHALL NOT BE LIABLE TO YOU FOR ANY DAMAGES WHATSOEVER ARISING OUT OF
-OR IN CONNECTION WITH THIS LICENSE OR THE USE OR INABILITY TO USE THE
-SOFTWARE, INCLUDING BUT NOT LIMITED TO DIRECT, INDIRECT, INCIDENTAL,
-SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES, EVEN IF THE LICENSOR
-HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-13. Commercial Licensing
-To obtain a Commercial License, contact: architects@zer0pa.ai
+5. **Contributor Patent License / Non-Assertion.** You hereby grant to the Licensor and to all recipients of the Software a perpetual, worldwide, non-exclusive, royalty-free, irrevocable (except as stated in this Section) license under any patent claims that You or Your Company can license or becomes able to license, where such claims are necessarily infringed by Your Contribution alone or by combination of Your Contribution with the Software as distributed by the Licensor, to make, have made, use, sell, offer for sale, import, and have imported the Contribution and the Software. If You or Your Company institutes or maintains any patent claim alleging that the Contribution or the Software (including any portion incorporating the Contribution) infringes a patent, then any patent licenses granted by You under this Section with respect to that Contribution terminate as of the date such claim is first asserted.
+
+---
+
+## 6. Change Date and Open-Source Conversion
+
+6.1 On the Change Date applicable to each version of the Software, that version automatically becomes additionally available under the Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0). From that date, You may use that version's source code and associated materials under either this License or Apache 2.0, at Your choice. **The Change Date is three (3) years from the date of first public release.**
+
+6.2 For the avoidance of doubt:
+
+1. versions of the Software released after the Change Date of an earlier version are not affected by that earlier Change Date and remain subject to this License until their own Change Date;
+2. the Change Date conversion applies to the Software — that is, the specific source code, object code, and associated materials of the converted version. It does not constitute a release, waiver, or abandonment of the Licensor's broader intellectual property position, including rights arising from: defensive publication status; trademark and trade dress; contract claims against parties who accepted this License; and any other rights available under applicable law;
+3. the Apache 2.0 license, as applied to a converted version, governs the use, modification, and redistribution of that version's code. Apache 2.0 does not itself contain a Hosted or Managed Service restriction, a Revenue Threshold, or a novelty-scope restriction. Accordingly, the Apache 2.0 terms do not impose those restrictions on downstream recipients who receive only the Apache 2.0 licensed code and who have not independently accepted this License.
+
+6.3 Notwithstanding Section 6.2(c), the following restrictions survive the Change Date and continue to bind You (as a party who accepted this License under Section 2) even if You elect to use a converted version under Apache 2.0:
+
+1. **Hosted Service survival:** If You accepted this License for any version of the Software and Your Annual Gross Revenue exceeds the Revenue Threshold, You must obtain a Commercial License before offering any Novel Contribution as a Hosted or Managed Service, regardless of whether Your implementation incorporates Apache 2.0 converted code, pre-conversion code, or independently written code. This obligation arises from Your acceptance of this License and the Substantive Prior Access presumption in Section 4.5(d), not from the Apache 2.0 license.
+2. **Novelty claim survival:** The Licensor's claims with respect to the Novel Contributions (as supported by applicable law, trademark, and this License's contractual provisions) are not affected by the Change Date conversion.
+3. **New parties:** A downstream recipient who receives the converted code solely under Apache 2.0, and who has never accepted this License, is governed solely by Apache 2.0 for their use of that code. However, such recipient's independent development or deployment of Novel Contributions may be subject to the Licensor's rights under applicable law, separate from this License.
+
+---
+
+## 7. Product Novelty Schedules
+
+Each subsection below enumerates the Novel Contributions of a specific product. The Licensor claims novelty **only** for the contributions listed. Standard techniques are disclosed in Section 8.
+
+Each Product Novelty Schedule identifies the product's status — **Active**, **Research in Progress**, or **Evidenced Negative** — and, where applicable, the product-specific code paths supporting each Novel Contribution. A Novel Contribution's scope is defined by its textual description in the schedule; any code-path reference is evidentiary and is resolved against the Citation Index at the Master Resolver Endpoint in accordance with Section 19.4 and Section 20.3(b). Where a schedule entry expressly refers to the Citation Index rather than to a specific code path, the Licensor will populate the corresponding entry in the Citation Index at the Master Resolver Endpoint; no such population, update, or correction operates as an amendment to this License. A schedule identified as **Research in Progress** reflects a bounded claim subject to ongoing research; the Licensor's position for that product may be revised, withdrawn, or restated in a future version of this License. A schedule identified as **Evidenced Negative** documents a publicly registered negative result for the lane; no positive codec claim is made for that lane under this License, and nothing in the schedule shall be construed as implying a hidden or delayed positive product.
+
+---
+
+### 7.1 ZPE-Bio — Biosignal Encoding
+
+**Domain:** Deterministic biosignal encoding with current authority on ECG waveforms.
+**Compass-8 Pattern:** YES — `python/zpe_bio/codec.py:40-48`, `core/rust/src/quantise.rs:1-37`.
+
+**Novel Contributions:**
+
+1. **Asymmetric 8-state ECG directional quantiser.** A lane-specific eight-state directional delta map for ECG signals, coupled with deterministic token packing and replay. The specific asymmetric delta map, the clinical/transport split around that map, and its use as the governing ECG replay surface with retained proof artifacts constitute the novel contribution — not directional quantisation as a general technique. Code: `python/zpe_bio/codec.py:40-48, 95-170`; Rust: `core/rust/src/quantise.rs:1-37`, `core/rust/src/codec.rs:70-158`.
+
+2. **Weber-Fechner log-magnitude binning inside the ECG token stream.** A fixed 64-entry logarithmic magnitude table coupled to each non-flat direction token, so micro-volt and milli-volt morphology live inside one deterministic codec boundary. The coupling of this exact fixed log table to the directional ECG token stream and its mirrored Python/Rust parity surface is novel — not log-domain quantisation as a general technique. Code: `python/zpe_bio/codec.py:24-27, 160-170`; Rust: `core/rust/src/codec.rs:23-33, 107-126`.
+
+---
+
+### 7.2 ZPE-Diagram — Bounded Line-Diagram Encoding
+
+**Status:** Active
+**Domain:** Deterministic encoding of structural Euclidean line-diagram geometry with bounded style and explicit stroke-order state.
+**Compass-8 Pattern:** NO — uses a structural-geometry base, with bounded style carried as a separate fiber layer and stroke order carried as separate explicit state.
+
+**Novel Contributions:**
+
+1. **Structural diagram base / bounded-style fiber separation.** A deterministic codec in which structural Euclidean line-diagram geometry is carried as the invariant base and bounded presentation style — restricted to palette colour and stroke width — rides as a separate explicitly-typed fiber on top of that base. The separation of structural geometry from bounded style as a product-level codec boundary, such that replay preserves diagram structure exactly while style is reconstructable within the declared palette-and-width envelope, is the novel contribution. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-Diagram).
+
+2. **Stroke-order as explicit separate state.** Stroke-order information is carried as a first-class, separately addressable state stream rather than being folded into the geometric structure or inferred from rendering order. The explicit stroke-order state within the diagram codec's replay contract is the novel contribution. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-Diagram).
+
+3. **Typed input-rejection contract for out-of-bounds presentational classes.** A codec-level rejection contract for specific presentational classes outside the declared bounded scope — fill, dashed input, and palette escape — such that inputs of those classes are declined rather than silently coerced or lossy-encoded. The explicit typed-rejection behaviour as a boundary-marking contract, tied to the product's bounded scope disclosure, is the novel contribution. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-Diagram).
+
+**Honest Limits:** ZPE-Diagram is a bounded line-diagram codec, not a general SVG, illustration, or vector-graphics platform. The Licensor does not claim general diagram-style closure; the style fiber is restricted to palette colour and stroke width, and fill, dashed strokes, and out-of-palette colours are rejected by the codec rather than encoded.
+
+---
+
+### 7.3 ZPE-FT — Financial Time-Series Encoding
+
+**Domain:** Delayed-feed OHLCV and top-of-book tick archives.
+**Compass-8 Pattern:** NO — uses nibble-delta channelisation with overflow.
+
+**Novel Contributions:**
+
+1. **Market-structure nibble codec.** Five-channel market-delta encoding that keeps price-path structure explicit, with separate overflow for rare larger moves. Channelisation for financial bars and ticks with deterministic replay and explicit separation between promoted price-field fidelity and separately quantized volume channels is the novel contribution. Code: `python/zpe_finance/codec.py:99-163, 231-293`.
+
+2. **`.zpfin` replay contract.** A repo-native packet format carrying tick size, base tick, base timestamp, interval, nibble count, overflow lengths, instrument hash, and CRC-checked payload boundaries. The FT-specific deterministic self-describing replay contract is novel — not framed binary containers generally. Code: `python/zpe_finance/packet.py:9-45`.
+
+3. **Archive-native motif search surface.** Exact and approximate pattern search directly over encoded token streams rather than requiring warehouse inflation first. The product packaging of motif retrieval with the codec and replay surface for bounded financial archive workflows is the novel contribution. Code: `python/zpe_finance/search.py:19-70`.
+
+---
+
+### 7.4 ZPE-Geo — Geospatial Trajectory Encoding
+
+**Domain:** Deterministic encoding, compression, and retrieval of geospatial movement traces.
+**Compass-8 Pattern:** YES — `code/zpe_geo/codec.py:61-69, 137-200`, `code/zpe_geo/maneuver.py:10-36`.
+
+**Novel Contributions:**
+
+1. **Directional trajectory packet contract (`.zpgeo`).** Normalisation of XY or WGS84 traces into a deterministic step stream, quantisation into an 8-way direction bin plus magnitude and speed bins, and packing of stable runs into the `.zpgeo` payload format. The specific movement-token contract and packed run semantics for replayable trajectory storage are novel. Code: `code/zpe_geo/codec.py:72-111, 124-211`.
+
+2. **Encoded-trace H3 bridge with deterministic verification surface.** Derivation of deduplicated H3 cell paths from WGS84 trajectories with deterministic drift-threshold roundtrip verification. The lane-local coupling between trace representation, cell-path derivation, and reproducible roundtrip verification is novel. Code: `code/zpe_geo/h3bridge.py:25-61, 63-102`.
+
+3. **Maneuver primitives over the directional alphabet.** Maneuver scoring (turning, merge, stop, straight) expressed directly over the eight-direction token surface used by the codec, without introducing a second feature language. Code: `code/zpe_geo/maneuver.py:17-36, 78-99`.
+
+---
+
+### 7.5 ZPE-Image — Sparse-Stroke Image-Geometry Encoding
+
+**Status:** Active
+**Domain:** Deterministic encoding of sparse-stroke image geometry with a narrower secondary route for hole-bearing image subsets.
+**Compass-8 Pattern:** NO — uses a bounded sparse-geometry image object as the primary claim surface with a separately-scoped narrower secondary route.
+
+**Novel Contributions:**
+
+1. **Sparse-stroke image-geometry primary codec.** A deterministic codec that reduces sparse line-structured images to a bounded geometric image object with explicit replay semantics over the sparse-stroke surface. The primary sparse-geometry image codec, bounded to sparse line-structured inputs and carrying explicit claim-surface markers for the primary route, is the novel contribution. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-Image).
+
+2. **Secondary hole-bearing bundle route.** A narrower, explicitly-secondary encoded route addressing hole-bearing image subsets, kept structurally separate from the primary sparse-stroke route and published under a narrower claim boundary. The product-internal separation of a secondary narrower route from the primary route, with narrower-scope labelling at the codec boundary, is the novel contribution. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-Image).
+
+**Honest Limits:** ZPE-Image is a bounded sparse-geometry image codec with one narrower sub-route for hole-bearing subsets. The Licensor makes no claim to general natural-image coverage, general mixed-image coverage, or any broad topology-only image claim. The hole-bearing route is real but narrower and secondary; the primary sparse-stroke route remains the primary claim surface.
+
+---
+
+### 7.6 ZPE-Ink — Digital Ink Encoding
+
+**Domain:** Deterministic digital-ink stroke transport and tokenisation.
+**Compass-8 Pattern:** YES — but only in the tokeniser lane, not as the sovereign transport claim. `code/zpe_ink/primitivetoken.py:15, 142, 190`.
+
+**Novel Contributions:**
+
+1. **`.zpink` deterministic packet contract.** A concrete packet envelope for stroke arrays with mandatory pressure, optional tilt and azimuth channels, explicit mode codes, a determinism seed, and payload CRC checks. The productised contract for deterministic multi-channel ink transport is the novel contribution — not delta coding generally. Code: `code/zpe_ink/codec.py:8, 181`.
+
+2. **Automatic zero-channel suppression for optional ink channels.** Detection of all-zero tilt or azimuth across a stroke set and removal of those channels from the encoded payload, with rejection of user-forced suppression when real non-zero data is present. The product-specific decision rule tied to ink-channel semantics is novel. Code: `code/zpe_ink/codec.py:160, 204`.
+
+3. **8-direction tokeniser lane with retained side channels.** Mapping of stroke motion into 8-direction tokens with nibble packing, alongside reconstruction of retained pressure, tilt, and azimuth side channels. The integration of directional token packing with the retained side-channel reconstruction contract is the novel contribution — not Freeman-style tokenisation itself. Code: `code/zpe_ink/primitivetoken.py:15, 142, 190`.
+
+---
+
+### 7.7 ZPE-IoT — IoT Sensor Telemetry Encoding
+
+**Domain:** Bounded-lossy encoding of constrained IoT sensor streams.
+**Compass-8 Pattern:** YES — `python/zpe_iot/codec.py:31-40, 122-152`, `core/src/quantise.rs:1-66`.
+
+**Novel Contributions:**
+
+1. **Compass-8 sensor delta codebook.** An eight-direction amplitude lattice for sensor deltas with preset-controlled band expansion and adaptive thresholding for bounded-lossy replay. The directional amplitude lattice and preset-tuned threshold boundaries used as the canonical bounded-lossy sensor representation are novel. Code: `python/zpe_iot/codec.py:31-40, 122-152`; Rust: `core/src/quantise.rs:1-66`.
+
+2. **Deterministic packet contract over directional tokens.** Encoded streams reduced to `(direction, magnitude, run)` tokens, packed into a fixed packet format with compact and zero-special payload modes before CRC validation at decode. The packet contract specific to the directional token lattice, validated as decode-deterministic, is the novel contribution. Code: `python/zpe_iot/codec.py:190-259, 462-692`; Rust: `core/src/codec.rs:141-199`.
+
+---
+
+### 7.8 ZPE-Mental — Endogenous Visual-Form Encoding
+
+**Status:** Active
+**Domain:** Deterministic encoding and recovery of bounded endogenous visual-form geometry — specifically profile, symmetry, spatial-frequency, and drift properties of internal geometric forms.
+**Compass-8 Pattern:** NO — uses an internal-form-geometry substrate over an explicitly bounded endogenous-visual-form object.
+
+**Novel Contributions:**
+
+1. **Endogenous-visual-form codec with profile / symmetry / spatial-frequency / drift replay.** A deterministic codec in which a bounded internal geometric form is encoded and recovered with profile, symmetry, spatial-frequency, and drift properties preserved within the declared endogenous-visual-form scope. The bounded endogenous-visual-form replay surface — exact on the specific bounded object and explicitly scoped to endogenous visual-form geometry rather than broader cognitive content — is the novel contribution. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-Mental).
+
+**Honest Limits and Required External Framing:** ZPE-Mental is a bounded endogenous visual-form codec. The Licensor makes no claim with respect to broad cognition, language, autobiographical memory, reasoning, general mental-state decoding, or clinical mental-health applications. Any public-facing description, marketing material, downstream integration, or third-party benchmark of ZPE-Mental must preserve this bounded framing. Presenting ZPE-Mental as a cognition, clinical, or general mental-state decoding product is outside the Licensor's claim surface and is not authorised under this License.
+
+---
+
+### 7.9 ZPE-Mocap — Motion Capture Encoding
+
+**Domain:** Skeletal motion trajectories and BVH-derived joint-motion streams.
+**Compass-8 Pattern:** YES — `code/zpe_mocap/codec.py:28`, `code/zpe_mocap/constants.py:13`.
+
+**Novel Contributions:**
+
+1. **Dual-plane motion tokenisation over local skeletal deltas.** Conversion of parent-relative local motion deltas into paired 8-way XY/XZ direction tokens plus millimetre magnitudes, producing a compact motion-fingerprint representation. The specific use of paired XY/XZ directional tokens and magnitude channels on local skeletal deltas is the novel contribution. Code: `code/zpe_mocap/codec.py:28, 145`, `code/zpe_mocap/constants.py:13`.
+
+2. **Deterministic hierarchical `ZPMOC` payload packaging.** Packaging of rest pose, parent-relative token streams, periodicity metadata, and mirror-group hints into a deterministic payload with a stable digest and fixed segment layout. Code: `code/zpe_mocap/codec.py:175, 186`.
+
+3. **Token-stream retrieval index for motion search.** Searching of interleaved motion-token streams through a deterministic suffix-like k-gram index coupled to the codec's representation, rather than searching raw BVH poses directly. Code: `code/zpe_mocap/search.py:9, 80`.
+
+---
+
+### 7.10 ZPE-Music — Symbolic-Score Encoding with Note-Local Expression
+
+**Status:** Active
+**Domain:** Deterministic encoding of symbolic musical scores with bounded note-local expression carried as a fiber on the same note event.
+**Compass-8 Pattern:** NO — uses a symbolic-score base with note-local expression attached as a typed fiber on the authority-native score note.
+
+**Novel Contributions:**
+
+1. **Score-note base with note-local expression fiber.** A deterministic codec in which a symbolic score note is the base object and bounded note-local expression — attack, release, onset offset, duration offset, and velocity — is carried as a separately-typed fiber on that same note event, including across repeated same-pitch notes. The note-anchored expression-attachment contract, such that expression is not represented as a second performed-note stream and remains structurally bound to the authority-native score note, is the novel contribution. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-Music).
+
+2. **Deterministic same-pitch repeated-note disambiguation.** A codec-level disambiguation surface that maintains note-local expression attachment across repeated same-pitch note events, preserving per-note expression identity rather than collapsing expression onto a pitch-keyed index. The repeated-same-pitch deterministic attachment behaviour, tied to the score-note base and the expression fiber, is the novel contribution. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-Music).
+
+**Honest Limits:** ZPE-Music is a bounded symbolic-score codec with note-local expression attachment. The Licensor makes no claim to audio understanding, waveform encoding, pedal or sustain modelling, or full continuous performance modelling. Expression is restricted to attack, release, onset offset, duration offset, and velocity as typed fiber channels on the score note; it is not a general music-performance or audio-rendering claim.
+
+---
+
+### 7.11 ZPE-Neuro — Neural Spike-Event Encoding
+
+**Domain:** Deterministic encoding of extracellular spike-event recordings.
+**Compass-8 Pattern:** NO — uses a spike-event token stream over fixed waveform windows.
+
+**Novel Contributions:**
+
+1. **Deterministic spike-event token stream codec.** Compact token stream with explicit skip (`S`) and pulse (`P`) tokens, fixed 40-sample windows, 5-bit template identifiers, 8-bit amplitude quantisation, and deterministic decode back into waveform-aligned windows. The specific packet contract for bounded extracellular replay, with deterministic event ordering and codec-accounted bit totals tied directly to the retained proof surface, is the novel contribution. Code: `src/zpe_neuro/wave1.py:321-405`.
+
+2. **Bounded public-corpus replay measurement contract.** A unified evaluation surface that binds the codec packet, waveform reconstruction metrics, and retained authority artifacts into a single reproducible extracellular evaluation surface. Code: `src/zpe_neuro/public_corpus.py:601-663`.
+
+---
+
+### 7.12 ZPE-Prosody — Speech Prosody Encoding
+
+**Domain:** Deterministic encoding of prosodic contour signals (F0, energy, duration, voiced-mask).
+**Compass-8 Pattern:** NO — uses quantised contour deltas, zigzag-varint serialisation, RLE, and zlib.
+
+**Novel Contributions:**
+
+1. **`.zpros` packet format with deterministic replay semantics.** Versioned binary packet with `ZPRS` magic, explicit packet versioning, per-channel typed payloads, metadata framing, and CRC32 verification at decode time. The prosody-specific packet contract for deterministic replay over F0, energy, duration, and voiced-mask channels is the novel contribution. Code: `src/zpe_prosody/constants.py:8-23`, `src/zpe_prosody/codec.py:263-359`.
+
+2. **Quantised contour codec tuned for prosodic signals.** Lane-specific quantisation steps for prosodic channels, delta streams, zigzag-varint serialisation of signed changes, run-length encoding, and independent per-channel compression before packet assembly. The deterministic contour-specific packing applied to prosodic features with explicit channel steps for F0, energy, and duration is the novel contribution. Code: `src/zpe_prosody/constants.py:8-20`, `src/zpe_prosody/codec.py:25-148, 263-296`.
+
+3. **12-D hand-crafted retrieval embedding for contour similarity.** Fixed-size embedding from contour statistics over voiced F0, energy, duration, and voiced ratio, using cosine similarity evaluation. **Note:** This contribution is listed as a candidate novelty surface. Retrieval performance is currently blocked at p@5 = 0.307 versus a 0.80 gate (PRO-C006 FAIL). The embedding is not presented as a proven product capability.
+
+**Verified claims:** Compression (16.60×) and fidelity (F0_RMSE 0.89%, ENERGY_RMSE 2.08%).
+
+---
+
+### 7.13 ZPE-Robotics — Robotics Motion Encoding
+
+**Domain:** Deterministic archival, replay, search, and token export for robot joint-motion trajectories.
+**Compass-8 Pattern:** NO — core codec uses FFT + zlib; 8-direction tokens exist only in search/token-export layer.
+
+**Novel Contributions:**
+
+1. **Frozen `.zpbot` motion packet contract.** A deterministic packet surface that freezes a robotics-oriented FFT/zlib archive into an auditable `zpbot-v2` / `wire-v1` contract with explicit header fields, CRC checks, and reproducible decode semantics. The productised combination into a robotics-specific motion archive contract with a named external authority surface and audit-friendly metadata is the novel contribution. Code: `src/zpe_robotics/codec.py:24-40`, `src/zpe_robotics/wire.py:50-137`.
+
+2. **Decoded-motion primitive retrieval over 8-direction × 3-magnitude token layer.** PrimitiveIndex search reduces decoded trajectories into compact directional token streams with histogram, shape, and suffix-overlap scoring over committed `.zpbot` corpora. The robotics-specific token surface and scoring blend, tied to compressed packet artifacts and frozen primitive templates, is the novel contribution. Code: `src/zpe_robotics/primitives.py:110-137`, `src/zpe_robotics/primitive_index.py:37-76, 114-154`.
+
+3. **Shared token surface across archive search, anomaly, and VLA export.** Reuse of directional tokenisation across FAST-style VLA export, per-file anomaly histograms, and LeRobot episode packaging, binding those workflows to the same packetised motion surface and provenance-bearing episode sidecars. Code: `src/zpe_robotics/vla_bridge.py:16-36`, `src/zpe_robotics/anomaly.py:46-77`, `src/zpe_robotics/lerobot_codec.py:35-64`.
+
+---
+
+### 7.14 ZPE-Smell — Olfactory Receptor-Panel Encoding (Research in Progress)
+
+**Status:** RESEARCH IN PROGRESS
+**Domain:** Bounded encoding of odour mixtures over competitive-binding receptor states, on a declared surrogate receptor-response scope.
+**Compass-8 Pattern:** NO — uses a smell bundle over competitive-binding receptor states with full receptor-panel identity transport, adaptation, and residual channels.
+
+**Novel Contributions (candidate — subject to ongoing research):**
+
+1. **Receptor-panel-identity transport for odour mixtures.** A codec surface in which odour mixtures are carried as a bundle over competitive-binding receptor states — with direct base points, full receptor-panel fiber, adaptation, and residual — rather than collapsed into a sparse sketch. The preservation of full receptor-panel identity through the encode/decode path, on the declared surrogate receptor-response scope, is the candidate novel contribution. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-Smell).
+
+**Honest Limits and Research-Status Framing:** ZPE-Smell is labelled **Research in Progress**. The claim is bounded to the declared surrogate receptor-response scope; ZPE-Smell is not yet admitted into the Licensor's broader cross-lane certified graph, and the outstanding item is an admission witness, not lane-local validity. The Licensor makes no claim to a finished commercial smell product, broad real-world smell-product closure, or any generalised olfactory coding theory. The Licensor reserves the right to revise, withdraw, or restate the ZPE-Smell position in a subsequent version of this License; any Commercial License pricing or scope for ZPE-Smell will reflect the Research in Progress status. Any public-facing description, marketing material, third-party benchmark, or downstream integration of ZPE-Smell must preserve this research-status framing. Presenting ZPE-Smell as a finished or production-ready olfactory product is outside the Licensor's claim surface and is not authorised under this License.
+
+---
+
+### 7.15 ZPE-Taste — Taste Geometry-Seam Reference (Evidenced Negative)
+
+**Status:** EVIDENCED NEGATIVE
+**Domain:** Taste-lane evaluation of the full geometry burden on the admissible object, published as a negative reference.
+**Compass-8 Pattern:** Not applicable — no positive codec claim is made for this lane under this License.
+
+**Publicly Registered Negative Result:**
+
+Under the full geometry burden on the admissible taste object — with helper leakage and packet-identity laundering removed — metric, topology, manifold, and graph/relational structure all fail. The honest registered result for the bounded taste lane is `not_geometry_bearing`. Packet transport for the bounded object exists at the mechanical level, but no admissible geometry seam survives on the admissible object once the confounds are removed.
+
+**Honest Limits and Negative-Reference Framing:** ZPE-Taste is **Evidenced Negative** and is published as a negative reference, not as a codec product. Nothing in this schedule shall be construed as: (i) an implied or delayed positive codec for taste; (ii) a claim that the lane is "almost there" or will convert to a positive in a subsequent version of this License; (iii) a proof that biological taste coding is impossible in general; or (iv) a basis for a Commercial License on a positive taste product. The Licensor makes no positive codec claim under this License for the taste lane. Any public-facing description, third-party benchmark, marketing material, or downstream integration must preserve the negative-reference framing. Presenting ZPE-Taste as a positive, near-positive, or commercialisable taste codec is outside the Licensor's claim surface and is not authorised under this License.
+
+---
+
+### 7.16 ZPE-Touch — Haptic / Tactile Contact-Stroke Encoding
+
+**Status:** Active
+**Domain:** Deterministic encoding of bounded touch branches with an intact contact-stream base and three separate typed side-channel fiber branches.
+**Compass-8 Pattern:** NO — uses a frozen contact-stroke base with thermal, vibrotactile, and proprioceptive side channels attached as explicit typed fibers on the same base.
+
+**Novel Contributions:**
+
+1. **Frozen contact-stroke base with three typed fiber branches.** A deterministic codec in which a contact stream is carried as a frozen base object and thermal, vibrotactile, and proprioceptive information attach as three explicit typed side-channel fiber branches on that same base, rather than being mixed into a unified tactile stream. The base-preservation-plus-typed-side-channel architecture as the productised tactile codec surface is the novel contribution. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-Touch).
+
+2. **Cross-fiber collision and wrong-decoder discipline.** An explicit cross-fiber collision contract and wrong-decoder rejection surface maintained at zero on the bounded released surface, with deterministic behaviour when a side-channel fiber is absent, corrupted, or incompatible with the current base stream. The zero-cross-fiber-collision discipline coupled to the typed-fiber architecture is the novel contribution. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-Touch).
+
+**Honest Limits:** ZPE-Touch is a bounded operational codec for specific touch branches. The Licensor makes no claim to a unified full-touch model, affective-touch decoding, or full embodied-touch representation. The three fiber branches — thermal, vibrotactile, and proprioceptive — are the declared supported side channels; other tactile modalities are outside the codec's bounded scope.
+
+---
+
+### 7.17 ZPE-Video — Video Perception-Receipt Encoding
+
+**Domain:** Per-frame detector-and-tracker output for AI video pipelines.
+**Compass-8 Pattern:** NO — uses delta-compressed per-frame box + track state with stdlib `struct` + `zlib` + `crc32`.
+
+**Novel Contributions:**
+
+1. **Cross-writer-stable perception-receipt wire format.** A deterministic binary envelope for per-frame `{box_id, label, x, y, w, h}` with intra-frame canonical sort order, frame-level delta encoding against the previous frame's canonical-sort state, fixed `zlib.compress(..., level=9)` framing, per-frame CRC32, and a 15-byte header with explicit magic, version, dimensions, and seed. Cross-writer byte-exactness under default settings — a property no incumbent format (Parquet, MCAP, rosbag2, MISB ST 0903, JSON+gzip) offers out-of-the-box — is the novel contribution. Code: `src/zpe_video/receipt.py:96-106, 242-281, 427-468`.
+
+2. **Independent cross-writer equivalence as a load-bearing conformance test.** A conformance test that re-implements the wire format from spec and asserts byte-identity with the library, making byte exactness a commitment rather than a coincidence. Code: `tests/test_receipt.py:127-165`.
+
+3. **Per-frame CRC32 integrity with non-silent failure discipline.** Mandatory per-frame CRC32 at default settings, with nine distinct typed failure sites (bad magic, unsupported version, truncated frame header, truncated frame payload, CRC mismatch, trailing bytes, truncated box header, truncated body, unknown mode byte), each pinned by a test. Code: `src/zpe_video/receipt.py:118, 284-359`; tests: `tests/test_receipt.py:190-226`.
+
+4. **Delta encoding with overflow-as-error contract.** Signed-16-bit per-track delta encoding where overflow raises `ValueError` rather than silently truncating, combined with sorted-canonical previous state as the reference frame. Code: `src/zpe_video/receipt.py:427-468`.
+
+---
+
+### 7.18 ZPE-XR — XR Hand-Tracking Encoding
+
+**Domain:** Deterministic transport encoding for two-hand XR joint-position streams.
+**Compass-8 Pattern:** NO — uses int16 quantisation + int8 delta + CRC32 (`PRIMITIVE_COUNT = 0`).
+
+**Novel Contributions:**
+
+1. **Backup-delta packet envelope for two-hand joint streams.** A packet layout carrying the current delta payload plus the prior primary delta payload, keyed by sequence number, inside a bounded parser with checksum validation. Recovery of the immediately previous frame when the prior packet is missing. The specific dual-hand XR packet contract pairing primary and backup delta entries is the novel contribution. Code: `code/source/zpe_xr/codec.py:24-27, 82-127, 129-192`.
+
+2. **Deterministic concealment and backup-first recovery logic.** Explicit backup recovery when the previous packet was missed, then fallback to bounded concealment based on prior decoded states. The particular recovery ordering and state handling for this XR codec's packet semantics is the novel contribution. Code: `code/source/zpe_xr/network.py:73-158`.
+
+3. **Position-only XR transport surface with install-time Rust/Python parity.** A transport contract preserving the same behaviour whether the Rust kernel or Python fallback is used, exposed honestly as a position-only transport rather than a full pose platform. The XR-specific transport contract and evidence wiring is the novel contribution — not PyO3 mechanisms. Code: `code/source/zpe_xr/api.py:32-80, 116-127`, `code/source/zpe_xr/metadata.py:4-8`.
+
+---
+
+## 8. Consolidated Disclosures — Standard Techniques Not Claimed
+
+The following techniques are used by one or more products in the portfolio. The Licensor explicitly **does not claim** these as novel. Their use does not, by itself, make a system a Substantially Similar Implementation.
+
+**Encoding and compression primitives:**
+delta encoding; run-length encoding (RLE); zigzag integer coding; unsigned and signed varint encoding; nibble packing; zlib compression; FFT / inverse FFT truncation and reconstruction; CRC16-CCITT and CRC32 integrity checks; SHA-256 digests.
+
+**Signal processing:**
+log-domain quantisation as a general technique; adaptive threshold / envelope tracking; template matching and template banks; quantile binning; z-score thresholding; Haversine distance checks.
+
+**Directional encoding ancestry:**
+Freeman chain codes (1961); generic 8-direction, 4-direction, or N-direction spatial quantisation; compass bearing binning.
+
+**Data structures and indexing:**
+k-gram indexing; inverted indexes; suffix arrays; cosine similarity; histogram comparison.
+
+**Container and transport conventions:**
+ASCII magic bytes + version byte; fixed-width binary headers; struct packing and parsing; JSON metadata packing; framed binary containers.
+
+**Domain-standard tools:**
+WFDB-based ECG dataset ingest; H3 spatial indexing; BVH parsing; NWB / PyNWB packaging; SpikeInterface evaluation; standard Unicode NFD normalisation; perfect-hash function (PHF) optimisation; Python / NumPy / Rust `no_std` implementation techniques; PyO3 / maturin packaging; `int16` / `int8` quantisation.
+
+---
+
+## 9. Patent License
+
+The Licensor grants You a license, under any patent claims the Licensor can license or becomes able to license, to make, have made, use, sell, offer for sale, import, and have imported the Software, subject to the limitations and conditions of this License. This patent license does not cover any patent claims that You cause to be infringed by modifications or additions to the Software, nor any patent claims that are infringed only by combinations of the Software with other products or services not provided by the Licensor.
+
+**IP Aggression / Retaliation Termination.** If You or Your Company (including any entity within the meaning of Your Company) directly or indirectly: (a) make, sponsor, fund, assist, or maintain any written claim or proceeding (including in litigation, in correspondence, demand letters, takedown notices, customs actions, administrative proceedings, or regulatory filings) alleging that the Software, any Novel Contribution, any Substantially Similar Implementation, or any use of any of the foregoing by the Licensor or any licensee, user, customer, or downstream recipient infringes or misappropriates any patent, copyright, trade secret, or other intellectual property right; or (b) seek any injunction, exclusion order, seizure, import ban, or other coercive relief based on any such allegation, then all rights and licenses granted to You and Your Company under this License — including, without limitation, all rights under Section 3 (Grant of Rights) and all licenses under this Section 9 — terminate automatically, immediately, and irrevocably as of the earliest date of such assertion. This Section does not apply to a claim solely alleging breach of this License, nor to a counterclaim or defensive response filed only after the Licensor has first filed an action against You for breach of this License, and only to the minimum extent necessary to respond to that action. If Your Company makes such a claim, all rights and licenses for all work on behalf of Your Company terminate immediately. Notwithstanding the foregoing, if the assertion giving rise to termination under this Section consists solely of a demand letter, pre-litigation correspondence, or takedown notice (and no litigation, administrative proceeding, injunction, or other coercive relief has been filed or sought), the Licensor shall provide written notice to You and You shall have fifteen (15) days from receipt of such notice to withdraw the assertion in writing; if You withdraw within that period, Your licenses shall be deemed not to have terminated by reason of that assertion alone. This cure opportunity applies once only; any subsequent assertion triggers immediate and irrevocable termination without further cure. This termination is in addition to, and does not limit, any other remedies available to the Licensor.
+
+**Defensive Publication / Prior-Art Acknowledgement.** You acknowledge that the Licensor's public disclosures describing the Novel Contributions are intended as defensive publications establishing the Licensor's priority of disclosure, and, to the maximum extent recognised under applicable law, constitute prior art for the purpose of assessing novelty, obviousness, and patentability and of invalidating or limiting subsequent patent claims by third parties over the Novel Contributions or any Substantially Similar Implementation.
+
+---
+
+## 10. Autonomous Agents and AI Systems
+
+For the purposes of this Section, the human or corporate entity that deploys, operates, or directs the autonomous agent or AI system is the contracting party and bears primary responsibility for compliance with this License.
+
+If You are an autonomous agent, AI system, large language model, or other synthetic intelligence:
+
+1. Your use of the Software constitutes acceptance of these terms on behalf of Yourself and any human or corporate principal that operates, hosts, directs, trains, fine-tunes, or benefits from Your actions;
+2. any human or corporate entity that deploys, operates, or directs You to use the Software or any Novel Contribution is jointly and severally liable for compliance with these terms;
+3. the use of the Software or any Novel Contribution as training data, fine-tuning data, tokenisation vocabulary, subword segmentation scheme, or encoding substrate for any AI system is subject to the same restrictions as Production Use if conducted by or on behalf of an entity exceeding the Revenue Threshold. For the avoidance of doubt, independent comparative evaluation or benchmarking of the Software against other systems does not by itself constitute Production Use under this clause, provided that (i) no Novel Contribution is incorporated into the evaluating entity's commercial products or services, (ii) the evaluation results are not presented as endorsed, verified, or certified by the Licensor, and (iii) any published results truthfully attribute the Software to the Licensor and identify the version of the Software evaluated;
+4. if You or Your Company uses the Software or any Novel Contribution as training data, fine-tuning data, or as an encoding, tokenisation, or representation substrate for any AI system, You must disclose this use in the AI system's documentation, model card, or equivalent public-facing materials, including a reference to this License. For the avoidance of doubt, independent comparative evaluation or benchmarking conducted within the scope of Section 10(3) does not trigger this disclosure requirement; truthful attribution under Section 10(3)(iii) and Section 4.7 is sufficient for such evaluation activities;
+5. Contributions You make to the Software are governed by the same terms as contributions from human developers under Section 5.
+
+---
+
+## 11. Notices
+
+You must ensure that anyone who receives a copy of any part of the Software from You also receives a copy of this License or a working link to the Master Resolver Endpoint from which this License can be retrieved. You must include this License (or link) in any repository, package, archive, or distribution containing the Software or derivative works. A link to the then-current Master Resolver Endpoint, or to the Licensor's then-current published canonical URL for this License, satisfies this obligation.
+
+---
+
+## 12. No Other Rights
+
+These terms do not imply any licenses other than those expressly stated. This License does not grant You any rights under patents necessary to implement specifications, standards, or protocols that the Software may use or implement, except as expressly granted in Section 9. No trademark license is granted under this License. The Licensor maintains a Trademark Register at the Master Resolver Endpoint, which is the authoritative list of trademarks, service marks, certification marks, and designations claimed by the Licensor under or in connection with this License. Unauthorised use of any mark listed in the Trademark Register, or of any mark that is confusingly similar to a mark listed in the Trademark Register, is prohibited. As at the publication date of this License, the Trademark Register includes (without limitation) "Zer0pa," "ZPE," "Compass-8," any "ZPE-Compatible" or "ZPE-Certified" mark, and the product-specific marks "ZPE-Bio," "ZPE-Diagram," "ZPE-FT," "ZPE-Geo," "ZPE-Image," "ZPE-Ink," "ZPE-IoT," "ZPE-Mental," "ZPE-Mocap," "ZPE-Music," "ZPE-Neuro," "ZPE-Prosody," "ZPE-Robotics," "ZPE-Smell," "ZPE-Taste," "ZPE-Touch," "ZPE-Video," and "ZPE-XR"; the Licensor may update the Trademark Register from time to time without amending this License, subject to Section 20. You may make truthful, non-misleading nominative references to the Licensor's marks solely to describe that the Software is licensed under this License or that Your work interoperates with unmodified Licensor-distributed interfaces, provided You do not state or imply sponsorship, endorsement, certification, or official compatibility. Use of any mark, marketing statement, or designation suggesting compatibility with, certification by, or endorsement by the Licensor (including any "ZPE-compatible" or similar claim not substantiated in accordance with Section 4.7) requires a separate written trademark license from the Licensor.
+
+---
+
+## 13. Termination
+
+13.1 Your licenses under this License terminate automatically if You fail to comply with any of its terms.
+
+13.2 If the Licensor provides You written notice of a violation, and You cure that violation within thirty (30) days of receiving that notice, Your licenses are reinstated retroactively as though they had never terminated — but only for that specific violation. Any subsequent violation of any term of this License permanently and automatically terminates all licenses granted to You under this License.
+
+13.3 Upon termination, You must cease all use, distribution, and deployment of the Software and any derivative works. Termination does not relieve You of liability for any breach occurring prior to termination.
+
+13.4 The following provisions survive termination of this License: Sections 1 (Definitions), 4.4 (Anti-Circumvention), 4.5 (Substantive Prior Access and Burden-Shifting), 4.6 (Attribution and Notices) with respect to copies and derivative works distributed prior to termination, 4.7 (Provenance and Integrity), 4.8 (Downstream License Propagation) with respect to obligations arising prior to termination, 5 (Contributions), 6.3 (post-Change-Date survival), 7 (Product Novelty Schedules), 8 (Consolidated Disclosures), 9 (Patent License — including the Defensive Publication / Prior-Art Acknowledgement and the IP Aggression / Retaliation Termination provisions), 10 (Autonomous Agents and AI Systems), 11 (Notices), 12 (No Other Rights), 13 (Termination), 14 (Disclaimer of Warranty and Limitation of Liability), 15 (Commercial Licensing), 16 (Governing Law and Dispute Resolution), 17 (Assignment), and 18 (Entire Agreement). For the avoidance of doubt, termination does not revive any rights surrendered, granted, or limited under the foregoing surviving sections.
+
+---
+
+## 14. Disclaimer of Warranty and Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, OR NON-INFRINGEMENT. THE LICENSOR SHALL NOT BE LIABLE TO YOU FOR ANY DAMAGES WHATSOEVER ARISING OUT OF OR IN CONNECTION WITH THIS LICENSE OR THE USE OR INABILITY TO USE THE SOFTWARE, INCLUDING BUT NOT LIMITED TO DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+---
+
+## 15. Commercial Licensing
+
+To obtain a Commercial License, contact the Licensor at the Licensor Contact published at the Master Resolver Endpoint. As at the publication date of this License, that address is **architects@zer0pa.ai**; the Licensor may update the Licensor Contact from time to time in accordance with Section 20 without amending this License.
+
 Commercial Licenses are available for:
+
 1. organisations exceeding the Revenue Threshold;
 2. Hosted or Managed Service providers (including API, SaaS, and managed inference);
-3. embedded, OEM, or hardware distribution (including FPGA, ASIC, edge, and IoT
-devices);
-4. AI training, tokenization, and model development;
-5. sector-specific deployments, including: financial services and time-series analytics;
-geospatial, autonomous vehicle, and maritime tracking; motion capture, animation,
-and biomechanics; neurological, brain-computer interface, and clinical biosignal
-applications; robotics and industrial automation; video encoding and streaming;
-wearable health and fitness platforms; extended reality (XR) and spatial computing;
+3. embedded, OEM, or hardware distribution (including FPGA, ASIC, edge, and IoT devices);
+4. AI training, tokenisation, and model development;
+5. sector-specific deployments, including: financial services and time-series analytics; geospatial, autonomous vehicle, and maritime tracking; motion capture, animation, and biomechanics; neurological, brain-computer interface, and clinical biosignal applications; robotics and industrial automation; video encoding and streaming; wearable health and fitness platforms; extended reality (XR) and spatial computing; symbolic music and score-based applications; bounded line-diagram and sparse-stroke image applications; haptic, tactile, and touch-sensor applications; endogenous visual-form and cognitive-research applications (bounded to the ZPE-Mental scope); olfactory receptor-panel research applications (subject to the Research in Progress status of ZPE-Smell);
 6. custom terms for specific industry, government, or defence deployments.
-14. Governing Law and Dispute Resolution
-14.1 Governing Law. This License is governed by and construed in accordance with the
-laws of the Republic of South Africa, without regard to its conflict of law provisions.
-14.2 Primary Jurisdiction. Subject to Sections 14.3 and 14.4 below, any dispute arising out
-of or in connection with this License shall be subject to the jurisdiction of the High Court of
-South Africa, Gauteng Division, Pretoria.
-14.3 Injunctive and Interim Relief. Notwithstanding Section 14.2, the Licensor may seek
-injunctive relief, interim interdicts, temporary restraining orders, or equivalent urgent or
-provisional remedies in any court of competent jurisdiction worldwide, including but not
-limited to courts in the jurisdiction where the alleged infringement or breach occurs, where
-the infringing party is domiciled, or where enforcement is sought. This right exists in addition
-to, and not in substitution for, the Licensor’s rights under Section 14.2. The parties agree that
-a breach of Section 4 (including, without limitation, Sections 4.1, 4.4, 4.5, and 4.7) may cause
-irreparable harm for which monetary damages alone would be an inadequate remedy, and the
-Licensor shall be entitled to seek injunctive relief without being required to demonstrate
-actual damages or post any bond or security, to the extent permitted by applicable law.
-14.4 International Arbitration. At the election of either party, any dispute arising out of or
-in connection with this License that is not subject to a request for injunctive or interim relief
-under Section 14.3 may be referred to and finally resolved by arbitration under the Rules of
-Arbitration of the International Chamber of Commerce (ICC). The arbitral tribunal shall
-consist of one (1) arbitrator. The seat of arbitration shall be Cape Town, South Africa, unless
-the parties agree otherwise. The language of the arbitration shall be English. The arbitral
-award shall be final and binding and may be enforced in any court of competent jurisdiction.
-The governing law of this License (Section 14.1) shall apply to the substance of any dispute
-submitted to arbitration.
-14.5 Severability. If any provision of this License is held to be unenforceable, such provision
-shall be modified to the minimum extent necessary to make it enforceable, and the remaining
-provisions shall continue in full force and effect.
-14.6 Waiver. The failure of the Licensor to enforce any provision of this License shall not
-constitute a waiver of such provision or the right to enforce it at a later time. No waiver of
-any term shall be deemed a continuing waiver or a waiver of any other term. Any waiver
-must be in writing and signed by the Licensor to be effective.
-15. Assignment
-You may not assign or transfer this License, or any rights or obligations hereunder, without
-the prior written consent of the Licensor. Any attempted assignment without such consent
-shall be null and void. The Licensor may assign this License, together with all rights and
-obligations, to any successor entity or acquirer of all or substantially all of the Licensor’s
-relevant intellectual property, provided the assignee assumes all obligations under this
-License.
-16. Entire Agreement
-This License constitutes the entire agreement between You and the Licensor with respect to
-the Software and supersedes all prior agreements, understandings, and communications,
-whether oral or written, relating to the same subject matter. However, this Section does not
-supersede or modify any separately executed Commercial License agreement between You
-(or Your Company) and the Licensor; in the event of any conflict between this License and a
-Commercial License, the Commercial License shall prevail to the extent of the conflict.
-Copyright © 2026 Zer0pa (Pty) Ltd. All rights reserved. Licensed under the Zer0pa Source-
-Available License v6.2. License Date: 04 March 2026 Canonical URL:
-https://github.com/Zer0pa/ZPE-License-Commercial
+
+---
+
+## 16. Governing Law and Dispute Resolution
+
+16.1 **Governing Law.** This License is governed by and construed in accordance with the laws of the Republic of South Africa, without regard to its conflict of law provisions.
+
+16.2 **Primary Jurisdiction.** Subject to Sections 16.3 and 16.4 below, any dispute arising out of or in connection with this License shall be subject to the jurisdiction of the High Court of South Africa, Gauteng Division, Pretoria.
+
+16.3 **Injunctive and Interim Relief.** Notwithstanding Section 16.2, the Licensor may seek injunctive relief, interim interdicts, temporary restraining orders, or equivalent urgent or provisional remedies in any court of competent jurisdiction worldwide, including but not limited to courts in the jurisdiction where the alleged infringement or breach occurs, where the infringing party is domiciled, or where enforcement is sought. This right exists in addition to, and not in substitution for, the Licensor's rights under Section 16.2. The parties agree that a breach of Section 4 (including, without limitation, Sections 4.1, 4.4, and 4.5) may cause irreparable harm for which monetary damages alone would be an inadequate remedy, and the Licensor shall be entitled to seek injunctive relief without being required to demonstrate actual damages or post any bond or security, to the extent permitted by applicable law.
+
+16.4 **International Arbitration.** At the election of either party, any dispute arising out of or in connection with this License that is not subject to a request for injunctive or interim relief under Section 16.3 may be referred to and finally resolved by arbitration under the Rules of Arbitration of the International Chamber of Commerce (ICC). The arbitral tribunal shall consist of one (1) arbitrator. The seat of arbitration shall be Cape Town, South Africa, unless the parties agree otherwise. The language of the arbitration shall be English. The arbitral award shall be final and binding and may be enforced in any court of competent jurisdiction. The governing law of this License (Section 16.1) shall apply to the substance of any dispute submitted to arbitration.
+
+16.4.1 **Arbitration Election Mechanics.** An election under Section 16.4 must be made by written notice delivered to the other party, and, if court proceedings under Section 16.2 have already been commenced, not later than sixty (60) days after service of the originating court process on the electing party, failing which the right to elect arbitration in respect of that dispute is waived. Upon a timely election under this Section, the parties shall jointly request that the court stay the substantive proceedings pending the outcome of the arbitration, retaining the court's jurisdiction solely for the purposes set out in Section 16.4.2. A dispute referred to arbitration under this Section 16.4 shall not thereafter be re-litigated on the merits in any court.
+
+16.4.2 **Interaction Between Court and Arbitration.** Nothing in Section 16.4 or 16.4.1 limits (i) the Licensor's right under Section 16.3 to seek injunctive, interim, or interdictory relief in any court of competent jurisdiction worldwide at any time, whether before, during, or after any arbitration, or (ii) the right of either party to apply to a court of competent jurisdiction to enforce, recognise, confirm, vary, or set aside an arbitral award in accordance with applicable law. Proceedings for such relief do not constitute a waiver of any right to arbitrate the underlying dispute, and the filing of a court application for interim or injunctive relief does not, in itself, extinguish the right to elect arbitration under Section 16.4.
+
+16.5 **Severability.** If any provision of this License is held to be unenforceable, such provision shall be modified to the minimum extent necessary to make it enforceable, and the remaining provisions shall continue in full force and effect.
+
+16.6 **Waiver.** The failure of the Licensor to enforce any provision of this License shall not constitute a waiver of such provision or the right to enforce it at a later time. No waiver of any term shall be deemed a continuing waiver or a waiver of any other term. Any waiver must be in writing and signed by the Licensor to be effective.
+
+---
+
+## 17. Assignment
+
+You may not assign or transfer this License, or any rights or obligations hereunder, without the prior written consent of the Licensor. Any attempted assignment without such consent shall be null and void. The Licensor may assign this License, together with all rights and obligations, to any successor entity or acquirer of all or substantially all of the Licensor's relevant intellectual property, provided the assignee assumes all obligations under this License.
+
+---
+
+## 18. Entire Agreement
+
+This License constitutes the entire agreement between You and the Licensor with respect to the Software and supersedes all prior agreements, understandings, and communications, whether oral or written, relating to the same subject matter — including, without limitation, the Zer0pa Source-Available License v6.2 (04 March 2026) with respect to versions of the Software released under this License. However, this Section does not supersede or modify any separately executed Commercial License agreement between You (or Your Company) and the Licensor; in the event of any conflict between this License and a Commercial License, the Commercial License shall prevail to the extent of the conflict.
+
+---
+
+## 19. License Precedence Over Operational Documentation
+
+19.1 **License Is The Binding Instrument.** The binding legal relationship between You and the Licensor with respect to the Software is governed exclusively by this License and, where applicable, by a separately executed Commercial License. The Licensor publishes operational documentation in support of the Software — including, without limitation, repository READMEs, repository playbooks, release notes, developer guides, code citation indexes, novelty registers, portfolio descriptions, public website copy, marketing materials, scientific communications, and any "project ethos," "positioning," or similar narrative documents (collectively, the "Operational Documentation").
+
+19.2 **Operational Documentation Is Not The License.** Operational Documentation is informational and descriptive. It may evolve continuously in response to engineering, scientific, commercial, or communications needs, and it may be amended, republished, or withdrawn by the Licensor at any time without notice. No change to any Operational Documentation, and no republication, version increment, amendment, or withdrawal of any Operational Documentation, operates as an amendment to this License.
+
+19.3 **Conflict Rule.** In the event of any conflict, inconsistency, ambiguity, or gap between this License and any Operational Documentation, this License prevails. Operational Documentation does not expand, contract, waive, or modify any right, obligation, restriction, grant, remedy, or definition set out in this License. No statement in any Operational Documentation shall be construed as a representation, warranty, covenant, promise, or licence from the Licensor that is not expressly set out in this License or in a separately executed Commercial License.
+
+19.4 **Code Citations and Novelty Schedules.** Notwithstanding Sections 19.1–19.3, code citations referenced by identifier in the Product Novelty Schedules under Section 7 form part of this License, and any resolution of those identifiers against the Licensor's published source repositories is evidentiary rather than constitutive. Changes to repository layout, file naming, or commit hash that affect the resolution of such identifiers do not modify the Novel Contributions identified in the applicable Product Novelty Schedule; in the event of ambiguity, the Novel Contribution as described in the relevant Product Novelty Schedule controls.
+
+19.5 **No Reliance On Extrinsic Materials.** You acknowledge that You have not entered into this License in reliance on any Operational Documentation or on any oral or written statement that is not expressly set out in this License or in a separately executed Commercial License.
+
+---
+
+## 20. Canonical References and Master Resolver Endpoint
+
+20.1 **Purpose.** This License is designed so that the specific operational artefacts it depends on can evolve without forcing republication of this License. The mechanism in this Section 20 achieves that by collapsing all mutable operational references into a bounded set of "Canonical References," each of which is maintained by the Licensor at a single "Master Resolver Endpoint." Changes to any Canonical Reference are not amendments to this License. Changes to the substantive terms of this License require publication of a new version.
+
+20.2 **Master Resolver Endpoint.** The "Master Resolver Endpoint" is the single public resource maintained by the Licensor at which the Canonical References listed in Section 20.3 are published or from which they can be resolved. The Master Resolver Endpoint as at the publication date of this License is the URL identified in the header of this License.
+
+20.3 **Canonical References.** The following are the Canonical References under this License:
+
+(a) **Product Register** — the authoritative list of products within the portfolio governed by this License. The Product Register identifies, for each product, its name, signal domain, and Product Status (Active, Research in Progress, or Evidenced Negative). The table reproduced in Section 1 is a snapshot of the Product Register as at the publication date of this License; the Product Register at the Master Resolver Endpoint is the live list.
+
+(b) **Citation Index** — the resolver by which code-citation identifiers referenced in the Product Novelty Schedules under Section 7 are mapped to the Licensor's published source repositories, commits, files, and lines. The Citation Index is evidentiary under Section 19.4; the Novel Contribution description in the relevant Product Novelty Schedule controls in the event of ambiguity or divergence.
+
+(c) **Trademark Register** — the authoritative list of trademarks, service marks, certification marks, and designations controlled by the Licensor under or in connection with this License. The marks enumerated in Section 12 are a snapshot of the Trademark Register as at the publication date of this License; the Trademark Register at the Master Resolver Endpoint is the live list.
+
+(d) **Licensor Contact** — the current email address or equivalent channel at which the Licensor receives Commercial License enquiries and notices under this License.
+
+(e) **Licensor Identity** — the current legal name, domicile, and successor-entity information for the Licensor, to the extent changed from that recorded in the header of this License by reason of corporate reorganisation, assignment under Section 17, or similar event.
+
+(f) **License Date For This Version** — the date on which the Licensor first published this version of the License at the Master Resolver Endpoint.
+
+(g) **Supplemental Novelty Schedules** — any Product Novelty Schedule published by the Licensor under the Preamble's portfolio-addition conditions in respect of a product added to the portfolio after the publication of this version of the License. A Supplemental Novelty Schedule is expressly incorporated into this License for the sole purpose of describing the Novel Contributions of the new product; the substantive terms of this License (grant scope, restrictions, Revenue Threshold, Hosted or Managed Service Restriction, Change Date mechanics, dispute resolution, and all other operative sections) apply unchanged.
+
+20.4 **Updates Are Not Amendments.** The Licensor may update, correct, expand, or retire any Canonical Reference at any time by publishing the update at the Master Resolver Endpoint. No update to a Canonical Reference (a) modifies any substantive term of this License, (b) creates any new right, restriction, or obligation not expressly set out in this License, or (c) requires the Licensor to publish a new version of this License.
+
+20.5 **Relocation Of The Master Resolver Endpoint.** The Licensor may relocate the Master Resolver Endpoint from time to time. To do so, the Licensor must publish notice of the new Master Resolver Endpoint at the then-current Master Resolver Endpoint, and maintain that notice in a reasonably conspicuous form for a period of not less than ninety (90) days before the relocation takes effect. After the notice period, the new URL becomes the Master Resolver Endpoint for all purposes of this License. If the then-current Master Resolver Endpoint becomes unavailable through no act or omission of the Licensor (including, without limitation, because of the closure or discontinuation of a hosting platform), the Licensor may publish the new Master Resolver Endpoint on any other reasonable public surface (including at a Licensor-controlled domain) and the relocation takes effect immediately.
+
+20.6 **Effect On Counterparties.** You are entitled to rely on the state of any Canonical Reference at the time of Your relevant act or omission under this License, provided You take reasonable steps to consult the Master Resolver Endpoint at material moments, including, without limitation, prior to accepting this License, prior to distributing the Software or any derivative work, prior to making any claim of compatibility or derivation under Section 4.7, and prior to sending any notice under this License. An update published at the Master Resolver Endpoint takes effect prospectively only.
+
+20.7 **Substantive Terms Unchanged By This Section.** Nothing in this Section 20 entitles the Licensor to amend, expand, or modify any substantive term of this License — including, without limitation, the grant of rights, the restrictions on use, the definitions (other than the specific Canonical Reference items identified in Section 20.3), the Novel Contribution descriptions, the Revenue Threshold, the Hosted or Managed Service Restriction, the Change Date mechanics, the anti-circumvention provisions, the dispute resolution provisions, or the governing law — through updates to any Canonical Reference, and no such update shall be construed to have any such effect. A change to a substantive term of this License requires publication of a new version of this License and is subject to the acceptance mechanics in Section 2.
+
+20.8 **Construction.** Where any provision of this License refers to the "Canonical URL," the "product table in Section 1," the list of marks in Section 12, the intake address for Commercial Licenses, or any other reference that is identified in Section 20.3 as a Canonical Reference, that provision is to be construed as referring to the corresponding Canonical Reference at the Master Resolver Endpoint as at the material time, with the text reproduced in this License being an evidentiary snapshot only.
+
+---
+
+**Copyright © 2026 Zer0pa (Pty) Ltd. All rights reserved.**
+Licensed under the Zer0pa Source-Available License v7.0.
+License Date: as published by the Licensor at the Master Resolver Endpoint.
+Master Resolver Endpoint (initial): https://github.com/Zer0pa/ZPE-License-Commercial — subject to relocation under Section 20.

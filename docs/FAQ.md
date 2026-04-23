@@ -23,9 +23,10 @@ complete or release-ready.
 
 ## Is this repo release-ready?
 
-No. Engineering remains incomplete. Benchmark gate `B3` fails, red-team attacks
-`3` and `5` fail, attack `4` only partially withstands, and the robotics
-`.zpbot` path is not routed through a current ZPE-IMC Rust ABI.
+No. Engineering carries named open blockers: benchmark gate `B3` fails, red-team
+attacks `3` and `5` fail, attack `4` only partially withstands, and the robotics
+`.zpbot` path is not routed through a current ZPE-IMC Rust ABI. Each blocker is
+tracked with an honest description in `proofs/ENGINEERING_BLOCKERS.md`.
 
 ## What is actually green right now?
 
