@@ -270,7 +270,7 @@ Each Product Novelty Schedule identifies the product's status — **Active**, **
 
 **Status:** Active
 **Domain:** Deterministic encoding of structural Euclidean line-diagram geometry with bounded style and explicit stroke-order state.
-**Compass-8 Pattern:** NO — uses a structural-geometry base, with bounded style carried as a separate fiber layer and stroke order carried as separate explicit state.
+**Compass-8 Pattern:** NO (as a product claim). The codec uses 8-direction chain-code encoding with run-length packing as an internal technique (see `src/zpe_diagram/quantize.py:7-17` for the 8-vector `DIRS` table, `src/zpe_diagram/pack.py:18` for `SUBTYPE_DRAW_RUN`, and `_emit_run()` in `src/zpe_diagram/pack.py` for the (direction, run_length) packing). The Novel Contribution of this product is the structural-geometry base / bounded-style fiber separation, not the directional encoding layer.
 
 **Novel Contributions:**
 
