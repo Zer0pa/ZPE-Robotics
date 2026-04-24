@@ -11,6 +11,7 @@
 | runtime | current runtime coupling is none | no IMC package import and no robotics `.zpbot` Rust ABI are present today |
 | release hygiene | governance and releasing patterns are aligned | Robotics is not a coupled multi-repo release system |
 | future Rust lane | a later Rust-routing lane is possible | it is not current-state truth |
+| current claim gate | Robotics is ratified only as bounded-lossy archive/search | this does not import IMC status or runtime coupling |
 
 Current decision: treat Robotics as docs-linked and release-hygiene-linked to
 IMC, not as a runtime-coupled system.

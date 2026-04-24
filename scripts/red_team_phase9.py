@@ -19,7 +19,7 @@ from zpe_robotics.enterprise_dataset import load_episode_matrices
 from zpe_robotics.fixtures import generate_joint_trajectory
 from zpe_robotics.lerobot_codec import ZPELeRobotCodec, build_synthetic_episode
 from zpe_robotics.primitive_index import PrimitiveIndex
-from zpe_robotics.release_candidate import REFERENCE_ROUNDTRIP_SHA256, compute_reference_bridge_roundtrip
+from zpe_robotics.release_candidate import REFERENCE_ROUNDTRIP_SHA256
 from zpe_robotics.telemetry import create_tracking_bundle
 from zpe_robotics.utils import write_json
 

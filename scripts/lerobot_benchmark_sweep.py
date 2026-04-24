@@ -10,8 +10,9 @@ LeRobot-style datasets while keeping the run truthful:
 - Results are per-dataset `enterprise_benchmark.py` outputs plus an aggregate
   spread summary.
 
-It does not claim closure of Phase 9 blockers (B3, attack_3, attack_5) unless
-independent evidence exists elsewhere in the repo.
+It does not claim closure of Phase 9 blockers (B3, attack_3, Robotics Rust
+routing) or create a general anomaly-readiness claim. Attack_5 is governed by
+the separate anomaly threshold artifacts.
 """
 
 from __future__ import annotations
@@ -392,7 +393,8 @@ def main() -> int:
         },
         "standing_blockers_note": (
             "Benchmark breadth is not blocker closure. B3 (bit-exact replay), red-team attack_3, and "
-            "attack_5 remain unresolved unless separately proven by governing proof artifacts."
+            "Robotics Rust routing remain unresolved unless separately proven by governing proof artifacts. "
+            "attack_5 is governed by the anomaly threshold artifacts, not by benchmark breadth."
         ),
     }
     _write_json(output_dir / "aggregate_spread_summary.json", aggregate)

@@ -9,14 +9,18 @@ ROOT = Path(__file__).resolve().parents[1]
 CURRENT_DOC_SURFACE = [
     "CHANGELOG.md",
     "docs/ARCHITECTURE.md",
+    "docs/CLAIM_BOUNDARY.md",
     "docs/LEGAL_BOUNDARIES.md",
+    "docs/MECHANICS_LAYER.md",
     "docs/OPERATOR_RUNBOOK.md",
     "docs/family/ROBOTICS_RELEASE_LINKAGE.md",
 ]
 CURRENT_FRONTDOOR_DOCS = [
     "README.md",
     "docs/ARCHITECTURE.md",
+    "docs/CLAIM_BOUNDARY.md",
     "docs/LEGAL_BOUNDARIES.md",
+    "docs/MECHANICS_LAYER.md",
     "docs/OPERATOR_RUNBOOK.md",
     "docs/family/ROBOTICS_RELEASE_LINKAGE.md",
 ]

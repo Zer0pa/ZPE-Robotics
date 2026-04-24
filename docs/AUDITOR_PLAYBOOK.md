@@ -9,7 +9,7 @@
 </p>
 
 This is the shortest verification path anchored to current authority.
-Engineering is not complete. Local green slices do not override the March 21
+Engineering is not complete. Local green slices do not override the current
 blocker-state evidence.
 The repo is public and the package is published, but those facts are
 non-sovereign versus the blocker files below.
@@ -23,8 +23,9 @@ non-sovereign versus the blocker files below.
 | Repo scope | standalone Python package wedge |
 | Repo visibility | public GitHub repo and public package surface |
 | Current authority | `../proofs/ENGINEERING_BLOCKERS.md` |
+| Selected gate | bounded-lossy archive/search; narrow claim only |
 | Benchmark gates | `B1`, `B2`, `B4`, `B5` pass; `B3` fails |
-| Red-team | attacks `3` and `5` fail; attack `4` partially withstands |
+| Red-team | attack `3` fails; attack `4` partially withstands; attack `5` withstands on the declared threshold-selected holdout; attack `7` remains open |
 | Runtime boundary | no robotics `.zpbot` Rust ABI is wired into this repo |
 | Release-ready verdict | not authorized |
 
@@ -36,6 +37,7 @@ non-sovereign versus the blocker files below.
 
 ```bash
 sed -n '1,220p' ../proofs/ENGINEERING_BLOCKERS.md
+cat ../proofs/narrow_claim/NARROW_CLAIM_GATE.json
 cat ../proofs/enterprise_benchmark/GATE_VERDICTS.json
 cat ../proofs/red_team/red_team_report.json
 ```
@@ -76,8 +78,11 @@ zpe-robotics info ../proofs/release_candidate/canonical_release_packet.zpbot
 Read these together:
 
 - `../proofs/ENGINEERING_BLOCKERS.md`
+- `../proofs/narrow_claim/NARROW_CLAIM_GATE.json`
 - `../proofs/enterprise_benchmark/GATE_VERDICTS.json`
 - `../proofs/red_team/red_team_report.json`
+- `../proofs/release_candidate/anomaly_detection_result.json`
+- `../proofs/release_candidate/anomaly_threshold_sweep.json`
 - `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`
 - `../proofs/imc_audit/imc_architecture_audit.json`
 

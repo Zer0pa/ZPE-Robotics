@@ -14,6 +14,8 @@ ZPE-Robotics surface.
 | Document | What it is |
 |---|---|
 | `FAQ.md` | short answers on blocker state, package availability, and current proof boundaries |
+| `CLAIM_BOUNDARY.md` | active narrowed claim boundary for archive/search |
+| `MECHANICS_LAYER.md` | mechanics-layer audit for the narrowed archive/search gate |
 | `AUDITOR_PLAYBOOK.md` | shortest outsider verification route for the blocker-governed surface |
 | `PUBLIC_AUDIT_LIMITS.md` | honesty boundary for what public artifacts do and do not prove |
 | `SUPPORT.md` | support routing, escalation paths, and response expectations |
@@ -58,6 +60,7 @@ reading supporting prose.
 | Document | What it is |
 |---|---|
 | `../proofs/ENGINEERING_BLOCKERS.md` | governing blocker proof and current engineering truth |
+| `../proofs/narrow_claim/NARROW_CLAIM_GATE.json` | selected bounded-lossy archive/search gate |
 | `../proofs/enterprise_benchmark/GATE_VERDICTS.json` | benchmark gate pass/fail record |
 | `../proofs/red_team/red_team_report.json` | adversarial verdicts and open failures |
 | `../proofs/artifacts/historical/README.md` | historical lineage index, not current authority |

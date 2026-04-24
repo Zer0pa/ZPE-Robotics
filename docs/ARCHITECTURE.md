@@ -46,6 +46,7 @@ This doc maps the runtime and proof surface for the current standalone
 | packet-contract reference | frozen `zpbot-v2` / `wire-v1` surface | `ZPBOT_V2_AUTHORITY_SURFACE.md` |
 | runtime dependency boundary | runtime deps are `numpy` and `mcap`; extras remain optional | `../pyproject.toml`, `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
 | IMC boundary | No IMC runtime import is introduced by this repo | `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`, `../proofs/imc_audit/imc_architecture_audit.json` |
+| claim boundary | bounded-lossy archive/search is the selected narrow gate | `CLAIM_BOUNDARY.md`, `../proofs/narrow_claim/NARROW_CLAIM_GATE.json` |
 
 <p>
   <img src="../.github/assets/readme/section-bars/verification.svg" alt="VERIFICATION" width="100%">
@@ -54,6 +55,7 @@ This doc maps the runtime and proof surface for the current standalone
 | Evidence surface | What it currently proves |
 |---|---|
 | `../proofs/ENGINEERING_BLOCKERS.md` | governing blocker-state and completion boundary |
+| `../proofs/narrow_claim/NARROW_CLAIM_GATE.json` | selected narrow claim gate |
 | `../proofs/enterprise_benchmark/GATE_VERDICTS.json` | benchmark gate results |
 | `../proofs/red_team/red_team_report.json` | adversarial findings and open provenance boundary |
 | `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` | package/runtime/release classification |

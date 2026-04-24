@@ -21,7 +21,7 @@ from zpe_robotics.release_candidate import (
     default_codec,
 )
 from zpe_robotics.utils import sha256_bytes, write_json
-from zpe_robotics.wire import HEADER_SIZE, WireFormatError, decode_packet, describe_packet
+from zpe_robotics.wire import HEADER_SIZE, decode_packet, describe_packet
 
 
 ROOT = Path(__file__).resolve().parents[1]

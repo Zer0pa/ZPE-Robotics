@@ -2,9 +2,9 @@
   "repo_name": "ZPE-Robotics",
   "repo_role": "product_candidate",
   "status": "PUBLIC_PACKAGE_BUT_NOT_RELEASE_READY",
-  "plain_english_summary": "Deterministic motion transport and replay kernel for robotics telemetry, search, and audit workflows.",
-  "commercial_wedge": "Searchable motion archives with VLA token export, PrimitiveIndex search, and 187× compression on real robot data. The ≤ 0.5° angular figure applies only to smooth-trajectory slices; discontinuities are not bounded and step inputs show Gibbs ringing. Red-team-tested adversarial surface. Public PyPI package today.",
-  "technical_wedge": "Frozen wire-v1 motion transport codec. 187.1345× compression on lerobot real data. PrimitiveIndex search operates on decoded streams and FAST VLA export is committed. The ≤ 0.5° angular figure is limited to smooth-trajectory slices; step inputs are not bounded and show Gibbs ringing. B1/B2/B4/B5 gates pass.",
+  "plain_english_summary": "Bounded-lossy motion archive and replay-evidence kernel for robotics telemetry, decoded search, and audit workflows.",
+  "commercial_wedge": "Bounded-lossy motion archives with VLA token export, decoded PrimitiveIndex search, and 187× compression on real robot data. The ≤ 0.5° angular figure applies only to smooth-trajectory slices; discontinuities are not bounded and step inputs show Gibbs ringing. Red-team-tested adversarial surface. Public PyPI package today.",
+  "technical_wedge": "Frozen wire-v1 motion transport codec. 187.1345× compression on lerobot real data. PrimitiveIndex search operates on decoded streams and FAST VLA export is committed. The ≤ 0.5° angular figure is limited to smooth-trajectory slices; step inputs are not bounded and show Gibbs ringing. B1/B2/B4/B5 gates pass. Narrow archive/search gate is ratified in proofs/narrow_claim/NARROW_CLAIM_GATE.json.",
   "ideal_first_buyer": "Robotics infrastructure team or simulation/replay platform",
   "deployment_model": "Public Python package — pip install zpe-robotics",
   "proof_anchors": [
@@ -16,7 +16,8 @@
     "Full release readiness (engineering blockers active)",
     "Bit-exact replay on .zpbot round-trip",
     "B3 benchmark gate (currently fails)",
-    "Red-team resilience on attacks 3 and 5",
+    "Red-team attack 3 lossless qualification",
+    "General anomaly readiness beyond the declared threshold-selected holdout surface",
     "Rust ABI for robotics",
     "Generally valid ≤ 0.5° angular-fidelity bound outside smooth-trajectory slices"
   ],

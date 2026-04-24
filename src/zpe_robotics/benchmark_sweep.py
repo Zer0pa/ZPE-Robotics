@@ -156,7 +156,7 @@ def build_benchmark_spread_summary(
         "non_claims": [
             "Benchmark breadth does not close B3.",
             "Benchmark breadth does not close attack 3.",
-            "Benchmark breadth does not close attack 5.",
+            "Benchmark breadth does not create a general anomaly-readiness claim.",
             "Benchmark breadth does not add a robotics Rust ABI.",
         ],
     }
