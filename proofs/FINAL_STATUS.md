@@ -10,7 +10,7 @@ the governing March 21 authority surface.
 | Repo formation | complete for public package distribution |
 | Technical release surface | aligned for the standalone `zpe-robotics` wedge |
 | Engineering status | not complete |
-| Governing blockers | `B3` fails, red-team attacks `3` and `5` fail, robotics Rust ABI is not wired in |
+| Governing blockers | `B3` fails, red-team attack `3` fails, robotics Rust ABI is not wired in |
 | Current authority | `proofs/ENGINEERING_BLOCKERS.md` |
 | Historical lineage | preserved under `proofs/artifacts/historical/` |
 

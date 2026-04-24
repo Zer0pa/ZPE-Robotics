@@ -43,7 +43,6 @@ boundary.
 This release-candidate note does not claim:
 
 - strict bit-exact replay on the governing benchmark surface
-- anomaly false-positive rate at or below `0.05`
 - current Rust routing through ZPE-IMC for robotics `.zpbot`
 - full robotics-platform release readiness
 - public-release authorization
@@ -53,4 +52,4 @@ Use these files when you need the current state instead of the March 18 note:
 - `../proofs/ENGINEERING_BLOCKERS.md`
 - `../proofs/enterprise_benchmark/GATE_VERDICTS.json`
 - `../proofs/red_team/red_team_report.json`
-- `../RELEASING.md`
+- `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`

@@ -6,7 +6,7 @@
 
 [![Install](https://img.shields.io/badge/install-pip%20install%20--e%20.-blue)](./pyproject.toml)
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
-[![License](https://img.shields.io/badge/license-SAL%20v7.0-orange)](./LICENSE)
+[![SAL v7.0](https://img.shields.io/badge/license-SAL%20v7.0-orange)](./LICENSE)
 
 SAL v7.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
@@ -63,7 +63,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 
 - Spectral wire transport with directional reasoning layer for robot action sequences
 - Search operates on decoded motion streams via PrimitiveIndex
-- Red-team resilience: 3 attacks withstood, 3 failed, 1 skipped — transparently reported
+- Red-team attack surface is transparently reported; attacks `1`, `2`, `5`, and `6` withstand on the current authority surface
 - VLA tokenization aligns with vision-language-action model input formats
 - Public package install surface verified (available on PyPI: `pip install zpe-robotics`)
 
@@ -72,7 +72,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 - Full release readiness
 - Bit-exact .zpbot round-trip replay
 - B3 benchmark gate pass
-- Red-team resilience on attacks 3 and 5
+- Red-team closure on attack `3` or independent third-party reproduction
 - Robotics Rust ABI
 - Generally valid ≤ 0.5° angular fidelity — the figure comes from smooth-trajectory slices only; FFT-based encoding causes Gibbs ringing on step/discontinuous inputs (68° RMSE measured on a unit-amplitude step signal)
 - Search-without-decode — PrimitiveIndex requires full packet decode before indexing
@@ -82,7 +82,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 | Field | Value |
 |-------|-------|
 | Verdict | BLOCKED |
-| Commit SHA | c7ded78e9aea |
+| Commit SHA | 7b7921eacd8d |
 | Confidence | 58% |
 | Source | proofs/FINAL_STATUS.md |
 
@@ -99,7 +99,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 | V_07 | RED-TEAM_ATTACK_2_ENTROPY | PASS |
 | V_08 | RED-TEAM_ATTACK_3_LOSSLESS_QUALI... | FAIL |
 | V_09 | RED-TEAM_ATTACK_4_CORPUS_ADEQUACY | INC |
-| V_10 | RED-TEAM_ATTACK_5_FALSE-POSITIVE... | FAIL |
+| V_10 | RED-TEAM_ATTACK_5_FALSE-POSITIVE... | PASS |
 | V_11 | RED-TEAM_ATTACK_6_PYTHON_3.12_PA... | PASS |
 | V_12 | RED-TEAM_ATTACK_7_EXTERNAL_REPRO... | INC |
 
@@ -249,7 +249,8 @@ python -m build
 
 If you need the shortest honest verification route, use
 `docs/AUDITOR_PLAYBOOK.md`.
-If you need the release workflow boundary, use `RELEASING.md`.
+If you need the release workflow boundary, use
+`proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`.
 
 <p>
   <img src=".github/assets/readme/section-bars/contributing-security-support.svg" alt="CONTRIBUTING, SECURITY, SUPPORT" width="100%">
@@ -257,9 +258,8 @@ If you need the release workflow boundary, use `RELEASING.md`.
 
 | Need | Route |
 |---|---|
-| Contributor workflow | `CONTRIBUTING.md` |
 | Security reporting | `SECURITY.md` |
-| Governance and claim policy | `GOVERNANCE.md` |
+| Claim boundary | `docs/LEGAL_BOUNDARIES.md` |
 | Support routing | `docs/SUPPORT.md` |
 | Docs index | `docs/README.md` |
 | Operator commands | `docs/OPERATOR_RUNBOOK.md` |
@@ -273,7 +273,7 @@ runtime claims, benchmark verdicts, or release readiness by association.
 | Need | Route |
 |---|---|
 | Robotics-to-IMC boundary | `docs/family/ROBOTICS_RELEASE_LINKAGE.md` |
-| Frozen proof lineage note | `proofs/README_LINEAGE_PATHS.md` |
+| Frozen proof lineage note | `proofs/artifacts/historical/README.md` |
 | Reference core repo | `https://github.com/Zer0pa/ZPE-IMC` |
 
 **Observability:** [Comet dashboard](https://www.comet.com/zer0pa/zpe-robotics/view/new/panels) (public)

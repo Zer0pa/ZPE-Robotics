@@ -29,7 +29,7 @@ What this repo can honestly establish today:
 |---|---|---|
 | Repo visibility | public GitHub repo | visibility is not an engineering pass |
 | Package availability | public on PyPI | installation does not imply release readiness |
-| Engineering completion | not complete | `B3` fails and red-team attacks `3` and `5` fail |
+| Engineering completion | not complete | `B3` fails and red-team attack `3` fails |
 | Replay claim | not bit-exact | strict `np.array_equal` is false on the current `.zpbot` round-trip |
 | Real-corpus strength | bounded | the real dataset run used `136` episodes at `10 Hz`, below the `200` episode / `50 Hz` target |
 | Rust integration | not present | `current_python_calls_rust=false` in the IMC architecture audit |
@@ -46,7 +46,6 @@ This repo cannot honestly establish today:
 - full engineering completion
 - a release-ready robotics verdict
 - strict bit-exact replay on the governing benchmark surface
-- anomaly false-positive rate at or below `0.05`
 - current Rust routing through ZPE-IMC for the robotics `.zpbot` path
 - independent third-party reproduction
 
