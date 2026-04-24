@@ -27,6 +27,7 @@ or support surface. `status=historical` means lineage only.
 | `CODE_OF_CONDUCT.md` | community conduct policy | current | self | conduct policy change |
 | `GOVERNANCE.md` | claim and authority policy | current | `proofs/ENGINEERING_BLOCKERS.md` | authority semantics change |
 | `RELEASING.md` | release gate policy | current | `proofs/ENGINEERING_BLOCKERS.md` | release gate or publish-path change |
+| `REPRODUCIBILITY.md` | reproducibility route | current | `proofs/release_candidate/` | proof bundle or verification route change |
 
 ## Docs Directory Surface
 
@@ -51,7 +52,11 @@ or support surface. `status=historical` means lineage only.
 | `proofs/ENGINEERING_BLOCKERS.md` | governing blocker proof | current | self | new benchmark, red-team, or integration result |
 | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` | package/runtime boundary | current | self | packaging or runtime boundary change |
 | `proofs/runbooks/TRUSTED_PUBLISHING_OPERATOR_STEPS.md` | publisher setup runbook | current | `.github/workflows/publish.yml` | publish workflow or PyPI UI path change |
+| `proofs/runbooks/RUNBOOK_GATE_IT01_V2_FORMALIZATION.md` | packet authority runbook | current | `docs/ZPBOT_V2_AUTHORITY_SURFACE.md` | packet authority change |
+| `proofs/runbooks/RUNBOOK_GATE_COMM03_AUDIT_BUNDLE.md` | COMM-03 Mac audit runbook | supporting | `proofs/comm03/COMM03_AUDIT_REPLAY_BUNDLE.md` | COMM-03 audit evidence change |
+| `proofs/runbooks/RUNBOOK_GATE_COMM03_REDMAGIC_AUDIT.md` | COMM-03 device visibility runbook | supporting | `proofs/comm03/COMM03_AUDIT_REPLAY_BUNDLE.md` | COMM-03 device evidence change |
 | `proofs/FINAL_STATUS.md` | supporting status note | supporting | `proofs/ENGINEERING_BLOCKERS.md` | current authority reroute |
+| `proofs/README_LINEAGE_PATHS.md` | lineage routing note | current | `proofs/ENGINEERING_BLOCKERS.md` | active/historical path routing change |
 | `proofs/artifacts/historical/README.md` | historical index | historical | self | preservation policy change |
 
 ## Metadata
@@ -59,4 +64,5 @@ or support surface. `status=historical` means lineage only.
 | Path | Role | Status | Authority | Update trigger |
 |---|---|---|---|---|
 | `CITATION.cff` | citation metadata | current | `pyproject.toml` | version or package identity change |
+| `.zenodo.json` | Zenodo metadata | current | `pyproject.toml` | release or metadata change |
 | `LICENSE` | legal text | current | self | license text change |

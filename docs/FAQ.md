@@ -24,15 +24,16 @@ complete or release-ready.
 ## Is this repo release-ready?
 
 No. Engineering carries named open blockers: benchmark gate `B3` fails, red-team
-attacks `3` and `5` fail, attack `4` only partially withstands, and the robotics
-`.zpbot` path is not routed through a current ZPE-IMC Rust ABI. Each blocker is
-tracked with an honest description in `proofs/ENGINEERING_BLOCKERS.md`.
+attack `3` fails, attack `4` only partially withstands, external reproduction
+remains open, and the robotics `.zpbot` path is not routed through a current
+ZPE-IMC Rust ABI. Each blocker is tracked with an honest description in
+`proofs/ENGINEERING_BLOCKERS.md`.
 
 ## What is actually green right now?
 
 The technical release surface is aligned for the standalone package wedge, and
 benchmark gates `B1`, `B2`, `B4`, and `B5` pass. Red-team attacks `1`, `2`,
-and `6` also withstand.
+`5`, and `6` also withstand.
 
 ## What is still blocked?
 
@@ -41,7 +42,6 @@ The governing blockers are:
 - `B3` because searchability is present but strict bit-exact replay is not
 - red-team attack `3` because strict `np.array_equal` fails on the current
   round-trip path
-- red-team attack `5` because the nominal false-positive rate is `0.2`
 - current Python encode/decode still does not route through a robotics Rust ABI
 - external third-party reproduction remains open
 

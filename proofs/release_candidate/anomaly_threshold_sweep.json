@@ -26,7 +26,7 @@
   },
   "compatibility_mode": "wire-v1",
   "corpus_identity": "phase10-file-level-histogram-holdout-v1",
-  "generation_timestamp": "2026-04-05T13:25:59.605068+00:00",
+  "generation_timestamp": "2026-04-24T18:55:55.259972+00:00",
   "nominal_count": 100,
   "nominal_score_range": {
     "max": 3.8999138083210463,

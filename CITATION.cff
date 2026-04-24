@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use ZPE-Robotics, cite the package and its repository."
+title: "ZPE-Robotics"
+version: "0.1.0"
+date-released: "2026-04-14"
+type: software
+license-url: "https://github.com/Zer0pa/ZPE-Robotics/blob/main/LICENSE"
+authors:
+  - name: "Zer0pa (Pty) Ltd"
+    email: "architects@zer0pa.ai"
+repository-code: "https://github.com/Zer0pa/ZPE-Robotics"
+url: "https://github.com/Zer0pa/ZPE-Robotics"
+abstract: "Deterministic motion utility kernel for frozen wire-v1 robotics transport and replay."
+keywords:
+  - robotics
+  - motion-telemetry
+  - motion-compression
+  - rosbag
+  - mcap
+  - vla
+  - deterministic-replay

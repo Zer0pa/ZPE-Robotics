@@ -1,0 +1,29 @@
+{
+  "title": "ZPE-Robotics",
+  "description": "Deterministic motion utility kernel for frozen wire-v1 robotics transport and replay. ZPE-Robotics provides motion telemetry infrastructure for compressed replay, PrimitiveIndex search over joint streams, and VLA token export.",
+  "creators": [
+    {
+      "name": "Zer0pa (Pty) Ltd",
+      "affiliation": "Zer0pa",
+      "type": "Organization"
+    }
+  ],
+  "keywords": [
+    "robotics",
+    "motion-telemetry",
+    "motion-compression",
+    "rosbag",
+    "mcap",
+    "vla",
+    "deterministic-replay"
+  ],
+  "license": "LicenseRef-Zer0pa-SAL-7.0",
+  "upload_type": "software",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Zer0pa/ZPE-Robotics",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

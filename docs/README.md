@@ -39,6 +39,7 @@ reading supporting prose.
 |---|---|
 | `../README.md` | front door for current public truth and route-out links |
 | `../RELEASING.md` | release gate, operator boundary, and publish workflow routing |
+| `../REPRODUCIBILITY.md` | canonical inputs, verification command, and future receipt-bundle hash route |
 | `RELEASE_CANDIDATE.md` | March 18 release-candidate note preserved as non-governing context |
 | `../CHANGELOG.md` | release-surface deltas and docs-surface additions |
 
@@ -60,6 +61,7 @@ reading supporting prose.
 | `../proofs/ENGINEERING_BLOCKERS.md` | governing blocker proof and current engineering truth |
 | `../proofs/enterprise_benchmark/GATE_VERDICTS.json` | benchmark gate pass/fail record |
 | `../proofs/red_team/red_team_report.json` | adversarial verdicts and open failures |
+| `../proofs/release_candidate/anomaly_reconciliation_result.json` | attack-5 selected-threshold reconciliation evidence |
 | `../proofs/artifacts/historical/README.md` | historical lineage index, not current authority |
 
 <p>

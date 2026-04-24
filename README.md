@@ -63,7 +63,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 
 - Spectral wire transport with directional reasoning layer for robot action sequences
 - Search operates on decoded motion streams via PrimitiveIndex
-- Red-team resilience: 3 attacks withstood, 3 failed, 1 skipped — transparently reported
+- Red-team resilience: attacks 1, 2, 5, and 6 withstand; attack 4 partially withstands; attack 3 fails; attack 7 remains open
 - VLA tokenization aligns with vision-language-action model input formats
 - Public package install surface verified (available on PyPI: `pip install zpe-robotics`)
 
@@ -72,7 +72,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 - Full release readiness
 - Bit-exact .zpbot round-trip replay
 - B3 benchmark gate pass
-- Red-team resilience on attacks 3 and 5
+- Red-team attack 3 closure or external third-party reproduction closure
 - Robotics Rust ABI
 - Generally valid ≤ 0.5° angular fidelity — the figure comes from smooth-trajectory slices only; FFT-based encoding causes Gibbs ringing on step/discontinuous inputs (68° RMSE measured on a unit-amplitude step signal)
 - Search-without-decode — PrimitiveIndex requires full packet decode before indexing
@@ -82,7 +82,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 | Field | Value |
 |-------|-------|
 | Verdict | BLOCKED |
-| Commit SHA | c7ded78e9aea |
+| Commit SHA | 7b7921eacd8d |
 | Confidence | 58% |
 | Source | proofs/FINAL_STATUS.md |
 
@@ -99,7 +99,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 | V_07 | RED-TEAM_ATTACK_2_ENTROPY | PASS |
 | V_08 | RED-TEAM_ATTACK_3_LOSSLESS_QUALI... | FAIL |
 | V_09 | RED-TEAM_ATTACK_4_CORPUS_ADEQUACY | INC |
-| V_10 | RED-TEAM_ATTACK_5_FALSE-POSITIVE... | FAIL |
+| V_10 | RED-TEAM_ATTACK_5_FALSE-POSITIVE... | PASS |
 | V_11 | RED-TEAM_ATTACK_6_PYTHON_3.12_PA... | PASS |
 | V_12 | RED-TEAM_ATTACK_7_EXTERNAL_REPRO... | INC |
 
@@ -120,6 +120,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 | `proofs/red_team/red_team_report.json` | VERIFIED |
 | `proofs/release_candidate/clean_clone_result.json` | VERIFIED |
 | `proofs/release_candidate/it04_parity_matrix_result.json` | VERIFIED |
+| `proofs/release_candidate/anomaly_reconciliation_result.json` | VERIFIED |
 | `proofs/imc_audit/imc_architecture_audit.json` | VERIFIED |
 
 - Runtime and proof artifacts outrank prose.
@@ -138,6 +139,7 @@ Use these files together:
 | Current blocker truth | `proofs/ENGINEERING_BLOCKERS.md` |
 | Benchmark verdicts | `proofs/enterprise_benchmark/GATE_VERDICTS.json` |
 | Adversarial findings | `proofs/red_team/red_team_report.json` |
+| Attack-5 reconciliation | `proofs/release_candidate/anomaly_reconciliation_result.json` |
 | Package/runtime boundary | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
 | Release-candidate note | `docs/RELEASE_CANDIDATE.md` |
 | Citation record | `CITATION.cff` |
@@ -172,7 +174,7 @@ than averaged away.
 
 | Field | Value |
 |-------|-------|
-| Proof Anchors | 6 |
+| Proof Anchors | 7 |
 | Modality Lanes | 3 |
 | Authority Source | `proofs/ENGINEERING_BLOCKERS.md` |
 

@@ -51,5 +51,5 @@ Combined repo-local engineering surface when needed:
 
 - Clean-clone source install:
   `proofs/artifacts/operations/20260321T203557Z_tech_alignment_clean_clone_result.json`
-- Verification summary:
-  `proofs/artifacts/operations/20260321T203557Z_technical_alignment_verification.md`
+- Current clean-clone release-candidate result:
+  `proofs/release_candidate/clean_clone_result.json`

@@ -9,7 +9,7 @@
 </p>
 
 This is the shortest verification path anchored to current authority.
-Engineering is not complete. Local green slices do not override the March 21
+Engineering is not complete. Local green slices do not override the current
 blocker-state evidence.
 The repo is public and the package is published, but those facts are
 non-sovereign versus the blocker files below.
@@ -24,7 +24,7 @@ non-sovereign versus the blocker files below.
 | Repo visibility | public GitHub repo and public package surface |
 | Current authority | `../proofs/ENGINEERING_BLOCKERS.md` |
 | Benchmark gates | `B1`, `B2`, `B4`, `B5` pass; `B3` fails |
-| Red-team | attacks `3` and `5` fail; attack `4` partially withstands |
+| Red-team | attack `3` fails; attack `4` partially withstands; attack `5` is reconciled by selected-threshold evidence |
 | Runtime boundary | no robotics `.zpbot` Rust ABI is wired into this repo |
 | Release-ready verdict | not authorized |
 
@@ -78,6 +78,7 @@ Read these together:
 - `../proofs/ENGINEERING_BLOCKERS.md`
 - `../proofs/enterprise_benchmark/GATE_VERDICTS.json`
 - `../proofs/red_team/red_team_report.json`
+- `../proofs/release_candidate/anomaly_reconciliation_result.json`
 - `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`
 - `../proofs/imc_audit/imc_architecture_audit.json`
 

@@ -16,7 +16,7 @@ What this repo can honestly establish today:
 
 - the current standalone package identity and install surface
 - the current public GitHub repo and PyPI acquisition surfaces
-- the March 21 blocker-state authority files
+- the current blocker-state authority files
 - the real-data benchmark result where `B1`, `B2`, `B4`, and `B5` pass
 - the current release workflow boundary and operator-only PyPI UI step
 - preserved historical proof lineage under `proofs/artifacts/historical/`
@@ -29,7 +29,7 @@ What this repo can honestly establish today:
 |---|---|---|
 | Repo visibility | public GitHub repo | visibility is not an engineering pass |
 | Package availability | public on PyPI | installation does not imply release readiness |
-| Engineering completion | not complete | `B3` fails and red-team attacks `3` and `5` fail |
+| Engineering completion | not complete | `B3` fails, red-team attack `3` fails, external reproduction is open, and IMC Rust routing is missing |
 | Replay claim | not bit-exact | strict `np.array_equal` is false on the current `.zpbot` round-trip |
 | Real-corpus strength | bounded | the real dataset run used `136` episodes at `10 Hz`, below the `200` episode / `50 Hz` target |
 | Rust integration | not present | `current_python_calls_rust=false` in the IMC architecture audit |
@@ -46,7 +46,7 @@ This repo cannot honestly establish today:
 - full engineering completion
 - a release-ready robotics verdict
 - strict bit-exact replay on the governing benchmark surface
-- anomaly false-positive rate at or below `0.05`
+- full anomaly-detector closure beyond the selected-threshold false-positive gate
 - current Rust routing through ZPE-IMC for the robotics `.zpbot` path
 - independent third-party reproduction
 

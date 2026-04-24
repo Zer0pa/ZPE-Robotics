@@ -10,7 +10,7 @@ Engineering is not complete.
 The decisive evidence is:
 
 - benchmark gates: `B1=PASS`, `B2=PASS`, `B3=FAIL`, `B4=PASS`, `B5=PASS`
-- red-team: attacks `1`, `2`, and `6` withstand; attack `4` partially withstands; attacks `3` and `5` fail; attack `7` remains open
+- red-team: attacks `1`, `2`, `5`, and `6` withstand; attack `4` partially withstands; attack `3` fails; attack `7` remains open
 - IMC integration: `zpe-robotics` still does not route `.zpbot` encode or decode through the current ZPE-IMC Rust surface
 
 ## Blocking Items
@@ -66,22 +66,29 @@ What is needed to close it:
 - remove any bit-exact or lossless wording from the active claim surface
 - or change the codec path so the strict replay requirement actually holds
 
-### 4. Red-Team Attack 5 Failed
+## Reconciled Items
+
+### Red-Team Attack 5 False-Positive Rate
 
 Evidence:
 
+- `proofs/release_candidate/anomaly_detection_result.json`
+- `proofs/release_candidate/anomaly_threshold_sweep.json`
+- `proofs/release_candidate/anomaly_reconciliation_result.json`
 - `proofs/red_team/red_team_report.json`
 
 Current truth:
 
-- the nominal false-positive rate is `4 / 20 = 0.2`
-- the brief required `<= 0.05` for anything better than failure
+- the current selected detector threshold is `3.22`
+- the 2026-04-24 rerun records false-positive rate `5 / 100 = 0.05`
+- the same rerun records recall `9 / 10 = 0.9`
+- the selected-threshold gate is `PASS`
+- the baseline threshold `3.0` remains a failing historical control with false-positive rate `0.19`
 
-What is needed to close it:
+What changed:
 
-- redesign the anomaly detector or its thresholding
-- rerun the nominal evaluation on the declared test surface
-- prove the false-positive rate is at most `0.05`
+- attack 5 is no longer a blocker for the threshold-selected detector
+- benchmark gate `B3`, red-team attack `3`, external reproduction, and IMC Rust routing remain open
 
 ## Non-Blocking But Still Open
 

@@ -112,5 +112,5 @@ This authority surface does not add:
 `zpbot-v2` counts as Phase-2 runnable only when:
 
 - this document exists,
-- the parser in `wire.py` passes the packet tests,
+- the parser in `src/zpe_robotics/wire.py` passes the packet tests,
 - the runbook in `proofs/runbooks/RUNBOOK_GATE_IT01_V2_FORMALIZATION.md` remains executable.

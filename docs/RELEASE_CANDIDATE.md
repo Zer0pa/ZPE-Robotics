@@ -34,16 +34,16 @@ boundary.
 | canonical reference packet SHA | `../proofs/red_team/red_team_report.json` attack `6` | Python 3.12 parity held for the reference packet, but strict raw-array equality still fails on the current round-trip path |
 | real-data compression | `../proofs/enterprise_benchmark/benchmark_result.json`, `../proofs/enterprise_benchmark/GATE_VERDICTS.json` | benchmark gates `B1`, `B2`, `B4`, and `B5` pass; `B3` fails |
 | hostile-path auditability | packet verification and audit-bundle surfaces in `../src/zpe_robotics/` and `../tests/` | auditability does not imply public-release readiness |
-| build/install truth | `../proofs/artifacts/operations/20260321T203557Z_technical_alignment_verification.md` | technical release-surface alignment is green, but engineering completion is not |
+| build/install truth | `../proofs/release_candidate/clean_clone_result.json` | technical release-surface alignment is green, but engineering completion is not |
 
 <p>
   <img src="../.github/assets/readme/section-bars/downstream-action-items.svg" alt="DOWNSTREAM ACTION ITEMS" width="100%">
 </p>
 
-This release-candidate note does not claim:
+This March 18 release-candidate note alone does not claim:
 
 - strict bit-exact replay on the governing benchmark surface
-- anomaly false-positive rate at or below `0.05`
+- anomaly false-positive rate at or below `0.05` without the later selected-threshold reconciliation artifact
 - current Rust routing through ZPE-IMC for robotics `.zpbot`
 - full robotics-platform release readiness
 - public-release authorization
@@ -53,4 +53,5 @@ Use these files when you need the current state instead of the March 18 note:
 - `../proofs/ENGINEERING_BLOCKERS.md`
 - `../proofs/enterprise_benchmark/GATE_VERDICTS.json`
 - `../proofs/red_team/red_team_report.json`
+- `../proofs/release_candidate/anomaly_reconciliation_result.json`
 - `../RELEASING.md`
