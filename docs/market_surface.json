@@ -3,7 +3,7 @@
   "repo_role": "product_candidate",
   "status": "PUBLIC_PACKAGE_BUT_NOT_RELEASE_READY",
   "plain_english_summary": "Deterministic motion transport and replay kernel for robotics telemetry, search, and audit workflows.",
-  "commercial_wedge": "Searchable motion archives with VLA token export, PrimitiveIndex search, and 187× compression on real robot data. The ≤ 0.5° angular figure applies only to smooth-trajectory slices; discontinuities are not bounded and step inputs show Gibbs ringing. Red-team-tested adversarial surface. Public PyPI package today.",
+  "commercial_wedge": "Bounded-lossy motion archives with VLA token export, decoded PrimitiveIndex search, and 187× compression on the recorded real-data benchmark. The ≤ 0.5° angular figure applies only to smooth-trajectory slices; discontinuities are not bounded and step inputs show Gibbs ringing. Red-team evidence is preserved with attack 3 failed and attack 7 open.",
   "technical_wedge": "Frozen wire-v1 motion transport codec. 187.1345× compression on lerobot real data. PrimitiveIndex search operates on decoded streams and FAST VLA export is committed. The ≤ 0.5° angular figure is limited to smooth-trajectory slices; step inputs are not bounded and show Gibbs ringing. B1/B2/B4/B5 gates pass.",
   "ideal_first_buyer": "Robotics infrastructure team or simulation/replay platform",
   "deployment_model": "Public Python package — pip install zpe-robotics",
@@ -16,7 +16,7 @@
     "Full release readiness (engineering blockers active)",
     "Bit-exact replay on .zpbot round-trip",
     "B3 benchmark gate (currently fails)",
-    "Red-team resilience on attacks 3 and 5",
+    "General anomaly readiness outside the threshold-selected attack 5 holdout surface",
     "Rust ABI for robotics",
     "Generally valid ≤ 0.5° angular-fidelity bound outside smooth-trajectory slices"
   ],

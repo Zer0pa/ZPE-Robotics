@@ -62,3 +62,6 @@ zpe-robotics = "zpe_robotics.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/zpe_robotics"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*.py" = ["E402"]

@@ -16,13 +16,16 @@ the legal source of truth for Zer0pa Source-Available License v7.0.
 | license | Zer0pa Source-Available License v7.0; `../LICENSE` is the legal source of truth | support docs and README tables are summaries, not legal overrides |
 | source visibility | public GitHub repo | public visibility is not engineering completion or release readiness |
 | public acquisition | package acquisition exists via `pip install zpe-robotics` | package availability does not erase blocker-state failures |
-| claim boundary | engineering is not complete; `B3` fails and red-team attacks `3` and `5` fail | no `GO` verdict exists for a release-ready robotics surface |
+| narrow claim gate | bounded-lossy archive/search is ratified | this does not create a full release-ready verdict |
+| claim boundary | engineering is not complete; `B3` fails, red-team attack `3` fails, attack `7` is open, and Robotics Rust routing is absent | no `GO` verdict exists for a release-ready robotics surface |
+| anomaly boundary | attack `5` withstands only on the declared Phase 10 threshold-selected holdout surface | no general anomaly-readiness claim exists |
 | runtime boundary | no IMC runtime import or robotics `.zpbot` Rust ABI is present today | current docs linkage to IMC is not runtime coupling |
 | proof boundary | historical bundles remain lineage only | historical bundles do not outrank current blocker files |
 
 - Mixed evidence does not become a pass.
 - Package availability does not equal a release-ready engineering verdict.
 - Use `../proofs/ENGINEERING_BLOCKERS.md`,
+  `../proofs/narrow_claim/NARROW_CLAIM_GATE.json`,
   `../proofs/enterprise_benchmark/GATE_VERDICTS.json`, and
   `../proofs/red_team/red_team_report.json` as the current authority surface.
 

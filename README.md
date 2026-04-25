@@ -6,7 +6,7 @@
 
 [![Install](https://img.shields.io/badge/install-pip%20install%20--e%20.-blue)](./pyproject.toml)
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
-[![SAL v7.0](https://img.shields.io/badge/license-SAL%20v7.0-orange)](./LICENSE)
+[![License](https://img.shields.io/badge/license-SAL%20v7.0-orange)](./LICENSE)
 
 SAL v7.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
@@ -18,9 +18,9 @@ SAL v7.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-Searchable motion archives with VLA token export. 187× compression on real robot data. Red-team tested. `pip install zpe-robotics` (available on PyPI).
+Ordered robot joint-stream archives with PrimitiveIndex search and VLA token export. The public object is motion telemetry rather than a control loop, and the carried surface is archive/replay infrastructure rather than live actuation.
 
-ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compressed replay, and PrimitiveIndex search over joint streams. Built for robotics infrastructure teams and simulation/replay platforms where motion logs are expensive to store, slow to search, and impossible to replay deterministically. The package is public. The governing engineering surface remains blocker-state.
+ZPE-Robotics compresses and replays joint-stream logs for infrastructure teams that need searchable motion archives instead of raw bagfiles. The package is public and the `187×` archive result is real, but the governing engineering surface remains blocker-state because step-sequence behavior, comparator closure, and runtime closure are not closed.
 
 | Field | Value |
 |-------|-------|
@@ -63,17 +63,20 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 
 - Spectral wire transport with directional reasoning layer for robot action sequences
 - Search operates on decoded motion streams via PrimitiveIndex
-- Red-team attack surface is transparently reported; attacks `1`, `2`, `5`, and `6` withstand on the current authority surface
+- Red-team resilience: 4 attacks withstand, 1 fails, 1 partially withstands, 1 remains open
 - VLA tokenization aligns with vision-language-action model input formats
-- Public package install surface verified (available on PyPI: `pip install zpe-robotics`)
+- Public package acquisition route is `pip install zpe-robotics`; package
+  availability does not change blocker status
 
 ## What We Don't Claim
 
 - Full release readiness
 - Bit-exact .zpbot round-trip replay
 - B3 benchmark gate pass
-- Red-team closure on attack `3` or independent third-party reproduction
+- Red-team attack 3 lossless qualification
+- General anomaly readiness beyond the declared threshold-selected holdout surface
 - Robotics Rust ABI
+- Independent third-party reproduction
 - Generally valid ≤ 0.5° angular fidelity — the figure comes from smooth-trajectory slices only; FFT-based encoding causes Gibbs ringing on step/discontinuous inputs (68° RMSE measured on a unit-amplitude step signal)
 - Search-without-decode — PrimitiveIndex requires full packet decode before indexing
 
@@ -82,9 +85,18 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 | Field | Value |
 |-------|-------|
 | Verdict | BLOCKED |
-| Commit SHA | 7b7921eacd8d |
+| Authority | proofs/ENGINEERING_BLOCKERS.md |
 | Confidence | 58% |
 | Source | proofs/FINAL_STATUS.md |
+
+## Selected Claim Gate
+
+| Field | Value |
+|-------|-------|
+| Gate | bounded-lossy archive/search |
+| Gate Status | PASS for the narrow claim only |
+| Full Engineering | BLOCKED |
+| Proof | `proofs/narrow_claim/NARROW_CLAIM_GATE.json` |
 
 ## Tests and Verification
 
@@ -116,6 +128,7 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 | Path | State |
 |------|-------|
 | `proofs/ENGINEERING_BLOCKERS.md` | VERIFIED |
+| `proofs/narrow_claim/NARROW_CLAIM_GATE.json` | VERIFIED |
 | `proofs/enterprise_benchmark/GATE_VERDICTS.json` | VERIFIED |
 | `proofs/red_team/red_team_report.json` | VERIFIED |
 | `proofs/release_candidate/clean_clone_result.json` | VERIFIED |
@@ -125,24 +138,26 @@ ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compr
 - Runtime and proof artifacts outrank prose.
 - `GO` and `NO-GO` language is reserved for named gates only.
 - Historical proof bundles remain lineage only. They do not override the March
-  21 blocker-state evidence.
+  21 blocker-state evidence or the later Phase 10 threshold evidence.
 - No IMC runtime import is introduced by this repo.
 - The current installable package artifact is `zpe-robotics 0.1.0`, but
-  the repo's March 21 blocker-state docs remain the authority surface for
-  engineering status.
+  the repo's blocker-state docs remain the authority surface for engineering
+  status.
 
 Use these files together:
 
 | Need | Read first |
 |---|---|
 | Current blocker truth | `proofs/ENGINEERING_BLOCKERS.md` |
+| Claim boundary | `docs/CLAIM_BOUNDARY.md` |
+| Mechanics layer | `docs/MECHANICS_LAYER.md` |
 | Benchmark verdicts | `proofs/enterprise_benchmark/GATE_VERDICTS.json` |
 | Adversarial findings | `proofs/red_team/red_team_report.json` |
 | Package/runtime boundary | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
 | Release-candidate note | `docs/RELEASE_CANDIDATE.md` |
 | Citation record | `CITATION.cff` |
 | Docs registry | `docs/DOC_REGISTRY.md` |
-| Historical lineage | `proofs/artifacts/historical/README.md` |
+| Historical lineage | `proofs/README_LINEAGE_PATHS.md` |
 
 ### Expanded LeRobot Benchmark Coverage
 
@@ -259,7 +274,7 @@ If you need the release workflow boundary, use
 | Need | Route |
 |---|---|
 | Security reporting | `SECURITY.md` |
-| Claim boundary | `docs/LEGAL_BOUNDARIES.md` |
+| Claim boundary | `docs/CLAIM_BOUNDARY.md` |
 | Support routing | `docs/SUPPORT.md` |
 | Docs index | `docs/README.md` |
 | Operator commands | `docs/OPERATOR_RUNBOOK.md` |
@@ -273,7 +288,7 @@ runtime claims, benchmark verdicts, or release readiness by association.
 | Need | Route |
 |---|---|
 | Robotics-to-IMC boundary | `docs/family/ROBOTICS_RELEASE_LINKAGE.md` |
-| Frozen proof lineage note | `proofs/artifacts/historical/README.md` |
+| Frozen proof lineage note | `proofs/README_LINEAGE_PATHS.md` |
 | Reference core repo | `https://github.com/Zer0pa/ZPE-IMC` |
 
 **Observability:** [Comet dashboard](https://www.comet.com/zer0pa/zpe-robotics/view/new/panels) (public)
