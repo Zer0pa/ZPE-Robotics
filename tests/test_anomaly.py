@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-import pytest
-
 from zpe_robotics.anomaly import (
     ANOMALY_BASELINE_Z_THRESHOLD,
     ANOMALY_FALSE_POSITIVE_RATE_CEILING,
