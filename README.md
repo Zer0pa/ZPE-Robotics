@@ -18,20 +18,17 @@ SAL v7.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-Ordered robot joint-stream archives with PrimitiveIndex search and VLA token export. The public object is motion telemetry rather than a control loop, and the carried surface is archive/replay infrastructure rather than live actuation.
+**187× compression on real robot joint streams** (vs zstd_l19 4.59×, vs zstd_l3 4.44×) — with PrimitiveIndex search and VLA token export. Governing benchmark: LeRobot real-data suite, 3 datasets across 3 families. Proof path: [`proofs/enterprise_benchmark/GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json).
 
-ZPE-Robotics compresses and replays joint-stream logs for infrastructure teams that need searchable motion archives instead of raw bagfiles. The package is public and the `187×` archive result is real, but the governing engineering surface remains blocker-state because step-sequence behavior, comparator closure, and runtime closure are not closed.
+ZPE-Robotics compresses and replays joint-stream logs for infrastructure teams that need searchable motion archives instead of raw bagfiles. The `187×` figure is real and bounded-lossy (smooth-trajectory slices; step inputs cause Gibbs ringing — see footnote). Engineering surface remains blocker-governed: step-sequence behavior, comparator closure, and runtime closure are not closed.
 
-| Field | Value |
-|-------|-------|
-| Architecture | MANIFOLD_MOTION |
-| Encoding | WIRE_V1 |
+Wire encoding: `wire-v1` (frozen packet contract; authority: [`docs/ZPBOT_V2_AUTHORITY_SURFACE.md`](docs/ZPBOT_V2_AUTHORITY_SURFACE.md))
 
 ## Key Metrics
 
 | Metric | Value | Baseline / Notes |
 |--------|-------|----------|
-| COMPRESSION | 187×† | vs zstd_l3 4.44× (42.14× better); vs zstd_l19 4.59× (40.74× better) |
+| COMPRESSION | 187×† | LeRobot real-data benchmark; full baselines in Competitive Benchmarks section |
 | ENCODE_P50 | 0.11 ms | per 1 000 frames, gate B4 PASS |
 | DECODE_P50 | 0.089 ms | per 1 000 frames, gate B5 PASS |
 | VLA_TOKEN_EXPORT | 24-token FAST surface | [`vla_bridge.py`](src/zpe_robotics/vla_bridge.py) |
@@ -297,9 +294,11 @@ runtime claims, benchmark verdicts, or release readiness by association.
 
 ## Who This Is For
 
+ZPE-Robotics is one of 17 independent encoding products in the Zer0pa portfolio — each domain-specific, each carrying its own proof surface. Robotics addresses motion telemetry; it does not inherit claims or release status from any other lane.
+
 | | |
 |---|---|
 | **Ideal first buyer** | Robotics infrastructure team or simulation/replay platform |
 | **Pain** | Robot telemetry archives grow fast and can only be searched after full decompression — replay pipelines lack determinism guarantees |
 | **Deployment** | Public Python package — `pip install zpe-robotics` |
-| **Family position** | Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer |
+| **Family position** | Motion telemetry lane; ZPE-IMC is the umbrella integration layer; see `docs/family/ROBOTICS_RELEASE_LINKAGE.md` |
