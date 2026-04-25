@@ -22,6 +22,8 @@ SAL v7.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ZPE-Robotics compresses and replays joint-stream logs for infrastructure teams that need searchable motion archives instead of raw bagfiles. The `187×` figure is real and bounded-lossy (smooth-trajectory slices; step inputs cause Gibbs ringing — see footnote). Engineering surface remains blocker-governed: step-sequence behavior, comparator closure, and runtime closure are not closed.
 
+Wire encoding: `wire-v1` (frozen packet contract; authority: [`docs/ZPBOT_V2_AUTHORITY_SURFACE.md`](docs/ZPBOT_V2_AUTHORITY_SURFACE.md))
+
 ## Key Metrics
 
 | Metric | Value | Baseline / Notes |
