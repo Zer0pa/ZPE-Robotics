@@ -29,16 +29,20 @@ ZPE-Robotics compresses and replays joint-stream logs for infrastructure teams t
 
 ## Key Metrics
 
-| Metric | Value | Baseline |
+| Metric | Value | Baseline / Notes |
 |--------|-------|----------|
-| COMPRESSION | 187×† | vs zstd_l3 4.44× (42× better) |
-| ENCODE_P50 | 0.11 | ms |
+| COMPRESSION | 187×† | vs zstd_l3 4.44× (42.14× better); vs zstd_l19 4.59× (40.74× better) |
+| ENCODE_P50 | 0.11 ms | per 1 000 frames, gate B4 PASS |
+| DECODE_P50 | 0.089 ms | per 1 000 frames, gate B5 PASS |
 | VLA_TOKEN_EXPORT | 24-token FAST surface | [`vla_bridge.py`](src/zpe_robotics/vla_bridge.py) |
-| BENCHMARK_GATES | 4/5 | 3 datasets, 3 families |
+| PRIMITIVE_SEARCH P@10 | 1.0 | on REACH template, synthetic corpus |
+| ANOMALY_FPR | 0.05 | recall=0.9 at threshold=3.22; Phase 10 holdout (100 nominal / 10 anomalous) |
+| CROSS_PLATFORM_PARITY | PASS (3 lanes) | arm64-qemu / macOS / ubuntu-x86 produce identical SHA256 |
+| BENCHMARK_GATES | 4/5 | 3 datasets, 3 families; B3 (bit-exact) fails |
+
+> Sources: [`proofs/enterprise_benchmark/GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) (B2: 40.74× vs zstd_l19, B4/B5 latency) | [`proofs/red_team/red_team_report.json`](proofs/red_team/red_team_report.json) (42.14× vs zstd_l3, attack-5 FPR) | [`proofs/release_candidate/primitive_search_result.json`](proofs/release_candidate/primitive_search_result.json) (P@10) | [`proofs/release_candidate/anomaly_detection_result.json`](proofs/release_candidate/anomaly_detection_result.json) (FPR/recall) | [`proofs/release_candidate/it04_parity_matrix_result.json`](proofs/release_candidate/it04_parity_matrix_result.json) (cross-platform)
 
 † Bounded-lossy. The ≤ 0.5° angular figure is limited to smooth-trajectory slices; it is not a general motion bound. Step/discontinuous inputs cause Gibbs ringing, with 68° RMSE measured on a unit-amplitude step signal. Baselines are lossless.
-
-> Source: [`proofs/enterprise_benchmark/benchmark_result.json`](proofs/enterprise_benchmark/benchmark_result.json) | [`proofs/enterprise_benchmark/GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) | [`proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json`](proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json)
 
 ## Competitive Benchmarks
 
@@ -47,7 +51,7 @@ ZPE-Robotics compresses and replays joint-stream logs for infrastructure teams t
 | Tool | Compression Ratio | Notes |
 |------|-------------------|-------|
 | **ZPE P8** | **187.13×†** | governing LeRobot real-data benchmark; PrimitiveIndex search requires decode |
-| zstd_l19 | 4.59× | strongest retained classical codec in the benchmark set |
+| zstd_l19 | 4.59× | strongest retained classical codec; ZPE is 40.74× better (gate B2 PASS) |
 | zstd_l3 | 4.44× | red-team attack 1 baseline; ZPE is 42.14× better |
 | gzip_l9 | 3.97× | retained gzip baseline |
 | mcap_zstd | 3.99× | MCAP container baseline |
@@ -86,8 +90,6 @@ ZPE-Robotics compresses and replays joint-stream logs for infrastructure teams t
 |-------|-------|
 | Verdict | BLOCKED |
 | Authority | proofs/ENGINEERING_BLOCKERS.md |
-| Confidence | 58% |
-| Source | proofs/FINAL_STATUS.md |
 
 ## Selected Claim Gate
 
@@ -187,7 +189,7 @@ than averaged away.
 
 | Field | Value |
 |-------|-------|
-| Proof Anchors | 6 |
+| Proof Anchors | 7 |
 | Modality Lanes | 3 |
 | Authority Source | `proofs/ENGINEERING_BLOCKERS.md` |
 
