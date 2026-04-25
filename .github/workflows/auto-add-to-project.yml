@@ -7,6 +7,7 @@ on:
 
 jobs:
   add-to-project:
+    if: ${{ vars.ENABLE_PROJECT_AUTOMATION == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/add-to-project@v1.0.2
