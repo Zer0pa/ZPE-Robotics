@@ -24,7 +24,7 @@ complete or release-ready.
 ## Is this repo release-ready?
 
 No. Engineering carries named open blockers: benchmark gate `B3` fails, red-team
-attacks `3` and `5` fail, attack `4` only partially withstands, and the robotics
+attack `3` fails, attack `4` only partially withstands, and the robotics
 `.zpbot` path is not routed through a current ZPE-IMC Rust ABI. Each blocker is
 tracked with an honest description in `proofs/ENGINEERING_BLOCKERS.md`.
 
@@ -41,7 +41,6 @@ The governing blockers are:
 - `B3` because searchability is present but strict bit-exact replay is not
 - red-team attack `3` because strict `np.array_equal` fails on the current
   round-trip path
-- red-team attack `5` because the nominal false-positive rate is `0.2`
 - current Python encode/decode still does not route through a robotics Rust ABI
 - external third-party reproduction remains open
 
@@ -109,4 +108,4 @@ If your question is not answered here:
 
 - support routing: `SUPPORT.md`
 - audit route: `AUDITOR_PLAYBOOK.md`
-- release boundary: `../RELEASING.md`
+- release boundary: `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`

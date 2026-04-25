@@ -22,11 +22,7 @@ or support surface. `status=historical` means lineage only.
 |---|---|---|---|---|
 | `README.md` | front door | current | `proofs/ENGINEERING_BLOCKERS.md` | blocker or release-surface change |
 | `CHANGELOG.md` | release change log | current | `pyproject.toml` | version or docs release change |
-| `CONTRIBUTING.md` | contributor policy | current | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` | setup, test, or scope-rule change |
 | `SECURITY.md` | security policy | current | `LICENSE` | security contact or process change |
-| `CODE_OF_CONDUCT.md` | community conduct policy | current | self | conduct policy change |
-| `GOVERNANCE.md` | claim and authority policy | current | `proofs/ENGINEERING_BLOCKERS.md` | authority semantics change |
-| `RELEASING.md` | release gate policy | current | `proofs/ENGINEERING_BLOCKERS.md` | release gate or publish-path change |
 
 ## Docs Directory Surface
 

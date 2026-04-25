@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use ZPE-Robotics, please cite it using this metadata."
+title: "ZPE-Robotics"
+type: software
+version: "0.1.0"
+license: "LicenseRef-Zer0pa-SAL-7.0"
+authors:
+  - name: "Zer0pa (Pty) Ltd"
+    email: "architects@zer0pa.ai"
+repository-code: "https://github.com/Zer0pa/ZPE-Robotics"
+url: "https://github.com/Zer0pa/ZPE-Robotics"
+keywords:
+  - robotics
+  - motion-telemetry
+  - compression
+  - rosbag
+  - lerobot
+  - anomaly-detection

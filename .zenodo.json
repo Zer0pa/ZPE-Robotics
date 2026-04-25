@@ -1,0 +1,26 @@
+{
+  "title": "ZPE-Robotics",
+  "description": "ZPE-Robotics is motion telemetry infrastructure for deterministic logging, compressed replay, and PrimitiveIndex search over robot joint streams. It is built for robotics infrastructure teams and simulation or replay platforms where motion logs are expensive to store, slow to search, and difficult to replay deterministically.",
+  "creators": [
+    {
+      "name": "Zer0pa (Pty) Ltd"
+    }
+  ],
+  "keywords": [
+    "robotics",
+    "motion-telemetry",
+    "compression",
+    "rosbag",
+    "lerobot",
+    "anomaly-detection"
+  ],
+  "license": "LicenseRef-Zer0pa-SAL-7.0",
+  "upload_type": "software",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Zer0pa/ZPE-Robotics",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

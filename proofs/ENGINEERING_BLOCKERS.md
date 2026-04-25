@@ -10,8 +10,17 @@ Engineering is not complete.
 The decisive evidence is:
 
 - benchmark gates: `B1=PASS`, `B2=PASS`, `B3=FAIL`, `B4=PASS`, `B5=PASS`
-- red-team: attacks `1`, `2`, and `6` withstand; attack `4` partially withstands; attacks `3` and `5` fail; attack `7` remains open
+- red-team: attacks `1`, `2`, `5`, and `6` withstand; attack `4` partially withstands; attack `3` fails; attack `7` remains open
 - IMC integration: `zpe-robotics` still does not route `.zpbot` encode or decode through the current ZPE-IMC Rust surface
+
+## 2026-04-24 Reconciliation Note
+
+Attack `5` was rerun on fresh `origin/main` commit `7b7921eacd8d` using the
+current detector threshold surface. The empirical result reproduced the
+committed red-team report: `false_positives=0`, `nominal_trajectories_tested=20`,
+`false_positive_rate=0.0`, `z_threshold_used=3.22`, verdict `WITHSTANDS`.
+The blocker text below has been reconciled to that evidence rather than the
+older failed reading.
 
 ## Blocking Items
 
@@ -65,23 +74,6 @@ What is needed to close it:
 
 - remove any bit-exact or lossless wording from the active claim surface
 - or change the codec path so the strict replay requirement actually holds
-
-### 4. Red-Team Attack 5 Failed
-
-Evidence:
-
-- `proofs/red_team/red_team_report.json`
-
-Current truth:
-
-- the nominal false-positive rate is `4 / 20 = 0.2`
-- the brief required `<= 0.05` for anything better than failure
-
-What is needed to close it:
-
-- redesign the anomaly detector or its thresholding
-- rerun the nominal evaluation on the declared test surface
-- prove the false-positive rate is at most `0.05`
 
 ## Non-Blocking But Still Open
 
