@@ -301,4 +301,4 @@ ZPE-Robotics is one of 17 independent encoding products in the Zer0pa portfolio 
 | **Ideal first buyer** | Robotics infrastructure team or simulation/replay platform |
 | **Pain** | Robot telemetry archives grow fast and can only be searched after full decompression — replay pipelines lack determinism guarantees |
 | **Deployment** | Public Python package — `pip install zpe-robotics` |
-| **Family position** | Motion telemetry lane; ZPE-IMC is the umbrella integration layer; see `docs/family/ROBOTICS_RELEASE_LINKAGE.md` |
+| **Family position** | Motion-telemetry lane in the Zer0pa portfolio. Documentation/release-hygiene linkage to ZPE-IMC is descriptive only, not a runtime dependency; see [docs/family/ROBOTICS_RELEASE_LINKAGE.md](docs/family/ROBOTICS_RELEASE_LINKAGE.md). |
