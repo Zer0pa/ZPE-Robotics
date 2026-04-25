@@ -12,7 +12,7 @@ import platform
 import subprocess
 import sys
 import zlib
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
@@ -243,7 +243,7 @@ def _centroid_accuracy(dataset: list[dict[str, Any]], feature_fn: Any) -> float:
 
     centroids: dict[int, np.ndarray] = {}
     for label in labels:
-        feats = [feature_fn(r) for l, r in train if l == label]
+        feats = [feature_fn(row) for train_label, row in train if train_label == label]
         centroids[label] = np.mean(np.stack(feats, axis=0), axis=0)
 
     correct = 0

@@ -24,15 +24,17 @@ complete or release-ready.
 ## Is this repo release-ready?
 
 No. Engineering carries named open blockers: benchmark gate `B3` fails, red-team
-attack `3` fails, attack `4` only partially withstands, and the robotics
-`.zpbot` path is not routed through a current ZPE-IMC Rust ABI. Each blocker is
+attack `3` fails, attack `4` only partially withstands, attack `7` remains open,
+and the robotics `.zpbot` path is not routed through a current ZPE-IMC Rust ABI. Each blocker is
 tracked with an honest description in `proofs/ENGINEERING_BLOCKERS.md`.
 
 ## What is actually green right now?
 
 The technical release surface is aligned for the standalone package wedge, and
 benchmark gates `B1`, `B2`, `B4`, and `B5` pass. Red-team attacks `1`, `2`,
-and `6` also withstand.
+`5`, and `6` also withstand. Attack `5` is threshold-selected at `3.22` on the
+declared Phase 10 holdout surface. The bounded-lossy archive/search claim is
+ratified by `proofs/narrow_claim/NARROW_CLAIM_GATE.json`.
 
 ## What is still blocked?
 
@@ -44,10 +46,21 @@ The governing blockers are:
 - current Python encode/decode still does not route through a robotics Rust ABI
 - external third-party reproduction remains open
 
+Attack `5` is no longer a blocker-facing failure on the declared Phase 10
+surface: the current evidence records `threshold=3.22`,
+`false_positive_rate=0.05`, and `recall=0.9`.
+
 ## Is the package available today?
 
 Yes. The current package acquisition surface is `pip install zpe-robotics`.
 That does not change blocker status.
+
+## What claim is ratified now?
+
+Only the bounded-lossy archive/search claim: `.zpbot` archive/replay
+infrastructure, decoded PrimitiveIndex search, VLA token export, and the
+declared proof surfaces. It is not a lossless codec, not search without decode,
+not live robot control, and not Robotics Rust ABI routing.
 
 <p>
   <img src="../.github/assets/readme/section-bars/setup-and-verification.svg" alt="SETUP AND VERIFICATION" width="100%">
@@ -59,6 +72,7 @@ Use `AUDITOR_PLAYBOOK.md` for the shortest honest replay path. The current
 proof anchors are:
 
 - `../proofs/ENGINEERING_BLOCKERS.md`
+- `../proofs/narrow_claim/NARROW_CLAIM_GATE.json`
 - `../proofs/enterprise_benchmark/GATE_VERDICTS.json`
 - `../proofs/red_team/red_team_report.json`
 - `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`

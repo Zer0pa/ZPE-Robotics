@@ -32,6 +32,8 @@ or support surface. `status=historical` means lineage only.
 | `docs/ARCHITECTURE.md` | runtime and package map | current | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` | runtime or package-surface change |
 | `docs/AUDITOR_PLAYBOOK.md` | audit route | current | `proofs/ENGINEERING_BLOCKERS.md` | verify-command or authority change |
 | `docs/FAQ.md` | blocker and acquisition FAQ | current | `proofs/ENGINEERING_BLOCKERS.md` | blocker or acquisition-surface change |
+| `docs/CLAIM_BOUNDARY.md` | active narrowed claim boundary | current | `proofs/narrow_claim/NARROW_CLAIM_GATE.json` | claim-boundary change |
+| `docs/MECHANICS_LAYER.md` | mechanics-layer audit for current claim | current | `proofs/narrow_claim/NARROW_CLAIM_GATE.json` | mechanics-boundary change |
 | `docs/SUPPORT.md` | support routing | current | `SECURITY.md` | support-route change |
 | `docs/LEGAL_BOUNDARIES.md` | legal and visibility notes | current | `LICENSE` | claim, license, or visibility change |
 | `docs/OPERATOR_RUNBOOK.md` | CLI/operator surface | current | `src/zpe_robotics/cli.py` | CLI surface change |
@@ -45,6 +47,8 @@ or support surface. `status=historical` means lineage only.
 | Path | Role | Status | Authority | Update trigger |
 |---|---|---|---|---|
 | `proofs/ENGINEERING_BLOCKERS.md` | governing blocker proof | current | self | new benchmark, red-team, or integration result |
+| `proofs/narrow_claim/NARROW_CLAIM_GATE.json` | selected narrow-claim gate | current | self | claim-boundary change |
+| `proofs/narrow_claim/NARROW_CLAIM_RATIFICATION.md` | narrow-claim rationale | current | `proofs/narrow_claim/NARROW_CLAIM_GATE.json` | claim-boundary change |
 | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` | package/runtime boundary | current | self | packaging or runtime boundary change |
 | `proofs/runbooks/TRUSTED_PUBLISHING_OPERATOR_STEPS.md` | publisher setup runbook | current | `.github/workflows/publish.yml` | publish workflow or PyPI UI path change |
 | `proofs/FINAL_STATUS.md` | supporting status note | supporting | `proofs/ENGINEERING_BLOCKERS.md` | current authority reroute |

@@ -9,9 +9,8 @@
 </p>
 
 This document records the March 18, 2026 release-candidate surface for
-`zpe-robotics 0.1.0`. It is not the governing March 21 engineering
-authority. Use `../proofs/ENGINEERING_BLOCKERS.md` for the current completion
-boundary.
+`zpe-robotics 0.1.0`. It is not the governing engineering authority. Use
+`../proofs/ENGINEERING_BLOCKERS.md` for the current completion boundary.
 
 <p>
   <img src="../.github/assets/readme/section-bars/scope.svg" alt="SCOPE" width="100%">
@@ -20,9 +19,10 @@ boundary.
 | Surface | Release-candidate fact | Current caveat |
 |---|---|---|
 | Package | `zpe-robotics 0.1.0` package artifact exists | current repo authority remains blocker-state, not release-candidate prose |
+| Narrow claim gate | bounded-lossy archive/search is ratified | not a full release-ready verdict |
 | Synthetic fixture compression | `238.02421307506054x` | the real-data benchmark later recorded `187.1345x` |
 | CLI surface | `zpe-robotics` ships encode, decode, verify, info, search, anomaly, LeRobot, token export, and audit-bundle commands | availability does not imply all claims are fully closed |
-| Searchability | primitive search works without decode on the benchmark surface | `B3` still fails because strict bit-exact replay is not proven |
+| Searchability | PrimitiveIndex search works on decoded motion streams | `B3` still fails because strict bit-exact replay and search-without-decode are not both proven |
 | Publishing | package upload path exists | Trusted Publishing UI registration is still operator-only |
 
 <p>
@@ -43,6 +43,7 @@ boundary.
 This release-candidate note does not claim:
 
 - strict bit-exact replay on the governing benchmark surface
+- general anomaly false-positive behavior beyond the declared Phase 10 threshold-selected holdout surface
 - current Rust routing through ZPE-IMC for robotics `.zpbot`
 - full robotics-platform release readiness
 - public-release authorization
@@ -50,6 +51,9 @@ This release-candidate note does not claim:
 Use these files when you need the current state instead of the March 18 note:
 
 - `../proofs/ENGINEERING_BLOCKERS.md`
+- `../proofs/narrow_claim/NARROW_CLAIM_GATE.json`
 - `../proofs/enterprise_benchmark/GATE_VERDICTS.json`
 - `../proofs/red_team/red_team_report.json`
+- `../proofs/release_candidate/anomaly_detection_result.json`
+- `../proofs/release_candidate/anomaly_threshold_sweep.json`
 - `../proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`
