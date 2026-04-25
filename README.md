@@ -18,29 +18,54 @@ SAL v7.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-Deterministic motion logging, compressed replay, PrimitiveIndex search, and FAST VLA token export on the current blocker-governed authority surface.
+Searchable motion archives with VLA token export. 187× compression on real robot data. Red-team tested. `pip install zpe-robotics` (available on PyPI).
 
-ZPE-Robotics is motion telemetry infrastructure for robotics infrastructure teams and simulation/replay platforms where motion logs are expensive to store, slow to search, and difficult to replay deterministically. The governing engineering surface remains blocker-state.
+ZPE-Robotics is motion telemetry infrastructure — deterministic logging, compressed replay, and PrimitiveIndex search over joint streams. Built for robotics infrastructure teams and simulation/replay platforms where motion logs are expensive to store, slow to search, and impossible to replay deterministically. The package is public. The governing engineering surface remains blocker-state.
 
-## Verified Runtime Surfaces
+| Field | Value |
+|-------|-------|
+| Architecture | MANIFOLD_MOTION |
+| Encoding | WIRE_V1 |
 
-| Surface | Evidence |
-|--------|----------|
-| Packet encode / verify / decode CLI | [`tests/test_cli.py`](tests/test_cli.py) |
-| PrimitiveIndex decoded-stream search | [`tests/test_primitive_index.py`](tests/test_primitive_index.py) |
-| FAST VLA token export | [`tests/test_vla_bridge.py`](tests/test_vla_bridge.py) |
-| Anomaly threshold gate | [`tests/test_anomaly.py`](tests/test_anomaly.py) |
-| Canonical reference packet parity | [`tests/test_release_candidate.py`](tests/test_release_candidate.py) |
+## Key Metrics
+
+| Metric | Value | Baseline |
+|--------|-------|----------|
+| COMPRESSION | 187×† | vs zstd_l3 4.44× (42× better) |
+| ENCODE_P50 | 0.11 | ms |
+| VLA_TOKEN_EXPORT | 24-token FAST surface | [`vla_bridge.py`](src/zpe_robotics/vla_bridge.py) |
+| BENCHMARK_GATES | 4/5 | 3 datasets, 3 families |
+
+† Bounded-lossy. The ≤ 0.5° angular figure is limited to smooth-trajectory slices; it is not a general motion bound. Step/discontinuous inputs cause Gibbs ringing, with 68° RMSE measured on a unit-amplitude step signal. Baselines are lossless.
+
+> Source: [`proofs/enterprise_benchmark/benchmark_result.json`](proofs/enterprise_benchmark/benchmark_result.json) | [`proofs/enterprise_benchmark/GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) | [`proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json`](proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json)
+
+## Competitive Benchmarks
+
+> Competitive benchmark evidence: [`proofs/enterprise_benchmark/benchmark_result.json`](proofs/enterprise_benchmark/benchmark_result.json) | [`proofs/red_team/red_team_report.json`](proofs/red_team/red_team_report.json) | [`proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json`](proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json)
+
+| Tool | Compression Ratio | Notes |
+|------|-------------------|-------|
+| **ZPE P8** | **187.13×†** | governing LeRobot real-data benchmark; PrimitiveIndex search requires decode |
+| zstd_l19 | 4.59× | strongest retained classical codec in the benchmark set |
+| zstd_l3 | 4.44× | red-team attack 1 baseline; ZPE is 42.14× better |
+| gzip_l9 | 3.97× | retained gzip baseline |
+| mcap_zstd | 3.99× | MCAP container baseline |
+| lz4_default | 3.00× | low-latency baseline |
+| h5py_gzip9 | 2.69× | HDF5 gzip baseline |
+| h5py_lzf | 2.15× | HDF5 fast baseline |
+
+† Bounded-lossy. The ≤ 0.5° angular figure is limited to smooth-trajectory slices; it is not a general motion bound. Step/discontinuous inputs cause Gibbs ringing, with 68° RMSE measured on a unit-amplitude step signal. All other baselines are lossless.
 
 ## What We Prove
 
 > Auditable guarantees backed by committed proof artifacts. Start at `docs/AUDITOR_PLAYBOOK.md`.
 
-- Wire-v1 packet encode, decode, and verification surfaces are exercised in the committed CLI and test suite
+- Spectral wire transport with directional reasoning layer for robot action sequences
 - Search operates on decoded motion streams via PrimitiveIndex
-- VLA token export emits the committed FAST token surface
-- The current anomaly threshold surface selects `3.22` while meeting the false-positive and recall gates
-- Canonical reference packet parity is frozen to the committed bridge hash
+- Red-team attack surface is transparently reported; attacks `1`, `2`, `5`, and `6` withstand on the current authority surface
+- VLA tokenization aligns with vision-language-action model input formats
+- Public package install surface verified (available on PyPI: `pip install zpe-robotics`)
 
 ## What We Don't Claim
 
@@ -57,6 +82,8 @@ ZPE-Robotics is motion telemetry infrastructure for robotics infrastructure team
 | Field | Value |
 |-------|-------|
 | Verdict | BLOCKED |
+| Commit SHA | 7b7921eacd8d |
+| Confidence | 58% |
 | Source | proofs/FINAL_STATUS.md |
 
 ## Tests and Verification
@@ -100,7 +127,8 @@ ZPE-Robotics is motion telemetry infrastructure for robotics infrastructure team
 - Historical proof bundles remain lineage only. They do not override the March
   21 blocker-state evidence.
 - No IMC runtime import is introduced by this repo.
-- The repo's March 21 blocker-state docs remain the authority surface for
+- The current installable package artifact is `zpe-robotics 0.1.0`, but
+  the repo's March 21 blocker-state docs remain the authority surface for
   engineering status.
 
 Use these files together:
@@ -116,11 +144,41 @@ Use these files together:
 | Docs registry | `docs/DOC_REGISTRY.md` |
 | Historical lineage | `proofs/artifacts/historical/README.md` |
 
+### Expanded LeRobot Benchmark Coverage
+
+The expanded benchmark sweep is recorded in
+`proofs/artifacts/lerobot_expanded_benchmarks/`. The current qualified surface
+covers `3` real datasets across `3` materially distinct families, with
+compression ratios spanning `58.70x` to `186.05x`.
+
+| Dataset | Family | Compression ratio | Status |
+|---|---|---:|---|
+| `lerobot/columbia_cairlab_pusht_real` | `pusht` | `186.05x` | qualified |
+| `lerobot/aloha_mobile_shrimp` | `aloha` | `61.27x` | qualified |
+| `lerobot/umi_cup_in_the_wild` | `umi` | `58.70x` | qualified |
+| `lerobot/pusht_image` | `pusht` | n/a | skipped: insufficient joint dimension |
+
+Read `proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json`
+for the rollup verdict and
+`proofs/artifacts/lerobot_expanded_benchmarks/dataset_manifest.json` for the
+full attempt ledger, including qualification misses that were preserved rather
+than averaged away.
+
 ## Repo Shape
 
 <p>
   <img src=".github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
 </p>
+
+| Field | Value |
+|-------|-------|
+| Proof Anchors | 6 |
+| Modality Lanes | 3 |
+| Authority Source | `proofs/ENGINEERING_BLOCKERS.md` |
+
+The modality-lane count reflects the three recorded parity lanes
+(`arm64-qemu`, `macos`, `ubuntu-x86`) in
+`proofs/release_candidate/it04_parity_matrix_result.json`.
 
 | Area | Purpose |
 |---|---|
@@ -143,10 +201,12 @@ Use these files together:
 
 | Surface | Current truth |
 |---|---|
+| Repository | `https://github.com/Zer0pa/ZPE-Robotics.git` |
 | Package / import / CLI | `zpe-robotics` / `zpe_robotics` / `zpe-robotics` |
-| Acquisition surface | source install from this repository |
+| Acquisition surface | `pip install zpe-robotics` (available on PyPI) |
 | License | `LicenseRef-Zer0pa-SAL-7.0` |
-| Release state | engineering surface remains blocker-governed |
+| Contact | `architects@zer0pa.ai` |
+| Release state | public repo and published package; engineering surface remains blocker-governed |
 | Engineering | not complete |
 | Current authority | `proofs/ENGINEERING_BLOCKERS.md` |
 
@@ -162,7 +222,14 @@ Use these files together:
   <img src=".github/assets/readme/section-bars/setup-and-verification.svg" alt="SETUP AND VERIFICATION" width="100%">
 </p>
 
-Install from source:
+Install from PyPI:
+
+```bash
+pip install zpe-robotics
+zpe-robotics --version
+```
+
+Or install from source (development):
 
 ```bash
 pip install -e .
@@ -196,3 +263,26 @@ If you need the release workflow boundary, use
 | Support routing | `docs/SUPPORT.md` |
 | Docs index | `docs/README.md` |
 | Operator commands | `docs/OPERATOR_RUNBOOK.md` |
+
+## Ecosystem
+
+ZPE-Robotics follows the portfolio release-hygiene pattern used by
+[ZPE-IMC](https://github.com/Zer0pa/ZPE-IMC), but it does not inherit IMC
+runtime claims, benchmark verdicts, or release readiness by association.
+
+| Need | Route |
+|---|---|
+| Robotics-to-IMC boundary | `docs/family/ROBOTICS_RELEASE_LINKAGE.md` |
+| Frozen proof lineage note | `proofs/artifacts/historical/README.md` |
+| Reference core repo | `https://github.com/Zer0pa/ZPE-IMC` |
+
+**Observability:** [Comet dashboard](https://www.comet.com/zer0pa/zpe-robotics/view/new/panels) (public)
+
+## Who This Is For
+
+| | |
+|---|---|
+| **Ideal first buyer** | Robotics infrastructure team or simulation/replay platform |
+| **Pain** | Robot telemetry archives grow fast and can only be searched after full decompression — replay pipelines lack determinism guarantees |
+| **Deployment** | Public Python package — `pip install zpe-robotics` |
+| **Family position** | Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer |
