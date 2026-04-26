@@ -302,3 +302,10 @@ ZPE-Robotics is one of 17 independent encoding products in the Zer0pa portfolio 
 | **Pain** | Robot telemetry archives grow fast and can only be searched after full decompression — replay pipelines lack determinism guarantees |
 | **Deployment** | Public Python package — `pip install zpe-robotics` |
 | **Family position** | Motion-telemetry lane in the Zer0pa portfolio. Documentation/release-hygiene linkage to ZPE-IMC is descriptive only, not a runtime dependency; see [docs/family/ROBOTICS_RELEASE_LINKAGE.md](docs/family/ROBOTICS_RELEASE_LINKAGE.md). |
+
+## Upcoming Workstreams
+
+This section captures the active lane priorities — what the next agent or contributor picks up, and what investors should expect. Cadence is continuous, not milestoned.
+
+- **Step-input Gibbs ringing fix (B3 gate)** — Research-Deferred — Investigation Underway. Highest-value research investment in the portfolio. Investigation: discontinuity-aware primitive (pre-detect step → switch encoding regime), or hybrid mode falling back to a lossless coder for step segments. Until resolved, lane is honestly scoped to smooth-trajectory bounded-lossy slices.
+- **Third-party reproduction (Attack 7)** — Operations / External Dependency. INCONCLUSIVE pending independent run; surface contact requested.
