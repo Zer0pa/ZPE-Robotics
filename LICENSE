@@ -47,6 +47,7 @@ The Licensor grants broad rights to individuals, researchers, open-source projec
 | ZPE-Prosody | Speech prosody encoding | Active |
 | ZPE-Robotics | Robotics motion encoding | Active |
 | ZPE-Smell | Olfactory receptor-panel encoding | Research in Progress |
+| ZPE-SPU | Lattice-quantized polyline measurement substrate (Semantic Processing Unit) | Research in Progress |
 | ZPE-Taste | Taste geometry-seam reference | Evidenced Negative |
 | ZPE-Touch | Haptic/tactile contact-stroke encoding | Active |
 | ZPE-Video | Video perception-receipt encoding | Active |
@@ -270,7 +271,7 @@ Each Product Novelty Schedule identifies the product's status — **Active**, **
 
 **Status:** Active
 **Domain:** Deterministic encoding of structural Euclidean line-diagram geometry with bounded style and explicit stroke-order state.
-**Compass-8 Pattern:** NO (as a product claim). The codec uses 8-direction chain-code encoding with run-length packing as an internal technique (see `src/zpe_diagram/quantize.py:7-17` for the 8-vector `DIRS` table, `src/zpe_diagram/pack.py:18` for `SUBTYPE_DRAW_RUN`, and `_emit_run()` in `src/zpe_diagram/pack.py` for the (direction, run_length) packing). The Novel Contribution of this product is the structural-geometry base / bounded-style fiber separation, not the directional encoding layer.
+**Compass-8 Pattern:** NO — uses a structural-geometry base, with bounded style carried as a separate fiber layer and stroke order carried as separate explicit state.
 
 **Novel Contributions:**
 
@@ -524,6 +525,24 @@ Under the full geometry burden on the admissible taste object — with helper le
 
 ---
 
+### 7.19 ZPE-SPU — Lattice-Quantized Polyline Measurement Substrate (Semantic Processing Unit)
+
+**Status:** Research in Progress
+**Domain:** Lattice-quantized polyline measurement instrument for human written signs — a structural substrate for grid contact, signature comparison, graph resonance, and cross-codepoint structural identity detection. Not a font system, not OCR, not a rendering pipeline, and not a deployed semantic processor.
+**Compass-8 Pattern:** NO — uses a 12×12 grid-cell lattice with parallel signature layers (vertex / edge / ordered / topology+field) measured side-by-side rather than 8-directional chain coding.
+
+**Novel Contributions:**
+
+1. **Grid-primary lattice signature with parallel-layer measurement contract.** A deterministic substrate in which a 12×12 grid-cell occupancy lattice is the primary measured layer for polyline glyphs, with vertex-Hamming, edge symmetric-difference, and composite-grid signatures produced as separate parallel layers carried side-by-side rather than collapsed to a single distance. The parallel-layer contract — such that each layer is independently auditable and the grid-primary layer is the load-bearing reference — is the novel contribution, not lattice quantisation generally. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-SPU).
+
+2. **Cross-codepoint structural-identity surface as a first-class substrate output.** A measurement layer that surfaces exact cross-script structural-twin pairs (e.g. Latin H / Greek Eta / Cyrillic En) as a feature of the lattice geometry rather than treating them as collisions to be suppressed. The codec-level surfacing of cross-codepoint structural identity, anchored to the published cross-codepoint-identity authority artifact, is the novel contribution. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-SPU).
+
+3. **Falsification-first negative-result publishing within the codec surface.** A substrate-level discipline in which negative basin-separation and allograph-mixture results are published as first-class authority artifacts within the codec surface (with margin and component statistics retained), and prior framings (variant-bootstrap, S5 pairwise proxy) are explicitly retracted rather than erased. The integration of pre-registered kill-criteria results into the codec's authority surface, mirrored on the receipts-first posture, is the novel contribution. Code: resolved via the Citation Index at the Master Resolver Endpoint (ZPE-SPU).
+
+**Honest Limits:** ZPE-SPU is a substrate measurement instrument, not a semantic processor. The Licensor does not claim that SPU computes semantics, meaning, glosses, or linguistic interpretation; does not claim cross-font Platonic-letter convergence under the current lattice signature (best measured basin-separation margin is negative, `-14.0`); does not claim allograph/convention subsets rescue the current lattice signature (stress K≤8 mixture run also fails); does not claim cross-font cross-script exact identity (S4 falsifies that); does not claim OCR, camera vision, font rendering, kerning, hinting, typography reconstruction, or handwriting recognition; and does not claim robustness to italic, serif, condensed, or other supra-cell font transformations. ZPE-SPU is one independent encoding product surface under this License; no portfolio-wide architectural claim is made.
+
+---
+
 ## 8. Consolidated Disclosures — Standard Techniques Not Claimed
 
 The following techniques are used by one or more products in the portfolio. The Licensor explicitly **does not claim** these as novel. Their use does not, by itself, make a system a Substantially Similar Implementation.
@@ -580,7 +599,7 @@ You must ensure that anyone who receives a copy of any part of the Software from
 
 ## 12. No Other Rights
 
-These terms do not imply any licenses other than those expressly stated. This License does not grant You any rights under patents necessary to implement specifications, standards, or protocols that the Software may use or implement, except as expressly granted in Section 9. No trademark license is granted under this License. The Licensor maintains a Trademark Register at the Master Resolver Endpoint, which is the authoritative list of trademarks, service marks, certification marks, and designations claimed by the Licensor under or in connection with this License. Unauthorised use of any mark listed in the Trademark Register, or of any mark that is confusingly similar to a mark listed in the Trademark Register, is prohibited. As at the publication date of this License, the Trademark Register includes (without limitation) "Zer0pa," "ZPE," "Compass-8," any "ZPE-Compatible" or "ZPE-Certified" mark, and the product-specific marks "ZPE-Bio," "ZPE-Diagram," "ZPE-FT," "ZPE-Geo," "ZPE-Image," "ZPE-Ink," "ZPE-IoT," "ZPE-Mental," "ZPE-Mocap," "ZPE-Music," "ZPE-Neuro," "ZPE-Prosody," "ZPE-Robotics," "ZPE-Smell," "ZPE-Taste," "ZPE-Touch," "ZPE-Video," and "ZPE-XR"; the Licensor may update the Trademark Register from time to time without amending this License, subject to Section 20. You may make truthful, non-misleading nominative references to the Licensor's marks solely to describe that the Software is licensed under this License or that Your work interoperates with unmodified Licensor-distributed interfaces, provided You do not state or imply sponsorship, endorsement, certification, or official compatibility. Use of any mark, marketing statement, or designation suggesting compatibility with, certification by, or endorsement by the Licensor (including any "ZPE-compatible" or similar claim not substantiated in accordance with Section 4.7) requires a separate written trademark license from the Licensor.
+These terms do not imply any licenses other than those expressly stated. This License does not grant You any rights under patents necessary to implement specifications, standards, or protocols that the Software may use or implement, except as expressly granted in Section 9. No trademark license is granted under this License. The Licensor maintains a Trademark Register at the Master Resolver Endpoint, which is the authoritative list of trademarks, service marks, certification marks, and designations claimed by the Licensor under or in connection with this License. Unauthorised use of any mark listed in the Trademark Register, or of any mark that is confusingly similar to a mark listed in the Trademark Register, is prohibited. As at the publication date of this License, the Trademark Register includes (without limitation) "Zer0pa," "ZPE," "Compass-8," any "ZPE-Compatible" or "ZPE-Certified" mark, and the product-specific marks "ZPE-Bio," "ZPE-Diagram," "ZPE-FT," "ZPE-Geo," "ZPE-Image," "ZPE-Ink," "ZPE-IoT," "ZPE-Mental," "ZPE-Mocap," "ZPE-Music," "ZPE-Neuro," "ZPE-Prosody," "ZPE-Robotics," "ZPE-Smell," "ZPE-SPU," "ZPE-Taste," "ZPE-Touch," "ZPE-Video," and "ZPE-XR"; the Licensor may update the Trademark Register from time to time without amending this License, subject to Section 20. You may make truthful, non-misleading nominative references to the Licensor's marks solely to describe that the Software is licensed under this License or that Your work interoperates with unmodified Licensor-distributed interfaces, provided You do not state or imply sponsorship, endorsement, certification, or official compatibility. Use of any mark, marketing statement, or designation suggesting compatibility with, certification by, or endorsement by the Licensor (including any "ZPE-compatible" or similar claim not substantiated in accordance with Section 4.7) requires a separate written trademark license from the Licensor.
 
 ---
 
