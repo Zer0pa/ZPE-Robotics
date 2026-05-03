@@ -8,7 +8,7 @@
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
 [![License](https://img.shields.io/badge/license-SAL%20v7.0-orange)](./LICENSE)
 
-SAL v7.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
+SAL v7.1 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ---
 
@@ -220,7 +220,7 @@ Rows retained from the previous expanded `## Key Metrics` table. The public prod
 | Repository | `https://github.com/Zer0pa/ZPE-Robotics.git` |
 | Package / import / CLI | `zpe-robotics` / `zpe_robotics` / `zpe-robotics` |
 | Acquisition surface | `pip install zpe-robotics` (available on PyPI) |
-| License | `LicenseRef-Zer0pa-SAL-7.0` |
+| License | `LicenseRef-Zer0pa-SAL-7.1` |
 | Contact | `architects@zer0pa.ai` |
 | Release state | public repo and published package; engineering surface remains blocker-governed |
 | Engineering | not complete |
