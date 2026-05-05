@@ -6,7 +6,7 @@
 
 [![Install](https://img.shields.io/badge/install-pip%20install%20--e%20.-blue)](./pyproject.toml)
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
-[![License](https://img.shields.io/badge/license-SAL%20v7.0-orange)](./LICENSE)
+[![License](https://img.shields.io/badge/license-SAL%20v7.1-orange)](./LICENSE)
 
 SAL v7.1 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
@@ -75,7 +75,7 @@ Wire encoding: `wire-v1` (frozen packet contract; authority: [`docs/ZPBOT_V2_AUT
 | Current Surface | Robot motion archive compression, decoded-stream PrimitiveIndex search, and VLA token export on declared LeRobot datasets; 187x real-data anchor on columbia_cairlab_pusht_real (136 episodes, 27,808 frames). |
 | Headline Metric | 187.1345x compression on bounded robot joint-stream surface; 3-dataset spread 58.70x–186.05x (median 61.27x); encode p50 0.111 ms; decode p50 0.089 ms. Source: `proofs/enterprise_benchmark/benchmark_result.json`. |
 | Evidence Basis | `proofs/enterprise_benchmark/GATE_VERDICTS.json`; `proofs/enterprise_benchmark/benchmark_result.json`; `proofs/narrow_claim/NARROW_CLAIM_GATE.json`; `proofs/red_team/red_team_report.json`; `proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json` |
-| Pending Evidence | B3 bit-exact and step-input closure; lossless qualification repair or scope-out (red-team attack 3); independent third-party reproduction (red-team attack 7); public metadata claim repair (this commit). |
+| Pending Evidence | B3 bit-exact replay and search-without-decode closure or gate re-ratification (`proofs/enterprise_benchmark/GATE_VERDICTS.json`); step/discontinuous-input scope closure; lossless qualification repair or scope-out (red-team attack 3); independent third-party reproduction (red-team attack 7). |
 | Authority Verdict | BLOCKED |
 | Checks | 8/12 |
 | Anchors | 6 |
@@ -86,13 +86,13 @@ Wire encoding: `wire-v1` (frozen packet contract; authority: [`docs/ZPBOT_V2_AUT
 
 ### Honest Blocker
 
-The live package and bounded benchmark surface are useful now for bounded-lossy robot joint-stream archiving, decoded PrimitiveIndex search, and VLA token export. Full release readiness still depends on B3 step/discontinuous input closure (current 68-degree RMSE on unit-amplitude step inputs), bit-exact round-trip proof, and independent third-party reproduction. Search-without-decode is not proven: PrimitiveIndex requires full packet decode before indexing.
+The live package and bounded benchmark surface are useful now for bounded-lossy robot joint-stream archiving, decoded PrimitiveIndex search, and VLA token export. Full release readiness still depends on B3 closure for bit-exact replay and search-without-decode, step/discontinuous-input scope closure, and independent third-party reproduction. Search-without-decode is not proven: PrimitiveIndex requires full packet decode before indexing.
 
 ### What's Next
 
 - **Live-lab cleanup:** GitHub description and topics rewritten to remove "Search Without Decode" and lossless/compression overclaims; 3-dataset spread surfaced alongside the 187x anchor.
 - **Website sync:** Mirror Public Status, 187.1345x with bounded-lossy label and 3-dataset spread, narrow-gate PASS + B3 FAIL state, search-without-decode non-claim, BLOCKED Authority Verdict preserved as the secondary cluster.
-- **Future evidence campaign:** Decide whether B3 is repaired (discontinuity-aware encoding path) or permanently scoped out (cap to smooth-trajectory bounded-lossy slices); independent third-party reproduction for red-team attack 7.
+- **Future evidence campaign:** Decide whether B3's old gate is repaired or re-ratified for the narrow decoded-search surface; separately decide whether discontinuous inputs are repaired or permanently scoped out; independent third-party reproduction for red-team attack 7.
 
 ## What We Prove
 

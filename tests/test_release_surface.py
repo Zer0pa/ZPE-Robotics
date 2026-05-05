@@ -99,6 +99,8 @@ def test_root_readme_keeps_expected_gif_surface() -> None:
     gif_refs = re.findall(r'\.github/assets/readme/[^"]+\.gif', text)
     assert gif_refs == [
         ".github/assets/readme/zpe-masthead.gif",
+        ".github/assets/readme/lane-mechanics/ROBOTICS.gif",
+        ".github/assets/readme/lane-mechanics/ROBOTICS.gif",
         ".github/assets/readme/zpe-masthead-option-3-2.gif",
         ".github/assets/readme/zpe-masthead-option-3-3.gif",
     ]

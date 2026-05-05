@@ -14,10 +14,10 @@
     "proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json"
   ],
   "pending_evidence": [
-    "B3 bit-exact and step-input closure (proofs/enterprise_benchmark/GATE_VERDICTS.json gate row)",
+    "B3 bit-exact replay and search-without-decode closure or gate re-ratification (proofs/enterprise_benchmark/GATE_VERDICTS.json gate row)",
+    "step/discontinuous-input scope closure (future evidence campaign)",
     "lossless qualification repair or scope-out (proofs/red_team/red_team_report.json attack 3)",
-    "independent third-party reproduction (red-team attack 7)",
-    "public metadata claim repair (this commit)"
+    "independent third-party reproduction (red-team attack 7)"
   ],
   "authority_source": "proofs/ENGINEERING_BLOCKERS.md",
   "verdict_source": "proofs/ENGINEERING_BLOCKERS.md",

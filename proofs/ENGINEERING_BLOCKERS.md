@@ -46,13 +46,13 @@ Evidence:
 
 Current truth:
 
-- `zpe_p8` is searchable without decode
+- `zpe_p8` is not searchable without decode; PrimitiveIndex search requires decoding before indexing
 - `zpe_p8` is not bit-exact on raw float32 replay
 - the fixed gate requires both
 
 What is needed to close it:
 
-- either make the codec bit-exact on the governing replay surface
+- either make the codec bit-exact on the governing replay surface and searchable without decode
 - or explicitly ratify a different acceptance gate in a new phase instead of narrating this one green
 
 ### 3. Red-Team Attack 3 Failed
