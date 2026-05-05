@@ -3,7 +3,7 @@ message: "If you use ZPE-Robotics, please cite it using this metadata."
 title: "ZPE-Robotics"
 type: software
 version: "0.1.0"
-license: "LicenseRef-Zer0pa-SAL-7.0"
+license: "LicenseRef-Zer0pa-SAL-7.1"
 authors:
   - name: "Zer0pa (Pty) Ltd"
     email: "architects@zer0pa.ai"

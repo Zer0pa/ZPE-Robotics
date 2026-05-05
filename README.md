@@ -57,29 +57,42 @@ Wire encoding: `wire-v1` (frozen packet contract; authority: [`docs/ZPBOT_V2_AUT
 |-------|-------|
 | Identifier | ZPE-Robotics |
 | Repository | https://github.com/Zer0pa/ZPE-Robotics |
-| Section | encoding |
+| Portfolio Category | Encoding |
+| Website Mirror | /encoding/ZPE-Robotics/ |
 | Visibility | PUBLIC |
+| License | LicenseRef-Zer0pa-SAL-7.1 |
+| License Terms | "FREE TO use, modify, and distribute below $100M annual revenue; see LICENSE for full terms." |
+| Authority Source | proofs/ENGINEERING_BLOCKERS.md |
+| Manifest | proofs/manifests/live_lab_status.json |
 | Architecture | MANIFOLD_MOTION |
 | Encoding | WIRE_V1 |
-| Commit SHA | c7ded78e9aea |
-| License | SAL-7.0 |
-| Authority Source | proofs/ENGINEERING_BLOCKERS.md |
 
 ## Readiness
 
 | Field | Value |
 |-------|-------|
-| Verdict | BLOCKED |
+| Public Status | Claim-surface repair in progress; narrow archive/search evidence exists. |
+| Current Surface | Robot motion archive compression, decoded-stream PrimitiveIndex search, and VLA token export on declared LeRobot datasets; 187x real-data anchor on columbia_cairlab_pusht_real (136 episodes, 27,808 frames). |
+| Headline Metric | 187.1345x compression on bounded robot joint-stream surface; 3-dataset spread 58.70x–186.05x (median 61.27x); encode p50 0.111 ms; decode p50 0.089 ms. Source: `proofs/enterprise_benchmark/benchmark_result.json`. |
+| Evidence Basis | `proofs/enterprise_benchmark/GATE_VERDICTS.json`; `proofs/enterprise_benchmark/benchmark_result.json`; `proofs/narrow_claim/NARROW_CLAIM_GATE.json`; `proofs/red_team/red_team_report.json`; `proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json` |
+| Pending Evidence | B3 bit-exact and step-input closure; lossless qualification repair or scope-out (red-team attack 3); independent third-party reproduction (red-team attack 7); public metadata claim repair (this commit). |
+| Authority Verdict | BLOCKED |
 | Checks | 8/12 |
-| Anchors | 6 display anchors |
+| Anchors | 6 |
 | Confidence | UNSET |
-| Commit | c7ded78e9aea |
-| Verified | 2026.04.29 UTC |
-| Authority | proofs/ENGINEERING_BLOCKERS.md |
+| Commit | deb86a53252c |
+| Verified | 2026-05-03 UTC |
+| Verdict Source | proofs/ENGINEERING_BLOCKERS.md |
 
 ### Honest Blocker
 
-Full release readiness; Bit-exact .zpbot round-trip replay; B3 benchmark gate pass
+The live package and bounded benchmark surface are useful now for bounded-lossy robot joint-stream archiving, decoded PrimitiveIndex search, and VLA token export. Full release readiness still depends on B3 step/discontinuous input closure (current 68-degree RMSE on unit-amplitude step inputs), bit-exact round-trip proof, and independent third-party reproduction. Search-without-decode is not proven: PrimitiveIndex requires full packet decode before indexing.
+
+### What's Next
+
+- **Live-lab cleanup:** GitHub description and topics rewritten to remove "Search Without Decode" and lossless/compression overclaims; 3-dataset spread surfaced alongside the 187x anchor.
+- **Website sync:** Mirror Public Status, 187.1345x with bounded-lossy label and 3-dataset spread, narrow-gate PASS + B3 FAIL state, search-without-decode non-claim, BLOCKED Authority Verdict preserved as the secondary cluster.
+- **Future evidence campaign:** Decide whether B3 is repaired (discontinuity-aware encoding path) or permanently scoped out (cap to smooth-trajectory bounded-lossy slices); independent third-party reproduction for red-team attack 7.
 
 ## What We Prove
 

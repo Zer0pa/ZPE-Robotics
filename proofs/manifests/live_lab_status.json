@@ -1,0 +1,27 @@
+{
+  "repo": "ZPE-Robotics",
+  "portfolio_category": "Encoding",
+  "website_route": "/encoding/ZPE-Robotics/",
+  "public_status": "Claim-surface repair in progress; narrow archive/search evidence exists.",
+  "authority_verdict": "BLOCKED",
+  "current_surface": "Robot motion archive compression, decoded-stream PrimitiveIndex search, and VLA token export on declared LeRobot datasets; 187x real-data anchor on columbia_cairlab_pusht_real (136 episodes, 27,808 frames).",
+  "headline_metric": "187.1345x compression on bounded robot joint-stream surface; 3-dataset spread 58.70x-186.05x (median 61.27x); encode p50 0.111 ms; decode p50 0.089 ms.",
+  "evidence_basis": [
+    "proofs/enterprise_benchmark/GATE_VERDICTS.json",
+    "proofs/enterprise_benchmark/benchmark_result.json",
+    "proofs/narrow_claim/NARROW_CLAIM_GATE.json",
+    "proofs/red_team/red_team_report.json",
+    "proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json"
+  ],
+  "pending_evidence": [
+    "B3 bit-exact and step-input closure (proofs/enterprise_benchmark/GATE_VERDICTS.json gate row)",
+    "lossless qualification repair or scope-out (proofs/red_team/red_team_report.json attack 3)",
+    "independent third-party reproduction (red-team attack 7)",
+    "public metadata claim repair (this commit)"
+  ],
+  "authority_source": "proofs/ENGINEERING_BLOCKERS.md",
+  "verdict_source": "proofs/ENGINEERING_BLOCKERS.md",
+  "requires_gpu": false,
+  "requires_hardware": false,
+  "last_verified": "2026-05-03"
+}
