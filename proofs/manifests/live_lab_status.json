@@ -1,4 +1,5 @@
 {
+  "schema_version": "live_lab_status.v1",
   "repo": "ZPE-Robotics",
   "portfolio_category": "Encoding",
   "website_route": "/encoding/ZPE-Robotics/",
@@ -23,5 +24,6 @@
   "verdict_source": "proofs/ENGINEERING_BLOCKERS.md",
   "requires_gpu": false,
   "requires_hardware": false,
-  "last_verified": "2026-05-03"
+  "source_commit": "522ce6a267a59fda9ce2ea39b9185f1e57cab02a",
+  "last_verified": "2026-05-05"
 }
