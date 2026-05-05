@@ -80,7 +80,7 @@ Wire encoding: `wire-v1` (frozen packet contract; authority: [`docs/ZPBOT_V2_AUT
 | Checks | 8/12 |
 | Anchors | 6 |
 | Confidence | UNSET |
-| Commit | deb86a53252c |
+| Commit | a391cdb5eb98 |
 | Verified | 2026-05-03 UTC |
 | Verdict Source | proofs/ENGINEERING_BLOCKERS.md |
 

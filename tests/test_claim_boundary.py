@@ -61,7 +61,7 @@ def test_frontdoor_routes_to_narrow_claim_without_release_overclaim() -> None:
     mechanics = _read_text("docs/MECHANICS_LAYER.md")
 
     assert "proofs/narrow_claim/NARROW_CLAIM_GATE.json" in readme
-    assert "| Verdict | BLOCKED |" in readme
+    assert "| Authority Verdict | BLOCKED |" in readme
     assert "bounded-lossy archive/search" in readme
     assert "search without decode" in claim_boundary
     assert "live robot control" in claim_boundary
