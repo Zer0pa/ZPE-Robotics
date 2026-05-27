@@ -1,111 +1,77 @@
-<p>
-  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE-Robotics Masthead" width="100%">
-</p>
-
 # ZPE-Robotics
 
-[![Install](https://img.shields.io/badge/install-pip%20install%20--e%20.-blue)](./pyproject.toml)
-[![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](./pyproject.toml)
-[![License](https://img.shields.io/badge/license-SAL%20v7.1-orange)](./LICENSE)
+> Product-page mirror for `/encoding/ZPE-Robotics/`.
+> Live public repo: [Zer0pa/ZPE-Robotics](https://github.com/Zer0pa/ZPE-Robotics).
+> GitHub Markdown cannot reproduce the website typography, CSS, JavaScript, scroll behavior, or live bento layout; this README translates the product page into GitHub-safe Markdown evidence blocks.
 
-SAL v7.1 — free below $100M annual revenue. See [LICENSE](LICENSE).
+## 0. Install / Developer Commands
 
----
+The product page is the positioning authority. This section is the only retained developer-surface material from the previous root README.
 
-## What This Is
+```bash
+187x robot-motion compression. Searchable joint-stream archives. VLA token export. Bounded-lossy replay for smooth trajectories. Install from PyPI: `pip install zpe-robotics
+- Public package acquisition route is `pip install zpe-robotics`; package
+pip install zpe-robotics
+pip install -e .
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install -e ".[dev,benchmark,telemetry,netnew]"
+python -m pytest tests -q
+```
 
-<p>
-  <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
-</p>
+## Product Page Mirror
 
-187x robot-motion compression. Searchable joint-stream archives. VLA token export. Bounded-lossy replay for smooth trajectories. Install from PyPI: `pip install zpe-robotics`
+**Product-page title:** ZPE-Robotics · Bounded-lossy motion archive with decoded primitive search · Zer0pa
 
-**187× compression on real robot joint streams** (vs zstd_l19 4.59×, vs zstd_l3 4.44×) — with PrimitiveIndex search and VLA token export. Governing benchmark: LeRobot real-data suite, 3 datasets across 3 families. Proof path: [`proofs/enterprise_benchmark/GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json).
+**Product-page description:** ZPE-Robotics · bounded-lossy robot motion archive · 187× compression on LeRobot real data with decoded PrimitiveIndex search and VLA token export · 4/5 B-checks PASS · B3 bit-exact/search-without-decode MISS · PyPI v0.1.1 stale · source SAL-7.1
 
-ZPE-Robotics compresses and replays joint-stream logs for infrastructure teams that need searchable motion archives instead of raw bagfiles. The `187×` figure is real and bounded-lossy (smooth-trajectory slices; step inputs cause Gibbs ringing — see footnote). Engineering surface remains blocker-governed: step-sequence behavior, comparator closure, and runtime closure are not closed.
+### Hero Translation
 
-Wire encoding: `wire-v1` (frozen packet contract; authority: [`docs/ZPBOT_V2_AUTHORITY_SURFACE.md`](docs/ZPBOT_V2_AUTHORITY_SURFACE.md))
+> 00 · ZPE-ROBOTICS · MOVEMENT MEMORYDEVELOPER-READY · B3 OPEN Robots that learn like humans do. A movement memory for robots — the form of an action, kept · ZPE-Robotics · PyPI zpe-robotics v0.1.1 · github.com/Zer0pa/ZPE-Robotics A person learns a waltz, a kung fu form, or how to pick something up the same way — by repeating the movement until its shape settles into the body. What stays is not one attempt; it is the form. Robots have never had a memory for that. ZPE-Robotics is one: it keeps the form of an action — pick, wipe, push, pull — so a robot can hold a movement, search it, and learn from it. Proven on smooth motion, real LeRobot data, at 187×.
 
-## Codec Mechanics
-
-<p>
-  <img src=".github/assets/readme/lane-mechanics/ROBOTICS.gif" alt="ZPE-Robotics Codec Mechanics animation" width="100%">
-</p>
+## Positioning
 
 | Field | Value |
-|-------|-------|
-| Architecture | MANIFOLD_MOTION |
-| Encoding | WIRE_V1 |
-| Mechanics Asset | `.github/assets/readme/lane-mechanics/ROBOTICS.gif` |
+| --- | --- |
+| Section | encoding |
+| Product route | /encoding/ZPE-Robotics/ |
+| Live public repository | https://github.com/Zer0pa/ZPE-Robotics |
+| Repo identity used here | ZPE-Robotics |
+| Website display identity | ZPE-Robotics |
+| Verdict | BLOCKED |
+| Posture | always_in_beta |
+| Headline metric | 187.1345x compression on bounded robot joint-stream surface; 3-dataset spread 58.70x-186.05x (median 61.27x); encode p50 0.111 ms; decode p50 0.089 ms. Source: proofs/enterprise_benchmark/benchmark_result.json. |
+| Honest blocker | The live package and bounded benchmark surface are useful now for bounded-lossy robot joint-stream archiving, decoded PrimitiveIndex search, and VLA token export. Full release readiness still depends on B3 step/discontinuous input closure (current 68-degree RMSE on unit-amplitude step inputs), bit-exact round-trip proof, and independent third-party reproduction. Search-without-decode is not proven: PrimitiveIndex requires full packet decode before indexing. |
+| Mechanics asset from product page | ROBOTICS.gif |
 
 ## Key Metrics
 
-| Metric | Value | Baseline / Notes |
-|--------|-------|----------|
+| Metric | Value | Baseline |
+| --- | --- | --- |
 | COMPRESSION | 187×† | LeRobot real-data benchmark; full baselines in Competitive Benchmarks section |
 | ENCODE_P50 | 0.11 ms | per 1 000 frames, gate B4 PASS |
 | DECODE_P50 | 0.089 ms | per 1 000 frames, gate B5 PASS |
 | BENCHMARK_GATES | 4/5 | 3 datasets, 3 families; B3 (bit-exact) fails |
 
-> Sources: [`proofs/enterprise_benchmark/GATE_VERDICTS.json`](proofs/enterprise_benchmark/GATE_VERDICTS.json) (B2: 40.74× vs zstd_l19, B4/B5 latency) | [`proofs/red_team/red_team_report.json`](proofs/red_team/red_team_report.json) (42.14× vs zstd_l3, attack-5 FPR) | [`proofs/release_candidate/primitive_search_result.json`](proofs/release_candidate/primitive_search_result.json) (P@10) | [`proofs/release_candidate/anomaly_detection_result.json`](proofs/release_candidate/anomaly_detection_result.json) (FPR/recall) | [`proofs/release_candidate/it04_parity_matrix_result.json`](proofs/release_candidate/it04_parity_matrix_result.json) (cross-platform)
+## Proof Anchors
 
-† Bounded-lossy. The ≤ 0.5° angular figure is limited to smooth-trajectory slices; it is not a general motion bound. Step/discontinuous inputs cause Gibbs ringing, with 68° RMSE measured on a unit-amplitude step signal. Baselines are lossless.
-
-## Repo Identity
-
-| Field | Value |
-|-------|-------|
-| Identifier | ZPE-Robotics |
-| Repository | https://github.com/Zer0pa/ZPE-Robotics |
-| Portfolio Category | Encoding |
-| Website Mirror | /encoding/ZPE-Robotics/ |
-| Visibility | PUBLIC |
-| License | LicenseRef-Zer0pa-SAL-7.1 |
-| License Terms | "FREE TO use, modify, and distribute below $100M annual revenue; see LICENSE for full terms." |
-| Authority Source | proofs/ENGINEERING_BLOCKERS.md |
-| Manifest | proofs/manifests/live_lab_status.json |
-| Architecture | MANIFOLD_MOTION |
-| Encoding | WIRE_V1 |
-
-## Readiness
-
-| Field | Value |
-|-------|-------|
-| Public Status | Claim-surface repair in progress; narrow archive/search evidence exists. |
-| Current Surface | Robot motion archive compression, decoded-stream PrimitiveIndex search, and VLA token export on declared LeRobot datasets; 187x real-data anchor on columbia_cairlab_pusht_real (136 episodes, 27,808 frames). |
-| Headline Metric | 187.1345x compression on bounded robot joint-stream surface; 3-dataset spread 58.70x–186.05x (median 61.27x); encode p50 0.111 ms; decode p50 0.089 ms. Source: `proofs/enterprise_benchmark/benchmark_result.json`. |
-| Evidence Basis | `proofs/enterprise_benchmark/GATE_VERDICTS.json`; `proofs/enterprise_benchmark/benchmark_result.json`; `proofs/narrow_claim/NARROW_CLAIM_GATE.json`; `proofs/red_team/red_team_report.json`; `proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json` |
-| Pending Evidence | B3 bit-exact replay and search-without-decode closure or gate re-ratification (`proofs/enterprise_benchmark/GATE_VERDICTS.json`); step/discontinuous-input scope closure; lossless qualification repair or scope-out (red-team attack 3); independent third-party reproduction (red-team attack 7). |
-| Authority Verdict | BLOCKED |
-| Checks | 8/12 |
-| Anchors | 6 |
-| Confidence | UNSET |
-| Commit | a391cdb5eb98 |
-| Verified | 2026-05-03 UTC |
-| Verdict Source | proofs/ENGINEERING_BLOCKERS.md |
-
-### Honest Blocker
-
-The live package and bounded benchmark surface are useful now for bounded-lossy robot joint-stream archiving, decoded PrimitiveIndex search, and VLA token export. Full release readiness still depends on B3 closure for bit-exact replay and search-without-decode, step/discontinuous-input scope closure, and independent third-party reproduction. Search-without-decode is not proven: PrimitiveIndex requires full packet decode before indexing.
-
-### What's Next
-
-- **Live-lab cleanup:** GitHub description and topics rewritten to remove "Search Without Decode" and lossless/compression overclaims; 3-dataset spread surfaced alongside the 187x anchor.
-- **Website sync:** Mirror Public Status, 187.1345x with bounded-lossy label and 3-dataset spread, narrow-gate PASS + B3 FAIL state, search-without-decode non-claim, BLOCKED Authority Verdict preserved as the secondary cluster.
-- **Future evidence campaign:** Decide whether B3's old gate is repaired or re-ratified for the narrow decoded-search surface; separately decide whether discontinuous inputs are repaired or permanently scoped out; independent third-party reproduction for red-team attack 7.
+| Path | State |
+| --- | --- |
+| proofs/ENGINEERING_BLOCKERS.md | VERIFIED |
+| proofs/narrow_claim/NARROW_CLAIM_GATE.json | VERIFIED |
+| proofs/enterprise_benchmark/GATE_VERDICTS.json | VERIFIED |
+| proofs/red_team/red_team_report.json | VERIFIED |
+| proofs/release_candidate/clean_clone_result.json | VERIFIED |
+| proofs/release_candidate/it04_parity_matrix_result.json | VERIFIED |
 
 ## What We Prove
-
-> Auditable guarantees backed by committed proof artifacts. Start at `docs/AUDITOR_PLAYBOOK.md`.
 
 - Spectral wire transport with directional reasoning layer for robot action sequences
 - Search operates on decoded motion streams via PrimitiveIndex
 - Red-team resilience: 4 attacks withstand, 1 fails, 1 partially withstands, 1 remains open
 - VLA tokenization aligns with vision-language-action model input formats
-- Public package acquisition route is `pip install zpe-robotics`; package
-  availability does not change blocker status
+- Public package acquisition route is pip install zpe-robotics; package availability does not change blocker status
 
-## What We Don't Claim
+## What We Do Not Claim
 
 - Full release readiness
 - Bit-exact .zpbot round-trip replay
@@ -117,10 +83,14 @@ The live package and bounded benchmark surface are useful now for bounded-lossy 
 - Generally valid ≤ 0.5° angular fidelity — the figure comes from smooth-trajectory slices only; FFT-based encoding causes Gibbs ringing on step/discontinuous inputs (68° RMSE measured on a unit-amplitude step signal)
 - Search-without-decode — PrimitiveIndex requires full packet decode before indexing
 
-## Verification Status
+## Blockers / Failures
+
+> The live package and bounded benchmark surface are useful now for bounded-lossy robot joint-stream archiving, decoded PrimitiveIndex search, and VLA token export. Full release readiness still depends on B3 step/discontinuous input closure (current 68-degree RMSE on unit-amplitude step inputs), bit-exact round-trip proof, and independent third-party reproduction. Search-without-decode is not proven: PrimitiveIndex requires full packet decode before indexing.
+
+## Verification Surface
 
 | Code | Check | Verdict |
-|------|-------|---------|
+| --- | --- | --- |
 | V_01 | BENCHMARK_GATE_B1_COMPRESSION | PASS |
 | V_02 | BENCHMARK_GATE_B2_ZSTD_BASELINE | PASS |
 | V_03 | BENCHMARK_GATE_B3_BIT-EXACT_+_SE... | FAIL |
@@ -134,187 +104,143 @@ The live package and bounded benchmark surface are useful now for bounded-lossy 
 | V_11 | RED-TEAM_ATTACK_6_PYTHON_3.12_PA... | PASS |
 | V_12 | RED-TEAM_ATTACK_7_EXTERNAL_REPRO... | INC |
 
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3-2.gif" alt="ZPE-Robotics Masthead Detail 3.2" width="100%">
-</p>
-
-## Proof Anchors
-
-<p>
-  <img src=".github/assets/readme/section-bars/evidence-and-claims.svg" alt="EVIDENCE AND CLAIMS" width="100%">
-</p>
-
-| Path | State |
-|------|-------|
-| `proofs/ENGINEERING_BLOCKERS.md` | VERIFIED |
-| `proofs/narrow_claim/NARROW_CLAIM_GATE.json` | VERIFIED |
-| `proofs/enterprise_benchmark/GATE_VERDICTS.json` | VERIFIED |
-| `proofs/red_team/red_team_report.json` | VERIFIED |
-| `proofs/release_candidate/clean_clone_result.json` | VERIFIED |
-| `proofs/release_candidate/it04_parity_matrix_result.json` | VERIFIED |
-
-## Repo Shape
-
-<p>
-  <img src=".github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
-</p>
+## License
 
 | Field | Value |
-|-------|-------|
-| Proof Anchors | 6 display anchors |
-| Modality Lanes | 3 |
-| Architecture | MANIFOLD_MOTION |
-| Encoding | WIRE_V1 |
-| Verification | 8/12 checks |
-| Authority Source | `proofs/ENGINEERING_BLOCKERS.md` |
-
-The modality-lane count reflects the three recorded parity lanes
-(`arm64-qemu`, `macos`, `ubuntu-x86`) in
-`proofs/release_candidate/it04_parity_matrix_result.json`.
-
-| Area | Purpose |
-|---|---|
-| `src/zpe_robotics/` | package implementation, CLI, packet handling, search, anomaly, and audit logic |
-| `tests/` | release-surface, CLI, codec, and regression checks |
-| `scripts/` | replay, benchmark, falsification, and clean-clone helpers |
-| `docs/` | front-door, architecture, support, legal, and family-linkage docs |
-| `proofs/` | blockers, benchmark artifacts, red-team outputs, release runbooks, and historical bundles |
-| `.github/workflows/` | CI, clean-clone, parity, comparator, and publish workflows |
-
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-Robotics Masthead Detail 3.3" width="100%">
-</p>
-
-## Extended Metrics
-
-Rows retained from the previous expanded `## Key Metrics` table. The public product page uses the four-row metric ladder above.
-
-| Metric | Value | Baseline / Notes |
-|--------|-------|----------|
-| VLA_TOKEN_EXPORT | 24-token FAST surface | [`vla_bridge.py`](src/zpe_robotics/vla_bridge.py) |
-| PRIMITIVE_SEARCH P@10 | 1.0 | on REACH template, synthetic corpus |
-| ANOMALY_FPR | 0.05 | recall=0.9 at threshold=3.22; Phase 10 holdout (100 nominal / 10 anomalous) |
-| CROSS_PLATFORM_PARITY | PASS (3 lanes) | arm64-qemu / macOS / ubuntu-x86 produce identical SHA256 |
-
-## Competitive Benchmarks
-
-> Competitive benchmark evidence: [`proofs/enterprise_benchmark/benchmark_result.json`](proofs/enterprise_benchmark/benchmark_result.json) | [`proofs/red_team/red_team_report.json`](proofs/red_team/red_team_report.json) | [`proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json`](proofs/artifacts/lerobot_expanded_benchmarks/aggregate_spread_summary.json)
-
-| Tool | Compression Ratio | Notes |
-|------|-------------------|-------|
-| **ZPE P8** | **187.13×†** | governing LeRobot real-data benchmark; PrimitiveIndex search requires decode |
-| zstd_l19 | 4.59× | strongest retained classical codec; ZPE is 40.74× better (gate B2 PASS) |
-| zstd_l3 | 4.44× | red-team attack 1 baseline; ZPE is 42.14× better |
-| gzip_l9 | 3.97× | retained gzip baseline |
-| mcap_zstd | 3.99× | MCAP container baseline |
-| lz4_default | 3.00× | low-latency baseline |
-| h5py_gzip9 | 2.69× | HDF5 gzip baseline |
-| h5py_lzf | 2.15× | HDF5 fast baseline |
-
-† Bounded-lossy. The ≤ 0.5° angular figure is limited to smooth-trajectory slices; it is not a general motion bound. Step/discontinuous inputs cause Gibbs ringing, with 68° RMSE measured on a unit-amplitude step signal. All other baselines are lossless.
-
-## Selected Claim Gate
-
-| Field | Value |
-|-------|-------|
-| Gate | bounded-lossy archive/search |
-| Gate Status | PASS for the narrow claim only |
-| Full Engineering | BLOCKED |
-| Proof | `proofs/narrow_claim/NARROW_CLAIM_GATE.json` |
-
-## Quick Start
-
-<p>
-  <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">
-</p>
-
-| Surface | Current truth |
-|---|---|
-| Repository | `https://github.com/Zer0pa/ZPE-Robotics.git` |
-| Package / import / CLI | `zpe-robotics` / `zpe_robotics` / `zpe-robotics` |
-| Acquisition surface | `pip install zpe-robotics` (available on PyPI) |
-| License | `LicenseRef-Zer0pa-SAL-7.1` |
-| Contact | `architects@zer0pa.ai` |
-| Release state | public repo and published package; engineering surface remains blocker-governed |
-| Engineering | not complete |
-| Current authority | `proofs/ENGINEERING_BLOCKERS.md` |
-
-| Authority layer | File |
-|---|---|
-| governing blocker state | `proofs/ENGINEERING_BLOCKERS.md` |
-| benchmark gate verdicts | `proofs/enterprise_benchmark/GATE_VERDICTS.json` |
-| adversarial verdicts | `proofs/red_team/red_team_report.json` |
-| package/runtime boundary | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
-<p>
-  <img src=".github/assets/readme/section-bars/setup-and-verification.svg" alt="SETUP AND VERIFICATION" width="100%">
-</p>
-
-Install from PyPI:
-
-```bash
-pip install zpe-robotics
-zpe-robotics --version
-```
-
-Or install from source (development):
-
-```bash
-pip install -e .
-zpe-robotics --version
-```
-
-Repo-local engineering surface:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip setuptools wheel
-python -m pip install -e ".[dev,benchmark,telemetry,netnew]"
-python -m pytest tests -q
-python -m build
-```
-
-If you need the shortest honest verification route, use
-`docs/AUDITOR_PLAYBOOK.md`.
-If you need the release workflow boundary, use
-`proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`.
-
-<p>
-  <img src=".github/assets/readme/section-bars/contributing-security-support.svg" alt="CONTRIBUTING, SECURITY, SUPPORT" width="100%">
-</p>
-
-| Need | Route |
-|---|---|
-| Security reporting | `SECURITY.md` |
-| Claim boundary | `docs/CLAIM_BOUNDARY.md` |
-| Support routing | `docs/SUPPORT.md` |
-| Docs index | `docs/README.md` |
-| Operator commands | `docs/OPERATOR_RUNBOOK.md` |
-
-## Ecosystem
-
-ZPE-Robotics is an independent motion-telemetry lane in the Zer0pa encoding portfolio. It carries its own claims, blocker state, proof surface, and release readiness.
-
-| Need | Route |
-|---|---|
-| Frozen proof lineage note | `proofs/README_LINEAGE_PATHS.md` |
-
-**Observability:** [Comet dashboard](https://www.comet.com/zer0pa/zpe-robotics/view/new/panels) (public)
-
-## Who This Is For
-
-ZPE-Robotics is one of 17 independent encoding products in the Zer0pa portfolio — each domain-specific, each carrying its own proof surface. Robotics addresses motion telemetry; it does not inherit claims or release status from any other lane.
-
-| | |
-|---|---|
-| **Ideal first buyer** | Robotics infrastructure team or simulation/replay platform |
-| **Pain** | Robot telemetry archives grow fast and can only be searched after full decompression — replay pipelines lack determinism guarantees |
-| **Deployment** | Public Python package — `pip install zpe-robotics` |
-| **Family position** | Independent motion-telemetry lane in the Zer0pa portfolio. Claims, blocker state, and release readiness are Robotics-specific. |
+| --- | --- |
+| License | LicenseRef-Zer0pa-SAL-7.1 |
+| Authority source | proofs/ENGINEERING_BLOCKERS.md |
 
 ## Upcoming Workstreams
 
-This section captures the active lane priorities — what the next agent or contributor picks up, and what investors should expect. Cadence is continuous, not milestoned.
+| Category | Summary |
+| --- | --- |
+| Research-Deferred — Investigation Underway | Step-input Gibbs ringing fix (B3 gate). Highest-value research investment. Investigation: discontinuity-aware primitive (pre-detect step → switch encoding regime), or hybrid lossless fallback for step segments. Lane scoped to smooth-trajectory bounded-lossy slices. |
+| Operations / External Dependency | Third-party reproduction (Attack 7). INCONCLUSIVE pending independent run; surface contact requested. |
 
-- **Step-input Gibbs ringing fix (B3 gate)** — Research-Deferred — Investigation Underway. Highest-value research investment in the portfolio. Investigation: discontinuity-aware primitive (pre-detect step → switch encoding regime), or hybrid mode falling back to a lossless coder for step segments. Until resolved, lane is honestly scoped to smooth-trajectory bounded-lossy slices.
-- **Third-party reproduction (Attack 7)** — Operations / External Dependency. INCONCLUSIVE pending independent run; surface contact requested.
+## Related Repos
+
+No related repos are declared on the product page frontmatter.
+
+<details>
+<summary>Full Visible Product-Page Bento Translation</summary>
+
+This section preserves the product page cells as Markdown text blocks. It intentionally omits shared site navigation, footer chrome, CSS, and scripts.
+
+### Bento Cell 1
+
+> 00 · ZPE-ROBOTICS · MOVEMENT MEMORYDEVELOPER-READY · B3 OPEN Robots that learn like humans do. A movement memory for robots — the form of an action, kept · ZPE-Robotics · PyPI zpe-robotics v0.1.1 · github.com/Zer0pa/ZPE-Robotics A person learns a waltz, a kung fu form, or how to pick something up the same way — by repeating the movement until its shape settles into the body. What stays is not one attempt; it is the form. Robots have never had a memory for that. ZPE-Robotics is one: it keeps the form of an action — pick, wipe, push, pull — so a robot can hold a movement, search it, and learn from it. Proven on smooth motion, real LeRobot data, at 187×.
+
+### Bento Cell 2
+
+> 01 · THE GAPRECORDED, NOT LEARNED A robot records a movement perfectly, yet cannot learn it — a recording is not a memory.
+
+### Bento Cell 3
+
+> 02 · MARKETSADJACENT FORECASTS Robot software — ’31 — $67.9B · Digital twin — ’30 — $155.8B · Warehouse robotics — ’30 — $17.3B · Industrial robotics — ’30 — $16.5B · AMR — ’30 — $8.7B · source: Next Move Strategy, MarketsandMarkets Every robot that learns to move works inside these markets; ZPE-Robotics is the memory beneath them.
+
+### Bento Cell 4
+
+> 03 · VALUE 187× Compression vs zstd_l19 on real LeRobot joint streams · bounded-lossy smooth motion
+
+### Bento Cell 5
+
+> 04 · INSIGHT Practiced enough, a movement leaves one thing behind: its form.
+
+### Bento Cell 6
+
+> 05.1 · CURRENT TECHRECORDED AND SHELVED Today a robot's movement gets dumped into ROS bagfiles or parquet. The files are large, findable only by timestamp or filename, never by the movement itself. Nothing downstream can learn from a recording it cannot read.
+
+### Bento Cell 7
+
+> 05.2 · OUR TECHKEEP THE FORM ZPE-Robotics keeps the form. It encodes a robot's movement into a bounded-lossy archive — keeping the shape of the action, dropping the once-only noise — at 187× on real LeRobot data. PrimitiveIndex returns runs by the movement inside them: every clean reach, every dropped grasp, every recovered pour. Pick, wipe, push, pull become findable, not just stored.
+
+### Bento Cell 8
+
+> 05.3 · BENCHMARKSLEROBOT REAL DATA Compression187.13× vs zstd_l19 Encode P500.111ms / 1k frames Decode P500.089ms / 1k frames Checks4/5archive suite B1 compressionPASS B2 zstd baselinePASS Replay + searchOPEN Scope: 3 LeRobot datasets; 58.70–186.05× spread. General replay and search remain open.
+
+### Bento Cell 9
+
+> 06 · MEASUREMENTMEASURED ARCHIVE SURFACE Archive claims stay tied to real LeRobot slices and smooth-motion limits.
+
+### Bento Cell 10
+
+> 06.1 · COMPARATIVE PERFORMANCE · LEROBOT BYTES PER FRAME ZPE-Robotics187.13× smaller zstd_l194.59× vs raw zstd_l34.44× vs raw raw float321.00× baseline LeRobot declared episodes (columbia_cairlab_pusht_real, 136 episodes, 27,808 frames), smooth-trajectory slices. Baselines are lossless zstd, gzip, lz4, MCAP, HDF5 variants. Spread across 3 datasets: 58.70–186.05×, median 61.27×. Source: proofs/enterprise_benchmark/benchmark_result.json.
+
+### Bento Cell 11
+
+> 07 · KEY METRICSMEASURED RESULTS
+
+### Bento Cell 12
+
+> 07.1 · COMPRESSION 187.13× vs zstd_l19 4.59× · bounded-lossy LeRobot data
+
+### Bento Cell 13
+
+> 07.2 · ENCODE P50 0.111ms per 1k frames · check B4 PASS
+
+### Bento Cell 14
+
+> 07.3 · DECODE P50 0.089ms per 1k frames · check B5 PASS
+
+### Bento Cell 15
+
+> 07.4 · ARCHIVE CHECKS 4 / 5PASS smooth archive PASS · general replay open
+
+### Bento Cell 16
+
+> 07.5 · DATASET SPREAD 61.27× median of 3 LeRobot datasets · 187.13× peak
+
+### Bento Cell 17
+
+> 08 · REPLAY FIDELITYSMOOTH VS STEP Smooth movement stays inside the archive boundary. Stepped movement does not.
+
+### Bento Cell 18
+
+> 08.1 · WHAT THE ARCHIVE SUPPORTSSMOOTH SLICE On smooth-trajectory slices of declared LeRobot data, movement encodes and decodes consistently across arm64, macOS and x86. A sharp or stepped movement does not: the FFT-based encoder rings — Gibbs distortion — measured at 68° RMSE on a unit-amplitude step. A step has no smooth form to keep. Search-without-decode and general bit-level replay remain open. PrimitiveIndex still walks decoded streams. The credibility claim is bounded-lossy smooth movement — useful for archive, analysis, and downstream teaching, not for live closed-loop control where every byte of the motion has to come back exactly.
+
+### Bento Cell 19
+
+> 08.2 · HONEST BLOCKER Honest Blocker · 187× is bounded-lossy on smooth movement; sharp, stepped movement still rings. General replay and search-without-decode are false. PrimitiveIndex requires decode. PyPI v0.1.1 is stale; zpe-motion-kernel is legacy; no Robotics Rust ABI. RT3 miss, RT4 partial, RT7 open.
+
+### Bento Cell 20
+
+> 09 WHEN MOVEMENT BECOMES MEMORY.
+
+### Bento Cell 21
+
+> 09.1 · THE AMBITION The aim is not a better robot policy — it is the memory underneath one. A robot that keeps the form of a movement can recall it, refine it, and pass it on. Demonstration stops being disposable capture and starts behaving like inventory a fleet can build on.
+
+### Bento Cell 22
+
+> 09.2 · WHAT WORKS NOW Working today, on smooth movement: 187× archives and recall by the shape of the action itself.
+
+### Bento Cell 23
+
+> 09.3 · WHAT'S STILL OPEN Still open: bit-level replay, sharp-movement distortion, search without decode, independent reproduction, a current release.
+
+### Bento Cell 24
+
+> 09.4 · REPERTOIRE · NEAR-TERM (12–24 MO) A robot keeps every taught movement A teleoperation team that used to throw away demonstrations after training can now keep every pick, wipe, push, and pull. At 187× on smooth motion, a humanoid's entire taught repertoire fits in the space its raw logs used to take for one afternoon.
+
+### Bento Cell 25
+
+> 09.5 · RECALL · NEAR-TERM (12–24 MO) Engineers find runs by the movement A robotics platform engineer hunting a specific failure mode stops scrubbing video and grepping bag files. The archive returns every clean reach, every dropped grasp, every retry by the shape of the action — so the question “show me the bad pours” gets a direct answer.
+
+### Bento Cell 26
+
+> 09.6 · TEACHING · MID-TERM (24–48 MO) One robot's motion teaches the next A humanoid R&D lead exporting movements as vision-language-action tokens hands a taught skill straight into the next model generation. The form one robot kept after a thousand pours becomes the starting condition for the robot that hasn't poured anything yet.
+
+### Bento Cell 27
+
+> 09.7 · SIMULATION · MID-TERM (24–48 MO) Simulation gets real demonstrations back Once replay closes for stepped motion, a simulation team can rerun the actual factory floor inside their environment — the dropped boxes, the missed grasps, the recoveries — instead of synthesising plausible ones. Sim and reality converge around the same retained movement.
+
+### Bento Cell 28
+
+> 09.8 · APPRENTICESHIP · PARADIGM (48 MO+) Robots learn the way apprentices do When movement can be kept, searched, and faithfully replayed, a robot stops being trained by exposure and starts being taught the way a person learns a craft — holding each form, refining it across attempts, passing it to the next robot the way a master hands down a technique.
+
+</details>
+
+---
+
+Source mapping: product route `/encoding/ZPE-Robotics/` -> live public repo `Zer0pa/ZPE-Robotics`. README generated from product-page authority plus retained install/dev commands only.
