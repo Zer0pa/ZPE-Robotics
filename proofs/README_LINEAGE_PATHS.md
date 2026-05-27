@@ -26,9 +26,9 @@ metadata from the machine and phase that produced the artifact. They should not
 be mass-edited for aesthetics because doing so would weaken provenance.
 
 When a historical path disagrees with the current repository layout, resolve it
-by using the current authority list above and the active repository root:
-
-`/Users/Zer0pa/ZPE/ZPE Robotics/zpe-robotics`
+by using the current authority list above and the active repository root. The
+local development checkout path that produced earlier artifacts is intentionally
+not part of the public authority surface.
 
 ## Non-Claims
 
