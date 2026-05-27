@@ -35,7 +35,10 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
           rm -rf fresh-clone
-          git clone --depth 1 "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" fresh-clone
+          git init fresh-clone
+          git -C fresh-clone remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git -C fresh-clone fetch --depth 1 origin "${GITHUB_REF}"
+          git -C fresh-clone checkout --detach FETCH_HEAD
 
       - name: Run clean-clone verification
         id: clean_clone_verify
