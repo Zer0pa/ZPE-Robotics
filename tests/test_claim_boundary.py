@@ -60,9 +60,11 @@ def test_frontdoor_routes_to_narrow_claim_without_release_overclaim() -> None:
     claim_boundary = _read_text("docs/CLAIM_BOUNDARY.md")
     mechanics = _read_text("docs/MECHANICS_LAYER.md")
 
-    assert "proofs/narrow_claim/NARROW_CLAIM_GATE.json" in readme
-    assert "| Authority Verdict | BLOCKED |" in readme
-    assert "bounded-lossy archive/search" in readme
+    assert "proofs/ENGINEERING_BLOCKERS.md" in readme
+    assert "docs/CLAIM_BOUNDARY.md" in readme
+    assert "bounded-lossy smooth movement" in readme
+    assert "Search-without-decode and general bit-level replay remain open" in readme
+    assert "proofs/narrow_claim/NARROW_CLAIM_GATE.json" in claim_boundary
     assert "search without decode" in claim_boundary
     assert "live robot control" in claim_boundary
     assert "full engineering remains blocked" in mechanics
