@@ -2,6 +2,39 @@
 
 ## Install / Developer Commands
 
+<!-- INSTALL-DX:START -->
+#### Package Install
+
+Installable package: `python3.11 -m pip install zpe-robotics`.
+Current release: `0.1.1` on [PyPI](https://pypi.org/project/zpe-robotics/).
+Source: [Zer0pa/ZPE-Robotics](https://github.com/Zer0pa/ZPE-Robotics/).
+
+```bash
+python3.11 -m pip install zpe-robotics
+```
+
+Import smoke:
+
+```bash
+python3.11 - <<'PY'
+import importlib.metadata as md
+import zpe_robotics
+
+print("zpe-robotics", md.version("zpe-robotics"))
+PY
+```
+
+
+CLI smoke:
+
+```bash
+zpe-robotics --help
+```
+
+Install success only proves package acquisition/import. Product scope, stale PyPI state, platform limits, and blockers remain in the front-door sections below.
+- PyPI copy is stale; install success remains separate from the B3/replay/search blockers below.
+<!-- INSTALL-DX:END -->
+
 #### Quick Start
 
 <p>
