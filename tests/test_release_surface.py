@@ -94,16 +94,13 @@ def test_license_uses_three_year_change_date() -> None:
     assert "three (3) years after the date of first public release" in text
 
 
-def test_root_readme_keeps_expected_gif_surface() -> None:
+def test_root_readme_keeps_expected_frontdoor_image_surface() -> None:
     text = _read_text("README.md")
-    gif_refs = re.findall(r'\.github/assets/readme/[^"]+\.gif', text)
-    assert gif_refs == [
-        ".github/assets/readme/zpe-masthead.gif",
-        ".github/assets/readme/lane-mechanics/ROBOTICS.gif",
-        ".github/assets/readme/lane-mechanics/ROBOTICS.gif",
-        ".github/assets/readme/zpe-masthead-option-3-2.gif",
-        ".github/assets/readme/zpe-masthead-option-3-3.gif",
-    ]
+    assert 'src="docs/assets/product-page-mechanics.gif"' in text
+    assert 'alt="ZPE-Robotics approved scientific square mechanics diagram' in text
+
+    legacy_gif_refs = re.findall(r'\.github/assets/readme/[^"]+\.gif', text)
+    assert legacy_gif_refs == []
 
 
 def test_docs_surface_uses_shared_masthead_only() -> None:

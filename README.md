@@ -50,11 +50,14 @@ Install success only proves package acquisition/import. Product scope, stale PyP
 | Contact | `architects@zer0pa.ai` |
 | Release state | public repo and published package; engineering surface remains blocker-governed |
 | Engineering | not complete |
+| Authority Verdict | BLOCKED |
+| Gate | bounded-lossy archive/search |
 | Current authority | `proofs/ENGINEERING_BLOCKERS.md` |
 
 | Authority layer | File |
 |---|---|
 | governing blocker state | `proofs/ENGINEERING_BLOCKERS.md` |
+| narrow claim gate | `proofs/narrow_claim/NARROW_CLAIM_GATE.json` |
 | benchmark gate verdicts | `proofs/enterprise_benchmark/GATE_VERDICTS.json` |
 | adversarial verdicts | `proofs/red_team/red_team_report.json` |
 | package/runtime boundary | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
