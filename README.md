@@ -115,7 +115,7 @@ If you need the release workflow boundary, use
 <table width="100%">
 <tr>
 <td width="50%" valign="top">
-<div><b>03 · VALUE</b></div>
+<div><b>03 · VALUE OF MARKET</b></div>
       <div>187<span>&times;</span></div>
       <div>Compression vs zstd_l19 on real LeRobot joint streams &middot; <b>bounded-lossy smooth motion</b></div>
 </td>
