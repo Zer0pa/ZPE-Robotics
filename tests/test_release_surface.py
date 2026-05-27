@@ -84,9 +84,23 @@ def test_test_workflow_covers_python312() -> None:
     assert 'python-version: ["3.11", "3.12"]' in text
 
 
+def test_ci_workflow_avoids_stuck_macos13_runner() -> None:
+    ci_text = _read_text(".github/workflows/ci.yml")
+    test_text = _read_text(".github/workflows/test.yml")
+    assert "macos-13" not in ci_text
+    assert "macos-latest" in test_text
+
+
 def test_clean_clone_verify_checks_cli_version() -> None:
     text = (ROOT / "scripts/clean_clone_verify.py").read_text(encoding="utf-8")
     assert '[str(zpe_bin), "--version"]' in text
+
+
+def test_clean_clone_workflow_uses_current_checkout() -> None:
+    text = _read_text(".github/workflows/clean_clone_verify.yml")
+    assert '"${GITHUB_WORKSPACE}" fresh-clone' in text
+    assert 'checkout --force "${GITHUB_SHA}"' in text
+    assert "${GITHUB_REPOSITORY}.git" not in text
 
 
 def test_license_uses_three_year_change_date() -> None:
@@ -96,14 +110,10 @@ def test_license_uses_three_year_change_date() -> None:
 
 def test_root_readme_keeps_expected_gif_surface() -> None:
     text = _read_text("README.md")
-    gif_refs = re.findall(r'\.github/assets/readme/[^"]+\.gif', text)
-    assert gif_refs == [
-        ".github/assets/readme/zpe-masthead.gif",
-        ".github/assets/readme/lane-mechanics/ROBOTICS.gif",
-        ".github/assets/readme/lane-mechanics/ROBOTICS.gif",
-        ".github/assets/readme/zpe-masthead-option-3-2.gif",
-        ".github/assets/readme/zpe-masthead-option-3-3.gif",
-    ]
+    gif_refs = re.findall(r'(?:\.github/assets/readme|docs/assets)/[^"]+\.gif', text)
+    assert gif_refs == ["docs/assets/product-page-mechanics.gif"]
+    assert ".github/assets/readme/lane-mechanics/ROBOTICS.gif" not in text
+    assert ".github/assets/readme/zpe-masthead.gif" not in text
 
 
 def test_docs_surface_uses_shared_masthead_only() -> None:

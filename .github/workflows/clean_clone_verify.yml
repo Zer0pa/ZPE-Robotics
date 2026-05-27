@@ -30,12 +30,11 @@ jobs:
           curl -L https://github.com/foxglove/mcap/releases/download/releases/mcap-cli/v0.0.62/mcap-linux-amd64 -o /usr/local/bin/mcap
           chmod +x /usr/local/bin/mcap
 
-      - name: Fresh clone repository
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+      - name: Fresh clone checked-out ref
         run: |
           rm -rf fresh-clone
-          git clone --depth 1 "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" fresh-clone
+          git clone --no-local "${GITHUB_WORKSPACE}" fresh-clone
+          git -C fresh-clone checkout --force "${GITHUB_SHA}"
 
       - name: Run clean-clone verification
         id: clean_clone_verify
