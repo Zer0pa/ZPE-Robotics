@@ -1,75 +1,17 @@
 # ZPE-Robotics
 
-## Install / Developer Commands
+## Package Install
 
-#### Quick Start
-
-<p>
-  <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">
-</p>
-
-| Surface | Current truth |
-|---|---|
-| Repository | `https://github.com/Zer0pa/ZPE-Robotics.git` |
-| Package / import / CLI | `zpe-robotics` / `zpe_robotics` / `zpe-robotics` |
-| Acquisition surface | `pip install zpe-robotics` (available on PyPI) |
-| License | `LicenseRef-Zer0pa-SAL-7.1` |
-| Contact | `architects@zer0pa.ai` |
-| Release state | public repo and published package; engineering surface remains blocker-governed |
-| Engineering | not complete |
-| Current authority | `proofs/ENGINEERING_BLOCKERS.md` |
-
-| Authority layer | File |
-|---|---|
-| governing blocker state | `proofs/ENGINEERING_BLOCKERS.md` |
-| benchmark gate verdicts | `proofs/enterprise_benchmark/GATE_VERDICTS.json` |
-| adversarial verdicts | `proofs/red_team/red_team_report.json` |
-| package/runtime boundary | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
-<p>
-  <img src=".github/assets/readme/section-bars/setup-and-verification.svg" alt="SETUP AND VERIFICATION" width="100%">
-</p>
-
-Install from PyPI:
+Installable package: `pip install zpe-robotics`.
+Source: [Zer0pa/ZPE-Robotics](https://github.com/Zer0pa/ZPE-Robotics/).
 
 ```bash
 pip install zpe-robotics
-zpe-robotics --version
 ```
 
-Or install from source (development):
+For full install, smoke, source, and developer commands, [click here](#install-developer-commands-detailed).
 
-```bash
-pip install -e .
-zpe-robotics --version
-```
-
-Repo-local engineering surface:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip setuptools wheel
-python -m pip install -e ".[dev,benchmark,telemetry,netnew]"
-python -m pytest tests -q
-python -m build
-```
-
-If you need the shortest honest verification route, use
-`docs/AUDITOR_PLAYBOOK.md`.
-If you need the release workflow boundary, use
-`proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`.
-
-<p>
-  <img src=".github/assets/readme/section-bars/contributing-security-support.svg" alt="CONTRIBUTING, SECURITY, SUPPORT" width="100%">
-</p>
-
-| Need | Route |
-|---|---|
-| Security reporting | `SECURITY.md` |
-| Claim boundary | `docs/CLAIM_BOUNDARY.md` |
-| Support routing | `docs/SUPPORT.md` |
-| Docs index | `docs/README.md` |
-| Operator commands | `docs/OPERATOR_RUNBOOK.md` |
+---
 
 <table width="100%">
 <tr>
@@ -334,3 +276,78 @@ If you need the release workflow boundary, use
 </td>
 </tr>
 </table>
+
+---
+
+<a id="install-developer-commands-detailed"></a>
+
+## Install / Developer Commands Detailed
+
+#### Quick Start
+
+<p>
+  <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">
+</p>
+
+| Surface | Current truth |
+|---|---|
+| Repository | `https://github.com/Zer0pa/ZPE-Robotics.git` |
+| Package / import / CLI | `zpe-robotics` / `zpe_robotics` / `zpe-robotics` |
+| Acquisition surface | `pip install zpe-robotics` (available on PyPI) |
+| License | `LicenseRef-Zer0pa-SAL-7.1` |
+| Contact | `architects@zer0pa.ai` |
+| Release state | public repo and published package; engineering surface remains blocker-governed |
+| Engineering | not complete |
+| Current authority | `proofs/ENGINEERING_BLOCKERS.md` |
+
+| Authority layer | File |
+|---|---|
+| governing blocker state | `proofs/ENGINEERING_BLOCKERS.md` |
+| benchmark gate verdicts | `proofs/enterprise_benchmark/GATE_VERDICTS.json` |
+| adversarial verdicts | `proofs/red_team/red_team_report.json` |
+| package/runtime boundary | `proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md` |
+<p>
+  <img src=".github/assets/readme/section-bars/setup-and-verification.svg" alt="SETUP AND VERIFICATION" width="100%">
+</p>
+
+Install from PyPI:
+
+```bash
+pip install zpe-robotics
+zpe-robotics --version
+```
+
+Or install from source (development):
+
+```bash
+pip install -e .
+zpe-robotics --version
+```
+
+Repo-local engineering surface:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install -e ".[dev,benchmark,telemetry,netnew]"
+python -m pytest tests -q
+python -m build
+```
+
+If you need the shortest honest verification route, use
+`docs/AUDITOR_PLAYBOOK.md`.
+If you need the release workflow boundary, use
+`proofs/runbooks/TECHNICAL_RELEASE_SURFACE.md`.
+
+<p>
+  <img src=".github/assets/readme/section-bars/contributing-security-support.svg" alt="CONTRIBUTING, SECURITY, SUPPORT" width="100%">
+</p>
+
+| Need | Route |
+|---|---|
+| Security reporting | `SECURITY.md` |
+| Claim boundary | `docs/CLAIM_BOUNDARY.md` |
+| Support routing | `docs/SUPPORT.md` |
+| Docs index | `docs/README.md` |
+| Operator commands | `docs/OPERATOR_RUNBOOK.md` |
