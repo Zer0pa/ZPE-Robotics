@@ -17,7 +17,7 @@ For full install, smoke, source, and developer commands, [click here](#install-d
 <tr>
 <td width="100%" valign="top">
 <div><span><b>00 · ZPE-ROBOTICS · MOVEMENT MEMORY</b></span> <span>DEVELOPER-READY · B3 OPEN</span></div>
-      <h1>Robots that learn <span>like humans do.</span></h1>
+      <h1>Robots That Learn Moves <span>Like Humans Do.</span></h1>
       <p>A movement memory for robots &mdash; the form of an action, kept · ZPE-Robotics · PyPI <em>zpe-robotics</em> v0.1.1 · github.com/Zer0pa/ZPE-Robotics</p>
       <p>A person learns a waltz, a kung fu form, or how to pick something up the same way &mdash; by repeating the movement until its shape settles into the body. What stays is not one attempt; it is the form. Robots have never had a memory for that. ZPE-Robotics is one: it keeps the form of an action &mdash; pick, wipe, push, pull &mdash; so a robot can hold a movement, search it, and learn from it. Proven on smooth motion, real LeRobot data, at <strong>187&times;</strong>.</p>
 </td>
