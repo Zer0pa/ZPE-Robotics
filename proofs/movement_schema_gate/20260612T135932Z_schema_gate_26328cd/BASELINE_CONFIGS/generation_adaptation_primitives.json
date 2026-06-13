@@ -1,0 +1,22 @@
+{
+  "external_dmp": {
+    "n_weights_per_dim": 16,
+    "smooth_scaling": true
+  },
+  "external_package": "movement_primitives",
+  "external_promp": {
+    "n_iter": 50,
+    "n_weights_per_dim": 10
+  },
+  "feature_names": [
+    "obs/robot0_eef_pos:0",
+    "obs/robot0_eef_pos:1",
+    "obs/robot0_eef_pos:2",
+    "obs/robot0_gripper_qpos:0",
+    "obs/robot0_gripper_qpos:1"
+  ],
+  "fmp_fourier_generation_local": {
+    "keep_coeffs": 16
+  },
+  "frame_count": 128
+}

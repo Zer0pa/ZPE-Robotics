@@ -45,7 +45,9 @@ benchmark = [
   "h5py>=3",
   "huggingface-hub>=0.20",
   "lz4>=4",
+  "movement-primitives>=0.9.1",
   "pyarrow>=17",
+  "pytransform3d>=3.15.0",
   "zstandard>=0.23",
 ]
 netnew = [

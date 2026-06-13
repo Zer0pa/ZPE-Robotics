@@ -1,0 +1,24 @@
+{
+  "fields": [
+    "episode_id",
+    "task",
+    "episode",
+    "failure_type_hypothesis",
+    "failure_type_label",
+    "failure_subtask_label",
+    "evidence_window",
+    "targets",
+    "raw_evidence_channels",
+    "missing_fields",
+    "claim_boundary"
+  ],
+  "forbidden_inputs": [
+    "failure_detection",
+    "failure_type",
+    "failure_subtask",
+    "avoid_keyframe",
+    "correct_keyframe",
+    "correction_text"
+  ],
+  "schema_version": 1
+}

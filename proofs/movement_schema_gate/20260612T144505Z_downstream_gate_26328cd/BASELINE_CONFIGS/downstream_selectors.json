@@ -1,0 +1,25 @@
+{
+  "budgets_per_class": [
+    1,
+    2,
+    5,
+    10,
+    20
+  ],
+  "frame_count": 128,
+  "primary_metric": "heldout action imitation RMSE",
+  "random_seeds": [
+    20260614,
+    20260615,
+    20260616
+  ],
+  "selectors": [
+    "schema_selected",
+    "nearest_demo_selected",
+    "mean_central",
+    "fft_lowpass_central",
+    "dct_lowpass_central",
+    "fmp_fourier_central",
+    "raw_all_train_mean"
+  ]
+}

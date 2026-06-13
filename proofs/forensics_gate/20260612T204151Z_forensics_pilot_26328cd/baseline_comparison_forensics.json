@@ -1,0 +1,79 @@
+{
+  "primary_method": "incident_trace",
+  "schema_version": 1,
+  "success_criteria": {
+    "beats_best_non_full_baseline_on_both_tasks": false,
+    "both_tasks_coverage_at_least_0_80": false,
+    "both_tasks_window_fraction_at_most_0_25": true
+  },
+  "task_results": {
+    "drag_basket_place_cube_ep1": {
+      "best_non_full_baseline": {
+        "both_keyframes_episode_rate": 0.25,
+        "episode_count": 16,
+        "keyframe_coverage": 0.5,
+        "mean_abs_frame_error": 75.15625,
+        "median_mean_abs_frame_error": 42.75,
+        "median_window_fraction": 0.24940562289058474
+      },
+      "best_non_full_baseline_method": "fixed_end_25pct",
+      "full_review": {
+        "both_keyframes_episode_rate": 1.0,
+        "episode_count": 16,
+        "keyframe_coverage": 1.0,
+        "mean_abs_frame_error": 74.84375,
+        "median_mean_abs_frame_error": 66.0,
+        "median_window_fraction": 1.0
+      },
+      "pilot_acceptance": {
+        "beats_best_non_full_baseline": false,
+        "coverage_at_least_0_80": false,
+        "window_fraction_at_most_0_25": true
+      },
+      "primary": {
+        "both_keyframes_episode_rate": 0.0625,
+        "episode_count": 16,
+        "keyframe_coverage": 0.21875,
+        "mean_abs_frame_error": 82.65625,
+        "median_mean_abs_frame_error": 58.5,
+        "median_window_fraction": 0.24940562289058474
+      },
+      "primary_beats_best_non_full_baseline": false,
+      "primary_method": "incident_trace"
+    },
+    "grab_socket_unplug_charger_ep1": {
+      "best_non_full_baseline": {
+        "both_keyframes_episode_rate": 0.0,
+        "episode_count": 16,
+        "keyframe_coverage": 0.5,
+        "mean_abs_frame_error": 44.0,
+        "median_mean_abs_frame_error": 40.75,
+        "median_window_fraction": 0.24859546226269486
+      },
+      "best_non_full_baseline_method": "fixed_end_25pct",
+      "full_review": {
+        "both_keyframes_episode_rate": 1.0,
+        "episode_count": 16,
+        "keyframe_coverage": 1.0,
+        "mean_abs_frame_error": 63.0625,
+        "median_mean_abs_frame_error": 59.5,
+        "median_window_fraction": 1.0
+      },
+      "pilot_acceptance": {
+        "beats_best_non_full_baseline": false,
+        "coverage_at_least_0_80": false,
+        "window_fraction_at_most_0_25": true
+      },
+      "primary": {
+        "both_keyframes_episode_rate": 0.0,
+        "episode_count": 16,
+        "keyframe_coverage": 0.21875,
+        "mean_abs_frame_error": 107.3125,
+        "median_mean_abs_frame_error": 80.5,
+        "median_window_fraction": 0.24859546226269486
+      },
+      "primary_beats_best_non_full_baseline": false,
+      "primary_method": "incident_trace"
+    }
+  }
+}

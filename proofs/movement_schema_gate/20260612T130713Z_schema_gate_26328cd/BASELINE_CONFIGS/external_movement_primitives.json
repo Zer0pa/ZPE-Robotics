@@ -1,0 +1,9 @@
+{
+  "checked_python_packages": {
+    "movement_primitives": false,
+    "promp": false,
+    "pydmps": false
+  },
+  "run_external_generation_adaptation": false,
+  "status": "blocked_external_generation_adaptation"
+}

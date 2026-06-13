@@ -1,0 +1,87 @@
+{
+  "frame_count": 32,
+  "methods": {
+    "dct_lowpass": {
+      "description": "low-pass DCT coefficients over action/eef/gripper/object sequence",
+      "shape": [
+        6200,
+        448
+      ],
+      "zlib_bytes": 10119119
+    },
+    "deminf_proxy": {
+      "description": "local action-divergence and transition-diversity proxy features",
+      "shape": [
+        6200,
+        11
+      ],
+      "zlib_bytes": 240659
+    },
+    "event_heuristic": {
+      "description": "simple gripper/eef event timing and magnitude heuristics",
+      "shape": [
+        6200,
+        18
+      ],
+      "zlib_bytes": 310918
+    },
+    "fft_lowpass": {
+      "description": "low-pass FFT coefficients over action/eef/gripper/object sequence",
+      "shape": [
+        6200,
+        896
+      ],
+      "zlib_bytes": 18999760
+    },
+    "functional_phase_event": {
+      "description": "event, phase, correction, object/eef, gripper, S2I-like, and DemInf-like non-reward features",
+      "shape": [
+        6200,
+        113
+      ],
+      "zlib_bytes": 2164490
+    },
+    "pca_global": {
+      "description": "global PCA projection of raw phase-aligned trajectories",
+      "shape": [
+        6200,
+        24
+      ],
+      "zlib_bytes": 555999
+    },
+    "raw_medoid_centrality": {
+      "description": "nearest class medoid on the raw phase-aligned vector",
+      "shape": [
+        6200,
+        1792
+      ],
+      "zlib_bytes": 38688277
+    },
+    "raw_nearest_demo": {
+      "description": "1-nearest demonstration classifier on the raw phase-aligned vector",
+      "shape": [
+        6200,
+        1792
+      ],
+      "zlib_bytes": 38688277
+    },
+    "raw_phase_aligned": {
+      "description": "start-relative resampled action/eef/gripper/object trajectory plus velocity",
+      "shape": [
+        6200,
+        1792
+      ],
+      "zlib_bytes": 38688277
+    },
+    "s2i_keyframe_proxy": {
+      "description": "gripper-change and velocity-keyframe segment proxy features",
+      "shape": [
+        6200,
+        48
+      ],
+      "zlib_bytes": 983991
+    }
+  },
+  "reward_leakage_policy": "No reward-derived values are included in classifier vectors.",
+  "schema_version": 1
+}

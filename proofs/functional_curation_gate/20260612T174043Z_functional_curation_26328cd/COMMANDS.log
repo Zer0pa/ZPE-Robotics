@@ -1,0 +1,1 @@
+python -m zpe_robotics.schema_eval run-functional-curation-gate --dataset-root /Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/functional_dataset_pivot/datasets/robomimic_hf --output-dir /Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/repo/proofs/functional_curation_gate/20260612T174043Z_functional_curation_26328cd

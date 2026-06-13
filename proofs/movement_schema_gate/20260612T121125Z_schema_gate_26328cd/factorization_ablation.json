@@ -1,0 +1,15 @@
+{
+  "residual_carries_win": false,
+  "residual_only_proxy": {
+    "accuracy": 0.99,
+    "baseline": "fft_lowpass",
+    "interpretation": "FFT low-pass is used as residual-only proxy; it must not be the only win carrier."
+  },
+  "schema_only_accuracy": 1.0,
+  "schema_plus_residual_proxy": {
+    "accuracy": 0.92,
+    "baseline": "fmp_fourier_weights",
+    "interpretation": "Fourier weights proxy a richer residual/frequency baseline."
+  },
+  "schema_version": 1
+}

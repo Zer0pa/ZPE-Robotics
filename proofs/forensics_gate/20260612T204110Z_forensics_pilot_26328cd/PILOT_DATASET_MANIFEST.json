@@ -1,0 +1,439 @@
+{
+  "file_count": 48,
+  "files": [
+    {
+      "episode": 0,
+      "frame_count": 394,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_0.hdf5",
+      "role": "success_reference",
+      "sha256": "8c7dfa49d96a376ec64e50e6d86a393f19d04e1ef0ad54cafe688e4ebaa75197",
+      "size_bytes": 106046924,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 4,
+      "frame_count": 327,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_4.hdf5",
+      "role": "success_reference",
+      "sha256": "c4dc5743bd66d40968af9aa15b72a6929bb59bfa10e60f7aa1eed2675f9901eb",
+      "size_bytes": 88399498,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 7,
+      "frame_count": 374,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_7.hdf5",
+      "role": "success_reference",
+      "sha256": "c2a6b57f61c983983b031849e7dd0fe1c676861492b5ef159bc763800418a9c1",
+      "size_bytes": 102159122,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 11,
+      "frame_count": 315,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_11.hdf5",
+      "role": "success_reference",
+      "sha256": "a14123518ba82cbfe312327917b2465388cb1b0daf8ce7f42926e399b44846a4",
+      "size_bytes": 89062093,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 15,
+      "frame_count": 294,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_15.hdf5",
+      "role": "success_reference",
+      "sha256": "c369e34a5bc2dc2dd9bc99c14c60fc261fda3f15c1aa0df67f80a8d88ad28818",
+      "size_bytes": 79606570,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 19,
+      "frame_count": 359,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_19.hdf5",
+      "role": "success_reference",
+      "sha256": "9689d3bb6b4ee01bd37f441f1a9a1e29fa6089f07c9e24fc88a2e74faf58180d",
+      "size_bytes": 103355971,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 22,
+      "frame_count": 313,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_22.hdf5",
+      "role": "success_reference",
+      "sha256": "16c58881e7498674cb4ec0613f6c278aa4e07b5ac96554b915f9013af2db64b8",
+      "size_bytes": 93663988,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 25,
+      "frame_count": 292,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_25.hdf5",
+      "role": "failure_eval",
+      "sha256": "1cd130295865bc115d13336c670f04ad494265a52cb7b93b71a7be5e899635ad",
+      "size_bytes": 78154628,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 27,
+      "frame_count": 380,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_27.hdf5",
+      "role": "success_reference",
+      "sha256": "fa48d0ffed2384cdd149ad6623f5bb1496704cf7b05a0e968e106cf26fd7e07b",
+      "size_bytes": 108146628,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 34,
+      "frame_count": 369,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_34.hdf5",
+      "role": "failure_eval",
+      "sha256": "867f55d18ae410f7d54c4246e880c6be4453b4baad8a256b6d1ab45bbe8b3792",
+      "size_bytes": 113856436,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 41,
+      "frame_count": 489,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_41.hdf5",
+      "role": "failure_eval",
+      "sha256": "c5d670bfd4d5db9cb1705f94922e6c379107b4875a265006f399fed541f595ce",
+      "size_bytes": 155823577,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 48,
+      "frame_count": 331,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_48.hdf5",
+      "role": "failure_eval",
+      "sha256": "7be8fdd8662f3601c894aa57e9f1631c30b68f922c2879bfa1344de7559c65fe",
+      "size_bytes": 90448251,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 49,
+      "frame_count": 149,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_49.hdf5",
+      "role": "failure_eval",
+      "sha256": "d418104e14b7343091e7044d02171e66d1e6e044bb80e590e7a78adffaee474c",
+      "size_bytes": 36704444,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 60,
+      "frame_count": 252,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_60.hdf5",
+      "role": "failure_eval",
+      "sha256": "0f3cd034af8eaed0269728e10ede846960ec8425b9b76227e02f144d62934a8b",
+      "size_bytes": 70855660,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 72,
+      "frame_count": 324,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_72.hdf5",
+      "role": "failure_eval",
+      "sha256": "8d97432d586d26805875e21b819fa498bfbcf596e045695c6d85c400d4bb4c8e",
+      "size_bytes": 91312948,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 83,
+      "frame_count": 161,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_83.hdf5",
+      "role": "failure_eval",
+      "sha256": "e58e77ac8fd563be1e279208ac6f672a72657b30284033f35fe62db453b0e078",
+      "size_bytes": 39917613,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 96,
+      "frame_count": 125,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_96.hdf5",
+      "role": "failure_eval",
+      "sha256": "b56160b0f636902280dfa2f1e8bc859baa76032d393e7310e052546e056626fc",
+      "size_bytes": 36420753,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 99,
+      "frame_count": 192,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_99.hdf5",
+      "role": "failure_eval",
+      "sha256": "30c22133cf79335b247e2e63feb64c69e3d500905435dbbeaad23e9e79dbffee",
+      "size_bytes": 51649024,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 112,
+      "frame_count": 336,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_112.hdf5",
+      "role": "failure_eval",
+      "sha256": "80575b4599685b342698f52319a7a1ca7174ae30e26b9cddbd6b44a81b068c5d",
+      "size_bytes": 86676640,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 125,
+      "frame_count": 108,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_125.hdf5",
+      "role": "failure_eval",
+      "sha256": "61250173a5676a21643732eb3fe451fd367ab61f2a4d29fdf764aea2630183ac",
+      "size_bytes": 28368820,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 138,
+      "frame_count": 256,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_138.hdf5",
+      "role": "failure_eval",
+      "sha256": "01e4fdcbcef25e86811c2b146d9073390ce459a2b0aed491470efd7b9ff12f8f",
+      "size_bytes": 70054336,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 148,
+      "frame_count": 201,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_148.hdf5",
+      "role": "failure_eval",
+      "sha256": "836529589b441fcebc73da31e7f21c6137c2e499259d3579aebf1528babb9cff",
+      "size_bytes": 56945800,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 149,
+      "frame_count": 117,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_149.hdf5",
+      "role": "failure_eval",
+      "sha256": "e6314b9ea516fe1edcdb49c4d34fdc34f6653488be00f28643ea821fd2735736",
+      "size_bytes": 27854245,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 158,
+      "frame_count": 293,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/drag_basket_place_cube_ep1/episode_158.hdf5",
+      "role": "failure_eval",
+      "sha256": "873065ef79035052edb308e49c03ef0b113914a4815e6e78893455766b1f8eb6",
+      "size_bytes": 87124939,
+      "task": "drag_basket_place_cube_ep1"
+    },
+    {
+      "episode": 0,
+      "frame_count": 321,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_0.hdf5",
+      "role": "success_reference",
+      "sha256": "4a4f10236c0274a6530901046ee3dd4d51f088c1910408ffa573068a89a9be14",
+      "size_bytes": 121484479,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 3,
+      "frame_count": 325,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_3.hdf5",
+      "role": "success_reference",
+      "sha256": "0ab485f8deacc87698325453d1e57986e199b5066c4fa3ae6933faf3a03440e2",
+      "size_bytes": 116289553,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 7,
+      "frame_count": 443,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_7.hdf5",
+      "role": "success_reference",
+      "sha256": "1e3f7c65d5de6c766df283c818d5e46cb223eed2ab0988358b28c6d6934b283f",
+      "size_bytes": 164486940,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 10,
+      "frame_count": 420,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_10.hdf5",
+      "role": "success_reference",
+      "sha256": "72d3b0d583816d56a3ce9160907331e9d20a4127dc41c99b42ac2a373d20442d",
+      "size_bytes": 163816948,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 14,
+      "frame_count": 375,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_14.hdf5",
+      "role": "success_reference",
+      "sha256": "d2f3813b0850bcb14d1d108509ae4572914d1ac8e615a371eb71da12799539b9",
+      "size_bytes": 141350128,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 17,
+      "frame_count": 441,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_17.hdf5",
+      "role": "success_reference",
+      "sha256": "1025ee47dbcce37e057c20fec5717959bc3ba589ed6669d4922e9794e6728e60",
+      "size_bytes": 194683609,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 21,
+      "frame_count": 394,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_21.hdf5",
+      "role": "success_reference",
+      "sha256": "57cfa69142bc107bc876d15b496294d044d1f1b2688a1c774f63aace5f8ef979",
+      "size_bytes": 155432066,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 24,
+      "frame_count": 394,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_24.hdf5",
+      "role": "success_reference",
+      "sha256": "61b6fe9d6f4dfbccd0ad13fb100bf7598ac40416d39142ca05f8141a993533aa",
+      "size_bytes": 155131838,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 25,
+      "frame_count": 152,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_25.hdf5",
+      "role": "failure_eval",
+      "sha256": "081144652bd79b9e0d888e50139d89750af509455f7490b8185943a79b96a3db",
+      "size_bytes": 52908080,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 29,
+      "frame_count": 208,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_29.hdf5",
+      "role": "failure_eval",
+      "sha256": "844bd8482d70bce2dd983db791edefa8dbeb66c60dbe5ac3116d597c77c46ab3",
+      "size_bytes": 73719792,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 34,
+      "frame_count": 192,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_34.hdf5",
+      "role": "failure_eval",
+      "sha256": "9feba163a9089c9d0de1c42e7e60cee27e47d3689fe9afe87e7555532dd78fa1",
+      "size_bytes": 72644032,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 38,
+      "frame_count": 220,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_38.hdf5",
+      "role": "failure_eval",
+      "sha256": "74316906775f3a6d3fe5543fb256f9b7c417a6ed054c4426934ee7f8bed40ed4",
+      "size_bytes": 83658948,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 39,
+      "frame_count": 146,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_39.hdf5",
+      "role": "failure_eval",
+      "sha256": "852414925aa46a5b5f898e5bb2dea09a10aec02ac47e0df884b09ab8d086d28b",
+      "size_bytes": 58029842,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 56,
+      "frame_count": 119,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_56.hdf5",
+      "role": "failure_eval",
+      "sha256": "1615e99478b8860ec30c4085eace35b69c69d977ca3c30b8a0a718ccb0dfe612",
+      "size_bytes": 37164926,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 70,
+      "frame_count": 310,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_70.hdf5",
+      "role": "failure_eval",
+      "sha256": "11a3f15e6b3ad57ad4d0f27de5cfa77990cc8098f33d6b2b707af7bab09b7294",
+      "size_bytes": 118621568,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 76,
+      "frame_count": 130,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_76.hdf5",
+      "role": "failure_eval",
+      "sha256": "6e6d005c775d814b285327638677d188b23e93e70d9f8c07612a2d51782e6803",
+      "size_bytes": 43689298,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 89,
+      "frame_count": 323,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_89.hdf5",
+      "role": "failure_eval",
+      "sha256": "692a2eab6f08290dbc3add668895d94558dd8a65196e6141fa9b9a90c849af02",
+      "size_bytes": 129766595,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 97,
+      "frame_count": 209,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_97.hdf5",
+      "role": "failure_eval",
+      "sha256": "53ee03a9f5c87cc8b8d2eedac0b3364ad2e65de2ae643344c92031632746bfe3",
+      "size_bytes": 71766606,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 102,
+      "frame_count": 265,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_102.hdf5",
+      "role": "failure_eval",
+      "sha256": "dcfd91a910e44fbbda7911ed5b4e3d15a1ec5774c284d376f3e14005dfb07d7d",
+      "size_bytes": 107435683,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 120,
+      "frame_count": 144,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_120.hdf5",
+      "role": "failure_eval",
+      "sha256": "fb6a7b6095e8aad4823da8d2a71356cb920f0eafb2f0978c4be0f141428a418d",
+      "size_bytes": 43987888,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 128,
+      "frame_count": 131,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_128.hdf5",
+      "role": "failure_eval",
+      "sha256": "8f5f4e392f328e6ea0ceab55f6abd9a5b89064981a394fea3db9d0bc4c84a1bc",
+      "size_bytes": 41952756,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 130,
+      "frame_count": 203,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_130.hdf5",
+      "role": "failure_eval",
+      "sha256": "7b0571da8a35be158e46119ca9140847d4e9392df3ec45f84e3a3982f45ac738",
+      "size_bytes": 83461631,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 140,
+      "frame_count": 128,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_140.hdf5",
+      "role": "failure_eval",
+      "sha256": "6cac1c35a09d1db4b662ab631c082bf6c53d10f46c1c5ae5b0829e0bf185f66f",
+      "size_bytes": 49420736,
+      "task": "grab_socket_unplug_charger_ep1"
+    },
+    {
+      "episode": 149,
+      "frame_count": 198,
+      "path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/forensics_dataset_pivot/vifailback_subset/raw_data/grab_socket_unplug_charger_ep1/episode_149.hdf5",
+      "role": "failure_eval",
+      "sha256": "dd1bb1f731b62dd277ccbbe5952efd884862707858167239bc1f60aa5118436b",
+      "size_bytes": 74917270,
+      "task": "grab_socket_unplug_charger_ep1"
+    }
+  ],
+  "schema_version": 1,
+  "selection_path": "/Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/GPD/phases/12-movement-episode-forensics-execution-gate/LOCAL_SUBSET_SELECTION.json"
+}

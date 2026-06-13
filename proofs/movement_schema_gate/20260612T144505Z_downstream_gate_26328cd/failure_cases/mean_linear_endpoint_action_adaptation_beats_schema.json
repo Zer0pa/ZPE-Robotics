@@ -1,0 +1,7 @@
+{
+  "baseline": "mean_linear_endpoint",
+  "baseline_action_rmse": 0.26065511041473355,
+  "baseline_bytes": 16581,
+  "zpe_action_rmse": 0.26065511041473355,
+  "zpe_bytes": 1286143
+}

@@ -1,0 +1,2029 @@
+{
+  "budget_per_class": 5,
+  "candidate_split": "train",
+  "methods": {
+    "kmedoids_raw_farthest": {
+      "can": [
+        {
+          "demo_id": "can/demo_85",
+          "episode_id": "demo_85",
+          "kinematic_summary": {
+            "endpoint_norm": 0.49555996597033297,
+            "frame_count": 96.0,
+            "path_length": 1.1997611042305647,
+            "velocity_energy": 0.01252211285288348
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_11",
+          "episode_id": "demo_11",
+          "kinematic_summary": {
+            "endpoint_norm": 0.46258005056418533,
+            "frame_count": 96.0,
+            "path_length": 0.8805038934810454,
+            "velocity_energy": 0.009197486556028487
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_128",
+          "episode_id": "demo_128",
+          "kinematic_summary": {
+            "endpoint_norm": 0.4253786815876699,
+            "frame_count": 96.0,
+            "path_length": 0.9206191504492602,
+            "velocity_energy": 0.009609865841656332
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_129",
+          "episode_id": "demo_129",
+          "kinematic_summary": {
+            "endpoint_norm": 0.5232397563019234,
+            "frame_count": 96.0,
+            "path_length": 1.0170350619309132,
+            "velocity_energy": 0.010590956656154235
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_16",
+          "episode_id": "demo_16",
+          "kinematic_summary": {
+            "endpoint_norm": 0.5163128933479372,
+            "frame_count": 96.0,
+            "path_length": 1.3145565054644157,
+            "velocity_energy": 0.013689718305778689
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "can"
+        }
+      ],
+      "lift": [
+        {
+          "demo_id": "lift/demo_174",
+          "episode_id": "demo_174",
+          "kinematic_summary": {
+            "endpoint_norm": 0.15812642397902268,
+            "frame_count": 96.0,
+            "path_length": 0.3328843004160389,
+            "velocity_energy": 0.003496686644119959
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_1",
+          "episode_id": "demo_1",
+          "kinematic_summary": {
+            "endpoint_norm": 0.18321810993629328,
+            "frame_count": 96.0,
+            "path_length": 0.37463198747978627,
+            "velocity_energy": 0.003956350314469038
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_81",
+          "episode_id": "demo_81",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1555079271204178,
+            "frame_count": 96.0,
+            "path_length": 0.30598524444222325,
+            "velocity_energy": 0.0032100794018143437
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_64",
+          "episode_id": "demo_64",
+          "kinematic_summary": {
+            "endpoint_norm": 0.18870837796347775,
+            "frame_count": 96.0,
+            "path_length": 0.33958852704073467,
+            "velocity_energy": 0.003574120282574625
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_106",
+          "episode_id": "demo_106",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1788229534703277,
+            "frame_count": 96.0,
+            "path_length": 0.3372164129243536,
+            "velocity_energy": 0.0035446828068945416
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "lift"
+        }
+      ],
+      "square": [
+        {
+          "demo_id": "square/demo_62",
+          "episode_id": "demo_62",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3015268699517602,
+            "frame_count": 96.0,
+            "path_length": 0.8617231929778529,
+            "velocity_energy": 0.008921340529916716
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_102",
+          "episode_id": "demo_102",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3581871323258763,
+            "frame_count": 96.0,
+            "path_length": 1.3929517962254496,
+            "velocity_energy": 0.014184488955365887
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_180",
+          "episode_id": "demo_180",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3068249470261304,
+            "frame_count": 96.0,
+            "path_length": 1.1349684765859231,
+            "velocity_energy": 0.011729696251411474
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_26",
+          "episode_id": "demo_26",
+          "kinematic_summary": {
+            "endpoint_norm": 0.38513938143664994,
+            "frame_count": 96.0,
+            "path_length": 1.221331254649156,
+            "velocity_energy": 0.012603093673935119
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_167",
+          "episode_id": "demo_167",
+          "kinematic_summary": {
+            "endpoint_norm": 0.34159685447210264,
+            "frame_count": 96.0,
+            "path_length": 1.0407763471877638,
+            "velocity_energy": 0.01069177335544299
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "square"
+        }
+      ],
+      "tool_hang": [
+        {
+          "demo_id": "tool_hang/demo_134",
+          "episode_id": "demo_134",
+          "kinematic_summary": {
+            "endpoint_norm": 0.12855449854598777,
+            "frame_count": 96.0,
+            "path_length": 2.0135843336756323,
+            "velocity_energy": 0.020559501570247246
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_151",
+          "episode_id": "demo_151",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1004338275850399,
+            "frame_count": 96.0,
+            "path_length": 2.9751928460954415,
+            "velocity_energy": 0.028147094927050847
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_133",
+          "episode_id": "demo_133",
+          "kinematic_summary": {
+            "endpoint_norm": 0.16357122978865146,
+            "frame_count": 96.0,
+            "path_length": 2.6099501495157074,
+            "velocity_energy": 0.026037558517986722
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_188",
+          "episode_id": "demo_188",
+          "kinematic_summary": {
+            "endpoint_norm": 0.12201462039030196,
+            "frame_count": 96.0,
+            "path_length": 3.2047924128192875,
+            "velocity_energy": 0.030388629871095797
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_16",
+          "episode_id": "demo_16",
+          "kinematic_summary": {
+            "endpoint_norm": 0.12253655485922656,
+            "frame_count": 96.0,
+            "path_length": 2.416629640758421,
+            "velocity_energy": 0.0234455934087754
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "tool_hang"
+        }
+      ],
+      "transport": [
+        {
+          "demo_id": "transport/demo_136",
+          "episode_id": "demo_136",
+          "kinematic_summary": {
+            "endpoint_norm": 0.13293713869646562,
+            "frame_count": 96.0,
+            "path_length": 2.4818665196553287,
+            "velocity_energy": 0.02511932819975415
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_126",
+          "episode_id": "demo_126",
+          "kinematic_summary": {
+            "endpoint_norm": 0.12671052908319694,
+            "frame_count": 96.0,
+            "path_length": 3.246771486312941,
+            "velocity_energy": 0.03267172686975588
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_0",
+          "episode_id": "demo_0",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3381583193881338,
+            "frame_count": 96.0,
+            "path_length": 3.1541803529048766,
+            "velocity_energy": 0.030065181387482404
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_61",
+          "episode_id": "demo_61",
+          "kinematic_summary": {
+            "endpoint_norm": 0.22379545903297465,
+            "frame_count": 96.0,
+            "path_length": 2.893719169818497,
+            "velocity_energy": 0.0283226979892615
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_163",
+          "episode_id": "demo_163",
+          "kinematic_summary": {
+            "endpoint_norm": 0.4232698478798477,
+            "frame_count": 96.0,
+            "path_length": 3.2244977213587878,
+            "velocity_energy": 0.031647274907994016
+          },
+          "reason": "raw medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "transport"
+        }
+      ]
+    },
+    "mean_central": {
+      "can": [
+        {
+          "demo_id": "can/demo_85",
+          "episode_id": "demo_85",
+          "kinematic_summary": {
+            "endpoint_norm": 0.49555996597033297,
+            "frame_count": 96.0,
+            "path_length": 1.1997611042305647,
+            "velocity_energy": 0.01252211285288348
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_89",
+          "episode_id": "demo_89",
+          "kinematic_summary": {
+            "endpoint_norm": 0.5021354402071755,
+            "frame_count": 96.0,
+            "path_length": 1.163537394849518,
+            "velocity_energy": 0.012194348690474028
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_1",
+          "episode_id": "demo_1",
+          "kinematic_summary": {
+            "endpoint_norm": 0.47654564807917876,
+            "frame_count": 96.0,
+            "path_length": 1.0154941207062442,
+            "velocity_energy": 0.010586255156204469
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_54",
+          "episode_id": "demo_54",
+          "kinematic_summary": {
+            "endpoint_norm": 0.46700092322476877,
+            "frame_count": 96.0,
+            "path_length": 1.0077581482447637,
+            "velocity_energy": 0.010533217126740171
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_31",
+          "episode_id": "demo_31",
+          "kinematic_summary": {
+            "endpoint_norm": 0.47909433916662086,
+            "frame_count": 96.0,
+            "path_length": 1.0187213955258299,
+            "velocity_energy": 0.010669519339995265
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "can"
+        }
+      ],
+      "lift": [
+        {
+          "demo_id": "lift/demo_174",
+          "episode_id": "demo_174",
+          "kinematic_summary": {
+            "endpoint_norm": 0.15812642397902268,
+            "frame_count": 96.0,
+            "path_length": 0.3328843004160389,
+            "velocity_energy": 0.003496686644119959
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_153",
+          "episode_id": "demo_153",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1572612927294508,
+            "frame_count": 96.0,
+            "path_length": 0.3186893994823744,
+            "velocity_energy": 0.0033493302360174345
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_59",
+          "episode_id": "demo_59",
+          "kinematic_summary": {
+            "endpoint_norm": 0.15422740696928494,
+            "frame_count": 96.0,
+            "path_length": 0.3276068584508647,
+            "velocity_energy": 0.003446997338366434
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_114",
+          "episode_id": "demo_114",
+          "kinematic_summary": {
+            "endpoint_norm": 0.17159177658429944,
+            "frame_count": 96.0,
+            "path_length": 0.3574205972180687,
+            "velocity_energy": 0.003762856526530105
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_46",
+          "episode_id": "demo_46",
+          "kinematic_summary": {
+            "endpoint_norm": 0.15220846937269766,
+            "frame_count": 96.0,
+            "path_length": 0.3173869947879429,
+            "velocity_energy": 0.003335401716318105
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "lift"
+        }
+      ],
+      "square": [
+        {
+          "demo_id": "square/demo_122",
+          "episode_id": "demo_122",
+          "kinematic_summary": {
+            "endpoint_norm": 0.29269765477701937,
+            "frame_count": 96.0,
+            "path_length": 0.83674060699708,
+            "velocity_energy": 0.008760573230927259
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_62",
+          "episode_id": "demo_62",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3015268699517602,
+            "frame_count": 96.0,
+            "path_length": 0.8617231929778529,
+            "velocity_energy": 0.008921340529916716
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_131",
+          "episode_id": "demo_131",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3681321594345465,
+            "frame_count": 96.0,
+            "path_length": 0.8063433630273822,
+            "velocity_energy": 0.00841357838279118
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_63",
+          "episode_id": "demo_63",
+          "kinematic_summary": {
+            "endpoint_norm": 0.31026845924071117,
+            "frame_count": 96.0,
+            "path_length": 0.8154941979588649,
+            "velocity_energy": 0.00846416941641267
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_44",
+          "episode_id": "demo_44",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3058221774616079,
+            "frame_count": 96.0,
+            "path_length": 0.7425847236722302,
+            "velocity_energy": 0.0077273368584139775
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "square"
+        }
+      ],
+      "tool_hang": [
+        {
+          "demo_id": "tool_hang/demo_134",
+          "episode_id": "demo_134",
+          "kinematic_summary": {
+            "endpoint_norm": 0.12855449854598777,
+            "frame_count": 96.0,
+            "path_length": 2.0135843336756323,
+            "velocity_energy": 0.020559501570247246
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_141",
+          "episode_id": "demo_141",
+          "kinematic_summary": {
+            "endpoint_norm": 0.13034596808879628,
+            "frame_count": 96.0,
+            "path_length": 2.002901604160822,
+            "velocity_energy": 0.02038625846116978
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_38",
+          "episode_id": "demo_38",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1374380500512194,
+            "frame_count": 96.0,
+            "path_length": 2.270573992750425,
+            "velocity_energy": 0.022897445211738074
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_8",
+          "episode_id": "demo_8",
+          "kinematic_summary": {
+            "endpoint_norm": 0.13778067926225307,
+            "frame_count": 96.0,
+            "path_length": 2.1033490402928448,
+            "velocity_energy": 0.021139097759718867
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_117",
+          "episode_id": "demo_117",
+          "kinematic_summary": {
+            "endpoint_norm": 0.13911102874102457,
+            "frame_count": 96.0,
+            "path_length": 2.0046678097214565,
+            "velocity_energy": 0.020570210470166037
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "tool_hang"
+        }
+      ],
+      "transport": [
+        {
+          "demo_id": "transport/demo_136",
+          "episode_id": "demo_136",
+          "kinematic_summary": {
+            "endpoint_norm": 0.13293713869646562,
+            "frame_count": 96.0,
+            "path_length": 2.4818665196553287,
+            "velocity_energy": 0.02511932819975415
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_1",
+          "episode_id": "demo_1",
+          "kinematic_summary": {
+            "endpoint_norm": 0.097900940512353,
+            "frame_count": 96.0,
+            "path_length": 2.726919008443309,
+            "velocity_energy": 0.02741483905273447
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_27",
+          "episode_id": "demo_27",
+          "kinematic_summary": {
+            "endpoint_norm": 0.18332911284618628,
+            "frame_count": 96.0,
+            "path_length": 2.550149408130449,
+            "velocity_energy": 0.025943038748836997
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_131",
+          "episode_id": "demo_131",
+          "kinematic_summary": {
+            "endpoint_norm": 0.10500132224907208,
+            "frame_count": 96.0,
+            "path_length": 2.465106701568121,
+            "velocity_energy": 0.02492639818452422
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_84",
+          "episode_id": "demo_84",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1307409696829912,
+            "frame_count": 96.0,
+            "path_length": 2.5823577503146566,
+            "velocity_energy": 0.02611888039885483
+          },
+          "reason": "closest raw movement-form vector to task mean",
+          "split": "train",
+          "task": "transport"
+        }
+      ]
+    },
+    "pca_kmedoids": {
+      "can": [
+        {
+          "demo_id": "can/demo_31",
+          "episode_id": "demo_31",
+          "kinematic_summary": {
+            "endpoint_norm": 0.47909433916662086,
+            "frame_count": 96.0,
+            "path_length": 1.0187213955258299,
+            "velocity_energy": 0.010669519339995265
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_81",
+          "episode_id": "demo_81",
+          "kinematic_summary": {
+            "endpoint_norm": 0.44456737453773737,
+            "frame_count": 96.0,
+            "path_length": 1.4142329720607207,
+            "velocity_energy": 0.0148168753972759
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_129",
+          "episode_id": "demo_129",
+          "kinematic_summary": {
+            "endpoint_norm": 0.5232397563019234,
+            "frame_count": 96.0,
+            "path_length": 1.0170350619309132,
+            "velocity_energy": 0.010590956656154235
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_185",
+          "episode_id": "demo_185",
+          "kinematic_summary": {
+            "endpoint_norm": 0.45186852550870743,
+            "frame_count": 96.0,
+            "path_length": 1.1956375107140897,
+            "velocity_energy": 0.012472788335429287
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_46",
+          "episode_id": "demo_46",
+          "kinematic_summary": {
+            "endpoint_norm": 0.43781657006476393,
+            "frame_count": 96.0,
+            "path_length": 1.034285852918844,
+            "velocity_energy": 0.01079855696745602
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "can"
+        }
+      ],
+      "lift": [
+        {
+          "demo_id": "lift/demo_174",
+          "episode_id": "demo_174",
+          "kinematic_summary": {
+            "endpoint_norm": 0.15812642397902268,
+            "frame_count": 96.0,
+            "path_length": 0.3328843004160389,
+            "velocity_energy": 0.003496686644119959
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_198",
+          "episode_id": "demo_198",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1359135093654318,
+            "frame_count": 96.0,
+            "path_length": 0.3391200737504404,
+            "velocity_energy": 0.0035671260802332496
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_102",
+          "episode_id": "demo_102",
+          "kinematic_summary": {
+            "endpoint_norm": 0.17907495514101884,
+            "frame_count": 96.0,
+            "path_length": 0.3514695903843377,
+            "velocity_energy": 0.0037059136129940218
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_165",
+          "episode_id": "demo_165",
+          "kinematic_summary": {
+            "endpoint_norm": 0.17923682617346917,
+            "frame_count": 96.0,
+            "path_length": 0.3528642237821046,
+            "velocity_energy": 0.003707825366496791
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_190",
+          "episode_id": "demo_190",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1683589668170836,
+            "frame_count": 96.0,
+            "path_length": 0.3483257954597027,
+            "velocity_energy": 0.0036669740737694987
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "lift"
+        }
+      ],
+      "square": [
+        {
+          "demo_id": "square/demo_62",
+          "episode_id": "demo_62",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3015268699517602,
+            "frame_count": 96.0,
+            "path_length": 0.8617231929778529,
+            "velocity_energy": 0.008921340529916716
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_50",
+          "episode_id": "demo_50",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3655578484469414,
+            "frame_count": 96.0,
+            "path_length": 0.9315551063516619,
+            "velocity_energy": 0.009622544877888087
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_26",
+          "episode_id": "demo_26",
+          "kinematic_summary": {
+            "endpoint_norm": 0.38513938143664994,
+            "frame_count": 96.0,
+            "path_length": 1.221331254649156,
+            "velocity_energy": 0.012603093673935119
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_35",
+          "episode_id": "demo_35",
+          "kinematic_summary": {
+            "endpoint_norm": 0.39635573364229554,
+            "frame_count": 96.0,
+            "path_length": 1.0078319195083667,
+            "velocity_energy": 0.01047189770482425
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_54",
+          "episode_id": "demo_54",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3620068100839898,
+            "frame_count": 96.0,
+            "path_length": 0.9544075183314965,
+            "velocity_energy": 0.009863364443716013
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "square"
+        }
+      ],
+      "tool_hang": [
+        {
+          "demo_id": "tool_hang/demo_106",
+          "episode_id": "demo_106",
+          "kinematic_summary": {
+            "endpoint_norm": 0.12315096745037857,
+            "frame_count": 96.0,
+            "path_length": 2.2288842565842266,
+            "velocity_energy": 0.02257855577824928
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_133",
+          "episode_id": "demo_133",
+          "kinematic_summary": {
+            "endpoint_norm": 0.16357122978865146,
+            "frame_count": 96.0,
+            "path_length": 2.6099501495157074,
+            "velocity_energy": 0.026037558517986722
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_65",
+          "episode_id": "demo_65",
+          "kinematic_summary": {
+            "endpoint_norm": 0.13633704803834718,
+            "frame_count": 96.0,
+            "path_length": 2.1125232169518933,
+            "velocity_energy": 0.021489796544155695
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_61",
+          "episode_id": "demo_61",
+          "kinematic_summary": {
+            "endpoint_norm": 0.11075979015840312,
+            "frame_count": 96.0,
+            "path_length": 2.128093012971052,
+            "velocity_energy": 0.02116656438773615
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_114",
+          "episode_id": "demo_114",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1529077238369702,
+            "frame_count": 96.0,
+            "path_length": 2.2964507784084174,
+            "velocity_energy": 0.0231650961201557
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "tool_hang"
+        }
+      ],
+      "transport": [
+        {
+          "demo_id": "transport/demo_12",
+          "episode_id": "demo_12",
+          "kinematic_summary": {
+            "endpoint_norm": 0.14630238274422142,
+            "frame_count": 96.0,
+            "path_length": 2.6912919141090477,
+            "velocity_energy": 0.02720888283472835
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_61",
+          "episode_id": "demo_61",
+          "kinematic_summary": {
+            "endpoint_norm": 0.22379545903297465,
+            "frame_count": 96.0,
+            "path_length": 2.893719169818497,
+            "velocity_energy": 0.0283226979892615
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_139",
+          "episode_id": "demo_139",
+          "kinematic_summary": {
+            "endpoint_norm": 0.37272350787452907,
+            "frame_count": 96.0,
+            "path_length": 2.8906733863541745,
+            "velocity_energy": 0.02815523420067037
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_29",
+          "episode_id": "demo_29",
+          "kinematic_summary": {
+            "endpoint_norm": 0.4282037511454197,
+            "frame_count": 96.0,
+            "path_length": 3.185027149159996,
+            "velocity_energy": 0.031240429185933477
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_54",
+          "episode_id": "demo_54",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3170310212032882,
+            "frame_count": 96.0,
+            "path_length": 2.9495039401312066,
+            "velocity_energy": 0.02981023060176223
+          },
+          "reason": "PCA medoid followed by farthest-first task coverage",
+          "split": "train",
+          "task": "transport"
+        }
+      ]
+    },
+    "random": {
+      "can": [
+        {
+          "demo_id": "can/demo_83",
+          "episode_id": "demo_83",
+          "kinematic_summary": {
+            "endpoint_norm": 0.4429481291605769,
+            "frame_count": 96.0,
+            "path_length": 0.9358878119900098,
+            "velocity_energy": 0.009745026837138323
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_179",
+          "episode_id": "demo_179",
+          "kinematic_summary": {
+            "endpoint_norm": 0.46249106171457105,
+            "frame_count": 96.0,
+            "path_length": 0.820246270206885,
+            "velocity_energy": 0.008562473197598628
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_164",
+          "episode_id": "demo_164",
+          "kinematic_summary": {
+            "endpoint_norm": 0.5341490058970126,
+            "frame_count": 96.0,
+            "path_length": 1.0485945553855986,
+            "velocity_energy": 0.010922498962341834
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_193",
+          "episode_id": "demo_193",
+          "kinematic_summary": {
+            "endpoint_norm": 0.4747976364494784,
+            "frame_count": 96.0,
+            "path_length": 1.3916417268416588,
+            "velocity_energy": 0.01448641019878532
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_88",
+          "episode_id": "demo_88",
+          "kinematic_summary": {
+            "endpoint_norm": 0.5138141663345608,
+            "frame_count": 96.0,
+            "path_length": 1.3243262451824895,
+            "velocity_energy": 0.01380490519358031
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "can"
+        }
+      ],
+      "lift": [
+        {
+          "demo_id": "lift/demo_158",
+          "episode_id": "demo_158",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1451683146225333,
+            "frame_count": 96.0,
+            "path_length": 0.35349004531894435,
+            "velocity_energy": 0.0037135675105580608
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_61",
+          "episode_id": "demo_61",
+          "kinematic_summary": {
+            "endpoint_norm": 0.17696094670045326,
+            "frame_count": 96.0,
+            "path_length": 0.3361787337521283,
+            "velocity_energy": 0.0035341878899996515
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_64",
+          "episode_id": "demo_64",
+          "kinematic_summary": {
+            "endpoint_norm": 0.18870837796347775,
+            "frame_count": 96.0,
+            "path_length": 0.33958852704073467,
+            "velocity_energy": 0.003574120282574625
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_19",
+          "episode_id": "demo_19",
+          "kinematic_summary": {
+            "endpoint_norm": 0.16526390867842658,
+            "frame_count": 96.0,
+            "path_length": 0.33808873445530097,
+            "velocity_energy": 0.0035585785965137236
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_196",
+          "episode_id": "demo_196",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1326594158193176,
+            "frame_count": 96.0,
+            "path_length": 0.30466001646137897,
+            "velocity_energy": 0.0031998868009745444
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "lift"
+        }
+      ],
+      "square": [
+        {
+          "demo_id": "square/demo_47",
+          "episode_id": "demo_47",
+          "kinematic_summary": {
+            "endpoint_norm": 0.2924044134458511,
+            "frame_count": 96.0,
+            "path_length": 0.918450788421366,
+            "velocity_energy": 0.009538206556516987
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_124",
+          "episode_id": "demo_124",
+          "kinematic_summary": {
+            "endpoint_norm": 0.2963313160827282,
+            "frame_count": 96.0,
+            "path_length": 0.8424653992057669,
+            "velocity_energy": 0.008764432341313223
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_46",
+          "episode_id": "demo_46",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3219333517637198,
+            "frame_count": 96.0,
+            "path_length": 0.8778883118345823,
+            "velocity_energy": 0.0091620626560509
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_116",
+          "episode_id": "demo_116",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3488071713874584,
+            "frame_count": 96.0,
+            "path_length": 0.9796025053783062,
+            "velocity_energy": 0.01017586616257128
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_19",
+          "episode_id": "demo_19",
+          "kinematic_summary": {
+            "endpoint_norm": 0.35999341726977657,
+            "frame_count": 96.0,
+            "path_length": 1.0051765776122243,
+            "velocity_energy": 0.010392247811240318
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "square"
+        }
+      ],
+      "tool_hang": [
+        {
+          "demo_id": "tool_hang/demo_108",
+          "episode_id": "demo_108",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1466998680149372,
+            "frame_count": 96.0,
+            "path_length": 2.172828302346947,
+            "velocity_energy": 0.021855007949487814
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_187",
+          "episode_id": "demo_187",
+          "kinematic_summary": {
+            "endpoint_norm": 0.18539460987851025,
+            "frame_count": 96.0,
+            "path_length": 2.2616575590164816,
+            "velocity_energy": 0.023052463849184617
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_62",
+          "episode_id": "demo_62",
+          "kinematic_summary": {
+            "endpoint_norm": 0.11150652331699308,
+            "frame_count": 96.0,
+            "path_length": 2.123020840085982,
+            "velocity_energy": 0.021431767529954956
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_159",
+          "episode_id": "demo_159",
+          "kinematic_summary": {
+            "endpoint_norm": 0.17334148172002517,
+            "frame_count": 96.0,
+            "path_length": 2.301350892242846,
+            "velocity_energy": 0.023102131148663513
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_141",
+          "episode_id": "demo_141",
+          "kinematic_summary": {
+            "endpoint_norm": 0.13034596808879628,
+            "frame_count": 96.0,
+            "path_length": 2.002901604160822,
+            "velocity_energy": 0.02038625846116978
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "tool_hang"
+        }
+      ],
+      "transport": [
+        {
+          "demo_id": "transport/demo_12",
+          "episode_id": "demo_12",
+          "kinematic_summary": {
+            "endpoint_norm": 0.14630238274422142,
+            "frame_count": 96.0,
+            "path_length": 2.6912919141090477,
+            "velocity_energy": 0.02720888283472835
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_4",
+          "episode_id": "demo_4",
+          "kinematic_summary": {
+            "endpoint_norm": 0.42891656583704457,
+            "frame_count": 96.0,
+            "path_length": 2.484467854426628,
+            "velocity_energy": 0.025214711623050435
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_180",
+          "episode_id": "demo_180",
+          "kinematic_summary": {
+            "endpoint_norm": 0.04769439799993262,
+            "frame_count": 96.0,
+            "path_length": 2.8646766872834792,
+            "velocity_energy": 0.02867463900909616
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_35",
+          "episode_id": "demo_35",
+          "kinematic_summary": {
+            "endpoint_norm": 0.19954954636128447,
+            "frame_count": 96.0,
+            "path_length": 2.886061016043138,
+            "velocity_energy": 0.028864311102798176
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_143",
+          "episode_id": "demo_143",
+          "kinematic_summary": {
+            "endpoint_norm": 0.09985285674943395,
+            "frame_count": 96.0,
+            "path_length": 2.7126467491797066,
+            "velocity_energy": 0.027193394180472102
+          },
+          "reason": "deterministic random baseline",
+          "split": "train",
+          "task": "transport"
+        }
+      ]
+    },
+    "raw_medoid": {
+      "can": [
+        {
+          "demo_id": "can/demo_85",
+          "episode_id": "demo_85",
+          "kinematic_summary": {
+            "endpoint_norm": 0.49555996597033297,
+            "frame_count": 96.0,
+            "path_length": 1.1997611042305647,
+            "velocity_energy": 0.01252211285288348
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_89",
+          "episode_id": "demo_89",
+          "kinematic_summary": {
+            "endpoint_norm": 0.5021354402071755,
+            "frame_count": 96.0,
+            "path_length": 1.163537394849518,
+            "velocity_energy": 0.012194348690474028
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_31",
+          "episode_id": "demo_31",
+          "kinematic_summary": {
+            "endpoint_norm": 0.47909433916662086,
+            "frame_count": 96.0,
+            "path_length": 1.0187213955258299,
+            "velocity_energy": 0.010669519339995265
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_54",
+          "episode_id": "demo_54",
+          "kinematic_summary": {
+            "endpoint_norm": 0.46700092322476877,
+            "frame_count": 96.0,
+            "path_length": 1.0077581482447637,
+            "velocity_energy": 0.010533217126740171
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_1",
+          "episode_id": "demo_1",
+          "kinematic_summary": {
+            "endpoint_norm": 0.47654564807917876,
+            "frame_count": 96.0,
+            "path_length": 1.0154941207062442,
+            "velocity_energy": 0.010586255156204469
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "can"
+        }
+      ],
+      "lift": [
+        {
+          "demo_id": "lift/demo_174",
+          "episode_id": "demo_174",
+          "kinematic_summary": {
+            "endpoint_norm": 0.15812642397902268,
+            "frame_count": 96.0,
+            "path_length": 0.3328843004160389,
+            "velocity_energy": 0.003496686644119959
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_153",
+          "episode_id": "demo_153",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1572612927294508,
+            "frame_count": 96.0,
+            "path_length": 0.3186893994823744,
+            "velocity_energy": 0.0033493302360174345
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_59",
+          "episode_id": "demo_59",
+          "kinematic_summary": {
+            "endpoint_norm": 0.15422740696928494,
+            "frame_count": 96.0,
+            "path_length": 0.3276068584508647,
+            "velocity_energy": 0.003446997338366434
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_112",
+          "episode_id": "demo_112",
+          "kinematic_summary": {
+            "endpoint_norm": 0.16704607127716453,
+            "frame_count": 96.0,
+            "path_length": 0.3198088409686181,
+            "velocity_energy": 0.003357737570334734
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_114",
+          "episode_id": "demo_114",
+          "kinematic_summary": {
+            "endpoint_norm": 0.17159177658429944,
+            "frame_count": 96.0,
+            "path_length": 0.3574205972180687,
+            "velocity_energy": 0.003762856526530105
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "lift"
+        }
+      ],
+      "square": [
+        {
+          "demo_id": "square/demo_62",
+          "episode_id": "demo_62",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3015268699517602,
+            "frame_count": 96.0,
+            "path_length": 0.8617231929778529,
+            "velocity_energy": 0.008921340529916716
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_122",
+          "episode_id": "demo_122",
+          "kinematic_summary": {
+            "endpoint_norm": 0.29269765477701937,
+            "frame_count": 96.0,
+            "path_length": 0.83674060699708,
+            "velocity_energy": 0.008760573230927259
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_131",
+          "episode_id": "demo_131",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3681321594345465,
+            "frame_count": 96.0,
+            "path_length": 0.8063433630273822,
+            "velocity_energy": 0.00841357838279118
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_63",
+          "episode_id": "demo_63",
+          "kinematic_summary": {
+            "endpoint_norm": 0.31026845924071117,
+            "frame_count": 96.0,
+            "path_length": 0.8154941979588649,
+            "velocity_energy": 0.00846416941641267
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_44",
+          "episode_id": "demo_44",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3058221774616079,
+            "frame_count": 96.0,
+            "path_length": 0.7425847236722302,
+            "velocity_energy": 0.0077273368584139775
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "square"
+        }
+      ],
+      "tool_hang": [
+        {
+          "demo_id": "tool_hang/demo_134",
+          "episode_id": "demo_134",
+          "kinematic_summary": {
+            "endpoint_norm": 0.12855449854598777,
+            "frame_count": 96.0,
+            "path_length": 2.0135843336756323,
+            "velocity_energy": 0.020559501570247246
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_141",
+          "episode_id": "demo_141",
+          "kinematic_summary": {
+            "endpoint_norm": 0.13034596808879628,
+            "frame_count": 96.0,
+            "path_length": 2.002901604160822,
+            "velocity_energy": 0.02038625846116978
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_117",
+          "episode_id": "demo_117",
+          "kinematic_summary": {
+            "endpoint_norm": 0.13911102874102457,
+            "frame_count": 96.0,
+            "path_length": 2.0046678097214565,
+            "velocity_energy": 0.020570210470166037
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_8",
+          "episode_id": "demo_8",
+          "kinematic_summary": {
+            "endpoint_norm": 0.13778067926225307,
+            "frame_count": 96.0,
+            "path_length": 2.1033490402928448,
+            "velocity_energy": 0.021139097759718867
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_25",
+          "episode_id": "demo_25",
+          "kinematic_summary": {
+            "endpoint_norm": 0.12111374470035735,
+            "frame_count": 96.0,
+            "path_length": 2.0847693239398595,
+            "velocity_energy": 0.020911619099511846
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "tool_hang"
+        }
+      ],
+      "transport": [
+        {
+          "demo_id": "transport/demo_136",
+          "episode_id": "demo_136",
+          "kinematic_summary": {
+            "endpoint_norm": 0.13293713869646562,
+            "frame_count": 96.0,
+            "path_length": 2.4818665196553287,
+            "velocity_energy": 0.02511932819975415
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_1",
+          "episode_id": "demo_1",
+          "kinematic_summary": {
+            "endpoint_norm": 0.097900940512353,
+            "frame_count": 96.0,
+            "path_length": 2.726919008443309,
+            "velocity_energy": 0.02741483905273447
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_27",
+          "episode_id": "demo_27",
+          "kinematic_summary": {
+            "endpoint_norm": 0.18332911284618628,
+            "frame_count": 96.0,
+            "path_length": 2.550149408130449,
+            "velocity_energy": 0.025943038748836997
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_131",
+          "episode_id": "demo_131",
+          "kinematic_summary": {
+            "endpoint_norm": 0.10500132224907208,
+            "frame_count": 96.0,
+            "path_length": 2.465106701568121,
+            "velocity_energy": 0.02492639818452422
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_86",
+          "episode_id": "demo_86",
+          "kinematic_summary": {
+            "endpoint_norm": 0.14057728005547848,
+            "frame_count": 96.0,
+            "path_length": 2.533079650692374,
+            "velocity_energy": 0.02570602703366505
+          },
+          "reason": "closest raw movement-form vector to task centroid",
+          "split": "train",
+          "task": "transport"
+        }
+      ]
+    },
+    "zpe_basin_diverse": {
+      "can": [
+        {
+          "demo_id": "can/demo_51",
+          "episode_id": "demo_51",
+          "kinematic_summary": {
+            "endpoint_norm": 0.4771662946786541,
+            "frame_count": 96.0,
+            "path_length": 1.2309948587714992,
+            "velocity_energy": 0.012894472496351788
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_128",
+          "episode_id": "demo_128",
+          "kinematic_summary": {
+            "endpoint_norm": 0.4253786815876699,
+            "frame_count": 96.0,
+            "path_length": 0.9206191504492602,
+            "velocity_energy": 0.009609865841656332
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_3",
+          "episode_id": "demo_3",
+          "kinematic_summary": {
+            "endpoint_norm": 0.45205773353259254,
+            "frame_count": 96.0,
+            "path_length": 0.7930796246714371,
+            "velocity_energy": 0.008279568905371399
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_16",
+          "episode_id": "demo_16",
+          "kinematic_summary": {
+            "endpoint_norm": 0.5163128933479372,
+            "frame_count": 96.0,
+            "path_length": 1.3145565054644157,
+            "velocity_energy": 0.013689718305778689
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "can"
+        },
+        {
+          "demo_id": "can/demo_129",
+          "episode_id": "demo_129",
+          "kinematic_summary": {
+            "endpoint_norm": 0.5232397563019234,
+            "frame_count": 96.0,
+            "path_length": 1.0170350619309132,
+            "velocity_energy": 0.010590956656154235
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "can"
+        }
+      ],
+      "lift": [
+        {
+          "demo_id": "lift/demo_152",
+          "episode_id": "demo_152",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1614230100346047,
+            "frame_count": 96.0,
+            "path_length": 0.3135840064379732,
+            "velocity_energy": 0.0032911345597698588
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_150",
+          "episode_id": "demo_150",
+          "kinematic_summary": {
+            "endpoint_norm": 0.18182904789133372,
+            "frame_count": 96.0,
+            "path_length": 0.36162862161152737,
+            "velocity_energy": 0.0038152734491557574
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_95",
+          "episode_id": "demo_95",
+          "kinematic_summary": {
+            "endpoint_norm": 0.16859490252266532,
+            "frame_count": 96.0,
+            "path_length": 0.3458685478451622,
+            "velocity_energy": 0.003640065516543743
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_193",
+          "episode_id": "demo_193",
+          "kinematic_summary": {
+            "endpoint_norm": 0.16760663563882425,
+            "frame_count": 96.0,
+            "path_length": 0.3412454522217478,
+            "velocity_energy": 0.003583045485325996
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "lift"
+        },
+        {
+          "demo_id": "lift/demo_128",
+          "episode_id": "demo_128",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1969023500652557,
+            "frame_count": 96.0,
+            "path_length": 0.3406067843039903,
+            "velocity_energy": 0.003580421418487421
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "lift"
+        }
+      ],
+      "square": [
+        {
+          "demo_id": "square/demo_142",
+          "episode_id": "demo_142",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3441861447256135,
+            "frame_count": 96.0,
+            "path_length": 0.8263867607341128,
+            "velocity_energy": 0.008580335612893454
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_26",
+          "episode_id": "demo_26",
+          "kinematic_summary": {
+            "endpoint_norm": 0.38513938143664994,
+            "frame_count": 96.0,
+            "path_length": 1.221331254649156,
+            "velocity_energy": 0.012603093673935119
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_8",
+          "episode_id": "demo_8",
+          "kinematic_summary": {
+            "endpoint_norm": 0.21057878083550052,
+            "frame_count": 96.0,
+            "path_length": 1.0923491307491777,
+            "velocity_energy": 0.011284868351363594
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_7",
+          "episode_id": "demo_7",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3546752427702637,
+            "frame_count": 96.0,
+            "path_length": 1.078502208634375,
+            "velocity_energy": 0.011235814391326917
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "square"
+        },
+        {
+          "demo_id": "square/demo_191",
+          "episode_id": "demo_191",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3674538294453308,
+            "frame_count": 96.0,
+            "path_length": 1.0013500741983359,
+            "velocity_energy": 0.010409676849333947
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "square"
+        }
+      ],
+      "tool_hang": [
+        {
+          "demo_id": "tool_hang/demo_183",
+          "episode_id": "demo_183",
+          "kinematic_summary": {
+            "endpoint_norm": 0.13693188919583324,
+            "frame_count": 96.0,
+            "path_length": 2.3055752479453178,
+            "velocity_energy": 0.02334996840457119
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_152",
+          "episode_id": "demo_152",
+          "kinematic_summary": {
+            "endpoint_norm": 0.17663407855365126,
+            "frame_count": 96.0,
+            "path_length": 3.120844718031679,
+            "velocity_energy": 0.030323195405471334
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_151",
+          "episode_id": "demo_151",
+          "kinematic_summary": {
+            "endpoint_norm": 0.1004338275850399,
+            "frame_count": 96.0,
+            "path_length": 2.9751928460954415,
+            "velocity_energy": 0.028147094927050847
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_56",
+          "episode_id": "demo_56",
+          "kinematic_summary": {
+            "endpoint_norm": 0.13147432765968442,
+            "frame_count": 96.0,
+            "path_length": 2.0994111666442055,
+            "velocity_energy": 0.021392659584788615
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "tool_hang"
+        },
+        {
+          "demo_id": "tool_hang/demo_133",
+          "episode_id": "demo_133",
+          "kinematic_summary": {
+            "endpoint_norm": 0.16357122978865146,
+            "frame_count": 96.0,
+            "path_length": 2.6099501495157074,
+            "velocity_energy": 0.026037558517986722
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "tool_hang"
+        }
+      ],
+      "transport": [
+        {
+          "demo_id": "transport/demo_112",
+          "episode_id": "demo_112",
+          "kinematic_summary": {
+            "endpoint_norm": 0.10008747021033776,
+            "frame_count": 96.0,
+            "path_length": 2.736030709208995,
+            "velocity_energy": 0.027003932727176428
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_0",
+          "episode_id": "demo_0",
+          "kinematic_summary": {
+            "endpoint_norm": 0.3381583193881338,
+            "frame_count": 96.0,
+            "path_length": 3.1541803529048766,
+            "velocity_energy": 0.030065181387482404
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_61",
+          "episode_id": "demo_61",
+          "kinematic_summary": {
+            "endpoint_norm": 0.22379545903297465,
+            "frame_count": 96.0,
+            "path_length": 2.893719169818497,
+            "velocity_energy": 0.0283226979892615
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_188",
+          "episode_id": "demo_188",
+          "kinematic_summary": {
+            "endpoint_norm": 0.27737957553032894,
+            "frame_count": 96.0,
+            "path_length": 2.7490573280559247,
+            "velocity_energy": 0.02721368718736911
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "transport"
+        },
+        {
+          "demo_id": "transport/demo_8",
+          "episode_id": "demo_8",
+          "kinematic_summary": {
+            "endpoint_norm": 0.29290283007688656,
+            "frame_count": 96.0,
+            "path_length": 2.4457045133580895,
+            "velocity_energy": 0.0246019751312882
+          },
+          "reason": "near learned movement-form basin center while preserving task variation",
+          "split": "train",
+          "task": "transport"
+        }
+      ]
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,3 @@
+Superseded by 20260612T204151Z_forensics_pilot_26328cd.
+
+Reason: the first pilot run used ceil-based 25% evidence windows that slightly exceeded the locked <=25% window-fraction cap on non-divisible frame counts. The corrected rerun uses floor-based windows and is the authoritative pilot receipt.

@@ -1,0 +1,26 @@
+# Receipt List
+
+- `BASELINE_CONFIGS/generation_adaptation_primitives.json`
+- `BASELINE_CONFIGS/zpe_initializer.json`
+- `BLOCKER_RESOLUTION_DECISION.md`
+- `COMMANDS.log`
+- `DATASET_MANIFEST.json`
+- `ENVIRONMENT.json`
+- `EXTERNAL_DEPENDENCY_DECISION.md`
+- `FALSIFICATION_MEMO.md`
+- `FINAL_GATE_VERDICT.json`
+- `GENERATION_ADAPTATION_PROTOCOL.md`
+- `PERTURBATION_SUITE.json`
+- `PRIOR_RUN_INTAKE.md`
+- `RECEIPT_LIST.md`
+- `SOURCE_HASHES.json`
+- `SPLITS.json`
+- `adaptation_description_score.json`
+- `adaptation_memory_budget_curve.json`
+- `adaptation_rate_distortion.json`
+- `failure_cases/generation_adaptation_wins/mean_linear_endpoint.json`
+- `nearest_demo_adaptation_pressure.json`
+- `primitive_adaptation_metrics.json`
+- `primitive_generation_metrics.json`
+- `zpe_conditioned_schema_adaptation.json`
+- `zpe_initializer_adaptation.json`

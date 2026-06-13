@@ -1,0 +1,55 @@
+{
+  "controls": {
+    "external_dmp": {
+      "adaptation_success_per_byte": 0.0002935103244837758,
+      "assignment_accuracy": 0.995,
+      "model_zlib_bytes": 3390,
+      "true_label_endpoint_error_mean": 0.002515105334967202,
+      "true_label_generation_rmse_mean": 0.04130035924127012,
+      "true_label_velocity_rmse_mean": 0.004865391404311501
+    },
+    "external_promp": {
+      "adaptation_success_per_byte": 2.0946848977074123e-05,
+      "assignment_accuracy": 0.815,
+      "model_zlib_bytes": 38908,
+      "true_label_endpoint_error_mean": 4.2005069948064514e-17,
+      "true_label_generation_rmse_mean": 0.06380404089039966,
+      "true_label_velocity_rmse_mean": 0.007026200466900605
+    },
+    "fmp_fourier_generation_local": {
+      "adaptation_success_per_byte": 0.0002742616033755274,
+      "assignment_accuracy": 0.975,
+      "model_zlib_bytes": 3555,
+      "true_label_endpoint_error_mean": 3.091611326606516e-18,
+      "true_label_generation_rmse_mean": 0.04633186566827634,
+      "true_label_velocity_rmse_mean": 0.007462961231913794
+    },
+    "mean_linear_endpoint": {
+      "adaptation_success_per_byte": 7.911646586345382e-05,
+      "assignment_accuracy": 0.985,
+      "model_zlib_bytes": 12450,
+      "true_label_endpoint_error_mean": 3.7059908307485866e-19,
+      "true_label_generation_rmse_mean": 0.03685011709404354,
+      "true_label_velocity_rmse_mean": 0.004683104281359326
+    },
+    "medoid_demo_linear_endpoint": {
+      "adaptation_success_per_byte": 7.76887594076232e-05,
+      "assignment_accuracy": 0.96,
+      "model_zlib_bytes": 12357,
+      "true_label_endpoint_error_mean": 6.174580446456944e-19,
+      "true_label_generation_rmse_mean": 0.04096649096824535,
+      "true_label_velocity_rmse_mean": 0.005869624369080243
+    }
+  },
+  "initializer_tested": "MovementSchemaV1 central form as adapted trajectory initializer",
+  "schema_version": 1,
+  "status": "complete",
+  "zpe": {
+    "adaptation_success_per_byte": 7.658557407691057e-07,
+    "assignment_accuracy": 0.985,
+    "model_zlib_bytes": 1286143,
+    "true_label_endpoint_error_mean": 3.215291518702838e-19,
+    "true_label_generation_rmse_mean": 0.03685011709404354,
+    "true_label_velocity_rmse_mean": 0.004683104281359326
+  }
+}

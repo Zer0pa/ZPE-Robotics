@@ -1,0 +1,25 @@
+# Receipt List
+
+- `BASELINE_CONFIGS/action_adaptation_primitives.json`
+- `BASELINE_CONFIGS/downstream_selectors.json`
+- `BASELINE_PROTOCOL.md`
+- `BASELINE_UNBLOCK_PLAN.md`
+- `COMMANDS.log`
+- `DATASET_MANIFEST.json`
+- `DOWNSTREAM_PROTOCOL.md`
+- `ENVIRONMENT.json`
+- `FALSIFICATION_MEMO.md`
+- `FINAL_GATE_VERDICT.json`
+- `NARROW_OR_ABANDON_DECISION.md`
+- `POLICY_TRANSFER_BLOCKER.md`
+- `PRIOR_RUN_INTAKE.md`
+- `RECEIPT_LIST.md`
+- `SOURCE_HASHES.json`
+- `SPLITS.json`
+- `baseline_comparison.json`
+- `demo_selection_eval.json`
+- `diagnostic_ablation.json`
+- `downstream_utility_eval.json`
+- `external_movement_primitive_metrics.json`
+- `failure_cases/best_demo_selection_baseline_beats_schema.json`
+- `failure_cases/mean_linear_endpoint_action_adaptation_beats_schema.json`

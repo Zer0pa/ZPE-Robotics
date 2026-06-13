@@ -1,0 +1,10 @@
+{
+  "assignment_accuracy": 0.985,
+  "budget_per_class": 2,
+  "model": "nearest_demo",
+  "reason": "exemplar_memory_has_higher_utility_per_byte_at_lower_absolute_utility",
+  "retained_demo_count": 10,
+  "schema_accuracy": 1.0,
+  "schema_bytes": 3194037,
+  "zlib_bytes": 281804
+}

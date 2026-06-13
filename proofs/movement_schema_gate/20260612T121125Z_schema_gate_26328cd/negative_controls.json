@@ -1,0 +1,32 @@
+{
+  "classification": {
+    "accuracy": 0.355,
+    "by_label": {
+      "can": {
+        "accuracy": 0.55,
+        "count": 40
+      },
+      "lift": {
+        "accuracy": 0.5,
+        "count": 40
+      },
+      "square": {
+        "accuracy": 0.05,
+        "count": 40
+      },
+      "tool_hang": {
+        "accuracy": 0.225,
+        "count": 40
+      },
+      "transport": {
+        "accuracy": 0.45,
+        "count": 40
+      }
+    },
+    "count": 200
+  },
+  "control": "shuffled_train_labels",
+  "expected": "accuracy should drop materially versus true-label schema fitting",
+  "mean_average_precision": 0.5988333333333333,
+  "schema_version": 1
+}

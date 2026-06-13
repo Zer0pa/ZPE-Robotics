@@ -1,0 +1,42 @@
+{
+  "audit": {
+    "index_zlib_json_bytes": 4741248,
+    "no_hidden_costs": true,
+    "outlier_review_ids_reported": true,
+    "per_demo_reasons": true,
+    "representative_selection_zlib_bytes": 1345,
+    "search_query_count": 200,
+    "selected_demo_ids_reported": true
+  },
+  "non_audit_pass_count": 0,
+  "outliers": {
+    "best_baseline_average_precision": 0.2995772337398062,
+    "best_baseline_method": "isolation_projection",
+    "relative_lift": -0.19172098474616148,
+    "zpe_average_precision": 0.24214199147967957
+  },
+  "pass_count": 1,
+  "representatives": {
+    "best_full_baseline_distance": 0.6521688242478478,
+    "best_full_baseline_method": "mean_central",
+    "best_random_mean_medoid_distance": 0.6521688242478478,
+    "best_random_mean_medoid_method": "mean_central",
+    "relative_lift_vs_full_baselines": -0.13075287171538627,
+    "relative_lift_vs_random_mean_medoid": -0.13075287171538627,
+    "zpe_distance": 0.737441770861501
+  },
+  "schema_version": 1,
+  "search": {
+    "best_baseline_map": 0.9973571428571429,
+    "best_baseline_method": "dct_lowpass",
+    "relative_lift": 0.0019084166885498372,
+    "zpe_form_map": 0.9992605158730159
+  },
+  "success_criteria": {
+    "better_outlier_detection_than_distance_lof_isolation": false,
+    "better_representative_selection_than_random_mean_medoid": false,
+    "better_search_map_than_raw_fft_dct_pca": false,
+    "clearer_audit_receipts_than_raw_selection": true,
+    "downstream_proxy_improvement": false
+  }
+}

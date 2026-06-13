@@ -1,0 +1,161 @@
+{
+  "beating_target_ids": [],
+  "complement_margin": 0.005,
+  "complement_target_ids": [
+    "mg_can_outcome_success_vs_failure",
+    "mg_lift_outcome_success_vs_failure"
+  ],
+  "diversity_pass_target_ids": [],
+  "material_margin": 0.01,
+  "outlier_pass_target_ids": [
+    "mh_can_quality_worse_vs_better"
+  ],
+  "primary_method": "functional_phase_event",
+  "primary_method_storage": {
+    "description": "event, phase, correction, object/eef, gripper, S2I-like, and DemInf-like non-reward features",
+    "shape": [
+      6200,
+      113
+    ],
+    "zlib_bytes": 2164490
+  },
+  "raw_method_storage": {
+    "description": "start-relative resampled action/eef/gripper/object trajectory plus velocity",
+    "shape": [
+      6200,
+      1792
+    ],
+    "zlib_bytes": 38688277
+  },
+  "representative_pass_target_ids": [],
+  "schema_version": 1,
+  "success_criteria": {
+    "audit_only": false,
+    "beats_or_complements_two_real_functional_targets": true,
+    "better_functional_diversity_than_baselines": false,
+    "better_outlier_detection_than_baselines": false,
+    "better_representative_selection_than_baselines": false
+  },
+  "target_results": {
+    "mg_can_outcome_success_vs_failure": {
+      "balanced_accuracy_margin": 0.000555935682517994,
+      "beats_baselines": false,
+      "best_baseline_balanced_accuracy": 0.9214847759151557,
+      "best_baseline_method": "raw_phase_aligned",
+      "compact_feature_ratio_vs_raw": 0.055946921595913926,
+      "materially_complements": true,
+      "primary_balanced_accuracy": 0.9220407115976736,
+      "primary_macro_f1": 0.84109268707483,
+      "target": {
+        "diagnostic_only": false,
+        "family": "mg",
+        "label_kind": "outcome",
+        "labels": [
+          "failure",
+          "success"
+        ],
+        "positive_label": "success",
+        "target_id": "mg_can_outcome_success_vs_failure",
+        "task": "can",
+        "train_count": 3510,
+        "valid_count": 390
+      }
+    },
+    "mg_lift_outcome_success_vs_failure": {
+      "balanced_accuracy_margin": 0.0,
+      "beats_baselines": false,
+      "best_baseline_balanced_accuracy": 0.9708333333333333,
+      "best_baseline_method": "fft_lowpass",
+      "compact_feature_ratio_vs_raw": 0.055946921595913926,
+      "materially_complements": true,
+      "primary_balanced_accuracy": 0.9708333333333333,
+      "primary_macro_f1": 0.9593385741393331,
+      "target": {
+        "diagnostic_only": false,
+        "family": "mg",
+        "label_kind": "outcome",
+        "labels": [
+          "failure",
+          "success"
+        ],
+        "positive_label": "success",
+        "target_id": "mg_lift_outcome_success_vs_failure",
+        "task": "lift",
+        "train_count": 1350,
+        "valid_count": 150
+      }
+    },
+    "mh_can_quality_worse_vs_better": {
+      "balanced_accuracy_margin": -0.1499999999999999,
+      "beats_baselines": false,
+      "best_baseline_balanced_accuracy": 1.0,
+      "best_baseline_method": "pca_global",
+      "compact_feature_ratio_vs_raw": 0.055946921595913926,
+      "materially_complements": false,
+      "primary_balanced_accuracy": 0.8500000000000001,
+      "primary_macro_f1": 0.849624060150376,
+      "target": {
+        "diagnostic_only": false,
+        "family": "mh",
+        "label_kind": "quality",
+        "labels": [
+          "better",
+          "worse"
+        ],
+        "positive_label": "better",
+        "target_id": "mh_can_quality_worse_vs_better",
+        "task": "can",
+        "train_count": 180,
+        "valid_count": 20
+      }
+    },
+    "mh_lift_quality_worse_vs_better": {
+      "balanced_accuracy_margin": -0.050000000000000044,
+      "beats_baselines": false,
+      "best_baseline_balanced_accuracy": 1.0,
+      "best_baseline_method": "dct_lowpass",
+      "compact_feature_ratio_vs_raw": 0.055946921595913926,
+      "materially_complements": false,
+      "primary_balanced_accuracy": 0.95,
+      "primary_macro_f1": 0.949874686716792,
+      "target": {
+        "diagnostic_only": false,
+        "family": "mh",
+        "label_kind": "quality",
+        "labels": [
+          "better",
+          "worse"
+        ],
+        "positive_label": "better",
+        "target_id": "mh_lift_quality_worse_vs_better",
+        "task": "lift",
+        "train_count": 180,
+        "valid_count": 20
+      }
+    },
+    "mh_square_quality_worse_vs_better": {
+      "balanced_accuracy_margin": -0.04999999999999993,
+      "beats_baselines": false,
+      "best_baseline_balanced_accuracy": 0.95,
+      "best_baseline_method": "fft_lowpass",
+      "compact_feature_ratio_vs_raw": 0.055946921595913926,
+      "materially_complements": false,
+      "primary_balanced_accuracy": 0.9,
+      "primary_macro_f1": 0.898989898989899,
+      "target": {
+        "diagnostic_only": false,
+        "family": "mh",
+        "label_kind": "quality",
+        "labels": [
+          "better",
+          "worse"
+        ],
+        "positive_label": "better",
+        "target_id": "mh_square_quality_worse_vs_better",
+        "task": "square",
+        "train_count": 180,
+        "valid_count": 20
+      }
+    }
+  }
+}

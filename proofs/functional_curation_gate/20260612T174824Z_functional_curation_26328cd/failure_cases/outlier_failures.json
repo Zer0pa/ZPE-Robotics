@@ -1,0 +1,22 @@
+{
+  "mg_can_outcome_success_vs_failure": {
+    "best_baseline_average_precision": 0.9908870005416208,
+    "best_baseline_method": "lof_like_knn_density",
+    "primary_average_precision": 0.9851265425897885
+  },
+  "mg_lift_outcome_success_vs_failure": {
+    "best_baseline_average_precision": 0.9862940010600721,
+    "best_baseline_method": "lof_like_knn_density",
+    "primary_average_precision": 0.9950268988711527
+  },
+  "mh_lift_quality_worse_vs_better": {
+    "best_baseline_average_precision": 0.9809090909090908,
+    "best_baseline_method": "dct_lowpass",
+    "primary_average_precision": 0.9415404040404042
+  },
+  "mh_square_quality_worse_vs_better": {
+    "best_baseline_average_precision": 0.8790508021390375,
+    "best_baseline_method": "lof_like_knn_density",
+    "primary_average_precision": 0.7994977244977245
+  }
+}

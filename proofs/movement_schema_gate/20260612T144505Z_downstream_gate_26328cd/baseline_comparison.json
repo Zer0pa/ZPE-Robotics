@@ -1,0 +1,3168 @@
+{
+  "best_action_adaptation_baseline": {
+    "action_rmse_mean": 0.26065511041473355,
+    "assignment_accuracy": 0.995,
+    "model": "mean_linear_endpoint",
+    "model_zlib_bytes": 16581
+  },
+  "best_demo_selection_baseline": {
+    "action_rmse_mean": 0.23555981104874366,
+    "action_velocity_rmse_mean": 0.08771508682891653,
+    "budget_per_class": "all",
+    "model_zlib_bytes": 16503541,
+    "name": "raw_all_train_mean",
+    "rows": [
+      {
+        "action_rmse": 0.185877790832622,
+        "action_velocity_rmse": 0.07123484418487352,
+        "episode_id": "demo_101",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.2724503318963941,
+        "action_velocity_rmse": 0.07964016471112696,
+        "episode_id": "demo_102",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.21704361022238464,
+        "action_velocity_rmse": 0.09119703816203903,
+        "episode_id": "demo_105",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.21806361541660343,
+        "action_velocity_rmse": 0.08557011603990952,
+        "episode_id": "demo_108",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.40516749255894874,
+        "action_velocity_rmse": 0.0826120587021526,
+        "episode_id": "demo_11",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.1724315748689535,
+        "action_velocity_rmse": 0.06753606892326994,
+        "episode_id": "demo_115",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.26361098436923286,
+        "action_velocity_rmse": 0.07258935268377138,
+        "episode_id": "demo_116",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.1951765129070794,
+        "action_velocity_rmse": 0.07585722314216148,
+        "episode_id": "demo_122",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.26063599093694995,
+        "action_velocity_rmse": 0.07802712776616251,
+        "episode_id": "demo_128",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.2873830212369219,
+        "action_velocity_rmse": 0.06584371159811235,
+        "episode_id": "demo_129",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.31368687279485347,
+        "action_velocity_rmse": 0.08288707420486648,
+        "episode_id": "demo_13",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.23750027439263582,
+        "action_velocity_rmse": 0.08066641266788233,
+        "episode_id": "demo_134",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.18139708515485276,
+        "action_velocity_rmse": 0.0609311771525075,
+        "episode_id": "demo_14",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.22231643983679647,
+        "action_velocity_rmse": 0.06807385686963094,
+        "episode_id": "demo_140",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.1963111691664247,
+        "action_velocity_rmse": 0.07578369888407055,
+        "episode_id": "demo_145",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.2130718998819828,
+        "action_velocity_rmse": 0.0750682782030554,
+        "episode_id": "demo_149",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.15506031971688408,
+        "action_velocity_rmse": 0.060448254025974306,
+        "episode_id": "demo_156",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.17871314610007505,
+        "action_velocity_rmse": 0.06353877949726512,
+        "episode_id": "demo_165",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.1786411657449752,
+        "action_velocity_rmse": 0.07380335678078793,
+        "episode_id": "demo_176",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.2171344545810818,
+        "action_velocity_rmse": 0.07049912173678478,
+        "episode_id": "demo_177",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.275870095339755,
+        "action_velocity_rmse": 0.07236167373367978,
+        "episode_id": "demo_185",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.30639360717460123,
+        "action_velocity_rmse": 0.07664620784204902,
+        "episode_id": "demo_188",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.27429512760782154,
+        "action_velocity_rmse": 0.09007212210615323,
+        "episode_id": "demo_197",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.22373341115223216,
+        "action_velocity_rmse": 0.07027200839197456,
+        "episode_id": "demo_20",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.20617205944456227,
+        "action_velocity_rmse": 0.06755223523347449,
+        "episode_id": "demo_22",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.15374468863302096,
+        "action_velocity_rmse": 0.06175943300088617,
+        "episode_id": "demo_24",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.18893071113472779,
+        "action_velocity_rmse": 0.06498711923522434,
+        "episode_id": "demo_25",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.18448790072241522,
+        "action_velocity_rmse": 0.0656132483631471,
+        "episode_id": "demo_34",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.2146622446226662,
+        "action_velocity_rmse": 0.0677518380448091,
+        "episode_id": "demo_4",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.19081597653157717,
+        "action_velocity_rmse": 0.062417312893261113,
+        "episode_id": "demo_42",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.23003262370439614,
+        "action_velocity_rmse": 0.06178293539063571,
+        "episode_id": "demo_48",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.19548645215333613,
+        "action_velocity_rmse": 0.06837460623055043,
+        "episode_id": "demo_5",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.20553712830439572,
+        "action_velocity_rmse": 0.061554737678265296,
+        "episode_id": "demo_51",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.24121381593007757,
+        "action_velocity_rmse": 0.06741951035147255,
+        "episode_id": "demo_56",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.17131998598997386,
+        "action_velocity_rmse": 0.0639004724484878,
+        "episode_id": "demo_59",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.1710730714770419,
+        "action_velocity_rmse": 0.0643970117486235,
+        "episode_id": "demo_64",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.17439405767608104,
+        "action_velocity_rmse": 0.07045792495452032,
+        "episode_id": "demo_66",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.3075016615477573,
+        "action_velocity_rmse": 0.08408356454883889,
+        "episode_id": "demo_72",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.2015813964626518,
+        "action_velocity_rmse": 0.07337623478021472,
+        "episode_id": "demo_86",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.154479979461364,
+        "action_velocity_rmse": 0.059465694030181336,
+        "episode_id": "demo_92",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.19806919750628904,
+        "action_velocity_rmse": 0.047753000986248705,
+        "episode_id": "demo_105",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1374750857038241,
+        "action_velocity_rmse": 0.03839684961512026,
+        "episode_id": "demo_118",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1342808857751493,
+        "action_velocity_rmse": 0.039690840223636455,
+        "episode_id": "demo_120",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.11312046194853549,
+        "action_velocity_rmse": 0.037080448989498055,
+        "episode_id": "demo_121",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.14172299370605757,
+        "action_velocity_rmse": 0.03892019751985697,
+        "episode_id": "demo_123",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1259987527096146,
+        "action_velocity_rmse": 0.03860262788815139,
+        "episode_id": "demo_13",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.11910589228265799,
+        "action_velocity_rmse": 0.032423900500814826,
+        "episode_id": "demo_134",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1735879265832066,
+        "action_velocity_rmse": 0.040359379955415456,
+        "episode_id": "demo_137",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1402509602286467,
+        "action_velocity_rmse": 0.03763542376919261,
+        "episode_id": "demo_138",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.13780132455177801,
+        "action_velocity_rmse": 0.04080528674025362,
+        "episode_id": "demo_142",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.18018955950687754,
+        "action_velocity_rmse": 0.0817112311278575,
+        "episode_id": "demo_156",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.14076848076696133,
+        "action_velocity_rmse": 0.03296875138020418,
+        "episode_id": "demo_158",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1322913832852474,
+        "action_velocity_rmse": 0.035411793629759054,
+        "episode_id": "demo_159",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.15399775844373806,
+        "action_velocity_rmse": 0.03825032832966307,
+        "episode_id": "demo_168",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1779241465949395,
+        "action_velocity_rmse": 0.04529240763456742,
+        "episode_id": "demo_169",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.10516859589024022,
+        "action_velocity_rmse": 0.032898935010311756,
+        "episode_id": "demo_171",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1798831876523582,
+        "action_velocity_rmse": 0.04156759409208381,
+        "episode_id": "demo_176",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.133420185623758,
+        "action_velocity_rmse": 0.0344537823871818,
+        "episode_id": "demo_184",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.09901929050149375,
+        "action_velocity_rmse": 0.032122938750399295,
+        "episode_id": "demo_186",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1611979390218698,
+        "action_velocity_rmse": 0.04343497704419336,
+        "episode_id": "demo_195",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.18482040569863595,
+        "action_velocity_rmse": 0.03678454493126875,
+        "episode_id": "demo_197",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.10951554815351781,
+        "action_velocity_rmse": 0.03353144881455397,
+        "episode_id": "demo_26",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.14547605563446822,
+        "action_velocity_rmse": 0.03915307056325278,
+        "episode_id": "demo_35",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.10681631986468225,
+        "action_velocity_rmse": 0.03326397973175123,
+        "episode_id": "demo_36",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.11694264892631367,
+        "action_velocity_rmse": 0.03633064511302595,
+        "episode_id": "demo_37",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.12463030407589054,
+        "action_velocity_rmse": 0.03416923138336497,
+        "episode_id": "demo_40",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.10508182621345591,
+        "action_velocity_rmse": 0.035480949335527964,
+        "episode_id": "demo_45",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.10300390654795892,
+        "action_velocity_rmse": 0.033674893700595114,
+        "episode_id": "demo_46",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.18294819581043753,
+        "action_velocity_rmse": 0.04167541901840369,
+        "episode_id": "demo_55",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.12905863300824355,
+        "action_velocity_rmse": 0.035577396299547585,
+        "episode_id": "demo_6",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.12747618328331461,
+        "action_velocity_rmse": 0.03725647310988226,
+        "episode_id": "demo_60",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.19845518411706084,
+        "action_velocity_rmse": 0.03780411009291876,
+        "episode_id": "demo_62",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.16679949124265503,
+        "action_velocity_rmse": 0.04414481077227846,
+        "episode_id": "demo_64",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1934546768379456,
+        "action_velocity_rmse": 0.03846147197279068,
+        "episode_id": "demo_72",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.196186016877735,
+        "action_velocity_rmse": 0.04048907451950656,
+        "episode_id": "demo_75",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.14762572216268113,
+        "action_velocity_rmse": 0.03545029367954236,
+        "episode_id": "demo_8",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1265161986295405,
+        "action_velocity_rmse": 0.03811687220390161,
+        "episode_id": "demo_9",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.11475434936175748,
+        "action_velocity_rmse": 0.034868331766799154,
+        "episode_id": "demo_92",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.21939615721245756,
+        "action_velocity_rmse": 0.04241583417070856,
+        "episode_id": "demo_93",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.10924851897426699,
+        "action_velocity_rmse": 0.03415134373768408,
+        "episode_id": "demo_98",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.21759555876276984,
+        "action_velocity_rmse": 0.08261964064006873,
+        "episode_id": "demo_0",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.26666488302534164,
+        "action_velocity_rmse": 0.0730950649169979,
+        "episode_id": "demo_10",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.1854740240513404,
+        "action_velocity_rmse": 0.07209630359331563,
+        "episode_id": "demo_103",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.1911897390882206,
+        "action_velocity_rmse": 0.06395118102541315,
+        "episode_id": "demo_115",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.22821617232031496,
+        "action_velocity_rmse": 0.06930433346672854,
+        "episode_id": "demo_116",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.23779671899106558,
+        "action_velocity_rmse": 0.08050316035712471,
+        "episode_id": "demo_119",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.24885137448021988,
+        "action_velocity_rmse": 0.07985603518595645,
+        "episode_id": "demo_132",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.22088200785259707,
+        "action_velocity_rmse": 0.07079927995833327,
+        "episode_id": "demo_133",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.19365798912068907,
+        "action_velocity_rmse": 0.0645618198158945,
+        "episode_id": "demo_144",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.21087285904600048,
+        "action_velocity_rmse": 0.07814491121268936,
+        "episode_id": "demo_145",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.29062699360729854,
+        "action_velocity_rmse": 0.07499011272160341,
+        "episode_id": "demo_15",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.25672199355496167,
+        "action_velocity_rmse": 0.06508777799224144,
+        "episode_id": "demo_155",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.20071193406397206,
+        "action_velocity_rmse": 0.07284284007657357,
+        "episode_id": "demo_16",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.21242655021099605,
+        "action_velocity_rmse": 0.08172047520587758,
+        "episode_id": "demo_165",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.343805806722202,
+        "action_velocity_rmse": 0.09273268404551133,
+        "episode_id": "demo_167",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.2443686734963876,
+        "action_velocity_rmse": 0.07978258253271611,
+        "episode_id": "demo_185",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.33175428465817747,
+        "action_velocity_rmse": 0.07948165849463187,
+        "episode_id": "demo_190",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.27486405521616036,
+        "action_velocity_rmse": 0.07147784058442336,
+        "episode_id": "demo_193",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.22497234139858882,
+        "action_velocity_rmse": 0.07775681367804833,
+        "episode_id": "demo_194",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.26790971104273714,
+        "action_velocity_rmse": 0.08973666998211793,
+        "episode_id": "demo_196",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.19278258800604384,
+        "action_velocity_rmse": 0.0781643504882289,
+        "episode_id": "demo_2",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.45636240640537634,
+        "action_velocity_rmse": 0.11217639331090598,
+        "episode_id": "demo_26",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.21102974744785685,
+        "action_velocity_rmse": 0.09084179188464499,
+        "episode_id": "demo_27",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.2944420032500109,
+        "action_velocity_rmse": 0.08398618464248947,
+        "episode_id": "demo_3",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.21635966361286707,
+        "action_velocity_rmse": 0.07286516577937593,
+        "episode_id": "demo_30",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.19441586077878845,
+        "action_velocity_rmse": 0.07008433084751137,
+        "episode_id": "demo_32",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.1689428123900876,
+        "action_velocity_rmse": 0.06228889775663167,
+        "episode_id": "demo_34",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.19426732147281972,
+        "action_velocity_rmse": 0.06726222841694593,
+        "episode_id": "demo_38",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.20564335631281433,
+        "action_velocity_rmse": 0.076229386593342,
+        "episode_id": "demo_4",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.25384392248251997,
+        "action_velocity_rmse": 0.07774125389217927,
+        "episode_id": "demo_45",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.21407645259826474,
+        "action_velocity_rmse": 0.08361765466697248,
+        "episode_id": "demo_49",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.3355976607995383,
+        "action_velocity_rmse": 0.0726518928345794,
+        "episode_id": "demo_50",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.20260868349446423,
+        "action_velocity_rmse": 0.0759935357049718,
+        "episode_id": "demo_56",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.24640176415032083,
+        "action_velocity_rmse": 0.06663516079948809,
+        "episode_id": "demo_65",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.30166653785617903,
+        "action_velocity_rmse": 0.07522847085918277,
+        "episode_id": "demo_7",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.28974068696075267,
+        "action_velocity_rmse": 0.06760637329320097,
+        "episode_id": "demo_72",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.23093254760546883,
+        "action_velocity_rmse": 0.08347029674834748,
+        "episode_id": "demo_73",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.19616047271135023,
+        "action_velocity_rmse": 0.08165209451572168,
+        "episode_id": "demo_90",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.25768279365609265,
+        "action_velocity_rmse": 0.08332945690648486,
+        "episode_id": "demo_93",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.32405988853110634,
+        "action_velocity_rmse": 0.07470868760045661,
+        "episode_id": "demo_96",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.2515197420025219,
+        "action_velocity_rmse": 0.11942314326045482,
+        "episode_id": "demo_1",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.304915886152499,
+        "action_velocity_rmse": 0.12705783909449422,
+        "episode_id": "demo_100",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.32736285420982736,
+        "action_velocity_rmse": 0.12945029781863662,
+        "episode_id": "demo_109",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.3976634490718607,
+        "action_velocity_rmse": 0.12554886843232596,
+        "episode_id": "demo_110",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.27805012711235644,
+        "action_velocity_rmse": 0.10817562417997635,
+        "episode_id": "demo_120",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.27688434125703487,
+        "action_velocity_rmse": 0.12260943077385002,
+        "episode_id": "demo_135",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2627743306859111,
+        "action_velocity_rmse": 0.11315616773336075,
+        "episode_id": "demo_136",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.24703512787764234,
+        "action_velocity_rmse": 0.12146021016085796,
+        "episode_id": "demo_144",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2766996379384298,
+        "action_velocity_rmse": 0.11744333655093527,
+        "episode_id": "demo_148",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.32746774932487616,
+        "action_velocity_rmse": 0.128035941957724,
+        "episode_id": "demo_153",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.24768923806283522,
+        "action_velocity_rmse": 0.11669180830397,
+        "episode_id": "demo_154",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.258452261522091,
+        "action_velocity_rmse": 0.13240775812623884,
+        "episode_id": "demo_165",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2711088217072451,
+        "action_velocity_rmse": 0.12055287632933825,
+        "episode_id": "demo_170",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2387767910246238,
+        "action_velocity_rmse": 0.11625557535255376,
+        "episode_id": "demo_175",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.35206895158839685,
+        "action_velocity_rmse": 0.13890020552787496,
+        "episode_id": "demo_182",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.26065506782700865,
+        "action_velocity_rmse": 0.1130198013422578,
+        "episode_id": "demo_185",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.23492987236188853,
+        "action_velocity_rmse": 0.11825609611263393,
+        "episode_id": "demo_187",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2065356007223259,
+        "action_velocity_rmse": 0.10908208672462921,
+        "episode_id": "demo_19",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2805715099637867,
+        "action_velocity_rmse": 0.1322680808107997,
+        "episode_id": "demo_190",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.26588730779037134,
+        "action_velocity_rmse": 0.13806929443034968,
+        "episode_id": "demo_191",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2627698723275641,
+        "action_velocity_rmse": 0.12782991894474716,
+        "episode_id": "demo_192",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.27040311781427934,
+        "action_velocity_rmse": 0.1305413206235155,
+        "episode_id": "demo_193",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2923233833865177,
+        "action_velocity_rmse": 0.10865688184446809,
+        "episode_id": "demo_21",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2473238850379129,
+        "action_velocity_rmse": 0.11291404579487427,
+        "episode_id": "demo_25",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.3060891131187359,
+        "action_velocity_rmse": 0.1286180466933075,
+        "episode_id": "demo_29",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.3465984251651832,
+        "action_velocity_rmse": 0.11325589990065138,
+        "episode_id": "demo_34",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.3106571073239221,
+        "action_velocity_rmse": 0.11387951067786614,
+        "episode_id": "demo_4",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.3045170196104504,
+        "action_velocity_rmse": 0.12316833166591634,
+        "episode_id": "demo_41",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.24695411752929988,
+        "action_velocity_rmse": 0.12335125242494176,
+        "episode_id": "demo_42",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.22043368814971198,
+        "action_velocity_rmse": 0.1079394449608188,
+        "episode_id": "demo_45",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.24115268584596958,
+        "action_velocity_rmse": 0.11122334035135174,
+        "episode_id": "demo_54",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.30720749184221263,
+        "action_velocity_rmse": 0.12216625132116106,
+        "episode_id": "demo_68",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.25320465296926803,
+        "action_velocity_rmse": 0.10959142367599194,
+        "episode_id": "demo_7",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.3513640054301099,
+        "action_velocity_rmse": 0.12763487859577985,
+        "episode_id": "demo_83",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.24575540597553783,
+        "action_velocity_rmse": 0.11417083301058012,
+        "episode_id": "demo_84",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.25612397738543397,
+        "action_velocity_rmse": 0.12216512335758149,
+        "episode_id": "demo_88",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.29389839281486585,
+        "action_velocity_rmse": 0.11663151295078598,
+        "episode_id": "demo_89",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2740230977319933,
+        "action_velocity_rmse": 0.12275799448671548,
+        "episode_id": "demo_91",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.24309483318315772,
+        "action_velocity_rmse": 0.11250934318879335,
+        "episode_id": "demo_94",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.30852342331855426,
+        "action_velocity_rmse": 0.12075129124209193,
+        "episode_id": "demo_99",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.41282421637893146,
+        "action_velocity_rmse": 0.1630557771251268,
+        "episode_id": "demo_0",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.25398123685936075,
+        "action_velocity_rmse": 0.13214485327430397,
+        "episode_id": "demo_109",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.23379533530575647,
+        "action_velocity_rmse": 0.11721080071133111,
+        "episode_id": "demo_11",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.2611570274377201,
+        "action_velocity_rmse": 0.13159867422164725,
+        "episode_id": "demo_110",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.3212531432546212,
+        "action_velocity_rmse": 0.16010353952705716,
+        "episode_id": "demo_118",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.24621584768615334,
+        "action_velocity_rmse": 0.12115546766036796,
+        "episode_id": "demo_124",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.2402250290664452,
+        "action_velocity_rmse": 0.129334488414316,
+        "episode_id": "demo_129",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.2692371423242408,
+        "action_velocity_rmse": 0.12310668900254702,
+        "episode_id": "demo_140",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.33301656679185315,
+        "action_velocity_rmse": 0.1407817104331148,
+        "episode_id": "demo_142",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.29448273826488625,
+        "action_velocity_rmse": 0.14060558317707927,
+        "episode_id": "demo_147",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.20641468193308138,
+        "action_velocity_rmse": 0.1030466753059583,
+        "episode_id": "demo_149",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.268298323857625,
+        "action_velocity_rmse": 0.11560135043520861,
+        "episode_id": "demo_15",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.24632594810883024,
+        "action_velocity_rmse": 0.1148830574954067,
+        "episode_id": "demo_153",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.24418600237509341,
+        "action_velocity_rmse": 0.1218843765417895,
+        "episode_id": "demo_16",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.2808076494190076,
+        "action_velocity_rmse": 0.12605308400652912,
+        "episode_id": "demo_173",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.24558018692220768,
+        "action_velocity_rmse": 0.13250343621233807,
+        "episode_id": "demo_179",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.3870235467703471,
+        "action_velocity_rmse": 0.141161255145258,
+        "episode_id": "demo_187",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.317965544300022,
+        "action_velocity_rmse": 0.13300726121002873,
+        "episode_id": "demo_19",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.25252643842659117,
+        "action_velocity_rmse": 0.12182120431165498,
+        "episode_id": "demo_192",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.23229387406062565,
+        "action_velocity_rmse": 0.11424354562520207,
+        "episode_id": "demo_193",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.35557963103931517,
+        "action_velocity_rmse": 0.14109797789757753,
+        "episode_id": "demo_196",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.2008384853268074,
+        "action_velocity_rmse": 0.11627181547701786,
+        "episode_id": "demo_199",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.35112685201502986,
+        "action_velocity_rmse": 0.14394260912528759,
+        "episode_id": "demo_28",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.23784972522607753,
+        "action_velocity_rmse": 0.11853220421722896,
+        "episode_id": "demo_31",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.23819463245275657,
+        "action_velocity_rmse": 0.13138752157161035,
+        "episode_id": "demo_42",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.2542377412388222,
+        "action_velocity_rmse": 0.11135029542537758,
+        "episode_id": "demo_49",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.28492705956190867,
+        "action_velocity_rmse": 0.15141676929370193,
+        "episode_id": "demo_51",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.2560069298775776,
+        "action_velocity_rmse": 0.11996085136378308,
+        "episode_id": "demo_58",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.4021088478437959,
+        "action_velocity_rmse": 0.1887430738321656,
+        "episode_id": "demo_59",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.43425446654449207,
+        "action_velocity_rmse": 0.1499510474953868,
+        "episode_id": "demo_61",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.2618348392221237,
+        "action_velocity_rmse": 0.12488269777302105,
+        "episode_id": "demo_67",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.29788331437247,
+        "action_velocity_rmse": 0.14419115200002938,
+        "episode_id": "demo_69",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.22787129462449837,
+        "action_velocity_rmse": 0.12043462382883363,
+        "episode_id": "demo_72",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.22204406265439497,
+        "action_velocity_rmse": 0.1118905798386018,
+        "episode_id": "demo_84",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.22606308142568024,
+        "action_velocity_rmse": 0.11280228567686153,
+        "episode_id": "demo_89",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.2257704271536837,
+        "action_velocity_rmse": 0.11944714071027689,
+        "episode_id": "demo_90",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.4049304114580568,
+        "action_velocity_rmse": 0.14627816336337723,
+        "episode_id": "demo_95",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.3571194274451118,
+        "action_velocity_rmse": 0.1311308229927461,
+        "episode_id": "demo_96",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.3984711060873316,
+        "action_velocity_rmse": 0.14068677399514357,
+        "episode_id": "demo_98",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.30451209063504764,
+        "action_velocity_rmse": 0.13198575087131256,
+        "episode_id": "demo_99",
+        "true_label": "transport"
+      }
+    ],
+    "selected_demo_count": 600,
+    "selected_indices": {
+      "can": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "lift": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "square": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "tool_hang": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "transport": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ]
+    },
+    "task_success_proxy": 0.8093497304280233,
+    "utility_per_zlib_byte": 4.904097432351174e-08
+  },
+  "policy_transfer_claim_allowed": false,
+  "primary_metric": "heldout action imitation/adaptation RMSE, lower is better",
+  "readme_claim_upgrade_allowed": false,
+  "schema_action_adaptation_relative_improvement": 0.0,
+  "schema_selected_best": {
+    "action_rmse_mean": 0.24157074172517906,
+    "action_velocity_rmse_mean": 0.08962837921358358,
+    "budget_per_class": 20,
+    "model_zlib_bytes": 5867687,
+    "name": "schema_selected",
+    "rows": [
+      {
+        "action_rmse": 0.1890544175575534,
+        "action_velocity_rmse": 0.06995062666437991,
+        "episode_id": "demo_101",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.25958781791228613,
+        "action_velocity_rmse": 0.08353375783279801,
+        "episode_id": "demo_102",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.2205498344552605,
+        "action_velocity_rmse": 0.09313289159509158,
+        "episode_id": "demo_105",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.23512243350634593,
+        "action_velocity_rmse": 0.09023680360192532,
+        "episode_id": "demo_108",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.42790837962772343,
+        "action_velocity_rmse": 0.08601457513563492,
+        "episode_id": "demo_11",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.19139400647777213,
+        "action_velocity_rmse": 0.07314638771992714,
+        "episode_id": "demo_115",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.2901417086933386,
+        "action_velocity_rmse": 0.07748577821773292,
+        "episode_id": "demo_116",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.18262182990279097,
+        "action_velocity_rmse": 0.07460869917572868,
+        "episode_id": "demo_122",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.2485727090544432,
+        "action_velocity_rmse": 0.07632805370299325,
+        "episode_id": "demo_128",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.27936561696667717,
+        "action_velocity_rmse": 0.06769518280450668,
+        "episode_id": "demo_129",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.34400987000011896,
+        "action_velocity_rmse": 0.08616408460581348,
+        "episode_id": "demo_13",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.260390183419711,
+        "action_velocity_rmse": 0.08599640961408593,
+        "episode_id": "demo_134",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.1794218026995271,
+        "action_velocity_rmse": 0.06411577624973692,
+        "episode_id": "demo_14",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.21192566143137534,
+        "action_velocity_rmse": 0.06815555481363383,
+        "episode_id": "demo_140",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.1842920600087838,
+        "action_velocity_rmse": 0.0778695206028946,
+        "episode_id": "demo_145",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.22685178318166713,
+        "action_velocity_rmse": 0.07890434103721199,
+        "episode_id": "demo_149",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.13176871025798492,
+        "action_velocity_rmse": 0.05293087384193534,
+        "episode_id": "demo_156",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.1998424426556355,
+        "action_velocity_rmse": 0.06721910755056315,
+        "episode_id": "demo_165",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.1636114297991867,
+        "action_velocity_rmse": 0.07385832129475459,
+        "episode_id": "demo_176",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.2348441796808112,
+        "action_velocity_rmse": 0.07576893791501772,
+        "episode_id": "demo_177",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.3073225734740947,
+        "action_velocity_rmse": 0.07598451373916264,
+        "episode_id": "demo_185",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.303235296273066,
+        "action_velocity_rmse": 0.07990196837174596,
+        "episode_id": "demo_188",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.26391790804216386,
+        "action_velocity_rmse": 0.0918856623196837,
+        "episode_id": "demo_197",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.20011412483528845,
+        "action_velocity_rmse": 0.06882308421095447,
+        "episode_id": "demo_20",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.19189564537621503,
+        "action_velocity_rmse": 0.06406478891678144,
+        "episode_id": "demo_22",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.15814388016682265,
+        "action_velocity_rmse": 0.06551261259646168,
+        "episode_id": "demo_24",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.18449918698467102,
+        "action_velocity_rmse": 0.06389963671710772,
+        "episode_id": "demo_25",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.1741385639788168,
+        "action_velocity_rmse": 0.06629339649329635,
+        "episode_id": "demo_34",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.19040332312723063,
+        "action_velocity_rmse": 0.06774008340297553,
+        "episode_id": "demo_4",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.16491572285834163,
+        "action_velocity_rmse": 0.055861304183348975,
+        "episode_id": "demo_42",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.25678843360481635,
+        "action_velocity_rmse": 0.06186387053502956,
+        "episode_id": "demo_48",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.2115558820241071,
+        "action_velocity_rmse": 0.07285330579624755,
+        "episode_id": "demo_5",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.23040989144716514,
+        "action_velocity_rmse": 0.06435954237895344,
+        "episode_id": "demo_51",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.22749165605649344,
+        "action_velocity_rmse": 0.07023581624032639,
+        "episode_id": "demo_56",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.1913758951966292,
+        "action_velocity_rmse": 0.06664517554280236,
+        "episode_id": "demo_59",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.19248298093071253,
+        "action_velocity_rmse": 0.06995988816955388,
+        "episode_id": "demo_64",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.17613640241295364,
+        "action_velocity_rmse": 0.07342392472572266,
+        "episode_id": "demo_66",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.33515463892379277,
+        "action_velocity_rmse": 0.08730374494256081,
+        "episode_id": "demo_72",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.18542339159967214,
+        "action_velocity_rmse": 0.07181847521656566,
+        "episode_id": "demo_86",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.1546263893354816,
+        "action_velocity_rmse": 0.05948167150057217,
+        "episode_id": "demo_92",
+        "true_label": "can"
+      },
+      {
+        "action_rmse": 0.21354009025986584,
+        "action_velocity_rmse": 0.052323176025411255,
+        "episode_id": "demo_105",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.14788582519999952,
+        "action_velocity_rmse": 0.0405571796330524,
+        "episode_id": "demo_118",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.14315077123067468,
+        "action_velocity_rmse": 0.0402930441210176,
+        "episode_id": "demo_120",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.10419275594171669,
+        "action_velocity_rmse": 0.03411301377861606,
+        "episode_id": "demo_121",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1518882774542827,
+        "action_velocity_rmse": 0.0423334438254917,
+        "episode_id": "demo_123",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.13390531976593498,
+        "action_velocity_rmse": 0.03879851498184907,
+        "episode_id": "demo_13",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.10449066205049473,
+        "action_velocity_rmse": 0.028538423580529014,
+        "episode_id": "demo_134",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.18913015137243647,
+        "action_velocity_rmse": 0.04525288448884072,
+        "episode_id": "demo_137",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.15112962935295784,
+        "action_velocity_rmse": 0.03975865656982227,
+        "episode_id": "demo_138",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1399827319125167,
+        "action_velocity_rmse": 0.04107959219972955,
+        "episode_id": "demo_142",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.19122598095671658,
+        "action_velocity_rmse": 0.08357370499057518,
+        "episode_id": "demo_156",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1255524508055041,
+        "action_velocity_rmse": 0.030862608382803313,
+        "episode_id": "demo_158",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1327253838237844,
+        "action_velocity_rmse": 0.03669677624850397,
+        "episode_id": "demo_159",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1702753474149782,
+        "action_velocity_rmse": 0.04330173632581418,
+        "episode_id": "demo_168",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.18575592051511933,
+        "action_velocity_rmse": 0.04886829690870537,
+        "episode_id": "demo_169",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.09323586736140871,
+        "action_velocity_rmse": 0.02917406462492681,
+        "episode_id": "demo_171",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.19697544930480898,
+        "action_velocity_rmse": 0.04684884152336103,
+        "episode_id": "demo_176",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.13349833557079493,
+        "action_velocity_rmse": 0.03675236034304864,
+        "episode_id": "demo_184",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.08605059505837065,
+        "action_velocity_rmse": 0.03047957441517625,
+        "episode_id": "demo_186",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.17023666639920257,
+        "action_velocity_rmse": 0.045217783103574286,
+        "episode_id": "demo_195",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.18972062036079082,
+        "action_velocity_rmse": 0.03973320438297472,
+        "episode_id": "demo_197",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.10861535820247954,
+        "action_velocity_rmse": 0.0359569951309573,
+        "episode_id": "demo_26",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1580104203457887,
+        "action_velocity_rmse": 0.04146907678650674,
+        "episode_id": "demo_35",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.09809685950230428,
+        "action_velocity_rmse": 0.03218699802424038,
+        "episode_id": "demo_36",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.11978484524336451,
+        "action_velocity_rmse": 0.03506001105674118,
+        "episode_id": "demo_37",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.10904988787705193,
+        "action_velocity_rmse": 0.03001967808672198,
+        "episode_id": "demo_40",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.09348332707331528,
+        "action_velocity_rmse": 0.032824432461298424,
+        "episode_id": "demo_45",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.09989396871897757,
+        "action_velocity_rmse": 0.030269208176825477,
+        "episode_id": "demo_46",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.2009312836397091,
+        "action_velocity_rmse": 0.046362028470465354,
+        "episode_id": "demo_55",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.13099683248110972,
+        "action_velocity_rmse": 0.036686868543961595,
+        "episode_id": "demo_6",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.12672351665069997,
+        "action_velocity_rmse": 0.03963290115456381,
+        "episode_id": "demo_60",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.20775404374952913,
+        "action_velocity_rmse": 0.040485096475428486,
+        "episode_id": "demo_62",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.17625580553448092,
+        "action_velocity_rmse": 0.04645202658036799,
+        "episode_id": "demo_64",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1991070282420493,
+        "action_velocity_rmse": 0.04135206049273959,
+        "episode_id": "demo_72",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.19689766666547076,
+        "action_velocity_rmse": 0.0424698346993112,
+        "episode_id": "demo_75",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.1512751189088447,
+        "action_velocity_rmse": 0.03786526176725821,
+        "episode_id": "demo_8",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.12707475553723258,
+        "action_velocity_rmse": 0.03791068983856426,
+        "episode_id": "demo_9",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.10777521173633757,
+        "action_velocity_rmse": 0.03424893645480569,
+        "episode_id": "demo_92",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.2293118709082319,
+        "action_velocity_rmse": 0.04427450056584697,
+        "episode_id": "demo_93",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.10073743748221464,
+        "action_velocity_rmse": 0.03167005567659282,
+        "episode_id": "demo_98",
+        "true_label": "lift"
+      },
+      {
+        "action_rmse": 0.21219961429320566,
+        "action_velocity_rmse": 0.08433834374660815,
+        "episode_id": "demo_0",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.2572405723752358,
+        "action_velocity_rmse": 0.07359008467024783,
+        "episode_id": "demo_10",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.22703349967473418,
+        "action_velocity_rmse": 0.07666563840033226,
+        "episode_id": "demo_103",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.1573899973480953,
+        "action_velocity_rmse": 0.06202361910716414,
+        "episode_id": "demo_115",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.27784694401528354,
+        "action_velocity_rmse": 0.07425022881003475,
+        "episode_id": "demo_116",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.22846090361563054,
+        "action_velocity_rmse": 0.08461650615386666,
+        "episode_id": "demo_119",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.24588394375475803,
+        "action_velocity_rmse": 0.08109127881447005,
+        "episode_id": "demo_132",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.24934061877171299,
+        "action_velocity_rmse": 0.07151637686579233,
+        "episode_id": "demo_133",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.17122649591473055,
+        "action_velocity_rmse": 0.0633040633212453,
+        "episode_id": "demo_144",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.18181741077349914,
+        "action_velocity_rmse": 0.07524013176643952,
+        "episode_id": "demo_145",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.342931051446451,
+        "action_velocity_rmse": 0.07725772119973984,
+        "episode_id": "demo_15",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.23326449645022954,
+        "action_velocity_rmse": 0.06565831577278837,
+        "episode_id": "demo_155",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.2058437818051973,
+        "action_velocity_rmse": 0.0779172221410047,
+        "episode_id": "demo_16",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.1784804807414054,
+        "action_velocity_rmse": 0.08025824330864599,
+        "episode_id": "demo_165",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.37114980837557354,
+        "action_velocity_rmse": 0.09862941504907388,
+        "episode_id": "demo_167",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.28209978965451166,
+        "action_velocity_rmse": 0.08226373571488337,
+        "episode_id": "demo_185",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.3317664740675154,
+        "action_velocity_rmse": 0.08048743308254247,
+        "episode_id": "demo_190",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.26017229062327524,
+        "action_velocity_rmse": 0.07065936524500438,
+        "episode_id": "demo_193",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.2609414891741684,
+        "action_velocity_rmse": 0.08162653117102613,
+        "episode_id": "demo_194",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.31944409335553253,
+        "action_velocity_rmse": 0.09755255005908142,
+        "episode_id": "demo_196",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.16571219572496773,
+        "action_velocity_rmse": 0.07507626393999584,
+        "episode_id": "demo_2",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.4852534697306432,
+        "action_velocity_rmse": 0.11479423549042266,
+        "episode_id": "demo_26",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.2071325480073496,
+        "action_velocity_rmse": 0.08853329021223481,
+        "episode_id": "demo_27",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.28037551541388017,
+        "action_velocity_rmse": 0.08460917000060848,
+        "episode_id": "demo_3",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.1949226821592761,
+        "action_velocity_rmse": 0.07435739583772019,
+        "episode_id": "demo_30",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.22885346324495867,
+        "action_velocity_rmse": 0.07010582720303775,
+        "episode_id": "demo_32",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.1533244641946465,
+        "action_velocity_rmse": 0.06177136794680434,
+        "episode_id": "demo_34",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.1595365875050127,
+        "action_velocity_rmse": 0.06800698268373173,
+        "episode_id": "demo_38",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.19523404189684618,
+        "action_velocity_rmse": 0.07895302441829015,
+        "episode_id": "demo_4",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.2988217775359914,
+        "action_velocity_rmse": 0.08603323495108434,
+        "episode_id": "demo_45",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.23935441997886342,
+        "action_velocity_rmse": 0.08995424063278178,
+        "episode_id": "demo_49",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.3922389453706287,
+        "action_velocity_rmse": 0.07646760569876201,
+        "episode_id": "demo_50",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.17603341106786174,
+        "action_velocity_rmse": 0.07291227296989464,
+        "episode_id": "demo_56",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.23435148623623617,
+        "action_velocity_rmse": 0.06829187927579142,
+        "episode_id": "demo_65",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.29099558632523453,
+        "action_velocity_rmse": 0.08143551104649115,
+        "episode_id": "demo_7",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.28743086132165685,
+        "action_velocity_rmse": 0.06904067923821791,
+        "episode_id": "demo_72",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.2586494481390308,
+        "action_velocity_rmse": 0.08612230924781432,
+        "episode_id": "demo_73",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.20482345043832628,
+        "action_velocity_rmse": 0.0863854127918474,
+        "episode_id": "demo_90",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.2540694107030026,
+        "action_velocity_rmse": 0.08531766862176055,
+        "episode_id": "demo_93",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.32703678258613916,
+        "action_velocity_rmse": 0.07824161917447965,
+        "episode_id": "demo_96",
+        "true_label": "square"
+      },
+      {
+        "action_rmse": 0.304568762771089,
+        "action_velocity_rmse": 0.12874418472127688,
+        "episode_id": "demo_1",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.3032081367567267,
+        "action_velocity_rmse": 0.13065912092516274,
+        "episode_id": "demo_100",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.4108557144667417,
+        "action_velocity_rmse": 0.14409775041345704,
+        "episode_id": "demo_109",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.4737296581394194,
+        "action_velocity_rmse": 0.1290303975242942,
+        "episode_id": "demo_110",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2510853043485674,
+        "action_velocity_rmse": 0.1035820203627748,
+        "episode_id": "demo_120",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.3111839663943014,
+        "action_velocity_rmse": 0.13148840056048394,
+        "episode_id": "demo_135",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2152362072922425,
+        "action_velocity_rmse": 0.10641214664596291,
+        "episode_id": "demo_136",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.24111509249945068,
+        "action_velocity_rmse": 0.12231557097963629,
+        "episode_id": "demo_144",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.3049487966614449,
+        "action_velocity_rmse": 0.11804937238368149,
+        "episode_id": "demo_148",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.39043004859541897,
+        "action_velocity_rmse": 0.1334346500510663,
+        "episode_id": "demo_153",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.27177596676020127,
+        "action_velocity_rmse": 0.12379387871862144,
+        "episode_id": "demo_154",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.27937418900814315,
+        "action_velocity_rmse": 0.13738773264702622,
+        "episode_id": "demo_165",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.30963772720133353,
+        "action_velocity_rmse": 0.13014365863953908,
+        "episode_id": "demo_170",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.23538610884513245,
+        "action_velocity_rmse": 0.10937331943013773,
+        "episode_id": "demo_175",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.42704079059576455,
+        "action_velocity_rmse": 0.14905536344955014,
+        "episode_id": "demo_182",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.23509492252324193,
+        "action_velocity_rmse": 0.11377842043187247,
+        "episode_id": "demo_185",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.22972276568361596,
+        "action_velocity_rmse": 0.12237990774742771,
+        "episode_id": "demo_187",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2007933332224332,
+        "action_velocity_rmse": 0.10908889976850558,
+        "episode_id": "demo_19",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2631056954894265,
+        "action_velocity_rmse": 0.13323180169867124,
+        "episode_id": "demo_190",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.26102206021899577,
+        "action_velocity_rmse": 0.13946148657105706,
+        "episode_id": "demo_191",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2476408058428506,
+        "action_velocity_rmse": 0.12934879414103076,
+        "episode_id": "demo_192",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2601680526866613,
+        "action_velocity_rmse": 0.13259846816050055,
+        "episode_id": "demo_193",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.3521770697082485,
+        "action_velocity_rmse": 0.11254939298255846,
+        "episode_id": "demo_21",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.1950460511167957,
+        "action_velocity_rmse": 0.11024099454872803,
+        "episode_id": "demo_25",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2920863217621031,
+        "action_velocity_rmse": 0.13541468628437373,
+        "episode_id": "demo_29",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.4096915985435967,
+        "action_velocity_rmse": 0.1152497226494234,
+        "episode_id": "demo_34",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2807786515700209,
+        "action_velocity_rmse": 0.11772193243677796,
+        "episode_id": "demo_4",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.3576443400564337,
+        "action_velocity_rmse": 0.1278837299323047,
+        "episode_id": "demo_41",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2824996746948023,
+        "action_velocity_rmse": 0.12530147535917158,
+        "episode_id": "demo_42",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.1963041179987669,
+        "action_velocity_rmse": 0.10442919960025944,
+        "episode_id": "demo_45",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.21082167497813678,
+        "action_velocity_rmse": 0.11400245782130501,
+        "episode_id": "demo_54",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.3009455032516035,
+        "action_velocity_rmse": 0.1264286079111492,
+        "episode_id": "demo_68",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.28234212825084537,
+        "action_velocity_rmse": 0.11966813682931399,
+        "episode_id": "demo_7",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.4294377190935561,
+        "action_velocity_rmse": 0.13166681652002807,
+        "episode_id": "demo_83",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.19570277885158507,
+        "action_velocity_rmse": 0.10934555585072271,
+        "episode_id": "demo_84",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.2735495025429773,
+        "action_velocity_rmse": 0.123066678846839,
+        "episode_id": "demo_88",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.28572454306830813,
+        "action_velocity_rmse": 0.11487481277902079,
+        "episode_id": "demo_89",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.3380261889118934,
+        "action_velocity_rmse": 0.13387076214641053,
+        "episode_id": "demo_91",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.21998521311287053,
+        "action_velocity_rmse": 0.10835646236488461,
+        "episode_id": "demo_94",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.37766494776233683,
+        "action_velocity_rmse": 0.12385521084632377,
+        "episode_id": "demo_99",
+        "true_label": "tool_hang"
+      },
+      {
+        "action_rmse": 0.4334508875054242,
+        "action_velocity_rmse": 0.16688827577995421,
+        "episode_id": "demo_0",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.246282964843168,
+        "action_velocity_rmse": 0.13130276213660533,
+        "episode_id": "demo_109",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.2382234953601013,
+        "action_velocity_rmse": 0.11770224479042538,
+        "episode_id": "demo_11",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.2652731265106504,
+        "action_velocity_rmse": 0.13164497691973118,
+        "episode_id": "demo_110",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.3376138484099179,
+        "action_velocity_rmse": 0.16005231336054487,
+        "episode_id": "demo_118",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.23917978962883893,
+        "action_velocity_rmse": 0.11964075044310182,
+        "episode_id": "demo_124",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.24300459330705299,
+        "action_velocity_rmse": 0.1300568445035506,
+        "episode_id": "demo_129",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.25735501936375743,
+        "action_velocity_rmse": 0.12099656690538155,
+        "episode_id": "demo_140",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.35610754770569975,
+        "action_velocity_rmse": 0.14552091254161825,
+        "episode_id": "demo_142",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.30808004997014427,
+        "action_velocity_rmse": 0.14499279278923677,
+        "episode_id": "demo_147",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.18538492614339494,
+        "action_velocity_rmse": 0.10116424394345754,
+        "episode_id": "demo_149",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.28345475066422166,
+        "action_velocity_rmse": 0.12092951565358183,
+        "episode_id": "demo_15",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.25570446954418574,
+        "action_velocity_rmse": 0.12048972179920632,
+        "episode_id": "demo_153",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.24714894601373308,
+        "action_velocity_rmse": 0.12455242112533993,
+        "episode_id": "demo_16",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.30931401945065473,
+        "action_velocity_rmse": 0.13499876523676724,
+        "episode_id": "demo_173",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.24848977530591318,
+        "action_velocity_rmse": 0.13338569654582919,
+        "episode_id": "demo_179",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.4062047202035394,
+        "action_velocity_rmse": 0.14498018544360777,
+        "episode_id": "demo_187",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.33679646867446517,
+        "action_velocity_rmse": 0.13708900490887518,
+        "episode_id": "demo_19",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.23947147113320008,
+        "action_velocity_rmse": 0.11869212154997585,
+        "episode_id": "demo_192",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.20808995016534695,
+        "action_velocity_rmse": 0.11348637077321856,
+        "episode_id": "demo_193",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.38643642592564664,
+        "action_velocity_rmse": 0.14855124260558916,
+        "episode_id": "demo_196",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.18864285437501496,
+        "action_velocity_rmse": 0.11736295062027624,
+        "episode_id": "demo_199",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.3735417249450298,
+        "action_velocity_rmse": 0.1470544888804653,
+        "episode_id": "demo_28",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.21469558486725374,
+        "action_velocity_rmse": 0.11519775012638027,
+        "episode_id": "demo_31",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.2253003237846099,
+        "action_velocity_rmse": 0.13171674107025036,
+        "episode_id": "demo_42",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.26474208761104057,
+        "action_velocity_rmse": 0.11488864356322499,
+        "episode_id": "demo_49",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.28862522507924343,
+        "action_velocity_rmse": 0.1556438032901024,
+        "episode_id": "demo_51",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.26156451650971596,
+        "action_velocity_rmse": 0.12492169707634457,
+        "episode_id": "demo_58",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.41922448695880743,
+        "action_velocity_rmse": 0.19065331715933487,
+        "episode_id": "demo_59",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.4692040302758549,
+        "action_velocity_rmse": 0.1565847089394467,
+        "episode_id": "demo_61",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.2651858806517508,
+        "action_velocity_rmse": 0.12962250248388366,
+        "episode_id": "demo_67",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.31637534570606496,
+        "action_velocity_rmse": 0.1474485270484697,
+        "episode_id": "demo_69",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.1993012551474008,
+        "action_velocity_rmse": 0.11542266066756528,
+        "episode_id": "demo_72",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.20935140336365157,
+        "action_velocity_rmse": 0.11050059262429474,
+        "episode_id": "demo_84",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.21773887539505163,
+        "action_velocity_rmse": 0.11174421051685193,
+        "episode_id": "demo_89",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.21190251715048775,
+        "action_velocity_rmse": 0.11631658706320992,
+        "episode_id": "demo_90",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.4323742756439093,
+        "action_velocity_rmse": 0.15190799730076376,
+        "episode_id": "demo_95",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.3835133194796035,
+        "action_velocity_rmse": 0.13652700296547934,
+        "episode_id": "demo_96",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.4310279126916504,
+        "action_velocity_rmse": 0.1488724025040544,
+        "episode_id": "demo_98",
+        "true_label": "transport"
+      },
+      {
+        "action_rmse": 0.316900309932147,
+        "action_velocity_rmse": 0.13665106072438263,
+        "episode_id": "demo_99",
+        "true_label": "transport"
+      }
+    ],
+    "selected_demo_count": 100,
+    "selected_indices": {
+      "can": [
+        16,
+        50,
+        25,
+        22,
+        1,
+        28,
+        87,
+        93,
+        72,
+        37,
+        74,
+        53,
+        92,
+        106,
+        112,
+        38,
+        42,
+        82,
+        39,
+        89
+      ],
+      "lift": [
+        35,
+        52,
+        50,
+        74,
+        46,
+        30,
+        42,
+        53,
+        86,
+        114,
+        51,
+        57,
+        29,
+        39,
+        41,
+        15,
+        64,
+        115,
+        104,
+        14
+      ],
+      "square": [
+        28,
+        67,
+        12,
+        10,
+        37,
+        14,
+        55,
+        57,
+        91,
+        76,
+        52,
+        23,
+        89,
+        79,
+        6,
+        19,
+        117,
+        51,
+        82,
+        11
+      ],
+      "tool_hang": [
+        77,
+        109,
+        85,
+        75,
+        74,
+        79,
+        86,
+        97,
+        26,
+        13,
+        12,
+        99,
+        56,
+        81,
+        76,
+        0,
+        27,
+        80,
+        71,
+        101
+      ],
+      "transport": [
+        61,
+        108,
+        46,
+        13,
+        113,
+        115,
+        77,
+        27,
+        55,
+        114,
+        0,
+        45,
+        67,
+        116,
+        12,
+        36,
+        39,
+        76,
+        14,
+        84
+      ]
+    },
+    "task_success_proxy": 0.8054313511048807,
+    "utility_per_zlib_byte": 1.3726556155856315e-07
+  },
+  "schema_selection_relative_improvement": -0.025517640932355742,
+  "schema_version": 1,
+  "zpe_action_adaptation": {
+    "action_rmse_mean": 0.26065511041473355,
+    "assignment_accuracy": 0.995,
+    "model": "zpe_schema_initializer",
+    "model_zlib_bytes": 1286143
+  }
+}

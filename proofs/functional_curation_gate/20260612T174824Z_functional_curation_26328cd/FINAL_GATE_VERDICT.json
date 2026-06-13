@@ -1,0 +1,18 @@
+{
+  "broad_movement_memory_claim_allowed": false,
+  "nature_claim_allowed": false,
+  "paired_can_counted_for_product_pass": false,
+  "product_worthy": false,
+  "readme_claim_upgrade_allowed": false,
+  "reason": "Functional features did not clear the two-real-target baseline gate.",
+  "schema_version": 1,
+  "scope": "function-aware robot demonstration dataset curation",
+  "status": "abandon_functional_curation",
+  "success_criteria": {
+    "audit_only": false,
+    "beats_or_complements_two_real_functional_targets": false,
+    "better_functional_diversity_than_baselines": false,
+    "better_outlier_detection_than_baselines": false,
+    "better_representative_selection_than_baselines": false
+  }
+}

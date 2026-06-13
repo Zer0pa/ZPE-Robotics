@@ -1,0 +1,658 @@
+{
+  "contact_policy": "No force/tactile fields are present; contact is inferred only from gripper and eef-object proxy events.",
+  "examples": {
+    "mg/can/failure": [
+      {
+        "demo_id": "mg/can/demo_1",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.2550335570469799,
+        "frame_count": 150,
+        "late_correction_ratio": -0.05644824194257336,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": null
+      },
+      {
+        "demo_id": "mg/can/demo_2",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.006711409395973154,
+        "frame_count": 150,
+        "late_correction_ratio": -0.06028527698711863,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": null
+      },
+      {
+        "demo_id": "mg/can/demo_3",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.087248322147651,
+        "frame_count": 150,
+        "late_correction_ratio": -0.03321760057216372,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": null
+      },
+      {
+        "demo_id": "mg/can/demo_4",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.46308724832214765,
+        "frame_count": 150,
+        "late_correction_ratio": -0.04550298872492622,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": null
+      },
+      {
+        "demo_id": "mg/can/demo_5",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.06040268456375839,
+        "frame_count": 150,
+        "late_correction_ratio": -0.04532588787605429,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": null
+      }
+    ],
+    "mg/can/success": [
+      {
+        "demo_id": "mg/can/demo_1832",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.06711409395973154,
+        "frame_count": 150,
+        "late_correction_ratio": -0.0483270131805975,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.6040268456375839
+      },
+      {
+        "demo_id": "mg/can/demo_1897",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.04697986577181208,
+        "frame_count": 150,
+        "late_correction_ratio": -0.04494090466977906,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.5369127516778524
+      },
+      {
+        "demo_id": "mg/can/demo_1912",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.006711409395973154,
+        "frame_count": 150,
+        "late_correction_ratio": -0.03199144180461905,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.5570469798657718
+      },
+      {
+        "demo_id": "mg/can/demo_2103",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 150,
+        "late_correction_ratio": -0.03611990848958138,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.6845637583892618
+      },
+      {
+        "demo_id": "mg/can/demo_2130",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 150,
+        "late_correction_ratio": -0.0436619420859352,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.5704697986577181
+      }
+    ],
+    "mg/lift/failure": [
+      {
+        "demo_id": "mg/lift/demo_1",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 150,
+        "late_correction_ratio": -0.10073521451807968,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": null
+      },
+      {
+        "demo_id": "mg/lift/demo_2",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.013422818791946308,
+        "frame_count": 150,
+        "late_correction_ratio": -0.09771508770215488,
+        "min_eef_object_distance_ratio": 0.7651006711409396,
+        "reward_onset_ratio": null
+      },
+      {
+        "demo_id": "mg/lift/demo_3",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 150,
+        "late_correction_ratio": -0.12903600540432852,
+        "min_eef_object_distance_ratio": 0.3221476510067114,
+        "reward_onset_ratio": null
+      },
+      {
+        "demo_id": "mg/lift/demo_4",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.013422818791946308,
+        "frame_count": 150,
+        "late_correction_ratio": -0.10212546507925356,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": null
+      },
+      {
+        "demo_id": "mg/lift/demo_5",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.31543624161073824,
+        "frame_count": 150,
+        "late_correction_ratio": -0.1052340334741965,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": null
+      }
+    ],
+    "mg/lift/success": [
+      {
+        "demo_id": "mg/lift/demo_910",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.4899328859060403,
+        "frame_count": 150,
+        "late_correction_ratio": -0.09728840962512375,
+        "min_eef_object_distance_ratio": 0.12751677852348994,
+        "reward_onset_ratio": 0.3422818791946309
+      },
+      {
+        "demo_id": "mg/lift/demo_916",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.12080536912751678,
+        "frame_count": 150,
+        "late_correction_ratio": -0.10538364259078138,
+        "min_eef_object_distance_ratio": 0.8120805369127517,
+        "reward_onset_ratio": 0.8590604026845637
+      },
+      {
+        "demo_id": "mg/lift/demo_922",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.5302013422818792,
+        "frame_count": 150,
+        "late_correction_ratio": -0.12235438878628387,
+        "min_eef_object_distance_ratio": 0.1342281879194631,
+        "reward_onset_ratio": 0.35570469798657717
+      },
+      {
+        "demo_id": "mg/lift/demo_923",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.24161073825503357,
+        "frame_count": 150,
+        "late_correction_ratio": -0.12942177874329364,
+        "min_eef_object_distance_ratio": 0.21476510067114093,
+        "reward_onset_ratio": 0.3825503355704698
+      },
+      {
+        "demo_id": "mg/lift/demo_933",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.610738255033557,
+        "frame_count": 150,
+        "late_correction_ratio": -0.0887679741140956,
+        "min_eef_object_distance_ratio": 0.2751677852348993,
+        "reward_onset_ratio": 0.6845637583892618
+      }
+    ],
+    "mh/can/better": [
+      {
+        "demo_id": "mh/can/demo_0",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.49572649572649574,
+        "frame_count": 118,
+        "late_correction_ratio": -0.0655735877318011,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9572649572649573
+      },
+      {
+        "demo_id": "mh/can/demo_1",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.042735042735042736,
+        "frame_count": 118,
+        "late_correction_ratio": -0.039355972798782994,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9658119658119658
+      },
+      {
+        "demo_id": "mh/can/demo_2",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 113,
+        "late_correction_ratio": -0.05005949381589136,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9642857142857143
+      },
+      {
+        "demo_id": "mh/can/demo_3",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.017543859649122806,
+        "frame_count": 115,
+        "late_correction_ratio": -0.04096605444052262,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9649122807017544
+      },
+      {
+        "demo_id": "mh/can/demo_4",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 142,
+        "late_correction_ratio": -0.038240720032757684,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9716312056737588
+      }
+    ],
+    "mh/can/worse": [
+      {
+        "demo_id": "mh/can/demo_50",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.15210355987055016,
+        "frame_count": 310,
+        "late_correction_ratio": -0.03740687320609095,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9870550161812298
+      },
+      {
+        "demo_id": "mh/can/demo_51",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.4161849710982659,
+        "frame_count": 347,
+        "late_correction_ratio": -0.03063164100504905,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9884393063583815
+      },
+      {
+        "demo_id": "mh/can/demo_52",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.007194244604316547,
+        "frame_count": 279,
+        "late_correction_ratio": -0.0663320824900202,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9856115107913669
+      },
+      {
+        "demo_id": "mh/can/demo_53",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.46885245901639344,
+        "frame_count": 306,
+        "late_correction_ratio": -0.042399299151891855,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9868852459016394
+      },
+      {
+        "demo_id": "mh/can/demo_54",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.5230769230769231,
+        "frame_count": 261,
+        "late_correction_ratio": -0.03921288932960449,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9846153846153847
+      }
+    ],
+    "mh/lift/better": [
+      {
+        "demo_id": "mh/lift/demo_0",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.10638297872340426,
+        "frame_count": 48,
+        "late_correction_ratio": -0.09460462551702553,
+        "min_eef_object_distance_ratio": 0.723404255319149,
+        "reward_onset_ratio": 0.8936170212765957
+      },
+      {
+        "demo_id": "mh/lift/demo_1",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.42592592592592593,
+        "frame_count": 55,
+        "late_correction_ratio": -0.11410905004232408,
+        "min_eef_object_distance_ratio": 0.8888888888888888,
+        "reward_onset_ratio": 0.9074074074074074
+      },
+      {
+        "demo_id": "mh/lift/demo_2",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.4666666666666667,
+        "frame_count": 46,
+        "late_correction_ratio": -0.11690071146797568,
+        "min_eef_object_distance_ratio": 0.7555555555555555,
+        "reward_onset_ratio": 0.9111111111111111
+      },
+      {
+        "demo_id": "mh/lift/demo_3",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.022727272727272728,
+        "frame_count": 45,
+        "late_correction_ratio": -0.11301524341144047,
+        "min_eef_object_distance_ratio": 0.6590909090909091,
+        "reward_onset_ratio": 0.9090909090909091
+      },
+      {
+        "demo_id": "mh/lift/demo_4",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.047619047619047616,
+        "frame_count": 43,
+        "late_correction_ratio": -0.10990763975386528,
+        "min_eef_object_distance_ratio": 0.6904761904761905,
+        "reward_onset_ratio": 0.9047619047619048
+      }
+    ],
+    "mh/lift/worse": [
+      {
+        "demo_id": "mh/lift/demo_50",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.18867924528301888,
+        "frame_count": 213,
+        "late_correction_ratio": -0.08804641747289457,
+        "min_eef_object_distance_ratio": 0.8867924528301887,
+        "reward_onset_ratio": 0.9811320754716981
+      },
+      {
+        "demo_id": "mh/lift/demo_51",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 179,
+        "late_correction_ratio": -0.10234980017608093,
+        "min_eef_object_distance_ratio": 0.9662921348314607,
+        "reward_onset_ratio": 0.9775280898876404
+      },
+      {
+        "demo_id": "mh/lift/demo_52",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 180,
+        "late_correction_ratio": -0.08316730619503768,
+        "min_eef_object_distance_ratio": 0.7597765363128491,
+        "reward_onset_ratio": 0.9776536312849162
+      },
+      {
+        "demo_id": "mh/lift/demo_53",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.005917159763313609,
+        "frame_count": 170,
+        "late_correction_ratio": -0.09739481144050885,
+        "min_eef_object_distance_ratio": 0.8461538461538461,
+        "reward_onset_ratio": 0.9704142011834319
+      },
+      {
+        "demo_id": "mh/lift/demo_54",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.5194805194805194,
+        "frame_count": 155,
+        "late_correction_ratio": -0.11314999353600336,
+        "min_eef_object_distance_ratio": 0.8116883116883117,
+        "reward_onset_ratio": 0.974025974025974
+      }
+    ],
+    "mh/square/better": [
+      {
+        "demo_id": "mh/square/demo_0",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 127,
+        "late_correction_ratio": -0.1117899520994075,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9682539682539683
+      },
+      {
+        "demo_id": "mh/square/demo_1",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.00819672131147541,
+        "frame_count": 123,
+        "late_correction_ratio": -0.08963142801404371,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9672131147540983
+      },
+      {
+        "demo_id": "mh/square/demo_2",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 134,
+        "late_correction_ratio": -0.09805642244037868,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9699248120300752
+      },
+      {
+        "demo_id": "mh/square/demo_3",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.42857142857142855,
+        "frame_count": 127,
+        "late_correction_ratio": -0.09997713205125067,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9682539682539683
+      },
+      {
+        "demo_id": "mh/square/demo_4",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 180,
+        "late_correction_ratio": -0.1166753800553613,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9776536312849162
+      }
+    ],
+    "mh/square/worse": [
+      {
+        "demo_id": "mh/square/demo_50",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.3187250996015936,
+        "frame_count": 503,
+        "late_correction_ratio": -0.0782904404716992,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9900398406374502
+      },
+      {
+        "demo_id": "mh/square/demo_51",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.07971014492753623,
+        "frame_count": 553,
+        "late_correction_ratio": -0.10086126320392697,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9927536231884058
+      },
+      {
+        "demo_id": "mh/square/demo_52",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 326,
+        "late_correction_ratio": -0.09196491645945916,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9876923076923076
+      },
+      {
+        "demo_id": "mh/square/demo_53",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.003125,
+        "frame_count": 321,
+        "late_correction_ratio": -0.1151889703318026,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9875
+      },
+      {
+        "demo_id": "mh/square/demo_54",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 302,
+        "late_correction_ratio": -0.0928117007856109,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9867109634551495
+      }
+    ],
+    "paired/can/failure": [
+      {
+        "demo_id": "paired/can/demo_0",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.5371900826446281,
+        "frame_count": 122,
+        "late_correction_ratio": -0.02073107994480635,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": null
+      },
+      {
+        "demo_id": "paired/can/demo_2",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.0,
+        "frame_count": 94,
+        "late_correction_ratio": -0.06140433115126434,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": null
+      },
+      {
+        "demo_id": "paired/can/demo_4",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.031578947368421054,
+        "frame_count": 96,
+        "late_correction_ratio": -0.05143329368930361,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": null
+      },
+      {
+        "demo_id": "paired/can/demo_6",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.02654867256637168,
+        "frame_count": 114,
+        "late_correction_ratio": -0.05338263631990126,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": null
+      },
+      {
+        "demo_id": "paired/can/demo_8",
+        "final_reward": 0.0,
+        "first_close_ratio": 0.16161616161616163,
+        "frame_count": 100,
+        "late_correction_ratio": -0.036910807052822146,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": null
+      }
+    ],
+    "paired/can/success": [
+      {
+        "demo_id": "paired/can/demo_1",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.371900826446281,
+        "frame_count": 122,
+        "late_correction_ratio": -0.02073107994480635,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9669421487603306
+      },
+      {
+        "demo_id": "paired/can/demo_3",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.4473684210526316,
+        "frame_count": 115,
+        "late_correction_ratio": -0.06140433115126434,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9649122807017544
+      },
+      {
+        "demo_id": "paired/can/demo_5",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.043859649122807015,
+        "frame_count": 115,
+        "late_correction_ratio": -0.05143329368930361,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9649122807017544
+      },
+      {
+        "demo_id": "paired/can/demo_7",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.5447154471544715,
+        "frame_count": 124,
+        "late_correction_ratio": -0.05338263631990126,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.967479674796748
+      },
+      {
+        "demo_id": "paired/can/demo_9",
+        "final_reward": 1.0,
+        "first_close_ratio": 0.4883720930232558,
+        "frame_count": 130,
+        "late_correction_ratio": -0.036910807052822146,
+        "min_eef_object_distance_ratio": 0.0,
+        "reward_onset_ratio": 0.9689922480620154
+      }
+    ]
+  },
+  "phase_model": "proxy phase graph: approach -> gripper event -> object/eef proximity -> late correction -> reward/outcome audit",
+  "reward_policy": "Reward onset is reported for audit, not used as classifier input.",
+  "schema_version": 1,
+  "summaries": {
+    "mg/can/failure": {
+      "count": 3184,
+      "first_close_ratio_mean": 0.04172287612559441,
+      "late_correction_ratio_mean": -0.04286744703615171,
+      "min_eef_object_distance_ratio_mean": 0.0020614819061751713,
+      "reward_onset_ratio_mean": 0.9194630872483222
+    },
+    "mg/can/success": {
+      "count": 716,
+      "first_close_ratio_mean": 0.03437253946233738,
+      "late_correction_ratio_mean": -0.042656398450673615,
+      "min_eef_object_distance_ratio_mean": 0.0,
+      "reward_onset_ratio_mean": 0.5458175546473698
+    },
+    "mg/lift/failure": {
+      "count": 1257,
+      "first_close_ratio_mean": 0.0750909003539908,
+      "late_correction_ratio_mean": -0.10318142086892254,
+      "min_eef_object_distance_ratio_mean": 0.4180081476616852,
+      "reward_onset_ratio_mean": 0.3453158039900708
+    },
+    "mg/lift/success": {
+      "count": 243,
+      "first_close_ratio_mean": 0.1812632916286906,
+      "late_correction_ratio_mean": -0.10607427897516714,
+      "min_eef_object_distance_ratio_mean": 0.38495318584804045,
+      "reward_onset_ratio_mean": 0.33429999723810316
+    },
+    "mh/can/better": {
+      "count": 100,
+      "first_close_ratio_mean": 0.1694193426968258,
+      "late_correction_ratio_mean": -0.04257189229833846,
+      "min_eef_object_distance_ratio_mean": 0.0,
+      "reward_onset_ratio_mean": 0.9703437114850878
+    },
+    "mh/can/worse": {
+      "count": 100,
+      "first_close_ratio_mean": 0.21149354075230378,
+      "late_correction_ratio_mean": -0.04217221778823101,
+      "min_eef_object_distance_ratio_mean": 0.0,
+      "reward_onset_ratio_mean": 0.9844694307578505
+    },
+    "mh/lift/better": {
+      "count": 100,
+      "first_close_ratio_mean": 0.09657751668295603,
+      "late_correction_ratio_mean": -0.1004265125791243,
+      "min_eef_object_distance_ratio_mean": 0.8305653627159169,
+      "reward_onset_ratio_mean": 0.9362793052762685
+    },
+    "mh/lift/worse": {
+      "count": 100,
+      "first_close_ratio_mean": 0.18756972723071721,
+      "late_correction_ratio_mean": -0.10286621443069306,
+      "min_eef_object_distance_ratio_mean": 0.8625601741493821,
+      "reward_onset_ratio_mean": 0.9698505805923072
+    },
+    "mh/square/better": {
+      "count": 100,
+      "first_close_ratio_mean": 0.14419153145665592,
+      "late_correction_ratio_mean": -0.1060543094914542,
+      "min_eef_object_distance_ratio_mean": 0.0,
+      "reward_onset_ratio_mean": 0.977007263158699
+    },
+    "mh/square/worse": {
+      "count": 100,
+      "first_close_ratio_mean": 0.08976263823480438,
+      "late_correction_ratio_mean": -0.10270708362500751,
+      "min_eef_object_distance_ratio_mean": 0.0,
+      "reward_onset_ratio_mean": 0.9872147145775813
+    },
+    "paired/can/failure": {
+      "count": 100,
+      "first_close_ratio_mean": 0.14300949387302794,
+      "late_correction_ratio_mean": -0.0430671441318637,
+      "min_eef_object_distance_ratio_mean": 0.01,
+      "reward_onset_ratio_mean": null
+    },
+    "paired/can/success": {
+      "count": 100,
+      "first_close_ratio_mean": 0.18120761164199908,
+      "late_correction_ratio_mean": -0.0430671441318637,
+      "min_eef_object_distance_ratio_mean": 0.0,
+      "reward_onset_ratio_mean": 0.9618415942017258
+    }
+  }
+}

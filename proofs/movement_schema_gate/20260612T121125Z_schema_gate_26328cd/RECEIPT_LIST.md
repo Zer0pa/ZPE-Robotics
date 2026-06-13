@@ -1,0 +1,22 @@
+# Receipt List
+
+- `BASELINE_FAILURES.md`
+- `COMMANDS.log`
+- `DATASET_MANIFEST.json`
+- `ENVIRONMENT.json`
+- `FALSIFICATION_MEMO.md`
+- `FINAL_GATE_VERDICT.json`
+- `MOVEMENT_SCHEMA_V1_SPEC.md`
+- `RECEIPT_LIST.md`
+- `SOURCE_HASHES.json`
+- `SPLITS.json`
+- `action_basis_eval.json`
+- `baseline_metrics.json`
+- `can_demo_selection.json`
+- `can_schema_packet.json`
+- `factorization_ablation.json`
+- `natural_primitive_ablations.json`
+- `negative_controls.json`
+- `robomimic_can_gate.json`
+- `schema_convergence.json`
+- `schema_scores.csv`

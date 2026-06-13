@@ -1,0 +1,13 @@
+git -C repo rev-parse HEAD
+uv sync --extra dev --extra benchmark
+python - <<'PY'
+from huggingface_hub import hf_hub_download
+from pathlib import Path
+repo='robomimic/robomimic_datasets'
+base=Path('../audit/movement_schema_gate/datasets/robomimic_hf')
+for task in ['can','lift','square','transport','tool_hang']:
+    hf_hub_download(repo_id=repo, repo_type='dataset', filename=f'v1.5/{task}/ph/low_dim_v15.hdf5', local_dir=base)
+PY
+python -m zpe_robotics.schema_eval run-robomimic-gate --dataset-root /Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/movement_schema_gate/datasets/robomimic_hf --output-dir /Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/repo/proofs/movement_schema_gate/20260612T121125Z_schema_gate_26328cd
+python -m pytest -q
+ruff check src/zpe_robotics/schema.py src/zpe_robotics/schema_metrics.py src/zpe_robotics/schema_baselines.py src/zpe_robotics/schema_eval.py tests/test_schema.py

@@ -1,0 +1,13 @@
+{
+  "component_counts": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "formula": "description_score = schema_bytes + residual_bytes + lambda_error * heldout_error - lambda_utility * utility_lift",
+  "lambda_error": 100000.0,
+  "lambda_utility": 1000000.0
+}

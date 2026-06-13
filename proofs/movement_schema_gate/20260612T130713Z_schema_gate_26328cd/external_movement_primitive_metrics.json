@@ -1,0 +1,27 @@
+{
+  "blocking_reasons": [
+    "The repository manifest does not declare a maintained external DMP/ProMP/FMP generation-adaptation dependency.",
+    "The current local wrappers are coefficient retrieval baselines only.",
+    "No perturbation/start-goal adaptation protocol is validated in this codebase."
+  ],
+  "checked_python_packages": {
+    "movement_primitives": false,
+    "promp": false,
+    "pydmps": false
+  },
+  "claim_effect": "No movement-primitive generation/adaptation claim is allowed from this run.",
+  "external_generation_adaptation_run": false,
+  "local_proxy_metrics_available": [
+    "baseline_metrics.json:dmp_rbf_weights",
+    "baseline_metrics.json:promp_rbf_weights",
+    "baseline_metrics.json:fmp_fourier_weights"
+  ],
+  "required_to_unblock": [
+    "Select and pin a maintained movement-primitive package or vendor a reviewed implementation.",
+    "Define start/goal perturbation and generation/adaptation metrics before seeing results.",
+    "Run the external baselines on the same frozen split and write generation/adaptation errors."
+  ],
+  "schema_version": 1,
+  "status": "blocked_external_generation_adaptation",
+  "test_id": "RMC-05"
+}
