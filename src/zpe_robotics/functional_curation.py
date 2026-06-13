@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import datetime as dt
-import json
 import math
 import platform
 import sys
@@ -16,7 +15,7 @@ import numpy as np
 
 from .schema import canonicalize_trajectory
 from .schema_baselines import dct_lowpass_vector, fft_lowpass_vector
-from .utils import sha256_file, stable_json_dumps, write_json, write_text
+from .utils import sha256_file, write_json, write_text
 
 
 DEFAULT_FUNCTIONAL_SEED = 20260616
