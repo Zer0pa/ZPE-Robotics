@@ -1,0 +1,8 @@
+{
+  "dmp_weights": 16,
+  "external_package_preference": "movement-primitives for DMP/ProMP",
+  "fmp_coeffs": 16,
+  "frame_count": 128,
+  "promp_iter": 50,
+  "promp_weights": 10
+}

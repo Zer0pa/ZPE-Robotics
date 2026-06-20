@@ -1,0 +1,1448 @@
+{
+  "baseline_curves": [
+    {
+      "baselines": [
+        {
+          "classification": {
+            "accuracy": 0.985,
+            "by_label": {
+              "can": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 0.95,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 1,
+          "mean_average_precision": 0.9916666666666666,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 307200,
+            "metadata_bytes": 135,
+            "total_bytes": 307335,
+            "vector_dimension": 7680
+          },
+          "name": "mean_trajectory",
+          "note": "centroid over full canonical trajectory; not a compression win baseline"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 1,
+          "mean_average_precision": 0.9975,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 4800,
+            "metadata_bytes": 134,
+            "total_bytes": 4934,
+            "vector_dimension": 120
+          },
+          "name": "fft_lowpass",
+          "note": "FFT low-pass coefficients"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 1,
+          "mean_average_precision": 0.9975,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 2400,
+            "metadata_bytes": 133,
+            "total_bytes": 2533,
+            "vector_dimension": 60
+          },
+          "name": "dct_lowpass",
+          "note": "DCT-II low-pass coefficients"
+        },
+        {
+          "classification": {
+            "accuracy": 1.0,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 1,
+          "mean_average_precision": 1.0,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 4800,
+            "metadata_bytes": 134,
+            "total_bytes": 4934,
+            "vector_dimension": 120
+          },
+          "name": "dmp_rbf_weights",
+          "note": "local DMP-style forcing RBF weights"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 1,
+          "mean_average_precision": 0.9975,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 4800,
+            "metadata_bytes": 134,
+            "total_bytes": 4934,
+            "vector_dimension": 120
+          },
+          "name": "promp_rbf_weights",
+          "note": "local ProMP-style RBF weights"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 1,
+          "mean_average_precision": 0.9975,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 19200,
+            "metadata_bytes": 134,
+            "total_bytes": 19334,
+            "vector_dimension": 480
+          },
+          "name": "fmp_fourier_weights",
+          "note": "local Fourier movement primitive coefficients"
+        }
+      ],
+      "component_count": 1
+    },
+    {
+      "baselines": [
+        {
+          "classification": {
+            "accuracy": 0.985,
+            "by_label": {
+              "can": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 0.95,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 2,
+          "mean_average_precision": 0.9916666666666666,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 307200,
+            "metadata_bytes": 135,
+            "total_bytes": 307335,
+            "vector_dimension": 7680
+          },
+          "name": "mean_trajectory",
+          "note": "centroid over full canonical trajectory; not a compression win baseline"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 2,
+          "mean_average_precision": 0.9975,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 9600,
+            "metadata_bytes": 134,
+            "total_bytes": 9734,
+            "vector_dimension": 240
+          },
+          "name": "fft_lowpass",
+          "note": "FFT low-pass coefficients"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 2,
+          "mean_average_precision": 0.9975,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 4800,
+            "metadata_bytes": 134,
+            "total_bytes": 4934,
+            "vector_dimension": 120
+          },
+          "name": "dct_lowpass",
+          "note": "DCT-II low-pass coefficients"
+        },
+        {
+          "classification": {
+            "accuracy": 1.0,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 2,
+          "mean_average_precision": 1.0,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 4800,
+            "metadata_bytes": 134,
+            "total_bytes": 4934,
+            "vector_dimension": 120
+          },
+          "name": "dmp_rbf_weights",
+          "note": "local DMP-style forcing RBF weights"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 2,
+          "mean_average_precision": 0.9975,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 4800,
+            "metadata_bytes": 134,
+            "total_bytes": 4934,
+            "vector_dimension": 120
+          },
+          "name": "promp_rbf_weights",
+          "note": "local ProMP-style RBF weights"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 2,
+          "mean_average_precision": 0.9975,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 19200,
+            "metadata_bytes": 134,
+            "total_bytes": 19334,
+            "vector_dimension": 480
+          },
+          "name": "fmp_fourier_weights",
+          "note": "local Fourier movement primitive coefficients"
+        }
+      ],
+      "component_count": 2
+    },
+    {
+      "baselines": [
+        {
+          "classification": {
+            "accuracy": 0.985,
+            "by_label": {
+              "can": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 0.95,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 4,
+          "mean_average_precision": 0.9916666666666666,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 307200,
+            "metadata_bytes": 135,
+            "total_bytes": 307335,
+            "vector_dimension": 7680
+          },
+          "name": "mean_trajectory",
+          "note": "centroid over full canonical trajectory; not a compression win baseline"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 4,
+          "mean_average_precision": 0.9975,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 19200,
+            "metadata_bytes": 134,
+            "total_bytes": 19334,
+            "vector_dimension": 480
+          },
+          "name": "fft_lowpass",
+          "note": "FFT low-pass coefficients"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 4,
+          "mean_average_precision": 0.9975,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 9600,
+            "metadata_bytes": 134,
+            "total_bytes": 9734,
+            "vector_dimension": 240
+          },
+          "name": "dct_lowpass",
+          "note": "DCT-II low-pass coefficients"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 4,
+          "mean_average_precision": 0.9966666666666666,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 9600,
+            "metadata_bytes": 134,
+            "total_bytes": 9734,
+            "vector_dimension": 240
+          },
+          "name": "dmp_rbf_weights",
+          "note": "local DMP-style forcing RBF weights"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 4,
+          "mean_average_precision": 0.9966666666666666,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 9600,
+            "metadata_bytes": 134,
+            "total_bytes": 9734,
+            "vector_dimension": 240
+          },
+          "name": "promp_rbf_weights",
+          "note": "local ProMP-style RBF weights"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 4,
+          "mean_average_precision": 0.9975,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 38400,
+            "metadata_bytes": 134,
+            "total_bytes": 38534,
+            "vector_dimension": 960
+          },
+          "name": "fmp_fourier_weights",
+          "note": "local Fourier movement primitive coefficients"
+        }
+      ],
+      "component_count": 4
+    },
+    {
+      "baselines": [
+        {
+          "classification": {
+            "accuracy": 0.985,
+            "by_label": {
+              "can": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 0.95,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 8,
+          "mean_average_precision": 0.9916666666666666,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 307200,
+            "metadata_bytes": 135,
+            "total_bytes": 307335,
+            "vector_dimension": 7680
+          },
+          "name": "mean_trajectory",
+          "note": "centroid over full canonical trajectory; not a compression win baseline"
+        },
+        {
+          "classification": {
+            "accuracy": 0.99,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.95,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 8,
+          "mean_average_precision": 0.995,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 38400,
+            "metadata_bytes": 134,
+            "total_bytes": 38534,
+            "vector_dimension": 960
+          },
+          "name": "fft_lowpass",
+          "note": "FFT low-pass coefficients"
+        },
+        {
+          "classification": {
+            "accuracy": 0.995,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 8,
+          "mean_average_precision": 0.9975,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 19200,
+            "metadata_bytes": 134,
+            "total_bytes": 19334,
+            "vector_dimension": 480
+          },
+          "name": "dct_lowpass",
+          "note": "DCT-II low-pass coefficients"
+        },
+        {
+          "classification": {
+            "accuracy": 0.765,
+            "by_label": {
+              "can": {
+                "accuracy": 0.775,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.05,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 8,
+          "mean_average_precision": 0.8715,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 19200,
+            "metadata_bytes": 134,
+            "total_bytes": 19334,
+            "vector_dimension": 480
+          },
+          "name": "dmp_rbf_weights",
+          "note": "local DMP-style forcing RBF weights"
+        },
+        {
+          "classification": {
+            "accuracy": 0.77,
+            "by_label": {
+              "can": {
+                "accuracy": 0.775,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.075,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 8,
+          "mean_average_precision": 0.8750833333333332,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 19200,
+            "metadata_bytes": 134,
+            "total_bytes": 19334,
+            "vector_dimension": 480
+          },
+          "name": "promp_rbf_weights",
+          "note": "local ProMP-style RBF weights"
+        },
+        {
+          "classification": {
+            "accuracy": 0.97,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.85,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 8,
+          "mean_average_precision": 0.985,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 76800,
+            "metadata_bytes": 135,
+            "total_bytes": 76935,
+            "vector_dimension": 1920
+          },
+          "name": "fmp_fourier_weights",
+          "note": "local Fourier movement primitive coefficients"
+        }
+      ],
+      "component_count": 8
+    },
+    {
+      "baselines": [
+        {
+          "classification": {
+            "accuracy": 0.985,
+            "by_label": {
+              "can": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 0.95,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 16,
+          "mean_average_precision": 0.9916666666666666,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 307200,
+            "metadata_bytes": 135,
+            "total_bytes": 307335,
+            "vector_dimension": 7680
+          },
+          "name": "mean_trajectory",
+          "note": "centroid over full canonical trajectory; not a compression win baseline"
+        },
+        {
+          "classification": {
+            "accuracy": 0.96,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.8,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 16,
+          "mean_average_precision": 0.98,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 76800,
+            "metadata_bytes": 135,
+            "total_bytes": 76935,
+            "vector_dimension": 1920
+          },
+          "name": "fft_lowpass",
+          "note": "FFT low-pass coefficients"
+        },
+        {
+          "classification": {
+            "accuracy": 0.985,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.925,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 16,
+          "mean_average_precision": 0.9925,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 38400,
+            "metadata_bytes": 134,
+            "total_bytes": 38534,
+            "vector_dimension": 960
+          },
+          "name": "dct_lowpass",
+          "note": "DCT-II low-pass coefficients"
+        },
+        {
+          "classification": {
+            "accuracy": 0.41,
+            "by_label": {
+              "can": {
+                "accuracy": 0.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.0,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 0.05,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 16,
+          "mean_average_precision": 0.6175,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 38400,
+            "metadata_bytes": 134,
+            "total_bytes": 38534,
+            "vector_dimension": 960
+          },
+          "name": "dmp_rbf_weights",
+          "note": "local DMP-style forcing RBF weights"
+        },
+        {
+          "classification": {
+            "accuracy": 0.41,
+            "by_label": {
+              "can": {
+                "accuracy": 0.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.0,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 0.05,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 16,
+          "mean_average_precision": 0.6129166666666667,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 38400,
+            "metadata_bytes": 134,
+            "total_bytes": 38534,
+            "vector_dimension": 960
+          },
+          "name": "promp_rbf_weights",
+          "note": "local ProMP-style RBF weights"
+        },
+        {
+          "classification": {
+            "accuracy": 0.91,
+            "by_label": {
+              "can": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.575,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 16,
+          "mean_average_precision": 0.955,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 153600,
+            "metadata_bytes": 135,
+            "total_bytes": 153735,
+            "vector_dimension": 3840
+          },
+          "name": "fmp_fourier_weights",
+          "note": "local Fourier movement primitive coefficients"
+        }
+      ],
+      "component_count": 16
+    },
+    {
+      "baselines": [
+        {
+          "classification": {
+            "accuracy": 0.985,
+            "by_label": {
+              "can": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 0.95,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 32,
+          "mean_average_precision": 0.9916666666666666,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 307200,
+            "metadata_bytes": 135,
+            "total_bytes": 307335,
+            "vector_dimension": 7680
+          },
+          "name": "mean_trajectory",
+          "note": "centroid over full canonical trajectory; not a compression win baseline"
+        },
+        {
+          "classification": {
+            "accuracy": 0.925,
+            "by_label": {
+              "can": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.675,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 0.95,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 32,
+          "mean_average_precision": 0.9625,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 153600,
+            "metadata_bytes": 135,
+            "total_bytes": 153735,
+            "vector_dimension": 3840
+          },
+          "name": "fft_lowpass",
+          "note": "FFT low-pass coefficients"
+        },
+        {
+          "classification": {
+            "accuracy": 0.915,
+            "by_label": {
+              "can": {
+                "accuracy": 0.95,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.625,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 32,
+          "mean_average_precision": 0.9575,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 76800,
+            "metadata_bytes": 135,
+            "total_bytes": 76935,
+            "vector_dimension": 1920
+          },
+          "name": "dct_lowpass",
+          "note": "DCT-II low-pass coefficients"
+        },
+        {
+          "classification": {
+            "accuracy": 0.41,
+            "by_label": {
+              "can": {
+                "accuracy": 0.05,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.0,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 0.0,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 32,
+          "mean_average_precision": 0.6185833333333334,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 76800,
+            "metadata_bytes": 135,
+            "total_bytes": 76935,
+            "vector_dimension": 1920
+          },
+          "name": "dmp_rbf_weights",
+          "note": "local DMP-style forcing RBF weights"
+        },
+        {
+          "classification": {
+            "accuracy": 0.415,
+            "by_label": {
+              "can": {
+                "accuracy": 0.0,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.0,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 0.075,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 32,
+          "mean_average_precision": 0.6229166666666667,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 76800,
+            "metadata_bytes": 135,
+            "total_bytes": 76935,
+            "vector_dimension": 1920
+          },
+          "name": "promp_rbf_weights",
+          "note": "local ProMP-style RBF weights"
+        },
+        {
+          "classification": {
+            "accuracy": 0.865,
+            "by_label": {
+              "can": {
+                "accuracy": 0.975,
+                "count": 40
+              },
+              "lift": {
+                "accuracy": 0.45,
+                "count": 40
+              },
+              "square": {
+                "accuracy": 0.9,
+                "count": 40
+              },
+              "tool_hang": {
+                "accuracy": 1.0,
+                "count": 40
+              },
+              "transport": {
+                "accuracy": 1.0,
+                "count": 40
+              }
+            },
+            "count": 200
+          },
+          "component_or_coeff_count": 32,
+          "mean_average_precision": 0.9316666666666665,
+          "model_bytes_estimate": {
+            "float32_centroid_variance_bytes": 307200,
+            "metadata_bytes": 135,
+            "total_bytes": 307335,
+            "vector_dimension": 7680
+          },
+          "name": "fmp_fourier_weights",
+          "note": "local Fourier movement primitive coefficients"
+        }
+      ],
+      "component_count": 32
+    }
+  ],
+  "schema_curve": [
+    {
+      "assignment_accuracy": 0.99,
+      "bytes": 718055,
+      "component_count": 1,
+      "heldout_error": 0.14197858449498368,
+      "mean_average_precision": 0.995
+    },
+    {
+      "assignment_accuracy": 0.99,
+      "bytes": 1071342,
+      "component_count": 2,
+      "heldout_error": 0.1339847373440256,
+      "mean_average_precision": 0.995
+    },
+    {
+      "assignment_accuracy": 1.0,
+      "bytes": 1780295,
+      "component_count": 4,
+      "heldout_error": 0.11783266203969038,
+      "mean_average_precision": 1.0
+    },
+    {
+      "assignment_accuracy": 1.0,
+      "bytes": 3194037,
+      "component_count": 8,
+      "heldout_error": 0.10456180507878354,
+      "mean_average_precision": 1.0
+    },
+    {
+      "assignment_accuracy": 1.0,
+      "bytes": 6020922,
+      "component_count": 16,
+      "heldout_error": 0.09451777394321333,
+      "mean_average_precision": 1.0
+    },
+    {
+      "assignment_accuracy": 1.0,
+      "bytes": 11671962,
+      "component_count": 32,
+      "heldout_error": 0.08312829807000444,
+      "mean_average_precision": 1.0
+    }
+  ],
+  "schema_version": 1,
+  "test_id": "RMC-04-compression-utility"
+}

@@ -1,0 +1,17 @@
+{
+  "implemented": [
+    "identity_start_goal_adaptation"
+  ],
+  "planned_not_executed": [
+    "goal_small",
+    "goal_large",
+    "start_goal",
+    "time_fast",
+    "time_slow",
+    "combined",
+    "corrupt_control"
+  ],
+  "schema_version": 1,
+  "scope": "This run adapts to each held-out trajectory's observed start and goal. Synthetic perturbation offsets are listed as next protocol work, not counted as pass evidence.",
+  "seed": 20260613
+}

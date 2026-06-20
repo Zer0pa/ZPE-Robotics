@@ -1,0 +1,7 @@
+{
+  "action_conditioned_lift": 0.010000000000000009,
+  "action_conditioned_schema_accuracy": 1.0,
+  "basis_stability_status": "measured_by_schema_convergence_json",
+  "global_pca_accuracy": 0.99,
+  "schema_version": 1
+}

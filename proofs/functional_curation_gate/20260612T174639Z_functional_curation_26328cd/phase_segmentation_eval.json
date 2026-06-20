@@ -1,0 +1,92 @@
+{
+  "cannot_count_as_product_pass": true,
+  "metric": "within-label event timing interquartile ranges; lower means a more stable functional channel",
+  "rows": [
+    {
+      "count": 3184,
+      "first_close_ratio_iqr": 0.013422818791946308,
+      "group": "mg/can/failure",
+      "late_correction_ratio_iqr": 0.016895440245389595,
+      "min_eef_object_distance_ratio_iqr": 0.0
+    },
+    {
+      "count": 716,
+      "first_close_ratio_iqr": 0.006711409395973154,
+      "group": "mg/can/success",
+      "late_correction_ratio_iqr": 0.014831705925182924,
+      "min_eef_object_distance_ratio_iqr": 0.0
+    },
+    {
+      "count": 1257,
+      "first_close_ratio_iqr": 0.10067114093959732,
+      "group": "mg/lift/failure",
+      "late_correction_ratio_iqr": 0.015941413129615056,
+      "min_eef_object_distance_ratio_iqr": 0.5503355704697986
+    },
+    {
+      "count": 243,
+      "first_close_ratio_iqr": 0.09395973154362416,
+      "group": "mg/lift/success",
+      "late_correction_ratio_iqr": 0.01582400258679663,
+      "min_eef_object_distance_ratio_iqr": 0.3859060402684563
+    },
+    {
+      "count": 100,
+      "first_close_ratio_iqr": 0.3530279405430068,
+      "group": "mh/can/better",
+      "late_correction_ratio_iqr": 0.01292925924696297,
+      "min_eef_object_distance_ratio_iqr": 0.0
+    },
+    {
+      "count": 100,
+      "first_close_ratio_iqr": 0.4653138817376524,
+      "group": "mh/can/worse",
+      "late_correction_ratio_iqr": 0.012282191548234386,
+      "min_eef_object_distance_ratio_iqr": 0.0
+    },
+    {
+      "count": 100,
+      "first_close_ratio_iqr": 0.07141818953040807,
+      "group": "mh/lift/better",
+      "late_correction_ratio_iqr": 0.016394171786751927,
+      "min_eef_object_distance_ratio_iqr": 0.1643186186783323
+    },
+    {
+      "count": 100,
+      "first_close_ratio_iqr": 0.428465861622755,
+      "group": "mh/lift/worse",
+      "late_correction_ratio_iqr": 0.017566156456290213,
+      "min_eef_object_distance_ratio_iqr": 0.10080431044516791
+    },
+    {
+      "count": 100,
+      "first_close_ratio_iqr": 0.3776891252955083,
+      "group": "mh/square/better",
+      "late_correction_ratio_iqr": 0.01748572362744101,
+      "min_eef_object_distance_ratio_iqr": 0.0
+    },
+    {
+      "count": 100,
+      "first_close_ratio_iqr": 0.1430003538153084,
+      "group": "mh/square/worse",
+      "late_correction_ratio_iqr": 0.017815201546726445,
+      "min_eef_object_distance_ratio_iqr": 0.0
+    },
+    {
+      "count": 100,
+      "first_close_ratio_iqr": 0.10265811670170022,
+      "group": "paired/can/failure",
+      "late_correction_ratio_iqr": 0.015905158268575664,
+      "min_eef_object_distance_ratio_iqr": 0.0
+    },
+    {
+      "count": 100,
+      "first_close_ratio_iqr": 0.41539597327015093,
+      "group": "paired/can/success",
+      "late_correction_ratio_iqr": 0.015905158268575664,
+      "min_eef_object_distance_ratio_iqr": 0.0
+    }
+  ],
+  "schema_version": 1,
+  "status": "proxy_only_no_human_phase_labels"
+}

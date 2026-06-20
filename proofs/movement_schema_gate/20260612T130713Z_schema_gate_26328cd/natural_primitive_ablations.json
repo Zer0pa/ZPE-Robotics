@@ -1,0 +1,21 @@
+{
+  "limitation": "A full branch-removal ablation suite remains a follow-up gate.",
+  "phase_velocity_proxy": {
+    "metric": "canonical feature velocity branch used",
+    "value": true
+  },
+  "proprioceptive_coordinate_proxy": {
+    "metric": "canonical body-relative features used",
+    "value": true
+  },
+  "schema_version": 1,
+  "spectral_smoothness_control": {
+    "dct_lowpass_accuracy": 0.995,
+    "fft_lowpass_accuracy": 0.99
+  },
+  "status": "proxy_ablation_only",
+  "synergy_basis_proxy": {
+    "metric": "action-conditioned PCA schema accuracy",
+    "value": 1.0
+  }
+}

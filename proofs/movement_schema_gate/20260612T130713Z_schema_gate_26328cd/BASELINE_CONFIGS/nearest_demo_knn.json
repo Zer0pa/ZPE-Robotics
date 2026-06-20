@@ -1,0 +1,13 @@
+{
+  "budgets_per_class": [
+    1,
+    2,
+    5,
+    10,
+    20,
+    "all"
+  ],
+  "distance_surface": "start-relative canonicalized trajectory plus velocity branch",
+  "knn_k": 3,
+  "selection_policy": "per-action medoid first, then deterministic farthest-first representatives"
+}

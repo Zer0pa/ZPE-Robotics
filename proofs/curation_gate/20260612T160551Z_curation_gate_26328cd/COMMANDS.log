@@ -1,0 +1,1 @@
+python -m zpe_robotics.schema_eval curate-dataset --dataset-root /Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/audit/movement_schema_gate/datasets/robomimic_hf --output-dir /Users/Zer0pa/Key Repos Red Verification/ZPE-Robotics/repo/proofs/curation_gate/20260612T160551Z_curation_gate_26328cd --tasks can,lift,square,transport,tool_hang

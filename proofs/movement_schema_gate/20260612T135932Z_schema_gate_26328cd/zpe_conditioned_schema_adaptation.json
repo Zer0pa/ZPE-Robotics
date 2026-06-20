@@ -1,0 +1,14 @@
+{
+  "conditioning": "held-out start and goal linear endpoint correction of MovementSchemaV1 central relative form",
+  "limitation": "This is a trajectory-level initializer/adaptation proxy, not policy execution.",
+  "metrics": {
+    "adaptation_success_per_byte": 7.658557407691057e-07,
+    "assignment_accuracy": 0.985,
+    "model_zlib_bytes": 1286143,
+    "true_label_endpoint_error_mean": 3.215291518702838e-19,
+    "true_label_generation_rmse_mean": 0.03685011709404354,
+    "true_label_velocity_rmse_mean": 0.004683104281359326
+  },
+  "schema_version": 1,
+  "status": "complete"
+}

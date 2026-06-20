@@ -1,0 +1,16 @@
+{
+  "best_baseline": "mean_linear_endpoint",
+  "best_baseline_true_label_generation_rmse_mean": 0.03685011709404354,
+  "best_description_score_model": "external_dmp",
+  "blocker_resolution_decision": "narrow",
+  "blocker_resolution_reason": "ZPE has no positive adaptation lift over the best simple baseline (relative improvement 0.0); `external_dmp` wins the description-score surface.",
+  "external_dmp_promp_complete": true,
+  "external_failures": {},
+  "readme_claim_upgrade_allowed": false,
+  "reason": "Generation/adaptation pressure is recorded as trajectory-level evidence. The sovereign gate remains false until this survives retained-demo budget sweeps, full perturbation suites, and downstream imitation/policy utility.",
+  "schema_version": 1,
+  "sovereign_gate_pass": false,
+  "status": "generation_adaptation_gate_failed_nearest_demo_or_primitives_dominate",
+  "zpe_relative_improvement_vs_best_baseline": 0.0,
+  "zpe_true_label_generation_rmse_mean": 0.03685011709404354
+}

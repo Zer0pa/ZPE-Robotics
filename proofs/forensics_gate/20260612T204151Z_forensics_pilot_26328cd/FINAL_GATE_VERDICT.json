@@ -1,0 +1,19 @@
+{
+  "baseline_wins_or_ties": true,
+  "claim_boundary": {
+    "full_phase12_product_gate_unrun": true,
+    "pilot_can_only_justify_full_gate_spend_or_storage": true
+  },
+  "date": "2026-06-12T20:41:52Z",
+  "pilot_continue_to_full_gate": false,
+  "product_worthy": false,
+  "readme_claim_upgrade_allowed": false,
+  "schema_version": 1,
+  "status": "pilot_abandon_forensics_trace",
+  "success_criteria": {
+    "beats_best_non_full_baseline_on_both_tasks": false,
+    "both_tasks_coverage_at_least_0_80": false,
+    "both_tasks_window_fraction_at_most_0_25": true
+  },
+  "terminal_verdict": "pilot_abandon_forensics_trace"
+}

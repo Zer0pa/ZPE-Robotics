@@ -1,0 +1,22 @@
+{
+  "limitation": "Only a one-medoid adaptation pressure row is implemented in this run; retained-demo budget sweeps remain future work.",
+  "medoid_demo": {
+    "adaptation_success_per_byte": 7.76887594076232e-05,
+    "assignment_accuracy": 0.96,
+    "model_zlib_bytes": 12357,
+    "true_label_endpoint_error_mean": 6.174580446456944e-19,
+    "true_label_generation_rmse_mean": 0.04096649096824535,
+    "true_label_velocity_rmse_mean": 0.005869624369080243
+  },
+  "medoid_dominates_or_matches": false,
+  "model": "medoid_demo_linear_endpoint",
+  "schema_version": 1,
+  "zpe_schema_initializer": {
+    "adaptation_success_per_byte": 7.658557407691057e-07,
+    "assignment_accuracy": 0.985,
+    "model_zlib_bytes": 1286143,
+    "true_label_endpoint_error_mean": 3.215291518702838e-19,
+    "true_label_generation_rmse_mean": 0.03685011709404354,
+    "true_label_velocity_rmse_mean": 0.004683104281359326
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "pyproject.toml": "92c69a2d9f9e2b4119f5ff93022b1e08ce7d094781c165219f4d1275499ae5b1",
+  "src/zpe_robotics/codec.py": "745e8a77e4007557538303de746fa352575567ef3193ede563e298a3369a10ba",
+  "src/zpe_robotics/schema.py": "4dc28c6744fdaa6eae9ad302e0c2cdfbe483d5f12942da8fa5b1bcd4e12b974b",
+  "src/zpe_robotics/schema_adaptation.py": "592fc230530476887bbc5c60f589944f48642c1ec70772991e4572e11222a02a",
+  "src/zpe_robotics/schema_baselines.py": "acc913d672d9cb4820989398e0ecc2a0ba8cbb6a0e517a7e0e98ffa78a0600d1",
+  "src/zpe_robotics/schema_downstream.py": "74b4e1cd4313a866c07aaa7786b8650901146f8a6c61f4bd2c8264652111d49c",
+  "src/zpe_robotics/schema_eval.py": "54eaf70739a31b26b1ca7040e6060fe0103dd2d17f57a2b59e75c8c02974a0a4",
+  "src/zpe_robotics/schema_metrics.py": "9cd307becfd070219af771f0bc3b6b997bc85242641d34b7bfe0cf22bda19fee",
+  "uv.lock": "404044799fe95f75eba25c2ef6ce71cd6ca4bf8e4f8119f36aa8e0efc331cbaa"
+}

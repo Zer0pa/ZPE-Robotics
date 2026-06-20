@@ -1,0 +1,59 @@
+{
+  "best_full_baseline_distance": 0.6521688242478478,
+  "best_full_baseline_method": "mean_central",
+  "best_random_mean_medoid_distance": 0.6521688242478478,
+  "best_random_mean_medoid_method": "mean_central",
+  "distance_surface": "raw_phase_aligned movement-form vector",
+  "evaluation_split": "validation+test",
+  "methods": {
+    "kmedoids_raw_farthest": {
+      "coverage_proxy": 0.5895158274750004,
+      "mean_nearest_raw_distance": 0.6963072972665981,
+      "p95_nearest_raw_distance": 1.467706522340583,
+      "selected_demo_count": 25,
+      "selection_zlib_bytes": 1338
+    },
+    "mean_central": {
+      "coverage_proxy": 0.6052650221476316,
+      "mean_nearest_raw_distance": 0.6521688242478478,
+      "p95_nearest_raw_distance": 1.4191679324295225,
+      "selected_demo_count": 25,
+      "selection_zlib_bytes": 1308
+    },
+    "pca_kmedoids": {
+      "coverage_proxy": 0.5903437685908253,
+      "mean_nearest_raw_distance": 0.6939282723133351,
+      "p95_nearest_raw_distance": 1.4441627962939956,
+      "selected_demo_count": 25,
+      "selection_zlib_bytes": 1345
+    },
+    "random": {
+      "coverage_proxy": 0.5958819187505282,
+      "mean_nearest_raw_distance": 0.6781848358427196,
+      "p95_nearest_raw_distance": 1.3848350721420228,
+      "selected_demo_count": 25,
+      "selection_zlib_bytes": 1320
+    },
+    "raw_medoid": {
+      "coverage_proxy": 0.6049373934127195,
+      "mean_nearest_raw_distance": 0.6530636242513586,
+      "p95_nearest_raw_distance": 1.427876921151246,
+      "selected_demo_count": 25,
+      "selection_zlib_bytes": 1317
+    },
+    "zpe_basin_diverse": {
+      "coverage_proxy": 0.5755588571490114,
+      "mean_nearest_raw_distance": 0.737441770861501,
+      "p95_nearest_raw_distance": 1.5467609238973796,
+      "selected_demo_count": 25,
+      "selection_zlib_bytes": 1345
+    }
+  },
+  "metric": "nearest selected same-task representative distance on validation+test demos",
+  "pass_vs_full_baselines": false,
+  "pass_vs_random_mean_medoid": false,
+  "schema_version": 1,
+  "zpe_mean_nearest_raw_distance": 0.737441770861501,
+  "zpe_relative_improvement_vs_full_baselines": -0.13075287171538627,
+  "zpe_relative_improvement_vs_random_mean_medoid": -0.13075287171538627
+}

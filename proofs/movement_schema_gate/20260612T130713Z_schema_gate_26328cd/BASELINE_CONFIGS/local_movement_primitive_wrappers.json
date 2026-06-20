@@ -1,0 +1,6 @@
+{
+  "dmp_rbf_weights": "local retrieval coefficient wrapper",
+  "fmp_fourier_weights": "local retrieval coefficient wrapper",
+  "generation_adaptation_capable": false,
+  "promp_rbf_weights": "local retrieval coefficient wrapper"
+}

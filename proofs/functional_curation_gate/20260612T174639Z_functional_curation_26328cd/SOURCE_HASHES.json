@@ -1,0 +1,8 @@
+{
+  "pyproject.toml": "92c69a2d9f9e2b4119f5ff93022b1e08ce7d094781c165219f4d1275499ae5b1",
+  "src/zpe_robotics/functional_curation.py": "c2026e8cc15f988b423208f1158baa0be9e004218197b864b4fa1c0967215a13",
+  "src/zpe_robotics/schema.py": "4dc28c6744fdaa6eae9ad302e0c2cdfbe483d5f12942da8fa5b1bcd4e12b974b",
+  "src/zpe_robotics/schema_baselines.py": "acc913d672d9cb4820989398e0ecc2a0ba8cbb6a0e517a7e0e98ffa78a0600d1",
+  "src/zpe_robotics/schema_eval.py": "63e3b8a64b83233bd53a605cb517778b828f7202a911213ffc79bdcc3ae0a5d5",
+  "uv.lock": "404044799fe95f75eba25c2ef6ce71cd6ca4bf8e4f8119f36aa8e0efc331cbaa"
+}

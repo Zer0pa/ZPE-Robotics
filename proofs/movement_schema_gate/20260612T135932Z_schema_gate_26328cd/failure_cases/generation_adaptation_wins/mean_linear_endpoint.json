@@ -1,0 +1,8 @@
+{
+  "baseline_bytes": 12450,
+  "baseline_rmse": 0.03685011709404354,
+  "model": "mean_linear_endpoint",
+  "reason": "baseline_matches_or_beats_zpe_adaptation_error",
+  "zpe_bytes": 1286143,
+  "zpe_rmse": 0.03685011709404354
+}

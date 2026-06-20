@@ -1,0 +1,19 @@
+{
+  "broad_movement_memory_claim_allowed": false,
+  "non_audit_pass_count": 0,
+  "pass_count": 1,
+  "policy_transfer_claim_allowed": false,
+  "product_worthy": false,
+  "readme_claim_upgrade_allowed": false,
+  "reason": "Baselines were not beaten, but the audit surface remains a useful provenance wrapper.",
+  "schema_version": 1,
+  "scope": "robot movement dataset curation, search, representative selection, outlier review, and audit",
+  "status": "audit_only_narrow_pass",
+  "success_criteria": {
+    "better_outlier_detection_than_distance_lof_isolation": false,
+    "better_representative_selection_than_random_mean_medoid": false,
+    "better_search_map_than_raw_fft_dct_pca": false,
+    "clearer_audit_receipts_than_raw_selection": true,
+    "downstream_proxy_improvement": false
+  }
+}

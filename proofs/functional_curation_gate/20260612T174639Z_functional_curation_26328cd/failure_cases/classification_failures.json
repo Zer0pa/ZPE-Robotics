@@ -1,0 +1,2929 @@
+{
+  "mg_can_outcome_success_vs_failure": {
+    "dct_lowpass": [
+      {
+        "demo_id": "mg/can/demo_1540",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1960",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2240",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2360",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2430",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2450",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2580",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2630",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2660",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2690",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2700",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2760",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2770",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2810",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2940",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3000",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3080",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3140",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3180",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3230",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3290",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3410",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3440",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3610",
+        "predicted_label": "failure",
+        "true_label": "success"
+      }
+    ],
+    "deminf_proxy": [
+      {
+        "demo_id": "mg/can/demo_920",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_930",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_980",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1120",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1220",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1280",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1290",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1370",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1450",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1540",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1550",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1610",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1630",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1740",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1850",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1960",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2000",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2030",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2060",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2120",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2180",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2220",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2240",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2310",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2410",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2430",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2460",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "event_heuristic": [
+      {
+        "demo_id": "mg/can/demo_660",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_690",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_780",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_800",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_880",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_900",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_920",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_930",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_940",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_950",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_960",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_970",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1080",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1100",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1120",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1130",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1270",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1280",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1290",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1380",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1540",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1550",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1560",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1740",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1760",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1770",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1820",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1830",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "fft_lowpass": [
+      {
+        "demo_id": "mg/can/demo_1910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1960",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2060",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2240",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2430",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2450",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2490",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2580",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2630",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2660",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2690",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2700",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2760",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2810",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2900",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2940",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3000",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3030",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3080",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3140",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3180",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3230",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3290",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3410",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3440",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "functional_phase_event": [
+      {
+        "demo_id": "mg/can/demo_930",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1000",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1080",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1120",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1280",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1470",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1820",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1830",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1960",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2060",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2180",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2220",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2240",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2310",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2410",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2430",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2450",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2460",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2480",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2580",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2610",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2620",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2630",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2690",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2700",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2760",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2900",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "pca_global": [
+      {
+        "demo_id": "mg/can/demo_1910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1960",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2060",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2240",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2430",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2450",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2490",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2580",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2630",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2660",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2690",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2700",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2760",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2900",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2940",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3000",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3080",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3180",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3290",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3410",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3440",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3640",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3850",
+        "predicted_label": "failure",
+        "true_label": "success"
+      }
+    ],
+    "random_prior": [
+      {
+        "demo_id": "mg/can/demo_60",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_100",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_180",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_200",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_420",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_430",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_530",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_540",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_550",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_590",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_650",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_660",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_760",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_800",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_920",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_940",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_960",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_970",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_980",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1050",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1060",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1080",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1110",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1130",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1150",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1160",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1180",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1250",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1360",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1540",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "raw_medoid_centrality": [
+      {
+        "demo_id": "mg/can/demo_1910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1960",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2240",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2360",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2580",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2630",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2660",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2690",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2700",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2760",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2770",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2810",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2940",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3000",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3080",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3140",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3180",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3230",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3290",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3390",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3410",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3440",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3610",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3640",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3660",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "raw_nearest_demo": [
+      {
+        "demo_id": "mg/can/demo_2130",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2580",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2660",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2710",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2760",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2940",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3000",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3080",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3180",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3230",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3290",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3310",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3410",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3440",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3490",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3560",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3590",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3640",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3740",
+        "predicted_label": "failure",
+        "true_label": "success"
+      }
+    ],
+    "raw_phase_aligned": [
+      {
+        "demo_id": "mg/can/demo_1910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1960",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2060",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2240",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2430",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2460",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2580",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2630",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2660",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2690",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2700",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2760",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2810",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2900",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2940",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3000",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3030",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3080",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3180",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3230",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_3290",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3410",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3440",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3640",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_3660",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "s2i_keyframe_proxy": [
+      {
+        "demo_id": "mg/can/demo_60",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_100",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_120",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_180",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_260",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_780",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1000",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1100",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1120",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1230",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1280",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1830",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1890",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1910",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1920",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_1960",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2020",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2030",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2060",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2140",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2180",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2220",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2240",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2330",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2350",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2400",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2410",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2420",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/can/demo_2430",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/can/demo_2440",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ]
+  },
+  "mg_lift_outcome_success_vs_failure": {
+    "dct_lowpass": [
+      {
+        "demo_id": "mg/lift/demo_1070",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1240",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1270",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1280",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1320",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1380",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "deminf_proxy": [
+      {
+        "demo_id": "mg/lift/demo_610",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_620",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_650",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_660",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_670",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_740",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_750",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_770",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_810",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_850",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_870",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_930",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1000",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1010",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1130",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1170",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1270",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1280",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1380",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1480",
+        "predicted_label": "failure",
+        "true_label": "success"
+      }
+    ],
+    "event_heuristic": [
+      {
+        "demo_id": "mg/lift/demo_890",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_970",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_980",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1160",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1230",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1240",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1250",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1270",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1320",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1350",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1380",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1430",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "fft_lowpass": [
+      {
+        "demo_id": "mg/lift/demo_1240",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1270",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1280",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1380",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "functional_phase_event": [
+      {
+        "demo_id": "mg/lift/demo_1240",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1270",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1280",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1380",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "pca_global": [
+      {
+        "demo_id": "mg/lift/demo_1170",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1240",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1270",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1280",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1320",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1380",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "random_prior": [
+      {
+        "demo_id": "mg/lift/demo_60",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_80",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_100",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_200",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_230",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_340",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_420",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_430",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_440",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_540",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_560",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_580",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_720",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_780",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1040",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1060",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1070",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1100",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1160",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1190",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1210",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1220",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1230",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1240",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1260",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1290",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1330",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1350",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1360",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1370",
+        "predicted_label": "failure",
+        "true_label": "success"
+      }
+    ],
+    "raw_medoid_centrality": [
+      {
+        "demo_id": "mg/lift/demo_1070",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1100",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1160",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1190",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1240",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1280",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1320",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1380",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1470",
+        "predicted_label": "failure",
+        "true_label": "success"
+      }
+    ],
+    "raw_nearest_demo": [
+      {
+        "demo_id": "mg/lift/demo_1070",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1240",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1270",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1320",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1380",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "raw_phase_aligned": [
+      {
+        "demo_id": "mg/lift/demo_1070",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1240",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1270",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1280",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1320",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1380",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "s2i_keyframe_proxy": [
+      {
+        "demo_id": "mg/lift/demo_870",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1160",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1240",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "mg/lift/demo_1280",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1380",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "mg/lift/demo_1470",
+        "predicted_label": "failure",
+        "true_label": "success"
+      }
+    ]
+  },
+  "mh_can_quality_worse_vs_better": {
+    "dct_lowpass": [
+      {
+        "demo_id": "mh/can/demo_156",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_167",
+        "predicted_label": "worse",
+        "true_label": "better"
+      }
+    ],
+    "deminf_proxy": [
+      {
+        "demo_id": "mh/can/demo_156",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_162",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_207",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/can/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "event_heuristic": [
+      {
+        "demo_id": "mh/can/demo_156",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_162",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_167",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_207",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/can/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "fft_lowpass": [
+      {
+        "demo_id": "mh/can/demo_156",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_167",
+        "predicted_label": "worse",
+        "true_label": "better"
+      }
+    ],
+    "functional_phase_event": [
+      {
+        "demo_id": "mh/can/demo_156",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_162",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "pca_global": [
+      {
+        "demo_id": "mh/can/demo_162",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_207",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/can/demo_217",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "random_prior": [
+      {
+        "demo_id": "mh/can/demo_6",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_7",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_56",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/can/demo_154",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_156",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_157",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_206",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/can/demo_207",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/can/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "raw_medoid_centrality": [
+      {
+        "demo_id": "mh/can/demo_162",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_204",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/can/demo_206",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/can/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "raw_nearest_demo": [
+      {
+        "demo_id": "mh/can/demo_207",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/can/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "raw_phase_aligned": [
+      {
+        "demo_id": "mh/can/demo_156",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_167",
+        "predicted_label": "worse",
+        "true_label": "better"
+      }
+    ],
+    "s2i_keyframe_proxy": [
+      {
+        "demo_id": "mh/can/demo_4",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_154",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_156",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/can/demo_204",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/can/demo_206",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/can/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/can/demo_217",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ]
+  },
+  "mh_lift_quality_worse_vs_better": {
+    "deminf_proxy": [
+      {
+        "demo_id": "mh/lift/demo_204",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_206",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_207",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "event_heuristic": [
+      {
+        "demo_id": "mh/lift/demo_162",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/lift/demo_204",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_206",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "functional_phase_event": [
+      {
+        "demo_id": "mh/lift/demo_62",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "random_prior": [
+      {
+        "demo_id": "mh/lift/demo_4",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/lift/demo_6",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/lift/demo_7",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/lift/demo_54",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_57",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_157",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/lift/demo_204",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "raw_medoid_centrality": [
+      {
+        "demo_id": "mh/lift/demo_57",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_67",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_204",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_217",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "raw_nearest_demo": [
+      {
+        "demo_id": "mh/lift/demo_56",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_57",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_62",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_217",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "raw_phase_aligned": [
+      {
+        "demo_id": "mh/lift/demo_162",
+        "predicted_label": "worse",
+        "true_label": "better"
+      }
+    ],
+    "s2i_keyframe_proxy": [
+      {
+        "demo_id": "mh/lift/demo_7",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/lift/demo_62",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_154",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/lift/demo_156",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/lift/demo_157",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/lift/demo_162",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/lift/demo_167",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/lift/demo_204",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/lift/demo_206",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ]
+  },
+  "mh_square_quality_worse_vs_better": {
+    "dct_lowpass": [
+      {
+        "demo_id": "mh/square/demo_207",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_217",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "deminf_proxy": [
+      {
+        "demo_id": "mh/square/demo_154",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/square/demo_156",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/square/demo_157",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/square/demo_206",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "event_heuristic": [
+      {
+        "demo_id": "mh/square/demo_57",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_207",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_217",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "fft_lowpass": [
+      {
+        "demo_id": "mh/square/demo_207",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "functional_phase_event": [
+      {
+        "demo_id": "mh/square/demo_67",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_206",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "pca_global": [
+      {
+        "demo_id": "mh/square/demo_57",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_204",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_206",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_207",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_217",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "random_prior": [
+      {
+        "demo_id": "mh/square/demo_6",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/square/demo_56",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_57",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_62",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_154",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/square/demo_204",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_206",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "raw_medoid_centrality": [
+      {
+        "demo_id": "mh/square/demo_56",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_57",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_204",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_206",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_207",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_217",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "raw_nearest_demo": [
+      {
+        "demo_id": "mh/square/demo_57",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_62",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_204",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_207",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_212",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "raw_phase_aligned": [
+      {
+        "demo_id": "mh/square/demo_207",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_217",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ],
+    "s2i_keyframe_proxy": [
+      {
+        "demo_id": "mh/square/demo_12",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/square/demo_17",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/square/demo_56",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_62",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_67",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_157",
+        "predicted_label": "worse",
+        "true_label": "better"
+      },
+      {
+        "demo_id": "mh/square/demo_204",
+        "predicted_label": "better",
+        "true_label": "worse"
+      },
+      {
+        "demo_id": "mh/square/demo_206",
+        "predicted_label": "better",
+        "true_label": "worse"
+      }
+    ]
+  },
+  "paired_can_diagnostic_good_vs_bad": {
+    "deminf_proxy": [
+      {
+        "demo_id": "paired/can/demo_52",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ],
+    "random_prior": [
+      {
+        "demo_id": "paired/can/demo_29",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "paired/can/demo_45",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "paired/can/demo_80",
+        "predicted_label": "success",
+        "true_label": "failure"
+      },
+      {
+        "demo_id": "paired/can/demo_81",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "paired/can/demo_89",
+        "predicted_label": "failure",
+        "true_label": "success"
+      },
+      {
+        "demo_id": "paired/can/demo_99",
+        "predicted_label": "failure",
+        "true_label": "success"
+      }
+    ],
+    "s2i_keyframe_proxy": [
+      {
+        "demo_id": "paired/can/demo_104",
+        "predicted_label": "success",
+        "true_label": "failure"
+      }
+    ]
+  }
+}

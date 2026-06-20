@@ -1,0 +1,32 @@
+{
+  "baseline_accuracies": {
+    "dct_lowpass": 0.995,
+    "dmp_rbf_weights": 0.72,
+    "fft_lowpass": 0.99,
+    "fmp_fourier_weights": 0.92,
+    "global_pca": 0.99,
+    "mean_trajectory": 0.985,
+    "nearest_demo": 1.0,
+    "promp_rbf_weights": 0.715
+  },
+  "beats_required_local_baselines": true,
+  "best_baseline_accuracy": 1.0,
+  "can_margin_pass": true,
+  "readme_claim_upgrade_allowed": false,
+  "reason": "Retrieval signal is not enough for broad movement-memory claims; README stays frozen until MDL, stronger external movement-primitive baselines, and transfer/adaptation gates close.",
+  "required_baseline_accuracies": {
+    "dct_lowpass": 0.995,
+    "dmp_rbf_weights": 0.72,
+    "fft_lowpass": 0.99,
+    "fmp_fourier_weights": 0.92,
+    "global_pca": 0.99,
+    "mean_trajectory": 0.985,
+    "promp_rbf_weights": 0.715
+  },
+  "retrieval_slice_signal": true,
+  "schema_accuracy": 1.0,
+  "schema_version": 1,
+  "sovereign_gate_pass": false,
+  "status": "retrieval_slice_pass_sovereign_incomplete",
+  "ties_or_beats_nearest_demo": true
+}

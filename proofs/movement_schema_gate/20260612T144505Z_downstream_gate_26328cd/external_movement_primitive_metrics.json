@@ -1,0 +1,37 @@
+{
+  "claim_effect": "DMP/ProMP are generation/adaptation-capable package baselines; FMP is a scoped local Fourier fallback, not a policy baseline.",
+  "external_dmp_promp_complete": true,
+  "failures": {},
+  "fmp_status": "reviewed_local_fourier_fallback",
+  "models": {
+    "external_dmp": {
+      "action_endpoint_error_mean": 0.03886588099492881,
+      "action_rmse_mean": 0.32467054573190196,
+      "action_velocity_rmse_mean": 0.0917785198436258,
+      "assignment_accuracy": 0.99,
+      "model_zlib_bytes": 4025
+    },
+    "external_promp": {
+      "action_endpoint_error_mean": 7.838703631512258e-17,
+      "action_rmse_mean": 0.29096531445951807,
+      "action_velocity_rmse_mean": 0.0941980246140157,
+      "assignment_accuracy": 0.985,
+      "model_zlib_bytes": 75982
+    },
+    "fmp_fourier_generation_local": {
+      "action_endpoint_error_mean": 1.2250602413517018e-17,
+      "action_rmse_mean": 0.28626664973456056,
+      "action_velocity_rmse_mean": 0.09159783987903289,
+      "assignment_accuracy": 0.995,
+      "model_zlib_bytes": 4814
+    }
+  },
+  "package_versions": {
+    "movement-primitives": "0.9.1",
+    "pytransform3d": "3.15.0",
+    "scipy": "1.17.1"
+  },
+  "schema_version": 1,
+  "status": "complete",
+  "test_id": "MSG-04-baseline-unblock"
+}

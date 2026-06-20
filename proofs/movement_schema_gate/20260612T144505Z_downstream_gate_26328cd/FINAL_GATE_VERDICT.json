@@ -1,0 +1,13 @@
+{
+  "best_action_adaptation_baseline": "mean_linear_endpoint",
+  "best_demo_selection_baseline": "raw_all_train_mean",
+  "policy_transfer_claim_allowed": false,
+  "readme_claim_upgrade_allowed": false,
+  "reason": "No positive downstream imitation/adaptation lift survives the frozen baselines. The remaining honest surface is retrieval, curation, and auditability.",
+  "schema_action_adaptation_relative_improvement": 0.0,
+  "schema_selection_relative_improvement": -0.025517640932355742,
+  "schema_version": 1,
+  "sovereign_gate_pass": false,
+  "status": "narrow_retrieval_curation_only",
+  "terminal_decision": "narrow"
+}

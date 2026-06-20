@@ -1,0 +1,3875 @@
+{
+  "metric": "balanced_accuracy and macro_f1 on frozen validation splits",
+  "primary_method": "functional_phase_event",
+  "primary_target_count": 5,
+  "primary_target_ids": [
+    "mg_can_outcome_success_vs_failure",
+    "mg_lift_outcome_success_vs_failure",
+    "mh_can_quality_worse_vs_better",
+    "mh_lift_quality_worse_vs_better",
+    "mh_square_quality_worse_vs_better"
+  ],
+  "schema_version": 1,
+  "targets": {
+    "mg_can_outcome_success_vs_failure": {
+      "best_baseline_balanced_accuracy": 0.9214847759151557,
+      "best_baseline_method": "raw_phase_aligned",
+      "methods": {
+        "dct_lowpass": {
+          "accuracy": 0.9102564102564102,
+          "average_precision_positive": 0.3719666055335289,
+          "balanced_accuracy": 0.8773520355798836,
+          "count": 390,
+          "failure_count": 35,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.8604451442066843,
+          "sample_failures": [
+            {
+              "demo_id": "mg/can/demo_1540",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1960",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2240",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2360",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2430",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2450",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2580",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2630",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2660",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2690",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2700",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2760",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2770",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2810",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2940",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3000",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3080",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3140",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3180",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3230",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3290",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3410",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3440",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3610",
+              "predicted_label": "failure",
+              "true_label": "success"
+            }
+          ]
+        },
+        "deminf_proxy": {
+          "accuracy": 0.8538461538461538,
+          "average_precision_positive": 0.5670912071926754,
+          "balanced_accuracy": 0.9046356483065344,
+          "count": 390,
+          "failure_count": 57,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.8102124971186109,
+          "sample_failures": [
+            {
+              "demo_id": "mg/can/demo_920",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_930",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_980",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1120",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1220",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1280",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1290",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1370",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1450",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1540",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1550",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1610",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1630",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1740",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1850",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1960",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2000",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2030",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2060",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2120",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2180",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2220",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2240",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2310",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2410",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2430",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2460",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "event_heuristic": {
+          "accuracy": 0.7871794871794872,
+          "average_precision_positive": 0.5469763408287409,
+          "balanced_accuracy": 0.8272750598699965,
+          "count": 390,
+          "failure_count": 83,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.7335254167524181,
+          "sample_failures": [
+            {
+              "demo_id": "mg/can/demo_660",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_690",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_780",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_800",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_880",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_900",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_920",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_930",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_940",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_950",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_960",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_970",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1080",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1100",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1120",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1130",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1270",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1280",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1290",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1380",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1540",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1550",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1560",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1740",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1760",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1770",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1820",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1830",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "fft_lowpass": {
+          "accuracy": 0.9128205128205128,
+          "average_precision_positive": 0.3591261733659529,
+          "balanced_accuracy": 0.8996322271638728,
+          "count": 390,
+          "failure_count": 34,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.8687440608172317,
+          "sample_failures": [
+            {
+              "demo_id": "mg/can/demo_1910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1960",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2060",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2240",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2430",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2450",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2490",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2580",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2630",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2660",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2690",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2700",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2760",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2810",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2900",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2940",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3000",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3030",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3080",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3140",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3180",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3230",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3290",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3410",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3440",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "functional_phase_event": {
+          "accuracy": 0.882051282051282,
+          "average_precision_positive": 0.5406470049770907,
+          "balanced_accuracy": 0.9220407115976736,
+          "count": 390,
+          "failure_count": 46,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.84109268707483,
+          "sample_failures": [
+            {
+              "demo_id": "mg/can/demo_930",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1000",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1080",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1120",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1280",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1470",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1820",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1830",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1960",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2060",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2180",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2220",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2240",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2310",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2410",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2430",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2450",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2460",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2480",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2580",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2610",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2620",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2630",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2690",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2700",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2760",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2900",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "pca_global": {
+          "accuracy": 0.9205128205128205,
+          "average_precision_positive": 0.3645486308441479,
+          "balanced_accuracy": 0.919902497434143,
+          "count": 390,
+          "failure_count": 31,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.8819001475027107,
+          "sample_failures": [
+            {
+              "demo_id": "mg/can/demo_1910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1960",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2060",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2240",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2430",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2450",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2460",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2490",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2580",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2630",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2660",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2690",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2700",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2900",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2940",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3000",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3050",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3080",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3180",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3200",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3290",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3410",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3440",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3640",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3670",
+              "predicted_label": "failure",
+              "true_label": "success"
+            }
+          ]
+        },
+        "random_prior": {
+          "accuracy": 0.7051282051282052,
+          "average_precision_positive": 0.10793815978280902,
+          "balanced_accuracy": 0.538616147793363,
+          "count": 390,
+          "failure_count": 115,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.5370322580645162,
+          "sample_failures": [
+            {
+              "demo_id": "mg/can/demo_60",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_100",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_180",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_200",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_420",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_430",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_530",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_540",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_550",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_590",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_650",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_660",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_760",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_800",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_920",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_940",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_960",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_970",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_980",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1050",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1060",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1080",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1110",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1130",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1150",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1160",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1180",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1250",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1360",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1540",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "raw_medoid_centrality": {
+          "accuracy": 0.9153846153846154,
+          "average_precision_positive": 0.6131125196250008,
+          "balanced_accuracy": 0.8753421142661649,
+          "count": 390,
+          "failure_count": 33,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.8658410732714138,
+          "sample_failures": [
+            {
+              "demo_id": "mg/can/demo_1910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1960",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2240",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2360",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2580",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2630",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2660",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2690",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2700",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2760",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2770",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2810",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2940",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3000",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3080",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3140",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3180",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3230",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3290",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3390",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3410",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3440",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3610",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3640",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3660",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "raw_nearest_demo": {
+          "accuracy": 0.9461538461538461,
+          "average_precision_positive": 0.7744187866093956,
+          "balanced_accuracy": 0.904678412589805,
+          "count": 390,
+          "failure_count": 21,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.9110507738256854,
+          "sample_failures": [
+            {
+              "demo_id": "mg/can/demo_2130",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2580",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2660",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2710",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2760",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2940",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3000",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3080",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3180",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3230",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3290",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3310",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3410",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3440",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3490",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3560",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3590",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3640",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3740",
+              "predicted_label": "failure",
+              "true_label": "success"
+            }
+          ]
+        },
+        "raw_phase_aligned": {
+          "accuracy": 0.9230769230769231,
+          "average_precision_positive": 0.5210181622079311,
+          "balanced_accuracy": 0.9214847759151557,
+          "count": 390,
+          "failure_count": 30,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.8852085867901573,
+          "sample_failures": [
+            {
+              "demo_id": "mg/can/demo_1910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1960",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2060",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2240",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2430",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2460",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2580",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2630",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2660",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2690",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2700",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2760",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2810",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2900",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2940",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3000",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3030",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3080",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3180",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3230",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_3290",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3410",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3440",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3640",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_3660",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "s2i_keyframe_proxy": {
+          "accuracy": 0.8307692307692308,
+          "average_precision_positive": 0.32016497020735335,
+          "balanced_accuracy": 0.8541737940472118,
+          "count": 390,
+          "failure_count": 66,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.7766323024054983,
+          "sample_failures": [
+            {
+              "demo_id": "mg/can/demo_60",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_100",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_120",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_180",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_260",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_780",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1000",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1100",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1120",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1230",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1280",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1830",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1890",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1910",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1920",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_1960",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2020",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2030",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2060",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2140",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2180",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2220",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2240",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2330",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2350",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2400",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2410",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2420",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/can/demo_2430",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/can/demo_2440",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        }
+      },
+      "primary_balanced_accuracy": 0.9220407115976736,
+      "primary_minus_best_baseline": 0.000555935682517994,
+      "target": {
+        "diagnostic_only": false,
+        "family": "mg",
+        "label_kind": "outcome",
+        "labels": [
+          "failure",
+          "success"
+        ],
+        "positive_label": "success",
+        "target_id": "mg_can_outcome_success_vs_failure",
+        "task": "can",
+        "train_count": 3510,
+        "valid_count": 390
+      }
+    },
+    "mg_lift_outcome_success_vs_failure": {
+      "best_baseline_balanced_accuracy": 0.9708333333333333,
+      "best_baseline_method": "fft_lowpass",
+      "methods": {
+        "dct_lowpass": {
+          "accuracy": 0.96,
+          "average_precision_positive": 0.5611309258264371,
+          "balanced_accuracy": 0.9375,
+          "count": 150,
+          "failure_count": 6,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.9375,
+          "sample_failures": [
+            {
+              "demo_id": "mg/lift/demo_1070",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1240",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1270",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1280",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1320",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1380",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "deminf_proxy": {
+          "accuracy": 0.8666666666666667,
+          "average_precision_positive": 0.47479299729139834,
+          "balanced_accuracy": 0.9041666666666667,
+          "count": 150,
+          "failure_count": 20,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.8267498267498267,
+          "sample_failures": [
+            {
+              "demo_id": "mg/lift/demo_610",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_620",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_650",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_660",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_670",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_740",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_750",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_770",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_810",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_850",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_870",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_930",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1000",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1010",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1130",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1170",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1270",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1280",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1380",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1480",
+              "predicted_label": "failure",
+              "true_label": "success"
+            }
+          ]
+        },
+        "event_heuristic": {
+          "accuracy": 0.92,
+          "average_precision_positive": 0.6955604167902821,
+          "balanced_accuracy": 0.8875,
+          "count": 150,
+          "failure_count": 12,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.8780157224179995,
+          "sample_failures": [
+            {
+              "demo_id": "mg/lift/demo_890",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_970",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_980",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1160",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1230",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1240",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1250",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1270",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1320",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1350",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1380",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1430",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "fft_lowpass": {
+          "accuracy": 0.9733333333333334,
+          "average_precision_positive": 0.6281848322263797,
+          "balanced_accuracy": 0.9708333333333333,
+          "count": 150,
+          "failure_count": 4,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.9593385741393331,
+          "sample_failures": [
+            {
+              "demo_id": "mg/lift/demo_1240",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1270",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1280",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1380",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "functional_phase_event": {
+          "accuracy": 0.9733333333333334,
+          "average_precision_positive": 0.7596382539098501,
+          "balanced_accuracy": 0.9708333333333333,
+          "count": 150,
+          "failure_count": 4,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.9593385741393331,
+          "sample_failures": [
+            {
+              "demo_id": "mg/lift/demo_1240",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1270",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1280",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1380",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "pca_global": {
+          "accuracy": 0.9533333333333334,
+          "average_precision_positive": 0.6632009597194904,
+          "balanced_accuracy": 0.9458333333333333,
+          "count": 150,
+          "failure_count": 7,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.929676511954993,
+          "sample_failures": [
+            {
+              "demo_id": "mg/lift/demo_1010",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1170",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1240",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1270",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1280",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1320",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1380",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "random_prior": {
+          "accuracy": 0.74,
+          "average_precision_positive": 0.11346632494675646,
+          "balanced_accuracy": 0.55,
+          "count": 150,
+          "failure_count": 39,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.5531281032770605,
+          "sample_failures": [
+            {
+              "demo_id": "mg/lift/demo_60",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_80",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_100",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_200",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_230",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_340",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_420",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_430",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_440",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_540",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_560",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_580",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_720",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_780",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1040",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1060",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1070",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1100",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1160",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1190",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1210",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1220",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1230",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1240",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1260",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1290",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1330",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1350",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1360",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1370",
+              "predicted_label": "failure",
+              "true_label": "success"
+            }
+          ]
+        },
+        "raw_medoid_centrality": {
+          "accuracy": 0.94,
+          "average_precision_positive": 0.7666718597905512,
+          "balanced_accuracy": 0.875,
+          "count": 150,
+          "failure_count": 9,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.8998144712430426,
+          "sample_failures": [
+            {
+              "demo_id": "mg/lift/demo_1070",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1100",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1160",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1190",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1240",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1280",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1320",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1380",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1470",
+              "predicted_label": "failure",
+              "true_label": "success"
+            }
+          ]
+        },
+        "raw_nearest_demo": {
+          "accuracy": 0.9666666666666667,
+          "average_precision_positive": 0.8374863985044747,
+          "balanced_accuracy": 0.9416666666666667,
+          "count": 150,
+          "failure_count": 5,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.9472536746606652,
+          "sample_failures": [
+            {
+              "demo_id": "mg/lift/demo_1070",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1240",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1270",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1320",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1380",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "raw_phase_aligned": {
+          "accuracy": 0.96,
+          "average_precision_positive": 0.7640044075222079,
+          "balanced_accuracy": 0.9375,
+          "count": 150,
+          "failure_count": 6,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.9375,
+          "sample_failures": [
+            {
+              "demo_id": "mg/lift/demo_1070",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1240",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1270",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1280",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1320",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1380",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "s2i_keyframe_proxy": {
+          "accuracy": 0.96,
+          "average_precision_positive": 0.6414054949372064,
+          "balanced_accuracy": 0.9375,
+          "count": 150,
+          "failure_count": 6,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.9375,
+          "sample_failures": [
+            {
+              "demo_id": "mg/lift/demo_870",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1160",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1240",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "mg/lift/demo_1280",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1380",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "mg/lift/demo_1470",
+              "predicted_label": "failure",
+              "true_label": "success"
+            }
+          ]
+        }
+      },
+      "primary_balanced_accuracy": 0.9708333333333333,
+      "primary_minus_best_baseline": 0.0,
+      "target": {
+        "diagnostic_only": false,
+        "family": "mg",
+        "label_kind": "outcome",
+        "labels": [
+          "failure",
+          "success"
+        ],
+        "positive_label": "success",
+        "target_id": "mg_lift_outcome_success_vs_failure",
+        "task": "lift",
+        "train_count": 1350,
+        "valid_count": 150
+      }
+    },
+    "mh_can_quality_worse_vs_better": {
+      "best_baseline_balanced_accuracy": 1.0,
+      "best_baseline_method": "pca_global",
+      "methods": {
+        "dct_lowpass": {
+          "accuracy": 0.9,
+          "average_precision_positive": 0.9263888888888889,
+          "balanced_accuracy": 0.9,
+          "count": 20,
+          "failure_count": 2,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.898989898989899,
+          "sample_failures": [
+            {
+              "demo_id": "mh/can/demo_156",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_167",
+              "predicted_label": "worse",
+              "true_label": "better"
+            }
+          ]
+        },
+        "deminf_proxy": {
+          "accuracy": 0.8,
+          "average_precision_positive": 0.8519887955182073,
+          "balanced_accuracy": 0.8,
+          "count": 20,
+          "failure_count": 4,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.8000000000000002,
+          "sample_failures": [
+            {
+              "demo_id": "mh/can/demo_156",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_162",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_207",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/can/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "event_heuristic": {
+          "accuracy": 0.75,
+          "average_precision_positive": 0.804476911976912,
+          "balanced_accuracy": 0.75,
+          "count": 20,
+          "failure_count": 5,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.7493734335839599,
+          "sample_failures": [
+            {
+              "demo_id": "mh/can/demo_156",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_162",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_167",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_207",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/can/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "fft_lowpass": {
+          "accuracy": 0.9,
+          "average_precision_positive": 0.8697546897546896,
+          "balanced_accuracy": 0.9,
+          "count": 20,
+          "failure_count": 2,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.898989898989899,
+          "sample_failures": [
+            {
+              "demo_id": "mh/can/demo_156",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_167",
+              "predicted_label": "worse",
+              "true_label": "better"
+            }
+          ]
+        },
+        "functional_phase_event": {
+          "accuracy": 0.85,
+          "average_precision_positive": 0.9378174603174603,
+          "balanced_accuracy": 0.8500000000000001,
+          "count": 20,
+          "failure_count": 3,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.849624060150376,
+          "sample_failures": [
+            {
+              "demo_id": "mh/can/demo_156",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_162",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "pca_global": {
+          "accuracy": 1.0,
+          "average_precision_positive": 0.7388768094650449,
+          "balanced_accuracy": 1.0,
+          "count": 20,
+          "failure_count": 0,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 1.0,
+          "sample_failures": []
+        },
+        "random_prior": {
+          "accuracy": 0.55,
+          "average_precision_positive": 0.8053696303696304,
+          "balanced_accuracy": 0.55,
+          "count": 20,
+          "failure_count": 9,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.5488721804511277,
+          "sample_failures": [
+            {
+              "demo_id": "mh/can/demo_6",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_7",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_56",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/can/demo_154",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_156",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_157",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_206",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/can/demo_207",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/can/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "raw_medoid_centrality": {
+          "accuracy": 0.8,
+          "average_precision_positive": 0.7174367299367301,
+          "balanced_accuracy": 0.8,
+          "count": 20,
+          "failure_count": 4,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.797979797979798,
+          "sample_failures": [
+            {
+              "demo_id": "mh/can/demo_162",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_204",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/can/demo_206",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/can/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "raw_nearest_demo": {
+          "accuracy": 0.9,
+          "average_precision_positive": 0.7856593406593407,
+          "balanced_accuracy": 0.9,
+          "count": 20,
+          "failure_count": 2,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.898989898989899,
+          "sample_failures": [
+            {
+              "demo_id": "mh/can/demo_207",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/can/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "raw_phase_aligned": {
+          "accuracy": 0.9,
+          "average_precision_positive": 0.8303030303030303,
+          "balanced_accuracy": 0.9,
+          "count": 20,
+          "failure_count": 2,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.898989898989899,
+          "sample_failures": [
+            {
+              "demo_id": "mh/can/demo_156",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_167",
+              "predicted_label": "worse",
+              "true_label": "better"
+            }
+          ]
+        },
+        "s2i_keyframe_proxy": {
+          "accuracy": 0.65,
+          "average_precision_positive": 0.9315204678362574,
+          "balanced_accuracy": 0.6499999999999999,
+          "count": 20,
+          "failure_count": 7,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.6491228070175439,
+          "sample_failures": [
+            {
+              "demo_id": "mh/can/demo_4",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_154",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_156",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/can/demo_204",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/can/demo_206",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/can/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/can/demo_217",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        }
+      },
+      "primary_balanced_accuracy": 0.8500000000000001,
+      "primary_minus_best_baseline": -0.1499999999999999,
+      "target": {
+        "diagnostic_only": false,
+        "family": "mh",
+        "label_kind": "quality",
+        "labels": [
+          "better",
+          "worse"
+        ],
+        "positive_label": "better",
+        "target_id": "mh_can_quality_worse_vs_better",
+        "task": "can",
+        "train_count": 180,
+        "valid_count": 20
+      }
+    },
+    "mh_lift_quality_worse_vs_better": {
+      "best_baseline_balanced_accuracy": 1.0,
+      "best_baseline_method": "dct_lowpass",
+      "methods": {
+        "dct_lowpass": {
+          "accuracy": 1.0,
+          "average_precision_positive": 0.9122863247863247,
+          "balanced_accuracy": 1.0,
+          "count": 20,
+          "failure_count": 0,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 1.0,
+          "sample_failures": []
+        },
+        "deminf_proxy": {
+          "accuracy": 0.85,
+          "average_precision_positive": 0.6296085858585858,
+          "balanced_accuracy": 0.85,
+          "count": 20,
+          "failure_count": 3,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.8465473145780051,
+          "sample_failures": [
+            {
+              "demo_id": "mh/lift/demo_204",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_206",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_207",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "event_heuristic": {
+          "accuracy": 0.85,
+          "average_precision_positive": 0.8472744360902256,
+          "balanced_accuracy": 0.8500000000000001,
+          "count": 20,
+          "failure_count": 3,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.849624060150376,
+          "sample_failures": [
+            {
+              "demo_id": "mh/lift/demo_162",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/lift/demo_204",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_206",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "fft_lowpass": {
+          "accuracy": 1.0,
+          "average_precision_positive": 0.9247863247863247,
+          "balanced_accuracy": 1.0,
+          "count": 20,
+          "failure_count": 0,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 1.0,
+          "sample_failures": []
+        },
+        "functional_phase_event": {
+          "accuracy": 0.95,
+          "average_precision_positive": 0.7622217978100331,
+          "balanced_accuracy": 0.95,
+          "count": 20,
+          "failure_count": 1,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.949874686716792,
+          "sample_failures": [
+            {
+              "demo_id": "mh/lift/demo_62",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "pca_global": {
+          "accuracy": 0.85,
+          "average_precision_positive": 0.9225,
+          "balanced_accuracy": 0.8500000000000001,
+          "count": 20,
+          "failure_count": 3,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.849624060150376,
+          "sample_failures": [
+            {
+              "demo_id": "mh/lift/demo_162",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/lift/demo_206",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_217",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "random_prior": {
+          "accuracy": 0.6,
+          "average_precision_positive": 0.8053696303696304,
+          "balanced_accuracy": 0.6,
+          "count": 20,
+          "failure_count": 8,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.6,
+          "sample_failures": [
+            {
+              "demo_id": "mh/lift/demo_4",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/lift/demo_6",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/lift/demo_7",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/lift/demo_54",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_57",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_157",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/lift/demo_204",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "raw_medoid_centrality": {
+          "accuracy": 0.75,
+          "average_precision_positive": 0.685674603174603,
+          "balanced_accuracy": 0.75,
+          "count": 20,
+          "failure_count": 5,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.7333333333333334,
+          "sample_failures": [
+            {
+              "demo_id": "mh/lift/demo_57",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_67",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_204",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_217",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "raw_nearest_demo": {
+          "accuracy": 0.75,
+          "average_precision_positive": 0.7930860805860805,
+          "balanced_accuracy": 0.75,
+          "count": 20,
+          "failure_count": 5,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.7333333333333334,
+          "sample_failures": [
+            {
+              "demo_id": "mh/lift/demo_56",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_57",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_62",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_217",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "raw_phase_aligned": {
+          "accuracy": 0.95,
+          "average_precision_positive": 0.8385606060606061,
+          "balanced_accuracy": 0.95,
+          "count": 20,
+          "failure_count": 1,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.949874686716792,
+          "sample_failures": [
+            {
+              "demo_id": "mh/lift/demo_162",
+              "predicted_label": "worse",
+              "true_label": "better"
+            }
+          ]
+        },
+        "s2i_keyframe_proxy": {
+          "accuracy": 0.55,
+          "average_precision_positive": 0.6373155929038281,
+          "balanced_accuracy": 0.55,
+          "count": 20,
+          "failure_count": 9,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.5396419437340153,
+          "sample_failures": [
+            {
+              "demo_id": "mh/lift/demo_7",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/lift/demo_62",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_154",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/lift/demo_156",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/lift/demo_157",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/lift/demo_162",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/lift/demo_167",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/lift/demo_204",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/lift/demo_206",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        }
+      },
+      "primary_balanced_accuracy": 0.95,
+      "primary_minus_best_baseline": -0.050000000000000044,
+      "target": {
+        "diagnostic_only": false,
+        "family": "mh",
+        "label_kind": "quality",
+        "labels": [
+          "better",
+          "worse"
+        ],
+        "positive_label": "better",
+        "target_id": "mh_lift_quality_worse_vs_better",
+        "task": "lift",
+        "train_count": 180,
+        "valid_count": 20
+      }
+    },
+    "mh_square_quality_worse_vs_better": {
+      "best_baseline_balanced_accuracy": 0.95,
+      "best_baseline_method": "fft_lowpass",
+      "methods": {
+        "dct_lowpass": {
+          "accuracy": 0.9,
+          "average_precision_positive": 0.596041736041736,
+          "balanced_accuracy": 0.9,
+          "count": 20,
+          "failure_count": 2,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.898989898989899,
+          "sample_failures": [
+            {
+              "demo_id": "mh/square/demo_207",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_217",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "deminf_proxy": {
+          "accuracy": 0.75,
+          "average_precision_positive": 0.5607444894286999,
+          "balanced_accuracy": 0.75,
+          "count": 20,
+          "failure_count": 5,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.7493734335839599,
+          "sample_failures": [
+            {
+              "demo_id": "mh/square/demo_154",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/square/demo_156",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/square/demo_157",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/square/demo_206",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "event_heuristic": {
+          "accuracy": 0.85,
+          "average_precision_positive": 0.5593559218559219,
+          "balanced_accuracy": 0.85,
+          "count": 20,
+          "failure_count": 3,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.8465473145780051,
+          "sample_failures": [
+            {
+              "demo_id": "mh/square/demo_57",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_207",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_217",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "fft_lowpass": {
+          "accuracy": 0.95,
+          "average_precision_positive": 0.6534226884226885,
+          "balanced_accuracy": 0.95,
+          "count": 20,
+          "failure_count": 1,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.949874686716792,
+          "sample_failures": [
+            {
+              "demo_id": "mh/square/demo_207",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "functional_phase_event": {
+          "accuracy": 0.9,
+          "average_precision_positive": 0.8152483545865898,
+          "balanced_accuracy": 0.9,
+          "count": 20,
+          "failure_count": 2,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.898989898989899,
+          "sample_failures": [
+            {
+              "demo_id": "mh/square/demo_67",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_206",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "pca_global": {
+          "accuracy": 0.8,
+          "average_precision_positive": 0.6426785714285714,
+          "balanced_accuracy": 0.8,
+          "count": 20,
+          "failure_count": 4,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.7916666666666665,
+          "sample_failures": [
+            {
+              "demo_id": "mh/square/demo_57",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_206",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_207",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_217",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "random_prior": {
+          "accuracy": 0.6,
+          "average_precision_positive": 0.8053696303696304,
+          "balanced_accuracy": 0.6000000000000001,
+          "count": 20,
+          "failure_count": 8,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.5833333333333333,
+          "sample_failures": [
+            {
+              "demo_id": "mh/square/demo_6",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/square/demo_56",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_57",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_62",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_154",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/square/demo_204",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_206",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "raw_medoid_centrality": {
+          "accuracy": 0.65,
+          "average_precision_positive": 0.5722322122322123,
+          "balanced_accuracy": 0.65,
+          "count": 20,
+          "failure_count": 7,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.6011396011396011,
+          "sample_failures": [
+            {
+              "demo_id": "mh/square/demo_56",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_57",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_204",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_206",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_207",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_217",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "raw_nearest_demo": {
+          "accuracy": 0.75,
+          "average_precision_positive": 0.6093506493506494,
+          "balanced_accuracy": 0.75,
+          "count": 20,
+          "failure_count": 5,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.7333333333333334,
+          "sample_failures": [
+            {
+              "demo_id": "mh/square/demo_57",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_62",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_204",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_207",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_212",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "raw_phase_aligned": {
+          "accuracy": 0.9,
+          "average_precision_positive": 0.610422077922078,
+          "balanced_accuracy": 0.9,
+          "count": 20,
+          "failure_count": 2,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.898989898989899,
+          "sample_failures": [
+            {
+              "demo_id": "mh/square/demo_207",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_217",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        },
+        "s2i_keyframe_proxy": {
+          "accuracy": 0.6,
+          "average_precision_positive": 0.8182792207792208,
+          "balanced_accuracy": 0.6,
+          "count": 20,
+          "failure_count": 8,
+          "labels": [
+            "better",
+            "worse"
+          ],
+          "macro_f1": 0.595959595959596,
+          "sample_failures": [
+            {
+              "demo_id": "mh/square/demo_12",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/square/demo_17",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/square/demo_56",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_62",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_67",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_157",
+              "predicted_label": "worse",
+              "true_label": "better"
+            },
+            {
+              "demo_id": "mh/square/demo_204",
+              "predicted_label": "better",
+              "true_label": "worse"
+            },
+            {
+              "demo_id": "mh/square/demo_206",
+              "predicted_label": "better",
+              "true_label": "worse"
+            }
+          ]
+        }
+      },
+      "primary_balanced_accuracy": 0.9,
+      "primary_minus_best_baseline": -0.04999999999999993,
+      "target": {
+        "diagnostic_only": false,
+        "family": "mh",
+        "label_kind": "quality",
+        "labels": [
+          "better",
+          "worse"
+        ],
+        "positive_label": "better",
+        "target_id": "mh_square_quality_worse_vs_better",
+        "task": "square",
+        "train_count": 180,
+        "valid_count": 20
+      }
+    },
+    "paired_can_diagnostic_good_vs_bad": {
+      "best_baseline_balanced_accuracy": 1.0,
+      "best_baseline_method": "raw_phase_aligned",
+      "methods": {
+        "dct_lowpass": {
+          "accuracy": 1.0,
+          "average_precision_positive": 1.0,
+          "balanced_accuracy": 1.0,
+          "count": 20,
+          "failure_count": 0,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 1.0,
+          "sample_failures": []
+        },
+        "deminf_proxy": {
+          "accuracy": 0.95,
+          "average_precision_positive": 0.8136904761904761,
+          "balanced_accuracy": 0.95,
+          "count": 20,
+          "failure_count": 1,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.949874686716792,
+          "sample_failures": [
+            {
+              "demo_id": "paired/can/demo_52",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        },
+        "event_heuristic": {
+          "accuracy": 1.0,
+          "average_precision_positive": 0.8393162393162393,
+          "balanced_accuracy": 1.0,
+          "count": 20,
+          "failure_count": 0,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 1.0,
+          "sample_failures": []
+        },
+        "fft_lowpass": {
+          "accuracy": 1.0,
+          "average_precision_positive": 1.0,
+          "balanced_accuracy": 1.0,
+          "count": 20,
+          "failure_count": 0,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 1.0,
+          "sample_failures": []
+        },
+        "functional_phase_event": {
+          "accuracy": 1.0,
+          "average_precision_positive": 0.8658000281452296,
+          "balanced_accuracy": 1.0,
+          "count": 20,
+          "failure_count": 0,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 1.0,
+          "sample_failures": []
+        },
+        "pca_global": {
+          "accuracy": 1.0,
+          "average_precision_positive": 1.0,
+          "balanced_accuracy": 1.0,
+          "count": 20,
+          "failure_count": 0,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 1.0,
+          "sample_failures": []
+        },
+        "random_prior": {
+          "accuracy": 0.7,
+          "average_precision_positive": 0.5,
+          "balanced_accuracy": 0.7,
+          "count": 20,
+          "failure_count": 6,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.6875,
+          "sample_failures": [
+            {
+              "demo_id": "paired/can/demo_29",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "paired/can/demo_45",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "paired/can/demo_80",
+              "predicted_label": "success",
+              "true_label": "failure"
+            },
+            {
+              "demo_id": "paired/can/demo_81",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "paired/can/demo_89",
+              "predicted_label": "failure",
+              "true_label": "success"
+            },
+            {
+              "demo_id": "paired/can/demo_99",
+              "predicted_label": "failure",
+              "true_label": "success"
+            }
+          ]
+        },
+        "raw_medoid_centrality": {
+          "accuracy": 1.0,
+          "average_precision_positive": 0.95,
+          "balanced_accuracy": 1.0,
+          "count": 20,
+          "failure_count": 0,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 1.0,
+          "sample_failures": []
+        },
+        "raw_nearest_demo": {
+          "accuracy": 1.0,
+          "average_precision_positive": 0.95,
+          "balanced_accuracy": 1.0,
+          "count": 20,
+          "failure_count": 0,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 1.0,
+          "sample_failures": []
+        },
+        "raw_phase_aligned": {
+          "accuracy": 1.0,
+          "average_precision_positive": 0.95,
+          "balanced_accuracy": 1.0,
+          "count": 20,
+          "failure_count": 0,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 1.0,
+          "sample_failures": []
+        },
+        "s2i_keyframe_proxy": {
+          "accuracy": 0.95,
+          "average_precision_positive": 0.8410731373889269,
+          "balanced_accuracy": 0.95,
+          "count": 20,
+          "failure_count": 1,
+          "labels": [
+            "failure",
+            "success"
+          ],
+          "macro_f1": 0.949874686716792,
+          "sample_failures": [
+            {
+              "demo_id": "paired/can/demo_104",
+              "predicted_label": "success",
+              "true_label": "failure"
+            }
+          ]
+        }
+      },
+      "primary_balanced_accuracy": 1.0,
+      "primary_minus_best_baseline": 0.0,
+      "target": {
+        "diagnostic_only": true,
+        "family": "paired",
+        "label_kind": "paired_diagnostic",
+        "labels": [
+          "failure",
+          "success"
+        ],
+        "positive_label": "success",
+        "target_id": "paired_can_diagnostic_good_vs_bad",
+        "task": "can",
+        "train_count": 180,
+        "valid_count": 20
+      }
+    }
+  }
+}

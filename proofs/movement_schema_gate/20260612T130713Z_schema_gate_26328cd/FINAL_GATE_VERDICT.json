@@ -1,0 +1,63 @@
+{
+  "baseline_accuracies": {
+    "dct_lowpass": 0.995,
+    "dmp_rbf_weights": 0.72,
+    "fft_lowpass": 0.99,
+    "fmp_fourier_weights": 0.92,
+    "global_pca": 0.99,
+    "mean_trajectory": 0.985,
+    "nearest_demo": 1.0,
+    "promp_rbf_weights": 0.715
+  },
+  "best_description_score_row": {
+    "assignment_accuracy": 0.99,
+    "best_local_baseline_accuracy": 1.0,
+    "component_count": 1,
+    "description_score": 742252.8584494984,
+    "heldout_error": 0.14197858449498368,
+    "residual_bytes": 0,
+    "schema_bytes": 718055,
+    "utility_lift": -0.010000000000000009
+  },
+  "external_adaptation_blocked": true,
+  "external_movement_primitive_status": "blocked_external_generation_adaptation",
+  "nearest_demo_memory_pressure": {
+    "equal_or_lower_memory_exemplar_match_exists": true,
+    "limitation": "A memory-pressure pass floor is not a sovereign pass without external movement-primitive generation/adaptation and transfer/adaptation evidence.",
+    "memory_pressure_pass_floor": false,
+    "schema_ties_or_beats_all_demo_accuracy": true,
+    "schema_uses_less_memory_than_all_demo_zlib": true
+  },
+  "rate_distortion_signal": false,
+  "readme_claim_upgrade_allowed": false,
+  "reason": "The schema has pressure-gate support only where receipts exist. The sovereign movement-form memory gate remains incomplete because external generation/adaptation baselines and downstream adaptation evidence are blocked.",
+  "required_artifact_gate": {
+    "all_required_present_or_planned": true,
+    "required_artifacts": {
+      "BASELINE_CONFIGS": true,
+      "BASELINE_FAILURES.md": true,
+      "FINAL_GATE_VERDICT.json": true,
+      "FREE_USE_ARTIFACT_LOCK.md": true,
+      "MOVEMENT_SCHEMA_V1_SPEC.md": true,
+      "PRIOR_RUN_INTAKE.md": true,
+      "TRANSFER_BLOCKER.md": true,
+      "action_basis_eval.json": true,
+      "can_demo_selection.json": true,
+      "description_score.json": true,
+      "external_movement_primitive_metrics.json": true,
+      "factorization_ablation.json": true,
+      "memory_budget_curve.json": true,
+      "natural_primitive_ablations.json": true,
+      "nearest_demo_pressure.json": true,
+      "negative_controls.json": true,
+      "rate_distortion.json": true,
+      "robomimic_can_gate.json": true,
+      "schema_convergence.json": true
+    }
+  },
+  "retrieval_floor_reproduced": true,
+  "schema_accuracy": 1.0,
+  "schema_version": 1,
+  "sovereign_gate_pass": false,
+  "status": "pressure_gate_failed_sovereign_incomplete"
+}

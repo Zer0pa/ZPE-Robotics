@@ -1,0 +1,5 @@
+{
+  "adaptation": "linear start/goal correction",
+  "component_count": 8,
+  "model": "MovementSchemaV1 central relative form"
+}

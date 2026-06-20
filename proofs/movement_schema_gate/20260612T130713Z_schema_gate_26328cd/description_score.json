@@ -1,0 +1,72 @@
+{
+  "best_schema_component_count": 1,
+  "formula": "description_score = schema_bytes + residual_bytes + lambda_error * heldout_error - lambda_utility * utility_lift",
+  "frozen_before_final_verdict": true,
+  "lambda_error": 100000.0,
+  "lambda_utility": 1000000.0,
+  "lower_is_better": true,
+  "rows": [
+    {
+      "assignment_accuracy": 0.99,
+      "best_local_baseline_accuracy": 1.0,
+      "component_count": 1,
+      "description_score": 742252.8584494984,
+      "heldout_error": 0.14197858449498368,
+      "residual_bytes": 0,
+      "schema_bytes": 718055,
+      "utility_lift": -0.010000000000000009
+    },
+    {
+      "assignment_accuracy": 0.99,
+      "best_local_baseline_accuracy": 1.0,
+      "component_count": 2,
+      "description_score": 1094740.4737344026,
+      "heldout_error": 0.1339847373440256,
+      "residual_bytes": 0,
+      "schema_bytes": 1071342,
+      "utility_lift": -0.010000000000000009
+    },
+    {
+      "assignment_accuracy": 1.0,
+      "best_local_baseline_accuracy": 0.995,
+      "component_count": 4,
+      "description_score": 1787078.266203969,
+      "heldout_error": 0.11783266203969038,
+      "residual_bytes": 0,
+      "schema_bytes": 1780295,
+      "utility_lift": 0.0050000000000000044
+    },
+    {
+      "assignment_accuracy": 1.0,
+      "best_local_baseline_accuracy": 0.995,
+      "component_count": 8,
+      "description_score": 3199493.1805078783,
+      "heldout_error": 0.10456180507878354,
+      "residual_bytes": 0,
+      "schema_bytes": 3194037,
+      "utility_lift": 0.0050000000000000044
+    },
+    {
+      "assignment_accuracy": 1.0,
+      "best_local_baseline_accuracy": 0.985,
+      "component_count": 16,
+      "description_score": 6015373.777394322,
+      "heldout_error": 0.09451777394321333,
+      "residual_bytes": 0,
+      "schema_bytes": 6020922,
+      "utility_lift": 0.015000000000000013
+    },
+    {
+      "assignment_accuracy": 1.0,
+      "best_local_baseline_accuracy": 0.985,
+      "component_count": 32,
+      "description_score": 11665274.829807,
+      "heldout_error": 0.08312829807000444,
+      "residual_bytes": 0,
+      "schema_bytes": 11671962,
+      "utility_lift": 0.015000000000000013
+    }
+  ],
+  "schema_version": 1,
+  "test_id": "RMC-04-description-score"
+}

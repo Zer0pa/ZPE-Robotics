@@ -1,0 +1,53 @@
+{
+  "absolute_map_margin": 0.0019033730158729556,
+  "best_baseline_map": 0.9973571428571429,
+  "best_baseline_method": "dct_lowpass",
+  "candidate_count": 600,
+  "candidate_split": "train",
+  "material_map_margin_required": 0.005,
+  "methods": {
+    "dct_lowpass": {
+      "mean_average_precision": 0.9973571428571429,
+      "p_at_1": 1.0,
+      "p_at_10": 0.9975,
+      "p_at_5": 0.9990000000000001
+    },
+    "fft_lowpass": {
+      "mean_average_precision": 0.9839249999999999,
+      "p_at_1": 1.0,
+      "p_at_10": 0.985,
+      "p_at_5": 0.9940000000000001
+    },
+    "pca_global": {
+      "mean_average_precision": 0.994036507936508,
+      "p_at_1": 1.0,
+      "p_at_10": 0.9954999999999999,
+      "p_at_5": 0.997
+    },
+    "raw_phase_aligned": {
+      "mean_average_precision": 0.9796444444444444,
+      "p_at_1": 1.0,
+      "p_at_10": 0.98,
+      "p_at_5": 0.9869999999999999
+    },
+    "zpe_form": {
+      "mean_average_precision": 0.9992605158730159,
+      "p_at_1": 1.0,
+      "p_at_10": 0.9995,
+      "p_at_5": 1.0
+    }
+  },
+  "metric": "same-task retrieval among train demonstrations for held-out test queries",
+  "pass_vs_baselines": false,
+  "query_count": 200,
+  "query_split": "test",
+  "relevance": "candidate task equals query task",
+  "schema_version": 1,
+  "top_k_values": [
+    1,
+    5,
+    10
+  ],
+  "zpe_form_map": 0.9992605158730159,
+  "zpe_relative_map_lift": 0.0019084166885498372
+}

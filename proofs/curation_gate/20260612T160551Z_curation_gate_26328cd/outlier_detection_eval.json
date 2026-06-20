@@ -1,0 +1,39 @@
+{
+  "best_baseline_average_precision": 0.2995772337398062,
+  "best_baseline_method": "isolation_projection",
+  "methods": {
+    "isolation_projection": {
+      "average_precision": 0.2995772337398062,
+      "precision_at_silver_count": 0.33,
+      "silver_count": 100,
+      "top_review_count": 100,
+      "top_review_hits": 33
+    },
+    "lof_like_knn_density": {
+      "average_precision": 0.2748334272164919,
+      "precision_at_silver_count": 0.33,
+      "silver_count": 100,
+      "top_review_count": 100,
+      "top_review_hits": 33
+    },
+    "raw_distance_threshold": {
+      "average_precision": 0.2237729560693247,
+      "precision_at_silver_count": 0.26,
+      "silver_count": 100,
+      "top_review_count": 100,
+      "top_review_hits": 26
+    },
+    "zpe_channel_outlier": {
+      "average_precision": 0.24214199147967957,
+      "precision_at_silver_count": 0.27,
+      "silver_count": 100,
+      "top_review_count": 100,
+      "top_review_hits": 27
+    }
+  },
+  "metric": "ranking average precision against natural kinematic-extreme silver review set",
+  "pass_vs_baselines": false,
+  "schema_version": 1,
+  "zpe_average_precision": 0.24214199147967957,
+  "zpe_relative_ap_lift": -0.19172098474616148
+}

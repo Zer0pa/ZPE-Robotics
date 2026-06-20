@@ -1,0 +1,21 @@
+{
+  "can_test_count": 40,
+  "mean_all_can_distance": 0.16130580464765715,
+  "mean_selected_distance": 0.12912207789180682,
+  "schema_version": 1,
+  "selected_count": 10,
+  "selected_demo_ids": [
+    "demo_24",
+    "demo_59",
+    "demo_145",
+    "demo_51",
+    "demo_48",
+    "demo_66",
+    "demo_92",
+    "demo_140",
+    "demo_64",
+    "demo_56"
+  ],
+  "selection_rule": "rank held-out Can demos by distance to Can schema",
+  "utility": "demo_selection"
+}
